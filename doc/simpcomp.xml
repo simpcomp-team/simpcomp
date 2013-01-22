@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Book SYSTEM "gapdoc.dtd">
+
+<?LaTeX Options="11pt"?>
+
+<?LaTeX ExtraPreamble="
+\usepackage{amsmath}
+%\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{MnSymbol}
+\usepackage{longtable}
+\definecolor{FuncColor}{rgb}{0.0,0.0,0.0}
+\definecolor{RoyalGreen}{rgb}{0.0,0.0,0.0}
+\definecolor{RoyalRed}{rgb}{0.0,0.0,0.0}
+\definecolor{RoyalBlue}{rgb}{0.0,0.0,0.0}
+\definecolor{LightBlue}{rgb}{0.0,0.0,0.0}
+\definecolor{Chapter }{rgb}{0.0,0.0,0.0}
+"?>
+
+<Book Name="simpcomp">
+
+	<#Include SYSTEM "titlepage.xml">
+	
+	<TableOfContents/>
+	
+	<Body>
+		<#Include SYSTEM "howto.xml">
+		<#Include SYSTEM "theory.xml">
+		<#Include SYSTEM "functions.xml">
+		<#Include SYSTEM "demo.xml">
+		<#Include SYSTEM "internals.xml">
+	</Body>
+	
+	<Bibliography Databases="biblio" />
+	<TheIndex/>
+
+</Book>

@@ -1,0 +1,654 @@
+	<Chapter Label="chap:demo"> <Heading>A demo session with <Package>simpcomp</Package></Heading>
+		This chapter contains the transcript of a demo session with <Package>simpcomp</Package> that is intended to give an insight into what things can be done with this package.<P/>
+		
+		Of course this only scratches the surface of the functions provided by <Package>simpcomp</Package>. See Chapters <Ref Chap="chap:polyhedralcomplex"/> through <Ref Chap="chap:misc"/> for further functions provided by <Package>simpcomp</Package>.
+		
+		<Section Label="sec:DemoCreatingCompl">
+			<Heading>Creating a <C>SCSimplicialComplex</C> object</Heading>
+
+Simplicial complex objects can either be created from a facet list (complex <C>c1</C> below), orbit representatives together with a permutation group (complex <C>c2</C>) or difference cycles (complex <C>c3</C>, see Section <Ref Chap="sec:FromScratch"/>), from a function generating triangulations of standard complexes (complex <C>c4</C>, see Section <Ref Chap="sec:Standard"/>) or from a function constructing infinite series for combinatorial (pseudo)manifolds (complexes <C>c5</C>, <C>c6</C>, <C>c7</C>, see Section <Ref Chap="sec:Series"/> and the function prefix <C>SCSeries...</C>). There are also functions creating new simplicial complexes from old, see Section <Ref Chap="sec:generateFromOld" />, which will be described in the next sections.
+			
+<Log>
+gap> #first run functionality test on simpcomp
+gap> SCRunTest();
++ test simpcomp package, version %%%VERSION%%%
++ GAP4stones: 69988
+true
+gap> #all ok
+gap> c1:=SCFromFacets([[1,2],[2,3],[3,1]]);
+[SimplicialComplex
+
+ Properties known: Dim, Facets, Name, VertexLabels.
+
+ Name="unnamed complex 1"
+ Dim=1
+
+/SimplicialComplex]
+gap> G:=Group([(2,12,11,6,8,3)(4,7,10)(5,9),(1,11,6,4,5,3,10,8,9,7,2,12)]);
+Group([ (2,12,11,6,8,3)(4,7,10)(5,9), (1,11,6,4,5,3,10,8,9,7,2,12) ])
+gap> StructureDescription(G);
+"S4 x S3"
+gap> Size(G);
+144
+gap> c2:=SCFromGenerators(G,[[1,2,3]]);;
+gap> c2.IsManifold;                    
+true
+gap> SCLibDetermineTopologicalType(c2);
+[SimplicialComplex
+
+ Properties known: AutomorphismGroup, AutomorphismGroupSize, 
+                   AutomorphismGroupStructure, AutomorphismGroupTransitivity,\
+ 
+                   Boundary, Dim, Faces, Facets, Generators, HasBoundary, 
+                   IsManifold, IsPM, Name, TopologicalType, VertexLabels, 
+                   Vertices.
+
+ Name="complex from generators under group S4 x S3"
+ Dim=2
+ AutomorphismGroupSize=144
+ AutomorphismGroupStructure="S4 x S3"
+ AutomorphismGroupTransitivity=1
+ HasBoundary=false
+ IsPM=true
+ TopologicalType="T^2"
+
+/SimplicialComplex]
+gap> c3:=SCFromDifferenceCycles([[1,1,6],[3,3,2]]);
+[SimplicialComplex
+
+ Properties known: Dim, Facets, Name, VertexLabels.
+
+ Name="complex from diffcycles [ [ 1, 1, 6 ], [ 3, 3, 2 ] ]"
+ Dim=2
+
+/SimplicialComplex]
+gap> c4:=SCBdSimplex(2);
+[SimplicialComplex
+
+ Properties known: AutomorphismGroup, AutomorphismGroupOrder, 
+                   AutomorphismGroupStructure, AutomorphismGroupTransitivity, 
+                   Chi, Dim, F, Facets, Generators, HasBounday, Homology, 
+                   IsConnected, IsStronglyConnected, Name, TopologicalType, 
+                   VertexLabels.
+
+ Name="S^1_3"
+ Dim=1
+ AutomorphismGroupStructure="S3"
+ AutomorphismGroupTransitivity=3
+ Chi=0
+ F=[ 3, 3 ]
+ Homology=[ [ 0, [ ] ], [ 1, [ ] ] ]
+ IsConnected=true
+ IsStronglyConnected=true
+ TopologicalType="S^1"
+
+/SimplicialComplex]
+gap> c5:=SCSeriesCSTSurface(2,16);;    
+gap> SCLibDetermineTopologicalType(c5);
+[SimplicialComplex
+
+ Properties known: Boundary, Dim, Faces, Facets, HasBoundary, IsPM, Name, 
+                   TopologicalType, VertexLabels.
+
+ Name="cst surface S_{(2,16)} = { (2:2:12),(6:6:4) }"
+ Dim=2
+ HasBoundary=false
+ IsPM=true
+ TopologicalType="T^2 U T^2"
+
+/SimplicialComplex]
+gap> c6:=SCSeriesD2n(22);;
+gap> c6.Homology;
+[ [ 0, [  ] ], [ 1, [  ] ], [ 0, [ 2 ] ], [ 0, [  ] ] ]
+gap> c6.F;
+[ 44, 264, 440, 220 ]
+gap> SCSeriesAGL(17);
+[ AGL(1,17), [ [ 1, 2, 4, 8, 16 ] ] ]
+gap> c7:=SCFromGenerators(last[1],last[2]);;
+gap> c7.AutomorphismGroupTransitivity;
+2
+</Log>
+		</Section>
+	
+		<Section Label="sec:DemoWorkingCompl">
+			<Heading>Working with a <C>SCSimplicialComplex</C> object</Heading>
+As described in Section <Ref Sect="sec:AcessSC" /> there are two several ways of accessing an object of type <C>SCSimplicialComplex</C>. An example for the two equivalent ways is given below. The preference will be given to the object oriented notation in this demo session. 
+
+The code listed below
+
+<Log>
+gap> c:=SCBdSimplex(3);; # create a simplicial complex object
+gap> SCFVector(c);
+[ 4, 6, 4 ]
+gap> SCSkel(c,0);
+[ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ]
+</Log>
+
+is equivalent to
+
+<Log>
+gap> c:=SCBdSimplex(3);; # create a simplicial complex object
+gap> c.F;
+[ 4, 6, 4 ]
+gap> c.Skel(0);
+[ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ]
+</Log>
+
+</Section>
+			
+		<Section Label="sec:DemoPropsCompl">
+			<Heading>Calculating properties of a <C>SCSimplicialComplex</C> object</Heading>
+			
+			<Package>simpcomp</Package> provides a variety of functions for calculating properties of simplicial complexes, see Section <Ref Chap="sec:glprops" />. All these properties are only calculated once and stored in the <C>SCSimplicialComplex</C> object.
+<Log>
+gap> c1.F;     
+[ 3, 3 ]
+gap> c1.FaceLattice;
+[ [ [ 1 ], [ 2 ], [ 3 ] ], [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ] ]
+gap> c1.AutomorphismGroup;
+S3
+gap> c1.Generators;
+[ [ [ 1, 2 ], 3 ] ]
+gap> c3.Facets;
+[ [ 1, 2, 3 ], [ 1, 2, 8 ], [ 1, 3, 6 ], [ 1, 4, 6 ], [ 1, 4, 7 ], 
+  [ 1, 7, 8 ], [ 2, 3, 4 ], [ 2, 4, 7 ], [ 2, 5, 7 ], [ 2, 5, 8 ], 
+  [ 3, 4, 5 ], [ 3, 5, 8 ], [ 3, 6, 8 ], [ 4, 5, 6 ], [ 5, 6, 7 ], 
+  [ 6, 7, 8 ] ]
+gap> c3.F;
+[ 8, 24, 16 ]
+gap> c3.G;
+[ 4 ]
+gap> c3.H;
+[ 5, 11, -1 ]
+gap> c3.ASDet;
+186624
+gap> c3.Chi;
+0
+gap> c3.Generators;
+[ [ [ 1, 2, 3 ], 16 ] ]
+gap> c3.HasBoundary;
+false
+gap> c3.IsConnected;
+true
+gap> c3.IsCentrallySymmetric;
+true
+gap> c3.Vertices;
+[ 1, 2, 3, 4, 5, 6, 7, 8 ]
+gap> c3.ConnectedComponents;
+[ [SimplicialComplex
+    
+     Properties known: Dim, Facets, Name, VertexLabels.
+    
+     Name="Connected component #1 of complex from diffcycles [ [ 1, 1, 6 ], [ \
+3, 3, 2 ] ]"
+     Dim=2
+    
+    /SimplicialComplex] ]
+gap> c3.UnknownProperty;
+#I  SCPropertyObject: unhandled property 'UnknownProperty'. Handled properties\
+ are [ "Equivalent", "IsKStackedSphere", "IsManifold", "IsMovable", "Move", 
+  "Moves", "RMoves", "ReduceAsSubcomplex", "Reduce", "ReduceEx", "Copy", 
+  "Recalc", "ASDet", "AutomorphismGroup", "AutomorphismGroupInternal", 
+  "Boundary", "ConnectedComponents", "Dim", "DualGraph", "Chi", "F", 
+  "FaceLattice", "FaceLatticeEx", "Faces", "FacesEx", "Facets", "FacetsEx", 
+  "FpBetti", "FundamentalGroup", "G", "Generators", "GeneratorsEx", "H", 
+  "HasBoundary", "HasInterior", "Homology", "Incidences", "IncidencesEx", 
+  "Interior", "IsCentrallySymmetric", "IsConnected", "IsEmpty", 
+  "IsEulerianManifold", "IsHomologySphere", "IsInKd", "IsKNeighborly", 
+  "IsOrientable", "IsPM", "IsPure", "IsShellable", "IsStronglyConnected", 
+  "MinimalNonFaces", "MinimalNonFacesEx", "Name", "Neighborliness", 
+  "Orientation", "Skel", "SkelEx", "SpanningTree", 
+  "StronglyConnectedComponents", "Vertices", "VerticesEx", 
+  "BoundaryOperatorMatrix", "HomologyBasis", "HomologyBasisAsSimplices", 
+  "HomologyInternal", "CoboundaryOperatorMatrix", "Cohomology", 
+  "CohomologyBasis", "CohomologyBasisAsSimplices", "CupProduct", 
+  "IntersectionForm", "IntersectionFormParity", 
+  "IntersectionFormDimensionality", "Load", "Save", "ExportPolymake", 
+  "ExportLatexTable", "ExportJavaView", "LabelMax", "LabelMin", "Labels", 
+  "Relabel", "RelabelStandard", "RelabelTransposition", "Rename", 
+  "SortComplex", "UnlabelFace", "AlexanderDual", "CollapseGreedy", "Cone", 
+  "DeletedJoin", "Difference", "HandleAddition", "Intersection", 
+  "IsIsomorphic", "IsSubcomplex", "Isomorphism", "IsomorphismEx", "Join", 
+  "Link", "Links", "Neighbors", "NeighborsEx", "Shelling", "ShellingExt", 
+  "Shellings", "Span", "Star", "Stars", "Suspension", "Union", 
+  "VertexIdentification", "Wedge", "DetermineTopologicalType", "Dim", 
+  "Facets", "VertexLabels", "Name", "Vertices", "IsConnected", 
+  "ConnectedComponents" ].
+
+fail
+</Log>
+			
+		</Section>
+
+		<Section Label="sec:DemoNewCompl">
+			<Heading>Creating new complexes from a <C>SCSimplicialComplex</C> object</Heading>
+			
+			As already mentioned, there is the possibility to generate new objects of type <C>SCSimplicialComplex</C> from existing ones using standard constructions. The functions used in this section are described in more detail in Section <Ref Chap="sec:generateFromOld"/>.
+<Log>
+gap> d:=c3+c3;
+[SimplicialComplex
+
+ Properties known: Dim, Facets, Name, VertexLabels, Vertices.
+
+ Name="complex from diffcycles [ [ 1, 1, 6 ], [ 3, 3, 2 ] ]#+-complex from dif\
+fcycles [ [ 1, 1, 6 ], [ 3, 3, 2 ] ]"
+ Dim=2
+
+/SimplicialComplex]
+gap> SCRename(d,"T^2#T^2");
+true
+gap> SCLink(d,1);
+[SimplicialComplex
+
+ Properties known: Dim, Facets, Name, VertexLabels.
+
+ Name="lk(1) in T^2#T^2"
+ Dim=1
+
+/SimplicialComplex]
+gap> SCStar(d,[1,2]);
+[SimplicialComplex
+
+ Properties known: Dim, Facets, Name, VertexLabels.
+
+ Name="star([ 1, 2 ]) in T^2#T^2"
+ Dim=2
+
+/SimplicialComplex]
+gap> SCRename(c3,"T^2");
+true
+gap> SCConnectedProduct(c3,4);
+[SimplicialComplex
+
+ Properties known: Dim, Facets, Name, VertexLabels, Vertices.
+
+ Name="T^2#+-T^2#+-T^2#+-T^2"
+ Dim=2
+
+/SimplicialComplex]
+gap> SCCartesianProduct(c4,c4);
+[SimplicialComplex
+
+ Properties known: Dim, Facets, Name, TopologicalType, VertexLabels.
+
+ Name="S^1_3xS^1_3"
+ Dim=2
+ TopologicalType="S^1xS^1"
+
+/SimplicialComplex]
+gap> SCCartesianPower(c4,3);
+[SimplicialComplex
+
+ Properties known: Dim, Facets, Name, TopologicalType, VertexLabels.
+
+ Name="(S^1_3)^3"
+ Dim=3
+ TopologicalType="(S^1)^3"
+
+/SimplicialComplex]
+</Log>
+			
+		</Section>
+
+		<Section Label="sec:DemoHom">
+			<Heading>Homology related calculations</Heading>
+
+			<Package>simpcomp</Package> relies on the GAP package homology <Cite Key="Dumas04Homology" /> for its homology computations but provides further (co-)homology related functions, see Chapter <Ref Chap="chap:homology"/>.
+
+
+			
+<Log>
+gap> s2s2:=SCCartesianProduct(SCBdSimplex(3),SCBdSimplex(3));
+[SimplicialComplex
+
+ Properties known: Dim, Facets, Name, TopologicalType, VertexLabels.
+
+ Name="S^2_4xS^2_4"
+ Dim=4
+ TopologicalType="S^2xS^2"
+
+/SimplicialComplex]
+gap> SCHomology(s2s2);
+[ [ 0, [  ] ], [ 0, [  ] ], [ 2, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
+gap> SCHomologyInternal(s2s2);
+[ [ 0, [  ] ], [ 0, [  ] ], [ 2, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
+gap> SCHomologyBasis(s2s2,2);
+[ [ 1, [ [ 1, 70 ], [ -1, 12 ], [ 1, 2 ], [ -1, 1 ] ] ], 
+  [ 1, [ [ 1, 143 ], [ -1, 51 ], [ 1, 29 ], [ -1, 25 ] ] ] ]
+gap> SCHomologyBasisAsSimplices(s2s2,2);
+[ [ 1, 
+      [ [ 1, [ 2, 3, 4 ] ], [ -1, [ 1, 3, 4 ] ], [ 1, [ 1, 2, 4 ] ], [ -1, [ 1
+                    , 2, 3 ] ] ] ], 
+  [ 1, [ [ 1, [ 5, 9, 13 ] ], [ -1, [ 1, 9, 13 ] ], [ 1, [ 1, 5, 13 ] ], 
+          [ -1, [ 1, 5, 9 ] ] ] ] ]
+gap> SCCohomologyBasis(s2s2,2);
+[ [ 1, 
+      [ [ 1, 122 ], [ 1, 115 ], [ 1, 112 ], [ 1, 111 ], [ 1, 93 ], [ 1, 90 ], 
+          [ 1, 89 ], [ 1, 84 ], [ 1, 83 ], [ 1, 82 ], [ 1, 46 ], [ 1, 43 ], 
+          [ 1, 42 ], [ 1, 37 ], [ 1, 36 ], [ 1, 35 ], [ 1, 28 ], [ 1, 27 ], 
+          [ 1, 26 ], [ 1, 25 ] ] ], 
+  [ 1, [ [ 1, 213 ], [ 1, 201 ], [ 1, 192 ], [ 1, 189 ], [ 1, 159 ], 
+          [ 1, 150 ], [ 1, 147 ], [ 1, 131 ], [ 1, 128 ], [ 1, 125 ], 
+          [ 1, 67 ], [ 1, 58 ], [ 1, 55 ], [ 1, 39 ], [ 1, 36 ], [ 1, 33 ], 
+          [ 1, 10 ], [ 1, 7 ], [ 1, 4 ], [ 1, 1 ] ] ] ]
+gap> SCCohomologyBasisAsSimplices(s2s2,2);
+[ [ 1, [ [ 1, [ 4, 8, 12 ] ], [ 1, [ 3, 8, 12 ] ], [ 1, [ 3, 7, 12 ] ], 
+          [ 1, [ 3, 7, 11 ] ], [ 1, [ 2, 8, 12 ] ], [ 1, [ 2, 7, 12 ] ], 
+          [ 1, [ 2, 7, 11 ] ], [ 1, [ 2, 6, 12 ] ], [ 1, [ 2, 6, 11 ] ], 
+          [ 1, [ 2, 6, 10 ] ], [ 1, [ 1, 8, 12 ] ], [ 1, [ 1, 7, 12 ] ], 
+          [ 1, [ 1, 7, 11 ] ], [ 1, [ 1, 6, 12 ] ], [ 1, [ 1, 6, 11 ] ], 
+          [ 1, [ 1, 6, 10 ] ], [ 1, [ 1, 5, 12 ] ], [ 1, [ 1, 5, 11 ] ], 
+          [ 1, [ 1, 5, 10 ] ], [ 1, [ 1, 5, 9 ] ] ] ], 
+  [ 1, [ [ 1, [ 13, 14, 15 ] ], [ 1, [ 9, 14, 15 ] ], [ 1, [ 9, 10, 15 ] ], 
+          [ 1, [ 9, 10, 11 ] ], [ 1, [ 5, 14, 15 ] ], [ 1, [ 5, 10, 15 ] ], 
+          [ 1, [ 5, 10, 11 ] ], [ 1, [ 5, 6, 15 ] ], [ 1, [ 5, 6, 11 ] ], 
+          [ 1, [ 5, 6, 7 ] ], [ 1, [ 1, 14, 15 ] ], [ 1, [ 1, 10, 15 ] ], 
+          [ 1, [ 1, 10, 11 ] ], [ 1, [ 1, 6, 15 ] ], [ 1, [ 1, 6, 11 ] ], 
+          [ 1, [ 1, 6, 7 ] ], [ 1, [ 1, 2, 15 ] ], [ 1, [ 1, 2, 11 ] ], 
+          [ 1, [ 1, 2, 7 ] ], [ 1, [ 1, 2, 3 ] ] ] ] ]
+gap> PrintArray(SCIntersectionForm(s2s2));
+[ [  0,  1 ],
+  [  1,  0 ] ]
+gap> c:=s2s2+s2s2;
+[SimplicialComplex
+
+ Properties known: Dim, Facets, Name, VertexLabels, Vertices.
+
+ Name="S^2_4xS^2_4#+-S^2_4xS^2_4"
+ Dim=4
+
+/SimplicialComplex]
+gap> PrintArray(SCIntersectionForm(c));
+[ [   0,  -1,   0,   0 ],
+  [  -1,   0,   0,   0 ],
+  [   0,   0,   0,  -1 ],
+  [   0,   0,  -1,   0 ] ]
+</Log>
+			
+			</Section>
+
+		<Section Label="sec:DemoBist">
+			<Heading>Bistellar flips</Heading>
+			
+			For a more detailed description of functions related to bistellar flips as well as a very short introduction into the topic, see Chapter <Ref Chap="chap:bistellar"/>.
+			<Log>
+gap> beta4:=SCBdCrossPolytope(4);;    
+gap> s3:=SCBdSimplex(4);;             
+gap> SCEquivalent(beta4,s3);
+#I  round 0, move: [ [ 2, 6, 7 ], [ 3, 4 ] ]
+[ 8, 25, 34, 17 ]
+#I  round 1, move: [ [ 2, 7 ], [ 3, 4, 5 ] ]
+[ 8, 24, 32, 16 ]
+#I  round 2, move: [ [ 2, 5 ], [ 3, 4, 8 ] ]
+[ 8, 23, 30, 15 ]
+#I  round 3, move: [ [ 2 ], [ 3, 4, 6, 8 ] ]
+[ 7, 19, 24, 12 ]
+#I  round 4, move: [ [ 6, 8 ], [ 1, 3, 4 ] ]
+[ 7, 18, 22, 11 ]
+#I  round 5, move: [ [ 8 ], [ 1, 3, 4, 5 ] ]
+[ 6, 14, 16, 8 ]
+#I  round 6, move: [ [ 5 ], [ 1, 3, 4, 7 ] ]
+[ 5, 10, 10, 5 ]
+#I  SCReduceComplexEx: complexes are bistellarly equivalent.
+true
+gap> SCBistellarOptions.WriteLevel;   
+0
+gap> SCBistellarOptions.WriteLevel:=1;
+1
+gap> SCEquivalent(beta4,s3);          
+#I  SCLibInit: made directory "~/PATH" for user library.
+#I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
+#I  SCLibUpdate: rebuilding index for ~/PATH.
+#I  SCLibUpdate: rebuilding index done.
+
+#I  round 0, move: [ [ 2, 4, 6 ], [ 7, 8 ] ]
+[ 8, 25, 34, 17 ]
+#I  round 1, move: [ [ 2, 4 ], [ 5, 7, 8 ] ]
+[ 8, 24, 32, 16 ]
+#I  round 2, move: [ [ 4, 5 ], [ 1, 7, 8 ] ]
+[ 8, 23, 30, 15 ]
+#I  round 3, move: [ [ 4 ], [ 1, 6, 7, 8 ] ]
+[ 7, 19, 24, 12 ]
+#I  SCLibAdd: saving complex to file "complex_ReducedComplex_7_vertices_3_2009\
+-10-27_11-40-00.sc".
+#I  round 4, move: [ [ 2, 6 ], [ 3, 7, 8 ] ]
+[ 7, 18, 22, 11 ]
+#I  round 5, move: [ [ 2 ], [ 3, 5, 7, 8 ] ]
+[ 6, 14, 16, 8 ]
+#I  SCLibAdd: saving complex to file "complex_ReducedComplex_6_vertices_5_2009\
+-10-27_11-40-00.sc".
+#I  round 6, move: [ [ 5 ], [ 1, 3, 7, 8 ] ]
+[ 5, 10, 10, 5 ]
+#I  SCLibAdd: saving complex to file "complex_ReducedComplex_5_vertices_6_2009\
+-10-27_11-40-00.sc".
+#I  SCLibAdd: saving complex to file "complex_ReducedComplex_5_vertices_7_2009\
+-10-27_11-40-00.sc".
+#I  SCReduceComplexEx: complexes are bistellarly equivalent.
+true
+gap> myLib:=SCLibInit("~/PATH"); # copy path from above             
+[Simplicial complex library. Properties:
+CalculateIndexAttributes=true
+Number of complexes in library=4
+IndexAttributes=[ "Name", "Date", "Dim", "F", "G", "H", "Chi", "Homology" ]
+Loaded=true
+Path="/home/spreerjn/reducedComplexes/2009-10-27_11-40-00/"
+]
+gap> s3:=myLib.Load(3);
+[SimplicialComplex
+
+ Properties known: Chi, Date, Dim, F, Faces, Facets, G, H, Homology, 
+                   IsConnected, Name, VertexLabels.
+
+ Name="ReducedComplex_5_vertices_6"
+ Dim=3
+ Chi=0
+ F=[ 5, 10, 10, 5 ]
+ G=[ 0, 0 ]
+ H=[ 1, 1, 1, 1 ]
+ Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
+ IsConnected=true
+
+/SimplicialComplex]
+gap> s3:=myLib.Load(2);
+[SimplicialComplex
+
+ Properties known: Chi, Date, Dim, F, Faces, Facets, G, H, Homology, 
+                   IsConnected, Name, VertexLabels.
+
+ Name="ReducedComplex_6_vertices_5"
+ Dim=3
+ Chi=0
+ F=[ 6, 14, 16, 8 ]
+ G=[ 1, 0 ]
+ H=[ 2, 2, 2, 1 ]
+ Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
+ IsConnected=true
+
+/SimplicialComplex]
+gap> t2:=SCCartesianProduct(SCBdSimplex(2),SCBdSimplex(2));;
+gap> t2.F;
+[ 9, 27, 18 ]
+gap> SCBistellarOptions.WriteLevel:=0;
+0
+gap> SCBistellarOptions.LogLevel:=0;  
+0
+gap> mint2:=SCReduceComplex(t2);    
+[ true, [SimplicialComplex
+    
+     Properties known: Dim, Facets, Name, VertexLabels.
+    
+     Name="unnamed complex 85"
+     Dim=2
+    
+    /SimplicialComplex], 32 ]
+			</Log>
+		</Section>
+		
+		<Section Label="sec:DemoBlowups">
+			<Heading>Simplicial blowups</Heading>
+			
+			For a more detailed description of functions related to simplicial blowups see Chapter <Ref Chap="chap:blowups"/>.
+			<Log>
+gap> list:=SCLib.SearchByName("Kummer");
+[ [ 7493, "4-dimensional Kummer variety (VT)" ] ]
+gap> c:=SCLib.Load(7493);
+[SimplicialComplex
+
+ Properties known: AltshulerSteinberg, AutomorphismGroup, 
+                   AutomorphismGroupSize, AutomorphismGroupStructure, 
+                   AutomorphismGroupTransitivity, 
+                   ConnectedComponents, Date, Dim, DualGraph, 
+                   EulerCharacteristic, FacetsEx, GVector, 
+                   GeneratorsEx, HVector, HasBoundary, HasInterior, 
+                   Homology, Interior, IsCentrallySymmetric, 
+                   IsConnected, IsEulerianManifold, IsManifold, 
+                   IsOrientable, IsPseudoManifold, IsPure, 
+                   IsStronglyConnected, MinimalNonFacesEx, Name, 
+                   Neighborliness, NumFaces[], Orientation, 
+                   SkelExs[], Vertices.
+
+ Name="4-dimensional Kummer variety (VT)"
+ Dim=4
+ AltshulerSteinberg=45137758519296000000000000
+ AutomorphismGroupSize=1920
+ AutomorphismGroupStructure="((C2 x C2 x C2 x C2) : A5) : C2"
+ AutomorphismGroupTransitivity=1
+ EulerCharacteristic=8
+ GVector=[ 10, 55, 60 ]
+ HVector=[ 11, 66, 126, -19, 7 ]
+ HasBoundary=false
+ HasInterior=true
+ Homology=[ [0, [ ] ], [0, [ ] ], [6, [2,2,2,2,2] ], [0, [ ] ], [1, [ ] ] ]
+ IsCentrallySymmetric=false
+ IsConnected=true
+ IsEulerianManifold=true
+ IsOrientable=true
+ IsPseudoManifold=true
+ IsPure=true
+ IsStronglyConnected=true
+ Neighborliness=2
+
+/SimplicialComplex]
+gap> lk:=SCLink(c,1);
+[SimplicialComplex
+
+ Properties known: Dim, FacetsEx, Name, Vertices.
+
+ Name="lk([ 1 ]) in 4-dimensional Kummer variety (VT)"
+ Dim=3
+
+/SimplicialComplex]
+gap> SCHomology(lk);
+[ [ 0, [  ] ], [ 0, [ 2 ] ], [ 0, [  ] ], [ 1, [  ] ] ]
+gap> SCLibDetermineTopologicalType(lk);
+[ 45, 113, 2426, 2502, 7470 ]
+gap> d:=SCLib.Load(45);;
+gap> d.Name;
+"RP^3"
+gap> SCEquivalent(lk,d);
+#I  SCReduceComplexEx: complexes are bistellarly equivalent.
+true
+gap> e:=SCBlowup(c,1);
+#I  SCBlowup: checking if singularity is a combinatorial manifold...
+#I  SCBlowup: ...true
+#I  SCBlowup: checking type of singularity...
+#I  SCReduceComplexEx: complexes are bistellarly equivalent.
+#I  SCBlowup: ...ordinary double point (supported type).
+#I  SCBlowup: starting blowup...
+#I  SCBlowup: map boundaries...
+#I  SCBlowup: boundaries not isomorphic, initializing bistellar moves...
+#I  SCBlowup: found complex with smaller boundary: f = [ 15, 74, 118, 59 ].
+#I  SCBlowup: found complex with smaller boundary: f = [ 14, 70, 112, 56 ].
+#I  SCBlowup: found complex with smaller boundary: f = [ 14, 69, 110, 55 ].
+#I  SCBlowup: found complex with smaller boundary: f = [ 14, 68, 108, 54 ].
+#I  SCBlowup: found complex with smaller boundary: f = [ 13, 64, 102, 51 ].
+#I  SCBlowup: found complex with smaller boundary: f = [ 13, 63, 100, 50 ].
+#I  SCBlowup: found complex with smaller boundary: f = [ 13, 62, 98, 49 ].
+#I  SCBlowup: found complex with smaller boundary: f = [ 12, 58, 92, 46 ].
+#I  SCBlowup: found complex with smaller boundary: f = [ 12, 57, 90, 45 ].
+#I  SCBlowup: found complex with smaller boundary: f = [ 12, 56, 88, 44 ].
+#I  SCBlowup: found complex with smaller boundary: f = [ 11, 52, 82, 41 ].
+#I  SCBlowup: found complex with smaller boundary: f = [ 11, 51, 80, 40 ].
+#I  SCBlowup: found complex with isomorphic boundaries.
+#I  SCBlowup: ...boundaries mapped succesfully.
+#I  SCBlowup: build complex...
+#I  SCBlowup: ...done.
+#I  SCBlowup: ...blowup completed.
+#I  SCBlowup: You may now want to reduce the complex via 'SCReduceComplex'.
+[SimplicialComplex
+
+ Properties known: Dim, FacetsEx, Name, Vertices.
+
+ Name="unnamed complex 6315 \ star([ 1 ]) in unnamed complex 6315 cup unnamed\
+ complex 6319 cup unnamed complex 6317"
+ Dim=4
+
+/SimplicialComplex]
+gap> SCHomology(c);
+[ [ 0, [  ] ], [ 0, [  ] ], [ 6, [ 2, 2, 2, 2, 2 ] ], [ 0, [  ] ], [ 1, [  ] ] ]
+gap> SCHomology(e);
+[ [ 0, [  ] ], [ 0, [  ] ], [ 7, [ 2, 2, 2, 2 ] ], [ 0, [  ] ], [ 1, [  ] ] ]
+			</Log>
+		</Section>
+		
+		
+		<Section Label="sec:DemoDiscreteNormalSurface">
+			<Heading>Discrete normal surfaces and slicings</Heading>
+			
+			For a more detailed description of functions related to discrete normal surfaces and slicings see the Sections <Ref Chap="sec:NormSurfTheory"/> and <Ref Chap="sec:MorseTheory"/>.
+			<Log>		
+		
+gap> # the boundary of the cyclic 4-polytope with 6 vertices		
+gap> c:=SCBdCyclicPolytope(4,6); 
+[SimplicialComplex
+
+ Properties known: Dim, EulerCharacteristic, FacetsEx, HasBoundary, Homology,\
+ IsConnected, IsStronglyConnected, Name, NumFaces[], TopologicalType, Vertices.
+
+ Name="Bd(C_4(6))"
+ Dim=3
+ EulerCharacteristic=0
+ HasBoundary=false
+ Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
+ IsConnected=true
+ IsStronglyConnected=true
+ TopologicalType="S^3"
+
+/SimplicialComplex]
+gap> # slicing in between the odd and the even vertex labels, a polyhedral torus
+gap> sl:=SCSlicing(c,[[2,4,6],[1,3,5]]);   
+[NormalSurface
+
+ Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector,\
+ FacetsEx, Genus, IsConnected, IsOrientable, NSTriangulation, Name,\
+ TopologicalType, Vertices.
+
+ Name="slicing [ [ 2, 4, 6 ], [ 1, 3, 5 ] ] of Bd(C_4(6))"
+ Dim=2
+ FVector=[ 9, 18, 0, 9 ]
+ EulerCharacteristic=0
+ IsOrientable=true
+ TopologicalType="T^2"
+
+/NormalSurface]
+gap> sl.Homology;
+[ [ 0, [  ] ], [ 2, [  ] ], [ 1, [  ] ] ]
+gap> sl.Genus;
+1
+gap> sl.F; # the slicing constists of 9 quadrilaterals and 0 triangles
+[ 9, 18, 0, 9 ]
+gap> PrintArray(sl.Facets);
+[ [  [ 2, 1 ],  [ 2, 3 ],  [ 4, 1 ],  [ 4, 3 ] ],
+  [  [ 2, 1 ],  [ 2, 3 ],  [ 6, 1 ],  [ 6, 3 ] ],
+  [  [ 2, 1 ],  [ 2, 5 ],  [ 4, 1 ],  [ 4, 5 ] ],
+  [  [ 2, 1 ],  [ 2, 5 ],  [ 6, 1 ],  [ 6, 5 ] ],
+  [  [ 2, 3 ],  [ 2, 5 ],  [ 4, 3 ],  [ 4, 5 ] ],
+  [  [ 2, 3 ],  [ 2, 5 ],  [ 6, 3 ],  [ 6, 5 ] ],
+  [  [ 4, 1 ],  [ 4, 3 ],  [ 6, 1 ],  [ 6, 3 ] ],
+  [  [ 4, 1 ],  [ 4, 5 ],  [ 6, 1 ],  [ 6, 5 ] ],
+  [  [ 4, 3 ],  [ 4, 5 ],  [ 6, 3 ],  [ 6, 5 ] ] ]
+</Log></Section>
+
+Further example computations can be found in the slides of various talks about <Package>simpcomp</Package>, available from the <Package>simpcomp</Package> homepage (<C>http://www.igt.uni-stuttgart.de/LstDiffgeo/simpcomp/</C>), and in Appendix A of <Cite Key="Spreer10Diss"/>. 
+	</Chapter>
+

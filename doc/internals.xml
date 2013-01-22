@@ -1,0 +1,113 @@
+<Chapter Label="chap:internals">
+<Heading><Package>simpcomp</Package> internals</Heading>
+
+The package <Package>simpcomp</Package> works with geometric objects for which the &GAP; object types <C>SCSimplicialComplex</C> and <C>SCNormalSurface</C> are defined and calculates properties of these objects via so called property handlers. This chapter describes how to extend <Package>simpcomp</Package> by writing own property handlers.
+
+<P/>
+
+If you extended <Package>simpcomp</Package> and want to share your extension with other users please send your extension to one of the authors and we will consider including it (of course with giving credit) in a future release of <Package>simpcomp</Package>.
+
+<P/>
+
+<#Include Label="propobject" />
+
+<Section Label="sec:prophandlerex">
+<Heading>Example of a common attribute</Heading>
+
+In this section we will have a look at the property handler <Ref Func="SCEulerCharacteristic"/> in order to explain the inner workings of property handlers. 
+
+This is the code of the property handler for calculating the Euler characteristic of a complex in <Package>simpcomp</Package>:
+
+<Example><![CDATA[
+DeclareAttribute("SCEulerCharacteristic",SCIsPolyhedralComplex);
+
+InstallMethod(SCEulerCharacteristic,
+"for SCSimplicialComplex",
+[SCIsSimplicialComplex],
+function(complex)
+
+	local  f, chi, i;
+
+	f:=SCFVector(complex);
+	if f=fail then
+		return fail;
+	fi;
+	chi:=0;
+
+	for i in [1..Size(f)] do
+			chi:=chi + ((-1)^(i+1))*f[i];
+	od;
+
+	return chi;
+end);
+
+InstallMethod(SCEulerCharacteristic,
+"for SCNormalSurface",
+[SCIsNormalSurface],
+function(sl)
+
+ 	local facets, f, chi;
+
+  	
+ 	f:=SCFVector(sl);
+ 	if(f=fail) then
+ 		return fail;
+ 	fi;
+	
+	if Length(f) = 1 then
+	 		return f[1];
+	elif Length(f) =3 then
+ 	 		return f[1]-f[2]+f[3];
+ 	elif Length(f) =4 then
+ 	 		return f[1]-f[2]+f[3]+f[4];
+ 	else
+ 		Info(InfoSimpcomp,1,"SCEulerCharacteristic: illegal f-vector found: ",f,". ");
+ 		return fail;
+ 	fi;
+
+end);
+]]>
+</Example>
+
+When looking at the code one already sees the structure that such a handler needs to have:
+
+<Enum>
+<Item>Each property handler (a GAP operation) needs to be defined. This is done by the first line of code. Once an operation is defined, multiple methods can by implemented for various types of GAP objects (here two methods are implemented for the GAP object types <C>SCSimplicialComplex</C> and <C>SCNormalSurface</C>).</Item>
+
+<Item>First note that the validity of the arguments is checked by GAP. For example, the first method only accepts an argument of type <C>SCSimplicialComplex</C>.</Item>
+
+<Item>If the property was already computed, the GAP4 type system automatically returns the cached property avoiding unnecessary double calculations.</Item>
+
+<Item>If the property is not already known. it is computed and returned (and automatically cached by the GAP4 type system).</Item>
+</Enum>
+
+
+
+</Section>
+
+
+<Section Label="sec:prophandlerskel">
+<Heading>Writing a method for an attribute</Heading>
+
+This section provides the skeleton of a method that can be used when writing own methods:
+
+<Example><![CDATA[
+DeclareAttribute("SCMyPropertyHandler",SCPolyhedralComplex);
+
+InstallMethod(SCMyPropertyHandler,
+"for SCSimplicialComplex[ and further arguments]",
+[SCIsSimplicialComplex[, further arguments]],
+function(complex[, further arguments])
+
+	local myprop, ...;
+
+	# compute the property
+ [ do property computation here]
+
+	return myprop;
+end);]]>
+</Example>
+</Section>
+
+
+</Chapter>

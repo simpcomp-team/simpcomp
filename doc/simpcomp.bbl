@@ -1,0 +1,331 @@
+\begin{thebibliography}{DHSW04}
+
+\bibitem[BAB12]{regina}
+William Pettersson et~al. Benjamin A.~Burton, Ryan~Budney.
+\newblock Regina: Software for 3-manifold topology and normal surface theory,
+  version 4.9.2.
+\newblock {\tt http://\allowbreak regina.\allowbreak sourceforge.\allowbreak
+  net/}, 1999--2012.
+
+\bibitem[Ban65]{Banchoff65TightEmb3DimPolyMnf}
+Thomas~F. Banchoff.
+\newblock {T}ightly embedded {$2$}-dimensional polyhedral manifolds.
+\newblock {\em Amer. J. Math.}, 87:462--472, 1965.
+
+\bibitem[Ban74]{Banchoff74TightPolyKBProjPMB}
+Thomas~F. Banchoff.
+\newblock {T}ight polyhedral {K}lein bottles, projective planes, and {M}\"obius
+  bands.
+\newblock {\em Math. Ann.}, 207:233--243, 1974.
+
+\bibitem[BD08a]{Bagchi08LBTNormPseudoMnf}
+Bhaskar Bagchi and Basudeb Datta.
+\newblock {L}ower bound theorem for normal pseudomanifolds.
+\newblock {\em Expo. Math.}, 26(4):327--351, 2008.
+
+\bibitem[BD08b]{Bagchi08OnWalkupKd}
+Bhaskar Bagchi and Basudeb Datta.
+\newblock {O}n {W}alkup's class $\mathcal{K}(d)$ and a minimal triangulation of
+  a 4-manifold.
+\newblock {\tt arXiv:0804.2153v1 [math.GT]}, Preprint, 8 pages, 2008.
+
+\bibitem[BK97]{Banchoff97TightSubmSmoothPoly}
+Thomas~F. Banchoff and Wolfgang K{\"u}hnel.
+\newblock {T}ight submanifolds, smooth and polyhedral.
+\newblock In {\em Tight and taut submanifolds ({B}erkeley, {CA}, 1994)},
+  volume~32 of {\em Math. Sci. Res. Inst. Publ.}, pages 51--118. Cambridge
+  Univ. Press, Cambridge, 1997.
+
+\bibitem[BK08]{Brehm08EquivMapsTorus}
+Ulrich Brehm and Wolfgang K{\"u}hnel.
+\newblock {E}quivelar maps on the torus.
+\newblock {\em European J. Combin.}, 29(8):1843--1861, 2008.
+
+\bibitem[BK09]{Brehm09LatticeTrigE33Torus}
+U.~Brehm and W.~K\"uhnel.
+\newblock Lattice triangulations of {$E^3$} and of the $3$-torus, 2009.
+\newblock {To appear in Israel J. Math.}
+
+\bibitem[BL98]{Breuer98GAP4TypeSystem}
+Thomas Breuer and Steve Linton.
+\newblock The gap 4 type system: organising algebraic algorithms.
+\newblock In {\em Proceedings of the 1998 international symposium on Symbolic
+  and algebraic computation}, ISSAC '98, pages 38--45, New York, NY, USA, 1998.
+  ACM.
+
+\bibitem[BL00]{Bjoerner00SimplMnfBistellarFlips}
+Anders Bj{\"o}rner and Frank~H. Lutz.
+\newblock {S}implicial manifolds, bistellar flips and a 16-vertex triangulation
+  of the {P}oincar{\'e} homology 3-sphere.
+\newblock {\em Experiment. Math.}, 9(2):275--289, 2000.
+
+\bibitem[BR08]{HomAlg}
+Mohamed Barakat and Daniel Robertz.
+\newblock {\tt homalg}: a meta-package for homological algebra.
+\newblock {\em J. Algebra Appl.}, 7(3):299--317, 2008.
+
+\bibitem[CK01]{Casella01TrigK3MinNumVert}
+Mario Casella and Wolfgang K{\"u}hnel.
+\newblock {A} triangulated {$K3$} surface with the minimum number of vertices.
+\newblock {\em Topology}, 40(4):753--772, 2001.
+
+\bibitem[Con09]{Conder09RegMapsOfBdChi}
+Marston D.~E. Conder.
+\newblock Regular maps and hypermaps of {E}uler characteristic {$-1$} to
+  {$-200$}.
+\newblock {\em J. Combin. Theory Ser. B}, 99(2):455--459, 2009.
+
+\bibitem[Dat07]{Datta07MinTrigManifolds}
+Basudeb Datta.
+\newblock {M}inimal triangulations of manifolds.
+\newblock {\em J. Indian Inst. Sci.}, 87(4):429--449, 2007.
+
+\bibitem[DHSW04]{Dumas04Homology}
+J.-G. Dumas, F.~Heckenbach, B.~D. Saunders, and V.~Welker.
+\newblock {S}implicial {H}omology, v. 1.4.2.
+\newblock {\url{http://www.cis.udel.edu/~dumas/Homology/}}, 2004.
+
+\bibitem[DKT08]{Desbrun08DiscDiffFormCompModel}
+Mathieu Desbrun, Eva Kanso, and Yiying Tong.
+\newblock {D}iscrete differential forms for computational modeling.
+\newblock In {\em Discrete differential geometry}, volume~38 of {\em
+  Oberwolfach Semin.}, pages 287--324. Birkh\"auser, Basel, 2008.
+
+\bibitem[Eff11a]{Effenberger10Diss}
+Felix Effenberger.
+\newblock {\em {H}amiltonian submanifolds of regular polytopes}.
+\newblock Logos Verlag, Berlin, 2011.
+\newblock Dissertation, University of Stuttgart, 2010.
+
+\bibitem[Eff11b]{Effenberger09StackPolyTightTrigMnf}
+Felix Effenberger.
+\newblock {S}tacked polytopes and tight triangulations of manifolds.
+\newblock {\em Journal of Combinatorial Theory, Series A}, 118(6):1843 -- 1862,
+  2011.
+
+\bibitem[For95]{Forman95DiscrMorseTheoryCellCompl}
+Robin Forman.
+\newblock A discrete {M}orse theory for cell complexes.
+\newblock In {\em Geometry, topology, \& physics}, Conf. Proc. Lecture Notes
+  Geom. Topology, IV, pages 112--125. Int. Press, Cambridge, MA, 1995.
+
+\bibitem[Fro08]{Frohmader08FaceVecFlagCompl}
+Andrew Frohmader.
+\newblock Face vectors of flag complexes.
+\newblock {\em Israel J. Math.}, 164:153--164, 2008.
+
+\bibitem[GJ00]{Joswig00Polymake}
+Ewgenij Gawrilow and Michael Joswig.
+\newblock polymake: a framework for analyzing convex polytopes.
+\newblock In {\em Polytopes---combinatorics and computation (Oberwolfach,
+  1997)}, volume~29 of {\em DMV Sem.}, pages 43--73. Birkh{\"a}user, Basel,
+  2000.
+
+\bibitem[Gr{\"u}03]{Gruenbaum03ConvPoly}
+Branko Gr{\"u}nbaum.
+\newblock {\em {C}onvex polytopes}, volume 221 of {\em Graduate Texts in
+  Mathematics}.
+\newblock Springer-Verlag, New York, second edition, 2003.
+\newblock Prepared and with a preface by Volker Kaibel, Victor Klee and
+  G{\"u}nter M.\ Ziegler.
+
+\bibitem[GS09]{M2}
+Daniel~R. Grayson and Michael~E. Stillman.
+\newblock {M}acaulay2, a software system for research in algebraic geometry,
+  {V}ersion 1.3.1.
+\newblock \url{http://www.math.uiuc.edu/Macaulay2/}, 2009.
+
+\bibitem[Hak61]{Haken61TheoNormFl}
+Wolfgang Haken.
+\newblock {T}heorie der {N}ormalfl{\"a}chen.
+\newblock {\em Acta Math.}, 105:245--375, 1961.
+
+\bibitem[Hau00]{Hauser2000}
+Herwig Hauser.
+\newblock Resolution of singularities 1860--1999.
+\newblock In {\em Resolution of singularities ({O}bergurgl, 1997)}, volume 181
+  of {\em Progr. Math.}, pages 5--36. Birkh\"auser, Basel, 2000.
+
+\bibitem[Hir53]{Hirzebruch1953}
+Friedrich E.~P. Hirzebruch.
+\newblock \"uber vierdimensionale riemannsche fl\"achen mehrdeutiger
+  analyti\-scher funktionen von zwei komplexen ver\"anderlichen.
+\newblock {\em Math. Ann.}, 126:1 -- 22, 1953.
+
+\bibitem[Hop51]{Hopf1951}
+Heinz Hopf.
+\newblock \"{U}ber komplex-analytische {M}annigfaltigkeiten.
+\newblock {\em Univ. Roma. Ist. Naz. Alta Mat. Rend. Mat. e Appl. (5)},
+  10:169--182, 1951.
+
+\bibitem[Hud69]{Hudson69PLTop}
+John F.~P. Hudson.
+\newblock {\em {P}iecewise linear topology}.
+\newblock University of Chicago Lecture Notes prepared with the assistance of
+  J. L. Shaneson and J. Lees. W. A. Benjamin, Inc., New York-Amsterdam, 1969.
+
+\bibitem[Hup67]{Huppert67EndlGruppen}
+Bertram Huppert.
+\newblock {\em Endliche {G}ruppen. {I}}.
+\newblock Die Grundlehren der Mathematischen Wissenschaften, Band 134.
+  Springer-Verlag, Berlin, 1967.
+
+\bibitem[KL99]{Kuehnel99CensusTight}
+Wolfgang K{\"u}hnel and Frank~H. Lutz.
+\newblock {A} census of tight triangulations.
+\newblock {\em Period. Math. Hungar.}, 39(1-3):161--183, 1999.
+\newblock {D}iscrete geometry and rigidity ({B}udapest, 1999).
+
+\bibitem[KN11]{Klee11CentSymmMnfFewVert}
+Steven Klee and Isabella Novik.
+\newblock {C}entrally symmetric manifolds with few vertices.
+\newblock {\tt arXiv:1102.0542v1 [math.CO]}, Preprint, 15 pages, 2011.
+
+\bibitem[Kne29]{Kneser29ClosedSurfIn3Mflds}
+Hellmuth Kneser.
+\newblock {Geschlossene Fl\"{a}chen in dreidimensionalen Mannigfaltigkeiten}.
+\newblock {\em Jahresbericht der deutschen Mathematiker-Vereinigung},
+  38:248--260, 1929.
+
+\bibitem[K{\"u}h86]{Kuehnel86HigherDimCsaszar}
+Wolfgang K{\"u}hnel.
+\newblock {H}igher dimensional analogues of {C}s{\'a}sz{\'a}r's torus.
+\newblock {\em Results Math.}, 9:95--106, 1986.
+
+\bibitem[K{\"u}h94]{Kuehnel94ManSkelConvPolyt}
+Wolfgang K{\"u}hnel.
+\newblock {M}anifolds in the skeletons of convex polytopes, tightness, and
+  generalized {H}eawood inequalities.
+\newblock In {\em Polytopes: abstract, convex and computational (Scarborough,
+  ON, 1993)}, volume 440 of {\em NATO Adv. Sci. Inst. Ser. C Math. Phys. Sci.},
+  pages 241--247. Kluwer Acad. Publ., Dordrecht, 1994.
+
+\bibitem[K{\"u}h95]{Kuehnel95TightPolySubm}
+Wolfgang K{\"u}hnel.
+\newblock {\em {T}ight polyhedral submanifolds and tight triangulations},
+  volume 1612 of {\em Lecture Notes in Mathematics}.
+\newblock Springer-Verlag, Berlin, 1995.
+
+\bibitem[Kui84]{Kuiper84GeomTotAbsCurvTheo}
+Nicolaas~H. Kuiper.
+\newblock {G}eometry in total absolute curvature theory.
+\newblock In {\em Perspectives in mathematics}, pages 377--392. Birkh{\"a}user,
+  Basel, 1984.
+
+\bibitem[Lut]{Lutz08ManifoldPage}
+Frank~H. Lutz.
+\newblock {T}he {M}anifold {P}age.
+\newblock {\url{http://www.math.tu-berlin.de/diskregeom/stellar}}.
+
+\bibitem[Lut03]{Lutz03TrigMnfFewVertVertTrans}
+Frank~H. Lutz.
+\newblock {\em {T}riangulated {M}anifolds with {F}ew {V}ertices and
+  {V}ertex-{T}ransitive {G}roup {A}ctions}.
+\newblock PhD thesis, TU Berlin, 2003.
+
+\bibitem[Lut05]{Lutz05TrigMnfFewVertCombMnf}
+Frank~H. Lutz.
+\newblock {T}riangulated {M}anifolds with {F}ew {V}ertices: {C}ombinatorial
+  {M}anifolds.
+\newblock {\tt arXiv:math/0506372v1 [math.CO]}, Preprint, 37 pages, 2005.
+
+\bibitem[McK84]{McKay84Nauty}
+Brendan McKay.
+\newblock The nauty page.
+\newblock {\url{http://cs.anu.edu.au/people/bdm/nauty/}}, 1984.
+
+\bibitem[Pac87]{Pachner87KonstrMethKombHomeo}
+Udo Pachner.
+\newblock {K}onstruktionsmethoden und das kombinatorische
+  {H}om\"{o}omorphieproblem f\"{u}r {T}riangulierungen kompakter semilinearer
+  {M}annigfaltigkeiten.
+\newblock {\em Abh. Math. Sem. Uni. Hamburg}, 57:69--86, 1987.
+
+\bibitem[R\"07]{Roeder07Polymaking}
+Marc R\"{o}der.
+\newblock {GAP} package polymaking.
+\newblock {\url{http://www.gap-system.org/Packages/polymaking.html}}, 2007.
+
+\bibitem[Rin74]{Ringel74MapColThm}
+Gerhard Ringel.
+\newblock {\em {M}ap color theorem}.
+\newblock Springer-Verlag, New York, 1974.
+\newblock Die Grundlehren der mathematischen Wissenschaften, Band 209.
+
+\bibitem[RS72]{Rourke72IntrPLTop}
+Colin~P. Rourke and Brian~J. Sanderson.
+\newblock {\em {I}ntroduction to piecewise-linear topology}.
+\newblock Springer-Verlag, New York, 1972.
+\newblock Ergebnisse der Mathematik und ihrer Grenzgebiete, Band 69.
+
+\bibitem[Sch94]{Schulz94PolyhMnfPoly}
+Christoph Schulz.
+\newblock {P}olyhedral manifolds on polytopes.
+\newblock {\em Rend. Circ. Mat. Palermo (2) Suppl.}, (35):291--298, 1994.
+\newblock First International Conference on Stochastic Geometry, Convex Bodies
+  and Empirical Measures (Palermo, 1993).
+
+\bibitem[SK11]{Spreer09CombPorpsOfK3}
+Jonathan Spreer and Wolfgang K{\"u}hnel.
+\newblock {C}ombinatorial properties of the {K}3 surface: {S}implicial blowups
+  and slicings.
+\newblock {\em Experiment. Math.}, 20(2):201--216, 2011.
+
+\bibitem[Soi06]{Soicher06GRAPE}
+Leonard~H. Soicher.
+\newblock {GRAPE - GRaph Algorithms using PErmutation groups}.
+\newblock {\url{http://www.gap-system.org/Packages/grape.html}}, 2006.
+\newblock {Version 4.3}.
+
+\bibitem[Spa56]{Spanier56HomKummerMnf}
+Edwin~H. Spanier.
+\newblock {T}he homology of {K}ummer manifolds.
+\newblock {\em Proc. AMS}, 7:155--160, 1956.
+
+\bibitem[Spa99]{Sparla99LBTComb2kMnf}
+Eric Sparla.
+\newblock {A} new lower bound theorem for combinatorial {$2k$}-manifolds.
+\newblock {\em Graphs Combin.}, 15(1):109--125, 1999.
+
+\bibitem[Spr10a]{Spreer10Diss}
+Jonathan Spreer.
+\newblock Blowups, slicings and permutation groups in combinatorial topology,
+  2010.
+\newblock In preparation.
+
+\bibitem[Spr10b]{Spreer10PartBetaK}
+Jonathan Spreer.
+\newblock {P}artitioning the triangles of the cross polytope into surfaces.
+\newblock {\tt arXiv:1009.2642v1 [math.CO]}, preprint, 12 pages, 1 figure,
+  2010.
+\newblock {T}o appear in {B}eitr. {A}lgebra {G}eom.
+
+\bibitem[Spr11a]{Spreer11CyclicCombMflds}
+Jonathan Spreer.
+\newblock Combinatorial 3-manifolds with a cyclic automorphism group.
+\newblock Stuttgarter Math. Berichte, 2011/028, 2011.
+
+\bibitem[Spr11b]{Spreer10NormSurfsCombSlic}
+Jonathan Spreer.
+\newblock {N}ormal surfaces as combinatorial slicings.
+\newblock {\em Discrete Math.}, 311(14):1295--1309, 2011.
+\newblock {\tt doi:10.1016/j.disc.2011.03.013}.
+
+\bibitem[Spr13]{Spreer12VarCyclPolytope}
+Jonathan Spreer.
+\newblock {C}ombinatorial seifert fibred spaces with transitive cyclic
+  automorphism group, 2013.
+\newblock {I}n preparation.
+
+\bibitem[Wee99]{SnapPea}
+Jeff Weeks.
+\newblock {S}nap{P}ea ({S}oftware for hyperbolic $3$-manifolds), 1999.
+\newblock \url{http://www.geometrygames.org/SnapPea/}.
+
+\bibitem[Zie95]{Ziegler95LectPolytopes}
+G{\"u}nter~M. Ziegler.
+\newblock {\em {L}ectures on polytopes}, volume 152 of {\em Graduate Texts in
+  Mathematics}.
+\newblock Springer-Verlag, New York, 1995.
+
+\end{thebibliography}

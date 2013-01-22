@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: simpcomp.aux
+The style file: alpha.bst
+Database file #1: biblio.bib
+Too many commas in name 1 of "Benjamin A. Burton, Ryan Budney, William Pettersson, et al." for entry regina
+while executing---line 1185 of file alpha.bst
+Too many commas in name 1 of "Benjamin A. Burton, Ryan Budney, William Pettersson, et al." for entry regina
+while executing---line 1185 of file alpha.bst
+Too many commas in name 1 of "Benjamin A. Burton, Ryan Budney, William Pettersson, et al." for entry regina
+while executing---line 1250 of file alpha.bst
+Warning--there's a number but no volume in Schulz94PolyhMnfPoly
+You've used 56 entries,
+            2543 wiz_defined-function locations,
+            953 strings with 14071 characters,
+and the built_in function-call counts, 20023 in all, are:
+= -- 2076
+> -- 653
+< -- 55
++ -- 196
+- -- 189
+* -- 1284
+:= -- 3177
+add.period$ -- 187
+call.type$ -- 56
+change.case$ -- 292
+chr.to.int$ -- 52
+cite$ -- 57
+duplicate$ -- 866
+empty$ -- 1647
+format.name$ -- 283
+if$ -- 4196
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 47
+newline$ -- 292
+num.names$ -- 168
+pop$ -- 324
+preamble$ -- 1
+purify$ -- 356
+quote$ -- 0
+skip$ -- 703
+stack$ -- 0
+substring$ -- 1200
+swap$ -- 134
+text.length$ -- 55
+text.prefix$ -- 38
+top$ -- 0
+type$ -- 416
+warning$ -- 1
+while$ -- 198
+width$ -- 62
+write$ -- 757
+(There were 3 error messages)

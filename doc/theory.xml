@@ -1,0 +1,366 @@
+<Chapter Label="chap:theory"> <Heading>Theoretical foundations</Heading>
+
+	The purpose of this chapter is to recall some basic definitions regarding polytopes, triangulations, polyhedral Morse theory, discrete normal surfaces, slicings, tight triangulations and simplicial blowups. The expert in these fields may well skip to the next chapter. 
+
+	<P/>
+	
+	For a more detailed look the authors recommend the books <Cite Key="Hudson69PLTop" />, <Cite Key="Rourke72IntrPLTop" /> on PL-topology and	<Cite Key="Ziegler95LectPolytopes" />, <Cite Key="Gruenbaum03ConvPoly" />	on the theory of polytopes.
+	
+	<P/>
+	
+	An overview of the more recent developments in the field of combinatorial topology can be found in <Cite Key="Lutz05TrigMnfFewVertCombMnf" /> and 	<Cite Key="Datta07MinTrigManifolds" />.
+
+
+  <Section Label="sec:polytopes"><Heading>Polytopes and polytopal complexes</Heading>
+
+  
+  
+	A convex <E><M>d</M>-polytope</E> is the convex hull of <M>n</M> points <M>p_i \in E^d</M> in the <M>d</M>-dimensional euclidean space:
+	
+	<Display>P=
+	
+	<Alt Only="LaTeX"><![CDATA[
+		\operatorname{conv}
+	]]>
+	</Alt>
+	
+	<Alt Not="LaTeX">
+		conv
+	</Alt>
+	
+	\{v_1,\dots,v_n\}\subset E^d,
+	</Display>
+	
+	where the <M>v_1,\dots,v_n</M> do not lie in a hyperplane of <M>E^d</M>.
+	
+	<P/>
+
+	From now on when talking about polytopes in this document always convex polytopes are meant unless explicitly stated otherwise.
+
+	<P/>
+	
+	For any supporting hyperplane <M>h \subset E^d</M>, <M>P\cap h</M> is called a <E><M>k</M>-face</E> of <M>P</M> if <M>\dim(P\cap h)=k</M>. The 0-faces are called <E>vertices</E>, the 1-faces <E>edges</E> and the <M>(d-1)</M>-faces are called <E>facets</E> of <M>P</M>.
+
+	<P/>
+
+	A <M>d</M>-polytope <M>P</M> for which all facets are congruent regular 
+	<M>(d-1)</M>-polytopes and for which all vertex links are congruent regular 
+	<M>(d-1)</M>-polytopes is called regular, where the regular 
+	<M>2</M>-polytopes are regular polygons.
+		
+	<P/>
+
+	<Alt Only="LaTeX"><![CDATA[
+		Figure 1 below shows the only five regular convex 3-polytopes (also known as \emph{platonic solids}).  
+
+		\begin{center}
+			\begin{tabular}{@{}lllll@{}}
+				\includegraphics[width=2cm]{figures/platonicsolids1}&
+				\includegraphics[width=2cm]{figures/platonicsolids2}&
+				\includegraphics[width=2cm]{figures/platonicsolids3}&
+				\includegraphics[width=2cm]{figures/platonicsolids4}&
+				\includegraphics[width=2cm]{figures/platonicsolids5}
+			\end{tabular}\\\bigskip
+			{\small Figure 1. The \emph{platonic solids} as the five regular convex 3-polytopes.}
+		\end{center}
+		]]>
+	</Alt>
+	
+	<P/>
+
+	The set of all <M>k</M>-faces of <M>P</M> is called the  <E><M>k</M>-skeleton</E> of <M>P</M>, written as
+
+	<Alt Only="LaTeX"><![CDATA[
+		$\operatorname{skel}_k(P).$
+	]]>
+	</Alt>
+	
+	<Alt Not="LaTeX">
+		skel<M>_k(P)</M>.
+	</Alt>
+	
+	<Alt Only="LaTeX"><![CDATA[
+		\begin{center}
+			\includegraphics[width=8cm]{figures/skelcube}\\\bigskip
+			{\small Figure 2. From left to right, drawn in grey: the 0-skeleton, the 1-skeleton and the 2-skeleton of the cube.} 
+		\end{center}
+		]]>
+	</Alt>
+
+	
+	<P/>
+	
+	A <E>polytopal complex</E> <M>C</M> is a finite collection of polytopes <M>P_i</M>, <M>1 \leq i \leq n</M> for which the intersection of any two polytopes <M>P_i \cap P_j</M> is either empty or a common face of <M>P_i</M> and <M>P_j</M>. The polytopes of maximal dimension are called the <E>facets</E> of <M>C</M>. The <E>dimension</E> of a polytopal complex <M>C</M> is defined as the maximum over all dimensions of its facets.
+	
+	<P/>
+	
+	For every <M>d</M>-dimensional polytopal complex the <M>(d+1)</M>-tuple, containing its number of <M>i</M>-faces in the <M>i</M>-th entry is called the <E><M>f</M>-vector</E> of the polytopal complex.
+	
+	<P/>
+	
+	Every polytope <M>P</M> gives rise to a polytopal complex consisting of all the proper faces of <M>P</M>. This polytopal complex is called the <E>boundary complex <M>C(\partial P)</M> of the polytope <M>P</M></E>.
+
+	<P/>
+
+
+	<Alt Only="LaTeX"><![CDATA[
+		Figure 2 below shows the boundary complex of the cube.
+		
+		\begin{center}
+			\includegraphics[width=8cm]{figures/cubecomplex}\\\bigskip
+			{\small Figure 3. The 3-cube (left) and its boundary complex (right) where the 0-faces shown in black, the 1-faces dark gray and the 2-faces in light gray.} 
+		\end{center}
+		]]>
+	</Alt>
+
+
+	</Section><Section Label="sec:simplex"><Heading>Simplices and simplicial complexes</Heading>
+	
+	A <M>d</M>-dimensional <E>simplex</E> or <E><M>d</M>-simplex</E> for short is the convex hull of <M>d+1</M> points in <M>E^d</M> in general position. Thus the <M>d</M>-simplex is the smallest (with respect to the number of vertices) possible <M>d</M>-polytope. Every face of the <M>d</M>-simplex is a <M>m</M>-simplex, <M>m \leq d</M>.
+	
+	<P/>
+
+	A 0-simplex is a point, a <M>1</M>-simplex is a line segment, a <M>2</M>-simplex is a triangle, a <M>3</M>-simplex a tetrahedron, and so on.
+	
+	<P/>
+
+	<Alt Only="LaTeX"><![CDATA[
+		\begin{center}
+			\includegraphics[width=10cm]{figures/simplices}\\\bigskip
+			{\small Figure 4. From left to right: a 0-simplex, a 1-simplex, a 2-simplex, a 3-simplex and a Schlegel diagram of a 4-simplex.} 
+		\end{center}
+		]]>
+	</Alt>
+	
+	<P/>
+	
+	
+	A polytopal complex which entirely consists of simplices is called a <E>simplicial complex</E> (for this it actually suffices that the facets (i. e., the faces that are not included in any other face of the complex) of a polytopal complex are simplices).
+	
+	<P/>
+
+	<Alt Only="LaTeX"><![CDATA[
+		\begin{center}
+			\includegraphics[height=4cm]{figures/simplcompl}\\\bigskip
+			{\small Figure 4. A simplicial complex (left) and a collection of simplices that does not form a simplicial complex (right).} 
+		\end{center}
+		]]>
+	</Alt>
+
+	<P/>
+	
+	The dimension of a simplicial complex is the maximal dimension of a facet. A simplicial complex is said to be <E>pure</E> if all facets
+	are of the same dimension. A pure simplicial complex of dimension <M>d</M> satisfies the <E>weak pseudomanifold property</E> if every 
+	<M>(d-1)</M>-face is part of exactly two facets.
+	
+	<P/>
+
+	Since simplices are polytopes and, hence, simplicial complexes are polytopal complexes all of the terminology regarding simplicial complexes can be transfered from polytope theory.
+		
+	</Section><Section Label="sec:geomcomb"><Heading>From geometry to combinatorics</Heading>
+	
+	Every <M>d</M>-simplex has an <E>underlying set</E> in <M>E^d</M>, as the set of all points of that simplex. In the same way one can define the <E>underlying set</E> <M>|C|</M> of a simplicial complex <M>C</M>. If the underlying set of a simplicial complex <M>C</M> is a topological manifold, then <M>C</M> is called <E>triangulated manifold</E> (or <E>triangulation of <M>|C|</M></E>).
+	
+	<P/>
+
+	One can also go the other way and assign an abstract simplicial complex to a geometrical one by identifying each simplex with its vertex set. This obviously defines a set of sets with a natural partial ordering given by the inclusion (a socalled <E>poset</E>).
+	
+	<P/>
+	
+	<Alt Only="LaTeX"><![CDATA[
+		\begin{center}
+			\includegraphics[height=3.5cm]{figures/hasse_complex}\quad
+			\includegraphics[height=3.5cm]{figures/hasse_diagram}\\\bigskip
+			{\small Figure 5. A geometrical polytopal complex (left) and its abstract version in form of a poset (right).}
+		\end{center}]]>
+	</Alt>
+	
+	<P/>
+
+	Let <M>v</M> be a vertex of <M>C</M>. The set of all facets that contain  <M>v</M> is called <E>star of <M>v</M> in <M>C</M></E> and
+	is denoted by star<M>_C(v)</M>. The subcomplex of star<M>_C(v)</M> that contains all faces not containing <M>v</M> is called  <E>link of <M>v</M> in <M>C</M></E>, written as lk<M>_C(v)</M>.
+	
+	<P/>
+	
+	<P/>
+
+	A <E>combinatorial <M>d</M>-manifold</E> is a <M>d</M>-dimensional simplicial complex whose vertex links are all	triangulated <M>(d-1)</M>-dimensional spheres with standard PL-structure. A <E>combinatorial pseudomanifold</E> is a simplicial complex whose vertex links are all combinatorial <M>(d-1)</M>-manifolds.
+
+	<P/>
+
+	<Alt Only="LaTeX"><![CDATA[
+		\begin{center}
+			\includegraphics[height=.5\textwidth]{figures/moebius}\\\bigskip
+			{\small Figure 6. A simplicial complex that is a vertex-minimal combinatorial triangulation of the torus $T^2$ (so called M\"obius' torus) -- each vertex link is a hexagon.} 
+		\end{center}
+		]]>
+	</Alt>
+	
+	<P/>
+	
+	Note that every combinatorial manifold is a triangulated manifold. The opposite is wrong: for example, there exists a triangulation
+	of the <M>5</M>-sphere that is not combinatorial, the so called <E>Edward's sphere</E>, see <Cite Key="Bjoerner00SimplMnfBistellarFlips" />.
+	
+	<P/>
+
+	A combinatorial manifold carries an induced PL-structure and can be understood in terms of an abstract simplicial complex. If the complex has <M>d</M> vertices there exists a natural embedding of <M>C</M> into the <M>(d-1)</M> simplex and, thus, into <M>E^{d-1}</M>. In general, there is no canonical embedding into any lower dimensional space. However, combinatorial methods allow to examine a given simplicial complex independently from an embedding and, in particular, independently from vertex coordinates.
+
+	<P/>
+
+	Some fundamental properties of an abstract simplicial complex <M>C</M> are the following:
+	
+	<List>
+	<Mark>Dimensionality.</Mark>
+	<Item>The dimension of <M>C</M>.</Item>
+	
+	<Mark><M>f</M>, <M>g</M> and <M>h</M>-vector.</Mark>
+	<Item> The <M>f</M>-vector (<M>f_k</M> equals the number of <M>k</M>-faces of a simplicial complex), the <M>g</M>- and <M>h</M>-vector can be obtained from the <M>f</M>-vector via linear transformations.</Item>
+
+	<Mark>(Co-)Homology.</Mark>
+	<Item>The simplicical (co-)homology groups and Betti numbers.</Item>
+		
+	<Mark>Euler characteristic</Mark>
+	<Item>The Euler characteristic as the alternating sum over the Betti numbers / the <M>f</M>-vector.</Item>
+	
+	<Mark>Connectedness and closedness.</Mark>
+	<Item>Whether <M>C</M> is strongly connected, path connected, has a boundary or not.</Item>
+		
+	<Mark>Symmetries.</Mark>
+	<Item>The automorphism group, i. e. the group of all permutations on the set of vertex labels that do not change the complex as a whole.</Item>
+	</List>
+	
+	<P/>
+
+	All of those properties and many more can be computed on a strictly combinatorial basis.
+	
+	</Section><Section Label="sec:NormSurfTheory"><Heading>Discrete Normal surfaces</Heading>
+	
+	The concept of <E>normal surfaces</E> is originally due to Kneser <Cite Key="Kneser29ClosedSurfIn3Mflds"/> and Haken <Cite Key="Haken61TheoNormFl"/>: A surface <M>S</M>, properly embedded into a <M>3</M>-manifold <M>M</M>, is said to be <E>normal</E>, if it respects a given cell decomposition of <M>M</M> in the following sense: It does not intersect any vertex nor touch any <M>3</M>-cell of the manifold and does not intersect with any <M>2</M>-cell in a circle or an arc starting and ending in a point of the same edge. Here we will look at normal surfaces in the case that <M>M</M> is given as a combinatorial <M>3</M>-manifold and we will call the corresponding objects <E>discrete normal surfaces</E>. In order to do this let us first define:<Br/><Br/>
+
+	<B>Definition</B><Br/>
+	A <E>polytopal manifold</E> is a polytopal complex <M>M</M> such that there exists a simplicial subdivision of <M>M</M> which is a combinatorial manifold. If <M>M</M> is a surface we will call it a <E>polytopal map</E>. If, in addition <M>M</M> entirely consists of <M>m</M>-gons, we call it a <E>polytopal <M>m</M>-gon map</E>.<Br/><Br/>
+
+	<B>Definition</B> (Discrete Normal surface, <Cite Key="Spreer10NormSurfsCombSlic" />)<Br/>
+	Let <M>M</M> be a combinatorial <M>3</M>-manifold (<M>3</M>-pseudomanifold), <M>\Delta \in M</M> one of its tetrahedra and <M>P</M> the intersection of <M>\Delta</M> with a plane that does not include any vertex of <M>\Delta</M>. Then <M>P</M> is called a <E>normal subset</E> of <M>\Delta</M>. Up to an isotopy that respects the face lattice of <M>\Delta</M>, <M>P</M> is equal to one of the triangles <M>P_{i}</M>, <M>1 \leq i \leq 4</M>, or quadrilaterals <M>P_{i}</M>, <M>5 \leq i \leq 7</M>, shown in Figure 7. <Br/><Br/>
+	
+	A polyhedral map <M>S \subset M</M> that entirely consists of facets <M>P_{i}</M> such that every tetrahedron contains at most one facet is called <E>discrete normal surface</E> of <M>M</M>.<Br/><Br/>
+	
+	The second author has recently investigated on the combinatorial theory of discrete normal surfaces, see <Cite Key="Spreer10NormSurfsCombSlic" />.
+
+	<P/>
+	<Alt Only="LaTeX"><![CDATA[
+	\medskip
+	]]>
+	</Alt>
+			<P/>
+	<Alt Only="LaTeX"><![CDATA[
+	\begin{center}
+	\includegraphics[width=.8\textwidth]{figures/haken.pdf}\\\bigskip
+	{\small Figure 7. The seven different normal subsets of the tetrahedron. Note that the rightmost picture of the bottom row can not be part of a discrete normal surface.}
+	\end{center}
+	]]>
+	</Alt>
+
+	</Section>
+	
+	<Section Label="sec:MorseTheory">
+	<Heading>Polyhedral Morse theory and slicings</Heading>
+	
+	In the field of PL-topology Kühnel developed what one might call a polyhedral Morse theory (compare <Cite Key="Kuehnel95TightPolySubm" />, not to be confused with Forman's discrete Morse theory for cell complexes <Cite Key="Forman95DiscrMorseTheoryCellCompl" />):<Br/><Br/>
+	
+	Let <M>M</M> be a combinatorial <M>d</M>-manifold. A function <M>f:M \to \mathbb{R}</M> is called <E>regular simplexwise linear (rsl)</E> if <M>f(v) \neq f(w)</M> for any two vertices <M>w \neq v</M> and if <M>f</M> is linear when restricted to an arbitrary simplex of the triangulation.<Br/><Br/>
+	
+	A vertex <M>x \in M</M> is said to be <E>critical</E> for an rsl-function <M>f:M \to \mathbb{R}</M>, if 	<M>H_{\star} (M_x , M_x \backslash \{ x \} , F) \neq 0</M> where <M>M_x := \{ y \in M | f(y) \leq f(x) \}</M> and <M>F</M> is a field.<Br/><Br/>
+	
+	It follows that no point of <M>M</M> can be critical except possibly the vertices. In arbitrary dimensions we define:<Br/><Br/>
+	
+	<B>Definition</B> (Slicing, <Cite Key="Spreer10NormSurfsCombSlic" />)<Br/>
+	Let <M>M</M> be a combinatorial pseudomanifold of dimension <M>d</M> and <M>f:M \to \mathbb{R}</M> an rsl-function. Then we call the pre-image <M>f^{-1} (\alpha)</M> a <E>slicing</E> of <M>M</M> whenever <M>\alpha \neq f(v)</M> for any vertex <M>v \in M</M>.<Br/><Br/>
+	
+	By construction, a slicing is a polytopal <M>(d-1)</M>-manifold and for any ordered pair <M>\alpha \leq \beta</M> we have <M>f^{-1} (\alpha) \cong f^{-1} (\beta)</M> whenever <M>f^{-1}([\alpha,\beta])</M> contains no vertex of <M>M</M>. In particular, a slicing <M>S</M> of a closed combinatorial <M>3</M>-manifold <M>M</M> is a discrete normal surface: It follows from the simplexwise linearity of <M>f</M> that the intersection of the pre-image with any tetrahedron of <M>M</M> either forms a single triangle or a single quadrilateral. In addition, if two facets of <M>S</M> lie in adjacent tetrahedra they either are disjoint or glued together along the intersection line of the pre-image and the common triangle.<Br/><Br/> 
+
+	Any partition of the set of vertices <M>V = V_1 \dot{\cup} V_2 </M> of <M>M</M> already determines a slicing: Just define an rsl-function <M>f: M \to \mathbb{R}</M> with <M>f(v) \leq f(w)</M> for all <M>v \in V_1</M> and <M>w \in V_2</M> and look at a suitable pre-image. In the following we will write <M>S_{(V_1,V_2)}</M> for the slicing defined by the vertex partition <M>V = V_1 \dot{\cup} V_2 </M>.<Br/><Br/>
+	
+	Every vertex of a slicing is given as an intersection point of the corresponding pre-image with an edge <M>\langle u,w \rangle</M> of the combinatorial manifold. Since there is at most one such intersection point per edge, we usually label this vertex of the slicing according to the vertices  of the corresponding edge, that is <M>\binom{u}{w}</M> with <M>u \in V_1</M> and <M>w \in V_2</M>.<Br/><Br/>
+		
+	Every slicing decomposes the surrounding combinatorial manifold <M>M</M> into at least <M>2</M> pieces (an upper part <M>M^+</M> and a lower part <M>M^-</M>). This is not the case for discrete normal surfaces (see <Ref Chap="sec:NormSurfTheory"/>) in general. However, we will focus on the case where discrete normal surfaces are slicings and we will apply the above notation for both types of objects.<Br/><Br/>
+	
+	Since every combinatorial pseudomanifold <M>M</M> has a finite number of vertices, there exist only a finite number of slicings of <M>M</M>. Hence, if <M>f</M> is chosen carefully, the induced slicings admit a useful visualization of <M>M</M>, c.f. <Cite Key="Spreer09CombPorpsOfK3" />.<P/>
+
+	<Alt Only="LaTeX"><![CDATA[
+	\medskip
+	]]>
+	</Alt>
+			<P/>
+		<Alt Only="LaTeX"><![CDATA[
+	\begin{center}
+	\includegraphics[width=.8\textwidth]{figures/slicing.pdf}\\\bigskip
+	{\small Figure 8. One dimensional slicing of the $2$-sphere (represented as the boundary of the $3$-simplex) seen as a level set of a regular point of a simplicial Morse function.}
+	\end{center}
+	]]>
+	</Alt>
+	<P/>
+		<Alt Only="LaTeX"><![CDATA[
+	\begin{center}
+	\includegraphics[width=.4\textwidth]{figures/3x3gridtorus.pdf}\\\bigskip
+	{\small Figure 9. Handlebody decomposition of genus $1$ of a $6$-vertex $3$-sphere - a $3 \times 3$-grid torus.}
+	\end{center}
+	]]>
+	</Alt>
+	<P/>
+		<Alt Only="LaTeX"><![CDATA[
+	\begin{center}
+	\includegraphics[width=.5\textwidth]{figures/titlepicture.pdf}\\\bigskip
+	{\small Figure 10. Separating sphere of an $8$-vertex cylinder $S_4^2 \times [0,1]$ - A cuboctahedron (drawn as a Schlegel diagram of a quadrilateral face).}
+	\end{center}
+	]]>
+	</Alt>
+	
+	
+	</Section>
+	<Section Label="sec:tight"><Heading>Tightness and tight triangulations</Heading>
+	
+	Tightness is a notion developed in the field of differential geometry as the equality of the (normalized) <E>total absolute curvature</E> of a submanifold with the lower bound <E>sum of the Betti numbers</E> <Cite Key="Kuiper84GeomTotAbsCurvTheo" />, <Cite Key="Banchoff97TightSubmSmoothPoly" />. It was first studied by Alexandrov, Milnor, Chern and Lashof and Kuiper and later extended to the polyhedral case by Banchoff <Cite Key="Banchoff65TightEmb3DimPolyMnf" />, Kuiper <Cite Key="Kuiper84GeomTotAbsCurvTheo" /> and Kühnel <Cite Key="Kuehnel95TightPolySubm" />.
+        
+  From a geometrical point of view, tightness can be understood as a generalization of the concept of convexity that applies to objects other than topological balls and their boundary manifolds since it roughly means that an embedding of a submanifold is ``as convex as possible'' according to its topology. The usual definition is the following:<Br/><Br/>
+
+	<B>Definition</B> (Tightness, <Cite Key="Kuehnel95TightPolySubm" />)<Br/>
+	Let <M>\mathbb{F}</M> be a field. An embedding <M>M \rightarrow \mathbb{E}^N</M> of a compact manifold is called <E><M>k</M>-tight with respect to <M>\mathbb{F}</M></E> if for any open or closed halfspace  <M>h\subset E^N</M> the induced homomorphism
+                
+  <Display>H_i(M\cap h;\mathbb{F})\longrightarrow H_i(M;\mathbb{F})</Display>
+                
+  is injective for all <M>i\leq k</M>. <M>M</M> is called <M>\mathbb{F}</M><E>-tight</E> if it is <M>k</M>-tight for all <M>k</M>. The standard choice for the field of coefficients is <M>\mathbb{F}_2</M> and an <M>\mathbb{F}_2</M>-tight embedding is called <E>tight</E>.<Br/><Br/>
+
+  With regard to PL embeddings of PL manifolds tightness of <E>combinatorial manifolds</E> can also be defined via a purely combinatorial condition as follows. For an introduction to PL topology see <Cite Key="Rourke72IntrPLTop" />.<Br/><Br/>
+	
+	
+	<B>Definition</B> (Tight triangulation <Cite Key="Kuehnel95TightPolySubm" />)<Br/>
+	Let <M>\mathbb{F}</M> be a field. A combinatorial manifold <M>K</M> on <M>n</M> vertices is called <E>(<M>k</M>-) tight w.r.t. <M>\mathbb{F}</M></E> if its canonical embedding <M>K\subset \Delta^{n-1}\subset E^{n-1}</M> is (<M>k</M>-)tight w.r.t. <M>\mathbb{F}</M>, where <M>\Delta^{n-1}</M> denotes the <M>(n-1)</M>-dimensional simplex.<Br/><Br/>
+                
+  In dimension <M>d=2</M> the following are equivalent for a triangulated surface <M>S</M> on <M>n</M> vertices: (i) <M>S</M> has a complete edge graph <M>K_n</M>, (ii) <M>S</M> appears as a so called <E>regular case</E> in Heawood's Map Color Theorem <Cite Key="Ringel74MapColThm" />, compare <Cite Key="Kuehnel95TightPolySubm" /> and (iii) the induced piecewise linear embedding of <M>S</M> into Euclidean <M>(n-1)</M>-space has the two-piece property <Cite Key="Banchoff74TightPolyKBProjPMB" />, and it is tight  <Cite Key="Kuehnel95TightPolySubm" />.<Br/><Br/>
+
+  Kühnel investigated the tightness of combinatorial triangulations of manifolds also in higher dimensions and codimensions, see <Cite Key="Kuehnel94ManSkelConvPolyt" />. It turned out that the tightness of a combinatorial triangulation is closely related to the concept of <E>Hamiltonicity</E> of a polyhedral complexes (see <Cite Key="Kuehnel95TightPolySubm" />): A subcomplex <M>A</M> of a polyhedral complex <M>K</M> is called <E><M>k</M>-Hamiltonian</E> if <M>A</M> contains the full <M>k</M>-dimensional skeleton of <M>K</M> (not to be confused with the notion of a <M>k</M>-Hamiltonian graph). This generalization of the notion of a Hamiltonian circuit in a graph seems to be due to C.Schulz <Cite Key="Schulz94PolyhMnfPoly" />. A Hamiltonian circuit then becomes a special case of a <M>0</M>-Hamiltonian subcomplex of a <M>1</M>-dimensional graph or of a higher-dimensional complex.<Br/><Br/>
+				
+	A triangulated <M>2k</M>-manifold that is a <M>k</M>-Hamiltonian subcomplex of the boundary complex of some higher dimensional simplex is a tight triangulation as Kühnel <Cite Key="Kuehnel95TightPolySubm" /> showed. Such a triangulation is also called <E><M>(k+1)</M>-neighborly triangulation</E> since any <M>k+1</M> vertices in a <M>k</M>-dimensional simplex are common neighbors. Moreover, <M>(k+1)</M>-neighborly triangulations of <M>2k</M>-manifolds are also referred to as <E>super-neighborly</E> triangulations -- in analogy with neighborly polytopes the boundary complex of a <M>(2k+1)</M>-polytope can be at most <M>k</M>-neighborly unless it is a simplex. Notice here that combinatorial <M>2k</M>-manifolds can go beyond <M>k</M>-neighborliness, depending on their topology.<Br/><Br/>
+        
+  Whereas in the <M>2</M>-dimensional case all tight triangulations of surfaces were classified by Ringel and Jungerman and Ringel, in dimensions <M>d\geq 3</M> there exist only a finite number of known examples of tight triangulations (see <Cite Key="Kuehnel99CensusTight" /> for a census) apart from the trivial case of the boundary of a simplex and an infinite series of triangulations of sphere bundles over the circle due to Kühnel  <Cite Key="Kuehnel95TightPolySubm" />, <Cite Key="Kuehnel86HigherDimCsaszar" />.
+	</Section>
+	
+	<Section Label="sec:Blowups"><Heading>Simplicial blowups</Heading>
+	
+	The <E>blowing up process</E> or <E>Hopf <M>\sigma</M>-process</E> can be described as the resolution of nodes or ordinary double points of a complex algebraic variety. This was described by H.~Hopf in <Cite Key="Hopf1951"/>, compare <Cite Key="Hirzebruch1953"/> and <Cite Key="Hauser2000"/>. From the topological point of view the process consists of cutting out some subspace and gluing in some other subspace. In complex algebraic geometry one point is replaced by the projective line <M>\mathbb{C}P^1 \cong S^2</M> of all complex lines through that point. This is often called <E>blowing up</E> of the point or just <E>blowup</E>. In general the process can be applied to non-singular 4-manifolds and yields a transformation of a manifold <E>M</E> to <M>M \# (+\mathbb{C}P^2)</M> or <M>M \# (-\mathbb{C}P^2)</M>, depending on the choice of an orientation. The same construction is possible for nodes or ordinary double points (a special type of singularities), and also the ambiguity of the orientation is the same for the blowup process of a node. Similarly it has been used in arbitrary even dimension by Spanier <Cite Key="Spanier56HomKummerMnf"/> as a so-called <E>dilatation process</E>.<Br/><Br/>
+	
+	A PL version of the blowing up process is the following: We cut out the star of one of the singular vertices which is, in the case of an ordinary double point, nothing but a cone over a triangulated <M>\mathbb{R}P^3</M>. The boundary of the resulting space is this triangulated <M>\mathbb{R}P^3</M>. Now we glue back in a triangulated version <M>\mathbf{C}</M> of a complex projective plane with a <M>4</M>-ball removed where antipodal points of the boundary are identified. <M>\mathbf{C}</M> is called a triangulated mapping cylinder and by construction its boundary is PL homeomorphic to <M>\mathbb{R}P^3</M>.<Br/><Br/>
+	
+	For a combinatorial version with concrete triangulations, however, we face the problem that these two triangulations are not isomorphic. This implies that before cutting out and gluing in we have to modify the triangulations by bistellar moves until they coincide:<Br/><Br/>
+		
+	<B>Definition</B> (Simplicial blowup, <Cite Key="Spreer09CombPorpsOfK3" />)<Br/>
+	Let <M>v</M> be a vertex of a combinatorial <M>4</M>-pseudomanifold <M>M</M> whose link is isomorphic with the particular <M>11</M>-vertex triangulation of <M>\mathbb{R}P^3</M> which is given by the boundary complex of the triangulated <M>\mathbf{C}</M> given in <Cite Key="Spreer09CombPorpsOfK3"/>. Let <M>\psi : \operatorname{lk}(v) \rightarrow \partial\mathbf{C}</M> denote such an isomorphism. A simplicial resolution of the singularity <M>v</M> is given by the following construction <M>M \mapsto \widetilde{M} := (M \setminus \operatorname{star}(v)^\circ) \cup_{\psi} \mathbf{C}.</M><Br/><Br/>
+
+	The process is described in more detail in <Cite Key="Spreer09CombPorpsOfK3"/>. In particular it is used to transform a <M>4</M>-dimensional Kummer variety into a K3 surface.
+	</Section>
+	
+	
+	
+</Chapter>
+

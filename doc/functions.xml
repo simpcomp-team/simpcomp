@@ -1,0 +1,95 @@
+<Chapter Label="chap:objTypes">
+<Heading>The new GAP object types of <Package>simpcomp</Package></Heading>
+
+	<#Include Label="objecttypes" />
+	
+	<P/>
+	<Alt Only="LaTeX"><![CDATA[
+	\begin{center}
+	\includegraphics[width=1.0\textwidth]{figures/flowchart.pdf}\\\bigskip
+	{\small Figure 11. Overview over all GAP object types defined by simpcomp.}
+	\end{center}
+	]]>
+	</Alt>
+	<P/>
+	
+</Chapter><Chapter Label="chap:polyhedralcomplex">
+<Heading>Functions and operations for the GAP object type <C>SCPolyhedralComplex</C></Heading>
+
+	<#Include Label="polyhedralcomplex" />
+
+</Chapter><Chapter Label="chap:complex">
+<Heading>The GAP object types <C>SCSimplicialComplex</C> and <C>SCNormalSurface</C></Heading>
+
+	<#Include Label="complex" />
+	<#Include Label="normalsurface" />
+
+</Chapter><Chapter Label="chap:scfunc"><Heading>Functions and operations for <C>SCSimplicialComplex</C></Heading>
+	
+	<#Include Label="generate" />
+	<#Include Label="glprops" />
+	<#Include Label="operations" />
+	
+</Chapter>
+
+<Chapter Label="chap:NormSurfFunc"><Heading>Functions and operations for <C>SCNormalSurface</C></Heading>
+	<#Include Label="normalsurfaceFunc" />
+</Chapter>
+
+<Chapter Label="chap:homology"><Heading>(Co-)Homology of simplicial complexes</Heading>
+	
+	<#Include Label="homology" />
+	
+</Chapter>
+
+<Chapter Label="chap:bistellar"><Heading>Bistellar flips</Heading>
+	<#Include Label="bistellar" />
+</Chapter>
+
+<Chapter Label="chap:blowups"><Heading>Simplicial blowups</Heading>
+	<#Include Label="blowups" />
+</Chapter>
+
+<Chapter Label="chap:morse"><Heading>Polyhedral Morse theory</Heading>
+	<#Include Label="morse" />
+</Chapter>
+
+<Chapter Label="chap:libio"> <Heading>Library and I/O</Heading>
+	<#Include Label="lib" />
+	<#Include Label="io" />
+</Chapter>
+
+<Chapter Label="chap:interface"><Heading>Interfaces to other software packages</Heading>
+	
+	<Package>simpcomp</Package> contains various interfaces to other software packages (see Chapter <Ref Chap="chap:libio" /> for file-related export and import formats). In this chapter, some more sophisticated interfaces to other software packages are described.<P/>
+	Note that this chapter is subject to change and extension as it is planned to expand <Package>simpcomp</Package>'s functionality in this area in the course of the next versions.  
+
+	<#Include Label="homalg" />
+</Chapter>
+
+<Chapter Label="chap:misc"> <Heading>Miscellaneous functions</Heading>
+	<#Include Label="tools" />
+</Chapter>
+
+<Chapter Label="chap:prophandler"><Heading>Property handlers</Heading>
+
+As explained in Chapter <Ref Chap="chap:complex"/>, objects of the types <C>SCSimplicialComplex</C>, <C>SCNormalSurface</C> and <C>SCLibRepository</C> provide a set of property handlers for ease of access to <Package>simpcomp</Package> functions using these objects. Accessing these property handlers is possible via the .-operator.<P/>
+For example, the <M>f</M>-vector of a simplicial complex <C>c</C> that is stored as a <C>SCSimplicialComplex</C> object can be accessed via the statement <C>c.F;</C> instead of writing the longer <C>SCFVector(c);</C>. See below for a list of all properties supported by objects of the types <C>SCPolyhedralComplex</C>, <C>SCSimplicialComplex</C>, <C>SCNormalSurface</C> and <C>SCLibRepository</C> (Note that the property handlers of <C>SCPolyhedralComplex</C> can be used by both <C>SCSimplicialComplex</C> and <C>SCNormalSurface</C>).
+
+<Section Label="sec:prophandlerPC"><Heading>Property handlers of <C>SCPolyhedralComplex</C></Heading>
+	<#Include Label="prophandlerspc" />
+</Section>
+
+<Section Label="sec:prophandlerSC"><Heading>Property handlers of <C>SCSimplicialComplex</C></Heading>
+	<#Include Label="prophandlers" />
+</Section>
+
+<Section Label="sec:prophandlerNS"><Heading>Property handlers of <C>SCNormalSurface</C></Heading>
+	<#Include Label="prophandlersns" />
+</Section>
+
+<Section Label="sec:prophandlerLib"><Heading>Property handlers of <C>SCLibRepository</C></Heading>
+	<#Include Label="prophandlerslib" />
+</Section>
+
+</Chapter>

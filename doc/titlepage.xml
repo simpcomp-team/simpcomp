@@ -1,0 +1,59 @@
+<TitlePage>
+  <Title><Package>simpcomp</Package></Title>
+  
+  <Subtitle>A &GAP; toolbox for simplicial complexes</Subtitle>
+  
+  <Version>Version %%%VERSION%%%</Version>
+
+  <Author>
+  	Felix Effenberger
+    <Email>felix.effenberger@mis.mpg.de</Email>
+    <Address>
+  	Max Planck Institute for Mathematics in the Sciences<Br/>
+	Inselstr. 22<Br/>
+	D-04103 Leipzig, Germany
+    </Address>
+
+  </Author>
+
+  <Author>
+  	Jonathan Spreer
+    <Email>j.spreer@uq.edu.au</Email>
+    <Address>
+  	University of Queensland<Br/>
+	School of Mathematics and Physics<Br/>
+	Brisbane QLD 4072 Australia
+    </Address>
+
+  </Author>
+
+  
+  <Date>%%%DATESHORT%%%
+	<Alt Only="LaTeX"><![CDATA[
+	\begin{center}
+	\vspace*{1cm}
+	\includegraphics[width=.4\textwidth]{figures/shrimpmanual}\\
+	\end{center}
+	]]>
+	</Alt>
+  </Date>
+  
+  <Abstract><Package>simpcomp</Package> is an extension (a so called package) to &GAP; for working with simplicial complexes in the context of combinatorial topology. The package enables the user to compute numerous properties of (abstract) simplicial complexes (such as the <M>f</M>-, <M>g</M>- and <M>h</M>-vectors, the face lattice, the fundamental group, the automorphism group, (co-)homology with explicit basis computation, etc.). It provides functions to generate simplicial complexes from facet lists, orbit representatives or difference cycles. Moreover, a variety of infinite series of combinatorial manifolds and pseudomanifolds (such as the simplex, the cross polytope, transitive handle bodies and sphere bundles, etc.) is given and it is possible to create new complexes from existing ones (links and stars, connected sums, simplicial cartesian products, handle additions, bistellar flips, etc.). <Package>simpcomp</Package> ships with an extensive library of known triangulations of manifolds and a census of all combinatorial <M>3</M>-manifolds with transitive cyclic symmetry up to <M>22</M> vertices. Furthermore, it provides the user with the possibility to create own complex libraries. In addition, functions related to slicings and polyhedral Morse theory as well as a combinatorial version of algebraic blowups and the possibility to resolve isolated singularities of <M>4</M>-manifolds are implemented.<Br/>
+  <Package>simpcomp</Package> caches computed properties of a simplicial complex, thus avoiding unnecessary computations, internally handles the vertex labeling of the complexes and insures the consistency of a simplicial complex throughout all operations.<Br/>
+  If possible, <Package>simpcomp</Package> makes use of the &GAP; package <Package>homology</Package> <Cite Key="Dumas04Homology" /> for its homology computation but also provides the user with own (co-)homology algorithms. For automorphism group computation the &GAP; package <Package>GRAPE</Package> <Cite Key="Soicher06GRAPE"/> is used, which in turn uses the program <C>nauty</C> by Brendan McKay <Cite Key="McKay84Nauty"/>. An internal automorphism group calculation algorithm is used as fallback if the <Package>GRAPE</Package> package is not available.
+  </Abstract>
+  
+  <Acknowledgements>A few functions of <Package>simpcomp</Package> are based on code from other authors. The bistellar flips implementation, the algorithm to collapse bounded simplicial complexes as well as the classification algorithm for transitive triangulations is based upon work of Frank Lutz (see <Cite Key="Lutz03TrigMnfFewVertVertTrans"/> and the &GAP; programs BISTELLAR and MANIFOLD_VT from <Cite Key="Lutz08ManifoldPage"/>). Some functions were carried over from the <Package>homology</Package> package by Dumas et al. <Cite Key="Dumas04Homology"/> -- these functions are marked in the documentation and the source code. The internal (co-)homology algorithms were implemented by Armin Weiss.
+  <P/>
+  Most of the complexes in the simplicial complex library are taken from the "Manifold Page" by Frank Lutz <Cite Key="Lutz08ManifoldPage"/>.
+  <P/>
+	The authors acknowledge support by the Deutsche Forschungsgemeinschaft (DFG): <Package>simpcomp</Package> has been developed within the DFG projects Ku 1203/5-2 and Ku 1203/5-3. 
+  </Acknowledgements>
+
+  <Copyright>&copyright; %%%YEAR%%% Felix Effenberger and Jonathan Spreer. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation, see <URL>http://www.fsf.org/licensing/licenses/fdl.html</URL> for a copy.<P/>
+	 	 
+	 <Package>simpcomp</Package> is free software. The code of <Package>simpcomp</Package> is released under the GPL version 2 or later (at your preference). For the text of the GPL see the file <C>COPYING</C> in the <Package>simpcomp</Package> directory or <URL>http://www.gnu.org/licenses/</URL>.
+	 
+  </Copyright>
+</TitlePage>
+

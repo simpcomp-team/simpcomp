@@ -1,0 +1,1701 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.25)  22 JAN 2013 21:47
+entering extended mode
+ %&-line parsing enabled.
+**simpcomp
+(./simpcomp.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/a4wide.sty
+Package: a4wide 1994/08/30
+
+(/usr/share/texmf-texlive/tex/latex/ntgclass/a4.sty
+Package: a4 2004/04/15 v1.2g A4 based page layout
+))
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+
+(/usr/share/texmf-texlive/tex/latex/base/latin1.def
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+(/usr/share/texmf-texlive/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+\@indexfile=\write3
+\openout3 = `simpcomp.idx'.
+
+
+Writing index file simpcomp.idx
+(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count88
+))
+(/usr/share/texmf-texlive/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz) (/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+\FV@CodeLineNo=\count89
+\FV@InFile=\read1
+\FV@TabBox=\box26
+\c@FancyVerbLine=\count90
+\FV@StepNumber=\count91
+\FV@OutFile=\write4
+)
+(/usr/share/texmf-texlive/tex/latex/psnfss/mathptmx.sty
+Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+\symbold=\mathgroup6
+\symitalic=\mathgroup7
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
+LaTeX Info: Redefining \hbar on input line 50.
+)
+(/usr/share/texmf-texlive/tex/latex/psnfss/helvet.sty
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/usr/share/texmf-texlive/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/share/texmf-texlive/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/share/texmf-texlive/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
+)
+(/usr/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2009/10/09 v6.79a Hypertext links for LaTeX
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/hycolor.sty
+Package: hycolor 2009/10/02 v1.5 Code for color options of hyperref/bookmark (H
+O)
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/xcolor-patch.sty
+Package: xcolor-patch 2009/10/02 xcolor patch
+))
+\@linkdim=\dimen103
+\Hy@linkcounter=\count92
+\Hy@pagecounter=\count93
+
+(/usr/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2009/10/09 v6.79a Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)
+(/usr/share/texmf-texlive/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2009/08/13 v3.4 Keyval support for LaTeX options (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2009/07/30 v1.5 Key value parser with default handler suppor
+t (HO)
+))
+Package hyperref Info: Option `bookmarks' set `true' on input line 2864.
+Package hyperref Info: Option `colorlinks' set `true' on input line 2864.
+Package hyperref Info: Option `breaklinks' set `true' on input line 2864.
+Package hyperref Info: Hyper figures OFF on input line 2975.
+Package hyperref Info: Link nesting OFF on input line 2980.
+Package hyperref Info: Hyper index ON on input line 2983.
+Package hyperref Info: Plain pages OFF on input line 2990.
+Package hyperref Info: Backreferencing ON on input line 2993.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 3191.
+(/usr/share/texmf-texlive/tex/latex/hyperref/backref.sty
+Package: backref 2006/09/05 v1.28 Bibliographical back referencing
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 3428.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bitset.sty
+Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/intcalc.sty
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bigintcalc.sty
+Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2009/09/23 v0.6 LuaTeX support for pdfTeX utility functions
+ (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2009/04/17 v1.2 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2009/08/05 v1.0 Some LaTeX kernel commands for general use (HO
+)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+)))
+\Fld@menulength=\count94
+\Field@Width=\dimen104
+\Fld@charsize=\dimen105
+\Field@toks=\toks18
+Package hyperref Info: Hyper figures OFF on input line 4377.
+Package hyperref Info: Link nesting OFF on input line 4382.
+Package hyperref Info: Hyper index ON on input line 4385.
+Package hyperref Info: backreferencing ON on input line 4390.
+Package hyperref Info: Link coloring ON on input line 4395.
+Package hyperref Info: Link coloring with OCG OFF on input line 4402.
+Package hyperref Info: PDF/A mode OFF on input line 4407.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
+)
+\Hy@abspage=\count95
+\c@Item=\count96
+\c@Hfootnote=\count97
+)
+*hyperref using driver hpdftex*
+(/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
+\Fld@listcount=\count98
+)
+\pagenrlog=\write5
+\openout5 = `simpcomp.pnr'.
+
+
+(/usr/share/texmf-texlive/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2009/05/18 v2.2 Customized lists
+\enit@toks=\toks19
+\labelindent=\skip43
+\enit@outerparindent=\dimen106
+\enitdp@desc=\count99
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks20
+\ex@=\dimen107
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen108
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count100
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count101
+\leftroot@=\count102
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count103
+\DOTSCASE@=\count104
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen109
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count105
+\c@MaxMatrixCols=\count106
+\dotsspace@=\muskip11
+\c@parentequation=\count107
+\dspbrk@lvl=\count108
+\tag@help=\toks21
+\row@=\count109
+\column@=\count110
+\maxfields@=\count111
+\andhelp@=\toks22
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks23
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
+)
+(/usr/share/texmf-texlive/tex/latex/mnsymbol/MnSymbol.sty
+Package: MnSymbol 2007/01/21 v1.4 support for the MnSymbol font
+LaTeX Info: Redefining \dagger on input line 84.
+LaTeX Info: Redefining \ddagger on input line 84.
+LaTeX Info: Redefining \mathparagraph on input line 84.
+LaTeX Info: Redefining \mathsection on input line 84.
+LaTeX Info: Redefining \mathdollar on input line 84.
+LaTeX Info: Redefining \mathsterling on input line 84.
+LaTeX Info: Redefining \yen on input line 84.
+LaTeX Info: Redefining \circledR on input line 84.
+LaTeX Info: Redefining \circledS on input line 84.
+LaTeX Info: Redefining \Re on input line 84.
+LaTeX Info: Redefining \Im on input line 84.
+LaTeX Info: Redefining \dotplus on input line 84.
+LaTeX Info: Redefining \thicksim on input line 84.
+LaTeX Info: Redefining \thickapprox on input line 84.
+LaTeX Info: Redefining \veebar on input line 84.
+LaTeX Info: Redefining \barwedge on input line 84.
+LaTeX Info: Redefining \doublebarwedge on input line 84.
+LaTeX Info: Redefining \centerdot on input line 84.
+LaTeX Info: Redefining \divideontimes on input line 84.
+\symMnSyA=\mathgroup8
+\symMnSyB=\mathgroup9
+\symMnSyC=\mathgroup10
+\symMnSyD=\mathgroup11
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 119.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/ztmcm/m/n --> OMX/MnSymbolE/m/n on input line 119.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/ztmcm/m/n --> OMX/MnSymbolE/m/n on input line 119.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 120.
+LaTeX Font Info:    Encoding `OMS' has changed to `U' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 120.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/ztmcm/m/n --> U/MnSymbolF/m/n on input line 120.
+LaTeX Font Info:    Encoding `OMS' has changed to `U' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 120.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/ztmcm/m/n --> U/MnSymbolF/m/n on input line 120.
+LaTeX Font Info:    Overwriting symbol font `MnSyA' in version `bold'
+(Font)                  U/MnSymbolA/m/n --> U/MnSymbolA/b/n on input line 121.
+LaTeX Font Info:    Overwriting symbol font `MnSyB' in version `bold'
+(Font)                  U/MnSymbolB/m/n --> U/MnSymbolB/b/n on input line 122.
+LaTeX Font Info:    Overwriting symbol font `MnSyC' in version `bold'
+(Font)                  U/MnSymbolC/m/n --> U/MnSymbolC/b/n on input line 123.
+LaTeX Font Info:    Overwriting symbol font `MnSyD' in version `bold'
+(Font)                  U/MnSymbolD/m/n --> U/MnSymbolD/b/n on input line 124.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/MnSymbolE/m/n --> OMX/MnSymbolE/b/n on input line 1
+25.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  U/MnSymbolF/m/n --> U/MnSymbolF/b/n on input line 126.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 241.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `bold'
+(Font)                  OMS/MnSymbolS/m/n --> OMS/MnSymbolS/b/n on input line 2
+41.
+LaTeX Info: Redefining \longrightarrow on input line 548.
+LaTeX Info: Redefining \longleftarrow on input line 549.
+LaTeX Info: Redefining \longleftrightarrow on input line 550.
+LaTeX Info: Redefining \Longrightarrow on input line 551.
+LaTeX Info: Redefining \Longleftarrow on input line 552.
+LaTeX Info: Redefining \Longleftrightarrow on input line 553.
+LaTeX Info: Redefining \longmapsto on input line 554.
+LaTeX Info: Redefining \vdots on input line 868.
+LaTeX Font Info:    Redeclaring math symbol \braceld on input line 1721.
+LaTeX Font Info:    Redeclaring math symbol \bracelu on input line 1722.
+LaTeX Font Info:    Redeclaring math symbol \bracerd on input line 1723.
+LaTeX Font Info:    Redeclaring math symbol \braceru on input line 1724.
+LaTeX Info: Redefining \downbracefill on input line 1799.
+LaTeX Info: Redefining \upbracefill on input line 1800.
+LaTeX Info: Redefining \overbrace on input line 1819.
+LaTeX Info: Redefining \underbrace on input line 1820.
+LaTeX Info: Redefining \surd on input line 1843.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 1845.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 1846.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
+)
+(/usr/share/texmf-texlive/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip47
+\LTright=\skip48
+\LTpre=\skip49
+\LTpost=\skip50
+\LTchunksize=\count112
+\LTcapwidth=\dimen118
+\LT@head=\box29
+\LT@firsthead=\box30
+\LT@foot=\box31
+\LT@lastfoot=\box32
+\LT@cols=\count113
+\LT@rows=\count114
+\c@LT@tables=\count115
+\c@LT@chunks=\count116
+\LT@p@ftn=\toks25
+)
+Package color Info: Redefining color FuncColor on input line 85.
+Package color Info: Redefining color RoyalGreen on input line 86.
+Package color Info: Redefining color RoyalRed on input line 87.
+Package color Info: Redefining color RoyalBlue on input line 88.
+Package color Info: Redefining color LightBlue on input line 89.
+Package color Info: Redefining color Chapter  on input line 90.
+ (./simpcomp.aux
+
+LaTeX Warning: Label `SCFacets' multiply defined.
+
+
+LaTeX Warning: Label `SCFacetsEx' multiply defined.
+
+
+LaTeX Warning: Label `SCCopy' multiply defined.
+
+
+LaTeX Warning: Label `SCConnectedComponents' multiply defined.
+
+
+LaTeX Warning: Label `SCDim' multiply defined.
+
+
+LaTeX Warning: Label `SCEulerCharacteristic' multiply defined.
+
+
+LaTeX Warning: Label `SCFVector' multiply defined.
+
+
+LaTeX Warning: Label `SCFaceLattice' multiply defined.
+
+
+LaTeX Warning: Label `SCFaceLatticeEx' multiply defined.
+
+
+LaTeX Warning: Label `SCFpBettiNumbers' multiply defined.
+
+
+LaTeX Warning: Label `SCHomology' multiply defined.
+
+
+LaTeX Warning: Label `SCIsConnected' multiply defined.
+
+
+LaTeX Warning: Label `SCIsEmpty' multiply defined.
+
+
+LaTeX Warning: Label `SCIsOrientable' multiply defined.
+
+
+LaTeX Warning: Label `SCSkel' multiply defined.
+
+
+LaTeX Warning: Label `SCSkelEx' multiply defined.
+
+
+LaTeX Warning: Label `SCUnion' multiply defined.
+
+)
+\openout1 = `simpcomp.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 99.
+ (/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 99.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count117
+\scratchdimen=\dimen119
+\scratchbox=\box33
+\nofMPsegments=\count118
+\nofMParguments=\count119
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count120
+\MPscratchDim=\dimen120
+\MPnumerator=\count121
+\everyMPtoPDFconversion=\toks27
+)
+Package hyperref Info: Link coloring ON on input line 99.
+ (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+)
+\c@section@level=\count122
+)
+LaTeX Info: Redefining \ref on input line 99.
+LaTeX Info: Redefining \pageref on input line 99.
+ (./simpcomp.out)
+(./simpcomp.out)
+\@outlinefile=\write6
+\openout6 = `simpcomp.out'.
+
+\AtBeginShipoutBox=\box34
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <50> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 105.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 105.
+ (/usr/share/texmf-texlive/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <50> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 105.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 110.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 110.
+
+<figures/shrimpmanual.pdf, id=335, 271.0125pt x 174.6525pt>
+File: figures/shrimpmanual.pdf Graphic file (type pdf)
+
+<use figures/shrimpmanual.pdf>
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 117.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 124.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 124.
+
+
+(/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 122--137
+
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/shrimpmanual.pdf
+>]
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 14
+5.
+ (/usr/share/texmf-texlive/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 14
+5.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 145.
+
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 145.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 145.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 145.
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--164
+
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 166.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 171--174
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
+
+ []
+
+[2] [3] (./simpcomp.toc
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 17.
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 19.
+ [4
+
+] [5])
+\tf@toc=\write7
+\openout7 = `simpcomp.toc'.
+
+ [6]
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 194.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 229.
+[7
+
+]
+Underfull \hbox (badness 1546) in paragraph at lines 266--268
+[]\T1/ptm/m/n/10.95 The next ad-vised step is to have a look at the func-tions 
+for cre-at-ing ob-jects of type
+ []
+
+[8]
+Underfull \hbox (badness 1521) in paragraph at lines 291--292
+[]\T1/ptm/m/n/10.95 In Chap-ter [][]10[][] sim-pli-cial blowups and res-o-lu-ti
+ons of sin-gu-lar-i-ties of com-bi-na-to-rial $\OT1/ztmcm/m/n/10.95 4$\T1/ptm/m
+/n/10.95 -
+ []
+
+
+Underfull \hbox (badness 1024) in paragraph at lines 296--297
+[]\T1/ptm/m/n/10.95 Chapter [][]15[][] con-tains a list of all prop-erty han-dl
+ers al-low-ing to ac-cess prop-er-ties of a
+ []
+
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 315.
+[9] [10]
+Chapter 2.
+<figures/platonicsolids1.pdf, id=561, 90.3375pt x 93.34875pt>
+File: figures/platonicsolids1.pdf Graphic file (type pdf)
+
+<use figures/platonicsolids1.pdf>
+<figures/platonicsolids2.pdf, id=562, 113.42375pt x 114.4275pt>
+File: figures/platonicsolids2.pdf Graphic file (type pdf)
+
+<use figures/platonicsolids2.pdf>
+<figures/platonicsolids3.pdf, id=563, 114.4275pt x 114.4275pt>
+File: figures/platonicsolids3.pdf Graphic file (type pdf)
+
+<use figures/platonicsolids3.pdf>
+<figures/platonicsolids4.pdf, id=564, 240.9pt x 225.84375pt>
+File: figures/platonicsolids4.pdf Graphic file (type pdf)
+
+<use figures/platonicsolids4.pdf>
+<figures/platonicsolids5.pdf, id=565, 211.79124pt x 228.855pt>
+File: figures/platonicsolids5.pdf Graphic file (type pdf)
+
+<use figures/platonicsolids5.pdf>
+<figures/skelcube.pdf, id=566, 335.2525pt x 103.38625pt>
+File: figures/skelcube.pdf Graphic file (type pdf)
+
+<use figures/skelcube.pdf> [11
+
+ <./figures/platonicsolids1.pdf> <./figures/platonicsolids2.pdf> <./figures/pla
+tonicsolids3.pdf> <./figures/platonicsolids4.pdf> <./figures/platonicsolids5.pd
+f>]
+<figures/cubecomplex.pdf, id=593, 235.88126pt x 106.3975pt>
+File: figures/cubecomplex.pdf Graphic file (type pdf)
+
+<use figures/cubecomplex.pdf>
+<figures/simplices.pdf, id=594, 624.3325pt x 122.4575pt>
+File: figures/simplices.pdf Graphic file (type pdf)
+
+<use figures/simplices.pdf>
+<figures/simplcompl.pdf, id=595, 281.05pt x 121.45375pt>
+File: figures/simplcompl.pdf Graphic file (type pdf)
+
+<use figures/simplcompl.pdf> [12 <./figures/skelcube.pdf> <./figures/cubecomple
+x.pdf> <./figures/simplices.pdf>]
+<figures/hasse_complex.pdf, id=608, 95.35625pt x 83.31125pt>
+File: figures/hasse_complex.pdf Graphic file (type pdf)
+
+<use figures/hasse_complex.pdf>
+<figures/hasse_diagram.pdf, id=609, 264.99pt x 90.3375pt>
+File: figures/hasse_diagram.pdf Graphic file (type pdf)
+
+<use figures/hasse_diagram.pdf>
+<figures/moebius.pdf, id=610, 187.70125pt x 190.7125pt>
+File: figures/moebius.pdf Graphic file (type pdf)
+
+<use figures/moebius.pdf> [13 <./figures/simplcompl.pdf> <./figures/hasse_compl
+ex.pdf> <./figures/hasse_diagram.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 502--515
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--515
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--515
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--515
+
+ []
+
+
+Underfull \hbox (badness 1184) in paragraph at lines 502--515
+\T1/ptm/m/n/10.95 The sec-ond au-thor has re-cently in-ves-ti-gated on the com-
+bi-na-to-rial the-ory of dis-crete nor-mal
+ []
+
+[14 <./figures/moebius.pdf>] <figures/haken.pdf, id=848, 550.055pt x 273.02pt>
+File: figures/haken.pdf Graphic file (type pdf)
+
+<use figures/haken.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 529--559
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--559
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--559
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--559
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--559
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--559
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--559
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--559
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--559
+
+ []
+
+[15 <./figures/haken.pdf>]
+<figures/slicing.pdf, id=879, 424.58624pt x 126.4725pt>
+File: figures/slicing.pdf Graphic file (type pdf)
+
+<use figures/slicing.pdf> [16]
+<figures/3x3gridtorus.pdf, id=888, 246.9225pt x 207.77625pt>
+File: figures/3x3gridtorus.pdf Graphic file (type pdf)
+
+<use figures/3x3gridtorus.pdf>
+<figures/titlepicture.pdf, id=889, 290.08376pt x 287.0725pt>
+File: figures/titlepicture.pdf Graphic file (type pdf)
+
+<use figures/titlepicture.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 584--594
+
+ []
+
+[17 <./figures/slicing.pdf> <./figures/3x3gridtorus.pdf> <./figures/titlepictur
+e.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 594--619
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--619
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--619
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--619
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--619
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--619
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 625--650
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 625--650
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 625--650
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 625--650
+
+ []
+
+[19]
+Chapter 3.
+
+Underfull \hbox (badness 1221) in paragraph at lines 672--675
+[]\T1/ptm/m/n/10.95 To re-al-ize its com-plex li-brary (see Sec-tion [][]12[][]
+), \T1/phv/m/n/10.95 sim-p-comp \T1/ptm/m/n/10.95 de-fines a \T1/phv/m/n/10.95 
+GAP \T1/ptm/m/n/10.95 ob-ject type
+ []
+
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 684.
+[20
+
+]
+Underfull \hbox (badness 1014) in paragraph at lines 706--709
+\T1/ptm/m/n/10.95 ob-ject. Apart from this (stan-dard) method of call-ing the p
+rop-erty han-dlers di-rectly with a
+ []
+
+<figures/flowchart.pdf, id=1000, 428.60126pt x 228.855pt>
+File: figures/flowchart.pdf Graphic file (type pdf)
+
+<use figures/flowchart.pdf> [21] [22 <./figures/flowchart.pdf>]
+Chapter 4.
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 737.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 757.
+[23
+
+] [24] [25] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 1075--1077
+[]\T1/ptm/m/n/10.95 The func-tion is equiv-a-lent to \T1/cmtt/m/n/10.95 SCRelab
+el \T1/ptm/m/n/10.95 ([][]4.2.6[][]) with [] $\U/MnSymbolD/m/n/10.95 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1075--1077
+\OMX/MnSymbolE/m/n/10.95 ^^@\OML/ztmcm/m/it/10.95 SCVertices\OMX/MnSymbolE/m/n/
+10.95 ^^@\OT1/ztmcm/m/n/10.95 1\OMX/MnSymbolE/m/n/10.95 ^^E\OML/ztmcm/m/it/10.9
+5 ; [] ; SCVertices\OMX/MnSymbolE/m/n/10.95 ^^@\OML/ztmcm/m/it/10.95 j\OMX/MnSy
+mbolE/m/n/10.95 ^^E\OML/ztmcm/m/it/10.95 ; [] ; SCVertices\OMX/MnSymbolE/m/n/10
+.95 ^^@\OML/ztmcm/m/it/10.95 i\OMX/MnSymbolE/m/n/10.95 ^^E\OML/ztmcm/m/it/10.95
+ ; [] ; SCVertices\OMX/MnSymbolE/m/n/10.95 ^^@\OML/ztmcm/m/it/10.95 n\OMX/MnSym
+bolE/m/n/10.95 ^^E^^E$ \T1/ptm/m/n/10.95 if [] $\U/MnSymbolD/m/n/10.95 ^^@
+ []
+
+[27] [28] [29] [30] [31] [32] [33]
+Chapter 5.
+[34
+
+] [35] [36]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1703.
+ [37]
+Underfull \hbox (badness 2478) in paragraph at lines 1799--1800
+[]\T1/ptm/m/n/10.95 Forms the sim-pli-cial carte-sian prod-uct of [] and []. In
+-ter-nally calls
+ []
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 1854--1859
+[]$\U/MnSymbolC/m/n/10.95 P$  \T1/cmtt/m/n/10.95 Operation Union (SCSimplicialC
+omplex, SCSimplicialComplex)(\T1/cmtt/m/sl/10.95 complex1,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1882--1887
+[]$\U/MnSymbolC/m/n/10.95 P$  \T1/cmtt/m/n/10.95 Operation Difference (SCSimpli
+cialComplex, SCSimplicialComplex)(\T1/cmtt/m/sl/10.95 complex1,
+ []
+
+[39] [40] [41] [42]
+Underfull \hbox (badness 10000) in paragraph at lines 2174--2179
+[]$\U/MnSymbolC/m/n/10.95 P$  \T1/cmtt/m/n/10.95 Operation Union (SCNormalSurfa
+ce, SCNormalSurface)(\T1/cmtt/m/sl/10.95 complex1, complex2\T1/cmtt/m/n/10.95 )
+[] []
+ []
+
+[43] [44]
+Chapter 6.
+[45
+
+] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56]
+! Missing { inserted.
+<to be read again> 
+                   ##
+l.3046 ...natorial manifold of type $(S^2 x S^1)^#
+                                                  k$ for $k$ even. The compl...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! You can't use `macro parameter character #' in math mode.
+<recently read> ##
+                  
+l.3046 ...natorial manifold of type $(S^2 x S^1)^#
+                                                  k$ for $k$ even. The compl...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3046 ...torial manifold of type $(S^2 x S^1)^#k$
+                                                   for $k$ even. The complex...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[57]
+Underfull \hbox (badness 1571) in paragraph at lines 3084--3085
+[]\T1/cmtt/m/n/10.95 SCSeriesCSTSurface(l,j,2k) \T1/ptm/m/n/10.95 gen-er-ates t
+he cen-trally sym-met-ric tran-si-tive (cst) sur-face
+ []
+
+[58] [59] [60] [61] [62] [63]
+Underfull \hbox (badness 10000) in paragraph at lines 3496--3498
+\T1/ptm/m/n/10.95 This $\OT1/ztmcm/m/n/10.95 3$\T1/ptm/m/n/10.95 -parameter fam
+-ily of com-bi-na-to-rial $\OT1/ztmcm/m/n/10.95 3$\T1/ptm/m/n/10.95 -manifolds 
+con-tains the fam-i-lies gen-er-ated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3496--3498
+\T1/ptm/m/n/10.95 by \T1/cmtt/m/n/10.95 SCSeriesHomologySphere \T1/ptm/m/n/10.9
+5 ([][]6.3.10[][]), \T1/cmtt/m/n/10.95 SCSeriesConnectedSum \T1/ptm/m/n/10.95 (
+[][]6.3.6[][]) and parts of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3496--3498
+\T1/cmtt/m/n/10.95 SCSeriesLensSpace \T1/ptm/m/n/10.95 ([][]6.3.15[][]), in-ter
+-nally calls \T1/cmtt/m/n/10.95 SCIntFunc.SeifertFibredSpace(p,q,r)\T1/ptm/m/n/
+10.95 .
+ []
+
+[64] [65] [66] [67] [68] [69]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 3882.
+
+[70]
+Underfull \hbox (badness 7451) in paragraph at lines 3973--3974
+[]\T1/ptm/m/n/10.95 If $\OML/ztmcm/m/it/10.95 n \U/MnSymbolD/m/n/10.95 C \OT1/z
+tmcm/m/n/10.95 2$\T1/ptm/m/n/10.95 , the func-tion in-ter-nally calls $\OT1/ztm
+cm/m/n/10.95 1\U/MnSymbolC/m/n/10.95 ^^U$ \T1/cmtt/m/n/10.95 SCConnectedSum \T1
+/ptm/m/n/10.95 ([][]6.5.5[][]) and $\OMX/MnSymbolE/m/n/10.95 à\OML/ztmcm/m/it/1
+0.95 n \U/MnSymbolC/m/n/10.95 ^^P \OT1/ztmcm/m/n/10.95 2\OMX/MnSymbolE/m/n/10.9
+5 ç\U/MnSymbolC/m/n/10.95 ^^U$
+ []
+
+[71] [72] [73] [74] [75]
+Underfull \hbox (badness 10000) in paragraph at lines 4296--4301
+[]$\U/MnSymbolC/m/n/10.95 P$  \T1/cmtt/m/n/10.95 SCsFromGroupByTransitivity(\T1
+/cmtt/m/sl/10.95 n, d, k, maniflag, computeAutGroup,
+ []
+
+[76] [77] [78]
+Underfull \hbox (badness 10000) in paragraph at lines 4509--4513
+\T1/ptm/m/n/10.95 The fol-low-ing func-tions com-pute ba-sic prop-er-ties of si
+m-pli-cial com-plexes of type
+ []
+
+[79] [80] [81] [82] [83] [84] [85]pdfTeX warning (ext4): destination with the s
+ame identifier (name{L.X7BDD568184E3419D}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.5034 \hyperdef{L}{X7BDD568184E3419D}{}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{L.X87DC942881235E25}) has been already used, duplica
+te ignored
+<to be read again> 
+                   \relax 
+l.5056 \hyperdef{L}{X87DC942881235E25}{}
+                                         [86] [87] [88] [89] [90]
+Underfull \hbox (badness 3557) in paragraph at lines 5361--5362
+[]\T1/ptm/m/n/10.95 Computes the $\OML/ztmcm/m/it/10.95 h$\T1/ptm/m/n/10.95 -ve
+ctor of a sim-pli-cial com-plex. The $\OML/ztmcm/m/it/10.95 h$\T1/ptm/m/n/10.95
+ -vector is de-fined as $\OML/ztmcm/m/it/10.95 h[] \U/MnSymbolC/m/n/10.95 ^^B\U
+/MnSymbolD/m/n/10.95 ^^@
+ []
+
+[91] [92] [93] [94] [95] [96] [97] [98] [99]
+Underfull \hbox (badness 10000) in paragraph at lines 6029--6030
+[]\T1/ptm/m/n/10.95 Computes all miss-ing proper faces of a sim-pli-cial com-pl
+ex [] by call-ing
+ []
+
+[100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
+[112] [113] [114] [115] [116]
+Chapter 7.
+[117
+
+] [118] [119]pdfTeX warning (ext4): destination with the same identifier (name{
+L.X80F13BB484B3E9B2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.7351 \hyperdef{L}{X80F13BB484B3E9B2}{}
+                                         [120]pdfTeX warning (ext4): destinatio
+n with the same identifier (name{L.X82C9F57780C0B7F8}) has been already used, d
+uplicate ignored
+<to be read again> 
+                   \relax 
+l.7439 \hyperdef{L}{X82C9F57780C0B7F8}{}
+                                         [121]pdfTeX warning (ext4): destinatio
+n with the same identifier (name{L.X82351AAE793DCB68}) has been already used, d
+uplicate ignored
+<to be read again> 
+                   \relax 
+l.7499 \hyperdef{L}{X82351AAE793DCB68}{}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{L.X788BAE187D584103}) has been already used, duplica
+te ignored
+<to be read again> 
+                   \relax 
+l.7524 \hyperdef{L}{X788BAE187D584103}{}
+                                         [122]pdfTeX warning (ext4): destinatio
+n with the same identifier (name{L.X81F8071385FD9C1D}) has been already used, d
+uplicate ignored
+<to be read again> 
+                   \relax 
+l.7548 \hyperdef{L}{X81F8071385FD9C1D}{}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{L.X7F8B561C823DDDBA}) has been already used, duplica
+te ignored
+<to be read again> 
+                   \relax 
+l.7573 \hyperdef{L}{X7F8B561C823DDDBA}{}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{L.X7AE0029985BD0775}) has been already used, duplica
+te ignored
+<to be read again> 
+                   \relax 
+l.7607 \hyperdef{L}{X7AE0029985BD0775}{}
+                                         [123]pdfTeX warning (ext4): destinatio
+n with the same identifier (name{L.X79F60850875BB683}) has been already used, d
+uplicate ignored
+<to be read again> 
+                   \relax 
+l.7636 \hyperdef{L}{X79F60850875BB683}{}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{L.X78D66254858CE901}) has been already used, duplica
+te ignored
+<to be read again> 
+                   \relax 
+l.7692 \hyperdef{L}{X78D66254858CE901}{}
+                                         [124]pdfTeX warning (ext4): destinatio
+n with the same identifier (name{L.X81AF20DC814B51A6}) has been already used, d
+uplicate ignored
+<to be read again> 
+                   \relax 
+l.7722 \hyperdef{L}{X81AF20DC814B51A6}{}
+                                         [125]pdfTeX warning (ext4): destinatio
+n with the same identifier (name{L.X860375D980E9A801}) has been already used, d
+uplicate ignored
+<to be read again> 
+                   \relax 
+l.7798 \hyperdef{L}{X860375D980E9A801}{}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{L.X78C860DC851167F7}) has been already used, duplica
+te ignored
+<to be read again> 
+                   \relax 
+l.7820 \hyperdef{L}{X78C860DC851167F7}{}
+                                         [126]pdfTeX warning (ext4): destinatio
+n with the same identifier (name{L.X8026B46F8236124D}) has been already used, d
+uplicate ignored
+<to be read again> 
+                   \relax 
+l.7857 \hyperdef{L}{X8026B46F8236124D}{}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{L.X84ACF7D580FE8B76}) has been already used, duplica
+te ignored
+<to be read again> 
+                   \relax 
+l.7894 \hyperdef{L}{X84ACF7D580FE8B76}{}
+                                         [127] [128]pdfTeX warning (ext4): dest
+ination with the same identifier (name{L.X81DA367A813F7599}) has been already u
+sed, duplicate ignored
+<to be read again> 
+                   \relax 
+l.7984 \hyperdef{L}{X81DA367A813F7599}{}
+                                         [129] [130]
+Chapter 8.
+[131
+
+] [132] [133] [134] [135] [136] [137] [138]
+Underfull \hbox (badness 3260) in paragraph at lines 8580--8582
+[]\T1/ptm/m/n/10.95 Internally calls the \T1/phv/m/n/10.95 GAP\T1/ptm/m/n/10.95
+ -functions \T1/cmtt/m/n/10.95 Matrix_CharacteristicPolynomialSameField \T1/ptm
+/m/n/10.95 and
+ []
+
+[139]
+Chapter 9.
+
+Underfull \hbox (badness 10000) in paragraph at lines 8626--8643
+
+ []
+
+
+Underfull \hbox (badness 4341) in paragraph at lines 8626--8643
+\T1/ptm/m/n/10.95 Let $\OML/ztmcm/m/it/10.95 M$ \T1/ptm/m/n/10.95 be a com-bi-n
+a-to-rial $\OML/ztmcm/m/it/10.95 d$\T1/ptm/m/n/10.95 -manifold ($\OML/ztmcm/m/i
+t/10.95 d$\T1/ptm/m/n/10.95 -pseudomanifold), $\OML/ztmcm/m/it/10.95 ^^M \U/MnS
+ymbolD/m/n/10.95 ^^@ \OMX/MnSymbolE/m/n/10.95 `\OML/ztmcm/m/it/10.95 v[]; [] ; 
+v[]\OMX/MnSymbolE/m/n/10.95 e$ \T1/ptm/m/n/10.95 a $\OML/ztmcm/m/it/10.95 k$\T1
+/ptm/m/n/10.95 -face and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8626--8643
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8626--8643
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8626--8643
+
+ []
+
+<figures/bistellar.pdf, id=2143, 423.5825pt x 170.6375pt>
+File: figures/bistellar.pdf Graphic file (type pdf)
+
+<use figures/bistellar.pdf> [140
+
+]
+<figures/dreiFlips.pdf, id=2150, 578.16pt x 144.54pt>
+File: figures/dreiFlips.pdf Graphic file (type pdf)
+
+<use figures/dreiFlips.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 8659--8672
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8659--8672
+
+ []
+
+[141 <./figures/bistellar.pdf> <./figures/dreiFlips.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 8702--8705
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8707--8709
+[]\T1/ptm/m/n/10.95 Record of global vari-ables to ad-just out-put an be-hav-io
+r of bis-tel-lar moves in
+ []
+
+[142]
+Overfull \hbox (28.71817pt too wide) in paragraph at lines 8770--8771
+[]\T1/ptm/m/n/10.95 Internally calls \T1/cmtt/m/n/10.95 SCReduceComplexEx \T1/p
+tm/m/n/10.95 ([][]9.2.14[][])\T1/cmtt/m/n/10.95 (complex1,complex2,1,SCIntFunc.
+SCChooseMove); 
+ []
+
+[143] [144] [145]
+Overfull \hbox (11.74306pt too wide) in paragraph at lines 8926--8927
+[]\T1/ptm/m/n/10.95 Internally calls \T1/cmtt/m/n/10.95 SCReduceComplexEx \T1/p
+tm/m/n/10.95 ([][]9.2.14[][])\T1/cmtt/m/n/10.95 (link,SCEmpty(),0,SCIntFunc.SCC
+hooseMove);
+ []
+
+[146] [147]
+Underfull \hbox (badness 2027) in paragraph at lines 9085--9086
+[]\T1/ptm/m/n/10.95 With op-tional pos-i-tive in-te-ger ar-gu-ment [], the amou
+nt of ran-dom-iza-tion can be
+ []
+
+
+Underfull \hbox (badness 4024) in paragraph at lines 9085--9086
+\T1/ptm/m/n/10.95 con-trolled. The higher the value of [], the more bis-tel-lar
+ moves will be ran-
+ []
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 9107--9112
+[]\T1/ptm/b/n/10.95 Returns:  \T1/cmtt/m/n/10.95 SCBistellarOptions.WriteLevel=
+0\T1/ptm/m/n/10.95 : a triple of the form \T1/cmtt/m/n/10.95 [ boolean,
+ []
+
+
+Overfull \hbox (28.71817pt too wide) in paragraph at lines 9129--9130
+[]\T1/ptm/m/n/10.95 Internally calls \T1/cmtt/m/n/10.95 SCReduceComplexEx \T1/p
+tm/m/n/10.95 ([][]9.2.14[][])\T1/cmtt/m/n/10.95 (complex1,complex2,2,SCIntFunc.
+SCChooseMove); 
+ []
+
+[148]
+Underfull \hbox (badness 3635) in paragraph at lines 9150--9155
+[]\T1/ptm/b/n/10.95 Returns:  \T1/cmtt/m/n/10.95 SCBistellarOptions.WriteLevel=
+0\T1/ptm/m/n/10.95 : a triple of the form \T1/cmtt/m/n/10.95 [ boolean,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9166--9168
+[]\T1/ptm/m/n/10.95 Reduces a pure sim-pli-cial com-plex [] sat-is-fy-ing the w
+eak pseu-do-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9166--9168
+\T1/ptm/m/n/10.95 man-i-fold prop-erty via bis-tel-lar moves. In-ter-nally call
+s \T1/cmtt/m/n/10.95 SCReduceComplexEx
+ []
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 9189--9194
+[]\T1/ptm/b/n/10.95 Returns:  \T1/cmtt/m/n/10.95 SCBistellarOptions.WriteLevel=
+0\T1/ptm/m/n/10.95 : a triple of the form \T1/cmtt/m/n/10.95 [ boolean,
+ []
+
+[149] [150] [151] [152]
+Chapter 10.
+pdfTeX warning (ext4): destination with the same identifier (name{L.X7E1BE67385
+9191F0}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.9325 \hyperdef{L}{X7E1BE673859191F0}{}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{L.X8729B87B848E3F89}) has been already used, duplica
+te ignored
+<to be read again> 
+                   \relax 
+l.9330 \hyperdef{L}{X8729B87B848E3F89}{}
+                                        
+Underfull \hbox (badness 6842) in paragraph at lines 9359--9360
+[]\T1/ptm/m/n/10.95 If \T1/cmtt/m/n/10.95 singularity \T1/ptm/m/n/10.95 is an o
+r-di-nary dou-ble point of a com-bi-na-to-rial $\OT1/ztmcm/m/n/10.95 4$\T1/ptm/
+m/n/10.95 -pseudomanifold
+ []
+
+[153
+
+] [154] [155]
+Chapter 11.
+[156
+
+] [157] [158] [159] [160] [161] [162]
+Chapter 12.
+
+Underfull \hbox (badness 10000) in paragraph at lines 9916--9919
+
+ []
+
+
+Underfull \hbox (badness 2393) in paragraph at lines 9921--9923
+[]\T1/ptm/m/n/10.95 The global vari-able \T1/cmtt/m/n/10.95 SCLib \T1/ptm/m/n/1
+0.95 con-tains the li-brary ob-ject of the global li-brary of \T1/phv/m/n/10.95
+ sim-p-
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 9921--9923
+\T1/phv/m/n/10.95 comp \T1/ptm/m/n/10.95 through which the user can ac-cess the
+ li-brary. The path to the global li-brary is
+ []
+
+[163
+
+] [164]
+Underfull \hbox (badness 1810) in paragraph at lines 9995--9997
+[]\T1/ptm/m/n/10.95 Adds a given sim-pli-cial com-plex [] to a given repos-i-to
+ry [] of type
+ []
+
+[165] [166] [167] [168] [169] [170] [171] [172] [173] [174]
+Chapter 13.
+[175
+
+] [176]
+Underfull \hbox (badness 10000) in paragraph at lines 10824--10825
+[]\T1/ptm/m/n/10.95 The $\OML/ztmcm/m/it/10.95 k$\T1/ptm/m/n/10.95 -th co-ho-mo
+l-ogy group \T1/cmtt/m/n/10.95 ck \T1/ptm/m/n/10.95 can be ob-tained by call-in
+g
+ []
+
+
+Underfull \hbox (badness 2875) in paragraph at lines 10824--10825
+\T1/cmtt/m/n/10.95 ck:=CertainObject(cohomology,k);\T1/ptm/m/n/10.95 , where \T
+1/cmtt/m/n/10.95 cohomology \T1/ptm/m/n/10.95 is the \T1/phv/m/n/10.95 homalg \
+T1/ptm/m/n/10.95 ob-ject re-turned
+ []
+
+[177]
+Chapter 14.
+[178
+
+] [179] [180]
+Underfull \hbox (badness 10000) in paragraph at lines 11112--11114
+[]\T1/ptm/m/n/10.95 Test whether the pack-age \T1/phv/m/n/10.95 sim-p-comp \T1/
+ptm/m/n/10.95 is func-tional by call-ing
+ []
+
+[181]
+Chapter 15.
+[182
+
+] [183] [184] [185] [186]
+Chapter 16.
+[187
+
+] [188]
+Underfull \hbox (badness 2460) in paragraph at lines 11706--11709
+\T1/ptm/m/n/10.95 As de-scribed in Sec-tion [][]3.1[][] there are two sev-eral 
+ways of ac-cess-ing an ob-ject of type
+ []
+
+[189] [190] [191] [192] [193]pdfTeX warning (ext4): destination with the same i
+dentifier (name{L.X82F1CE7A79A3CA47}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.12004 \hyperdef{L}{X82F1CE7A79A3CA47}{}
+                                          [194] [195]pdfTeX warning (ext4): des
+tination with the same identifier (name{L.X7E1BE673859191F0}) has been already 
+used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.12139 \hyperdef{L}{X7E1BE673859191F0}{}
+                                          [196] [197] [198]
+Underfull \hbox (badness 10000) in paragraph at lines 12327--12328
+[]\T1/ptm/m/n/10.95 Further ex-am-ple com-pu-ta-tions can be found in the slide
+s of var-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12327--12328
+\T1/ptm/m/n/10.95 i-ous talks about \T1/phv/m/n/10.95 sim-p-comp\T1/ptm/m/n/10.
+95 , avail-able from the \T1/phv/m/n/10.95 sim-p-comp \T1/ptm/m/n/10.95 home-pa
+ge
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12327--12328
+\T1/ptm/m/n/10.95 (\T1/cmtt/m/n/10.95 http://www.igt.uni-stuttgart.de/LstDiffge
+o/simpcomp/\T1/ptm/m/n/10.95 ), and in Ap-pendix A of
+ []
+
+[199]
+Chapter 17.
+
+Underfull \hbox (badness 2837) in paragraph at lines 12334--12336
+\T1/ptm/m/n/10.95 The pack-age \T1/phv/m/n/10.95 sim-p-comp \T1/ptm/m/n/10.95 w
+orks with ge-o-met-ric ob-jects for which the \T1/phv/m/n/10.95 GAP \T1/ptm/m/n
+/10.95 ob-ject types
+ []
+
+
+Underfull \hbox (badness 2809) in paragraph at lines 12345--12346
+\T1/ptm/m/n/10.95 In the fol-low-ing, we present a num-ber of func-tions to man
+-age a \T1/phv/m/n/10.95 GAP \T1/ptm/m/n/10.95 ob-ject of type
+ []
+
+[200
+
+] [201] [202] [203] (./simpcomp.bbl (./simpcomp.brf)
+\tf@brf=\write8
+\openout8 = `simpcomp.brf'.
+
+ [204] [205
+
+] [206]
+[207]
+Underfull \hbox (badness 1286) in paragraph at lines 302--302
+[]\T1/ptm/m/n/10.95 Jonathan Spreer.  Par-ti-tion-ing the tri-an-gles of the cr
+oss poly-tope into sur-faces.
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 313--313
+[]\T1/ptm/m/n/10.95 Jonathan Spreer.  Nor-mal sur-faces as com-bi-na-to-rial sl
+ic-ings.  \T1/ptm/m/it/10.95 Dis-crete Math.\T1/ptm/m/n/10.95 ,
+ []
+
+) [208] (./simpcomp.ind
+Underfull \hbox (badness 10000) in paragraph at lines 11--13
+[]\T1/cmtt/m/n/10.95 Operation * (\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/pt
+m/m/n/10.95 -\T1/cmtt/m/n/10.95 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simplici
+al\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Complex,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--15
+[]\T1/cmtt/m/n/10.95 Operation + (\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/pt
+m/m/n/10.95 -\T1/cmtt/m/n/10.95 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Normal\T
+1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Surface, \T1/ptm/m/n/10.95 -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--17
+[]\T1/cmtt/m/n/10.95 Operation + (\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/pt
+m/m/n/10.95 -\T1/cmtt/m/n/10.95 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simplici
+al\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Complex,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--19
+[]\T1/cmtt/m/n/10.95 Operation + (\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/pt
+m/m/n/10.95 -\T1/cmtt/m/n/10.95 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simplici
+al\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Complex,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
+[]\T1/cmtt/m/n/10.95 Operation - (\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/pt
+m/m/n/10.95 -\T1/cmtt/m/n/10.95 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Normal\T
+1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Surface, \T1/ptm/m/n/10.95 -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--23
+[]\T1/cmtt/m/n/10.95 Operation - (\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/pt
+m/m/n/10.95 -\T1/cmtt/m/n/10.95 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simplici
+al\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Complex,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
+[]\T1/cmtt/m/n/10.95 Operation - (\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/pt
+m/m/n/10.95 -\T1/cmtt/m/n/10.95 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simplici
+al\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Complex,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
+[]\T1/cmtt/m/n/10.95 Operation = (\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/pt
+m/m/n/10.95 -\T1/cmtt/m/n/10.95 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simplici
+al\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Complex,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
+[]\T1/cmtt/m/n/10.95 Operation ^ (\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/pt
+m/m/n/10.95 -\T1/cmtt/m/n/10.95 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simplici
+al\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Complex,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
+[]\T1/cmtt/m/n/10.95 Operation \T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Difference
+ (\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 
+C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simplicial\T1/ptm/m/n/10.95 -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
+\T1/cmtt/m/n/10.95 Complex, \T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/ptm/m/n/
+10.95 -\T1/cmtt/m/n/10.95 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simplicial\T1/
+ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Complex)\T1/ptm/m/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
+[]\T1/cmtt/m/n/10.95 Operation \T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Intersecti
+on (\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.9
+5 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simplicial\T1/ptm/m/n/10.95 -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
+\T1/cmtt/m/n/10.95 Complex, \T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/ptm/m/n/
+10.95 -\T1/cmtt/m/n/10.95 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simplicial\T1/
+ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Complex)\T1/ptm/m/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
+[]\T1/cmtt/m/n/10.95 Operation mod (\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/
+ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Normal
+\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Surface, \T1/ptm/m/n/10.95 -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+[]\T1/cmtt/m/n/10.95 Operation mod (\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/
+ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simpli
+cial\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Complex,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
+[]\T1/cmtt/m/n/10.95 Operation \T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Union (\T1
+/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 C\T1/
+ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Normal\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S
+urface,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
+[]\T1/cmtt/m/n/10.95 Operation \T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Union (\T1
+/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 C\T1/
+ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simplicial\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.
+95 Complex,
+ []
+
+[209
+
+
+] [210] [211] [212
+
+]) (./simpcomp.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 9826 strings out of 493848
+ 144470 string characters out of 1152823
+ 207982 words of memory out of 3000000
+ 11836 multiletter control sequences out of 15000+50000
+ 109487 words of font info for 155 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 38i,10n,36p,1016b,617s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolS.enc}{/usr/share/
+texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/share/texmf-texlive/
+fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/share/texmf-texlive/fonts/enc/dvip
+s/mnsymbol/MnSymbolF.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1
+.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/sha
+re/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{/usr/share/texmf-texli
+ve/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/mns
+ymbol/MnSymbol10.pfb></usr/share/texmf-texlive/fonts/type1/public/mnsymbol/MnSy
+mbol6.pfb></usr/share/texmf-texlive/fonts/type1/public/mnsymbol/MnSymbol8.pfb><
+/usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
+texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+
+pdfTeX warning: pdflatex (file /usr/share/texmf-texlive/fonts/type1/public/amsf
+onts/cm/cmmi10.pfb): glyph `semicolon' undefined
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/
+public/cm-super/sfst1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt
+1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sftt1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt2
+488.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
+re/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/
+fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/
+symbol/usyr.pfb></usr/share/texmf-texlive/fonts/type1/urw/symbol/usyr.pfb></usr
+/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive
+/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on simpcomp.pdf (212 pages, 1385487 bytes).
+PDF statistics:
+ 3644 PDF objects out of 4296 (max. 8388607)
+ 1020 named destinations out of 1200 (max. 500000)
+ 765 words of extra memory for PDF output out of 10000 (max. 10000000)
+
