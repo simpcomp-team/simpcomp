@@ -547,8 +547,8 @@ function(m,g,orient)
 
 	local autGroups,gens,n,f2,G,mg,i;
 
-	if not IsPosInt(m) or m < 3 or not IsInt(g) and g >= 0  then
-		Info(InfoSimpcomp,1,"SCRegularMap: argument 1 must be an integer > 2, argument 2 must be a non-negative integer.");
+	if not IsPosInt(m) or m < 7 or not IsInt(g) and g >= 2  then
+		Info(InfoSimpcomp,1,"SCRegularMap: argument 1 must be an integer > 6, argument 2 must be an integer > 1.");
 		return fail;
 	fi;
 	if not orient in [true, false] then
@@ -3355,8 +3355,8 @@ function(m,g)
 
 	local autGroups,gens,n,f2,G,mg,i;
 
-	if not IsPosInt(m) or m < 3 or not IsInt(g) and g >= 0  then
-		Info(InfoSimpcomp,1,"SCChiralMap: argument 1 must be an integer > 2, argument 2 must be a non-negative integer.");
+	if not IsPosInt(m) or m < 7 or not IsInt(g) and g >= 2  then
+		Info(InfoSimpcomp,1,"SCChiralMap: argument 1 must be an integer > 6, argument 2 must be an integer > 1.");
 		return fail;
 	fi;
 
@@ -3436,7 +3436,7 @@ autGroups[4]:=
     ( 51,159,105)( 52,160,106)( 53,161,107)( 54,162,108) ];
 
 autGroups[5]:=
-[ ( 1,14, 4,11, 8,18, 2,13, 5,10, 9,17, 3,15, 6,12, 7,16)(19,25,21,26,20,27)
+[ ( 1,14, 4,11, 8,18, 2,13, 5,10, 9,17, 3,15, 6,12, 7,16)(19,25,21,26,20,27)argument 2 must be an integer > 1
     (22,23), ( 1,19,10)( 2,20,11)( 3,21,12)( 4,22,13)( 5,23,14)( 6,24,15)
     ( 7,25,16)( 8,26,17)( 9,27,18) ];
 
@@ -3480,7 +3480,7 @@ autGroups[7]:=
 
 autGroups[8]:=
 [ ( 2, 3, 5, 8, 7, 4)( 6, 9,13,11,12,10)(14,66,53,40)(15,70,57,46,20,67,54,44,
-     18,72,59,41)(16,73,60,43,17,68,55,47,21,69,56,42)(19,78,65,51,25,71,58,
+     18,72,59,41)(16,73,60,43,17,68,55,47,21,69,56,42)(19,78,65,51,25,71,58,argument 2 must be an integer > 1
      52,26,77,64,45)(22,76,63,49,23,74,61,50,24,75,62,48)(28,29,31,34,33,30)
     (32,35,39,37,38,36), ( 1,47,21)( 2,46,14)( 3,40,18)( 4,50,20)( 5,44,26)
     ( 6,43,16)( 7,45,24)( 8,52,19)( 9,42,23)(10,48,17)(11,51,15)(12,41,22)
@@ -3667,7 +3667,7 @@ autGroups[15]:=
     ( 36,423,440)( 37,419,478)( 38,420,477)( 39,416,480)( 40,415,479)
     ( 41,418,475)( 42,417,476)( 43,383,454)( 44,384,453)( 45,380,456)
     ( 46,379,455)( 47,382,451)( 48,381,452)( 49,401,448)( 50,402,447)
-    ( 51,398,450)( 52,397,449)( 53,400,445)( 54,399,446)( 55,113,184)
+    ( 51,398,450)( 52,397,449)( 53,400,445)( 54,399,446)( 55,113,184)argument 2 must be an integer > 1
     ( 56,114,183)( 57,110,186)( 58,109,185)( 59,112,181)( 60,111,182)
     ( 61,131,178)( 62,132,177)( 63,128,180)( 64,127,179)( 65,130,175)
     ( 66,129,176)( 67,149,208)( 68,150,207)( 69,146,210)( 70,145,209)
