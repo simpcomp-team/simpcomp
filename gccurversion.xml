@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?><Module><ModulePrefs title="Changelog" /><Content type="html"><![CDATA[ <div style="width:100%" ><ul><li>22/01/2013 - Version 1.6: Major update.
+<?xml version="1.0" encoding="UTF-8" ?><Module><ModulePrefs title="Changelog" /><Content type="html"><![CDATA[ <div style="width:100%; font-size:10pt; font-family:courier new" ><ul><li>22/01/2013 - Version 1.6: Major update.
 	<ul>
 		<li>Added functions SCHeegaardSplitting, SCHeegaardSplittingSmallGenus and
 		SCIsHeegaardSplitting to handle Heegaard splittings.</li>
