@@ -121,7 +121,6 @@
     [4X[28X gap> SCMailIsEnabled();[128X[104X
     [4X[28X true[128X[104X
     [4X[28X gap> SCMailSend("Hello, this is simpcomp.");[128X[104X
-    [4X[28X WARNING: gnome-keyring:: couldn't connect to: /tmp/keyring-G1OcVm/pkcs11: No such file or directory[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -205,11 +204,11 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCRunTest();[128X[104X
-    [4X[28X WARNING: gnome-keyring:: couldn't connect to: /tmp/keyring-G1OcVm/pkcs11: No such file or directory[128X[104X
+    [4X[28X WARNING: gnome-keyring:: couldn't connect to: /tmp/keyring-c2bJN8/pkcs11: No such file or directory[128X[104X
     [4X[28X Line 1075 : [128X[104X
     [4X[28X + simpcomp package test[128X[104X
     [4X[28X Line 1076 : [128X[104X
-    [4X[28X + GAP4stones: 54785[128X[104X
+    [4X[28X + GAP4stones: 53725[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X

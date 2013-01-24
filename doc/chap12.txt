@@ -122,7 +122,7 @@
     [4X[28X gap> myRepository:=SCLibInit("~/myrepository");[128X[104X
     [4X[28X [Simplicial complex library. Properties:[128X[104X
     [4X[28X CalculateIndexAttributes=true[128X[104X
-    [4X[28X Number of complexes in library=9[128X[104X
+    [4X[28X Number of complexes in library=10[128X[104X
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
@@ -130,7 +130,7 @@
     [4X[28X ][128X[104X
     [4X[28X gap> complex:=SCBdCrossPolytope(4);;[128X[104X
     [4X[28X gap> SCLibAdd(myRepository,complex);[128X[104X
-    [4X[28X #I  SCLibAdd: saving complex to file "complex_2013-01-22_20-39-38.scb".[128X[104X
+    [4X[28X #I  SCLibAdd: saving complex to file "complex_2013-01-24_17-24-11.scb".[128X[104X
     [4X[28X true[128X[104X
     [4X[28X gap> myRepository.Add(complex);; # alternative syntax[128X[104X
     [4X[28X [128X[104X
@@ -172,7 +172,7 @@
     [4X[28X #I  SCLibUpdate: rebuilding index done.[128X[104X
     [4X[28X [Simplicial complex library. Properties:[128X[104X
     [4X[28X CalculateIndexAttributes=true[128X[104X
-    [4X[28X Number of complexes in library=10[128X[104X
+    [4X[28X Number of complexes in library=11[128X[104X
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
@@ -270,7 +270,7 @@
     [4X[28X gap> myRepository:=SCLibInit("~/myrepository");[128X[104X
     [4X[28X [Simplicial complex library. Properties:[128X[104X
     [4X[28X CalculateIndexAttributes=true[128X[104X
-    [4X[28X Number of complexes in library=10[128X[104X
+    [4X[28X Number of complexes in library=11[128X[104X
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X

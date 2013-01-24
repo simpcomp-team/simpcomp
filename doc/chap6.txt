@@ -1183,16 +1183,10 @@
     [4X[28X   [ 9, 43 ], [ 10, 73 ], [ 12, 22 ], [ 12, 33 ], [ 12, 40 ], [ 12, 51 ], [128X[104X
     [4X[28X   [ 12, 58 ], [ 12, 64 ], [ 12, 85 ], [ 12, 94 ], [ 12, 97 ], [ 18, 28 ] ][128X[104X
     [4X[28X gap> c:=SCChiralMap(8,10);[128X[104X
-    [4X[28X [SimplicialComplex[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Name="complex from generators under unknown group"[128X[104X
-    [4X[28X  Dim=2[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X /SimplicialComplex][128X[104X
+    [4X[28X Error, SCChiralMap: function is not yet defined[128X[104X
+    [4X[28X not in any function at line 49 of *stdin*[128X[104X
     [4X[28X gap> c.Homology;[128X[104X
-    [4X[28X [ [ 0, [  ] ], [ 194, [  ] ], [ 1, [  ] ] ][128X[104X
+    [4X[28X [ [ 0, [  ] ], [ 14, [  ] ], [ 1, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -1214,16 +1208,10 @@
     [4X[28X   [ 9, 43 ], [ 10, 73 ], [ 12, 22 ], [ 12, 33 ], [ 12, 40 ], [ 12, 51 ], [128X[104X
     [4X[28X   [ 12, 58 ], [ 12, 64 ], [ 12, 85 ], [ 12, 94 ], [ 12, 97 ], [ 18, 28 ] ][128X[104X
     [4X[28X gap> c:=SCChiralMap(ll[18][1],ll[18][2]);[128X[104X
-    [4X[28X [SimplicialComplex[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Name="complex from generators under unknown group"[128X[104X
-    [4X[28X  Dim=2[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X /SimplicialComplex][128X[104X
+    [4X[28X Error, SCChiralMap: function is not yet defined[128X[104X
+    [4X[28X not in any function at line 43 of *stdin*[128X[104X
     [4X[28X gap> SCHomology(c);[128X[104X
-    [4X[28X [ [ 0, [  ] ], [ 194, [  ] ], [ 1, [  ] ] ][128X[104X
+    [4X[28X [ [ 0, [  ] ], [ 14, [  ] ], [ 1, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   

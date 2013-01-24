@@ -110,7 +110,7 @@
 {\Huge \textbf{A \textsf{GAP} toolbox for simplicial complexes\mbox{}}}\\
 \vfill
 
-{\Huge Version 1.6\mbox{}}\\[1cm]
+{\Huge Version 1.6.0\mbox{}}\\[1cm]
 {January 2013  \begin{center} \vspace*{1cm}
 \includegraphics[width=.4\textwidth]{figures/shrimpmanual}\\ \end{center}  \mbox{}}\\[1cm]
 \mbox{}\\[2cm]
@@ -312,7 +312,7 @@ verifies that the results are correct.
  To test the functionality of \textsf{simpcomp} you can run the function \texttt{SCRunTest} (\ref{SCRunTest}) from the \textsf{GAP} console: 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, Version 1.6
+  + test simpcomp package, Version 1.6.0
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@|
@@ -337,7 +337,7 @@ calls to functions of the package \textsf{simpcomp} can be controlled by setting
   @manual{simpcomp,
   	author = "Felix Effenberger and Jonathan Spreer",
   	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
-  	          {V}ersion 1.6",
+  	          {V}ersion 1.6.0",
   	year   = "2013",
   	url    = "\url{http://code.google.com/p/simpcomp}",
   }
@@ -348,7 +348,7 @@ bibliography environment of LaTeX.
   \bibitem{simpcomp}
   F.~Effenberger and J.~Spreer,
   \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
-  Version 1.6, 
+  Version 1.6.0, 
   2013,
   \url{http://code.google.com/p/simpcomp}.
 \end{verbatim}
@@ -1596,7 +1596,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   48
+   40
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
    0
@@ -1611,7 +1611,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   48
+   36
    
 \end{Verbatim}
  }
@@ -3531,16 +3531,10 @@ regular maps by Marston Conder \cite{Conder09RegMapsOfBdChi}. Use \texttt{SCChir
      [ 9, 43 ], [ 10, 73 ], [ 12, 22 ], [ 12, 33 ], [ 12, 40 ], [ 12, 51 ], 
      [ 12, 58 ], [ 12, 64 ], [ 12, 85 ], [ 12, 94 ], [ 12, 97 ], [ 18, 28 ] ]
    gap> c:=SCChiralMap(8,10);
-   [SimplicialComplex
-   
-    Properties known: Dim, FacetsEx, Name, Vertices.
-   
-    Name="complex from generators under unknown group"
-    Dim=2
-   
-   /SimplicialComplex]
+   Error, SCChiralMap: function is not yet defined
+   not in any function at line 49 of *stdin*
    gap> c.Homology;
-   [ [ 0, [  ] ], [ 194, [  ] ], [ 1, [  ] ] ]
+   [ [ 0, [  ] ], [ 14, [  ] ], [ 1, [  ] ] ]
    
 \end{Verbatim}
  }
@@ -3567,16 +3561,10 @@ by Marston Conder \cite{Conder09RegMapsOfBdChi}. Every chiral map is given by a 
      [ 9, 43 ], [ 10, 73 ], [ 12, 22 ], [ 12, 33 ], [ 12, 40 ], [ 12, 51 ], 
      [ 12, 58 ], [ 12, 64 ], [ 12, 85 ], [ 12, 94 ], [ 12, 97 ], [ 18, 28 ] ]
    gap> c:=SCChiralMap(ll[18][1],ll[18][2]);
-   [SimplicialComplex
-   
-    Properties known: Dim, FacetsEx, Name, Vertices.
-   
-    Name="complex from generators under unknown group"
-    Dim=2
-   
-   /SimplicialComplex]
+   Error, SCChiralMap: function is not yet defined
+   not in any function at line 43 of *stdin*
    gap> SCHomology(c);
-   [ [ 0, [  ] ], [ 194, [  ] ], [ 1, [  ] ] ]
+   [ [ 0, [  ] ], [ 14, [  ] ], [ 1, [  ] ] ]
    
 \end{Verbatim}
  }
@@ -9577,7 +9565,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
    #I  SCIsTight: processed 30000 of 40320 rsl-functions so far, all perfect.
    #I  SCIsTight: processed 40000 of 40320 rsl-functions so far, all perfect.
    true
-   5972
+   6060
    
 \end{Verbatim}
  
@@ -9596,7 +9584,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
      98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 
      113, 114, 115, 116, 117, 118, 119, 120 ], complex not tight.
    false
-   8
+   4
    
 \end{Verbatim}
  
@@ -9988,7 +9976,7 @@ optional argument \mbox{\texttt{\mdseries\slshape name}} and the current time or
    gap> myRepository:=SCLibInit("~/myrepository");
    [Simplicial complex library. Properties:
    CalculateIndexAttributes=true
-   Number of complexes in library=9
+   Number of complexes in library=10
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
@@ -9996,7 +9984,7 @@ optional argument \mbox{\texttt{\mdseries\slshape name}} and the current time or
    ]
    gap> complex:=SCBdCrossPolytope(4);;
    gap> SCLibAdd(myRepository,complex);
-   #I  SCLibAdd: saving complex to file "complex_2013-01-22_20-39-38.scb".
+   #I  SCLibAdd: saving complex to file "complex_2013-01-24_17-24-11.scb".
    true
    gap> myRepository.Add(complex);; # alternative syntax
    
@@ -10050,7 +10038,7 @@ optional argument \mbox{\texttt{\mdseries\slshape name}} and the current time or
    #I  SCLibUpdate: rebuilding index done.
    [Simplicial complex library. Properties:
    CalculateIndexAttributes=true
-   Number of complexes in library=10
+   Number of complexes in library=11
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
@@ -10157,7 +10145,7 @@ stored in its base path in the XML file \texttt{complexes.idx}, the complexes ar
    gap> myRepository:=SCLibInit("~/myrepository");
    [Simplicial complex library. Properties:
    CalculateIndexAttributes=true
-   Number of complexes in library=10
+   Number of complexes in library=11
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
@@ -10982,7 +10970,6 @@ minimal email sending interval, see \texttt{SCMailSetMinInterval} (\ref{SCMailSe
    gap> SCMailIsEnabled();
    true
    gap> SCMailSend("Hello, this is simpcomp.");
-   WARNING: gnome-keyring:: couldn't connect to: /tmp/keyring-G1OcVm/pkcs11: No such file or directory
    true
    
 \end{Verbatim}
@@ -11100,11 +11087,11 @@ functionality of the package.
 differs from system to system. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> SCRunTest();
-   WARNING: gnome-keyring:: couldn't connect to: /tmp/keyring-G1OcVm/pkcs11: No such file or directory
+   WARNING: gnome-keyring:: couldn't connect to: /tmp/keyring-c2bJN8/pkcs11: No such file or directory
    Line 1075 : 
    + simpcomp package test
    Line 1076 : 
-   + GAP4stones: 54785
+   + GAP4stones: 53725
    true
    
 \end{Verbatim}
@@ -11566,7 +11553,7 @@ Section \ref{sec:generateFromOld}, which will be described in the next sections.
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@#first run functionality test on simpcomp|
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, version 1.6
+  + test simpcomp package, version 1.6.0
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@#all ok|
