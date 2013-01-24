@@ -59,7 +59,8 @@ Download and installation
 
 Changes
 =======
-22/01/2013 - Version 1.6: Major update.
+
+22/01/2013 - Version 1.6.0: Major update.
 - Added functions SCHeegaardSplitting, SCHeegaardSplittingSmallGenus and
   SCIsHeegaardSplitting to handle Heegaard splittings.
 - Added infinte series of d-tori SCSeriesTorus.
