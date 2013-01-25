@@ -545,7 +545,7 @@ end);
 InstallGlobalFunction(SCRegularMap,
 function(m,g,orient)
 
-	local autGroups,gens,n,f2,G,mg,i;
+	local autGroups,gens,n,f2,G,mg,i,c;
 
 	if not IsPosInt(m) or m < 7 or not IsInt(g) and g >= 2  then
 		Info(InfoSimpcomp,1,"SCRegularMap: argument 1 must be an integer > 6, argument 2 must be an integer > 1.");
@@ -3287,7 +3287,15 @@ mg[89]:=[ 14, 99 ];
 	i:=Position(mg,[m,g]);
 	if i <> fail then
 		G:=Group(autGroups[i]);
-		return SCFromGenerators(G,[gens[i]]);
+		c:=SCFromGenerators(G,[gens[i]]);
+		if orient then
+			SetSCTopologicalType(c,Concatenation("(T^2)^#",String(g)));
+			SCRename(c,Concatenation("Orientable regular map {",String(m),",",String(g),"}"));
+		else
+			SetSCTopologicalType(c,Concatenation("(RP^2)^#",String(g)));
+			SCRename(c,Concatenation("Non-orientable regular map {",String(m),",",String(g),"}"));
+		fi;
+		return c;
 	else
 		return fail;
 	fi;
@@ -3353,7 +3361,7 @@ end);
 InstallGlobalFunction(SCChiralMap,
 function(m,g)
 
-	local autGroups,gens,n,f2,G,mg,i;
+	local autGroups,gens,n,f2,G,mg,i,c;
 
 	if not IsPosInt(m) or m < 7 or not IsInt(g) and g >= 2  then
 		Info(InfoSimpcomp,1,"SCChiralMap: argument 1 must be an integer > 6, argument 2 must be an integer > 1.");
@@ -3436,7 +3444,7 @@ autGroups[4]:=
     ( 51,159,105)( 52,160,106)( 53,161,107)( 54,162,108) ];
 
 autGroups[5]:=
-[ ( 1,14, 4,11, 8,18, 2,13, 5,10, 9,17, 3,15, 6,12, 7,16)(19,25,21,26,20,27)argument 2 must be an integer > 1
+[ ( 1,14, 4,11, 8,18, 2,13, 5,10, 9,17, 3,15, 6,12, 7,16)(19,25,21,26,20,27)
     (22,23), ( 1,19,10)( 2,20,11)( 3,21,12)( 4,22,13)( 5,23,14)( 6,24,15)
     ( 7,25,16)( 8,26,17)( 9,27,18) ];
 
@@ -3480,7 +3488,7 @@ autGroups[7]:=
 
 autGroups[8]:=
 [ ( 2, 3, 5, 8, 7, 4)( 6, 9,13,11,12,10)(14,66,53,40)(15,70,57,46,20,67,54,44,
-     18,72,59,41)(16,73,60,43,17,68,55,47,21,69,56,42)(19,78,65,51,25,71,58,argument 2 must be an integer > 1
+     18,72,59,41)(16,73,60,43,17,68,55,47,21,69,56,42)(19,78,65,51,25,71,58,
      52,26,77,64,45)(22,76,63,49,23,74,61,50,24,75,62,48)(28,29,31,34,33,30)
     (32,35,39,37,38,36), ( 1,47,21)( 2,46,14)( 3,40,18)( 4,50,20)( 5,44,26)
     ( 6,43,16)( 7,45,24)( 8,52,19)( 9,42,23)(10,48,17)(11,51,15)(12,41,22)
@@ -3667,7 +3675,7 @@ autGroups[15]:=
     ( 36,423,440)( 37,419,478)( 38,420,477)( 39,416,480)( 40,415,479)
     ( 41,418,475)( 42,417,476)( 43,383,454)( 44,384,453)( 45,380,456)
     ( 46,379,455)( 47,382,451)( 48,381,452)( 49,401,448)( 50,402,447)
-    ( 51,398,450)( 52,397,449)( 53,400,445)( 54,399,446)( 55,113,184)argument 2 must be an integer > 1
+    ( 51,398,450)( 52,397,449)( 53,400,445)( 54,399,446)( 55,113,184)
     ( 56,114,183)( 57,110,186)( 58,109,185)( 59,112,181)( 60,111,182)
     ( 61,131,178)( 62,132,177)( 63,128,180)( 64,127,179)( 65,130,175)
     ( 66,129,176)( 67,149,208)( 68,150,207)( 69,146,210)( 70,145,209)
@@ -3767,56 +3775,52 @@ autGroups[18]:=
     ( 59,158,122)( 60,191,121)( 61,178,127)( 62,183,125)( 63,188,126)
     ( 64,186,124) ];
 
-gens[1]:=[ 1, 8, 42 ];
-gens[2]:=[ 1, 10, 14 ];
-gens[3]:=[ 1, 9, 23 ];
-gens[4]:=[ 1, 55, 109 ];
-gens[5]:=[ 1, 10, 19 ];
-gens[6]:=[ 1, 17, 47 ];
-gens[7]:=[ 1, 22, 76 ];
-gens[8]:=[ 1, 15, 41 ];
-gens[9]:=[ 1, 4, 7 ];
-gens[10]:=[ 1, 13, 102 ];
-gens[11]:=[ 1, 7, 62 ];
-gens[12]:=[ 1, 21, 59 ];
-gens[13]:=[ 1, 23, 65 ];
-gens[14]:=[ 1, 53, 88 ];
-gens[15]:=[ 1, 76, 408 ];
-gens[16]:=[ 1, 30, 86 ];
-gens[17]:=[ 1, 33, 95 ];
-gens[18]:=[ 1, 66, 130 ];
+	gens[1]:=[ 1, 8, 42 ];
+	gens[2]:=[ 1, 10, 14 ];
+	gens[3]:=[ 1, 9, 23 ];
+	gens[4]:=[ 1, 55, 109 ];
+	gens[5]:=[ 1, 10, 19 ];
+	gens[6]:=[ 1, 17, 47 ];
+	gens[7]:=[ 1, 22, 76 ];
+	gens[8]:=[ 1, 15, 41 ];
+	gens[9]:=[ 1, 4, 7 ];
+	gens[10]:=[ 1, 13, 102 ];
+	gens[11]:=[ 1, 7, 62 ];
+	gens[12]:=[ 1, 21, 59 ];
+	gens[13]:=[ 1, 23, 65 ];
+	gens[14]:=[ 1, 53, 88 ];
+	gens[15]:=[ 1, 76, 408 ];
+	gens[16]:=[ 1, 30, 86 ];
+	gens[17]:=[ 1, 33, 95 ];
+	gens[18]:=[ 1, 66, 130 ];
 
-mg:=[];
-mg[1]:=[ 8, 10 ];
-mg[2]:=[ 7, 17 ];
-mg[3]:=[ 12, 22 ];
-mg[4]:=[ 8, 28 ];
-mg[5]:=[ 18, 28 ];
-mg[6]:=[ 12, 33 ];
-mg[7]:=[ 8, 37 ];
-mg[8]:=[ 12, 40 ];
-mg[9]:=[ 9, 43 ];
-mg[10]:=[ 8, 46 ];
-mg[11]:=[ 12, 51 ];
-mg[12]:=[ 12, 58 ];
-mg[13]:=[ 12, 64 ];
-mg[14]:=[ 10, 73 ];
-mg[15]:=[ 8, 82 ];
-mg[16]:=[ 12, 85 ];
-mg[17]:=[ 12, 94 ];
-mg[18]:=[ 12, 97 ];
-
-for i in [1..Size(gens)] do
-	G:=Group(autGroups[i]);
-	n:= DegreeAction(G);
-	g:= Size(G)/12-n/2+1;
-	m:= 6-(6*(2-2*g))/n;
-	mg[i]:=[m,g];
-od;
+	mg:=[];
+	mg[1]:=[ 8, 10 ];
+	mg[2]:=[ 7, 17 ];
+	mg[3]:=[ 12, 22 ];
+	mg[4]:=[ 8, 28 ];
+	mg[5]:=[ 18, 28 ];
+	mg[6]:=[ 12, 33 ];
+	mg[7]:=[ 8, 37 ];
+	mg[8]:=[ 12, 40 ];
+	mg[9]:=[ 9, 43 ];
+	mg[10]:=[ 8, 46 ];
+	mg[11]:=[ 12, 51 ];
+	mg[12]:=[ 12, 58 ];
+	mg[13]:=[ 12, 64 ];
+	mg[14]:=[ 10, 73 ];
+	mg[15]:=[ 8, 82 ];
+	mg[16]:=[ 12, 85 ];
+	mg[17]:=[ 12, 94 ];
+	mg[18]:=[ 12, 97 ];
+	
 	i:=Position(mg,[m,g]);
 	if i <> fail then
 		G:=Group(autGroups[i]);
-		return SCFromGenerators(G,[gens[i]]);
+		c:=SCFromGenerators(G,[gens[i]]);
+		SetSCTopologicalType(c,Concatenation("(T^2)^#",String(g)));
+		SCRename(c,Concatenation("Chiral map {",String(m),",",String(g),"}"));
+		return c;
 	else
 		return fail;
 	fi;
