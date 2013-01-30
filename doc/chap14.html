@@ -67,7 +67,6 @@
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCInfoLevel(3);</span>
-true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=SCBdCrossPolytope(3);;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCReduceComplex(c); </span>
 #I  round 0, move: [ [ 4, 6 ], [ 1, 2 ] ]
@@ -83,7 +82,7 @@ Reduced complex, F: [ 4, 6, 4 ]
 #I  SCReduceComplexEx: computed locally minimal complex after 3 rounds.
 [ true, [SimplicialComplex
     
-     Properties known: Dim, FacetsEx, Name, Vertices.
+     Properties known: Dim, Facets, Name, SCVertices.
     
      Name="unnamed complex 3"
      Dim=2
@@ -111,7 +110,6 @@ Reduced complex, F: [ 4, 6, 4 ]
 
 <div class="example"><pre>
  gap&gt; SCMailClearPending();
- 
  </pre></div>
 
 <p><a id="X7D3826B887ACF1E5" name="X7D3826B887ACF1E5"></a></p>
@@ -245,11 +243,8 @@ Reduced complex, F: [ 4, 6, 4 ]
 
 <div class="example"><pre>
  gap&gt; SCRunTest();
- WARNING: gnome-keyring:: couldn't connect to: /tmp/keyring-c2bJN8/pkcs11: No such file or directory
- Line 1075 : 
- + simpcomp package test
- Line 1076 : 
- + GAP4stones: 53725
+ + test simpcomp package, version %%%VERSION%%%
+ + GAP4stones: 69988
  true
  </pre></div>
 

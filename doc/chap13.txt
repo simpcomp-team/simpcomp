@@ -35,11 +35,8 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("CP^2 (VT)");[128X[104X
-    [4X[28X [ [ 16, "CP^2 (VT)" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCHomalgBoundaryMatrices(c,0);[128X[104X
-    [4X[28X Error, Variable: 'SCHomalgBoundaryMatrices' must have a value[128X[104X
-    [4X[28X not in any function at line 7 of *stdin*[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -55,11 +52,8 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("CP^2 (VT)");[128X[104X
-    [4X[28X [ [ 16, "CP^2 (VT)" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCHomalgCoboundaryMatrices(c,0);[128X[104X
-    [4X[28X Error, Variable: 'SCHomalgCoboundaryMatrices' must have a value[128X[104X
-    [4X[28X not in any function at line 13 of *stdin*[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -79,11 +73,8 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCHomalgHomology(c,0);[128X[104X
-    [4X[28X Error, Variable: 'SCHomalgHomology' must have a value[128X[104X
-    [4X[28X not in any function at line 19 of *stdin*[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -109,11 +100,8 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCHomalgHomologyBasis(c,0);[128X[104X
-    [4X[28X Error, Variable: 'SCHomalgHomologyBasis' must have a value[128X[104X
-    [4X[28X not in any function at line 25 of *stdin*[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -133,11 +121,8 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCHomalgCohomology(c,0);[128X[104X
-    [4X[28X Error, Variable: 'SCHomalgCohomology' must have a value[128X[104X
-    [4X[28X not in any function at line 31 of *stdin*[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -163,11 +148,8 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCHomalgCohomologyBasis(c,0);[128X[104X
-    [4X[28X Error, Variable: 'SCHomalgCohomologyBasis' must have a value[128X[104X
-    [4X[28X not in any function at line 37 of *stdin*[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
