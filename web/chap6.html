@@ -1032,8 +1032,7 @@
  
  /SimplicialComplex]
  gap&gt; SCAutomorphismGroup(c);    
- #I  SCAutomorphismGroupInternal: can only compute automorphism group for closed complexes.
- fail
+ PrimitiveGroup(7,2) = D(2*7)
  gap&gt; bd:=SCBoundary(c);;
  gap&gt; SCAutomorphismGroup(bd);
  PrimitiveGroup(7,4) = AGL(1, 7)
@@ -1317,10 +1316,17 @@
    [ 9, 43 ], [ 10, 73 ], [ 12, 22 ], [ 12, 33 ], [ 12, 40 ], [ 12, 51 ], 
    [ 12, 58 ], [ 12, 64 ], [ 12, 85 ], [ 12, 94 ], [ 12, 97 ], [ 18, 28 ] ]
  gap&gt; c:=SCChiralMap(8,10);
- Error, SCChiralMap: function is not yet defined
- not in any function at line 49 of *stdin*
+ [SimplicialComplex
+ 
+  Properties known: Dim, FacetsEx, Name, TopologicalType, Vertices.
+ 
+  Name="Chiral map {8,10}"
+  Dim=2
+  TopologicalType="(T^2)^#10"
+ 
+ /SimplicialComplex]
  gap&gt; c.Homology;
- [ [ 0, [  ] ], [ 14, [  ] ], [ 1, [  ] ] ]
+ [ [ 0, [  ] ], [ 20, [  ] ], [ 1, [  ] ] ]
  </pre></div>
 
 <p><a id="X85BB97CB8240E59B" name="X85BB97CB8240E59B"></a></p>
@@ -1339,10 +1345,17 @@
    [ 9, 43 ], [ 10, 73 ], [ 12, 22 ], [ 12, 33 ], [ 12, 40 ], [ 12, 51 ], 
    [ 12, 58 ], [ 12, 64 ], [ 12, 85 ], [ 12, 94 ], [ 12, 97 ], [ 18, 28 ] ]
  gap&gt; c:=SCChiralMap(ll[18][1],ll[18][2]);
- Error, SCChiralMap: function is not yet defined
- not in any function at line 43 of *stdin*
+ [SimplicialComplex
+ 
+  Properties known: Dim, FacetsEx, Name, TopologicalType, Vertices.
+ 
+  Name="Chiral map {18,28}"
+  Dim=2
+  TopologicalType="(T^2)^#28"
+ 
+ /SimplicialComplex]
  gap&gt; SCHomology(c);
- [ [ 0, [  ] ], [ 14, [  ] ], [ 1, [  ] ] ]
+ [ [ 0, [  ] ], [ 56, [  ] ], [ 1, [  ] ] ]
  </pre></div>
 
 <p><a id="X7B362D25784E7217" name="X7B362D25784E7217"></a></p>
@@ -1432,10 +1445,11 @@
  gap&gt; c:=SCRegularMap(7,7,true);
  [SimplicialComplex
  
-  Properties known: Dim, FacetsEx, Name, Vertices.
+  Properties known: Dim, FacetsEx, Name, TopologicalType, Vertices.
  
-  Name="complex from generators under unknown group"
+  Name="Orientable regular map {7,7}"
   Dim=2
+  TopologicalType="(T^2)^#7"
  
  /SimplicialComplex]
  gap&gt; g:=SCAutomorphismGroup(c);
@@ -1463,10 +1477,11 @@
  gap&gt; c:=SCRegularMap(ll[5][1],ll[5][2],ll[5][3]);
  [SimplicialComplex
  
-  Properties known: Dim, FacetsEx, Name, Vertices.
+  Properties known: Dim, FacetsEx, Name, TopologicalType, Vertices.
  
-  Name="complex from generators under unknown group"
+  Name="Non-orientable regular map {7,15}"
   Dim=2
+  TopologicalType="(RP^2)^#15"
  
  /SimplicialComplex]
  gap&gt; SCHomology(c);
@@ -1953,10 +1968,10 @@
           Properties known: AutomorphismGroup, AutomorphismGroupSize, 
                             AutomorphismGroupStructure, 
                             AutomorphismGroupTransitivity, BoundaryEx, Dim, 
-                            FVector, FacetsEx, GeneratorsEx, HasBoundary, 
-                            Homology, IsEmpty, IsManifold, IsPseudoManifold, 
-                            IsStronglyConnected, Name, NumFaces[], SkelExs[], 
-                            Vertices.
+                            DualGraph, FVector, FacetsEx, GeneratorsEx, 
+                            HasBoundary, Homology, IsConnected, IsEmpty, 
+                            IsManifold, IsPseudoManifold, Name, NumFaces[], 
+                            SkelExs[], Vertices.
          
           Name="Complex 1 of PSL(2, 7) (multiple orbits)"
           Dim=3
@@ -1966,8 +1981,8 @@
           FVector=[ 8, 28, 56, 28 ]
           HasBoundary=false
           Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 8, [ ] ], [ 1, [ ] ] ]
+          IsConnected=true
           IsPseudoManifold=true
-          IsStronglyConnected=true
          
          /SimplicialComplex] ], [  ] ]
  </pre></div>
@@ -2240,7 +2255,7 @@
  
   Properties known: Dim, FacetsEx, Name, Vertices.
  
-  Name="unnamed complex 50"
+  Name="unnamed complex 52"
   Dim=3
  
  /SimplicialComplex]
@@ -2249,7 +2264,7 @@
  
   Properties known: Dim, FacetsEx, Name, Vertices.
  
-  Name="Bd(unnamed complex 50)"
+  Name="Bd(unnamed complex 52)"
   Dim=2
  
  /SimplicialComplex]
@@ -2259,7 +2274,7 @@
   Properties known: BoundaryEx, Dim, FacetsEx, HasBoundary, Name, 
                     SkelExs[], Vertices.
  
-  Name="unnamed complex 50"
+  Name="unnamed complex 52"
   Dim=3
   HasBoundary=true
  

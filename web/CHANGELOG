@@ -1,3 +1,4 @@
+
 22/01/2013 - Version 1.6.0: Major update.
 - Added functions SCHeegaardSplitting, SCHeegaardSplittingSmallGenus and
   SCIsHeegaardSplitting to handle Heegaard splittings.
