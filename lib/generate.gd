@@ -58,6 +58,7 @@
 ## <#Include Label="SCSeriesLensSpace"/>
 ## <#Include Label="SCSeriesPrimeTorus"/>
 ## <#Include Label="SCSeriesSeifertFibredSpace"/>
+## <#Include Label="SCSeriesS2xS2"/>
 ##
 ## </Section >
 ## <Section Label="sec:RegularAndChiralMaps">
@@ -133,3 +134,4 @@ DeclareGlobalFunction("SCSeriesSeifertFibredSpace");
 DeclareGlobalFunction("SCSimplex");
 DeclareGlobalFunction("SCSeriesTorus");
 DeclareGlobalFunction("SCSurface");
+DeclareGlobalFunction("SCSeriesS2xS2");

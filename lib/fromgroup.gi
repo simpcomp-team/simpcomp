@@ -11,10 +11,10 @@
 ################################################################################
 ##<#GAPDoc Label="SCsFromGroupExt">
 ## <ManSection>
-## <Func Name="SCsFromGroupExt" Arg="G,n,d,objectType,cache,removeDoubleEntries"/>
+## <Func Name="SCsFromGroupExt" Arg="G,n,d,objectType,cache,removeDoubleEntries,outfile,maxLinkSize,subset"/>
 ## <Returns>a list of simplicial complexes of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Computes all combinatorial <Arg>d</Arg>-pseudomanifolds, <M>d=2</M> / all  strongly connected combinatorial <Arg>d</Arg>-pseudomanifolds, <M>d \geq 3</M>, as a union of orbits of the group action of <Arg>G</Arg> on <C>(d+1)</C>-tuples on the set of <Arg>n</Arg> vertices, see <Cite Key="Lutz03TrigMnfFewVertVertTrans" />. The integer argument <Arg>objectType</Arg> specifies, whether complexes exceeding the maximal size of each vertex link for combinatorial manifolds are sorted out (<C>objectType = 0</C>) or not (<C>objectType = 1</C>, in this case some combinatorial pseudomanifolds won't be found, but no combinatorial manifold will be sorted out). The integer argument <Arg>cache</Arg> specifies if the orbits are held in memory during the computation, a value of <C>0</C> means that the orbits are discarded, trading speed for memory, any other value means that they are kept, trading memory for speed. The boolean argument <Arg>removeDoubleEntries</Arg> specifies whether the results are checked for combinatorial isomorphism, preventing isomorphic entries.
+## Computes all combinatorial <Arg>d</Arg>-pseudomanifolds, <M>d=2</M> / all  strongly connected combinatorial <Arg>d</Arg>-pseudomanifolds, <M>d \geq 3</M>, as a union of orbits of the group action of <Arg>G</Arg> on <C>(d+1)</C>-tuples on the set of <Arg>n</Arg> vertices, see <Cite Key="Lutz03TrigMnfFewVertVertTrans" />. The integer argument <Arg>objectType</Arg> specifies, whether complexes exceeding the maximal size of each vertex link for combinatorial manifolds are sorted out (<C>objectType = 0</C>) or not (<C>objectType = 1</C>, in this case some combinatorial pseudomanifolds won't be found, but no combinatorial manifold will be sorted out). The integer argument <Arg>cache</Arg> specifies if the orbits are held in memory during the computation, a value of <C>0</C> means that the orbits are discarded, trading speed for memory, any other value means that they are kept, trading memory for speed. The boolean argument <Arg>removeDoubleEntries</Arg> specifies whether the results are checked for combinatorial isomorphism, preventing isomorphic entries. The argument <Arg>outfile</Arg> specifies an output file containing all complexes found by the algorithm, if <Arg>outfile</Arg> is anything else than a string, not output file is generated. The argument <Arg>maxLinkSize</Arg> determines a maximal link size of any output complex. If <Arg>maxLinkSize</Arg><M>=0</M> or if <Arg>maxLinkSize</Arg> is anything else than an integer the argument is ignored. The argument <Arg>subset</Arg> specifies a set of orbits (given by a list of indices of <C>repHigh</C>) which have to be contained in any output complex. If <Arg>subset</Arg> is anything else than a subset of <C>matrixAllowedRows</C> the argument is ignored.
 ## <Example>
 ## gap> G:=PrimitiveGroup(8,5);
 ## gap> Size(G);
@@ -32,7 +32,7 @@
 ##<#/GAPDoc>
 ################################################################################
 InstallGlobalFunction(SCsFromGroupExt,
-	function(G,n,d,objectType,cache,removeDoubleEntries)
+	function(G,n,d,objectType,cache,removeDoubleEntries,outfile,maxLinkSize,subset)
 
 	local
 		forbiddenHigh,forbiddenLow,stab,repHighForbidden,repHigh,repHighTmp,repLow,
@@ -42,7 +42,7 @@ InstallGlobalFunction(SCsFromGroupExt,
 		count,maxIdxLow,maxIdxHigh,maxIdxLowReal,maxIdxHighReal,simplex,
 		maxSimplexPos,simplexPos,add,simplexIdx,rl,ru,rlIdx,rowIdx,singleResults,
 		element,j,i,o,name,column,s,vectorsum,curComb,stop,stopSize,foundComplex,
-		colPos,curPos,lastRow,
+		colPos,curPos,lastRow,srctr,subsetValid,
 		
 		# functions
 		TestEulerCharacteristic,
@@ -57,19 +57,29 @@ InstallGlobalFunction(SCsFromGroupExt,
 		updateRowVector;
 
   candidateCount:=0;
-    
+  
+  if not IsString(outfile) then
+	outfile:=false;
+  else
+	tmp:=SmallGeneratingSet(G);
+	PrintTo(outfile,"G:=Group(\n",SmallGeneratingSet(G),"\n);\nc:=[];\n\n");
+  fi;
   #upper boundaries for link length
-  if objectType=0 then #manifolds
-    if IsInt((d-1)/2) = true then
-      max:=Binomial((n-1)-Int(d/2)-1,Int(d/2))+Binomial((n-1)-1-(d-1)/2,(d-1)/2);
-    else
-      max:=Binomial((n-1)-d/2,d/2)+Binomial((n-1)-1-Int((d-1)/2)-1,Int((d-1)/2));
-    fi;
-  else #pseudomanifolds
-    if d = 4 then
-      max:=Binomial((n-1)-d/2,d/2)+Binomial((n-1)-1-Int((d-1)/2)-1,Int((d-1)/2));
-    else
-      max:=Binomial(n-1,d);
+  if IsInt(maxLinkSize) and maxLinkSize > 0 then
+	max:=maxLinkSize;
+  else 
+    if objectType=0 then #manifolds
+      if IsInt((d-1)/2) = true then
+        max:=Binomial((n-1)-Int(d/2)-1,Int(d/2))+Binomial((n-1)-1-(d-1)/2,(d-1)/2);
+      else
+        max:=Binomial((n-1)-d/2,d/2)+Binomial((n-1)-1-Int((d-1)/2)-1,Int((d-1)/2));
+      fi;
+    else #pseudomanifolds
+      if d = 4 then
+        max:=Binomial((n-1)-d/2,d/2)+Binomial((n-1)-1-Int((d-1)/2)-1,Int((d-1)/2));
+      else
+        max:=Binomial(n-1,d);
+      fi;
     fi;
   fi;
   
@@ -139,7 +149,7 @@ InstallGlobalFunction(SCsFromGroupExt,
   
   Faces:=function(complex,k)
   
-    local dim,all;
+    local dim,all,i;
     
     dim:=Size(complex[1])-1;
   
@@ -169,7 +179,7 @@ InstallGlobalFunction(SCsFromGroupExt,
   end;
   
   EulerCharacteristic:=function(complex)
-    local f,chi;
+    local f,chi,i;
     
     f:=FVector(complex);
     chi:=0;
@@ -186,7 +196,7 @@ InstallGlobalFunction(SCsFromGroupExt,
 			verticesComponent, innerVertices, treatedVertices, curv;
     
 		vertices:=Union(complex);
-    innerVertices:=[vertices[1]];
+		innerVertices:=[vertices[1]];
 		treatedVertices:=[];
 		verticesComponent:=[];
 		
@@ -227,7 +237,7 @@ InstallGlobalFunction(SCsFromGroupExt,
   end;
   
   TestLowerLinks := function(j,complex)
-    local d, lks, lk;
+    local d, lks, lk, i;
     # objectType   = 0 -> combinatorial manifold, 
     #              = 1 -> combinatorial pseudomanifold
     d:=Size(complex[1])-1;
@@ -251,7 +261,6 @@ InstallGlobalFunction(SCsFromGroupExt,
 	
   examineComplex := function(complex,link,complex_collection,objectType,removeDoubleEntries)
     local k, j, d, isconn;
-
     d:=Size(complex[1])-1;
 
 		if not IsConnected(complex) then 
@@ -283,24 +292,23 @@ InstallGlobalFunction(SCsFromGroupExt,
       fi;
       Info(InfoSimpcomp,2,"ok.");
     od;
-		
-		if removeDoubleEntries and d>2 then
-			Info(InfoSimpcomp,2,"Testing if complex is equivalent to previous one...");
-			if complex_collection <> [] then
-				for j in [1..Size(complex_collection)] do
-					if(SCIsIsomorphic(SC(complex),complex_collection[j])) then
-					Info(InfoSimpcomp,2,"yes.");
-						return false;
-						break;
-					fi;
-				od;
-			else
-				Info(InfoSimpcomp,2,"first match, ok.");
-				return true;
+    if removeDoubleEntries and d>2 then
+	Info(InfoSimpcomp,2,"Testing if complex is equivalent to previous one...");
+	if complex_collection <> [] then
+		for j in [1..Size(complex_collection)] do
+			if(SCIsIsomorphic(SC(complex),complex_collection[j])) then
+			Info(InfoSimpcomp,2,"yes.");
+				return false;
+				break;
 			fi;
-			Info(InfoSimpcomp,2,"no.");
-		fi;
+		od;
+	else
+		Info(InfoSimpcomp,2,"first match, ok.");
 		return true;
+	fi;
+	Info(InfoSimpcomp,2,"no.");
+    fi;
+    return true;
   end;
   
   Info(InfoSimpcomp,2,"Calculating for group ",G);
@@ -618,23 +626,40 @@ InstallGlobalFunction(SCsFromGroupExt,
       Add(singleResults,rowIdx);
     fi;
   od;
-  
   Info(InfoSimpcomp,2,"Got ",Length(singleResults)," single results.");
-  for i in [1..Length(singleResults)] do
-    Info(InfoSimpcomp,2,"Single result ",i,"/",Length(singleResults)," :  ",matrix[singleResults[i]],"(",singleResults[i],")");
-    for j in matrix[singleResults[i]] do
-       allCount[2][j[1]]:=allCount[2][j[1]]-1;
-    od;
-    
-    #variables for storing complex & link
-    complex:=[];
-    link:=[];
-    
+
+	# test subset
+	subsetValid:=true;
+	srctr:=0;
+	if not IsList(subset) or subset = [] then
+		subsetValid := false;
+	else
+		SCIntFunc.DeepSortList(subset);
+		subset:=Set(subset);
+		for i in [1..Size(subset)] do
+			pos:=Position(repHigh,subset[i]);
+			if pos = fail or not pos in matrixAllowedRows then
+				subsetValid:=false;
+				break;
+			fi;
+			if pos in singleResults then
+				srctr:=srctr+1;
+			fi;
+		od;
+	fi;
+	if srctr > 1 then
+		return [];
+	fi;
+	if subsetValid then
+		subset:=List(subset,x->Position(repHigh,x));
+	fi;
+  
+  if Size(subset) = 1 and srctr = 1 then
     #generate complex
-    complex:=Orbit(G,repHigh[singleResults[i]],OnSets);
-		tmp:=[[repHigh[singleResults[i]],Size(complex)]];
+    complex:=Orbit(G,repHigh[subset[1]],OnSets);
+    tmp:=[[repHigh[subset[1]],Size(complex)]];
     link:=Filtered(complex,x->n in x);
-		link:=List(link,x->Difference(x,[n]));
+    link:=List(link,x->Difference(x,[n]));
     
     if(examineComplex(complex,link,complex_collection,objectType,removeDoubleEntries)) then
       candidateCount:=candidateCount+1;
@@ -644,9 +669,42 @@ InstallGlobalFunction(SCsFromGroupExt,
 	    fi;
       name:=Concatenation("Complex ",String(Size(complex_collection)+1)," of ",Name(G)," (single orbit)");
       SCRename(complex,name);
+      if outfile <> false then
+        AppendTo(outfile,"Add(c,SCFromGenerators(G,",[repHigh[subset[1]]],"));\n");
+      fi;
       Add(complex_collection,complex);
     fi;
-  od;
+    return complex_collection;
+  elif not subsetValid then
+    for i in [1..Length(singleResults)] do
+      Info(InfoSimpcomp,2,"Single result ",i,"/",Length(singleResults)," :  ",matrix[singleResults[i]],"(",singleResults[i],")");
+      for j in matrix[singleResults[i]] do
+         allCount[2][j[1]]:=allCount[2][j[1]]-1;
+      od;
+      
+      #variables for storing complex & link
+      complex:=[];
+      link:=[];
+      #generate complex
+      complex:=Orbit(G,repHigh[singleResults[i]],OnSets);
+      tmp:=[[repHigh[singleResults[i]],Size(complex)]];
+      link:=Filtered(complex,x->n in x);
+      link:=List(link,x->Difference(x,[n]));
+      if(examineComplex(complex,link,complex_collection,objectType,removeDoubleEntries)) then
+        candidateCount:=candidateCount+1;
+        complex:=SCFromFacets(complex);
+        if not HasName(G) then
+		    SetName(G,StructureDescription(G));
+	fi;
+        name:=Concatenation("Complex ",String(Size(complex_collection)+1)," of ",Name(G)," (single orbit)");
+        SCRename(complex,name);
+        if outfile <> false then
+          AppendTo(outfile,"Add(c,SCFromGenerators(G,",[repHigh[singleResults[i]]],"));\n");
+        fi;
+        Add(complex_collection,complex);
+      fi;
+    od;
+  fi;
     
   SubtractSet(matrixAllowedRows,singleResults);
   matrixRows:=Length(matrixAllowedRows);
@@ -688,15 +746,57 @@ InstallGlobalFunction(SCsFromGroupExt,
 	# vectorsum[repLowCount+1] = number of 1-entries in combination
 	# vectorsum[repLowCount+2] = size of complex (facets)
 	vectorsum:=ListWithIdenticalEntries(repLowCount+2,0);
-	curComb:=[matrixAllowedRows[1]];
-	i:=1;
-	while (updateRowVector(true,matrixAllowedRows[i])=false) do
-		i:=i+1;
-	od;
 
-	colPos:=matrix[matrixAllowedRows[i]][1][1];
-	curPos:=Position(column[colPos],matrixAllowedRows[i])+1;
 
+	##########################
+	### SETUP BACKTRACKING ###
+	##########################
+	
+	if subsetValid then
+		# case: "subset" is valid
+		curComb:=[];
+		for i in subset do
+			Add(curComb,i);
+			if (updateRowVector(true,i)=false) then
+				Info(InfoSimpcomp,2,"argument subset valid but not part of a candidate complex.");
+				return [];
+			fi;
+		od;
+		if not matrixAllowedRows[1] in subset then
+			i:=1;
+			while (updateRowVector(true,matrixAllowedRows[i])=false) do
+				i:=i+1;
+				if i in subset then
+					break;
+				fi;
+			od;
+			if not i in subset then
+				Add(curComb,matrixAllowedRows[i]);
+				colPos:=matrix[matrixAllowedRows[i]][1][1];
+				i:=Position(column[colPos],matrixAllowedRows[i])+1;
+				while i <= Size(column[colPos]) and column[colPos][i] in subset do
+					i:=i+1;
+				od;
+				curPos:=i;
+			else
+				colPos:=matrix[subset[1]][1][1];
+				curPos:=Position(column[colPos],subset[1])+1;
+			fi;
+		else
+			colPos:=matrix[subset[1]][1][1];
+			curPos:=Position(column[colPos],subset[1])+1;
+		fi;		
+	else
+		# case: "subset" is invalid or empty
+		i:=1;
+		while (updateRowVector(true,matrixAllowedRows[i])=false) do
+			i:=i+1;
+		od;
+		curComb:=[matrixAllowedRows[i]];
+		colPos:=matrix[matrixAllowedRows[i]][1][1];
+		curPos:=Position(column[colPos],matrixAllowedRows[i])+1;
+	fi;
+	foundComplex:=0;
 	# column: column[i] contains all row numbers x with row[x][i] <> 0 and row[x][j] = 0 for all j < i
 	# colPos: position of first non zero entry of current row
 	# curPos: next row where first non zero entry is at the same position as in current row
@@ -707,8 +807,20 @@ InstallGlobalFunction(SCsFromGroupExt,
 			if curPos > Length(column[colPos]) then
 				if vectorsum[colPos] in [0,2] then
 					colPos:=colPos+1;
-					curPos:=1;
+					if subsetValid then
+						i:=1;
+						while colPos <= Size(column) and i <= Size(column[colPos]) and column[colPos][i] in subset do
+							i:=i+1;
+						od;
+						curPos:=i;
+					else
+						curPos:=1;
+					fi;
 				else
+					if subsetValid and Size(curComb) = Size(subset) then
+						stop:=1;
+						break;
+					fi;
 					lastRow:=curComb[Length(curComb)];
 					updateRowVector(false,lastRow);
 					Unbind(curComb[Length(curComb)]);
@@ -716,18 +828,44 @@ InstallGlobalFunction(SCsFromGroupExt,
 						stop:=1;
 					fi;
 					colPos:=matrix[lastRow][1][1];
-					curPos:=Position(column[colPos],lastRow)+1;
+					if subsetValid then
+						i:=Position(column[colPos],lastRow)+1;
+						while i <= Size(column[colPos]) and column[colPos][i] in subset do
+							i:=i+1;
+						od;
+						curPos:=i;
+					else
+						curPos:=Position(column[colPos],lastRow)+1;
+					fi;
 				fi;
 				continue;
 			fi;
 			# column colPos is already mapped -> next step
 			if vectorsum[colPos] = 2 then
-				 colPos:=colPos+1;
-				 curPos:=1;
-				 # if this is the last row where the first non zero entry is at the same column as colPos and orbit cannot be closed anymore -> next step
+				colPos:=colPos+1;
+				if subsetValid then
+					i:=1;
+					while colPos <= Size(column) and i <= Size(column[colPos]) and column[colPos][i] in subset do
+						i:=i+1;
+					od;
+					curPos:=i;
+				else
+					curPos:=1;
+				fi;
+			# if this is the last row where the first non zero entry is at the same column as colPos and orbit cannot be closed anymore -> next step
 			elif vectorsum[colPos] = 0 and matrix[column[colPos][curPos]][1][2] = 1 and curPos = Length(column[colPos]) then
-				 colPos:=colPos+1;
-				 curPos:=1;
+				colPos:=colPos+1;
+				if subsetValid then
+					i:=1;
+					while colPos <= Size(column) and i <= Size(column[colPos]) and column[colPos][i] in subset do
+						i:=i+1;
+					od;
+					curPos:=i;
+				else
+					curPos:=1;
+				fi;
+			elif subsetValid and column[colPos][curPos] in subset then
+				curPos:=curPos+1;
 			else 
 				foundComplex:=1;
 				stopSize:=0;
@@ -746,9 +884,12 @@ InstallGlobalFunction(SCsFromGroupExt,
 							fi;
 							Info(InfoSimpcomp,2,"Found candidate.");
 							candidateCount:=candidateCount+1;
-							complex:=SC(complex);
+							complex:=SCFromFacets(complex);
 							name:=Concatenation("Complex ",String(Size(complex_collection)+1)," of ",Name(G)," (multiple orbits)");
 							SCRename(complex,name);
+							if outfile <> false then
+								AppendTo(outfile,"Add(c,SCFromGenerators(G,",repHigh{curComb},"));\n");
+							fi;
 							Add(complex_collection,complex);
 						fi;
 					else
@@ -758,17 +899,38 @@ InstallGlobalFunction(SCsFromGroupExt,
 					foundComplex:=0;
 					#updateRowVector(false,column[colPos][curPos]);	
 				fi;
-				curPos:=curPos+1;
+				if subsetValid then
+					curPos:=curPos+1;
+					while curPos <= Length(column[colPos]) and column[colPos][curPos] in subset do
+						curPos:=curPos+1;
+					od;
+				else
+					curPos:=curPos+1;
+				fi;
 			fi;
 		od;
+		if stop = 1 then break; fi; 
 		if curComb = [] and colPos > repLowCount then
 			stop:=1;
+			break;
 		else
+			if subsetValid and Size(curComb) = Size(subset) then
+				stop:=1;
+				break;
+			fi;
 			lastRow:=curComb[Length(curComb)];
 			updateRowVector(false,lastRow);
 			Unbind(curComb[Length(curComb)]);
 			colPos:=matrix[lastRow][1][1];
-			curPos:=Position(column[colPos],lastRow)+1;
+			if subsetValid then
+				i:=Position(column[colPos],lastRow)+1;
+				while i <= Size(column[colPos]) and column[colPos][i] in subset do
+					i:=i+1;
+				od;
+				curPos:=i;
+			else
+				curPos:=Position(column[colPos],lastRow)+1;
+			fi;
 		fi;
 	od; 
 
@@ -885,7 +1047,7 @@ InstallGlobalFunction(SCsFromGroupByTransitivity,
 				retListTmp[3]:=[];
 			fi;
 			for G in Gcollection[verts] do
-				tmp:=SCsFromGroupExt(G,verts,dim,1,0,removeDoubleEntries);
+				tmp:=SCsFromGroupExt(G,verts,dim,1,0,removeDoubleEntries,false,0,[]);
 				sum:=sum+1;
 				Info(InfoSimpcomp,1,"SCsFromGroupByTransitivity: ",sum," / ",Size(Gcollection[verts])," groups calculated, found ",Size(tmp)," complexes.");
 				if computeAutGroup then
