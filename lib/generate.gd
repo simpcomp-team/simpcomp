@@ -23,10 +23,11 @@
 ##
 ## </Section>
 ##
+## <#Include Label="isosig"/>
+##
 ## <Section Label="sec:Standard">
 ## <Heading>Generating some standard triangulations</Heading>
 ##
-## <#Include Label="SCBdCrossPolytope"/>
 ## <#Include Label="SCBdCyclicPolytope"/>
 ## <#Include Label="SCBdSimplex"/>
 ## <#Include Label="SCEmpty"/>

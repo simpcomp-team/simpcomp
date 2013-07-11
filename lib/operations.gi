@@ -1968,6 +1968,10 @@ function(complex1, complex2)
 	elif SCIsEmpty(complex1) or SCIsEmpty(complex2) then
 		return false;
 	fi;
+
+	if HasSCExportIsoSig(complex1) and HasSCExportIsoSig(complex2) then
+		return SCExportIsoSig(complex1) = SCExportIsoSig(complex2); 
+	fi;
 	
 	sc1:=SCIsStronglyConnected(complex1);
 	sc2:=SCIsStronglyConnected(complex2);
