@@ -15,7 +15,7 @@ Subtitle := "A GAP toolbox for simplicial complexes",
 Version := "%%%VERSION%%%",
 Date := "%%%DATE%%%",
 
-ArchiveURL :=Concatenation( "http://www.igt.uni-stuttgart.de/LstDiffgeo/simpcomp/simpcomp-",String(~.Version)),
+ArchiveURL :=Concatenation( "https://code.google.com/p/simpcomp/",String(~.Version)),
 ArchiveFormats := ".tar.gz",
 
 Persons := [
@@ -25,26 +25,26 @@ Persons := [
       IsAuthor      := true,
       IsMaintainer  := true,
       Email         := "effenberger@mathematik.uni-stuttgart.de",
-      WWWHome       := "http://www.igt.uni-stuttgart.de/LstDiffgeo/Effenberger",
+      WWWHome       := "http://personal-homepages.mis.mpg.de/effen/",
       PostalAddress := Concatenation( [
-            "Institut fuer Geometrie und Topologie\n",
-            "Universitaet Stuttgart\n",
-            "Pfaffenwaldring 57" ] ),
-      Place         := "70550 Stuttgart",
-      Institution   := "University of Stuttgart"),
+            "Max Planck Institute for\n",
+            "Mathematics in the Sciences\n",
+            "Inselstr. 22" ] ),
+      Place         := "04103 Leipzig",
+      Institution   := "Max Planck Institute for Mathematics in the Sciences"),
   rec(
       LastName      := "Spreer",
       FirstNames    := "Jonathan",
       IsAuthor      := true,
       IsMaintainer  := true,
       Email         := "spreer@mathematik.uni-stuttgart.de",
-      WWWHome       := "http://www.igt.uni-stuttgart.de/LstDiffgeo/Spreer",
+      WWWHome       := "http://www.tacet.de/Jonathan",
       PostalAddress := Concatenation( [
-            "Institut fuer Geometrie und Topologie\n",
-            "Universitaet Stuttgart\n",
-            "Pfaffenwaldring 57" ] ),
-      Place         := "70550 Stuttgart",
-      Institution   := "University of Stuttgart")
+            "Computational Geometry and Topology Group\n",
+            "School of Mathematics and Physics\n",
+            "The University of Queensland" ] ),
+      Place         := "St. Lucia, Queensland, 4072",
+      Institution   := "The University of Queensland")
     ],
 
 ##  Status information. Currently the following cases are recognized:
@@ -67,8 +67,11 @@ Status := "deposited",
 #CommunicatedBy := "",
 #AcceptDate := "",
 
+#README_URL := "https://code.google.com/p/simpcomp/source/browse/README",
+#PackageInfoURL := "https://code.google.com/p/simpcomp/source/browse/PackageInfo.g",
 README_URL := "http://www.igt.uni-stuttgart.de/LstDiffgeo/simpcomp/README",
 PackageInfoURL := "http://www.igt.uni-stuttgart.de/LstDiffgeo/simpcomp/PackageInfo.g",
+
 
 AbstractHTML :=
   "<span class=\"pkgname\">simpcomp</span> is a <span class=\"pkgname\">GAP</span> package for working with simplicial complexes. It allows the computation of many properties of simplicial complexes (such as the f-, g- and h-vectors, the face lattice, the automorphism group, (co-)homology with explicit basis computation, intersection form, etc.) and provides the user with functions to compute new complexes from old (simplex links and stars, connected sums, cartesian products, handle additions, bistellar flips, etc.). Furthermore, it comes with an extensive library of known triangulations of manifolds and provides the user with the possibility to create own complex libraries.<br /> <span class=\"pkgname\">simpcomp</span> caches computed properties of a simplicial complex, thus avoiding unnecessary computations, internally handles the vertex labeling of the complexes and insures the consistency of a simplicial complex throughout all operations.<br /> <span class=\"pkgname\">simpcomp</span> relies on the <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">homology</span> for its homology computation, but also provides the user with an own (co-)homology algorithm in case the packacke <span class=\"pkgname\">homology</span> is not available. For automorphism group computation the <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">GRAPE</span> is used, which in turn uses the program <tt>nauty</tt> by Brendan McKay. An internal automorphism group calculation algorithm in used as fallback if the <span class=\"pkgname\">GRAPE</span> package is not available.",

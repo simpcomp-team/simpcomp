@@ -1108,6 +1108,72 @@ end);
 
 
 ################################################################################
+##<#GAPDoc Label="SCExportRecognizer">
+## <ManSection>
+## <Func Name="SCExportPolymake" Arg="complex, filename"/>
+## <Returns><K>true</K> upon success, <K>fail</K> otherwise.</Returns>
+## <Description>
+## Exports the gluings of the tetrahedra of a given combinatorial <M>3</M>-manifold <Arg>complex</Arg> in a format compatible with Matveev's <M>3</M>-manifold software <C>Recognizer</C>.
+## <Example>
+## gap> c:=SCBdCrossPolytope(4);;
+## gap> SCExportRecognizer(c,"/tmp/bdbeta4.mv");
+## true
+## </Example>
+## </Description>
+## </ManSection>
+##<#/GAPDoc>
+################################################################################
+InstallGlobalFunction(SCExportRecognizer,
+function(complex,filename)
+	local buf,i,dim,pm,facets,done,j,k,l,elm,trig,f3;
+
+	dim := SCDim(complex);
+	pm := SCIsPseudoManifold(complex);
+	if dim <> 3 or pm <> true then
+		Info(InfoSimpcomp,1,"SCExportRecognizer: input must be a 3-dimensional weak pseudomanifold.");
+		return fail;
+	fi;
+
+	buf:=["triangulation\n"];
+	facets := SCFacetsEx(complex);
+	if facets = fail then
+		return fail;
+	fi;
+	f3 := Size(facets);
+	done := List([1..f3],x->[false,false,false,false]);
+	for i in [1..f3] do
+		for j in [4,3,2,1] do
+			if done[i][j] = true then continue; fi;
+			elm := [1..4];
+			Remove(elm,j);
+			Append(buf,["t",String(i),"(",String(elm[1]),",",String(elm[2]),",",String(elm[3]),") - "]);
+			trig := facets[i]{elm};
+			for k in [i+1..f3] do
+				if IsSubset(facets[k],trig) then
+					elm := [Position(facets[k],trig[1]),Position(facets[k],trig[2]),Position(facets[k],trig[3])];
+					Append(buf,["t",String(k),"(",String(elm[1]),",",String(elm[2]),",",String(elm[3]),"),\n"]);
+					for l in [1..4] do
+						if not l in elm then
+							done[k][l] := true;
+							break;
+						fi;
+					od;
+					break;
+				fi;
+			od; 
+		od;
+	od;
+	Add(buf,"end\n");
+	if(FileString(filename,String(Concatenation(buf)))=fail) then
+		Info(InfoSimpcomp,1,"SCExportRecognizer: file \"",filename,"\" not writeable!");
+		return fail;
+	else
+		return true;
+	fi;
+
+end);
+
+################################################################################
 ##<#GAPDoc Label="SCExportJavaView">
 ## <ManSection>
 ## <Func Name="SCExportJavaView" Arg="complex, file, coords"/>
