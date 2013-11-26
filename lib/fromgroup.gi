@@ -19,13 +19,13 @@
 ## gap> G:=PrimitiveGroup(8,5);
 ## gap> Size(G);
 ## gap> Transitivity(G);
-## gap> list:=SCsFromGroupExt(G,8,3,1,0,true);
+## gap> list:=SCsFromGroupExt(G,8,3,1,0,true,false,0,[]);
 ## gap> SCNeighborliness(list[1]); 
 ## gap> list[1].F;
 ## gap> list[1].IsManifold; 
 ## gap> SCLibDetermineTopologicalType(SCLink(list[1],1));
 ## gap> # there are no 3-neighborly 3-manifolds with 8 vertices
-## gap> list:=SCsFromGroupExt(PrimitiveGroup(8,5),8,3,0,0,true); 
+## gap> list:=SCsFromGroupExt(PrimitiveGroup(8,5),8,3,0,0,true,false,0,[]); 
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -42,7 +42,7 @@ InstallGlobalFunction(SCsFromGroupExt,
 		count,maxIdxLow,maxIdxHigh,maxIdxLowReal,maxIdxHighReal,simplex,
 		maxSimplexPos,simplexPos,add,simplexIdx,rl,ru,rlIdx,rowIdx,singleResults,
 		element,j,i,o,name,column,s,vectorsum,curComb,stop,stopSize,foundComplex,
-		colPos,curPos,lastRow,srctr,subsetValid,
+		colPos,curPos,lastRow,srctr,subsetValid,isoSig,isoSigs,
 		
 		# functions
 		TestEulerCharacteristic,
@@ -259,7 +259,7 @@ InstallGlobalFunction(SCsFromGroupExt,
     return true;
   end;
 	
-  examineComplex := function(complex,link,complex_collection,objectType,removeDoubleEntries)
+  examineComplex := function(complex,link,complex_collection,objectType)
     local k, j, d, isconn;
     d:=Size(complex[1])-1;
 
@@ -292,22 +292,7 @@ InstallGlobalFunction(SCsFromGroupExt,
       fi;
       Info(InfoSimpcomp,2,"ok.");
     od;
-    if removeDoubleEntries and d>2 then
-	Info(InfoSimpcomp,2,"Testing if complex is equivalent to previous one...");
-	if complex_collection <> [] then
-		for j in [1..Size(complex_collection)] do
-			if(SCIsIsomorphic(SC(complex),complex_collection[j])) then
-			Info(InfoSimpcomp,2,"yes.");
-				return false;
-				break;
-			fi;
-		od;
-	else
-		Info(InfoSimpcomp,2,"first match, ok.");
-		return true;
-	fi;
-	Info(InfoSimpcomp,2,"no.");
-    fi;
+
     return true;
   end;
   
@@ -357,6 +342,10 @@ InstallGlobalFunction(SCsFromGroupExt,
   
   count:=0;
   
+  if removeDoubleEntries then
+	isoSigs:=[];
+  fi;
+
   ###############################################################################
   #MAIN
   ###############################################################################
@@ -661,20 +650,39 @@ InstallGlobalFunction(SCsFromGroupExt,
     link:=Filtered(complex,x->n in x);
     link:=List(link,x->Difference(x,[n]));
     
-    if(examineComplex(complex,link,complex_collection,objectType,removeDoubleEntries)) then
-      candidateCount:=candidateCount+1;
+    if(examineComplex(complex,link,complex_collection,objectType)) then
       complex:=SCFromFacets(complex);
-      if not HasName(G) then
-		    SetName(G,StructureDescription(G));
-	    fi;
-      name:=Concatenation("Complex ",String(Size(complex_collection)+1)," of ",Name(G)," (single orbit)");
-      SCRename(complex,name);
-      if outfile <> false then
-        AppendTo(outfile,"Add(c,SCFromGenerators(G,",[repHigh[subset[1]]],"));\n");
+      if removeDoubleEntries and d>2 then
+	Info(InfoSimpcomp,2,"Testing if complex is equivalent to previous one...");
+	isoSig:=SCExportIsoSig(complex);
+	if isoSig = fail then
+		return fail;
+	fi;
+	if isoSig in isoSigs then
+		Info(InfoSimpcomp,2,"yes.");
+	else
+		Info(InfoSimpcomp,2,"no.");
+		Add(isoSigs,isoSig);
+	        candidateCount:=candidateCount+1;
+	fi;
+      else
+        if not HasName(G) then
+	  SetName(G,StructureDescription(G));
+        fi;
+        name:=Concatenation("Complex ",String(Size(complex_collection)+1)," of ",Name(G)," (single orbit)");
+        SCRename(complex,name);
+        if outfile <> false then
+          AppendTo(outfile,"Add(c,SCFromGenerators(G,",[repHigh[subset[1]]],"));\n");
+        fi;
+        Add(complex_collection,complex);
+        candidateCount:=candidateCount+1;
       fi;
-      Add(complex_collection,complex);
     fi;
-    return complex_collection;
+    if removeDoubleEntries then
+	return isoSigs;
+    else
+        return complex_collection;
+    fi;
   elif not subsetValid then
     for i in [1..Length(singleResults)] do
       Info(InfoSimpcomp,2,"Single result ",i,"/",Length(singleResults)," :  ",matrix[singleResults[i]],"(",singleResults[i],")");
@@ -690,18 +698,33 @@ InstallGlobalFunction(SCsFromGroupExt,
       tmp:=[[repHigh[singleResults[i]],Size(complex)]];
       link:=Filtered(complex,x->n in x);
       link:=List(link,x->Difference(x,[n]));
-      if(examineComplex(complex,link,complex_collection,objectType,removeDoubleEntries)) then
-        candidateCount:=candidateCount+1;
+      if(examineComplex(complex,link,complex_collection,objectType)) then
         complex:=SCFromFacets(complex);
-        if not HasName(G) then
-		    SetName(G,StructureDescription(G));
-	fi;
-        name:=Concatenation("Complex ",String(Size(complex_collection)+1)," of ",Name(G)," (single orbit)");
-        SCRename(complex,name);
-        if outfile <> false then
-          AppendTo(outfile,"Add(c,SCFromGenerators(G,",[repHigh[singleResults[i]]],"));\n");
+        if removeDoubleEntries and d>2 then
+	  Info(InfoSimpcomp,2,"Testing if complex is equivalent to previous one...");
+	  isoSig:=SCExportIsoSig(complex);
+	  if isoSig = fail then
+		return fail;
+	  fi;
+	  if isoSig in isoSigs then
+		Info(InfoSimpcomp,2,"yes.");
+	  else
+		Info(InfoSimpcomp,2,"no.");
+		Add(isoSigs,isoSig);
+	        candidateCount:=candidateCount+1;
+	  fi;
+        else
+          if not HasName(G) then
+	    SetName(G,StructureDescription(G));
+          fi;
+          name:=Concatenation("Complex ",String(Size(complex_collection)+1)," of ",Name(G)," (single orbit)");
+          SCRename(complex,name);
+          if outfile <> false then
+            AppendTo(outfile,"Add(c,SCFromGenerators(G,",[repHigh[subset[1]]],"));\n");
+          fi;
+          Add(complex_collection,complex);
+          candidateCount:=candidateCount+1;
         fi;
-        Add(complex_collection,complex);
       fi;
     od;
   fi;
@@ -710,7 +733,11 @@ InstallGlobalFunction(SCsFromGroupExt,
   matrixRows:=Length(matrixAllowedRows);
   if(matrixRows<1) then
     Info(InfoSimpcomp,2,"No more computations needed (no more rows).");
-    return complex_collection;
+    if removeDoubleEntries then
+	return isoSigs;
+    else
+        return complex_collection;
+    fi;
   fi;
     
   Info(InfoSimpcomp,2,"Incidence matrix:\n",matrix);
@@ -878,19 +905,35 @@ InstallGlobalFunction(SCsFromGroupExt,
 
 					if vectorsum[repLowCount+1] = 0 then
 						assembleComplex(curComb);
-						if(examineComplex(complex,link,complex_collection,objectType,removeDoubleEntries)) then
-							if not HasName(G) then
-								SetName(G,StructureDescription(G));
-							fi;
-							Info(InfoSimpcomp,2,"Found candidate.");
-							candidateCount:=candidateCount+1;
+						if(examineComplex(complex,link,complex_collection,objectType)) then
 							complex:=SCFromFacets(complex);
-							name:=Concatenation("Complex ",String(Size(complex_collection)+1)," of ",Name(G)," (multiple orbits)");
-							SCRename(complex,name);
-							if outfile <> false then
-								AppendTo(outfile,"Add(c,SCFromGenerators(G,",repHigh{curComb},"));\n");
+							if removeDoubleEntries and d>2 then
+								Info(InfoSimpcomp,2,"Testing if complex is equivalent to previous one...");
+								isoSig:=SCExportIsoSig(complex);
+								if isoSig = fail then
+									return fail;
+								fi;
+								if isoSig in isoSigs then
+									Info(InfoSimpcomp,2,"yes.");
+								else
+									Info(InfoSimpcomp,2,"no.");
+									Info(InfoSimpcomp,2,"Found candidate.");
+									Add(isoSigs,isoSig);
+									candidateCount:=candidateCount+1;
+								fi;
+							else
+								if not HasName(G) then
+								  SetName(G,StructureDescription(G));
+								fi;
+								name:=Concatenation("Complex ",String(Size(complex_collection)+1)," of ",Name(G)," (multiple orbits)");
+								SCRename(complex,name);
+								if outfile <> false then
+								  AppendTo(outfile,"Add(c,SCFromGenerators(G,",repHigh{curComb},"));\n");
+								fi;
+								Info(InfoSimpcomp,2,"Found candidate.");
+								Add(complex_collection,complex);
+								candidateCount:=candidateCount+1;
 							fi;
-							Add(complex_collection,complex);
 						fi;
 					else
 						foundComplex:=0;
@@ -936,7 +979,11 @@ InstallGlobalFunction(SCsFromGroupExt,
 
 
   Info(InfoSimpcomp,2,"All done, ",candidateCount," candidate(s).");
-  return complex_collection;
+  if removeDoubleEntries then
+    return isoSigs;
+  else
+    return complex_collection;
+  fi;
 end);
 
 ################################################################################
@@ -955,7 +1002,7 @@ end);
 ################################################################################
 InstallGlobalFunction(SCsFromGroupByTransitivity,
 	function(n,d,k,maniflag,computeAutGroup,removeDoubleEntries)
-	local coll, i, G, tmp, dim, verts, sum, Gcollection, g, gg, retList, retListTmp, c, lk, pm, m, flag, ctr, cc, j, l, todel, warn;
+	local coll, i, G, tmp, dim, verts, sum, Gcollection, g, gg, retList, retListTmp, c, lk, pm, m, flag, ctr, cc, j, l, warn, isoSigs;
 	
 	if((not IsPosInt(n) and not (IsList(n) and ForAll(n,x->IsPosInt(x)))) or (not IsPosInt(d) and not (IsList(d) and ForAll(d,x->IsPosInt(x)))) or not IsPosInt(k) or not IsBool(maniflag) or not IsBool(computeAutGroup) or not IsBool(removeDoubleEntries)) then
 		Info(InfoSimpcomp,1,"SCsFromGroupCheckByTransitivity: 'n' and 'd' must be positive integers or a list of positive integers, k must be a positive integer, 'maniflag', computeAutGroup' and 'removeDoubleEntries' must be boolean");
@@ -968,7 +1015,11 @@ InstallGlobalFunction(SCsFromGroupByTransitivity,
 	if IsInt(d) then
 		d:=[d];
 	fi;
-	
+
+	if removeDoubleEntries then
+		isoSigs:=[];
+	fi;
+
 	# detect group list, do not check groups with k-transitive subgroups
 	Info(InfoSimpcomp,1,"SCsFromGroupByTransitivity: Building list of groups...");
 	Gcollection:=[];
@@ -1048,16 +1099,29 @@ InstallGlobalFunction(SCsFromGroupByTransitivity,
 			fi;
 			for G in Gcollection[verts] do
 				tmp:=SCsFromGroupExt(G,verts,dim,1,0,removeDoubleEntries,false,0,[]);
+				if removeDoubleEntries then
+					for i in [1..Size(tmp)] do
+						if tmp[i] in isoSigs then
+							Unbind(tmp[i]);
+						else
+							Add(isoSigs,tmp[i]);
+						fi;
+					od;
+					tmp:=Compacted(tmp);
+				fi;
 				sum:=sum+1;
 				Info(InfoSimpcomp,1,"SCsFromGroupByTransitivity: ",sum," / ",Size(Gcollection[verts])," groups calculated, found ",Size(tmp)," complexes.");
 				if computeAutGroup then
 					Info(InfoSimpcomp,1,"SCsFromGroupByTransitivity: Calculating ",Size(tmp)," automorphism and homology groups...");
 					cc:=0;
-					for c in tmp do
+					for i in [1..Size(tmp)] do
+						if removeDoubleEntries then
+							tmp[i]:=SCFromIsoSig(tmp[i]);
+						fi;
 						cc:=cc+1;
-						SCAutomorphismGroup(c);
-						SCHomology(c);
-						SCGenerators(c);
+						SCAutomorphismGroup(tmp[i]);
+						SCHomology(tmp[i]);
+						SCGenerators(tmp[i]);
 						Info(InfoSimpcomp,1,"SCsFromGroupByTransitivity: ",cc," / ",Size(tmp)," automorphism groups calculated.");
 					od;
 					Info(InfoSimpcomp,1,"SCsFromGroupByTransitivity: ...all automorphism groups calculated for group ",sum," / ",Size(Gcollection[verts]),".");
@@ -1086,57 +1150,10 @@ InstallGlobalFunction(SCsFromGroupByTransitivity,
 				fi;
 			od;
 			
+		
 			if maniflag then
-				todel:=[[],[],[]];
-			else
-				todel:=[];
-			fi;
-			if removeDoubleEntries then
-				Info(InfoSimpcomp,1,"SCsFromGroupByTransitivity: Checking for double entries...");
-				if maniflag then
-					for i in [1,2,3] do
-						todel[i]:=[];
-						for j in [1..Size(retListTmp[i])] do
-							if j in todel then continue; fi;
-							for l in [j+1..Size(retListTmp[i])] do
-								if l in todel or l=j then continue; fi;
-								if not warn or not (SCDim(retListTmp[i][j]) = 2 and SCDim(retListTmp[i][l]) = 2) or i=1 then
-									tmp:=SCIsIsomorphic(retListTmp[i][j],retListTmp[i][l]);
-									if tmp = fail then
-										return fail;
-									fi;
-									if tmp then
-										Add(todel[i],l);
-									fi;
-								fi;
-							od;
-						od;
-					od;	
-				else
-					for j in [1..Size(retListTmp)] do
-						if j in todel then continue; fi;
-						for l in [j+1..Size(retListTmp)] do
-							if l in todel then continue; fi;
-							if not warn or not (SCDim(retListTmp[j]) = 2 and SCDim(retListTmp[l]) = 2) then
-								if SCIsIsomorphic(retListTmp[j],retListTmp[l]) then
-									Add(todel,l);
-								fi;
-							fi;
-						od;
-					od;
-				fi;
-			fi;
-			
-			if maniflag then
-				for i in [1,2,3] do
-					retListTmp[i]:=retListTmp[i]{Difference([1..Size(retListTmp[i])],todel[i])};
-					Append(retList[i],retListTmp[i]);
-				od;
 				Info(InfoSimpcomp,1,"SCsFromGroupByTransitivity: ...done dim = ",dim,", deg =  ",verts,", ",Size(retListTmp[1])," manifolds, ",Size(retListTmp[2])," pseudomanifolds, ",Size(retListTmp[3])," candidates found.");
 			else
-				retListTmp:=retListTmp{Difference([1..Size(retListTmp)],todel)};
-				Append(retList,retListTmp);
-				ctr:=Size(retListTmp);
 				Info(InfoSimpcomp,1,"SCsFromGroupByTransitivity: ...done dim = ",dim,", deg =  ",verts,", ",Size(retListTmp)," candidates found.");
 			fi;
 		od;

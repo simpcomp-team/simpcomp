@@ -1285,7 +1285,7 @@ InstallMethod(SCIsStronglyConnected,
 [SCIsSimplicialComplex],
 function(complex)
 
-	local  seen,curfacet,stack,neighbors,n,getFacetNeighborsIdx,sc,facets,f;
+	local  ispure,seen,curfacet,stack,neighbors,n,getFacetNeighborsIdx,sc,facets,f;
 
 
 	
@@ -1310,6 +1310,16 @@ function(complex)
 
 		return neighbors;
 	end;
+
+	ispure:=SCIsPure(complex);
+	if ispure = fail then
+		return fail;
+	fi;
+
+	if not ispure then
+		Info(InfoSimpcomp,1,"SCIsStronglyConnected: argument must be a pure simplicial complex.");
+		return fail;
+	fi;
 
 	facets:=SCFacetsEx(complex);
 	if facets=fail then
@@ -1522,7 +1532,7 @@ end);
 ## <Meth Name="SCDualGraph" Arg="complex"/>
 ## <Returns>1-dimensional simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Computes the dual graph of <Arg>complex</Arg>.
+## Computes the dual graph of the pure simplicial complex <Arg>complex</Arg>.
 ## <Example>
 ## gap> sphere:=SCBdSimplex(5);;
 ## gap> graph:=SCFaces(sphere,1);       
@@ -1551,7 +1561,7 @@ InstallMethod(SCDualGraph,
 [SCIsSimplicialComplex],
 function(complex)
 
-	local  i, dg, dim, sc, name, newname, edge, facets, faces;
+	local  i, dg, dim, ispure, sc, name, newname, edge, facets, faces;
 
 
 	dim := SCDim(complex);
@@ -1563,6 +1573,17 @@ function(complex)
 		Info(InfoSimpcomp,1,"SCDualGraph: complex dimension is smaller than 1.");
 		return fail;
 	fi;
+
+	ispure := SCIsPure(complex);
+	if ispure = fail then
+		return fail;
+	fi;
+
+	if not ispure then
+		Info(InfoSimpcomp,1,"SCDualGraph: complex must be pure.");
+		return fail;
+	fi;
+
 
 	facets:=SCFacetsEx(complex);
 	if facets = fail then
