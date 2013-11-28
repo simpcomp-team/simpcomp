@@ -76,299 +76,304 @@
 \contentsline {subsection}{\numberline {6.1.2}\leavevmode {\color {Chapter }SC}}{46}{subsection.6.1.2}
 \contentsline {subsection}{\numberline {6.1.3}\leavevmode {\color {Chapter }SCFromDifferenceCycles}}{46}{subsection.6.1.3}
 \contentsline {subsection}{\numberline {6.1.4}\leavevmode {\color {Chapter }SCFromGenerators}}{47}{subsection.6.1.4}
-\contentsline {section}{\numberline {6.2}\leavevmode {\color {Chapter }Generating some standard triangulations}}{47}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}\leavevmode {\color {Chapter }SCBdCrossPolytope}}{47}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}\leavevmode {\color {Chapter }SCBdCyclicPolytope}}{48}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}\leavevmode {\color {Chapter }SCBdSimplex}}{48}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}\leavevmode {\color {Chapter }SCEmpty}}{49}{subsection.6.2.4}
-\contentsline {subsection}{\numberline {6.2.5}\leavevmode {\color {Chapter }SCSimplex}}{49}{subsection.6.2.5}
-\contentsline {subsection}{\numberline {6.2.6}\leavevmode {\color {Chapter }SCSeriesTorus}}{50}{subsection.6.2.6}
-\contentsline {subsection}{\numberline {6.2.7}\leavevmode {\color {Chapter }SCSurface}}{50}{subsection.6.2.7}
-\contentsline {subsection}{\numberline {6.2.8}\leavevmode {\color {Chapter }SCFVectorBdCrossPolytope}}{51}{subsection.6.2.8}
-\contentsline {subsection}{\numberline {6.2.9}\leavevmode {\color {Chapter }SCFVectorBdCyclicPolytope}}{52}{subsection.6.2.9}
-\contentsline {subsection}{\numberline {6.2.10}\leavevmode {\color {Chapter }SCFVectorBdSimplex}}{52}{subsection.6.2.10}
-\contentsline {section}{\numberline {6.3}\leavevmode {\color {Chapter }Generating infinite series of transitive triangulations}}{53}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}\leavevmode {\color {Chapter }SCSeriesAGL}}{53}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}\leavevmode {\color {Chapter }SCSeriesBrehmKuehnelTorus}}{54}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}\leavevmode {\color {Chapter }SCSeriesBdHandleBody}}{55}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}\leavevmode {\color {Chapter }SCSeriesBid}}{55}{subsection.6.3.4}
-\contentsline {subsection}{\numberline {6.3.5}\leavevmode {\color {Chapter }SCSeriesC2n}}{56}{subsection.6.3.5}
-\contentsline {subsection}{\numberline {6.3.6}\leavevmode {\color {Chapter }SCSeriesConnectedSum}}{57}{subsection.6.3.6}
-\contentsline {subsection}{\numberline {6.3.7}\leavevmode {\color {Chapter }SCSeriesCSTSurface}}{58}{subsection.6.3.7}
-\contentsline {subsection}{\numberline {6.3.8}\leavevmode {\color {Chapter }SCSeriesD2n}}{58}{subsection.6.3.8}
-\contentsline {subsection}{\numberline {6.3.9}\leavevmode {\color {Chapter }SCSeriesHandleBody}}{59}{subsection.6.3.9}
-\contentsline {subsection}{\numberline {6.3.10}\leavevmode {\color {Chapter }SCSeriesHomologySphere}}{60}{subsection.6.3.10}
-\contentsline {subsection}{\numberline {6.3.11}\leavevmode {\color {Chapter }SCSeriesK}}{61}{subsection.6.3.11}
-\contentsline {subsection}{\numberline {6.3.12}\leavevmode {\color {Chapter }SCSeriesKu}}{61}{subsection.6.3.12}
-\contentsline {subsection}{\numberline {6.3.13}\leavevmode {\color {Chapter }SCSeriesL}}{62}{subsection.6.3.13}
-\contentsline {subsection}{\numberline {6.3.14}\leavevmode {\color {Chapter }SCSeriesLe}}{62}{subsection.6.3.14}
-\contentsline {subsection}{\numberline {6.3.15}\leavevmode {\color {Chapter }SCSeriesLensSpace}}{63}{subsection.6.3.15}
-\contentsline {subsection}{\numberline {6.3.16}\leavevmode {\color {Chapter }SCSeriesPrimeTorus}}{64}{subsection.6.3.16}
-\contentsline {subsection}{\numberline {6.3.17}\leavevmode {\color {Chapter }SCSeriesSeifertFibredSpace}}{64}{subsection.6.3.17}
-\contentsline {section}{\numberline {6.4}\leavevmode {\color {Chapter }A census of regular and chiral maps}}{65}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}\leavevmode {\color {Chapter }SCChiralMap}}{65}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}\leavevmode {\color {Chapter }SCChiralMaps}}{65}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}\leavevmode {\color {Chapter }SCChiralTori}}{66}{subsection.6.4.3}
-\contentsline {subsection}{\numberline {6.4.4}\leavevmode {\color {Chapter }SCNrChiralTori}}{66}{subsection.6.4.4}
-\contentsline {subsection}{\numberline {6.4.5}\leavevmode {\color {Chapter }SCNrRegularTorus}}{66}{subsection.6.4.5}
-\contentsline {subsection}{\numberline {6.4.6}\leavevmode {\color {Chapter }SCRegularMap}}{67}{subsection.6.4.6}
-\contentsline {subsection}{\numberline {6.4.7}\leavevmode {\color {Chapter }SCRegularMaps}}{67}{subsection.6.4.7}
-\contentsline {subsection}{\numberline {6.4.8}\leavevmode {\color {Chapter }SCRegularTorus}}{68}{subsection.6.4.8}
-\contentsline {subsection}{\numberline {6.4.9}\leavevmode {\color {Chapter }SCSeriesSymmetricTorus}}{68}{subsection.6.4.9}
-\contentsline {section}{\numberline {6.5}\leavevmode {\color {Chapter }Generating new complexes from old}}{69}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}\leavevmode {\color {Chapter }SCCartesianPower}}{69}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}\leavevmode {\color {Chapter }SCCartesianProduct}}{69}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}\leavevmode {\color {Chapter }SCConnectedComponents}}{70}{subsection.6.5.3}
-\contentsline {subsection}{\numberline {6.5.4}\leavevmode {\color {Chapter }SCConnectedProduct}}{71}{subsection.6.5.4}
-\contentsline {subsection}{\numberline {6.5.5}\leavevmode {\color {Chapter }SCConnectedSum}}{71}{subsection.6.5.5}
-\contentsline {subsection}{\numberline {6.5.6}\leavevmode {\color {Chapter }SCConnectedSumMinus}}{72}{subsection.6.5.6}
-\contentsline {subsection}{\numberline {6.5.7}\leavevmode {\color {Chapter }SCDifferenceCycleCompress}}{73}{subsection.6.5.7}
-\contentsline {subsection}{\numberline {6.5.8}\leavevmode {\color {Chapter }SCDifferenceCycleExpand}}{74}{subsection.6.5.8}
-\contentsline {subsection}{\numberline {6.5.9}\leavevmode {\color {Chapter }SCStronglyConnectedComponents}}{74}{subsection.6.5.9}
-\contentsline {section}{\numberline {6.6}\leavevmode {\color {Chapter }Simplicial complexes from transitive permutation groups}}{75}{section.6.6}
-\contentsline {subsection}{\numberline {6.6.1}\leavevmode {\color {Chapter }SCsFromGroupExt}}{75}{subsection.6.6.1}
-\contentsline {subsection}{\numberline {6.6.2}\leavevmode {\color {Chapter }SCsFromGroupByTransitivity}}{76}{subsection.6.6.2}
-\contentsline {section}{\numberline {6.7}\leavevmode {\color {Chapter }The classification of cyclic combinatorial 3-manifolds}}{77}{section.6.7}
-\contentsline {subsection}{\numberline {6.7.1}\leavevmode {\color {Chapter }SCNrCyclic3Mflds}}{77}{subsection.6.7.1}
-\contentsline {subsection}{\numberline {6.7.2}\leavevmode {\color {Chapter }SCCyclic3MfldTopTypes}}{78}{subsection.6.7.2}
-\contentsline {subsection}{\numberline {6.7.3}\leavevmode {\color {Chapter }SCCyclic3Mfld}}{78}{subsection.6.7.3}
-\contentsline {subsection}{\numberline {6.7.4}\leavevmode {\color {Chapter }SCCyclic3MfldByType}}{78}{subsection.6.7.4}
-\contentsline {subsection}{\numberline {6.7.5}\leavevmode {\color {Chapter }SCCyclic3MfldListOfGivenType}}{79}{subsection.6.7.5}
-\contentsline {section}{\numberline {6.8}\leavevmode {\color {Chapter }Computing properties of simplicial complexes}}{79}{section.6.8}
-\contentsline {subsection}{\numberline {6.8.1}\leavevmode {\color {Chapter }SCAltshulerSteinberg}}{79}{subsection.6.8.1}
-\contentsline {subsection}{\numberline {6.8.2}\leavevmode {\color {Chapter }SCAutomorphismGroup}}{80}{subsection.6.8.2}
-\contentsline {subsection}{\numberline {6.8.3}\leavevmode {\color {Chapter }SCAutomorphismGroupInternal}}{80}{subsection.6.8.3}
-\contentsline {subsection}{\numberline {6.8.4}\leavevmode {\color {Chapter }SCAutomorphismGroupSize}}{81}{subsection.6.8.4}
-\contentsline {subsection}{\numberline {6.8.5}\leavevmode {\color {Chapter }SCAutomorphismGroupStructure}}{81}{subsection.6.8.5}
-\contentsline {subsection}{\numberline {6.8.6}\leavevmode {\color {Chapter }SCAutomorphismGroupTransitivity}}{82}{subsection.6.8.6}
-\contentsline {subsection}{\numberline {6.8.7}\leavevmode {\color {Chapter }SCBoundary}}{82}{subsection.6.8.7}
-\contentsline {subsection}{\numberline {6.8.8}\leavevmode {\color {Chapter }SCDehnSommervilleCheck}}{83}{subsection.6.8.8}
-\contentsline {subsection}{\numberline {6.8.9}\leavevmode {\color {Chapter }SCDehnSommervilleMatrix}}{83}{subsection.6.8.9}
-\contentsline {subsection}{\numberline {6.8.10}\leavevmode {\color {Chapter }SCDifferenceCycles}}{83}{subsection.6.8.10}
-\contentsline {subsection}{\numberline {6.8.11}\leavevmode {\color {Chapter }SCDim}}{84}{subsection.6.8.11}
-\contentsline {subsection}{\numberline {6.8.12}\leavevmode {\color {Chapter }SCDualGraph}}{84}{subsection.6.8.12}
-\contentsline {subsection}{\numberline {6.8.13}\leavevmode {\color {Chapter }SCEulerCharacteristic}}{85}{subsection.6.8.13}
-\contentsline {subsection}{\numberline {6.8.14}\leavevmode {\color {Chapter }SCFVector}}{85}{subsection.6.8.14}
-\contentsline {subsection}{\numberline {6.8.15}\leavevmode {\color {Chapter }SCFaceLattice}}{85}{subsection.6.8.15}
-\contentsline {subsection}{\numberline {6.8.16}\leavevmode {\color {Chapter }SCFaceLatticeEx}}{86}{subsection.6.8.16}
-\contentsline {subsection}{\numberline {6.8.17}\leavevmode {\color {Chapter }SCFaces}}{86}{subsection.6.8.17}
-\contentsline {subsection}{\numberline {6.8.18}\leavevmode {\color {Chapter }SCFacesEx}}{86}{subsection.6.8.18}
-\contentsline {subsection}{\numberline {6.8.19}\leavevmode {\color {Chapter }SCFacets}}{86}{subsection.6.8.19}
-\contentsline {subsection}{\numberline {6.8.20}\leavevmode {\color {Chapter }SCFacetsEx}}{86}{subsection.6.8.20}
-\contentsline {subsection}{\numberline {6.8.21}\leavevmode {\color {Chapter }SCFpBettiNumbers}}{87}{subsection.6.8.21}
-\contentsline {subsection}{\numberline {6.8.22}\leavevmode {\color {Chapter }SCFundamentalGroup}}{87}{subsection.6.8.22}
-\contentsline {subsection}{\numberline {6.8.23}\leavevmode {\color {Chapter }SCGVector}}{88}{subsection.6.8.23}
-\contentsline {subsection}{\numberline {6.8.24}\leavevmode {\color {Chapter }SCGenerators}}{88}{subsection.6.8.24}
-\contentsline {subsection}{\numberline {6.8.25}\leavevmode {\color {Chapter }SCGeneratorsEx}}{90}{subsection.6.8.25}
-\contentsline {subsection}{\numberline {6.8.26}\leavevmode {\color {Chapter }SCHVector}}{91}{subsection.6.8.26}
-\contentsline {subsection}{\numberline {6.8.27}\leavevmode {\color {Chapter }SCHasBoundary}}{91}{subsection.6.8.27}
-\contentsline {subsection}{\numberline {6.8.28}\leavevmode {\color {Chapter }SCHasInterior}}{91}{subsection.6.8.28}
-\contentsline {subsection}{\numberline {6.8.29}\leavevmode {\color {Chapter }SCHeegaardSplittingSmallGenus}}{92}{subsection.6.8.29}
-\contentsline {subsection}{\numberline {6.8.30}\leavevmode {\color {Chapter }SCHeegaardSplitting}}{92}{subsection.6.8.30}
-\contentsline {subsection}{\numberline {6.8.31}\leavevmode {\color {Chapter }SCHomology}}{93}{subsection.6.8.31}
-\contentsline {subsection}{\numberline {6.8.32}\leavevmode {\color {Chapter }SCIncidences}}{94}{subsection.6.8.32}
-\contentsline {subsection}{\numberline {6.8.33}\leavevmode {\color {Chapter }SCIncidencesEx}}{94}{subsection.6.8.33}
-\contentsline {subsection}{\numberline {6.8.34}\leavevmode {\color {Chapter }SCInterior}}{94}{subsection.6.8.34}
-\contentsline {subsection}{\numberline {6.8.35}\leavevmode {\color {Chapter }SCIsCentrallySymmetric}}{95}{subsection.6.8.35}
-\contentsline {subsection}{\numberline {6.8.36}\leavevmode {\color {Chapter }SCIsConnected}}{95}{subsection.6.8.36}
-\contentsline {subsection}{\numberline {6.8.37}\leavevmode {\color {Chapter }SCIsEmpty}}{95}{subsection.6.8.37}
-\contentsline {subsection}{\numberline {6.8.38}\leavevmode {\color {Chapter }SCIsEulerianManifold}}{96}{subsection.6.8.38}
-\contentsline {subsection}{\numberline {6.8.39}\leavevmode {\color {Chapter }SCIsFlag}}{96}{subsection.6.8.39}
-\contentsline {subsection}{\numberline {6.8.40}\leavevmode {\color {Chapter }SCIsHeegaardSplitting}}{97}{subsection.6.8.40}
-\contentsline {subsection}{\numberline {6.8.41}\leavevmode {\color {Chapter }SCIsHomologySphere}}{97}{subsection.6.8.41}
-\contentsline {subsection}{\numberline {6.8.42}\leavevmode {\color {Chapter }SCIsInKd}}{97}{subsection.6.8.42}
-\contentsline {subsection}{\numberline {6.8.43}\leavevmode {\color {Chapter }SCIsKNeighborly}}{98}{subsection.6.8.43}
-\contentsline {subsection}{\numberline {6.8.44}\leavevmode {\color {Chapter }SCIsOrientable}}{98}{subsection.6.8.44}
-\contentsline {subsection}{\numberline {6.8.45}\leavevmode {\color {Chapter }SCIsPseudoManifold}}{98}{subsection.6.8.45}
-\contentsline {subsection}{\numberline {6.8.46}\leavevmode {\color {Chapter }SCIsPure}}{99}{subsection.6.8.46}
-\contentsline {subsection}{\numberline {6.8.47}\leavevmode {\color {Chapter }SCIsShellable}}{99}{subsection.6.8.47}
-\contentsline {subsection}{\numberline {6.8.48}\leavevmode {\color {Chapter }SCIsStronglyConnected}}{99}{subsection.6.8.48}
-\contentsline {subsection}{\numberline {6.8.49}\leavevmode {\color {Chapter }SCMinimalNonFaces}}{100}{subsection.6.8.49}
-\contentsline {subsection}{\numberline {6.8.50}\leavevmode {\color {Chapter }SCMinimalNonFacesEx}}{100}{subsection.6.8.50}
-\contentsline {subsection}{\numberline {6.8.51}\leavevmode {\color {Chapter }SCNeighborliness}}{100}{subsection.6.8.51}
-\contentsline {subsection}{\numberline {6.8.52}\leavevmode {\color {Chapter }SCNumFaces}}{101}{subsection.6.8.52}
-\contentsline {subsection}{\numberline {6.8.53}\leavevmode {\color {Chapter }SCOrientation}}{101}{subsection.6.8.53}
-\contentsline {subsection}{\numberline {6.8.54}\leavevmode {\color {Chapter }SCSkel}}{101}{subsection.6.8.54}
-\contentsline {subsection}{\numberline {6.8.55}\leavevmode {\color {Chapter }SCSkelEx}}{102}{subsection.6.8.55}
-\contentsline {subsection}{\numberline {6.8.56}\leavevmode {\color {Chapter }SCSpanningTree}}{102}{subsection.6.8.56}
-\contentsline {section}{\numberline {6.9}\leavevmode {\color {Chapter }Operations on simplicial complexes}}{103}{section.6.9}
-\contentsline {subsection}{\numberline {6.9.1}\leavevmode {\color {Chapter }SCAlexanderDual}}{103}{subsection.6.9.1}
-\contentsline {subsection}{\numberline {6.9.2}\leavevmode {\color {Chapter }SCClose}}{103}{subsection.6.9.2}
-\contentsline {subsection}{\numberline {6.9.3}\leavevmode {\color {Chapter }SCCollapseGreedy}}{104}{subsection.6.9.3}
-\contentsline {subsection}{\numberline {6.9.4}\leavevmode {\color {Chapter }SCCone}}{104}{subsection.6.9.4}
-\contentsline {subsection}{\numberline {6.9.5}\leavevmode {\color {Chapter }SCDeletedJoin}}{105}{subsection.6.9.5}
-\contentsline {subsection}{\numberline {6.9.6}\leavevmode {\color {Chapter }SCDifference}}{106}{subsection.6.9.6}
-\contentsline {subsection}{\numberline {6.9.7}\leavevmode {\color {Chapter }SCFillSphere}}{106}{subsection.6.9.7}
-\contentsline {subsection}{\numberline {6.9.8}\leavevmode {\color {Chapter }SCHandleAddition}}{107}{subsection.6.9.8}
-\contentsline {subsection}{\numberline {6.9.9}\leavevmode {\color {Chapter }SCIntersection}}{108}{subsection.6.9.9}
-\contentsline {subsection}{\numberline {6.9.10}\leavevmode {\color {Chapter }SCIsIsomorphic}}{108}{subsection.6.9.10}
-\contentsline {subsection}{\numberline {6.9.11}\leavevmode {\color {Chapter }SCIsSubcomplex}}{108}{subsection.6.9.11}
-\contentsline {subsection}{\numberline {6.9.12}\leavevmode {\color {Chapter }SCIsomorphism}}{109}{subsection.6.9.12}
-\contentsline {subsection}{\numberline {6.9.13}\leavevmode {\color {Chapter }SCIsomorphismEx}}{109}{subsection.6.9.13}
-\contentsline {subsection}{\numberline {6.9.14}\leavevmode {\color {Chapter }SCJoin}}{110}{subsection.6.9.14}
-\contentsline {subsection}{\numberline {6.9.15}\leavevmode {\color {Chapter }SCNeighbors}}{111}{subsection.6.9.15}
-\contentsline {subsection}{\numberline {6.9.16}\leavevmode {\color {Chapter }SCNeighborsEx}}{111}{subsection.6.9.16}
-\contentsline {subsection}{\numberline {6.9.17}\leavevmode {\color {Chapter }SCShelling}}{111}{subsection.6.9.17}
-\contentsline {subsection}{\numberline {6.9.18}\leavevmode {\color {Chapter }SCShellingExt}}{112}{subsection.6.9.18}
-\contentsline {subsection}{\numberline {6.9.19}\leavevmode {\color {Chapter }SCShellings}}{112}{subsection.6.9.19}
-\contentsline {subsection}{\numberline {6.9.20}\leavevmode {\color {Chapter }SCSpan}}{113}{subsection.6.9.20}
-\contentsline {subsection}{\numberline {6.9.21}\leavevmode {\color {Chapter }SCSuspension}}{114}{subsection.6.9.21}
-\contentsline {subsection}{\numberline {6.9.22}\leavevmode {\color {Chapter }SCUnion}}{115}{subsection.6.9.22}
-\contentsline {subsection}{\numberline {6.9.23}\leavevmode {\color {Chapter }SCVertexIdentification}}{115}{subsection.6.9.23}
-\contentsline {subsection}{\numberline {6.9.24}\leavevmode {\color {Chapter }SCWedge}}{116}{subsection.6.9.24}
-\contentsline {chapter}{\numberline {7}\leavevmode {\color {Chapter }Functions and operations for \texttt {SCNormalSurface}}}{117}{chapter.7}
-\contentsline {section}{\numberline {7.1}\leavevmode {\color {Chapter }Creating an \texttt {SCNormalSurface} object}}{117}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}\leavevmode {\color {Chapter }SCNSEmpty}}{117}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}\leavevmode {\color {Chapter }SCNSFromFacets}}{117}{subsection.7.1.2}
-\contentsline {subsection}{\numberline {7.1.3}\leavevmode {\color {Chapter }SCNS}}{118}{subsection.7.1.3}
-\contentsline {subsection}{\numberline {7.1.4}\leavevmode {\color {Chapter }SCNSSlicing}}{118}{subsection.7.1.4}
-\contentsline {section}{\numberline {7.2}\leavevmode {\color {Chapter }Generating new objects from discrete normal surfaces}}{120}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}\leavevmode {\color {Chapter }SCCopy}}{120}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}\leavevmode {\color {Chapter }SCNSTriangulation}}{121}{subsection.7.2.2}
-\contentsline {section}{\numberline {7.3}\leavevmode {\color {Chapter }Properties of \texttt {SCNormalSurface} objects}}{121}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}\leavevmode {\color {Chapter }SCConnectedComponents}}{121}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}\leavevmode {\color {Chapter }SCDim}}{122}{subsection.7.3.2}
-\contentsline {subsection}{\numberline {7.3.3}\leavevmode {\color {Chapter }SCEulerCharacteristic}}{122}{subsection.7.3.3}
-\contentsline {subsection}{\numberline {7.3.4}\leavevmode {\color {Chapter }SCFVector}}{123}{subsection.7.3.4}
-\contentsline {subsection}{\numberline {7.3.5}\leavevmode {\color {Chapter }SCFaceLattice}}{123}{subsection.7.3.5}
-\contentsline {subsection}{\numberline {7.3.6}\leavevmode {\color {Chapter }SCFaceLatticeEx}}{123}{subsection.7.3.6}
-\contentsline {subsection}{\numberline {7.3.7}\leavevmode {\color {Chapter }SCFpBettiNumbers}}{124}{subsection.7.3.7}
-\contentsline {subsection}{\numberline {7.3.8}\leavevmode {\color {Chapter }SCGenus}}{124}{subsection.7.3.8}
-\contentsline {subsection}{\numberline {7.3.9}\leavevmode {\color {Chapter }SCHomology}}{125}{subsection.7.3.9}
-\contentsline {subsection}{\numberline {7.3.10}\leavevmode {\color {Chapter }SCIsConnected}}{125}{subsection.7.3.10}
-\contentsline {subsection}{\numberline {7.3.11}\leavevmode {\color {Chapter }SCIsEmpty}}{126}{subsection.7.3.11}
-\contentsline {subsection}{\numberline {7.3.12}\leavevmode {\color {Chapter }SCIsOrientable}}{126}{subsection.7.3.12}
-\contentsline {subsection}{\numberline {7.3.13}\leavevmode {\color {Chapter }SCSkel}}{127}{subsection.7.3.13}
-\contentsline {subsection}{\numberline {7.3.14}\leavevmode {\color {Chapter }SCSkelEx}}{127}{subsection.7.3.14}
-\contentsline {subsection}{\numberline {7.3.15}\leavevmode {\color {Chapter }SCTopologicalType}}{128}{subsection.7.3.15}
-\contentsline {subsection}{\numberline {7.3.16}\leavevmode {\color {Chapter }SCUnion}}{129}{subsection.7.3.16}
-\contentsline {chapter}{\numberline {8}\leavevmode {\color {Chapter }(Co-)Homology of simplicial complexes}}{131}{chapter.8}
-\contentsline {section}{\numberline {8.1}\leavevmode {\color {Chapter }Homology computation}}{131}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}\leavevmode {\color {Chapter }SCBoundaryOperatorMatrix}}{131}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}\leavevmode {\color {Chapter }SCBoundarySimplex}}{131}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}\leavevmode {\color {Chapter }SCHomologyBasis}}{132}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}\leavevmode {\color {Chapter }SCHomologyBasisAsSimplices}}{132}{subsection.8.1.4}
-\contentsline {subsection}{\numberline {8.1.5}\leavevmode {\color {Chapter }SCHomologyInternal}}{133}{subsection.8.1.5}
-\contentsline {section}{\numberline {8.2}\leavevmode {\color {Chapter }Cohomology computation}}{133}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}\leavevmode {\color {Chapter }SCCoboundaryOperatorMatrix}}{133}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}\leavevmode {\color {Chapter }SCCohomology}}{134}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}\leavevmode {\color {Chapter }SCCohomologyBasis}}{134}{subsection.8.2.3}
-\contentsline {subsection}{\numberline {8.2.4}\leavevmode {\color {Chapter }SCCohomologyBasisAsSimplices}}{135}{subsection.8.2.4}
-\contentsline {subsection}{\numberline {8.2.5}\leavevmode {\color {Chapter }SCCupProduct}}{137}{subsection.8.2.5}
-\contentsline {subsection}{\numberline {8.2.6}\leavevmode {\color {Chapter }SCIntersectionForm}}{137}{subsection.8.2.6}
-\contentsline {subsection}{\numberline {8.2.7}\leavevmode {\color {Chapter }SCIntersectionFormParity}}{138}{subsection.8.2.7}
-\contentsline {subsection}{\numberline {8.2.8}\leavevmode {\color {Chapter }SCIntersectionFormDimensionality}}{138}{subsection.8.2.8}
-\contentsline {subsection}{\numberline {8.2.9}\leavevmode {\color {Chapter }SCIntersectionFormSignature}}{139}{subsection.8.2.9}
-\contentsline {chapter}{\numberline {9}\leavevmode {\color {Chapter }Bistellar flips}}{140}{chapter.9}
-\contentsline {section}{\numberline {9.1}\leavevmode {\color {Chapter }Theory}}{140}{section.9.1}
-\contentsline {section}{\numberline {9.2}\leavevmode {\color {Chapter }Functions for bistellar flips}}{142}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}\leavevmode {\color {Chapter }SCBistellarOptions}}{142}{subsection.9.2.1}
-\contentsline {subsection}{\numberline {9.2.2}\leavevmode {\color {Chapter }SCEquivalent}}{143}{subsection.9.2.2}
-\contentsline {subsection}{\numberline {9.2.3}\leavevmode {\color {Chapter }SCExamineComplexBistellar}}{143}{subsection.9.2.3}
-\contentsline {subsection}{\numberline {9.2.4}\leavevmode {\color {Chapter }SCIntFunc.SCChooseMove}}{144}{subsection.9.2.4}
-\contentsline {subsection}{\numberline {9.2.5}\leavevmode {\color {Chapter }SCIsKStackedSphere}}{144}{subsection.9.2.5}
-\contentsline {subsection}{\numberline {9.2.6}\leavevmode {\color {Chapter }SCIsManifold}}{145}{subsection.9.2.6}
-\contentsline {subsection}{\numberline {9.2.7}\leavevmode {\color {Chapter }SCIsMovableComplex}}{146}{subsection.9.2.7}
-\contentsline {subsection}{\numberline {9.2.8}\leavevmode {\color {Chapter }SCMove}}{146}{subsection.9.2.8}
-\contentsline {subsection}{\numberline {9.2.9}\leavevmode {\color {Chapter }SCMoves}}{147}{subsection.9.2.9}
-\contentsline {subsection}{\numberline {9.2.10}\leavevmode {\color {Chapter }SCRMoves}}{147}{subsection.9.2.10}
-\contentsline {subsection}{\numberline {9.2.11}\leavevmode {\color {Chapter }SCRandomize}}{148}{subsection.9.2.11}
-\contentsline {subsection}{\numberline {9.2.12}\leavevmode {\color {Chapter }SCReduceAsSubcomplex}}{148}{subsection.9.2.12}
-\contentsline {subsection}{\numberline {9.2.13}\leavevmode {\color {Chapter }SCReduceComplex}}{149}{subsection.9.2.13}
-\contentsline {subsection}{\numberline {9.2.14}\leavevmode {\color {Chapter }SCReduceComplexEx}}{149}{subsection.9.2.14}
-\contentsline {subsection}{\numberline {9.2.15}\leavevmode {\color {Chapter }SCReduceComplexFast}}{152}{subsection.9.2.15}
-\contentsline {chapter}{\numberline {10}\leavevmode {\color {Chapter }Simplicial blowups}}{153}{chapter.10}
-\contentsline {section}{\numberline {10.1}\leavevmode {\color {Chapter }Theory}}{153}{section.10.1}
-\contentsline {section}{\numberline {10.2}\leavevmode {\color {Chapter }Functions related to simplicial blowups}}{153}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}\leavevmode {\color {Chapter }SCBlowup}}{153}{subsection.10.2.1}
-\contentsline {subsection}{\numberline {10.2.2}\leavevmode {\color {Chapter }SCMappingCylinder}}{155}{subsection.10.2.2}
-\contentsline {chapter}{\numberline {11}\leavevmode {\color {Chapter }Polyhedral Morse theory}}{156}{chapter.11}
-\contentsline {section}{\numberline {11.1}\leavevmode {\color {Chapter }Polyhedral Morse theory related functions}}{156}{section.11.1}
-\contentsline {subsection}{\numberline {11.1.1}\leavevmode {\color {Chapter }SCIsTight}}{156}{subsection.11.1.1}
-\contentsline {subsection}{\numberline {11.1.2}\leavevmode {\color {Chapter }SCMorseIsPerfect}}{161}{subsection.11.1.2}
-\contentsline {subsection}{\numberline {11.1.3}\leavevmode {\color {Chapter }SCSlicing}}{161}{subsection.11.1.3}
-\contentsline {subsection}{\numberline {11.1.4}\leavevmode {\color {Chapter }SCMorseMultiplicityVector}}{162}{subsection.11.1.4}
-\contentsline {subsection}{\numberline {11.1.5}\leavevmode {\color {Chapter }SCMorseNumberOfCriticalPoints}}{162}{subsection.11.1.5}
-\contentsline {chapter}{\numberline {12}\leavevmode {\color {Chapter }Library and I/O}}{163}{chapter.12}
-\contentsline {section}{\numberline {12.1}\leavevmode {\color {Chapter }Simplicial complex library}}{163}{section.12.1}
-\contentsline {subsection}{\numberline {12.1.1}\leavevmode {\color {Chapter }SCIsLibRepository}}{163}{subsection.12.1.1}
-\contentsline {subsection}{\numberline {12.1.2}\leavevmode {\color {Chapter }SCLib}}{163}{subsection.12.1.2}
-\contentsline {subsection}{\numberline {12.1.3}\leavevmode {\color {Chapter }SCLibAdd}}{165}{subsection.12.1.3}
-\contentsline {subsection}{\numberline {12.1.4}\leavevmode {\color {Chapter }SCLibAllComplexes}}{165}{subsection.12.1.4}
-\contentsline {subsection}{\numberline {12.1.5}\leavevmode {\color {Chapter }SCLibDelete}}{165}{subsection.12.1.5}
-\contentsline {subsection}{\numberline {12.1.6}\leavevmode {\color {Chapter }SCLibDetermineTopologicalType}}{166}{subsection.12.1.6}
-\contentsline {subsection}{\numberline {12.1.7}\leavevmode {\color {Chapter }SCLibFlush}}{167}{subsection.12.1.7}
-\contentsline {subsection}{\numberline {12.1.8}\leavevmode {\color {Chapter }SCLibInit}}{167}{subsection.12.1.8}
-\contentsline {subsection}{\numberline {12.1.9}\leavevmode {\color {Chapter }SCLibIsLoaded}}{167}{subsection.12.1.9}
-\contentsline {subsection}{\numberline {12.1.10}\leavevmode {\color {Chapter }SCLibSearchByAttribute}}{168}{subsection.12.1.10}
-\contentsline {subsection}{\numberline {12.1.11}\leavevmode {\color {Chapter }SCLibSearchByName}}{168}{subsection.12.1.11}
-\contentsline {subsection}{\numberline {12.1.12}\leavevmode {\color {Chapter }SCLibSize}}{168}{subsection.12.1.12}
-\contentsline {subsection}{\numberline {12.1.13}\leavevmode {\color {Chapter }SCLibUpdate}}{169}{subsection.12.1.13}
-\contentsline {subsection}{\numberline {12.1.14}\leavevmode {\color {Chapter }SCLibStatus}}{169}{subsection.12.1.14}
-\contentsline {section}{\numberline {12.2}\leavevmode {\color {Chapter }\textsf {simpcomp} input / output functions}}{170}{section.12.2}
-\contentsline {subsection}{\numberline {12.2.1}\leavevmode {\color {Chapter }SCLoad}}{170}{subsection.12.2.1}
-\contentsline {subsection}{\numberline {12.2.2}\leavevmode {\color {Chapter }SCLoadXML}}{171}{subsection.12.2.2}
-\contentsline {subsection}{\numberline {12.2.3}\leavevmode {\color {Chapter }SCSave}}{171}{subsection.12.2.3}
-\contentsline {subsection}{\numberline {12.2.4}\leavevmode {\color {Chapter }SCSaveXML}}{172}{subsection.12.2.4}
-\contentsline {subsection}{\numberline {12.2.5}\leavevmode {\color {Chapter }SCExportMacaulay2}}{172}{subsection.12.2.5}
-\contentsline {subsection}{\numberline {12.2.6}\leavevmode {\color {Chapter }SCExportPolymake}}{172}{subsection.12.2.6}
-\contentsline {subsection}{\numberline {12.2.7}\leavevmode {\color {Chapter }SCImportPolymake}}{172}{subsection.12.2.7}
-\contentsline {subsection}{\numberline {12.2.8}\leavevmode {\color {Chapter }SCExportLatexTable}}{173}{subsection.12.2.8}
-\contentsline {subsection}{\numberline {12.2.9}\leavevmode {\color {Chapter }SCExportJavaView}}{173}{subsection.12.2.9}
-\contentsline {subsection}{\numberline {12.2.10}\leavevmode {\color {Chapter }SCExportSnapPy}}{174}{subsection.12.2.10}
-\contentsline {chapter}{\numberline {13}\leavevmode {\color {Chapter }Interfaces to other software packages}}{175}{chapter.13}
-\contentsline {section}{\numberline {13.1}\leavevmode {\color {Chapter }Interface to the \textsf {GAP}-package \textsf {homalg}}}{175}{section.13.1}
-\contentsline {subsection}{\numberline {13.1.1}\leavevmode {\color {Chapter }SCHomalgBoundaryMatrices}}{175}{subsection.13.1.1}
-\contentsline {subsection}{\numberline {13.1.2}\leavevmode {\color {Chapter }SCHomalgCoboundaryMatrices}}{176}{subsection.13.1.2}
-\contentsline {subsection}{\numberline {13.1.3}\leavevmode {\color {Chapter }SCHomalgHomology}}{176}{subsection.13.1.3}
-\contentsline {subsection}{\numberline {13.1.4}\leavevmode {\color {Chapter }SCHomalgHomologyBasis}}{176}{subsection.13.1.4}
-\contentsline {subsection}{\numberline {13.1.5}\leavevmode {\color {Chapter }SCHomalgCohomology}}{177}{subsection.13.1.5}
-\contentsline {subsection}{\numberline {13.1.6}\leavevmode {\color {Chapter }SCHomalgCohomologyBasis}}{177}{subsection.13.1.6}
-\contentsline {chapter}{\numberline {14}\leavevmode {\color {Chapter }Miscellaneous functions}}{179}{chapter.14}
-\contentsline {section}{\numberline {14.1}\leavevmode {\color {Chapter }\textsf {simpcomp} logging}}{179}{section.14.1}
-\contentsline {subsection}{\numberline {14.1.1}\leavevmode {\color {Chapter }SCInfoLevel}}{179}{subsection.14.1.1}
-\contentsline {section}{\numberline {14.2}\leavevmode {\color {Chapter }Email notification system}}{180}{section.14.2}
-\contentsline {subsection}{\numberline {14.2.1}\leavevmode {\color {Chapter }SCMailClearPending}}{180}{subsection.14.2.1}
-\contentsline {subsection}{\numberline {14.2.2}\leavevmode {\color {Chapter }SCMailIsEnabled}}{180}{subsection.14.2.2}
-\contentsline {subsection}{\numberline {14.2.3}\leavevmode {\color {Chapter }SCMailIsPending}}{180}{subsection.14.2.3}
-\contentsline {subsection}{\numberline {14.2.4}\leavevmode {\color {Chapter }SCMailSend}}{181}{subsection.14.2.4}
-\contentsline {subsection}{\numberline {14.2.5}\leavevmode {\color {Chapter }SCMailSendPending}}{181}{subsection.14.2.5}
-\contentsline {subsection}{\numberline {14.2.6}\leavevmode {\color {Chapter }SCMailSetAddress}}{181}{subsection.14.2.6}
-\contentsline {subsection}{\numberline {14.2.7}\leavevmode {\color {Chapter }SCMailSetEnabled}}{181}{subsection.14.2.7}
-\contentsline {subsection}{\numberline {14.2.8}\leavevmode {\color {Chapter }SCMailSetMinInterval}}{182}{subsection.14.2.8}
-\contentsline {section}{\numberline {14.3}\leavevmode {\color {Chapter }Testing the functionality of \textsf {simpcomp}}}{182}{section.14.3}
-\contentsline {subsection}{\numberline {14.3.1}\leavevmode {\color {Chapter }SCRunTest}}{182}{subsection.14.3.1}
-\contentsline {chapter}{\numberline {15}\leavevmode {\color {Chapter }Property handlers}}{183}{chapter.15}
-\contentsline {section}{\numberline {15.1}\leavevmode {\color {Chapter }Property handlers of \texttt {SCPolyhedralComplex}}}{183}{section.15.1}
-\contentsline {section}{\numberline {15.2}\leavevmode {\color {Chapter }Property handlers of \texttt {SCSimplicialComplex}}}{184}{section.15.2}
-\contentsline {section}{\numberline {15.3}\leavevmode {\color {Chapter }Property handlers of \texttt {SCNormalSurface}}}{187}{section.15.3}
-\contentsline {section}{\numberline {15.4}\leavevmode {\color {Chapter }Property handlers of \texttt {SCLibRepository}}}{187}{section.15.4}
-\contentsline {chapter}{\numberline {16}\leavevmode {\color {Chapter }A demo session with \textsf {simpcomp}}}{188}{chapter.16}
-\contentsline {section}{\numberline {16.1}\leavevmode {\color {Chapter }Creating a \texttt {SCSimplicialComplex} object}}{188}{section.16.1}
-\contentsline {section}{\numberline {16.2}\leavevmode {\color {Chapter }Working with a \texttt {SCSimplicialComplex} object}}{190}{section.16.2}
-\contentsline {section}{\numberline {16.3}\leavevmode {\color {Chapter }Calculating properties of a \texttt {SCSimplicialComplex} object}}{190}{section.16.3}
-\contentsline {section}{\numberline {16.4}\leavevmode {\color {Chapter }Creating new complexes from a \texttt {SCSimplicialComplex} object}}{192}{section.16.4}
-\contentsline {section}{\numberline {16.5}\leavevmode {\color {Chapter }Homology related calculations}}{193}{section.16.5}
-\contentsline {section}{\numberline {16.6}\leavevmode {\color {Chapter }Bistellar flips}}{195}{section.16.6}
-\contentsline {section}{\numberline {16.7}\leavevmode {\color {Chapter }Simplicial blowups}}{197}{section.16.7}
-\contentsline {section}{\numberline {16.8}\leavevmode {\color {Chapter }Discrete normal surfaces and slicings}}{199}{section.16.8}
-\contentsline {chapter}{\numberline {17}\leavevmode {\color {Chapter }\textsf {simpcomp} internals}}{201}{chapter.17}
-\contentsline {section}{\numberline {17.1}\leavevmode {\color {Chapter }The \textsf {GAP} object type \texttt {SCPropertyObject}}}{201}{section.17.1}
-\contentsline {subsection}{\numberline {17.1.1}\leavevmode {\color {Chapter }SCProperties}}{201}{subsection.17.1.1}
-\contentsline {subsection}{\numberline {17.1.2}\leavevmode {\color {Chapter }SCPropertiesFlush}}{201}{subsection.17.1.2}
-\contentsline {subsection}{\numberline {17.1.3}\leavevmode {\color {Chapter }SCPropertiesManaged}}{201}{subsection.17.1.3}
-\contentsline {subsection}{\numberline {17.1.4}\leavevmode {\color {Chapter }SCPropertiesNames}}{202}{subsection.17.1.4}
-\contentsline {subsection}{\numberline {17.1.5}\leavevmode {\color {Chapter }SCPropertiesTmp}}{202}{subsection.17.1.5}
-\contentsline {subsection}{\numberline {17.1.6}\leavevmode {\color {Chapter }SCPropertiesTmpNames}}{202}{subsection.17.1.6}
-\contentsline {subsection}{\numberline {17.1.7}\leavevmode {\color {Chapter }SCPropertyByName}}{202}{subsection.17.1.7}
-\contentsline {subsection}{\numberline {17.1.8}\leavevmode {\color {Chapter }SCPropertyDrop}}{202}{subsection.17.1.8}
-\contentsline {subsection}{\numberline {17.1.9}\leavevmode {\color {Chapter }SCPropertyHandlersSet}}{202}{subsection.17.1.9}
-\contentsline {subsection}{\numberline {17.1.10}\leavevmode {\color {Chapter }SCPropertySet}}{203}{subsection.17.1.10}
-\contentsline {subsection}{\numberline {17.1.11}\leavevmode {\color {Chapter }SCPropertySetMutable}}{203}{subsection.17.1.11}
-\contentsline {subsection}{\numberline {17.1.12}\leavevmode {\color {Chapter }SCPropertyTmpByName}}{203}{subsection.17.1.12}
-\contentsline {subsection}{\numberline {17.1.13}\leavevmode {\color {Chapter }SCPropertyTmpDrop}}{203}{subsection.17.1.13}
-\contentsline {subsection}{\numberline {17.1.14}\leavevmode {\color {Chapter }SCPropertyTmpSet}}{203}{subsection.17.1.14}
-\contentsline {section}{\numberline {17.2}\leavevmode {\color {Chapter }Example of a common attribute}}{203}{section.17.2}
-\contentsline {section}{\numberline {17.3}\leavevmode {\color {Chapter }Writing a method for an attribute}}{205}{section.17.3}
-\contentsline {chapter}{References}{209}{chapter*.5}
-\contentsline {chapter}{Index}{210}{section*.6}
+\contentsline {section}{\numberline {6.2}\leavevmode {\color {Chapter }Isomorphism signatures}}{47}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}\leavevmode {\color {Chapter }SCExportToString}}{48}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}\leavevmode {\color {Chapter }SCExportIsoSig}}{48}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}\leavevmode {\color {Chapter }SCFromIsoSig}}{49}{subsection.6.2.3}
+\contentsline {section}{\numberline {6.3}\leavevmode {\color {Chapter }Generating some standard triangulations}}{49}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}\leavevmode {\color {Chapter }SCBdCyclicPolytope}}{49}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}\leavevmode {\color {Chapter }SCBdSimplex}}{50}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}\leavevmode {\color {Chapter }SCEmpty}}{50}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}\leavevmode {\color {Chapter }SCSimplex}}{51}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}\leavevmode {\color {Chapter }SCSeriesTorus}}{51}{subsection.6.3.5}
+\contentsline {subsection}{\numberline {6.3.6}\leavevmode {\color {Chapter }SCSurface}}{51}{subsection.6.3.6}
+\contentsline {subsection}{\numberline {6.3.7}\leavevmode {\color {Chapter }SCFVectorBdCrossPolytope}}{53}{subsection.6.3.7}
+\contentsline {subsection}{\numberline {6.3.8}\leavevmode {\color {Chapter }SCFVectorBdCyclicPolytope}}{53}{subsection.6.3.8}
+\contentsline {subsection}{\numberline {6.3.9}\leavevmode {\color {Chapter }SCFVectorBdSimplex}}{53}{subsection.6.3.9}
+\contentsline {section}{\numberline {6.4}\leavevmode {\color {Chapter }Generating infinite series of transitive triangulations}}{54}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}\leavevmode {\color {Chapter }SCSeriesAGL}}{54}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}\leavevmode {\color {Chapter }SCSeriesBrehmKuehnelTorus}}{55}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}\leavevmode {\color {Chapter }SCSeriesBdHandleBody}}{56}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.4}\leavevmode {\color {Chapter }SCSeriesBid}}{57}{subsection.6.4.4}
+\contentsline {subsection}{\numberline {6.4.5}\leavevmode {\color {Chapter }SCSeriesC2n}}{57}{subsection.6.4.5}
+\contentsline {subsection}{\numberline {6.4.6}\leavevmode {\color {Chapter }SCSeriesConnectedSum}}{58}{subsection.6.4.6}
+\contentsline {subsection}{\numberline {6.4.7}\leavevmode {\color {Chapter }SCSeriesCSTSurface}}{59}{subsection.6.4.7}
+\contentsline {subsection}{\numberline {6.4.8}\leavevmode {\color {Chapter }SCSeriesD2n}}{60}{subsection.6.4.8}
+\contentsline {subsection}{\numberline {6.4.9}\leavevmode {\color {Chapter }SCSeriesHandleBody}}{61}{subsection.6.4.9}
+\contentsline {subsection}{\numberline {6.4.10}\leavevmode {\color {Chapter }SCSeriesHomologySphere}}{61}{subsection.6.4.10}
+\contentsline {subsection}{\numberline {6.4.11}\leavevmode {\color {Chapter }SCSeriesK}}{62}{subsection.6.4.11}
+\contentsline {subsection}{\numberline {6.4.12}\leavevmode {\color {Chapter }SCSeriesKu}}{62}{subsection.6.4.12}
+\contentsline {subsection}{\numberline {6.4.13}\leavevmode {\color {Chapter }SCSeriesL}}{63}{subsection.6.4.13}
+\contentsline {subsection}{\numberline {6.4.14}\leavevmode {\color {Chapter }SCSeriesLe}}{63}{subsection.6.4.14}
+\contentsline {subsection}{\numberline {6.4.15}\leavevmode {\color {Chapter }SCSeriesLensSpace}}{64}{subsection.6.4.15}
+\contentsline {subsection}{\numberline {6.4.16}\leavevmode {\color {Chapter }SCSeriesPrimeTorus}}{65}{subsection.6.4.16}
+\contentsline {subsection}{\numberline {6.4.17}\leavevmode {\color {Chapter }SCSeriesSeifertFibredSpace}}{65}{subsection.6.4.17}
+\contentsline {subsection}{\numberline {6.4.18}\leavevmode {\color {Chapter }SCSeriesS2xS2}}{66}{subsection.6.4.18}
+\contentsline {section}{\numberline {6.5}\leavevmode {\color {Chapter }A census of regular and chiral maps}}{66}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}\leavevmode {\color {Chapter }SCChiralMap}}{66}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}\leavevmode {\color {Chapter }SCChiralMaps}}{67}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}\leavevmode {\color {Chapter }SCChiralTori}}{67}{subsection.6.5.3}
+\contentsline {subsection}{\numberline {6.5.4}\leavevmode {\color {Chapter }SCNrChiralTori}}{68}{subsection.6.5.4}
+\contentsline {subsection}{\numberline {6.5.5}\leavevmode {\color {Chapter }SCNrRegularTorus}}{68}{subsection.6.5.5}
+\contentsline {subsection}{\numberline {6.5.6}\leavevmode {\color {Chapter }SCRegularMap}}{68}{subsection.6.5.6}
+\contentsline {subsection}{\numberline {6.5.7}\leavevmode {\color {Chapter }SCRegularMaps}}{69}{subsection.6.5.7}
+\contentsline {subsection}{\numberline {6.5.8}\leavevmode {\color {Chapter }SCRegularTorus}}{70}{subsection.6.5.8}
+\contentsline {subsection}{\numberline {6.5.9}\leavevmode {\color {Chapter }SCSeriesSymmetricTorus}}{70}{subsection.6.5.9}
+\contentsline {section}{\numberline {6.6}\leavevmode {\color {Chapter }Generating new complexes from old}}{71}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}\leavevmode {\color {Chapter }SCCartesianPower}}{71}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}\leavevmode {\color {Chapter }SCCartesianProduct}}{71}{subsection.6.6.2}
+\contentsline {subsection}{\numberline {6.6.3}\leavevmode {\color {Chapter }SCConnectedComponents}}{72}{subsection.6.6.3}
+\contentsline {subsection}{\numberline {6.6.4}\leavevmode {\color {Chapter }SCConnectedProduct}}{73}{subsection.6.6.4}
+\contentsline {subsection}{\numberline {6.6.5}\leavevmode {\color {Chapter }SCConnectedSum}}{73}{subsection.6.6.5}
+\contentsline {subsection}{\numberline {6.6.6}\leavevmode {\color {Chapter }SCConnectedSumMinus}}{74}{subsection.6.6.6}
+\contentsline {subsection}{\numberline {6.6.7}\leavevmode {\color {Chapter }SCDifferenceCycleCompress}}{75}{subsection.6.6.7}
+\contentsline {subsection}{\numberline {6.6.8}\leavevmode {\color {Chapter }SCDifferenceCycleExpand}}{76}{subsection.6.6.8}
+\contentsline {subsection}{\numberline {6.6.9}\leavevmode {\color {Chapter }SCStronglyConnectedComponents}}{76}{subsection.6.6.9}
+\contentsline {section}{\numberline {6.7}\leavevmode {\color {Chapter }Simplicial complexes from transitive permutation groups}}{77}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}\leavevmode {\color {Chapter }SCsFromGroupExt}}{77}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.7.2}\leavevmode {\color {Chapter }SCsFromGroupByTransitivity}}{78}{subsection.6.7.2}
+\contentsline {section}{\numberline {6.8}\leavevmode {\color {Chapter }The classification of cyclic combinatorial 3-manifolds}}{79}{section.6.8}
+\contentsline {subsection}{\numberline {6.8.1}\leavevmode {\color {Chapter }SCNrCyclic3Mflds}}{79}{subsection.6.8.1}
+\contentsline {subsection}{\numberline {6.8.2}\leavevmode {\color {Chapter }SCCyclic3MfldTopTypes}}{79}{subsection.6.8.2}
+\contentsline {subsection}{\numberline {6.8.3}\leavevmode {\color {Chapter }SCCyclic3Mfld}}{79}{subsection.6.8.3}
+\contentsline {subsection}{\numberline {6.8.4}\leavevmode {\color {Chapter }SCCyclic3MfldByType}}{80}{subsection.6.8.4}
+\contentsline {subsection}{\numberline {6.8.5}\leavevmode {\color {Chapter }SCCyclic3MfldListOfGivenType}}{80}{subsection.6.8.5}
+\contentsline {section}{\numberline {6.9}\leavevmode {\color {Chapter }Computing properties of simplicial complexes}}{81}{section.6.9}
+\contentsline {subsection}{\numberline {6.9.1}\leavevmode {\color {Chapter }SCAltshulerSteinberg}}{81}{subsection.6.9.1}
+\contentsline {subsection}{\numberline {6.9.2}\leavevmode {\color {Chapter }SCAutomorphismGroup}}{82}{subsection.6.9.2}
+\contentsline {subsection}{\numberline {6.9.3}\leavevmode {\color {Chapter }SCAutomorphismGroupInternal}}{82}{subsection.6.9.3}
+\contentsline {subsection}{\numberline {6.9.4}\leavevmode {\color {Chapter }SCAutomorphismGroupSize}}{83}{subsection.6.9.4}
+\contentsline {subsection}{\numberline {6.9.5}\leavevmode {\color {Chapter }SCAutomorphismGroupStructure}}{83}{subsection.6.9.5}
+\contentsline {subsection}{\numberline {6.9.6}\leavevmode {\color {Chapter }SCAutomorphismGroupTransitivity}}{83}{subsection.6.9.6}
+\contentsline {subsection}{\numberline {6.9.7}\leavevmode {\color {Chapter }SCBoundary}}{83}{subsection.6.9.7}
+\contentsline {subsection}{\numberline {6.9.8}\leavevmode {\color {Chapter }SCDehnSommervilleCheck}}{84}{subsection.6.9.8}
+\contentsline {subsection}{\numberline {6.9.9}\leavevmode {\color {Chapter }SCDehnSommervilleMatrix}}{85}{subsection.6.9.9}
+\contentsline {subsection}{\numberline {6.9.10}\leavevmode {\color {Chapter }SCDifferenceCycles}}{85}{subsection.6.9.10}
+\contentsline {subsection}{\numberline {6.9.11}\leavevmode {\color {Chapter }SCDim}}{85}{subsection.6.9.11}
+\contentsline {subsection}{\numberline {6.9.12}\leavevmode {\color {Chapter }SCDualGraph}}{86}{subsection.6.9.12}
+\contentsline {subsection}{\numberline {6.9.13}\leavevmode {\color {Chapter }SCEulerCharacteristic}}{86}{subsection.6.9.13}
+\contentsline {subsection}{\numberline {6.9.14}\leavevmode {\color {Chapter }SCFVector}}{87}{subsection.6.9.14}
+\contentsline {subsection}{\numberline {6.9.15}\leavevmode {\color {Chapter }SCFaceLattice}}{87}{subsection.6.9.15}
+\contentsline {subsection}{\numberline {6.9.16}\leavevmode {\color {Chapter }SCFaceLatticeEx}}{87}{subsection.6.9.16}
+\contentsline {subsection}{\numberline {6.9.17}\leavevmode {\color {Chapter }SCFaces}}{87}{subsection.6.9.17}
+\contentsline {subsection}{\numberline {6.9.18}\leavevmode {\color {Chapter }SCFacesEx}}{88}{subsection.6.9.18}
+\contentsline {subsection}{\numberline {6.9.19}\leavevmode {\color {Chapter }SCFacets}}{88}{subsection.6.9.19}
+\contentsline {subsection}{\numberline {6.9.20}\leavevmode {\color {Chapter }SCFacetsEx}}{88}{subsection.6.9.20}
+\contentsline {subsection}{\numberline {6.9.21}\leavevmode {\color {Chapter }SCFpBettiNumbers}}{88}{subsection.6.9.21}
+\contentsline {subsection}{\numberline {6.9.22}\leavevmode {\color {Chapter }SCFundamentalGroup}}{89}{subsection.6.9.22}
+\contentsline {subsection}{\numberline {6.9.23}\leavevmode {\color {Chapter }SCGVector}}{90}{subsection.6.9.23}
+\contentsline {subsection}{\numberline {6.9.24}\leavevmode {\color {Chapter }SCGenerators}}{90}{subsection.6.9.24}
+\contentsline {subsection}{\numberline {6.9.25}\leavevmode {\color {Chapter }SCGeneratorsEx}}{91}{subsection.6.9.25}
+\contentsline {subsection}{\numberline {6.9.26}\leavevmode {\color {Chapter }SCHVector}}{92}{subsection.6.9.26}
+\contentsline {subsection}{\numberline {6.9.27}\leavevmode {\color {Chapter }SCHasBoundary}}{93}{subsection.6.9.27}
+\contentsline {subsection}{\numberline {6.9.28}\leavevmode {\color {Chapter }SCHasInterior}}{93}{subsection.6.9.28}
+\contentsline {subsection}{\numberline {6.9.29}\leavevmode {\color {Chapter }SCHeegaardSplittingSmallGenus}}{93}{subsection.6.9.29}
+\contentsline {subsection}{\numberline {6.9.30}\leavevmode {\color {Chapter }SCHeegaardSplitting}}{94}{subsection.6.9.30}
+\contentsline {subsection}{\numberline {6.9.31}\leavevmode {\color {Chapter }SCHomology}}{94}{subsection.6.9.31}
+\contentsline {subsection}{\numberline {6.9.32}\leavevmode {\color {Chapter }SCIncidences}}{95}{subsection.6.9.32}
+\contentsline {subsection}{\numberline {6.9.33}\leavevmode {\color {Chapter }SCIncidencesEx}}{95}{subsection.6.9.33}
+\contentsline {subsection}{\numberline {6.9.34}\leavevmode {\color {Chapter }SCInterior}}{96}{subsection.6.9.34}
+\contentsline {subsection}{\numberline {6.9.35}\leavevmode {\color {Chapter }SCIsCentrallySymmetric}}{96}{subsection.6.9.35}
+\contentsline {subsection}{\numberline {6.9.36}\leavevmode {\color {Chapter }SCIsConnected}}{96}{subsection.6.9.36}
+\contentsline {subsection}{\numberline {6.9.37}\leavevmode {\color {Chapter }SCIsEmpty}}{97}{subsection.6.9.37}
+\contentsline {subsection}{\numberline {6.9.38}\leavevmode {\color {Chapter }SCIsEulerianManifold}}{97}{subsection.6.9.38}
+\contentsline {subsection}{\numberline {6.9.39}\leavevmode {\color {Chapter }SCIsFlag}}{98}{subsection.6.9.39}
+\contentsline {subsection}{\numberline {6.9.40}\leavevmode {\color {Chapter }SCIsHeegaardSplitting}}{98}{subsection.6.9.40}
+\contentsline {subsection}{\numberline {6.9.41}\leavevmode {\color {Chapter }SCIsHomologySphere}}{99}{subsection.6.9.41}
+\contentsline {subsection}{\numberline {6.9.42}\leavevmode {\color {Chapter }SCIsInKd}}{99}{subsection.6.9.42}
+\contentsline {subsection}{\numberline {6.9.43}\leavevmode {\color {Chapter }SCIsKNeighborly}}{99}{subsection.6.9.43}
+\contentsline {subsection}{\numberline {6.9.44}\leavevmode {\color {Chapter }SCIsOrientable}}{100}{subsection.6.9.44}
+\contentsline {subsection}{\numberline {6.9.45}\leavevmode {\color {Chapter }SCIsPseudoManifold}}{100}{subsection.6.9.45}
+\contentsline {subsection}{\numberline {6.9.46}\leavevmode {\color {Chapter }SCIsPure}}{100}{subsection.6.9.46}
+\contentsline {subsection}{\numberline {6.9.47}\leavevmode {\color {Chapter }SCIsShellable}}{100}{subsection.6.9.47}
+\contentsline {subsection}{\numberline {6.9.48}\leavevmode {\color {Chapter }SCIsStronglyConnected}}{101}{subsection.6.9.48}
+\contentsline {subsection}{\numberline {6.9.49}\leavevmode {\color {Chapter }SCMinimalNonFaces}}{101}{subsection.6.9.49}
+\contentsline {subsection}{\numberline {6.9.50}\leavevmode {\color {Chapter }SCMinimalNonFacesEx}}{102}{subsection.6.9.50}
+\contentsline {subsection}{\numberline {6.9.51}\leavevmode {\color {Chapter }SCNeighborliness}}{102}{subsection.6.9.51}
+\contentsline {subsection}{\numberline {6.9.52}\leavevmode {\color {Chapter }SCNumFaces}}{102}{subsection.6.9.52}
+\contentsline {subsection}{\numberline {6.9.53}\leavevmode {\color {Chapter }SCOrientation}}{103}{subsection.6.9.53}
+\contentsline {subsection}{\numberline {6.9.54}\leavevmode {\color {Chapter }SCSkel}}{103}{subsection.6.9.54}
+\contentsline {subsection}{\numberline {6.9.55}\leavevmode {\color {Chapter }SCSkelEx}}{103}{subsection.6.9.55}
+\contentsline {subsection}{\numberline {6.9.56}\leavevmode {\color {Chapter }SCSpanningTree}}{104}{subsection.6.9.56}
+\contentsline {section}{\numberline {6.10}\leavevmode {\color {Chapter }Operations on simplicial complexes}}{104}{section.6.10}
+\contentsline {subsection}{\numberline {6.10.1}\leavevmode {\color {Chapter }SCAlexanderDual}}{104}{subsection.6.10.1}
+\contentsline {subsection}{\numberline {6.10.2}\leavevmode {\color {Chapter }SCClose}}{105}{subsection.6.10.2}
+\contentsline {subsection}{\numberline {6.10.3}\leavevmode {\color {Chapter }SCCollapseGreedy}}{105}{subsection.6.10.3}
+\contentsline {subsection}{\numberline {6.10.4}\leavevmode {\color {Chapter }SCCone}}{106}{subsection.6.10.4}
+\contentsline {subsection}{\numberline {6.10.5}\leavevmode {\color {Chapter }SCDeletedJoin}}{107}{subsection.6.10.5}
+\contentsline {subsection}{\numberline {6.10.6}\leavevmode {\color {Chapter }SCDifference}}{107}{subsection.6.10.6}
+\contentsline {subsection}{\numberline {6.10.7}\leavevmode {\color {Chapter }SCFillSphere}}{108}{subsection.6.10.7}
+\contentsline {subsection}{\numberline {6.10.8}\leavevmode {\color {Chapter }SCHandleAddition}}{109}{subsection.6.10.8}
+\contentsline {subsection}{\numberline {6.10.9}\leavevmode {\color {Chapter }SCIntersection}}{109}{subsection.6.10.9}
+\contentsline {subsection}{\numberline {6.10.10}\leavevmode {\color {Chapter }SCIsIsomorphic}}{110}{subsection.6.10.10}
+\contentsline {subsection}{\numberline {6.10.11}\leavevmode {\color {Chapter }SCIsSubcomplex}}{110}{subsection.6.10.11}
+\contentsline {subsection}{\numberline {6.10.12}\leavevmode {\color {Chapter }SCIsomorphism}}{110}{subsection.6.10.12}
+\contentsline {subsection}{\numberline {6.10.13}\leavevmode {\color {Chapter }SCIsomorphismEx}}{111}{subsection.6.10.13}
+\contentsline {subsection}{\numberline {6.10.14}\leavevmode {\color {Chapter }SCJoin}}{111}{subsection.6.10.14}
+\contentsline {subsection}{\numberline {6.10.15}\leavevmode {\color {Chapter }SCNeighbors}}{112}{subsection.6.10.15}
+\contentsline {subsection}{\numberline {6.10.16}\leavevmode {\color {Chapter }SCNeighborsEx}}{113}{subsection.6.10.16}
+\contentsline {subsection}{\numberline {6.10.17}\leavevmode {\color {Chapter }SCShelling}}{113}{subsection.6.10.17}
+\contentsline {subsection}{\numberline {6.10.18}\leavevmode {\color {Chapter }SCShellingExt}}{113}{subsection.6.10.18}
+\contentsline {subsection}{\numberline {6.10.19}\leavevmode {\color {Chapter }SCShellings}}{114}{subsection.6.10.19}
+\contentsline {subsection}{\numberline {6.10.20}\leavevmode {\color {Chapter }SCSpan}}{114}{subsection.6.10.20}
+\contentsline {subsection}{\numberline {6.10.21}\leavevmode {\color {Chapter }SCSuspension}}{115}{subsection.6.10.21}
+\contentsline {subsection}{\numberline {6.10.22}\leavevmode {\color {Chapter }SCUnion}}{116}{subsection.6.10.22}
+\contentsline {subsection}{\numberline {6.10.23}\leavevmode {\color {Chapter }SCVertexIdentification}}{117}{subsection.6.10.23}
+\contentsline {subsection}{\numberline {6.10.24}\leavevmode {\color {Chapter }SCWedge}}{117}{subsection.6.10.24}
+\contentsline {chapter}{\numberline {7}\leavevmode {\color {Chapter }Functions and operations for \texttt {SCNormalSurface}}}{118}{chapter.7}
+\contentsline {section}{\numberline {7.1}\leavevmode {\color {Chapter }Creating an \texttt {SCNormalSurface} object}}{118}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}\leavevmode {\color {Chapter }SCNSEmpty}}{118}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}\leavevmode {\color {Chapter }SCNSFromFacets}}{118}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}\leavevmode {\color {Chapter }SCNS}}{119}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}\leavevmode {\color {Chapter }SCNSSlicing}}{119}{subsection.7.1.4}
+\contentsline {section}{\numberline {7.2}\leavevmode {\color {Chapter }Generating new objects from discrete normal surfaces}}{121}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}\leavevmode {\color {Chapter }SCCopy}}{121}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}\leavevmode {\color {Chapter }SCNSTriangulation}}{122}{subsection.7.2.2}
+\contentsline {section}{\numberline {7.3}\leavevmode {\color {Chapter }Properties of \texttt {SCNormalSurface} objects}}{122}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}\leavevmode {\color {Chapter }SCConnectedComponents}}{122}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}\leavevmode {\color {Chapter }SCDim}}{123}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}\leavevmode {\color {Chapter }SCEulerCharacteristic}}{123}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.4}\leavevmode {\color {Chapter }SCFVector}}{124}{subsection.7.3.4}
+\contentsline {subsection}{\numberline {7.3.5}\leavevmode {\color {Chapter }SCFaceLattice}}{124}{subsection.7.3.5}
+\contentsline {subsection}{\numberline {7.3.6}\leavevmode {\color {Chapter }SCFaceLatticeEx}}{124}{subsection.7.3.6}
+\contentsline {subsection}{\numberline {7.3.7}\leavevmode {\color {Chapter }SCFpBettiNumbers}}{125}{subsection.7.3.7}
+\contentsline {subsection}{\numberline {7.3.8}\leavevmode {\color {Chapter }SCGenus}}{125}{subsection.7.3.8}
+\contentsline {subsection}{\numberline {7.3.9}\leavevmode {\color {Chapter }SCHomology}}{126}{subsection.7.3.9}
+\contentsline {subsection}{\numberline {7.3.10}\leavevmode {\color {Chapter }SCIsConnected}}{126}{subsection.7.3.10}
+\contentsline {subsection}{\numberline {7.3.11}\leavevmode {\color {Chapter }SCIsEmpty}}{127}{subsection.7.3.11}
+\contentsline {subsection}{\numberline {7.3.12}\leavevmode {\color {Chapter }SCIsOrientable}}{127}{subsection.7.3.12}
+\contentsline {subsection}{\numberline {7.3.13}\leavevmode {\color {Chapter }SCSkel}}{128}{subsection.7.3.13}
+\contentsline {subsection}{\numberline {7.3.14}\leavevmode {\color {Chapter }SCSkelEx}}{128}{subsection.7.3.14}
+\contentsline {subsection}{\numberline {7.3.15}\leavevmode {\color {Chapter }SCTopologicalType}}{129}{subsection.7.3.15}
+\contentsline {subsection}{\numberline {7.3.16}\leavevmode {\color {Chapter }SCUnion}}{130}{subsection.7.3.16}
+\contentsline {chapter}{\numberline {8}\leavevmode {\color {Chapter }(Co-)Homology of simplicial complexes}}{132}{chapter.8}
+\contentsline {section}{\numberline {8.1}\leavevmode {\color {Chapter }Homology computation}}{132}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}\leavevmode {\color {Chapter }SCBoundaryOperatorMatrix}}{132}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}\leavevmode {\color {Chapter }SCBoundarySimplex}}{132}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}\leavevmode {\color {Chapter }SCHomologyBasis}}{133}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}\leavevmode {\color {Chapter }SCHomologyBasisAsSimplices}}{133}{subsection.8.1.4}
+\contentsline {subsection}{\numberline {8.1.5}\leavevmode {\color {Chapter }SCHomologyInternal}}{134}{subsection.8.1.5}
+\contentsline {section}{\numberline {8.2}\leavevmode {\color {Chapter }Cohomology computation}}{134}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}\leavevmode {\color {Chapter }SCCoboundaryOperatorMatrix}}{134}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}\leavevmode {\color {Chapter }SCCohomology}}{135}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}\leavevmode {\color {Chapter }SCCohomologyBasis}}{135}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}\leavevmode {\color {Chapter }SCCohomologyBasisAsSimplices}}{136}{subsection.8.2.4}
+\contentsline {subsection}{\numberline {8.2.5}\leavevmode {\color {Chapter }SCCupProduct}}{138}{subsection.8.2.5}
+\contentsline {subsection}{\numberline {8.2.6}\leavevmode {\color {Chapter }SCIntersectionForm}}{138}{subsection.8.2.6}
+\contentsline {subsection}{\numberline {8.2.7}\leavevmode {\color {Chapter }SCIntersectionFormParity}}{139}{subsection.8.2.7}
+\contentsline {subsection}{\numberline {8.2.8}\leavevmode {\color {Chapter }SCIntersectionFormDimensionality}}{139}{subsection.8.2.8}
+\contentsline {subsection}{\numberline {8.2.9}\leavevmode {\color {Chapter }SCIntersectionFormSignature}}{140}{subsection.8.2.9}
+\contentsline {chapter}{\numberline {9}\leavevmode {\color {Chapter }Bistellar flips}}{141}{chapter.9}
+\contentsline {section}{\numberline {9.1}\leavevmode {\color {Chapter }Theory}}{141}{section.9.1}
+\contentsline {section}{\numberline {9.2}\leavevmode {\color {Chapter }Functions for bistellar flips}}{143}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}\leavevmode {\color {Chapter }SCBistellarOptions}}{143}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}\leavevmode {\color {Chapter }SCEquivalent}}{144}{subsection.9.2.2}
+\contentsline {subsection}{\numberline {9.2.3}\leavevmode {\color {Chapter }SCExamineComplexBistellar}}{144}{subsection.9.2.3}
+\contentsline {subsection}{\numberline {9.2.4}\leavevmode {\color {Chapter }SCIntFunc.SCChooseMove}}{145}{subsection.9.2.4}
+\contentsline {subsection}{\numberline {9.2.5}\leavevmode {\color {Chapter }SCIsKStackedSphere}}{145}{subsection.9.2.5}
+\contentsline {subsection}{\numberline {9.2.6}\leavevmode {\color {Chapter }SCIsManifold}}{146}{subsection.9.2.6}
+\contentsline {subsection}{\numberline {9.2.7}\leavevmode {\color {Chapter }SCIsMovableComplex}}{147}{subsection.9.2.7}
+\contentsline {subsection}{\numberline {9.2.8}\leavevmode {\color {Chapter }SCMove}}{147}{subsection.9.2.8}
+\contentsline {subsection}{\numberline {9.2.9}\leavevmode {\color {Chapter }SCMoves}}{148}{subsection.9.2.9}
+\contentsline {subsection}{\numberline {9.2.10}\leavevmode {\color {Chapter }SCRMoves}}{148}{subsection.9.2.10}
+\contentsline {subsection}{\numberline {9.2.11}\leavevmode {\color {Chapter }SCRandomize}}{149}{subsection.9.2.11}
+\contentsline {subsection}{\numberline {9.2.12}\leavevmode {\color {Chapter }SCReduceAsSubcomplex}}{149}{subsection.9.2.12}
+\contentsline {subsection}{\numberline {9.2.13}\leavevmode {\color {Chapter }SCReduceComplex}}{150}{subsection.9.2.13}
+\contentsline {subsection}{\numberline {9.2.14}\leavevmode {\color {Chapter }SCReduceComplexEx}}{150}{subsection.9.2.14}
+\contentsline {subsection}{\numberline {9.2.15}\leavevmode {\color {Chapter }SCReduceComplexFast}}{153}{subsection.9.2.15}
+\contentsline {chapter}{\numberline {10}\leavevmode {\color {Chapter }Simplicial blowups}}{154}{chapter.10}
+\contentsline {section}{\numberline {10.1}\leavevmode {\color {Chapter }Theory}}{154}{section.10.1}
+\contentsline {section}{\numberline {10.2}\leavevmode {\color {Chapter }Functions related to simplicial blowups}}{154}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}\leavevmode {\color {Chapter }SCBlowup}}{154}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}\leavevmode {\color {Chapter }SCMappingCylinder}}{156}{subsection.10.2.2}
+\contentsline {chapter}{\numberline {11}\leavevmode {\color {Chapter }Polyhedral Morse theory}}{157}{chapter.11}
+\contentsline {section}{\numberline {11.1}\leavevmode {\color {Chapter }Polyhedral Morse theory related functions}}{157}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}\leavevmode {\color {Chapter }SCIsTight}}{157}{subsection.11.1.1}
+\contentsline {subsection}{\numberline {11.1.2}\leavevmode {\color {Chapter }SCMorseIsPerfect}}{162}{subsection.11.1.2}
+\contentsline {subsection}{\numberline {11.1.3}\leavevmode {\color {Chapter }SCSlicing}}{162}{subsection.11.1.3}
+\contentsline {subsection}{\numberline {11.1.4}\leavevmode {\color {Chapter }SCMorseMultiplicityVector}}{163}{subsection.11.1.4}
+\contentsline {subsection}{\numberline {11.1.5}\leavevmode {\color {Chapter }SCMorseNumberOfCriticalPoints}}{163}{subsection.11.1.5}
+\contentsline {chapter}{\numberline {12}\leavevmode {\color {Chapter }Library and I/O}}{164}{chapter.12}
+\contentsline {section}{\numberline {12.1}\leavevmode {\color {Chapter }Simplicial complex library}}{164}{section.12.1}
+\contentsline {subsection}{\numberline {12.1.1}\leavevmode {\color {Chapter }SCIsLibRepository}}{164}{subsection.12.1.1}
+\contentsline {subsection}{\numberline {12.1.2}\leavevmode {\color {Chapter }SCLib}}{164}{subsection.12.1.2}
+\contentsline {subsection}{\numberline {12.1.3}\leavevmode {\color {Chapter }SCLibAdd}}{166}{subsection.12.1.3}
+\contentsline {subsection}{\numberline {12.1.4}\leavevmode {\color {Chapter }SCLibAllComplexes}}{166}{subsection.12.1.4}
+\contentsline {subsection}{\numberline {12.1.5}\leavevmode {\color {Chapter }SCLibDelete}}{167}{subsection.12.1.5}
+\contentsline {subsection}{\numberline {12.1.6}\leavevmode {\color {Chapter }SCLibDetermineTopologicalType}}{167}{subsection.12.1.6}
+\contentsline {subsection}{\numberline {12.1.7}\leavevmode {\color {Chapter }SCLibFlush}}{168}{subsection.12.1.7}
+\contentsline {subsection}{\numberline {12.1.8}\leavevmode {\color {Chapter }SCLibInit}}{168}{subsection.12.1.8}
+\contentsline {subsection}{\numberline {12.1.9}\leavevmode {\color {Chapter }SCLibIsLoaded}}{169}{subsection.12.1.9}
+\contentsline {subsection}{\numberline {12.1.10}\leavevmode {\color {Chapter }SCLibSearchByAttribute}}{169}{subsection.12.1.10}
+\contentsline {subsection}{\numberline {12.1.11}\leavevmode {\color {Chapter }SCLibSearchByName}}{169}{subsection.12.1.11}
+\contentsline {subsection}{\numberline {12.1.12}\leavevmode {\color {Chapter }SCLibSize}}{170}{subsection.12.1.12}
+\contentsline {subsection}{\numberline {12.1.13}\leavevmode {\color {Chapter }SCLibUpdate}}{170}{subsection.12.1.13}
+\contentsline {subsection}{\numberline {12.1.14}\leavevmode {\color {Chapter }SCLibStatus}}{170}{subsection.12.1.14}
+\contentsline {section}{\numberline {12.2}\leavevmode {\color {Chapter }\textsf {simpcomp} input / output functions}}{171}{section.12.2}
+\contentsline {subsection}{\numberline {12.2.1}\leavevmode {\color {Chapter }SCLoad}}{171}{subsection.12.2.1}
+\contentsline {subsection}{\numberline {12.2.2}\leavevmode {\color {Chapter }SCLoadXML}}{172}{subsection.12.2.2}
+\contentsline {subsection}{\numberline {12.2.3}\leavevmode {\color {Chapter }SCSave}}{172}{subsection.12.2.3}
+\contentsline {subsection}{\numberline {12.2.4}\leavevmode {\color {Chapter }SCSaveXML}}{173}{subsection.12.2.4}
+\contentsline {subsection}{\numberline {12.2.5}\leavevmode {\color {Chapter }SCExportMacaulay2}}{173}{subsection.12.2.5}
+\contentsline {subsection}{\numberline {12.2.6}\leavevmode {\color {Chapter }SCExportPolymake}}{173}{subsection.12.2.6}
+\contentsline {subsection}{\numberline {12.2.7}\leavevmode {\color {Chapter }SCImportPolymake}}{173}{subsection.12.2.7}
+\contentsline {subsection}{\numberline {12.2.8}\leavevmode {\color {Chapter }SCExportLatexTable}}{174}{subsection.12.2.8}
+\contentsline {subsection}{\numberline {12.2.9}\leavevmode {\color {Chapter }SCExportJavaView}}{174}{subsection.12.2.9}
+\contentsline {subsection}{\numberline {12.2.10}\leavevmode {\color {Chapter }SCExportPolymake}}{175}{subsection.12.2.10}
+\contentsline {subsection}{\numberline {12.2.11}\leavevmode {\color {Chapter }SCExportSnapPy}}{175}{subsection.12.2.11}
+\contentsline {chapter}{\numberline {13}\leavevmode {\color {Chapter }Interfaces to other software packages}}{176}{chapter.13}
+\contentsline {section}{\numberline {13.1}\leavevmode {\color {Chapter }Interface to the \textsf {GAP}-package \textsf {homalg}}}{176}{section.13.1}
+\contentsline {subsection}{\numberline {13.1.1}\leavevmode {\color {Chapter }SCHomalgBoundaryMatrices}}{176}{subsection.13.1.1}
+\contentsline {subsection}{\numberline {13.1.2}\leavevmode {\color {Chapter }SCHomalgCoboundaryMatrices}}{177}{subsection.13.1.2}
+\contentsline {subsection}{\numberline {13.1.3}\leavevmode {\color {Chapter }SCHomalgHomology}}{177}{subsection.13.1.3}
+\contentsline {subsection}{\numberline {13.1.4}\leavevmode {\color {Chapter }SCHomalgHomologyBasis}}{177}{subsection.13.1.4}
+\contentsline {subsection}{\numberline {13.1.5}\leavevmode {\color {Chapter }SCHomalgCohomology}}{178}{subsection.13.1.5}
+\contentsline {subsection}{\numberline {13.1.6}\leavevmode {\color {Chapter }SCHomalgCohomologyBasis}}{178}{subsection.13.1.6}
+\contentsline {chapter}{\numberline {14}\leavevmode {\color {Chapter }Miscellaneous functions}}{180}{chapter.14}
+\contentsline {section}{\numberline {14.1}\leavevmode {\color {Chapter }\textsf {simpcomp} logging}}{180}{section.14.1}
+\contentsline {subsection}{\numberline {14.1.1}\leavevmode {\color {Chapter }SCInfoLevel}}{180}{subsection.14.1.1}
+\contentsline {section}{\numberline {14.2}\leavevmode {\color {Chapter }Email notification system}}{181}{section.14.2}
+\contentsline {subsection}{\numberline {14.2.1}\leavevmode {\color {Chapter }SCMailClearPending}}{181}{subsection.14.2.1}
+\contentsline {subsection}{\numberline {14.2.2}\leavevmode {\color {Chapter }SCMailIsEnabled}}{181}{subsection.14.2.2}
+\contentsline {subsection}{\numberline {14.2.3}\leavevmode {\color {Chapter }SCMailIsPending}}{181}{subsection.14.2.3}
+\contentsline {subsection}{\numberline {14.2.4}\leavevmode {\color {Chapter }SCMailSend}}{182}{subsection.14.2.4}
+\contentsline {subsection}{\numberline {14.2.5}\leavevmode {\color {Chapter }SCMailSendPending}}{182}{subsection.14.2.5}
+\contentsline {subsection}{\numberline {14.2.6}\leavevmode {\color {Chapter }SCMailSetAddress}}{182}{subsection.14.2.6}
+\contentsline {subsection}{\numberline {14.2.7}\leavevmode {\color {Chapter }SCMailSetEnabled}}{182}{subsection.14.2.7}
+\contentsline {subsection}{\numberline {14.2.8}\leavevmode {\color {Chapter }SCMailSetMinInterval}}{183}{subsection.14.2.8}
+\contentsline {section}{\numberline {14.3}\leavevmode {\color {Chapter }Testing the functionality of \textsf {simpcomp}}}{183}{section.14.3}
+\contentsline {subsection}{\numberline {14.3.1}\leavevmode {\color {Chapter }SCRunTest}}{183}{subsection.14.3.1}
+\contentsline {chapter}{\numberline {15}\leavevmode {\color {Chapter }Property handlers}}{184}{chapter.15}
+\contentsline {section}{\numberline {15.1}\leavevmode {\color {Chapter }Property handlers of \texttt {SCPolyhedralComplex}}}{184}{section.15.1}
+\contentsline {section}{\numberline {15.2}\leavevmode {\color {Chapter }Property handlers of \texttt {SCSimplicialComplex}}}{185}{section.15.2}
+\contentsline {section}{\numberline {15.3}\leavevmode {\color {Chapter }Property handlers of \texttt {SCNormalSurface}}}{188}{section.15.3}
+\contentsline {section}{\numberline {15.4}\leavevmode {\color {Chapter }Property handlers of \texttt {SCLibRepository}}}{188}{section.15.4}
+\contentsline {chapter}{\numberline {16}\leavevmode {\color {Chapter }A demo session with \textsf {simpcomp}}}{189}{chapter.16}
+\contentsline {section}{\numberline {16.1}\leavevmode {\color {Chapter }Creating a \texttt {SCSimplicialComplex} object}}{189}{section.16.1}
+\contentsline {section}{\numberline {16.2}\leavevmode {\color {Chapter }Working with a \texttt {SCSimplicialComplex} object}}{191}{section.16.2}
+\contentsline {section}{\numberline {16.3}\leavevmode {\color {Chapter }Calculating properties of a \texttt {SCSimplicialComplex} object}}{191}{section.16.3}
+\contentsline {section}{\numberline {16.4}\leavevmode {\color {Chapter }Creating new complexes from a \texttt {SCSimplicialComplex} object}}{193}{section.16.4}
+\contentsline {section}{\numberline {16.5}\leavevmode {\color {Chapter }Homology related calculations}}{194}{section.16.5}
+\contentsline {section}{\numberline {16.6}\leavevmode {\color {Chapter }Bistellar flips}}{196}{section.16.6}
+\contentsline {section}{\numberline {16.7}\leavevmode {\color {Chapter }Simplicial blowups}}{198}{section.16.7}
+\contentsline {section}{\numberline {16.8}\leavevmode {\color {Chapter }Discrete normal surfaces and slicings}}{200}{section.16.8}
+\contentsline {chapter}{\numberline {17}\leavevmode {\color {Chapter }\textsf {simpcomp} internals}}{202}{chapter.17}
+\contentsline {section}{\numberline {17.1}\leavevmode {\color {Chapter }The \textsf {GAP} object type \texttt {SCPropertyObject}}}{202}{section.17.1}
+\contentsline {subsection}{\numberline {17.1.1}\leavevmode {\color {Chapter }SCProperties}}{202}{subsection.17.1.1}
+\contentsline {subsection}{\numberline {17.1.2}\leavevmode {\color {Chapter }SCPropertiesFlush}}{202}{subsection.17.1.2}
+\contentsline {subsection}{\numberline {17.1.3}\leavevmode {\color {Chapter }SCPropertiesManaged}}{202}{subsection.17.1.3}
+\contentsline {subsection}{\numberline {17.1.4}\leavevmode {\color {Chapter }SCPropertiesNames}}{203}{subsection.17.1.4}
+\contentsline {subsection}{\numberline {17.1.5}\leavevmode {\color {Chapter }SCPropertiesTmp}}{203}{subsection.17.1.5}
+\contentsline {subsection}{\numberline {17.1.6}\leavevmode {\color {Chapter }SCPropertiesTmpNames}}{203}{subsection.17.1.6}
+\contentsline {subsection}{\numberline {17.1.7}\leavevmode {\color {Chapter }SCPropertyByName}}{203}{subsection.17.1.7}
+\contentsline {subsection}{\numberline {17.1.8}\leavevmode {\color {Chapter }SCPropertyDrop}}{203}{subsection.17.1.8}
+\contentsline {subsection}{\numberline {17.1.9}\leavevmode {\color {Chapter }SCPropertyHandlersSet}}{203}{subsection.17.1.9}
+\contentsline {subsection}{\numberline {17.1.10}\leavevmode {\color {Chapter }SCPropertySet}}{204}{subsection.17.1.10}
+\contentsline {subsection}{\numberline {17.1.11}\leavevmode {\color {Chapter }SCPropertySetMutable}}{204}{subsection.17.1.11}
+\contentsline {subsection}{\numberline {17.1.12}\leavevmode {\color {Chapter }SCPropertyTmpByName}}{204}{subsection.17.1.12}
+\contentsline {subsection}{\numberline {17.1.13}\leavevmode {\color {Chapter }SCPropertyTmpDrop}}{204}{subsection.17.1.13}
+\contentsline {subsection}{\numberline {17.1.14}\leavevmode {\color {Chapter }SCPropertyTmpSet}}{204}{subsection.17.1.14}
+\contentsline {section}{\numberline {17.2}\leavevmode {\color {Chapter }Example of a common attribute}}{204}{section.17.2}
+\contentsline {section}{\numberline {17.3}\leavevmode {\color {Chapter }Writing a method for an attribute}}{206}{section.17.3}
+\contentsline {chapter}{References}{210}{chapter*.5}
+\contentsline {chapter}{Index}{211}{section*.6}

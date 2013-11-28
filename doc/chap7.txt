@@ -363,7 +363,7 @@
   
   [33X[0;0YComputes  the  face  lattice of a discrete normal surface [3Xsl[103X in the original
   labeling.  Triangles  and  quadrilaterals  are stored separately (cf. [2XSCSkel[102X
-  ([14X6.8-54[114X)).[133X
+  ([14X6.9-54[114X)).[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SCBdSimplex(4);;              [128X[104X
@@ -390,7 +390,7 @@
   
   [33X[0;0YComputes  the  face  lattice of a discrete normal surface [3Xsl[103X in the standard
   labeling.  Triangles  and quadrilaterals are stored separately (cf. [2XSCSkelEx[102X
-  ([14X6.8-55[114X)).[133X
+  ([14X6.9-55[114X)).[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SCBdSimplex(4);;              [128X[104X

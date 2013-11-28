@@ -181,146 +181,150 @@
       6.1-2 SC
       6.1-3 SCFromDifferenceCycles
       6.1-4 SCFromGenerators
-    6.2 [33X[0;0YGenerating some standard triangulations[133X
-      6.2-1 SCBdCrossPolytope
-      6.2-2 SCBdCyclicPolytope
-      6.2-3 SCBdSimplex
-      6.2-4 SCEmpty
-      6.2-5 SCSimplex
-      6.2-6 SCSeriesTorus
-      6.2-7 SCSurface
-      6.2-8 SCFVectorBdCrossPolytope
-      6.2-9 SCFVectorBdCyclicPolytope
-      6.2-10 SCFVectorBdSimplex
-    6.3 [33X[0;0YGenerating infinite series of transitive triangulations[133X
-      6.3-1 SCSeriesAGL
-      6.3-2 SCSeriesBrehmKuehnelTorus
-      6.3-3 SCSeriesBdHandleBody
-      6.3-4 SCSeriesBid
-      6.3-5 SCSeriesC2n
-      6.3-6 SCSeriesConnectedSum
-      6.3-7 SCSeriesCSTSurface
-      6.3-8 SCSeriesD2n
-      6.3-9 SCSeriesHandleBody
-      6.3-10 SCSeriesHomologySphere
-      6.3-11 SCSeriesK
-      6.3-12 SCSeriesKu
-      6.3-13 SCSeriesL
-      6.3-14 SCSeriesLe
-      6.3-15 SCSeriesLensSpace
-      6.3-16 SCSeriesPrimeTorus
-      6.3-17 SCSeriesSeifertFibredSpace
-    6.4 [33X[0;0YA census of regular and chiral maps[133X
-      6.4-1 SCChiralMap
-      6.4-2 SCChiralMaps
-      6.4-3 SCChiralTori
-      6.4-4 SCNrChiralTori
-      6.4-5 SCNrRegularTorus
-      6.4-6 SCRegularMap
-      6.4-7 SCRegularMaps
-      6.4-8 SCRegularTorus
-      6.4-9 SCSeriesSymmetricTorus
-    6.5 [33X[0;0YGenerating new complexes from old[133X
-      6.5-1 SCCartesianPower
-      6.5-2 SCCartesianProduct
-      6.5-3 SCConnectedComponents
-      6.5-4 SCConnectedProduct
-      6.5-5 SCConnectedSum
-      6.5-6 SCConnectedSumMinus
-      6.5-7 SCDifferenceCycleCompress
-      6.5-8 SCDifferenceCycleExpand
-      6.5-9 SCStronglyConnectedComponents
-    6.6 [33X[0;0YSimplicial complexes from transitive permutation groups[133X
-      6.6-1 SCsFromGroupExt
-      6.6-2 SCsFromGroupByTransitivity
-    6.7 [33X[0;0YThe classification of cyclic combinatorial 3-manifolds[133X
-      6.7-1 SCNrCyclic3Mflds
-      6.7-2 SCCyclic3MfldTopTypes
-      6.7-3 SCCyclic3Mfld
-      6.7-4 SCCyclic3MfldByType
-      6.7-5 SCCyclic3MfldListOfGivenType
-    6.8 [33X[0;0YComputing properties of simplicial complexes[133X
-      6.8-1 SCAltshulerSteinberg
-      6.8-2 SCAutomorphismGroup
-      6.8-3 SCAutomorphismGroupInternal
-      6.8-4 SCAutomorphismGroupSize
-      6.8-5 SCAutomorphismGroupStructure
-      6.8-6 SCAutomorphismGroupTransitivity
-      6.8-7 SCBoundary
-      6.8-8 SCDehnSommervilleCheck
-      6.8-9 SCDehnSommervilleMatrix
-      6.8-10 SCDifferenceCycles
-      6.8-11 SCDim
-      6.8-12 SCDualGraph
-      6.8-13 SCEulerCharacteristic
-      6.8-14 SCFVector
-      6.8-15 SCFaceLattice
-      6.8-16 SCFaceLatticeEx
-      6.8-17 SCFaces
-      6.8-18 SCFacesEx
-      6.8-19 SCFacets
-      6.8-20 SCFacetsEx
-      6.8-21 SCFpBettiNumbers
-      6.8-22 SCFundamentalGroup
-      6.8-23 SCGVector
-      6.8-24 SCGenerators
-      6.8-25 SCGeneratorsEx
-      6.8-26 SCHVector
-      6.8-27 SCHasBoundary
-      6.8-28 SCHasInterior
-      6.8-29 SCHeegaardSplittingSmallGenus
-      6.8-30 SCHeegaardSplitting
-      6.8-31 SCHomology
-      6.8-32 SCIncidences
-      6.8-33 SCIncidencesEx
-      6.8-34 SCInterior
-      6.8-35 SCIsCentrallySymmetric
-      6.8-36 SCIsConnected
-      6.8-37 SCIsEmpty
-      6.8-38 SCIsEulerianManifold
-      6.8-39 SCIsFlag
-      6.8-40 SCIsHeegaardSplitting
-      6.8-41 SCIsHomologySphere
-      6.8-42 SCIsInKd
-      6.8-43 SCIsKNeighborly
-      6.8-44 SCIsOrientable
-      6.8-45 SCIsPseudoManifold
-      6.8-46 SCIsPure
-      6.8-47 SCIsShellable
-      6.8-48 SCIsStronglyConnected
-      6.8-49 SCMinimalNonFaces
-      6.8-50 SCMinimalNonFacesEx
-      6.8-51 SCNeighborliness
-      6.8-52 SCNumFaces
-      6.8-53 SCOrientation
-      6.8-54 SCSkel
-      6.8-55 SCSkelEx
-      6.8-56 SCSpanningTree
-    6.9 [33X[0;0YOperations on simplicial complexes[133X
-      6.9-1 SCAlexanderDual
-      6.9-2 SCClose
-      6.9-3 SCCollapseGreedy
-      6.9-4 SCCone
-      6.9-5 SCDeletedJoin
-      6.9-6 SCDifference
-      6.9-7 SCFillSphere
-      6.9-8 SCHandleAddition
-      6.9-9 SCIntersection
-      6.9-10 SCIsIsomorphic
-      6.9-11 SCIsSubcomplex
-      6.9-12 SCIsomorphism
-      6.9-13 SCIsomorphismEx
-      6.9-14 SCJoin
-      6.9-15 SCNeighbors
-      6.9-16 SCNeighborsEx
-      6.9-17 SCShelling
-      6.9-18 SCShellingExt
-      6.9-19 SCShellings
-      6.9-20 SCSpan
-      6.9-21 SCSuspension
-      6.9-22 SCUnion
-      6.9-23 SCVertexIdentification
-      6.9-24 SCWedge
+    6.2 [33X[0;0YIsomorphism signatures[133X
+      6.2-1 SCExportToString
+      6.2-2 SCExportIsoSig
+      6.2-3 SCFromIsoSig
+    6.3 [33X[0;0YGenerating some standard triangulations[133X
+      6.3-1 SCBdCyclicPolytope
+      6.3-2 SCBdSimplex
+      6.3-3 SCEmpty
+      6.3-4 SCSimplex
+      6.3-5 SCSeriesTorus
+      6.3-6 SCSurface
+      6.3-7 SCFVectorBdCrossPolytope
+      6.3-8 SCFVectorBdCyclicPolytope
+      6.3-9 SCFVectorBdSimplex
+    6.4 [33X[0;0YGenerating infinite series of transitive triangulations[133X
+      6.4-1 SCSeriesAGL
+      6.4-2 SCSeriesBrehmKuehnelTorus
+      6.4-3 SCSeriesBdHandleBody
+      6.4-4 SCSeriesBid
+      6.4-5 SCSeriesC2n
+      6.4-6 SCSeriesConnectedSum
+      6.4-7 SCSeriesCSTSurface
+      6.4-8 SCSeriesD2n
+      6.4-9 SCSeriesHandleBody
+      6.4-10 SCSeriesHomologySphere
+      6.4-11 SCSeriesK
+      6.4-12 SCSeriesKu
+      6.4-13 SCSeriesL
+      6.4-14 SCSeriesLe
+      6.4-15 SCSeriesLensSpace
+      6.4-16 SCSeriesPrimeTorus
+      6.4-17 SCSeriesSeifertFibredSpace
+      6.4-18 SCSeriesS2xS2
+    6.5 [33X[0;0YA census of regular and chiral maps[133X
+      6.5-1 SCChiralMap
+      6.5-2 SCChiralMaps
+      6.5-3 SCChiralTori
+      6.5-4 SCNrChiralTori
+      6.5-5 SCNrRegularTorus
+      6.5-6 SCRegularMap
+      6.5-7 SCRegularMaps
+      6.5-8 SCRegularTorus
+      6.5-9 SCSeriesSymmetricTorus
+    6.6 [33X[0;0YGenerating new complexes from old[133X
+      6.6-1 SCCartesianPower
+      6.6-2 SCCartesianProduct
+      6.6-3 SCConnectedComponents
+      6.6-4 SCConnectedProduct
+      6.6-5 SCConnectedSum
+      6.6-6 SCConnectedSumMinus
+      6.6-7 SCDifferenceCycleCompress
+      6.6-8 SCDifferenceCycleExpand
+      6.6-9 SCStronglyConnectedComponents
+    6.7 [33X[0;0YSimplicial complexes from transitive permutation groups[133X
+      6.7-1 SCsFromGroupExt
+      6.7-2 SCsFromGroupByTransitivity
+    6.8 [33X[0;0YThe classification of cyclic combinatorial 3-manifolds[133X
+      6.8-1 SCNrCyclic3Mflds
+      6.8-2 SCCyclic3MfldTopTypes
+      6.8-3 SCCyclic3Mfld
+      6.8-4 SCCyclic3MfldByType
+      6.8-5 SCCyclic3MfldListOfGivenType
+    6.9 [33X[0;0YComputing properties of simplicial complexes[133X
+      6.9-1 SCAltshulerSteinberg
+      6.9-2 SCAutomorphismGroup
+      6.9-3 SCAutomorphismGroupInternal
+      6.9-4 SCAutomorphismGroupSize
+      6.9-5 SCAutomorphismGroupStructure
+      6.9-6 SCAutomorphismGroupTransitivity
+      6.9-7 SCBoundary
+      6.9-8 SCDehnSommervilleCheck
+      6.9-9 SCDehnSommervilleMatrix
+      6.9-10 SCDifferenceCycles
+      6.9-11 SCDim
+      6.9-12 SCDualGraph
+      6.9-13 SCEulerCharacteristic
+      6.9-14 SCFVector
+      6.9-15 SCFaceLattice
+      6.9-16 SCFaceLatticeEx
+      6.9-17 SCFaces
+      6.9-18 SCFacesEx
+      6.9-19 SCFacets
+      6.9-20 SCFacetsEx
+      6.9-21 SCFpBettiNumbers
+      6.9-22 SCFundamentalGroup
+      6.9-23 SCGVector
+      6.9-24 SCGenerators
+      6.9-25 SCGeneratorsEx
+      6.9-26 SCHVector
+      6.9-27 SCHasBoundary
+      6.9-28 SCHasInterior
+      6.9-29 SCHeegaardSplittingSmallGenus
+      6.9-30 SCHeegaardSplitting
+      6.9-31 SCHomology
+      6.9-32 SCIncidences
+      6.9-33 SCIncidencesEx
+      6.9-34 SCInterior
+      6.9-35 SCIsCentrallySymmetric
+      6.9-36 SCIsConnected
+      6.9-37 SCIsEmpty
+      6.9-38 SCIsEulerianManifold
+      6.9-39 SCIsFlag
+      6.9-40 SCIsHeegaardSplitting
+      6.9-41 SCIsHomologySphere
+      6.9-42 SCIsInKd
+      6.9-43 SCIsKNeighborly
+      6.9-44 SCIsOrientable
+      6.9-45 SCIsPseudoManifold
+      6.9-46 SCIsPure
+      6.9-47 SCIsShellable
+      6.9-48 SCIsStronglyConnected
+      6.9-49 SCMinimalNonFaces
+      6.9-50 SCMinimalNonFacesEx
+      6.9-51 SCNeighborliness
+      6.9-52 SCNumFaces
+      6.9-53 SCOrientation
+      6.9-54 SCSkel
+      6.9-55 SCSkelEx
+      6.9-56 SCSpanningTree
+    6.10 [33X[0;0YOperations on simplicial complexes[133X
+      6.10-1 SCAlexanderDual
+      6.10-2 SCClose
+      6.10-3 SCCollapseGreedy
+      6.10-4 SCCone
+      6.10-5 SCDeletedJoin
+      6.10-6 SCDifference
+      6.10-7 SCFillSphere
+      6.10-8 SCHandleAddition
+      6.10-9 SCIntersection
+      6.10-10 SCIsIsomorphic
+      6.10-11 SCIsSubcomplex
+      6.10-12 SCIsomorphism
+      6.10-13 SCIsomorphismEx
+      6.10-14 SCJoin
+      6.10-15 SCNeighbors
+      6.10-16 SCNeighborsEx
+      6.10-17 SCShelling
+      6.10-18 SCShellingExt
+      6.10-19 SCShellings
+      6.10-20 SCSpan
+      6.10-21 SCSuspension
+      6.10-22 SCUnion
+      6.10-23 SCVertexIdentification
+      6.10-24 SCWedge
   7 [33X[0;0YFunctions and operations for [10XSCNormalSurface[110X[133X
     7.1 [33X[0;0YCreating an [10XSCNormalSurface[110X object[133X
       7.1-1 SCNSEmpty
@@ -420,7 +424,8 @@
       12.2-7 SCImportPolymake
       12.2-8 SCExportLatexTable
       12.2-9 SCExportJavaView
-      12.2-10 SCExportSnapPy
+      12.2-10 SCExportPolymake
+      12.2-11 SCExportSnapPy
   13 [33X[0;0YInterfaces to other software packages[133X
     13.1 [33X[0;0YInterface to the [5XGAP[105X-package [5Xhomalg[105X[133X
       13.1-1 SCHomalgBoundaryMatrices

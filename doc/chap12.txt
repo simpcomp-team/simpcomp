@@ -22,7 +22,9 @@
   triangulations of sphere bundles and some bounded triangulated PL-manifolds.[133X
   
   [33X[0;0YSee  [2XSCLib[102X  ([14X12.1-2[114X)  for a naming convention used for the global library of
-  [5Xsimpcomp[105X.[133X
+  [5Xsimpcomp[105X.  Note: Another way of storing and loading complexes is provided by
+  the   functions   [2XSCExportIsoSig[102X   ([14X6.2-2[114X),   [2XSCExportToString[102X  ([14X6.2-1[114X)  and
+  [2XSCFromIsoSig[102X ([14X6.2-3[114X), see Section [14X6.2[114X for details.[133X
   
   [1X12.1-1 SCIsLibRepository[101X
   
@@ -122,7 +124,7 @@
     [4X[28X gap> myRepository:=SCLibInit("~/myrepository");[128X[104X
     [4X[28X [Simplicial complex library. Properties:[128X[104X
     [4X[28X CalculateIndexAttributes=true[128X[104X
-    [4X[28X Number of complexes in library=1[128X[104X
+    [4X[28X Number of complexes in library=2[128X[104X
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
@@ -130,7 +132,7 @@
     [4X[28X ][128X[104X
     [4X[28X gap> complex:=SCBdCrossPolytope(4);;[128X[104X
     [4X[28X gap> SCLibAdd(myRepository,complex);[128X[104X
-    [4X[28X #I  SCLibAdd: saving complex to file "complex_2013-01-31_00-05-43.scb".[128X[104X
+    [4X[28X #I  SCLibAdd: saving complex to file "complex_2013-11-28_01-02-23.scb".[128X[104X
     [4X[28X true[128X[104X
     [4X[28X gap> myRepository.Add(complex);; # alternative syntax[128X[104X
     [4X[28X [128X[104X
@@ -165,9 +167,14 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> myRepository:=SCLibInit("~/myrepository");[128X[104X
+    [4X[28X Found a self-reference to an unknown object![128X[104X
+    [4X[28X #I  IO_Unpicklers.SCLR: Error while unpicking library repository. Delete file complexes.idx and complexes.idxb and recreate them with SCLibInit.[128X[104X
+    [4X[28X #I  SCIntFunc.SCLibInit: error loading binary index  -- trying to reconstruct it.[128X[104X
+    [4X[28X #I  SCLibUpdate: rebuilding index for /home/jonathan/myrepository/.[128X[104X
+    [4X[28X #I  SCLibUpdate: rebuilding index done.[128X[104X
     [4X[28X [Simplicial complex library. Properties:[128X[104X
     [4X[28X CalculateIndexAttributes=true[128X[104X
-    [4X[28X Number of complexes in library=2[128X[104X
+    [4X[28X Number of complexes in library=3[128X[104X
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
@@ -263,14 +270,9 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> myRepository:=SCLibInit("~/myrepository");[128X[104X
-    [4X[28X Found a self-reference to an unknown object![128X[104X
-    [4X[28X #I  IO_Unpicklers.SCLR: Error while unpicking library repository. Delete file complexes.idx and complexes.idxb and recreate them with SCLibInit.[128X[104X
-    [4X[28X #I  SCIntFunc.SCLibInit: error loading binary index  -- trying to reconstruct it.[128X[104X
-    [4X[28X #I  SCLibUpdate: rebuilding index for /home/jonathan/myrepository/.[128X[104X
-    [4X[28X #I  SCLibUpdate: rebuilding index done.[128X[104X
     [4X[28X [Simplicial complex library. Properties:[128X[104X
     [4X[28X CalculateIndexAttributes=true[128X[104X
-    [4X[28X Number of complexes in library=2[128X[104X
+    [4X[28X Number of complexes in library=3[128X[104X
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
@@ -649,7 +651,23 @@
     [4X[28X [128X[104X
   [4X[32X[104X
   
-  [1X12.2-10 SCExportSnapPy[101X
+  [1X12.2-10 SCExportPolymake[101X
+  
+  [29X[2XSCExportPolymake[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YExports  the  gluings  of the tetrahedra of a given combinatorial [22X3[122X-manifold
+  [3Xcomplex[103X   in   a   format  compatible  with  Matveev's  [22X3[122X-manifold  software
+  [10XRecognizer[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> c:=SCBdCrossPolytope(4);;[128X[104X
+    [4X[28X gap> SCExportRecognizer(c,"/tmp/bdbeta4.mv");[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X12.2-11 SCExportSnapPy[101X
   
   [29X[2XSCExportSnapPy[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X

@@ -20,10 +20,11 @@
 ## gap> Size(G);
 ## gap> Transitivity(G);
 ## gap> list:=SCsFromGroupExt(G,8,3,1,0,true,false,0,[]);
-## gap> SCNeighborliness(list[1]); 
-## gap> list[1].F;
-## gap> list[1].IsManifold; 
-## gap> SCLibDetermineTopologicalType(SCLink(list[1],1));
+## gap> c:=SCFromIsoSig(list[1]);
+## gap> SCNeighborliness(c); 
+## gap> c.F;
+## gap> c.IsManifold; 
+## gap> SCLibDetermineTopologicalType(SCLink(c,1));
 ## gap> # there are no 3-neighborly 3-manifolds with 8 vertices
 ## gap> list:=SCsFromGroupExt(PrimitiveGroup(8,5),8,3,0,0,true,false,0,[]); 
 ## </Example>

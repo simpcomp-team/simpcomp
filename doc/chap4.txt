@@ -335,7 +335,7 @@
   
   [33X[0;0YThe   following   functions   perform   operations   on   objects   of  type
   [10XSCPolyhedralComplex[110X  and all of its subtypes. Most of them return simplicial
-  complexes.  Thus,  this  section is closely related to the Sections [14X6.5[114X (for
+  complexes.  Thus,  this  section is closely related to the Sections [14X6.6[114X (for
   objects  of  type [10XSCSimplicialComplex[110X), ''Generate new complexes from old''.
   However, the data generated here is rather seen as an intrinsic attribute of
   the original complex and not as an independent complex.[133X

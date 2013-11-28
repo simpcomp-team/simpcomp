@@ -29,14 +29,15 @@
 \BOOKMARK [1][-]{section.5.6}{SCNormalSurface as a subtype of Set}{chapter.5}
 \BOOKMARK [0][-]{chapter.6}{Functions and operations for SCSimplicialComplex}{}
 \BOOKMARK [1][-]{section.6.1}{Creating an SCSimplicialComplex object from a facet list}{chapter.6}
-\BOOKMARK [1][-]{section.6.2}{Generating some standard triangulations}{chapter.6}
-\BOOKMARK [1][-]{section.6.3}{Generating infinite series of transitive triangulations}{chapter.6}
-\BOOKMARK [1][-]{section.6.4}{A census of regular and chiral maps}{chapter.6}
-\BOOKMARK [1][-]{section.6.5}{Generating new complexes from old}{chapter.6}
-\BOOKMARK [1][-]{section.6.6}{Simplicial complexes from transitive permutation groups}{chapter.6}
-\BOOKMARK [1][-]{section.6.7}{The classification of cyclic combinatorial 3-manifolds}{chapter.6}
-\BOOKMARK [1][-]{section.6.8}{Computing properties of simplicial complexes}{chapter.6}
-\BOOKMARK [1][-]{section.6.9}{Operations on simplicial complexes}{chapter.6}
+\BOOKMARK [1][-]{section.6.2}{Isomorphism signatures}{chapter.6}
+\BOOKMARK [1][-]{section.6.3}{Generating some standard triangulations}{chapter.6}
+\BOOKMARK [1][-]{section.6.4}{Generating infinite series of transitive triangulations}{chapter.6}
+\BOOKMARK [1][-]{section.6.5}{A census of regular and chiral maps}{chapter.6}
+\BOOKMARK [1][-]{section.6.6}{Generating new complexes from old}{chapter.6}
+\BOOKMARK [1][-]{section.6.7}{Simplicial complexes from transitive permutation groups}{chapter.6}
+\BOOKMARK [1][-]{section.6.8}{The classification of cyclic combinatorial 3-manifolds}{chapter.6}
+\BOOKMARK [1][-]{section.6.9}{Computing properties of simplicial complexes}{chapter.6}
+\BOOKMARK [1][-]{section.6.10}{Operations on simplicial complexes}{chapter.6}
 \BOOKMARK [0][-]{chapter.7}{Functions and operations for SCNormalSurface}{}
 \BOOKMARK [1][-]{section.7.1}{Creating an SCNormalSurface object}{chapter.7}
 \BOOKMARK [1][-]{section.7.2}{Generating new objects from discrete normal surfaces}{chapter.7}

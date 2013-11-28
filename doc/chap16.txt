@@ -15,10 +15,10 @@
   [10Xc1[110X  below), orbit representatives together with a permutation group (complex
   [10Xc2[110X)  or  difference  cycles  (complex  [10Xc3[110X, see Section [14X6.1[114X), from a function
   generating  triangulations  of  standard  complexes (complex [10Xc4[110X, see Section
-  [14X6.2[114X)  or  from  a  function  constructing  infinite series for combinatorial
-  (pseudo)manifolds  (complexes  [10Xc5[110X,  [10Xc6[110X, [10Xc7[110X, see Section [14X6.3[114X and the function
+  [14X6.3[114X)  or  from  a  function  constructing  infinite series for combinatorial
+  (pseudo)manifolds  (complexes  [10Xc5[110X,  [10Xc6[110X, [10Xc7[110X, see Section [14X6.4[114X and the function
   prefix  [10XSCSeries...[110X).  There  are  also  functions  creating  new simplicial
-  complexes  from  old,  see  Section [14X6.5[114X, which will be described in the next
+  complexes  from  old,  see  Section [14X6.6[114X, which will be described in the next
   sections.[133X
   
   [4X[32X  Example  [32X[104X
@@ -152,7 +152,7 @@
   [1X16.3 [33X[0;0YCalculating properties of a [10XSCSimplicialComplex[110X[101X[1X object[133X[101X
   
   [33X[0;0Y[5Xsimpcomp[105X  provides  a  variety  of  functions  for calculating properties of
-  simplicial  complexes,  see  Section  [14X6.8[114X.  All  these  properties  are only
+  simplicial  complexes,  see  Section  [14X6.9[114X.  All  these  properties  are only
   calculated once and stored in the [10XSCSimplicialComplex[110X object.[133X
   
   [4X[32X  Example  [32X[104X
@@ -239,7 +239,7 @@
   [33X[0;0YAs  already  mentioned,  there is the possibility to generate new objects of
   type  [10XSCSimplicialComplex[110X  from  existing ones using standard constructions.
   The  functions  used in this section are described in more detail in Section
-  [14X6.5[114X.[133X
+  [14X6.6[114X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27Xd:=c3+c3;[127X[104X

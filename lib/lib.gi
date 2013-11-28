@@ -407,7 +407,7 @@ end;
 ##<#GAPDoc Label="SCLibUpdate">
 ## <ManSection>
 ## <Func Name="SCLibUpdate" Arg="repository [, recalc]"/>
-## <Returns>library repository of type <C>SCLibRepository</C> upon success, fail otherwise.</Returns>
+## <Returns>library repository of type <C>SCLibRepository</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Recreates the index of a given repository (either via a repository object or a base path of a repository <Arg>repository</Arg>) by scanning the base path for all <C>.sc</C> files containing simplicial complexes of the repository. Returns a repository object with the newly created index on success or <K>fail</K> in case of an error. The optional boolean argument <Arg>recalc</Arg> forces <Package>simpcomp</Package> to recompute all the indexed properties (such as f-vector, homology, etc.) of the simplicial complexes in the repository if set to <K>true</K>. 
 ## <Example>
