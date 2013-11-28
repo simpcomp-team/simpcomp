@@ -54,18 +54,15 @@ Persons := [
 ##    "dev"           for development versions of packages 
 ##    "other"         for all other packages
 ##
-Status := "deposited",
+#Status := "deposited",
 
-##  You must provide the next two entries if and only if the status is 
-##  "accepted" because is was successfully refereed:
+Status := "accepted",
+##  You must provide the next two entries if and only if the status is
+##  "accepted":
 # format: 'name (place)'
-# CommunicatedBy := "Mike Atkinson (St. Andrews)",
-#CommunicatedBy := "",
+CommunicatedBy := "Graham Ellis (Galway)",
 # format: mm/yyyy
-# AcceptDate := "08/1999",
-#AcceptDate := "",
-#CommunicatedBy := "",
-#AcceptDate := "",
+AcceptDate := "11/2013",
 
 #README_URL := "https://code.google.com/p/simpcomp/source/browse/README",
 #PackageInfoURL := "https://code.google.com/p/simpcomp/source/browse/PackageInfo.g",
