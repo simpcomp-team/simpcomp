@@ -11,7 +11,7 @@
   [1X6.1-1 SCFromFacets[101X
   
   [29X[2XSCFromFacets[102X( [3Xfacets[103X ) [32X method
-  [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, fail
+  [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
   [33X[0;0YConstructs  a simplicial complex object from the given facet list. The facet
@@ -54,7 +54,7 @@
   [1X6.1-2 SC[101X
   
   [29X[2XSC[102X( [3Xfacets[103X ) [32X method
-  [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, fail
+  [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
   [33X[0;0YA  shorter  function  to create a simplicial complex from a facet list, just
@@ -113,7 +113,7 @@
   [1X6.1-4 SCFromGenerators[101X
   
   [29X[2XSCFromGenerators[102X( [3Xgroup[103X, [3Xgenerators[103X ) [32X method
-  [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, fail
+  [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
   [33X[0;0YConstructs  a  simplicial complex object from the set of [3Xgenerators[103X on which
@@ -183,12 +183,12 @@
   skipping  numbers (where [22Xm[122X denotes the number of facets in [22XP[122X) which then can
   by encoded by characters via a lookup table.[133X
   
-  [33X[0;0YNote  that  there are precisely [22X(d+1)! m[122X canonical labeling we have to check
+  [33X[0;0YNote  that there are precisely [22X(d+1)! m[122X canonical labelings we have to check
   in  order  to  find  the  lexicographically minimal one. Thus, computing the
   isomorphism  signature  of a large or highly dimensional complex can be time
-  consuming.  Thus, if you are not interested in the isomorphism signature but
-  just  in  the  compressed string representation use [2XSCExportToString[102X ([14X6.2-1[114X)
-  which  just computes the first canonical labeling of the complex provided as
+  consuming.  If  you are not interested in the isomorphism signature but just
+  in  the  compressed string representation use [2XSCExportToString[102X ([14X6.2-1[114X) which
+  just  computes  the  first  canonical  labeling  of  the complex provided as
   argument and returns the resulting string.[133X
   
   [33X[0;0YNote: Another way of storing and loading complexes is provided by simpcomp's
@@ -210,7 +210,7 @@
     [4X[28X 4[128X[104X
     [4X[28X gap> s:=SCExportIsoSig(c); time;[128X[104X
     [4X[28X "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"[128X[104X
-    [4X[28X 4[128X[104X
+    [4X[28X 12[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   

@@ -215,7 +215,7 @@
 <h5>6.1-1 SCFromFacets</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFromFacets</code>( <var class="Arg">facets</var> )</td><td class="tdright">( method )</td></tr></table></div>
-<p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, fail otherwise.</p>
+<p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Constructs a simplicial complex object from the given facet list. The facet list <var class="Arg">facets</var> has to be a duplicate free list (or set) which consists of duplicate free entries, which are in turn lists or sets. For the vertex labels (i. e. the entries of the list items of <var class="Arg">facets</var>) an ordering via the less-operator has to be defined. Following Section 4.11 of the <strong class="pkg">GAP</strong> manual this is the case for objects of the following families: rationals <code class="code">IsRat</code>, cyclotomics <code class="code">IsCyclotomic</code>, finite field elements <code class="code">IsFFE</code>, permutations <code class="code">IsPerm</code>, booleans <code class="code">IsBool</code>, characters <code class="code">IsChar</code> and lists (strings) <code class="code">IsList</code>.</p>
 
@@ -248,7 +248,7 @@
 <h5>6.1-2 SC</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SC</code>( <var class="Arg">facets</var> )</td><td class="tdright">( method )</td></tr></table></div>
-<p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, fail otherwise.</p>
+<p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>A shorter function to create a simplicial complex from a facet list, just calls <code class="func">SCFromFacets</code> (<a href="chap6.html#X7B5A874584FF34A7"><span class="RefLink">6.1-1</span></a>)(<var class="Arg">facets</var>).</p>
 
@@ -300,7 +300,7 @@
 <h5>6.1-4 SCFromGenerators</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFromGenerators</code>( <var class="Arg">group</var>, <var class="Arg">generators</var> )</td><td class="tdright">( method )</td></tr></table></div>
-<p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, fail otherwise.</p>
+<p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Constructs a simplicial complex object from the set of <var class="Arg">generators</var> on which the group <var class="Arg">group</var> acts, i.e. a complex which has <var class="Arg">group</var> as a subgroup of the automorphism group and a facet list that consists of the <var class="Arg">group</var>-orbits specified by the list of representatives passed in <var class="Arg">generators</var>. Note that <var class="Arg">group</var> is not stored as an attribute of the resulting complex as it might just be a subgroup of the actual automorphism group. Internally calls <code class="code">Orbits</code> and <code class="func">SCFromFacets</code> (<a href="chap6.html#X7B5A874584FF34A7"><span class="RefLink">6.1-1</span></a>).</p>
 
@@ -343,7 +343,7 @@
 
 <p>A canonical labeling of <span class="SimpleMath">P</span> is determined by chosing a facet <span class="SimpleMath">∆ ∈ P</span> and a numbering <span class="SimpleMath">1, 2, ... , d+1</span> of the vertices of <span class="SimpleMath">∆</span> (which in turn determines a numbering of the co-dimension one faces of <span class="SimpleMath">∆</span> by identifying each face with its opposite vertex). This numbering can then be uniquely extended to a numbering (and thus a labeling) on all vertices of <span class="SimpleMath">P</span> by the weak pseudomanifold property: start at face <span class="SimpleMath">1</span> of <span class="SimpleMath">∆</span> and label the opposite vertex of the unique other facet <span class="SimpleMath">δ</span> meeting face <span class="SimpleMath">1</span> by <span class="SimpleMath">d+2</span>, go on with face <span class="SimpleMath">2</span> of <span class="SimpleMath">∆</span> and so on. After finishing with the first facet we now have a numbering on <span class="SimpleMath">δ</span>, repeat the procedure for <span class="SimpleMath">δ</span>, etc. Whenever the opposite vertex of a face is already labeled (and also, if the vertex occurs for the first time) we note this label. Whenever a facet is already visited we skip this step and keep track of the number of skippings between any two newly discovered facets. This results in a sequence of <span class="SimpleMath">m-1</span> vertex labels together with <span class="SimpleMath">m-1</span> skipping numbers (where <span class="SimpleMath">m</span> denotes the number of facets in <span class="SimpleMath">P</span>) which then can by encoded by characters via a lookup table.</p>
 
-<p>Note that there are precisely <span class="SimpleMath">(d+1)! m</span> canonical labeling we have to check in order to find the lexicographically minimal one. Thus, computing the isomorphism signature of a large or highly dimensional complex can be time consuming. Thus, if you are not interested in the isomorphism signature but just in the compressed string representation use <code class="func">SCExportToString</code> (<a href="chap6.html#X7E95E36680C188C4"><span class="RefLink">6.2-1</span></a>) which just computes the first canonical labeling of the complex provided as argument and returns the resulting string.</p>
+<p>Note that there are precisely <span class="SimpleMath">(d+1)! m</span> canonical labelings we have to check in order to find the lexicographically minimal one. Thus, computing the isomorphism signature of a large or highly dimensional complex can be time consuming. If you are not interested in the isomorphism signature but just in the compressed string representation use <code class="func">SCExportToString</code> (<a href="chap6.html#X7E95E36680C188C4"><span class="RefLink">6.2-1</span></a>) which just computes the first canonical labeling of the complex provided as argument and returns the resulting string.</p>
 
 <p>Note: Another way of storing and loading complexes is provided by simpcomp's library functionality, see Section <a href="chap12.html#X7F84F1AD7AFB97CF"><span class="RefLink">12.1</span></a> for details.</p>
 
@@ -364,7 +364,7 @@
  4
  gap&gt; s:=SCExportIsoSig(c); time;
  "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
- 4
+ 12
  </pre></div>
 
 <p><a id="X80098C5F7B80A621" name="X80098C5F7B80A621"></a></p>

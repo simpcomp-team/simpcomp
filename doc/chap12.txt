@@ -124,7 +124,7 @@
     [4X[28X gap> myRepository:=SCLibInit("~/myrepository");[128X[104X
     [4X[28X [Simplicial complex library. Properties:[128X[104X
     [4X[28X CalculateIndexAttributes=true[128X[104X
-    [4X[28X Number of complexes in library=2[128X[104X
+    [4X[28X Number of complexes in library=3[128X[104X
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
@@ -132,7 +132,7 @@
     [4X[28X ][128X[104X
     [4X[28X gap> complex:=SCBdCrossPolytope(4);;[128X[104X
     [4X[28X gap> SCLibAdd(myRepository,complex);[128X[104X
-    [4X[28X #I  SCLibAdd: saving complex to file "complex_2013-11-28_01-02-23.scb".[128X[104X
+    [4X[28X #I  SCLibAdd: saving complex to file "complex_2013-11-28_01-37-17.scb".[128X[104X
     [4X[28X true[128X[104X
     [4X[28X gap> myRepository.Add(complex);; # alternative syntax[128X[104X
     [4X[28X [128X[104X
@@ -174,7 +174,7 @@
     [4X[28X #I  SCLibUpdate: rebuilding index done.[128X[104X
     [4X[28X [Simplicial complex library. Properties:[128X[104X
     [4X[28X CalculateIndexAttributes=true[128X[104X
-    [4X[28X Number of complexes in library=3[128X[104X
+    [4X[28X Number of complexes in library=4[128X[104X
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
@@ -272,7 +272,7 @@
     [4X[28X gap> myRepository:=SCLibInit("~/myrepository");[128X[104X
     [4X[28X [Simplicial complex library. Properties:[128X[104X
     [4X[28X CalculateIndexAttributes=true[128X[104X
-    [4X[28X Number of complexes in library=3[128X[104X
+    [4X[28X Number of complexes in library=4[128X[104X
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
@@ -363,7 +363,7 @@
   [1X12.1-13 SCLibUpdate[101X
   
   [29X[2XSCLibUpdate[102X( [3Xrepository[103X[, [3Xrecalc[103X] ) [32X function
-  [6XReturns:[106X  [33X[0;10Ylibrary  repository  of  type  [10XSCLibRepository[110X  upon success, fail
+  [6XReturns:[106X  [33X[0;10Ylibrary  repository  of  type  [10XSCLibRepository[110X  upon success, [9Xfail[109X
             otherwise.[133X
   
   [33X[0;0YRecreates the index of a given repository (either via a repository object or

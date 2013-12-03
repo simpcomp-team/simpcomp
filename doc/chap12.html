@@ -161,7 +161,7 @@
  gap&gt; myRepository:=SCLibInit("~/myrepository");
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=2
+ Number of complexes in library=3
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
@@ -169,7 +169,7 @@
  ]
  gap&gt; complex:=SCBdCrossPolytope(4);;
  gap&gt; SCLibAdd(myRepository,complex);
- #I  SCLibAdd: saving complex to file "complex_2013-11-28_01-02-23.scb".
+ #I  SCLibAdd: saving complex to file "complex_2013-11-28_01-37-17.scb".
  true
  gap&gt; myRepository.Add(complex);; # alternative syntax
  </pre></div>
@@ -211,7 +211,7 @@
  #I  SCLibUpdate: rebuilding index done.
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=3
+ Number of complexes in library=4
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
@@ -290,7 +290,7 @@
  gap&gt; myRepository:=SCLibInit("~/myrepository");
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=3
+ Number of complexes in library=4
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
@@ -372,7 +372,7 @@
 <h5>12.1-13 SCLibUpdate</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibUpdate</code>( <var class="Arg">repository</var>[, <var class="Arg">recalc</var>] )</td><td class="tdright">( function )</td></tr></table></div>
-<p>Returns: library repository of type <code class="code">SCLibRepository</code> upon success, fail otherwise.</p>
+<p>Returns: library repository of type <code class="code">SCLibRepository</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Recreates the index of a given repository (either via a repository object or a base path of a repository <var class="Arg">repository</var>) by scanning the base path for all <code class="code">.sc</code> files containing simplicial complexes of the repository. Returns a repository object with the newly created index on success or <code class="keyw">fail</code> in case of an error. The optional boolean argument <var class="Arg">recalc</var> forces <strong class="pkg">simpcomp</strong> to recompute all the indexed properties (such as f-vector, homology, etc.) of the simplicial complexes in the repository if set to <code class="keyw">true</code>.</p>
 

@@ -110,8 +110,8 @@
 {\Huge \textbf{A \textsf{GAP} toolbox for simplicial complexes\mbox{}}}\\
 \vfill
 
-{\Huge Version \%\%\%VERSION\%\%\%\mbox{}}\\[1cm]
-{\%\%\%DATESHORT\%\%\%  \begin{center} \vspace*{1cm}
+{\Huge Version 2.0.0\mbox{}}\\[1cm]
+{November 2013  \begin{center} \vspace*{1cm}
 \includegraphics[width=.4\textwidth]{figures/shrimpmanual}\\ \end{center}  \mbox{}}\\[1cm]
 \mbox{}\\[2cm]
 {\Large \textbf{ Felix Effenberger   \mbox{}}}\\
@@ -163,10 +163,10 @@ the \textsf{GRAPE} package is not available. \mbox{}}\\[1cm]
 {\small 
 \section*{Copyright}
 \logpage{[ 0, 0, 3 ]}
-{\copyright} \%\%\%YEAR\%\%\% Felix Effenberger and Jonathan Spreer.
-Permission is granted to copy, distribute and/or modify this document under
-the terms of the GNU Free Documentation License, Version 1.2 or any later
-version published by the Free Software Foundation, see \href{http://www.fsf.org/licensing/licenses/fdl.html} {\texttt{http://www.fsf.org/licensing/licenses/fdl.html}} for a copy.
+{\copyright} 2013 Felix Effenberger and Jonathan Spreer. Permission is granted
+to copy, distribute and/or modify this document under the terms of the GNU
+Free Documentation License, Version 1.2 or any later version published by the
+Free Software Foundation, see \href{http://www.fsf.org/licensing/licenses/fdl.html} {\texttt{http://www.fsf.org/licensing/licenses/fdl.html}} for a copy.
 
  \textsf{simpcomp} is free software. The code of \textsf{simpcomp} is released under the GPL version 2 or later (at your preference). For the
 text of the GPL see the file \texttt{COPYING} in the \textsf{simpcomp} directory or \href{http://www.gnu.org/licenses/} {\texttt{http://www.gnu.org/licenses/}}. \mbox{}}\\[1cm]
@@ -312,7 +312,7 @@ verifies that the results are correct.
  To test the functionality of \textsf{simpcomp} you can run the function \texttt{SCRunTest} (\ref{SCRunTest}) from the \textsf{GAP} console: 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, Version %%%VERSION%%%
+  + test simpcomp package, Version 2.0.0
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@|
@@ -337,8 +337,8 @@ calls to functions of the package \textsf{simpcomp} can be controlled by setting
   @manual{simpcomp,
   	author = "Felix Effenberger and Jonathan Spreer",
   	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
-  	          {V}ersion %%%VERSION%%%",
-  	year   = "%%%YEAR%%%",
+  	          {V}ersion 2.0.0",
+  	year   = "2013",
   	url    = "\url{http://code.google.com/p/simpcomp}",
   }
 \end{verbatim}
@@ -348,8 +348,8 @@ bibliography environment of LaTeX.
   \bibitem{simpcomp}
   F.~Effenberger and J.~Spreer,
   \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
-  Version %%%VERSION%%%, 
-  %%%YEAR%%%,
+  Version 2.0.0, 
+  2013,
   \url{http://code.google.com/p/simpcomp}.
 \end{verbatim}
  }
@@ -1611,7 +1611,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   32
+   36
    
 \end{Verbatim}
  }
@@ -2212,7 +2212,7 @@ new complexes from scratch.
 \label{SCFromFacets}
 }\hfill{\scriptsize (method)}}\\
 \textbf{\indent Returns:\ }
-simplicial complex of type \texttt{SCSimplicialComplex} upon success, fail otherwise.
+simplicial complex of type \texttt{SCSimplicialComplex} upon success, \texttt{fail} otherwise.
 
 
 
@@ -2256,7 +2256,7 @@ complex are stored in the property ''VertexLabels'', see \texttt{SCLabels} (\ref
 \label{SC}
 }\hfill{\scriptsize (method)}}\\
 \textbf{\indent Returns:\ }
-simplicial complex of type \texttt{SCSimplicialComplex} upon success, fail otherwise.
+simplicial complex of type \texttt{SCSimplicialComplex} upon success, \texttt{fail} otherwise.
 
 
 
@@ -2324,7 +2324,7 @@ is returned.
 \label{SCFromGenerators}
 }\hfill{\scriptsize (method)}}\\
 \textbf{\indent Returns:\ }
-simplicial complex of type \texttt{SCSimplicialComplex} upon success, fail otherwise.
+simplicial complex of type \texttt{SCSimplicialComplex} upon success, \texttt{fail} otherwise.
 
 
 
@@ -2383,10 +2383,10 @@ the vertex occurs for the first time) we note this label. Whenever a facet is
 already visited we skip this step and keep track of the number of skippings
 between any two newly discovered facets. This results in a sequence of $m-1$ vertex labels together with $m-1$ skipping numbers (where $m$ denotes the number of facets in $P$) which then can by encoded by characters via a lookup table. 
 
- Note that there are precisely $(d+1)! m$ canonical labeling we have to check in order to find the lexicographically
+ Note that there are precisely $(d+1)! m$ canonical labelings we have to check in order to find the lexicographically
 minimal one. Thus, computing the isomorphism signature of a large or highly
-dimensional complex can be time consuming. Thus, if you are not interested in
-the isomorphism signature but just in the compressed string representation use \texttt{SCExportToString} (\ref{SCExportToString}) which just computes the first canonical labeling of the complex provided as
+dimensional complex can be time consuming. If you are not interested in the
+isomorphism signature but just in the compressed string representation use \texttt{SCExportToString} (\ref{SCExportToString}) which just computes the first canonical labeling of the complex provided as
 argument and returns the resulting string. 
 
  Note: Another way of storing and loading complexes is provided by simpcomp's
@@ -2414,7 +2414,7 @@ pseudomanifold. Compare \texttt{SCExportIsoSig} (\ref{SCExportIsoSig}), which re
    4
    gap> s:=SCExportIsoSig(c); time;
    "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
-   4
+   12
    
 \end{Verbatim}
  }
@@ -9682,7 +9682,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
    #I  SCIsTight: processed 30000 of 40320 rsl-functions so far, all perfect.
    #I  SCIsTight: processed 40000 of 40320 rsl-functions so far, all perfect.
    true
-   5572
+   5628
    
 \end{Verbatim}
  
@@ -9701,7 +9701,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
      98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 
      113, 114, 115, 116, 117, 118, 119, 120 ], complex not tight.
    false
-   8
+   0
    
 \end{Verbatim}
  
@@ -10095,7 +10095,7 @@ optional argument \mbox{\texttt{\mdseries\slshape name}} and the current time or
    gap> myRepository:=SCLibInit("~/myrepository");
    [Simplicial complex library. Properties:
    CalculateIndexAttributes=true
-   Number of complexes in library=2
+   Number of complexes in library=3
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
@@ -10103,7 +10103,7 @@ optional argument \mbox{\texttt{\mdseries\slshape name}} and the current time or
    ]
    gap> complex:=SCBdCrossPolytope(4);;
    gap> SCLibAdd(myRepository,complex);
-   #I  SCLibAdd: saving complex to file "complex_2013-11-28_01-02-23.scb".
+   #I  SCLibAdd: saving complex to file "complex_2013-11-28_01-37-17.scb".
    true
    gap> myRepository.Add(complex);; # alternative syntax
    
@@ -10157,7 +10157,7 @@ optional argument \mbox{\texttt{\mdseries\slshape name}} and the current time or
    #I  SCLibUpdate: rebuilding index done.
    [Simplicial complex library. Properties:
    CalculateIndexAttributes=true
-   Number of complexes in library=3
+   Number of complexes in library=4
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
@@ -10264,7 +10264,7 @@ stored in its base path in the XML file \texttt{complexes.idx}, the complexes ar
    gap> myRepository:=SCLibInit("~/myrepository");
    [Simplicial complex library. Properties:
    CalculateIndexAttributes=true
-   Number of complexes in library=3
+   Number of complexes in library=4
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
@@ -10382,7 +10382,7 @@ found with entries of the form \texttt{[ID, NAME]}. See \texttt{SCLib} (\ref{SCL
 \label{SCLibUpdate}
 }\hfill{\scriptsize (function)}}\\
 \textbf{\indent Returns:\ }
-library repository of type \texttt{SCLibRepository} upon success, fail otherwise.
+library repository of type \texttt{SCLibRepository} upon success, \texttt{fail} otherwise.
 
 
 
@@ -11239,7 +11239,7 @@ differs from system to system.
    Line 1075 : 
    + simpcomp package test
    Line 1076 : 
-   + GAP4stones: 102532
+   + GAP4stones: 99314
    true
    
 \end{Verbatim}
@@ -11701,7 +11701,7 @@ Section \ref{sec:generateFromOld}, which will be described in the next sections.
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@#first run functionality test on simpcomp|
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, version %%%VERSION%%%
+  + test simpcomp package, version 2.0.0
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@#all ok|
