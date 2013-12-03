@@ -115,8 +115,8 @@ MakeReadWriteGlobal("SCBistellarOptions");
 ##
 SCIntFunc.IRawBistellarRMoves:=function(arg)
 
-	local testelement, count, linkface, maxface, rawOptions,
-				r, faces, max, mode, complex;
+	local testelement, linkface, rawOptions, r, faces, max, 
+		mode, complex, hd, idx, i, j, base, tmp;
 
 	if Size(arg)<3 or Size(arg)=4 or Size(arg)>5 then
 		Info(InfoSimpcomp,2,"SCIntFunc.IRawBistellarRMoves: number of arguments must be 3 or 5");
@@ -131,28 +131,37 @@ SCIntFunc.IRawBistellarRMoves:=function(arg)
 	fi;
 	rawOptions:=[];
 
-	for testelement in faces[max-r] do
-		#if faces[1][1][1] in testelement or r=max or Size(faces[1])<50 then
-			linkface:=[];
-			count:=0;
-			for maxface in faces[max] do
-				if IsSubset(maxface,testelement)=true	then
-					count:=count+1;
-					UniteSet(linkface,maxface);
-				fi;
-			od;
-			if count=r + 1	then
-				SubtractSet(linkface,testelement);
-				if Size(arg)=3 or mode<>4 then
-					Add(rawOptions,[testelement,linkface]);
-				else
-					if Size(linkface)>0 and linkface in complex[Size(linkface)] then
-					  Add(rawOptions,[testelement,linkface]);
-					fi;
-				fi;
-			fi;
-		#fi;
+	# build Hasse diagram section
+	hd:=List([1..Size(faces[max-r])],x->[]);
+	
+	idx:=Combinations([1..max],max-r);	
+
+	#tmp:=Runtime();
+	for i in [1..Size(faces[max])] do
+		for j in idx do
+			base:=faces[max][i]{j};
+			Add(hd[PositionSorted(faces[max-r],base)],i);
+		od;
 	od;
+	#tmp:=Runtime()-tmp;
+	#Print(tmp,"\n");
+
+	#tmp:=Runtime();
+	for i in [1..Size(hd)] do
+		if Size(hd[i]) <> r+1 then continue; fi;
+		linkface:=Union(faces[max]{hd[i]});
+		testelement:=faces[max-r][i];
+		SubtractSet(linkface,testelement);
+		if Size(arg)=3 or mode<>4 then
+			Add(rawOptions,[testelement,linkface]);
+		else
+			if Size(linkface)>0 and linkface in complex[Size(linkface)] then
+				Add(rawOptions,[testelement,linkface]);
+				fi;
+		fi;
+	od;
+	#tmp:=Runtime()-tmp;
+	#Print(tmp,"\n");
 
 	return rawOptions;
 end;
@@ -2460,8 +2469,8 @@ SCIntFunc.SCMakeFlagComplex:=
 			return fail;
 		fi;
 		
-		Print("\nF=",result[2].F,"\n");
-		Print("Non-faces:\n",SCMinimalNonFaces(result[2]),"\n\n");
+		#Print("\nF=",result[2].F,"\n");
+		#Print("Non-faces:\n",SCMinimalNonFaces(result[2]),"\n\n");
 	od;
 	
 	SCBistellarOptions.MaxInterval:=maxrounds;

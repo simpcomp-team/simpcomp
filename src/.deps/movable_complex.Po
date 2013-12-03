@@ -32,10 +32,10 @@ src/movable_complex.o: src/movable_complex.cpp src/movable_complex.h \
  /usr/include/c++/4.6/iosfwd /usr/include/c++/4.6/bits/stringfwd.h \
  /usr/include/c++/4.6/bits/postypes.h /usr/include/c++/4.6/cwchar \
  /usr/include/wchar.h /usr/include/stdio.h \
- /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h \
  /usr/include/i386-linux-gnu/bits/wchar.h \
- /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h \
- /usr/include/xlocale.h /usr/include/i386-linux-gnu/bits/wchar2.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h /usr/include/xlocale.h \
+ /usr/include/i386-linux-gnu/bits/wchar2.h \
  /usr/include/c++/4.6/bits/char_traits.h \
  /usr/include/c++/4.6/bits/localefwd.h \
  /usr/include/c++/4.6/i686-linux-gnu/./bits/c++locale.h \
@@ -52,6 +52,7 @@ src/movable_complex.o: src/movable_complex.cpp src/movable_complex.h \
  /usr/include/pthread.h /usr/include/sched.h /usr/include/time.h \
  /usr/include/i386-linux-gnu/bits/sched.h \
  /usr/include/i386-linux-gnu/bits/time.h \
+ /usr/include/i386-linux-gnu/bits/timex.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h /usr/include/unistd.h \
  /usr/include/i386-linux-gnu/bits/posix_opt.h \
@@ -89,6 +90,7 @@ src/movable_complex.o: src/movable_complex.cpp src/movable_complex.h \
  /usr/include/i386-linux-gnu/sys/select.h \
  /usr/include/i386-linux-gnu/bits/select.h \
  /usr/include/i386-linux-gnu/bits/sigset.h \
+ /usr/include/i386-linux-gnu/bits/select2.h \
  /usr/include/i386-linux-gnu/sys/sysmacros.h /usr/include/alloca.h \
  /usr/include/i386-linux-gnu/bits/stdlib.h \
  /usr/include/c++/4.6/bits/algorithmfwd.h \
@@ -185,11 +187,11 @@ src/movable_complex.h:
 
 /usr/include/stdio.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h:
+/usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h:
 
 /usr/include/i386-linux-gnu/bits/wchar.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h:
+/usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h:
 
 /usr/include/xlocale.h:
 
@@ -238,6 +240,8 @@ src/movable_complex.h:
 /usr/include/i386-linux-gnu/bits/sched.h:
 
 /usr/include/i386-linux-gnu/bits/time.h:
+
+/usr/include/i386-linux-gnu/bits/timex.h:
 
 /usr/include/i386-linux-gnu/bits/pthreadtypes.h:
 
@@ -340,6 +344,8 @@ src/util.h:
 /usr/include/i386-linux-gnu/bits/select.h:
 
 /usr/include/i386-linux-gnu/bits/sigset.h:
+
+/usr/include/i386-linux-gnu/bits/select2.h:
 
 /usr/include/i386-linux-gnu/sys/sysmacros.h:
 

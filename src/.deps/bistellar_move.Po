@@ -12,11 +12,11 @@ src/bistellar_move.o: src/bistellar_move.cpp src/bistellar_move.h \
  /usr/include/c++/4.6/iosfwd /usr/include/c++/4.6/bits/stringfwd.h \
  /usr/include/c++/4.6/bits/postypes.h /usr/include/c++/4.6/cwchar \
  /usr/include/wchar.h /usr/include/stdio.h \
- /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h \
  /usr/include/i386-linux-gnu/bits/wchar.h \
- /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h \
- /usr/include/xlocale.h /usr/include/i386-linux-gnu/bits/wchar2.h \
- /usr/include/c++/4.6/exception /usr/include/c++/4.6/bits/char_traits.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h /usr/include/xlocale.h \
+ /usr/include/i386-linux-gnu/bits/wchar2.h /usr/include/c++/4.6/exception \
+ /usr/include/c++/4.6/bits/char_traits.h \
  /usr/include/c++/4.6/bits/stl_algobase.h \
  /usr/include/c++/4.6/bits/functexcept.h \
  /usr/include/c++/4.6/bits/exception_defines.h \
@@ -43,6 +43,7 @@ src/bistellar_move.o: src/bistellar_move.cpp src/bistellar_move.h \
  /usr/include/pthread.h /usr/include/sched.h /usr/include/time.h \
  /usr/include/i386-linux-gnu/bits/sched.h \
  /usr/include/i386-linux-gnu/bits/time.h \
+ /usr/include/i386-linux-gnu/bits/timex.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h /usr/include/unistd.h \
  /usr/include/i386-linux-gnu/bits/posix_opt.h \
@@ -118,11 +119,11 @@ src/bistellar_move.h:
 
 /usr/include/stdio.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h:
+/usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h:
 
 /usr/include/i386-linux-gnu/bits/wchar.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h:
+/usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h:
 
 /usr/include/xlocale.h:
 
@@ -199,6 +200,8 @@ src/bistellar_move.h:
 /usr/include/i386-linux-gnu/bits/sched.h:
 
 /usr/include/i386-linux-gnu/bits/time.h:
+
+/usr/include/i386-linux-gnu/bits/timex.h:
 
 /usr/include/i386-linux-gnu/bits/pthreadtypes.h:
 
