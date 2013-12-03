@@ -1035,7 +1035,7 @@ gap> K3:=SCFromGenerators(G,[[2,3,4,5,9],[2,5,7,10,11]]);
  Dim=4
 
 /SimplicialComplex]
-gap> ll:=SCsFromGroupExt(G,16,4,0,0,false);
+gap> ll:=SCsFromGroupExt(G,16,4,0,0,false,false,0,[]);
 [ [SimplicialComplex
     
      Properties known: Dim, FacetsEx, Name, Vertices.

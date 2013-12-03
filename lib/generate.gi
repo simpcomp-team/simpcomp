@@ -3779,3 +3779,72 @@ function(g,orient)
 
 	return c;
 end);
+
+################################################################################
+##<#GAPDoc Label="SCSeriesS2xS2">
+## <ManSection>
+## <Func Name="SCSeriesS2xS2" Arg="k"/>
+## <Returns> simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Description>	
+## Generates a combinatorial version of <M>(S^2 \times S^2)^{\# k}</M>.
+## <Example>
+## gap> c:=SCSeriesS2xS2(3);
+## gap> c.Homology;
+## </Example>
+## </Description>
+## </ManSection>
+##<#/GAPDoc>
+################################################################################
+InstallGlobalFunction(SCSeriesS2xS2,
+function(k)
+	local dc, i, n, c, str;
+	if not IsInt(k) or k < 0 then
+		Info(InfoSimpcomp,1,"SCSeriesS2xS2: argument must be a non-negative integer.");
+		return fail;
+	fi;
+	if k = 0 then
+		return SCBdSimplex(5);
+	fi;
+	n:=6*k+6;
+	dc:=[];
+	Add(dc,[1,1,1,1,n-4]);
+	Add(dc,[1,1,2*k+1,2*k+3,2*k]);
+	Add(dc,[1,2*k+1,1,2*k+1,2*k+2]);
+	Add(dc,[1,2*k+2,2*k+1,2,2*k]);
+
+	for i in [2..2*k] do
+		Add(dc,[1,1,i,1,6*k+3-i]);
+	od;
+
+	if IsOddInt(k) then
+		Add(dc,[2*k+1,2,2*k+1,2*k,2]);
+		for i in [0..k-2] do
+			if IsOddInt(i) then
+				Add(dc,[3*k-2*Int(i/2),2,3*k-2*Int((i+1)/2),2,2+2*i]);
+			else
+				Add(dc,[3*k-2*Int(i/2),2,3*k-2*Int((i+1)/2),2+2*i,2]);
+			fi;
+			Add(dc,[3*k-2*Int(i/2),3*k-2*Int((i+1)/2),2,2+2*i,2]);
+		od;
+	else
+		Add(dc,[2*k+1,2,2*k+1,2,2*k]);
+		for i in [0..k-2] do
+			if IsOddInt(i) then
+				Add(dc,[3*k-1-2*Int(i/2),2,3*k+1-2*Int((i+1)/2),2,2+2*i]);
+			else
+				Add(dc,[3*k-1-2*Int(i/2),2,3*k+1-2*Int((i+1)/2),2+2*i,2]);
+			fi;
+			Add(dc,[3*k-1-2*Int(i/2),3*k+1-2*Int((i+1)/2),2,2+2*i,2]);
+		od;
+	fi;
+
+	for i in [0..k-2] do
+		Add(dc,[1,1,6*k-2*i,2,2+2*i]);
+	od;
+	str:=Concatenation("(S^2 x S^2)^(# ",String(k),")"); 
+	c:=SCFromDifferenceCycles(dc);
+	SetSCTopologicalType(c,str);
+	SCRename(c,str);
+	return c;
+
+end);

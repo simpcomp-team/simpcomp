@@ -874,8 +874,7 @@
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> SCAutomorphismGroup(c);    [128X[104X
-    [4X[28X #I  SCAutomorphismGroupInternal: can only compute automorphism group for closed complexes.[128X[104X
-    [4X[28X fail[128X[104X
+    [4X[28X PrimitiveGroup(7,2) = D(2*7)[128X[104X
     [4X[28X gap> bd:=SCBoundary(c);;[128X[104X
     [4X[28X gap> SCAutomorphismGroup(bd);[128X[104X
     [4X[28X PrimitiveGroup(7,4) = AGL(1, 7)[128X[104X
@@ -1183,10 +1182,17 @@
     [4X[28X   [ 9, 43 ], [ 10, 73 ], [ 12, 22 ], [ 12, 33 ], [ 12, 40 ], [ 12, 51 ], [128X[104X
     [4X[28X   [ 12, 58 ], [ 12, 64 ], [ 12, 85 ], [ 12, 94 ], [ 12, 97 ], [ 18, 28 ] ][128X[104X
     [4X[28X gap> c:=SCChiralMap(8,10);[128X[104X
-    [4X[28X Error, SCChiralMap: function is not yet defined[128X[104X
-    [4X[28X not in any function at line 49 of *stdin*[128X[104X
+    [4X[28X [SimplicialComplex[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Properties known: Dim, FacetsEx, Name, TopologicalType, Vertices.[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Name="Chiral map {8,10}"[128X[104X
+    [4X[28X  Dim=2[128X[104X
+    [4X[28X  TopologicalType="(T^2)^#10"[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> c.Homology;[128X[104X
-    [4X[28X [ [ 0, [  ] ], [ 14, [  ] ], [ 1, [  ] ] ][128X[104X
+    [4X[28X [ [ 0, [  ] ], [ 20, [  ] ], [ 1, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -1208,10 +1214,17 @@
     [4X[28X   [ 9, 43 ], [ 10, 73 ], [ 12, 22 ], [ 12, 33 ], [ 12, 40 ], [ 12, 51 ], [128X[104X
     [4X[28X   [ 12, 58 ], [ 12, 64 ], [ 12, 85 ], [ 12, 94 ], [ 12, 97 ], [ 18, 28 ] ][128X[104X
     [4X[28X gap> c:=SCChiralMap(ll[18][1],ll[18][2]);[128X[104X
-    [4X[28X Error, SCChiralMap: function is not yet defined[128X[104X
-    [4X[28X not in any function at line 43 of *stdin*[128X[104X
+    [4X[28X [SimplicialComplex[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Properties known: Dim, FacetsEx, Name, TopologicalType, Vertices.[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Name="Chiral map {18,28}"[128X[104X
+    [4X[28X  Dim=2[128X[104X
+    [4X[28X  TopologicalType="(T^2)^#28"[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> SCHomology(c);[128X[104X
-    [4X[28X [ [ 0, [  ] ], [ 14, [  ] ], [ 1, [  ] ] ][128X[104X
+    [4X[28X [ [ 0, [  ] ], [ 56, [  ] ], [ 1, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -1300,10 +1313,11 @@
     [4X[28X gap> c:=SCRegularMap(7,7,true);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
-    [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
+    [4X[28X  Properties known: Dim, FacetsEx, Name, TopologicalType, Vertices.[128X[104X
     [4X[28X [128X[104X
-    [4X[28X  Name="complex from generators under unknown group"[128X[104X
+    [4X[28X  Name="Orientable regular map {7,7}"[128X[104X
     [4X[28X  Dim=2[128X[104X
+    [4X[28X  TopologicalType="(T^2)^#7"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> g:=SCAutomorphismGroup(c);[128X[104X
@@ -1335,10 +1349,11 @@
     [4X[28X gap> c:=SCRegularMap(ll[5][1],ll[5][2],ll[5][3]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
-    [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
+    [4X[28X  Properties known: Dim, FacetsEx, Name, TopologicalType, Vertices.[128X[104X
     [4X[28X [128X[104X
-    [4X[28X  Name="complex from generators under unknown group"[128X[104X
+    [4X[28X  Name="Non-orientable regular map {7,15}"[128X[104X
     [4X[28X  Dim=2[128X[104X
+    [4X[28X  TopologicalType="(RP^2)^#15"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> SCHomology(c);[128X[104X
@@ -1872,10 +1887,10 @@
     [4X[28X          Properties known: AutomorphismGroup, AutomorphismGroupSize, [128X[104X
     [4X[28X                            AutomorphismGroupStructure, [128X[104X
     [4X[28X                            AutomorphismGroupTransitivity, BoundaryEx, Dim, [128X[104X
-    [4X[28X                            FVector, FacetsEx, GeneratorsEx, HasBoundary, [128X[104X
-    [4X[28X                            Homology, IsEmpty, IsManifold, IsPseudoManifold, [128X[104X
-    [4X[28X                            IsStronglyConnected, Name, NumFaces[], SkelExs[], [128X[104X
-    [4X[28X                            Vertices.[128X[104X
+    [4X[28X                            DualGraph, FVector, FacetsEx, GeneratorsEx, [128X[104X
+    [4X[28X                            HasBoundary, Homology, IsConnected, IsEmpty, [128X[104X
+    [4X[28X                            IsManifold, IsPseudoManifold, Name, NumFaces[], [128X[104X
+    [4X[28X                            SkelExs[], Vertices.[128X[104X
     [4X[28X         [128X[104X
     [4X[28X          Name="Complex 1 of PSL(2, 7) (multiple orbits)"[128X[104X
     [4X[28X          Dim=3[128X[104X
@@ -1885,8 +1900,8 @@
     [4X[28X          FVector=[ 8, 28, 56, 28 ][128X[104X
     [4X[28X          HasBoundary=false[128X[104X
     [4X[28X          Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 8, [ ] ], [ 1, [ ] ] ][128X[104X
+    [4X[28X          IsConnected=true[128X[104X
     [4X[28X          IsPseudoManifold=true[128X[104X
-    [4X[28X          IsStronglyConnected=true[128X[104X
     [4X[28X         [128X[104X
     [4X[28X         /SimplicialComplex] ], [  ] ][128X[104X
     [4X[28X [128X[104X
@@ -2201,7 +2216,7 @@
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
     [4X[28X [128X[104X
-    [4X[28X  Name="unnamed complex 50"[128X[104X
+    [4X[28X  Name="unnamed complex 52"[128X[104X
     [4X[28X  Dim=3[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
@@ -2210,7 +2225,7 @@
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
     [4X[28X [128X[104X
-    [4X[28X  Name="Bd(unnamed complex 50)"[128X[104X
+    [4X[28X  Name="Bd(unnamed complex 52)"[128X[104X
     [4X[28X  Dim=2[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
@@ -2220,7 +2235,7 @@
     [4X[28X  Properties known: BoundaryEx, Dim, FacetsEx, HasBoundary, Name, [128X[104X
     [4X[28X                    SkelExs[], Vertices.[128X[104X
     [4X[28X [128X[104X
-    [4X[28X  Name="unnamed complex 50"[128X[104X
+    [4X[28X  Name="unnamed complex 52"[128X[104X
     [4X[28X  Dim=3[128X[104X
     [4X[28X  HasBoundary=true[128X[104X
     [4X[28X [128X[104X

@@ -12,8 +12,8 @@ SetPackageInfo( rec(
 
 PackageName := "simpcomp",
 Subtitle := "A GAP toolbox for simplicial complexes",
-Version := "1.6.0",
-Date := "24/01/2013",
+Version := "%%%VERSION%%%",
+Date := "%%%DATE%%%",
 
 ArchiveURL :=Concatenation( "http://www.igt.uni-stuttgart.de/LstDiffgeo/simpcomp/simpcomp-",String(~.Version)),
 ArchiveFormats := ".tar.gz",

@@ -35,6 +35,8 @@ ReadPackage("simpcomp","lib/morse.gd");
 ReadPackage("simpcomp","lib/fromgroup.gd");
 ReadPackage("simpcomp","lib/blowups.gd");
 ReadPackage("simpcomp","lib/highlySymmetricSurfaces.gd");
+ReadPackage("simpcomp","lib/isosig.gd");
+
 
 # checks if package 'homology' is present and working
 SCIntFunc.SetupHomology:=function()

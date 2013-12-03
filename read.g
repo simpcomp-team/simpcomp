@@ -44,6 +44,7 @@ ReadPackage("simpcomp", "lib/morse.gi");
 ReadPackage("simpcomp", "lib/fromgroup.gi");
 ReadPackage("simpcomp", "lib/blowups.gi");
 ReadPackage("simpcomp", "lib/highlySymmetricSurfaces.gi");
+ReadPackage("simpcomp", "lib/isosig.gi");
 
 #load `homology' package specific functions if available
 if(SCIntFunc.SetupHomology()=false) then

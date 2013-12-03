@@ -305,7 +305,7 @@ InstallMethod(SCDeletedJoin,
 "for SCSimplicialComplex and SCSimplicialComplex",
 [SCIsSimplicialComplex,SCIsSimplicialComplex],
 function(complex1,complex2)
-	local c1,c2,dj,i,j,e,l,l1,l2,f1,f2;
+	local c1,c2,dj,i,j,k,e,l,l1,l2,f1,f2;
 
 	l1:=SCVertices(complex1);
 	l2:=SCVertices(complex2);
@@ -336,14 +336,14 @@ function(complex1,complex2)
 			Add(dj[l],e);
 		od;
 	od;
-	
+
+
 	for i in [1..Length(dj)] do
-		if(not IsBound(dj[i])) then
+		if not IsBound(dj[i]) then
 			dj[i]:=[];
 		fi;
 	od;
-	
-	
+
 	dj:=SCFromFacets(Union(SCIntFunc.reduceFaceLattice(dj)));
 	if(dj=fail) then
 		return fail;
@@ -1967,6 +1967,10 @@ function(complex1, complex2)
 		return true;
 	elif SCIsEmpty(complex1) or SCIsEmpty(complex2) then
 		return false;
+	fi;
+
+	if HasSCExportIsoSig(complex1) and HasSCExportIsoSig(complex2) then
+		return SCExportIsoSig(complex1) = SCExportIsoSig(complex2); 
 	fi;
 	
 	sc1:=SCIsStronglyConnected(complex1);

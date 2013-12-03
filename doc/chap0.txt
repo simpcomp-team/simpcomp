@@ -6,10 +6,10 @@
                      [1XA [5XGAP[105X toolbox for simplicial complexes[101X
   
   
-                                 Version 1.6.0
+                             Version %%%VERSION%%%
   
   
-                                  January 2013
+                                %%%DATESHORT%%%
   
   
                                Felix Effenberger
@@ -68,8 +68,8 @@
   
   -------------------------------------------------------
   [1XCopyright[101X
-  [33X[0;0Y© 2013 Felix Effenberger and Jonathan Spreer. Permission is granted to copy,
-  distribute  and/or  modify  this  document  under  the terms of the GNU Free
+  [33X[0;0Y© %%%YEAR%%% Felix Effenberger and Jonathan Spreer. Permission is granted to
+  copy, distribute and/or modify this document under the terms of the GNU Free
   Documentation  License,  Version  1.2  or any later version published by the
   Free Software Foundation, see [7Xhttp://www.fsf.org/licensing/licenses/fdl.html[107X
   for a copy.[133X

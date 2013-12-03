@@ -43,14 +43,14 @@
   \indexspace
 
   \item \texttt  {SC}, \hyperpage{46}
-  \item \texttt  {SCAlexanderDual}, \hyperpage{102}
+  \item \texttt  {SCAlexanderDual}, \hyperpage{103}
   \item \texttt  {SCAltshulerSteinberg}, \hyperpage{79}
   \item \texttt  {SCAntiStar}, \hyperpage{28}
   \item \texttt  {SCAutomorphismGroup}, \hyperpage{80}
   \item \texttt  {SCAutomorphismGroupInternal}, \hyperpage{80}
   \item \texttt  {SCAutomorphismGroupSize}, \hyperpage{81}
   \item \texttt  {SCAutomorphismGroupStructure}, \hyperpage{81}
-  \item \texttt  {SCAutomorphismGroupTransitivity}, \hyperpage{81}
+  \item \texttt  {SCAutomorphismGroupTransitivity}, \hyperpage{82}
   \item \texttt  {SCBdCrossPolytope}, \hyperpage{47}
   \item \texttt  {SCBdCyclicPolytope}, \hyperpage{48}
   \item \texttt  {SCBdSimplex}, \hyperpage{48}
@@ -63,13 +63,13 @@
   \item \texttt  {SCCartesianProduct}, \hyperpage{69}
   \item \texttt  {SCChiralMap}, \hyperpage{65}
   \item \texttt  {SCChiralMaps}, \hyperpage{65}
-  \item \texttt  {SCChiralTori}, \hyperpage{65}
+  \item \texttt  {SCChiralTori}, \hyperpage{66}
   \item \texttt  {SCClose}, \hyperpage{103}
   \item \texttt  {SCCoboundaryOperatorMatrix}, \hyperpage{133}
   \item \texttt  {SCCohomology}, \hyperpage{134}
   \item \texttt  {SCCohomologyBasis}, \hyperpage{134}
   \item \texttt  {SCCohomologyBasisAsSimplices}, \hyperpage{135}
-  \item \texttt  {SCCollapseGreedy}, \hyperpage{103}
+  \item \texttt  {SCCollapseGreedy}, \hyperpage{104}
   \item \texttt  {SCCone}, \hyperpage{104}
   \item \texttt  {SCConnectedComponents}, \hyperpage{70}, 
 		\hyperpage{121}
@@ -81,11 +81,11 @@
   \item \texttt  {SCCyclic3Mfld}, \hyperpage{78}
   \item \texttt  {SCCyclic3MfldByType}, \hyperpage{78}
   \item \texttt  {SCCyclic3MfldListOfGivenType}, \hyperpage{79}
-  \item \texttt  {SCCyclic3MfldTopTypes}, \hyperpage{77}
-  \item \texttt  {SCDehnSommervilleCheck}, \hyperpage{82}
+  \item \texttt  {SCCyclic3MfldTopTypes}, \hyperpage{78}
+  \item \texttt  {SCDehnSommervilleCheck}, \hyperpage{83}
   \item \texttt  {SCDehnSommervilleMatrix}, \hyperpage{83}
   \item \texttt  {SCDeletedJoin}, \hyperpage{105}
-  \item \texttt  {SCDifference}, \hyperpage{105}
+  \item \texttt  {SCDifference}, \hyperpage{106}
   \item \texttt  {SCDifferenceCycleCompress}, \hyperpage{73}
   \item \texttt  {SCDifferenceCycleExpand}, \hyperpage{74}
   \item \texttt  {SCDifferenceCycles}, \hyperpage{83}
@@ -93,7 +93,7 @@
   \item \texttt  {SCDualGraph}, \hyperpage{84}
   \item \texttt  {SCEmpty}, \hyperpage{49}
   \item \texttt  {SCEquivalent}, \hyperpage{143}
-  \item \texttt  {SCEulerCharacteristic}, \hyperpage{84}, 
+  \item \texttt  {SCEulerCharacteristic}, \hyperpage{85}, 
 		\hyperpage{122}
   \item \texttt  {SCExamineComplexBistellar}, \hyperpage{143}
   \item \texttt  {SCExportJavaView}, \hyperpage{173}
@@ -102,13 +102,13 @@
   \item \texttt  {SCExportPolymake}, \hyperpage{172}
   \item \texttt  {SCExportSnapPy}, \hyperpage{174}
   \item \texttt  {SCFaceLattice}, \hyperpage{85}, \hyperpage{123}
-  \item \texttt  {SCFaceLatticeEx}, \hyperpage{85}, \hyperpage{123}
+  \item \texttt  {SCFaceLatticeEx}, \hyperpage{86}, \hyperpage{123}
   \item \texttt  {SCFaces}, \hyperpage{86}
   \item \texttt  {SCFacesEx}, \hyperpage{86}
   \item \texttt  {SCFacets}, \hyperpage{23}, \hyperpage{86}
   \item \texttt  {SCFacetsEx}, \hyperpage{23}, \hyperpage{86}
   \item \texttt  {SCFillSphere}, \hyperpage{106}
-  \item \texttt  {SCFpBettiNumbers}, \hyperpage{86}, \hyperpage{124}
+  \item \texttt  {SCFpBettiNumbers}, \hyperpage{87}, \hyperpage{124}
   \item \texttt  {SCFromDifferenceCycles}, \hyperpage{46}
   \item \texttt  {SCFromFacets}, \hyperpage{45}
   \item \texttt  {SCFromGenerators}, \hyperpage{47}
@@ -118,46 +118,46 @@
   \item \texttt  {SCFVectorBdCyclicPolytope}, \hyperpage{52}
   \item \texttt  {SCFVectorBdSimplex}, \hyperpage{52}
   \item \texttt  {SCGenerators}, \hyperpage{88}
-  \item \texttt  {SCGeneratorsEx}, \hyperpage{89}
+  \item \texttt  {SCGeneratorsEx}, \hyperpage{90}
   \item \texttt  {SCGenus}, \hyperpage{124}
   \item \texttt  {SCGVector}, \hyperpage{88}
   \item \texttt  {SCHandleAddition}, \hyperpage{107}
   \item \texttt  {SCHasBoundary}, \hyperpage{91}
   \item \texttt  {SCHasInterior}, \hyperpage{91}
   \item \texttt  {SCHeegaardSplitting}, \hyperpage{92}
-  \item \texttt  {SCHeegaardSplittingSmallGenus}, \hyperpage{91}
+  \item \texttt  {SCHeegaardSplittingSmallGenus}, \hyperpage{92}
   \item \texttt  {SCHomalgBoundaryMatrices}, \hyperpage{175}
   \item \texttt  {SCHomalgCoboundaryMatrices}, \hyperpage{176}
   \item \texttt  {SCHomalgCohomology}, \hyperpage{177}
   \item \texttt  {SCHomalgCohomologyBasis}, \hyperpage{177}
   \item \texttt  {SCHomalgHomology}, \hyperpage{176}
   \item \texttt  {SCHomalgHomologyBasis}, \hyperpage{176}
-  \item \texttt  {SCHomology}, \hyperpage{92}, \hyperpage{125}
+  \item \texttt  {SCHomology}, \hyperpage{93}, \hyperpage{125}
   \item \texttt  {SCHomologyBasis}, \hyperpage{132}
   \item \texttt  {SCHomologyBasisAsSimplices}, \hyperpage{132}
   \item \texttt  {SCHomologyInternal}, \hyperpage{133}
-  \item \texttt  {SCHVector}, \hyperpage{90}
+  \item \texttt  {SCHVector}, \hyperpage{91}
   \item \texttt  {SCImportPolymake}, \hyperpage{172}
-  \item \texttt  {SCIncidences}, \hyperpage{93}
+  \item \texttt  {SCIncidences}, \hyperpage{94}
   \item \texttt  {SCIncidencesEx}, \hyperpage{94}
-  \item \texttt  {SCInfoLevel}, \hyperpage{178}
+  \item \texttt  {SCInfoLevel}, \hyperpage{179}
   \item \texttt  {SCInterior}, \hyperpage{94}
-  \item \texttt  {SCIntersection}, \hyperpage{107}
+  \item \texttt  {SCIntersection}, \hyperpage{108}
   \item \texttt  {SCIntersectionForm}, \hyperpage{137}
   \item \texttt  {SCIntersectionFormDimensionality}, \hyperpage{138}
   \item \texttt  {SCIntersectionFormParity}, \hyperpage{138}
   \item \texttt  {SCIntersectionFormSignature}, \hyperpage{139}
   \item \texttt  {SCIntFunc.SCChooseMove}, \hyperpage{144}
-  \item \texttt  {SCIsCentrallySymmetric}, \hyperpage{94}
+  \item \texttt  {SCIsCentrallySymmetric}, \hyperpage{95}
   \item \texttt  {SCIsConnected}, \hyperpage{95}, \hyperpage{125}
   \item \texttt  {SCIsEmpty}, \hyperpage{95}, \hyperpage{126}
-  \item \texttt  {SCIsEulerianManifold}, \hyperpage{95}
+  \item \texttt  {SCIsEulerianManifold}, \hyperpage{96}
   \item \texttt  {SCIsFlag}, \hyperpage{96}
-  \item \texttt  {SCIsHeegaardSplitting}, \hyperpage{96}
+  \item \texttt  {SCIsHeegaardSplitting}, \hyperpage{97}
   \item \texttt  {SCIsHomologySphere}, \hyperpage{97}
   \item \texttt  {SCIsInKd}, \hyperpage{97}
   \item \texttt  {SCIsIsomorphic}, \hyperpage{108}
-  \item \texttt  {SCIsKNeighborly}, \hyperpage{97}
+  \item \texttt  {SCIsKNeighborly}, \hyperpage{98}
   \item \texttt  {SCIsKStackedSphere}, \hyperpage{144}
   \item \texttt  {SCIsLibRepository}, \hyperpage{163}
   \item \texttt  {SCIsManifold}, \hyperpage{145}
@@ -166,13 +166,13 @@
   \item \texttt  {SCIsomorphismEx}, \hyperpage{109}
   \item \texttt  {SCIsOrientable}, \hyperpage{98}, \hyperpage{126}
   \item \texttt  {SCIsPseudoManifold}, \hyperpage{98}
-  \item \texttt  {SCIsPure}, \hyperpage{98}
+  \item \texttt  {SCIsPure}, \hyperpage{99}
   \item \texttt  {SCIsShellable}, \hyperpage{99}
   \item \texttt  {SCIsSimplicialComplex}, \hyperpage{34}
   \item \texttt  {SCIsStronglyConnected}, \hyperpage{99}
   \item \texttt  {SCIsSubcomplex}, \hyperpage{108}
   \item \texttt  {SCIsTight}, \hyperpage{156}
-  \item \texttt  {SCJoin}, \hyperpage{109}
+  \item \texttt  {SCJoin}, \hyperpage{110}
   \item \texttt  {SCLabelMax}, \hyperpage{24}
   \item \texttt  {SCLabelMin}, \hyperpage{25}
   \item \texttt  {SCLabels}, \hyperpage{25}
@@ -193,16 +193,16 @@
   \item \texttt  {SCLinks}, \hyperpage{29}
   \item \texttt  {SCLoad}, \hyperpage{170}
   \item \texttt  {SCLoadXML}, \hyperpage{171}
-  \item \texttt  {SCMailClearPending}, \hyperpage{179}
-  \item \texttt  {SCMailIsEnabled}, \hyperpage{179}
-  \item \texttt  {SCMailIsPending}, \hyperpage{179}
-  \item \texttt  {SCMailSend}, \hyperpage{180}
-  \item \texttt  {SCMailSendPending}, \hyperpage{180}
-  \item \texttt  {SCMailSetAddress}, \hyperpage{180}
-  \item \texttt  {SCMailSetEnabled}, \hyperpage{180}
-  \item \texttt  {SCMailSetMinInterval}, \hyperpage{181}
+  \item \texttt  {SCMailClearPending}, \hyperpage{180}
+  \item \texttt  {SCMailIsEnabled}, \hyperpage{180}
+  \item \texttt  {SCMailIsPending}, \hyperpage{180}
+  \item \texttt  {SCMailSend}, \hyperpage{181}
+  \item \texttt  {SCMailSendPending}, \hyperpage{181}
+  \item \texttt  {SCMailSetAddress}, \hyperpage{181}
+  \item \texttt  {SCMailSetEnabled}, \hyperpage{181}
+  \item \texttt  {SCMailSetMinInterval}, \hyperpage{182}
   \item \texttt  {SCMappingCylinder}, \hyperpage{155}
-  \item \texttt  {SCMinimalNonFaces}, \hyperpage{99}
+  \item \texttt  {SCMinimalNonFaces}, \hyperpage{100}
   \item \texttt  {SCMinimalNonFacesEx}, \hyperpage{100}
   \item \texttt  {SCMorseIsPerfect}, \hyperpage{161}
   \item \texttt  {SCMorseMultiplicityVector}, \hyperpage{162}
@@ -211,7 +211,7 @@
   \item \texttt  {SCMoves}, \hyperpage{147}
   \item \texttt  {SCName}, \hyperpage{25}
   \item \texttt  {SCNeighborliness}, \hyperpage{100}
-  \item \texttt  {SCNeighbors}, \hyperpage{110}
+  \item \texttt  {SCNeighbors}, \hyperpage{111}
   \item \texttt  {SCNeighborsEx}, \hyperpage{111}
   \item \texttt  {SCNrChiralTori}, \hyperpage{66}
   \item \texttt  {SCNrCyclic3Mflds}, \hyperpage{77}
@@ -221,30 +221,30 @@
   \item \texttt  {SCNSFromFacets}, \hyperpage{117}
   \item \texttt  {SCNSSlicing}, \hyperpage{118}
   \item \texttt  {SCNSTriangulation}, \hyperpage{121}
-  \item \texttt  {SCNumFaces}, \hyperpage{100}
+  \item \texttt  {SCNumFaces}, \hyperpage{101}
   \item \texttt  {SCOrientation}, \hyperpage{101}
-  \item \texttt  {SCProperties}, \hyperpage{200}
+  \item \texttt  {SCProperties}, \hyperpage{201}
   \item \texttt  {SCPropertiesDropped}, \hyperpage{35}
-  \item \texttt  {SCPropertiesFlush}, \hyperpage{200}
-  \item \texttt  {SCPropertiesManaged}, \hyperpage{200}
-  \item \texttt  {SCPropertiesNames}, \hyperpage{201}
-  \item \texttt  {SCPropertiesTmp}, \hyperpage{201}
-  \item \texttt  {SCPropertiesTmpNames}, \hyperpage{201}
-  \item \texttt  {SCPropertyByName}, \hyperpage{201}
-  \item \texttt  {SCPropertyDrop}, \hyperpage{201}
-  \item \texttt  {SCPropertyHandlersSet}, \hyperpage{201}
-  \item \texttt  {SCPropertySet}, \hyperpage{202}
-  \item \texttt  {SCPropertySetMutable}, \hyperpage{202}
-  \item \texttt  {SCPropertyTmpByName}, \hyperpage{202}
-  \item \texttt  {SCPropertyTmpDrop}, \hyperpage{202}
-  \item \texttt  {SCPropertyTmpSet}, \hyperpage{202}
+  \item \texttt  {SCPropertiesFlush}, \hyperpage{201}
+  \item \texttt  {SCPropertiesManaged}, \hyperpage{201}
+  \item \texttt  {SCPropertiesNames}, \hyperpage{202}
+  \item \texttt  {SCPropertiesTmp}, \hyperpage{202}
+  \item \texttt  {SCPropertiesTmpNames}, \hyperpage{202}
+  \item \texttt  {SCPropertyByName}, \hyperpage{202}
+  \item \texttt  {SCPropertyDrop}, \hyperpage{202}
+  \item \texttt  {SCPropertyHandlersSet}, \hyperpage{202}
+  \item \texttt  {SCPropertySet}, \hyperpage{203}
+  \item \texttt  {SCPropertySetMutable}, \hyperpage{203}
+  \item \texttt  {SCPropertyTmpByName}, \hyperpage{203}
+  \item \texttt  {SCPropertyTmpDrop}, \hyperpage{203}
+  \item \texttt  {SCPropertyTmpSet}, \hyperpage{203}
   \item \texttt  {SCRandomize}, \hyperpage{148}
   \item \texttt  {SCReduceAsSubcomplex}, \hyperpage{148}
   \item \texttt  {SCReduceComplex}, \hyperpage{149}
   \item \texttt  {SCReduceComplexEx}, \hyperpage{149}
   \item \texttt  {SCReduceComplexFast}, \hyperpage{152}
   \item \texttt  {SCReference}, \hyperpage{26}
-  \item \texttt  {SCRegularMap}, \hyperpage{66}
+  \item \texttt  {SCRegularMap}, \hyperpage{67}
   \item \texttt  {SCRegularMaps}, \hyperpage{67}
   \item \texttt  {SCRegularTorus}, \hyperpage{68}
   \item \texttt  {SCRelabel}, \hyperpage{26}
@@ -252,7 +252,7 @@
   \item \texttt  {SCRelabelTransposition}, \hyperpage{27}
   \item \texttt  {SCRename}, \hyperpage{27}
   \item \texttt  {SCRMoves}, \hyperpage{147}
-  \item \texttt  {SCRunTest}, \hyperpage{181}
+  \item \texttt  {SCRunTest}, \hyperpage{182}
   \item \texttt  {SCSave}, \hyperpage{171}
   \item \texttt  {SCSaveXML}, \hyperpage{172}
   \item \texttt  {SCSeriesAGL}, \hyperpage{53}
@@ -278,11 +278,11 @@
   \item \texttt  {SCsFromGroupByTransitivity}, \hyperpage{76}
   \item \texttt  {SCsFromGroupExt}, \hyperpage{75}
   \item \texttt  {SCShelling}, \hyperpage{111}
-  \item \texttt  {SCShellingExt}, \hyperpage{111}
+  \item \texttt  {SCShellingExt}, \hyperpage{112}
   \item \texttt  {SCShellings}, \hyperpage{112}
   \item \texttt  {SCSimplex}, \hyperpage{49}
   \item \texttt  {SCSkel}, \hyperpage{101}, \hyperpage{127}
-  \item \texttt  {SCSkelEx}, \hyperpage{101}, \hyperpage{127}
+  \item \texttt  {SCSkelEx}, \hyperpage{102}, \hyperpage{127}
   \item \texttt  {SCSlicing}, \hyperpage{161}
   \item \texttt  {SCSpan}, \hyperpage{113}
   \item \texttt  {SCSpanningTree}, \hyperpage{102}
@@ -290,14 +290,14 @@
   \item \texttt  {SCStars}, \hyperpage{32}
   \item \texttt  {SCStronglyConnectedComponents}, \hyperpage{74}
   \item \texttt  {SCSurface}, \hyperpage{50}
-  \item \texttt  {SCSuspension}, \hyperpage{113}
+  \item \texttt  {SCSuspension}, \hyperpage{114}
   \item \texttt  {SCTopologicalType}, \hyperpage{128}
-  \item \texttt  {SCUnion}, \hyperpage{114}, \hyperpage{129}
+  \item \texttt  {SCUnion}, \hyperpage{115}, \hyperpage{129}
   \item \texttt  {SCUnlabelFace}, \hyperpage{28}
   \item \texttt  {SCVertexIdentification}, \hyperpage{115}
   \item \texttt  {SCVertices}, \hyperpage{24}
   \item \texttt  {SCVerticesEx}, \hyperpage{24}
-  \item \texttt  {SCWedge}, \hyperpage{115}
+  \item \texttt  {SCWedge}, \hyperpage{116}
   \item \texttt  {ShallowCopy (SCSimplicialComplex)}, \hyperpage{35}
   \item \texttt  {Size (SCSimplicialComplex)}, \hyperpage{40}
 

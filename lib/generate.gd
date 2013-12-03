@@ -23,10 +23,11 @@
 ##
 ## </Section>
 ##
+## <#Include Label="isosig"/>
+##
 ## <Section Label="sec:Standard">
 ## <Heading>Generating some standard triangulations</Heading>
 ##
-## <#Include Label="SCBdCrossPolytope"/>
 ## <#Include Label="SCBdCyclicPolytope"/>
 ## <#Include Label="SCBdSimplex"/>
 ## <#Include Label="SCEmpty"/>
@@ -58,6 +59,7 @@
 ## <#Include Label="SCSeriesLensSpace"/>
 ## <#Include Label="SCSeriesPrimeTorus"/>
 ## <#Include Label="SCSeriesSeifertFibredSpace"/>
+## <#Include Label="SCSeriesS2xS2"/>
 ##
 ## </Section >
 ## <Section Label="sec:RegularAndChiralMaps">
@@ -133,3 +135,4 @@ DeclareGlobalFunction("SCSeriesSeifertFibredSpace");
 DeclareGlobalFunction("SCSimplex");
 DeclareGlobalFunction("SCSeriesTorus");
 DeclareGlobalFunction("SCSurface");
+DeclareGlobalFunction("SCSeriesS2xS2");

@@ -15,7 +15,6 @@ InstallMethod(SCAutomorphismGroup,
 	local i,j,k,idx, dg, edges, f, gamma, Gprime, G, pm, sc, structure,g,bd,
 		stars,imstars,facets,pfacets,iso,allisos,verts,gens,gapidx;
 	
-		
 	if not IsBoundGlobal("AutGroupGraph") or not IsBoundGlobal("EdgeOrbitsGraph") then
 		G:=SCAutomorphismGroupInternal(complex);
 		if G = fail then
@@ -24,7 +23,7 @@ InstallMethod(SCAutomorphismGroup,
 					return G;
 		fi;
 	fi;
-	
+
 	pm:=SCIsPseudoManifold(complex);
 	if(pm=fail) then
 		return fail;
@@ -49,7 +48,7 @@ InstallMethod(SCAutomorphismGroup,
 		SetSCAutomorphismGroupStructure(complex,structure);
 			return G;
 	fi;
-	
+
 	dg:=SCDualGraph(complex);
 	if dg = fail then
 		return fail;
@@ -71,7 +70,7 @@ InstallMethod(SCAutomorphismGroup,
 	
 	gamma:=EdgeOrbitsGraph(Group([()]),edges,Size(verts));
 	Gprime:=AutGroupGraph(gamma);
-	
+
 	if(Gprime=fail) then
 		Info(InfoSimpcomp,1,"SCAutomorphismGroup: error calculating automorphism group via GRAPE.");
 		return fail;
@@ -130,7 +129,7 @@ InstallMethod(SCAutomorphismGroup,
 	else
 		G:=Group(());
 	fi;
-	
+
 	SetSCAutomorphismGroup(complex,G);
 	SetSCAutomorphismGroupSize(complex,Size(G));
 	SetSCAutomorphismGroupTransitivity(complex,Transitivity(G));

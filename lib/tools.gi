@@ -525,7 +525,7 @@ SCIntFunc.MakeDoc:=function(arg)
 	
 	local path, ext, f, main, files, b, bookname,basenames, cp;
 	
-	basenames:=["class3mflds", "propobject", "bistellar", "complex", "generate", "glprops", "io", "labelops", "lib", "operations", "tools", "homology", "morse", "normalsurface", "prophandler", "fromgroup", "blowups", "pkghomalg", "highlySymmetricSurfaces" 
+	basenames:=["class3mflds", "propobject", "bistellar", "complex", "generate", "glprops", "io", "labelops", "lib", "operations", "tools", "homology", "morse", "normalsurface", "prophandler", "fromgroup", "blowups", "pkghomalg", "highlySymmetricSurfaces", "isosig" 
 	];
 	
 	

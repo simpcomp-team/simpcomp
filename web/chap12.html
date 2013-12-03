@@ -100,7 +100,7 @@
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/effen/.local/gap4r5/pkg/simpcomp/complexes/"
+ Path="/home/jonathan/apps/gap4r5/pkg/simpcomp/complexes/"
  ]
  gap&gt; SCLib.Size;
  7649
@@ -160,15 +160,15 @@
  gap&gt; myRepository:=SCLibInit("~/myrepository");
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=10
+ Number of complexes in library=1
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/effen/myrepository/"
+ Path="/home/jonathan/myrepository/"
  ]
  gap&gt; complex:=SCBdCrossPolytope(4);;
  gap&gt; SCLibAdd(myRepository,complex);
- #I  SCLibAdd: saving complex to file "complex_2013-01-24_17-24-11.scb".
+ #I  SCLibAdd: saving complex to file "complex_2013-01-31_00-05-43.scb".
  true
  gap&gt; myRepository.Add(complex);; # alternative syntax
  </pre></div>
@@ -203,18 +203,13 @@
 
 <div class="example"><pre>
  gap&gt; myRepository:=SCLibInit("~/myrepository");
- Found a self-reference to an unknown object!
- #I  IO_Unpicklers.SCLR: Error while unpicking library repository. Delete file complexes.idx and complexes.idxb and recreate them with SCLibInit.
- #I  SCIntFunc.SCLibInit: error loading binary index  -- trying to reconstruct it.
- #I  SCLibUpdate: rebuilding index for /home/effen/myrepository/.
- #I  SCLibUpdate: rebuilding index done.
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=11
+ Number of complexes in library=2
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/effen/myrepository/"
+ Path="/home/jonathan/myrepository/"
  ]
  gap&gt; SCLibAdd(myRepository,SCSimplex(2));;
  gap&gt; SCLibDelete(myRepository,1);
@@ -287,13 +282,18 @@
 
 <div class="example"><pre>
  gap&gt; myRepository:=SCLibInit("~/myrepository");
+ Found a self-reference to an unknown object!
+ #I  IO_Unpicklers.SCLR: Error while unpicking library repository. Delete file complexes.idx and complexes.idxb and recreate them with SCLibInit.
+ #I  SCIntFunc.SCLibInit: error loading binary index  -- trying to reconstruct it.
+ #I  SCLibUpdate: rebuilding index for /home/jonathan/myrepository/.
+ #I  SCLibUpdate: rebuilding index done.
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=11
+ Number of complexes in library=2
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/effen/myrepository/"
+ Path="/home/jonathan/myrepository/"
  ]
  </pre></div>
 
@@ -379,7 +379,7 @@
 <div class="example"><pre>
  gap&gt; myRepository:=SCLibInit("~/repository");;
  gap&gt; SCLibUpdate(myRepository);
- #I  SCLibUpdate: rebuilding index for /home/effen/repository/.
+ #I  SCLibUpdate: rebuilding index for /home/jonathan/repository/.
  #I  SCLibUpdate: rebuilding index done.
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
@@ -387,7 +387,7 @@
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/effen/repository/"
+ Path="/home/jonathan/repository/"
  ]
  </pre></div>
 
@@ -409,7 +409,7 @@
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/effen/.local/gap4r5/pkg/simpcomp/complexes/"
+ Path="/home/jonathan/apps/gap4r5/pkg/simpcomp/complexes/"
  ]
  </pre></div>
 

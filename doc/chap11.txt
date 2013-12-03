@@ -129,7 +129,7 @@
     [4X[28X #I  SCIsTight: processed 30000 of 40320 rsl-functions so far, all perfect.[128X[104X
     [4X[28X #I  SCIsTight: processed 40000 of 40320 rsl-functions so far, all perfect.[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X 6060[128X[104X
+    [4X[28X 5648[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   

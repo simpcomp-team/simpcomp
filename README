@@ -60,6 +60,10 @@ Download and installation
 Changes
 =======
 
+31/01/2013 - Version 1.6.1: Minor update.
+- Fixed minor bug in SCChiralMap and SCRegularMap.
+- Updated deployment system.
+
 22/01/2013 - Version 1.6.0: Major update.
 - Added functions SCHeegaardSplitting, SCHeegaardSplittingSmallGenus and
   SCIsHeegaardSplitting to handle Heegaard splittings.

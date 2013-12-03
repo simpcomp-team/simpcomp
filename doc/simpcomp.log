@@ -1,17 +1,11 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.25)  24 JAN 2013 19:36
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.20)  11 JUL 2013 11:37
 entering extended mode
  %&-line parsing enabled.
 **simpcomp
 (./simpcomp.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
-ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
-9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
-skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
-orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
-, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
-rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+yphenation, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size11.clo
@@ -482,7 +476,6 @@ LaTeX Info: Redefining \underbrace on input line 1820.
 LaTeX Info: Redefining \surd on input line 1843.
 LaTeX Font Info:    Redeclaring math accent \widehat on input line 1845.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 1846.
-LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
 )
 (/usr/share/texmf-texlive/tex/latex/tools/longtable.sty
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
@@ -1060,34 +1053,34 @@ he cen-trally sym-met-ric tran-si-tive (cst) sur-face
  []
 
 [58] [59] [60] [61] [62] [63]
-Underfull \hbox (badness 10000) in paragraph at lines 3496--3498
+Underfull \hbox (badness 10000) in paragraph at lines 3495--3497
 \T1/ptm/m/n/10.95 This $\OT1/ztmcm/m/n/10.95 3$\T1/ptm/m/n/10.95 -parameter fam
 -ily of com-bi-na-to-rial $\OT1/ztmcm/m/n/10.95 3$\T1/ptm/m/n/10.95 -manifolds 
 con-tains the fam-i-lies gen-er-ated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3496--3498
+Underfull \hbox (badness 10000) in paragraph at lines 3495--3497
 \T1/ptm/m/n/10.95 by \T1/cmtt/m/n/10.95 SCSeriesHomologySphere \T1/ptm/m/n/10.9
 5 ([][]6.3.10[][]), \T1/cmtt/m/n/10.95 SCSeriesConnectedSum \T1/ptm/m/n/10.95 (
 [][]6.3.6[][]) and parts of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3496--3498
+Underfull \hbox (badness 10000) in paragraph at lines 3495--3497
 \T1/cmtt/m/n/10.95 SCSeriesLensSpace \T1/ptm/m/n/10.95 ([][]6.3.15[][]), in-ter
 -nally calls \T1/cmtt/m/n/10.95 SCIntFunc.SeifertFibredSpace(p,q,r)\T1/ptm/m/n/
 10.95 .
  []
 
-[64] [65] [66] [67] [68]
+[64] [65] [66] [67] [68] [69]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 3870.
+(amsmath)                 on input line 3885.
 
-[69] [70]
-Underfull \hbox (badness 7451) in paragraph at lines 3961--3962
+[70]
+Underfull \hbox (badness 7451) in paragraph at lines 3976--3977
 []\T1/ptm/m/n/10.95 If $\OML/ztmcm/m/it/10.95 n \U/MnSymbolD/m/n/10.95 C \OT1/z
 tmcm/m/n/10.95 2$\T1/ptm/m/n/10.95 , the func-tion in-ter-nally calls $\OT1/ztm
 cm/m/n/10.95 1\U/MnSymbolC/m/n/10.95 ^^U$ \T1/cmtt/m/n/10.95 SCConnectedSum \T1
@@ -1097,13 +1090,13 @@ cm/m/n/10.95 1\U/MnSymbolC/m/n/10.95 ^^U$ \T1/cmtt/m/n/10.95 SCConnectedSum \T1
  []
 
 [71] [72] [73] [74] [75]
-Underfull \hbox (badness 10000) in paragraph at lines 4284--4289
+Underfull \hbox (badness 10000) in paragraph at lines 4299--4304
 []$\U/MnSymbolC/m/n/10.95 P$  \T1/cmtt/m/n/10.95 SCsFromGroupByTransitivity(\T1
 /cmtt/m/sl/10.95 n, d, k, maniflag, computeAutGroup,
  []
 
 [76] [77] [78]
-Underfull \hbox (badness 10000) in paragraph at lines 4497--4501
+Underfull \hbox (badness 10000) in paragraph at lines 4512--4516
 \T1/ptm/m/n/10.95 The fol-low-ing func-tions com-pute ba-sic prop-er-ties of si
 m-pli-cial com-plexes of type
  []
@@ -1113,28 +1106,28 @@ ame identifier (name{L.X7BDD568184E3419D}) has been already used, duplicate ign
 ored
 <to be read again> 
                    \relax 
-l.5022 \hyperdef{L}{X7BDD568184E3419D}{}
+l.5037 \hyperdef{L}{X7BDD568184E3419D}{}
                                         pdfTeX warning (ext4): destination with
  the same identifier (name{L.X87DC942881235E25}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.5044 \hyperdef{L}{X87DC942881235E25}{}
-                                         [86] [87] [88] [89]
-Underfull \hbox (badness 3557) in paragraph at lines 5349--5350
+l.5059 \hyperdef{L}{X87DC942881235E25}{}
+                                         [86] [87] [88] [89] [90]
+Underfull \hbox (badness 3557) in paragraph at lines 5364--5365
 []\T1/ptm/m/n/10.95 Computes the $\OML/ztmcm/m/it/10.95 h$\T1/ptm/m/n/10.95 -ve
 ctor of a sim-pli-cial com-plex. The $\OML/ztmcm/m/it/10.95 h$\T1/ptm/m/n/10.95
  -vector is de-fined as $\OML/ztmcm/m/it/10.95 h[] \U/MnSymbolC/m/n/10.95 ^^B\U
 /MnSymbolD/m/n/10.95 ^^@
  []
 
-[90] [91] [92] [93] [94] [95] [96] [97] [98]
-Underfull \hbox (badness 10000) in paragraph at lines 6017--6018
+[91] [92] [93] [94] [95] [96] [97] [98] [99]
+Underfull \hbox (badness 10000) in paragraph at lines 6032--6033
 []\T1/ptm/m/n/10.95 Computes all miss-ing proper faces of a sim-pli-cial com-pl
 ex [] by call-ing
  []
 
-[99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
+[100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
 [112] [113] [114] [115] [116]
 Chapter 7.
 [117
@@ -1143,97 +1136,97 @@ Chapter 7.
 L.X80F13BB484B3E9B2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.7339 \hyperdef{L}{X80F13BB484B3E9B2}{}
+l.7354 \hyperdef{L}{X80F13BB484B3E9B2}{}
                                          [120]pdfTeX warning (ext4): destinatio
 n with the same identifier (name{L.X82C9F57780C0B7F8}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.7427 \hyperdef{L}{X82C9F57780C0B7F8}{}
+l.7442 \hyperdef{L}{X82C9F57780C0B7F8}{}
                                          [121]pdfTeX warning (ext4): destinatio
 n with the same identifier (name{L.X82351AAE793DCB68}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.7487 \hyperdef{L}{X82351AAE793DCB68}{}
+l.7502 \hyperdef{L}{X82351AAE793DCB68}{}
                                         pdfTeX warning (ext4): destination with
  the same identifier (name{L.X788BAE187D584103}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.7512 \hyperdef{L}{X788BAE187D584103}{}
+l.7527 \hyperdef{L}{X788BAE187D584103}{}
                                          [122]pdfTeX warning (ext4): destinatio
 n with the same identifier (name{L.X81F8071385FD9C1D}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.7536 \hyperdef{L}{X81F8071385FD9C1D}{}
+l.7551 \hyperdef{L}{X81F8071385FD9C1D}{}
                                         pdfTeX warning (ext4): destination with
  the same identifier (name{L.X7F8B561C823DDDBA}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.7561 \hyperdef{L}{X7F8B561C823DDDBA}{}
+l.7576 \hyperdef{L}{X7F8B561C823DDDBA}{}
                                         pdfTeX warning (ext4): destination with
  the same identifier (name{L.X7AE0029985BD0775}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.7595 \hyperdef{L}{X7AE0029985BD0775}{}
+l.7610 \hyperdef{L}{X7AE0029985BD0775}{}
                                          [123]pdfTeX warning (ext4): destinatio
 n with the same identifier (name{L.X79F60850875BB683}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.7624 \hyperdef{L}{X79F60850875BB683}{}
+l.7639 \hyperdef{L}{X79F60850875BB683}{}
                                         pdfTeX warning (ext4): destination with
  the same identifier (name{L.X78D66254858CE901}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.7680 \hyperdef{L}{X78D66254858CE901}{}
+l.7695 \hyperdef{L}{X78D66254858CE901}{}
                                          [124]pdfTeX warning (ext4): destinatio
 n with the same identifier (name{L.X81AF20DC814B51A6}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.7710 \hyperdef{L}{X81AF20DC814B51A6}{}
+l.7725 \hyperdef{L}{X81AF20DC814B51A6}{}
                                          [125]pdfTeX warning (ext4): destinatio
 n with the same identifier (name{L.X860375D980E9A801}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.7786 \hyperdef{L}{X860375D980E9A801}{}
+l.7801 \hyperdef{L}{X860375D980E9A801}{}
                                         pdfTeX warning (ext4): destination with
  the same identifier (name{L.X78C860DC851167F7}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.7808 \hyperdef{L}{X78C860DC851167F7}{}
+l.7823 \hyperdef{L}{X78C860DC851167F7}{}
                                          [126]pdfTeX warning (ext4): destinatio
 n with the same identifier (name{L.X8026B46F8236124D}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.7845 \hyperdef{L}{X8026B46F8236124D}{}
+l.7860 \hyperdef{L}{X8026B46F8236124D}{}
                                         pdfTeX warning (ext4): destination with
  the same identifier (name{L.X84ACF7D580FE8B76}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.7882 \hyperdef{L}{X84ACF7D580FE8B76}{}
+l.7897 \hyperdef{L}{X84ACF7D580FE8B76}{}
                                          [127] [128]pdfTeX warning (ext4): dest
 ination with the same identifier (name{L.X81DA367A813F7599}) has been already u
 sed, duplicate ignored
 <to be read again> 
                    \relax 
-l.7972 \hyperdef{L}{X81DA367A813F7599}{}
+l.7987 \hyperdef{L}{X81DA367A813F7599}{}
                                          [129] [130]
 Chapter 8.
 [131
 
 ] [132] [133] [134] [135] [136] [137] [138]
-Underfull \hbox (badness 3260) in paragraph at lines 8568--8570
+Underfull \hbox (badness 3260) in paragraph at lines 8583--8585
 []\T1/ptm/m/n/10.95 Internally calls the \T1/phv/m/n/10.95 GAP\T1/ptm/m/n/10.95
  -functions \T1/cmtt/m/n/10.95 Matrix_CharacteristicPolynomialSameField \T1/ptm
 /m/n/10.95 and
@@ -1242,12 +1235,12 @@ Underfull \hbox (badness 3260) in paragraph at lines 8568--8570
 [139]
 Chapter 9.
 
-Underfull \hbox (badness 10000) in paragraph at lines 8614--8631
+Underfull \hbox (badness 10000) in paragraph at lines 8629--8646
 
  []
 
 
-Underfull \hbox (badness 4341) in paragraph at lines 8614--8631
+Underfull \hbox (badness 4341) in paragraph at lines 8629--8646
 \T1/ptm/m/n/10.95 Let $\OML/ztmcm/m/it/10.95 M$ \T1/ptm/m/n/10.95 be a com-bi-n
 a-to-rial $\OML/ztmcm/m/it/10.95 d$\T1/ptm/m/n/10.95 -manifold ($\OML/ztmcm/m/i
 t/10.95 d$\T1/ptm/m/n/10.95 -pseudomanifold), $\OML/ztmcm/m/it/10.95 ^^M \U/MnS
@@ -1257,17 +1250,17 @@ v[]\OMX/MnSymbolE/m/n/10.95 e$ \T1/ptm/m/n/10.95 a $\OML/ztmcm/m/it/10.95 k$\T1
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8614--8631
+Underfull \hbox (badness 10000) in paragraph at lines 8629--8646
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8614--8631
+Underfull \hbox (badness 10000) in paragraph at lines 8629--8646
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8614--8631
+Underfull \hbox (badness 10000) in paragraph at lines 8629--8646
 
  []
 
@@ -1281,85 +1274,85 @@ File: figures/bistellar.pdf Graphic file (type pdf)
 File: figures/dreiFlips.pdf Graphic file (type pdf)
 
 <use figures/dreiFlips.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 8647--8660
+Underfull \hbox (badness 10000) in paragraph at lines 8662--8675
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8647--8660
+Underfull \hbox (badness 10000) in paragraph at lines 8662--8675
 
  []
 
 [141 <./figures/bistellar.pdf> <./figures/dreiFlips.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 8690--8693
+Underfull \hbox (badness 10000) in paragraph at lines 8705--8708
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8695--8697
+Underfull \hbox (badness 10000) in paragraph at lines 8710--8712
 []\T1/ptm/m/n/10.95 Record of global vari-ables to ad-just out-put an be-hav-io
 r of bis-tel-lar moves in
  []
 
 [142]
-Overfull \hbox (28.71817pt too wide) in paragraph at lines 8758--8759
+Overfull \hbox (28.71817pt too wide) in paragraph at lines 8773--8774
 []\T1/ptm/m/n/10.95 Internally calls \T1/cmtt/m/n/10.95 SCReduceComplexEx \T1/p
 tm/m/n/10.95 ([][]9.2.14[][])\T1/cmtt/m/n/10.95 (complex1,complex2,1,SCIntFunc.
 SCChooseMove); 
  []
 
 [143] [144] [145]
-Overfull \hbox (11.74306pt too wide) in paragraph at lines 8914--8915
+Overfull \hbox (11.74306pt too wide) in paragraph at lines 8929--8930
 []\T1/ptm/m/n/10.95 Internally calls \T1/cmtt/m/n/10.95 SCReduceComplexEx \T1/p
 tm/m/n/10.95 ([][]9.2.14[][])\T1/cmtt/m/n/10.95 (link,SCEmpty(),0,SCIntFunc.SCC
 hooseMove);
  []
 
 [146] [147]
-Underfull \hbox (badness 2027) in paragraph at lines 9073--9074
+Underfull \hbox (badness 2027) in paragraph at lines 9088--9089
 []\T1/ptm/m/n/10.95 With op-tional pos-i-tive in-te-ger ar-gu-ment [], the amou
 nt of ran-dom-iza-tion can be
  []
 
 
-Underfull \hbox (badness 4024) in paragraph at lines 9073--9074
+Underfull \hbox (badness 4024) in paragraph at lines 9088--9089
 \T1/ptm/m/n/10.95 con-trolled. The higher the value of [], the more bis-tel-lar
  moves will be ran-
  []
 
 
-Underfull \hbox (badness 3635) in paragraph at lines 9095--9100
+Underfull \hbox (badness 3635) in paragraph at lines 9110--9115
 []\T1/ptm/b/n/10.95 Returns:  \T1/cmtt/m/n/10.95 SCBistellarOptions.WriteLevel=
 0\T1/ptm/m/n/10.95 : a triple of the form \T1/cmtt/m/n/10.95 [ boolean,
  []
 
 
-Overfull \hbox (28.71817pt too wide) in paragraph at lines 9117--9118
+Overfull \hbox (28.71817pt too wide) in paragraph at lines 9132--9133
 []\T1/ptm/m/n/10.95 Internally calls \T1/cmtt/m/n/10.95 SCReduceComplexEx \T1/p
 tm/m/n/10.95 ([][]9.2.14[][])\T1/cmtt/m/n/10.95 (complex1,complex2,2,SCIntFunc.
 SCChooseMove); 
  []
 
 [148]
-Underfull \hbox (badness 3635) in paragraph at lines 9138--9143
+Underfull \hbox (badness 3635) in paragraph at lines 9153--9158
 []\T1/ptm/b/n/10.95 Returns:  \T1/cmtt/m/n/10.95 SCBistellarOptions.WriteLevel=
 0\T1/ptm/m/n/10.95 : a triple of the form \T1/cmtt/m/n/10.95 [ boolean,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9154--9156
+Underfull \hbox (badness 10000) in paragraph at lines 9169--9171
 []\T1/ptm/m/n/10.95 Reduces a pure sim-pli-cial com-plex [] sat-is-fy-ing the w
 eak pseu-do-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9154--9156
+Underfull \hbox (badness 10000) in paragraph at lines 9169--9171
 \T1/ptm/m/n/10.95 man-i-fold prop-erty via bis-tel-lar moves. In-ter-nally call
 s \T1/cmtt/m/n/10.95 SCReduceComplexEx
  []
 
 
-Underfull \hbox (badness 3635) in paragraph at lines 9177--9182
+Underfull \hbox (badness 3635) in paragraph at lines 9192--9197
 []\T1/ptm/b/n/10.95 Returns:  \T1/cmtt/m/n/10.95 SCBistellarOptions.WriteLevel=
 0\T1/ptm/m/n/10.95 : a triple of the form \T1/cmtt/m/n/10.95 [ boolean,
  []
@@ -1370,15 +1363,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X7E1BE67385
 9191F0}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.9313 \hyperdef{L}{X7E1BE673859191F0}{}
+l.9328 \hyperdef{L}{X7E1BE673859191F0}{}
                                         pdfTeX warning (ext4): destination with
  the same identifier (name{L.X8729B87B848E3F89}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.9318 \hyperdef{L}{X8729B87B848E3F89}{}
+l.9333 \hyperdef{L}{X8729B87B848E3F89}{}
                                         
-Underfull \hbox (badness 6842) in paragraph at lines 9347--9348
+Underfull \hbox (badness 6842) in paragraph at lines 9362--9363
 []\T1/ptm/m/n/10.95 If \T1/cmtt/m/n/10.95 singularity \T1/ptm/m/n/10.95 is an o
 r-di-nary dou-ble point of a com-bi-na-to-rial $\OT1/ztmcm/m/n/10.95 4$\T1/ptm/
 m/n/10.95 -pseudomanifold
@@ -1393,19 +1386,19 @@ Chapter 11.
 ] [157] [158] [159] [160] [161] [162]
 Chapter 12.
 
-Underfull \hbox (badness 10000) in paragraph at lines 9904--9907
+Underfull \hbox (badness 10000) in paragraph at lines 9919--9922
 
  []
 
 
-Underfull \hbox (badness 2393) in paragraph at lines 9909--9911
+Underfull \hbox (badness 2393) in paragraph at lines 9924--9926
 []\T1/ptm/m/n/10.95 The global vari-able \T1/cmtt/m/n/10.95 SCLib \T1/ptm/m/n/1
 0.95 con-tains the li-brary ob-ject of the global li-brary of \T1/phv/m/n/10.95
  sim-p-
  []
 
 
-Underfull \hbox (badness 1728) in paragraph at lines 9909--9911
+Underfull \hbox (badness 1728) in paragraph at lines 9924--9926
 \T1/phv/m/n/10.95 comp \T1/ptm/m/n/10.95 through which the user can ac-cess the
  li-brary. The path to the global li-brary is
  []
@@ -1413,7 +1406,7 @@ Underfull \hbox (badness 1728) in paragraph at lines 9909--9911
 [163
 
 ] [164]
-Underfull \hbox (badness 1810) in paragraph at lines 9983--9985
+Underfull \hbox (badness 1810) in paragraph at lines 9998--10000
 []\T1/ptm/m/n/10.95 Adds a given sim-pli-cial com-plex [] to a given repos-i-to
 ry [] of type
  []
@@ -1423,98 +1416,98 @@ Chapter 13.
 [175
 
 ] [176]
-Underfull \hbox (badness 10000) in paragraph at lines 10812--10813
+Underfull \hbox (badness 10000) in paragraph at lines 10833--10834
 []\T1/ptm/m/n/10.95 The $\OML/ztmcm/m/it/10.95 k$\T1/ptm/m/n/10.95 -th co-ho-mo
 l-ogy group \T1/cmtt/m/n/10.95 ck \T1/ptm/m/n/10.95 can be ob-tained by call-in
 g
  []
 
 
-Underfull \hbox (badness 2875) in paragraph at lines 10812--10813
+Underfull \hbox (badness 2875) in paragraph at lines 10833--10834
 \T1/cmtt/m/n/10.95 ck:=CertainObject(cohomology,k);\T1/ptm/m/n/10.95 , where \T
 1/cmtt/m/n/10.95 cohomology \T1/ptm/m/n/10.95 is the \T1/phv/m/n/10.95 homalg \
 T1/ptm/m/n/10.95 ob-ject re-turned
  []
 
-[177]
+[177] [178]
 Chapter 14.
-[178
+[179
 
-] [179] [180]
-Underfull \hbox (badness 10000) in paragraph at lines 11099--11101
+] [180] [181]
+Underfull \hbox (badness 10000) in paragraph at lines 11122--11124
 []\T1/ptm/m/n/10.95 Test whether the pack-age \T1/phv/m/n/10.95 sim-p-comp \T1/
 ptm/m/n/10.95 is func-tional by call-ing
  []
 
-[181]
+[182]
 Chapter 15.
-[182
+[183
 
-] [183] [184] [185] [186]
+] [184] [185] [186] [187]
 Chapter 16.
-[187
+[188
 
-] [188]
-Underfull \hbox (badness 2460) in paragraph at lines 11693--11696
+] [189]
+Underfull \hbox (badness 2460) in paragraph at lines 11715--11718
 \T1/ptm/m/n/10.95 As de-scribed in Sec-tion [][]3.1[][] there are two sev-eral 
 ways of ac-cess-ing an ob-ject of type
  []
 
-[189] [190] [191] [192] [193]pdfTeX warning (ext4): destination with the same i
+[190] [191] [192] [193] [194]pdfTeX warning (ext4): destination with the same i
 dentifier (name{L.X82F1CE7A79A3CA47}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.11991 \hyperdef{L}{X82F1CE7A79A3CA47}{}
-                                          [194] [195]pdfTeX warning (ext4): des
+l.12013 \hyperdef{L}{X82F1CE7A79A3CA47}{}
+                                          [195] [196]pdfTeX warning (ext4): des
 tination with the same identifier (name{L.X7E1BE673859191F0}) has been already 
 used, duplicate ignored
 <to be read again> 
                    \relax 
-l.12126 \hyperdef{L}{X7E1BE673859191F0}{}
-                                          [196] [197] [198]
-Underfull \hbox (badness 10000) in paragraph at lines 12314--12315
+l.12148 \hyperdef{L}{X7E1BE673859191F0}{}
+                                          [197] [198] [199]
+Underfull \hbox (badness 10000) in paragraph at lines 12336--12337
 []\T1/ptm/m/n/10.95 Further ex-am-ple com-pu-ta-tions can be found in the slide
 s of var-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12314--12315
+Underfull \hbox (badness 10000) in paragraph at lines 12336--12337
 \T1/ptm/m/n/10.95 i-ous talks about \T1/phv/m/n/10.95 sim-p-comp\T1/ptm/m/n/10.
 95 , avail-able from the \T1/phv/m/n/10.95 sim-p-comp \T1/ptm/m/n/10.95 home-pa
 ge
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12314--12315
+Underfull \hbox (badness 10000) in paragraph at lines 12336--12337
 \T1/ptm/m/n/10.95 (\T1/cmtt/m/n/10.95 http://www.igt.uni-stuttgart.de/LstDiffge
 o/simpcomp/\T1/ptm/m/n/10.95 ), and in Ap-pendix A of
  []
 
-[199]
+[200]
 Chapter 17.
 
-Underfull \hbox (badness 2837) in paragraph at lines 12321--12323
+Underfull \hbox (badness 2837) in paragraph at lines 12343--12345
 \T1/ptm/m/n/10.95 The pack-age \T1/phv/m/n/10.95 sim-p-comp \T1/ptm/m/n/10.95 w
 orks with ge-o-met-ric ob-jects for which the \T1/phv/m/n/10.95 GAP \T1/ptm/m/n
 /10.95 ob-ject types
  []
 
 
-Underfull \hbox (badness 2809) in paragraph at lines 12332--12333
+Underfull \hbox (badness 2809) in paragraph at lines 12354--12355
 \T1/ptm/m/n/10.95 In the fol-low-ing, we present a num-ber of func-tions to man
 -age a \T1/phv/m/n/10.95 GAP \T1/ptm/m/n/10.95 ob-ject of type
  []
 
-[200
+[201
 
-] [201] [202] [203] (./simpcomp.bbl (./simpcomp.brf)
+] [202] [203] [204] (./simpcomp.bbl (./simpcomp.brf)
 \tf@brf=\write8
 \openout8 = `simpcomp.brf'.
 
- [204] [205
+ [205] [206
 
-] [206]
-[207]
+] [207]
+[208]
 Underfull \hbox (badness 1286) in paragraph at lines 302--302
 []\T1/ptm/m/n/10.95 Jonathan Spreer.  Par-ti-tion-ing the tri-an-gles of the cr
 oss poly-tope into sur-faces.
@@ -1526,7 +1519,7 @@ Underfull \hbox (badness 1668) in paragraph at lines 313--313
 ic-ings.  \T1/ptm/m/it/10.95 Dis-crete Math.\T1/ptm/m/n/10.95 ,
  []
 
-) [208] (./simpcomp.ind
+) [209] (./simpcomp.ind
 Underfull \hbox (badness 10000) in paragraph at lines 11--13
 []\T1/cmtt/m/n/10.95 Operation * (\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 S\T1/pt
 m/m/n/10.95 -\T1/cmtt/m/n/10.95 C\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simplici
@@ -1647,10 +1640,10 @@ ptm/m/n/10.95 -\T1/cmtt/m/n/10.95 Simplicial\T1/ptm/m/n/10.95 -\T1/cmtt/m/n/10.
 95 Complex,
  []
 
-[209
+[210
 
 
-] [210] [211] [212
+] [211] [212] [213
 
 ]) (./simpcomp.aux)
 
@@ -1658,44 +1651,44 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9826 strings out of 493848
- 144470 string characters out of 1152823
- 208046 words of memory out of 3000000
- 11836 multiletter control sequences out of 15000+50000
+ 9827 strings out of 495061
+ 144478 string characters out of 1182621
+ 207067 words of memory out of 3000000
+ 11737 multiletter control sequences out of 15000+50000
  109487 words of font info for 155 fonts, out of 3000000 for 9000
- 714 hyphenation exceptions out of 8191
+ 28 hyphenation exceptions out of 8191
  38i,10n,36p,1016b,617s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolS.enc}{/usr/share/
 texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/share/texmf-texlive/
 fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/share/texmf-texlive/fonts/enc/dvip
-s/mnsymbol/MnSymbolF.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1
-.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/sha
-re/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{/usr/share/texmf-texli
-ve/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/mns
-ymbol/MnSymbol10.pfb></usr/share/texmf-texlive/fonts/type1/public/mnsymbol/MnSy
-mbol6.pfb></usr/share/texmf-texlive/fonts/type1/public/mnsymbol/MnSymbol8.pfb><
-/usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
-texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+s/mnsymbol/MnSymbolF.enc} </home/jonathan/.texmf-var/fonts/pk/ljfour/jknappen/e
+c/ectt1200.600pk> </home/jonathan/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecst10
+95.600pk> </home/jonathan/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt2488.600pk
+> </home/jonathan/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1440.600pk>{/usr/s
+hare/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/share/texmf-tex
+live/fonts/enc/dvips/mnsymbol/MnSymbolA.enc} </home/jonathan/.texmf-var/fonts/p
+k/ljfour/jknappen/ec/ectt1095.600pk>{/usr/share/texmf-texlive/fonts/enc/dvips/b
+ase/8r.enc} </home/jonathan/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600
+pk></usr/share/texmf-texlive/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/s
+hare/texmf-texlive/fonts/type1/public/mnsymbol/MnSymbol6.pfb></usr/share/texmf-
+texlive/fonts/type1/public/mnsymbol/MnSymbol8.pfb></usr/share/texmf-texlive/fon
+ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb
 
 pdfTeX warning: pdflatex (file /usr/share/texmf-texlive/fonts/type1/public/amsf
 onts/cm/cmmi10.pfb): glyph `semicolon' undefined
 ></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
 /texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texliv
-e/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfst1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt
-1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sftt1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt2
-488.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
-re/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/
-fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/
-symbol/usyr.pfb></usr/share/texmf-texlive/fonts/type1/urw/symbol/usyr.pfb></usr
-/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive
-/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on simpcomp.pdf (212 pages, 1385435 bytes).
+e/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-texlive/font
+s/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helve
+tic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro8a.pfb><
+/usr/share/texmf-texlive/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-texl
+ive/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-texlive/fonts/type1/urw/t
+imes/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></us
+r/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on simpcomp.pdf (213 pages, 1296704 bytes).
 PDF statistics:
- 3645 PDF objects out of 4296 (max. 8388607)
- 1020 named destinations out of 1200 (max. 500000)
+ 3909 PDF objects out of 4296 (max. 8388607)
+ 1021 named destinations out of 1200 (max. 500000)
  765 words of extra memory for PDF output out of 10000 (max. 10000000)
 
