@@ -55,7 +55,7 @@
 
 <p>If the complex passed all checks so far, the remaining rsl-functions are checked for being perfect functions. As there are ``only'' <span class="SimpleMath">2^n</span> different multiplicity vectors, but <span class="SimpleMath">n!</span> different rsl-functions, a lookup table containing all possible multiplicity vectors is computed first. Note that nonetheless the complexity of this algorithm is <span class="SimpleMath">O(n!)</span>.</p>
 
-<p>In order to reduce the number of rsl-functions that need to be checked, the automorphism group of <code class="code">complex</code> is computed first using <code class="func">SCAutomorphismGroup</code> (<a href="chap6.html#X7B88925386E197AC"><span class="RefLink">6.8-2</span></a>). In case it is <span class="SimpleMath">k</span>-transitive, the complexity is reduced by the factor of <span class="SimpleMath">n ⋅ (n-1) ⋅ dots ⋅ (n-k+1)</span>.</p>
+<p>In order to reduce the number of rsl-functions that need to be checked, the automorphism group of <code class="code">complex</code> is computed first using <code class="func">SCAutomorphismGroup</code> (<a href="chap6.html#X7B88925386E197AC"><span class="RefLink">6.9-2</span></a>). In case it is <span class="SimpleMath">k</span>-transitive, the complexity is reduced by the factor of <span class="SimpleMath">n ⋅ (n-1) ⋅ dots ⋅ (n-k+1)</span>.</p>
 
 
 <div class="example"><pre>
@@ -139,7 +139,7 @@
  #I  SCIsTight: processed 30000 of 40320 rsl-functions so far, all perfect.
  #I  SCIsTight: processed 40000 of 40320 rsl-functions so far, all perfect.
  true
- 5648
+ 5564
  </pre></div>
 
 

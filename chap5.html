@@ -159,7 +159,7 @@
  /SimplicialComplex]
  gap&gt; c.F; time;                                 
  [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
- 36
+ 28
  gap&gt; c.F; time;                                 
  [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
  0
@@ -174,7 +174,7 @@
  /SimplicialComplex]
  gap&gt; c.F; time;                                 
  [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
- 28
+ 32
  </pre></div>
 
 <p><a id="X7918944F814850E8" name="X7918944F814850E8"></a></p>
@@ -238,7 +238,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Operation ^ (SCSimplicialComplex, Integer)</code>( <var class="Arg">complex</var>, <var class="Arg">value</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
-<p>Forms the <var class="Arg">value</var>-th simplicial cartesian power of <var class="Arg">complex</var>, i.e. the <var class="Arg">value</var>-fold cartesian product of copies of <var class="Arg">complex</var>. The complex passed as argument is not altered. Internally calls <code class="func">SCCartesianPower</code> (<a href="chap6.html#X8255A2F97A7432F9"><span class="RefLink">6.5-1</span></a>).</p>
+<p>Forms the <var class="Arg">value</var>-th simplicial cartesian power of <var class="Arg">complex</var>, i.e. the <var class="Arg">value</var>-fold cartesian product of copies of <var class="Arg">complex</var>. The complex passed as argument is not altered. Internally calls <code class="func">SCCartesianPower</code> (<a href="chap6.html#X8255A2F97A7432F9"><span class="RefLink">6.6-1</span></a>).</p>
 
 
 <div class="example"><pre>
@@ -261,7 +261,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Operation + (SCSimplicialComplex, SCSimplicialComplex)</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
-<p>Forms the connected sum of <var class="Arg">complex1</var> and <var class="Arg">complex2</var>. Uses the lexicographically first facets of both complexes to do the gluing. The complexes passed as arguments are not altered. Internally calls <code class="func">SCConnectedSum</code> (<a href="chap6.html#X81338CE18195607C"><span class="RefLink">6.5-5</span></a>).</p>
+<p>Forms the connected sum of <var class="Arg">complex1</var> and <var class="Arg">complex2</var>. Uses the lexicographically first facets of both complexes to do the gluing. The complexes passed as arguments are not altered. Internally calls <code class="func">SCConnectedSum</code> (<a href="chap6.html#X81338CE18195607C"><span class="RefLink">6.6-5</span></a>).</p>
 
 
 <div class="example"><pre>
@@ -295,7 +295,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Operation - (SCSimplicialComplex, SCSimplicialComplex)</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
-<p>Calls <code class="func">SCDifference</code> (<a href="chap6.html#X7FB3D29178076EB4"><span class="RefLink">6.9-6</span></a>)(<var class="Arg">complex1</var>, <var class="Arg">complex2</var>)</p>
+<p>Calls <code class="func">SCDifference</code> (<a href="chap6.html#X7FB3D29178076EB4"><span class="RefLink">6.10-6</span></a>)(<var class="Arg">complex1</var>, <var class="Arg">complex2</var>)</p>
 
 <p><a id="X80C8CB3983D4356C" name="X80C8CB3983D4356C"></a></p>
 
@@ -304,7 +304,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Operation * (SCSimplicialComplex, SCSimplicialComplex)</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
-<p>Forms the simplicial cartesian product of <var class="Arg">complex1</var> and <var class="Arg">complex2</var>. Internally calls <code class="func">SCCartesianProduct</code> (<a href="chap6.html#X859DA29B83BDE35E"><span class="RefLink">6.5-2</span></a>).</p>
+<p>Forms the simplicial cartesian product of <var class="Arg">complex1</var> and <var class="Arg">complex2</var>. Internally calls <code class="func">SCCartesianProduct</code> (<a href="chap6.html#X859DA29B83BDE35E"><span class="RefLink">6.6-2</span></a>).</p>
 
 
 <div class="example"><pre>
@@ -374,7 +374,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Operation Difference (SCSimplicialComplex, SCSimplicialComplex)</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
-<p>Computes the ``difference'' of two simplicial complexes by calling <code class="func">SCDifference</code> (<a href="chap6.html#X7FB3D29178076EB4"><span class="RefLink">6.9-6</span></a>).</p>
+<p>Computes the ``difference'' of two simplicial complexes by calling <code class="func">SCDifference</code> (<a href="chap6.html#X7FB3D29178076EB4"><span class="RefLink">6.10-6</span></a>).</p>
 
 
 <div class="example"><pre>
@@ -395,7 +395,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Operation Intersection (SCSimplicialComplex, SCSimplicialComplex)</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
-<p>Computes the ``intersection'' of two simplicial complexes by calling <code class="func">SCIntersection</code> (<a href="chap6.html#X7B4BE2C783E6D0BF"><span class="RefLink">6.9-9</span></a>).</p>
+<p>Computes the ``intersection'' of two simplicial complexes by calling <code class="func">SCIntersection</code> (<a href="chap6.html#X7B4BE2C783E6D0BF"><span class="RefLink">6.10-9</span></a>).</p>
 
 
 <div class="example"><pre>
