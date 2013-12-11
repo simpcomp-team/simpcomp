@@ -57,13 +57,13 @@
 
 <h4>16.1 <span class="Heading">Creating a <code class="code">SCSimplicialComplex</code> object</span></h4>
 
-<p>Simplicial complex objects can either be created from a facet list (complex <code class="code">c1</code> below), orbit representatives together with a permutation group (complex <code class="code">c2</code>) or difference cycles (complex <code class="code">c3</code>, see Section <a href="chap6.html#X879195657E1B257E"><span class="RefLink">6.1</span></a>), from a function generating triangulations of standard complexes (complex <code class="code">c4</code>, see Section <a href="chap6.html#X79072405786FEA0B"><span class="RefLink">6.2</span></a>) or from a function constructing infinite series for combinatorial (pseudo)manifolds (complexes <code class="code">c5</code>, <code class="code">c6</code>, <code class="code">c7</code>, see Section <a href="chap6.html#X814FE0267D7C54A9"><span class="RefLink">6.3</span></a> and the function prefix <code class="code">SCSeries...</code>). There are also functions creating new simplicial complexes from old, see Section <a href="chap6.html#X7F4308DB7C3699D1"><span class="RefLink">6.5</span></a>, which will be described in the next sections.</p>
+<p>Simplicial complex objects can either be created from a facet list (complex <code class="code">c1</code> below), orbit representatives together with a permutation group (complex <code class="code">c2</code>) or difference cycles (complex <code class="code">c3</code>, see Section <a href="chap6.html#X879195657E1B257E"><span class="RefLink">6.1</span></a>), from a function generating triangulations of standard complexes (complex <code class="code">c4</code>, see Section <a href="chap6.html#X79072405786FEA0B"><span class="RefLink">6.3</span></a>) or from a function constructing infinite series for combinatorial (pseudo)manifolds (complexes <code class="code">c5</code>, <code class="code">c6</code>, <code class="code">c7</code>, see Section <a href="chap6.html#X814FE0267D7C54A9"><span class="RefLink">6.4</span></a> and the function prefix <code class="code">SCSeries...</code>). There are also functions creating new simplicial complexes from old, see Section <a href="chap6.html#X7F4308DB7C3699D1"><span class="RefLink">6.6</span></a>, which will be described in the next sections.</p>
 
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">#first run functionality test on simpcomp</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCRunTest();</span>
-+ test simpcomp package, version 1.6.1
++ test simpcomp package, version 2.0.0
 + GAP4stones: 69988
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">#all ok</span>
@@ -191,7 +191,7 @@ true
 
 <h4>16.3 <span class="Heading">Calculating properties of a <code class="code">SCSimplicialComplex</code> object</span></h4>
 
-<p><strong class="pkg">simpcomp</strong> provides a variety of functions for calculating properties of simplicial complexes, see Section <a href="chap6.html#X81CE90127800B91A"><span class="RefLink">6.8</span></a>. All these properties are only calculated once and stored in the <code class="code">SCSimplicialComplex</code> object.</p>
+<p><strong class="pkg">simpcomp</strong> provides a variety of functions for calculating properties of simplicial complexes, see Section <a href="chap6.html#X81CE90127800B91A"><span class="RefLink">6.9</span></a>. All these properties are only calculated once and stored in the <code class="code">SCSimplicialComplex</code> object.</p>
 
 
 <div class="example"><pre>
@@ -276,7 +276,7 @@ fail
 
 <h4>16.4 <span class="Heading">Creating new complexes from a <code class="code">SCSimplicialComplex</code> object</span></h4>
 
-<p>As already mentioned, there is the possibility to generate new objects of type <code class="code">SCSimplicialComplex</code> from existing ones using standard constructions. The functions used in this section are described in more detail in Section <a href="chap6.html#X7F4308DB7C3699D1"><span class="RefLink">6.5</span></a>.</p>
+<p>As already mentioned, there is the possibility to generate new objects of type <code class="code">SCSimplicialComplex</code> from existing ones using standard constructions. The functions used in this section are described in more detail in Section <a href="chap6.html#X7F4308DB7C3699D1"><span class="RefLink">6.6</span></a>.</p>
 
 
 <div class="example"><pre>

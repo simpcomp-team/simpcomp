@@ -51,7 +51,8 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap12.html#X871C94B978881445">12.2-7 SCImportPolymake</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap12.html#X790C0AD9807A5D82">12.2-8 SCExportLatexTable</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap12.html#X859BCB9986B55E14">12.2-9 SCExportJavaView</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap12.html#X7B933EA27E8E79C8">12.2-10 SCExportSnapPy</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap12.html#X7F214CF77E65C1A9">12.2-10 SCExportPolymake</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap12.html#X7B933EA27E8E79C8">12.2-11 SCExportSnapPy</a></span>
 </div></div>
 </div>
 
@@ -65,7 +66,7 @@
 
 <p>Among other known triangulations, the library contains all of the vertex transitive triangulations of combinatorial manifolds with up to <span class="SimpleMath">15</span> vertices (for <span class="SimpleMath">d ∈ { 2,3,9,10,11,12}</span>) and up to <span class="SimpleMath">13</span> vertices (for <span class="SimpleMath">d ∈ { 4,5,6,7,8 }</span>) and all of the vertex transitive combinatorial pseudomanifolds with up to <span class="SimpleMath">15</span> vertices (for <span class="SimpleMath">d=3</span>) and up to <span class="SimpleMath">13</span> vertices (for <span class="SimpleMath">d ∈ { 4,5,6,7 }</span>) classified by Frank Lutz that can be found on his ``Manifold Page'' <span class="URL"><a href="http://www.math.tu-berlin.de/diskregeom/stellar/">http://www.math.tu-berlin.de/diskregeom/stellar/</a></span>, along with some triangulations of sphere bundles and some bounded triangulated PL-manifolds.</p>
 
-<p>See <code class="func">SCLib</code> (<a href="chap12.html#X7BDFDE6C81F9F70E"><span class="RefLink">12.1-2</span></a>) for a naming convention used for the global library of <strong class="pkg">simpcomp</strong>.</p>
+<p>See <code class="func">SCLib</code> (<a href="chap12.html#X7BDFDE6C81F9F70E"><span class="RefLink">12.1-2</span></a>) for a naming convention used for the global library of <strong class="pkg">simpcomp</strong>. Note: Another way of storing and loading complexes is provided by the functions <code class="func">SCExportIsoSig</code> (<a href="chap6.html#X80098C5F7B80A621"><span class="RefLink">6.2-2</span></a>), <code class="func">SCExportToString</code> (<a href="chap6.html#X7E95E36680C188C4"><span class="RefLink">6.2-1</span></a>) and <code class="func">SCFromIsoSig</code> (<a href="chap6.html#X7E915DA7821DD513"><span class="RefLink">6.2-3</span></a>), see Section <a href="chap6.html#X867E1FF580230E20"><span class="RefLink">6.2</span></a> for details.</p>
 
 <p><a id="X7CBF051F7A1CC321" name="X7CBF051F7A1CC321"></a></p>
 
@@ -160,7 +161,7 @@
  gap&gt; myRepository:=SCLibInit("~/myrepository");
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=1
+ Number of complexes in library=4
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
@@ -168,7 +169,7 @@
  ]
  gap&gt; complex:=SCBdCrossPolytope(4);;
  gap&gt; SCLibAdd(myRepository,complex);
- #I  SCLibAdd: saving complex to file "complex_2013-01-31_00-05-43.scb".
+ #I  SCLibAdd: saving complex to file "complex_2013-12-04_00-01-48.scb".
  true
  gap&gt; myRepository.Add(complex);; # alternative syntax
  </pre></div>
@@ -203,9 +204,14 @@
 
 <div class="example"><pre>
  gap&gt; myRepository:=SCLibInit("~/myrepository");
+ Found a self-reference to an unknown object!
+ #I  IO_Unpicklers.SCLR: Error while unpicking library repository. Delete file complexes.idx and complexes.idxb and recreate them with SCLibInit.
+ #I  SCIntFunc.SCLibInit: error loading binary index  -- trying to reconstruct it.
+ #I  SCLibUpdate: rebuilding index for /home/jonathan/myrepository/.
+ #I  SCLibUpdate: rebuilding index done.
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=2
+ Number of complexes in library=5
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
@@ -282,14 +288,9 @@
 
 <div class="example"><pre>
  gap&gt; myRepository:=SCLibInit("~/myrepository");
- Found a self-reference to an unknown object!
- #I  IO_Unpicklers.SCLR: Error while unpicking library repository. Delete file complexes.idx and complexes.idxb and recreate them with SCLibInit.
- #I  SCIntFunc.SCLibInit: error loading binary index  -- trying to reconstruct it.
- #I  SCLibUpdate: rebuilding index for /home/jonathan/myrepository/.
- #I  SCLibUpdate: rebuilding index done.
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=2
+ Number of complexes in library=5
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
@@ -371,7 +372,7 @@
 <h5>12.1-13 SCLibUpdate</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibUpdate</code>( <var class="Arg">repository</var>[, <var class="Arg">recalc</var>] )</td><td class="tdright">( function )</td></tr></table></div>
-<p>Returns: library repository of type <code class="code">SCLibRepository</code> upon success, fail otherwise.</p>
+<p>Returns: library repository of type <code class="code">SCLibRepository</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Recreates the index of a given repository (either via a repository object or a base path of a repository <var class="Arg">repository</var>) by scanning the base path for all <code class="code">.sc</code> files containing simplicial complexes of the repository. Returns a repository object with the newly created index on success or <code class="keyw">fail</code> in case of an error. The optional boolean argument <var class="Arg">recalc</var> forces <strong class="pkg">simpcomp</strong> to recompute all the indexed properties (such as f-vector, homology, etc.) of the simplicial complexes in the repository if set to <code class="keyw">true</code>.</p>
 
@@ -626,9 +627,25 @@
  true
  </pre></div>
 
+<p><a id="X7F214CF77E65C1A9" name="X7F214CF77E65C1A9"></a></p>
+
+<h5>12.2-10 SCExportPolymake</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportPolymake</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
+
+<p>Exports the gluings of the tetrahedra of a given combinatorial <span class="SimpleMath">3</span>-manifold <var class="Arg">complex</var> in a format compatible with Matveev's <span class="SimpleMath">3</span>-manifold software <code class="code">Recognizer</code>.</p>
+
+
+<div class="example"><pre>
+ gap&gt; c:=SCBdCrossPolytope(4);;
+ gap&gt; SCExportRecognizer(c,"/tmp/bdbeta4.mv");
+ true
+ </pre></div>
+
 <p><a id="X7B933EA27E8E79C8" name="X7B933EA27E8E79C8"></a></p>
 
-<h5>12.2-10 SCExportSnapPy</h5>
+<h5>12.2-11 SCExportSnapPy</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportSnapPy</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
