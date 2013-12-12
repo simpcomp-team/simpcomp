@@ -13,7 +13,7 @@ SetPackageInfo( rec(
 PackageName := "simpcomp",
 Subtitle := "A GAP toolbox for simplicial complexes",
 Version := "2.0.0",
-Date := "11/12/2013",
+Date := "12/12/2013",
 
 ArchiveURL :=Concatenation( "https://code.google.com/p/simpcomp/",String(~.Version)),
 ArchiveFormats := ".tar.gz",
