@@ -1,11 +1,17 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.20)  11 DEC 2013 19:01
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.27)  12 DEC 2013 10:47
 entering extended mode
  %&-line parsing enabled.
 **simpcomp
 (./simpcomp.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, loaded.
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size11.clo
@@ -476,6 +482,7 @@ LaTeX Info: Redefining \underbrace on input line 1820.
 LaTeX Info: Redefining \surd on input line 1843.
 LaTeX Font Info:    Redeclaring math accent \widehat on input line 1845.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 1846.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
 )
 (/usr/share/texmf-texlive/tex/latex/tools/longtable.sty
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
@@ -1666,44 +1673,44 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9843 strings out of 495061
- 144744 string characters out of 1182621
- 207655 words of memory out of 3000000
- 11743 multiletter control sequences out of 15000+50000
+ 9843 strings out of 493848
+ 144744 string characters out of 1152823
+ 208635 words of memory out of 3000000
+ 11842 multiletter control sequences out of 15000+50000
  109487 words of font info for 155 fonts, out of 3000000 for 9000
- 28 hyphenation exceptions out of 8191
+ 714 hyphenation exceptions out of 8191
  38i,10n,36p,1016b,617s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolS.enc}{/usr/share/
 texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/share/texmf-texlive/
 fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/share/texmf-texlive/fonts/enc/dvip
-s/mnsymbol/MnSymbolF.enc} </home/jonathan/.texmf-var/fonts/pk/ljfour/jknappen/e
-c/ectt1200.600pk> </home/jonathan/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecst10
-95.600pk> </home/jonathan/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt2488.600pk
-> </home/jonathan/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1440.600pk>{/usr/s
-hare/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/share/texmf-tex
-live/fonts/enc/dvips/mnsymbol/MnSymbolA.enc} </home/jonathan/.texmf-var/fonts/p
-k/ljfour/jknappen/ec/ectt1095.600pk>{/usr/share/texmf-texlive/fonts/enc/dvips/b
-ase/8r.enc} </home/jonathan/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600
-pk></usr/share/texmf-texlive/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/s
-hare/texmf-texlive/fonts/type1/public/mnsymbol/MnSymbol6.pfb></usr/share/texmf-
-texlive/fonts/type1/public/mnsymbol/MnSymbol8.pfb></usr/share/texmf-texlive/fon
-ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb
+s/mnsymbol/MnSymbolF.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1
+.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/sha
+re/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{/usr/share/texmf-texli
+ve/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/mns
+ymbol/MnSymbol10.pfb></usr/share/texmf-texlive/fonts/type1/public/mnsymbol/MnSy
+mbol6.pfb></usr/share/texmf-texlive/fonts/type1/public/mnsymbol/MnSymbol8.pfb><
+/usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
+texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 
 pdfTeX warning: pdflatex (file /usr/share/texmf-texlive/fonts/type1/public/amsf
 onts/cm/cmmi10.pfb): glyph `semicolon' undefined
 ></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
 /texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texliv
-e/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-texlive/font
-s/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helve
-tic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro8a.pfb><
-/usr/share/texmf-texlive/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-texl
-ive/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-texlive/fonts/type1/urw/t
-imes/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></us
-r/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on simpcomp.pdf (214 pages, 1305762 bytes).
+e/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/
+public/cm-super/sfst1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt
+1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sftt1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt2
+488.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
+re/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/
+fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/
+symbol/usyr.pfb></usr/share/texmf-texlive/fonts/type1/urw/symbol/usyr.pfb></usr
+/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive
+/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on simpcomp.pdf (214 pages, 1397699 bytes).
 PDF statistics:
- 3939 PDF objects out of 4296 (max. 8388607)
+ 3680 PDF objects out of 4296 (max. 8388607)
  1031 named destinations out of 1200 (max. 500000)
  773 words of extra memory for PDF output out of 10000 (max. 10000000)
 
