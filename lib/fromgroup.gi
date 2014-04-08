@@ -44,6 +44,7 @@ InstallGlobalFunction(SCsFromGroupExt,
 		maxSimplexPos,simplexPos,add,simplexIdx,rl,ru,rlIdx,rowIdx,singleResults,
 		element,j,i,o,name,column,s,vectorsum,curComb,stop,stopSize,foundComplex,
 		colPos,curPos,lastRow,srctr,subsetValid,isoSig,isoSigs,
+
 		
 		# functions
 		TestEulerCharacteristic,
@@ -329,6 +330,9 @@ InstallGlobalFunction(SCsFromGroupExt,
   matrixAllowedRows:=[];
   allCount:=[];
   
+
+
+
   cachedHighOrbits:=[];
 
   t:=Transitivity(G);
@@ -388,12 +392,11 @@ InstallGlobalFunction(SCsFromGroupExt,
 				simplexPos:=simplexPos+1;
 			od;
 		fi;
-		
 		#generate orbit & look if already represented
 		add:=1;
 		orbit:=Orbit(G,simplex,OnSets);
 		#Info(InfoSimpcomp,2,"orbit ",orbit);
-	
+
 		for rl in repLow do
 			pos:=Position(orbit,rl);
 			if(pos<>fail) then
@@ -410,7 +413,6 @@ InstallGlobalFunction(SCsFromGroupExt,
 				break;
 			fi;
 		od;
-
 		if(add=1) then
 			# check, if pointwise stabilizer is valid (<= C2)
 			stab:=Stabilizer(G,simplex,OnTuples);
@@ -490,7 +492,6 @@ InstallGlobalFunction(SCsFromGroupExt,
 				break;
 			fi;
 		od;
-	
 		if(add=1 and d>2) then
 			# check, if pointwise stabilizer is trivial
 			stab:=Stabilizer(G,simplex,OnTuples);

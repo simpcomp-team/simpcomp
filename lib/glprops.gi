@@ -3069,7 +3069,7 @@ InstallMethod(SCSkelExOp,
 [SCIsSimplicialComplex,IsInt],
 function(complex, k)
 
-	local cdim,i,all,facets;
+	local cdim,i,j,l,all,facets,idx,computed;
 	
 	
 	cdim:=SCDim(complex);
@@ -3082,16 +3082,29 @@ function(complex, k)
 			return [];
 	fi;
 
-	facets:=SCFacetsEx(complex);
-	if facets=fail then
-		return fail;
-	fi;
 	all:=[];
-	for i in facets do
-		Append(all,Combinations(i,k+1));
+	computed:=ComputedSCSkelExs(complex);
+	idx:=-1;
+	for i in [k+1..cdim+1] do
+		if i in computed then
+			idx:=Position(computed,i)+1;
+			break;
+		fi;
 	od;
+	if idx > -1 then
+		for i in computed[idx] do
+			Append(all,Combinations(i,k+1));
+		od;
+	else
+		facets:=SCFacetsEx(complex);
+		if facets=fail then
+			return fail;
+		fi;
+		for i in facets do
+			Append(all,Combinations(i,k+1));
+		od;
+	fi;
 	all:=Set(all);
-	
 	return all;
 end);
 
@@ -3167,7 +3180,10 @@ function(complex)
 	if(dim=fail) then
 		return fail;
 	fi;
-	faces:=List([0..dim],x->SCSkelEx(complex,x));
+	faces:=[];
+	for i in Reversed([0..dim]) do
+		faces[i+1]:=SCSkelEx(complex,i);
+	od;
 	if fail in faces then
 		return fail;
 	fi;
