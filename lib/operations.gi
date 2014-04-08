@@ -476,68 +476,173 @@ end);
 ## </ManSection>
 ##<#/GAPDoc>
 ################################################################################
+SCIntFunc.SCMakeHasseDiagram:=function(fl)
+	local downward, upward, i, j, k, d, base, idx;
+
+	upward:=[];
+	for i in [1..Size(fl)-1] do
+		upward[i]:=List([1..Size(fl[i])],x->[]);
+	od;
+	downward:=[];
+	for i in [2..Size(fl)] do
+		downward[i-1]:=List([1..Size(fl[i])],x->[]);
+	od;
+	for k in [2..Size(fl)] do
+		d:=Size(fl[k][1]);
+		idx:=[];	
+		for i in [1..d] do
+			idx[i]:=[1..d];
+			Remove(idx[i],i);
+		od;
+		for i in [1..Size(fl[k])] do
+			for j in [1..d] do
+				base:=fl[k][i]{idx[j]};
+				Add(upward[k-1][PositionSorted(fl[k-1],base)],i);
+				Add(downward[k-1][i],PositionSorted(fl[k-1],base));
+			od;
+		od;
+	od;
+	return [upward,downward];
+end;
+
+
 InstallMethod(SCCollapseGreedy,
 "for SCSimplicialComplex",
 [SCIsSimplicialComplex],
 function(complex)
+	local i, j, k, l, faces, coll, hd, found, idx, facets, alreadyContained, ctr;
 
-	local count, max, stopandremove,faces,number,up,low,upper,lower,labels,coll;
-	
+
 	if(not SCIntFunc.EnsureParameters("SCCollapseGreedy",[complex],[SCIsSimplicialComplex],["SCSimplicialComplex"])) then
 		return fail;
 	fi;
 	
-	max:=SCDim(complex)+1;
-	labels:=SCIntFunc.DeepCopy(SCVertices(complex));	faces:=SCIntFunc.DeepCopy(SCFaceLatticeEx(complex));
-	
-	if max=fail or faces=fail or labels=fail then
+	Info(InfoSimpcomp,2,"SCCollapseGreedy: compute face lattice...");
+	faces:=SCIntFunc.DeepCopy(SCFaceLatticeEx(complex));
+
+	if faces=fail then
 		return fail;
 	fi;
 	
-	if(max=0) then
+	if(faces=[]) then
 		return SCEmpty();
 	fi;
 	
-	count:=0;
-	while max>1 do 
-		stopandremove:=false;
-	
-		for low in faces[max-1] do
-			if stopandremove=false then
-				number:=0;
-				for up in faces[max] do
-					if IsSubset(up,low) then
-						number:=number+1;
-						lower:=low;
-						upper:=up;
+	Info(InfoSimpcomp,2,"SCCollapseGreedy: compute Hasse diagram...");
+	hd:=SCIntFunc.SCMakeHasseDiagram(faces);
+
+	Info(InfoSimpcomp,2,"SCCollapseGreedy: start collapsing process...");	
+	for i in Reversed([1..Size(hd[1])]) do
+		ctr:=1;
+		while hd[2][i] <> [] do
+			found:=false;
+			for j in [1..Size(hd[1][i])] do
+				if not IsBound(hd[1][i][j]) then continue; fi;
+				if Size(hd[1][i][j]) = 1 then 
+					# remove i-face no. ``hd[1][i][j][1]''
+					Unbind(hd[2][i][hd[1][i][j][1]]);
+					# remove i-face no. ``hd[1][i][j][1]'' from all (i-1)-face lists
+					for k in [1..Size(hd[1][i])] do
+						if not IsBound(hd[1][i][k]) or k = j then continue; fi;
+						idx:=Position(hd[1][i][k],hd[1][i][j][1]);
+						if idx <> fail then
+							Remove(hd[1][i][k],idx);
+						fi;
+						if hd[1][i][k] = [] then
+							Unbind(hd[1][i][k]);
+						fi;
+					od;
+					Unbind(hd[1][i][j]);
+					# remove (i-1)-face j and update update hd[1][i-1]
+					if i > 1 then
+						Unbind(hd[2][i-1][j]);
+						for l in [1..Size(hd[1][i-1])] do
+							idx:=Position(hd[1][i-1][l],j);
+							if idx <> fail then
+								Remove(hd[1][i-1][l],idx);
+							fi;
+							if hd[1][i-1][l] = [] then
+								Unbind(hd[1][i-1][l]);
+							fi; 
+						od;				
 					fi;
-				od;
-				if number=1 then
-					stopandremove:=true;
+					found:=true;
+					#break;
 				fi;
+			od;
+			if ctr mod 100 = 0 then
+				Info(InfoSimpcomp,3,"SCCollapseGreedy: level ",i," progress: ",ctr," / ",Size(faces[i+1]));
 			fi;
+			if not found then
+				break;
+			fi;
+			ctr:=ctr+1;
 		od;
-	
-		if stopandremove=true then
-			RemoveSet(faces[max],upper);
-			RemoveSet(faces[max-1],lower);
-			count:=count+1;  
-			if Length(faces[max])=0 then
-				max:=max-1;
-			fi;
-		else 
+		if hd[2][i] <> [] then
 			break;
 		fi;
+		Info(InfoSimpcomp,2,"SCCollapseGreedy: level ",i," collapsed...");	
 	od;
 
-	coll:=SCFromFacets(SCIntFunc.RelabelSimplexList(Union(SCIntFunc.reduceFaceLattice(faces)),labels));
-	
+	# return collapsed complex
+	facets:=[];
+	Info(InfoSimpcomp,2,"SCCollapseGreedy: returning collapsed complex...");
+	alreadyContained:=[];
+	for k in Reversed([1..i]) do
+		facets[k+1]:=[];
+		for l in [1..Size(hd[2][k])] do
+			if l in alreadyContained then continue; fi;
+			if IsBound(hd[2][k][l]) then
+				Add(facets[k+1],faces[k+1][l]);
+			fi;
+		od;
+		alreadyContained:=Union(hd[2][k]);
+	od;
+	facets[1]:=[];
+	for l in [1..Size(hd[1][1])] do
+		if l in alreadyContained then continue; fi;
+		if IsBound(hd[1][1][l]) then
+			Add(facets[1],faces[1][l]);
+		fi;
+			od;	
+	coll:=SCFromFacets(Union(SCIntFunc.reduceFaceLattice(facets)));
 	if(SCName(complex)<>fail) then
 		SCRename(coll,Concatenation("collapsed version of ",SCName(complex)));
 	fi;
-	
 	return coll;
-
+#	count:=0;
+#	while max>1 do 
+#		stopandremove:=false;
+#Print("try to remove\n");	
+#		for low in faces[max-1] do
+#			if stopandremove=false then
+#				number:=0;
+#				for up in faces[max] do
+#					if IsSubset(up,low) then
+#						number:=number+1;
+#						lower:=low;
+#						upper:=up;
+#					fi;
+#				od;
+#				if number=1 then
+#					stopandremove:=true;
+#				fi;
+#			fi;
+#		od;
+#
+#		if stopandremove=true then
+#Print("remove ",max," ",Size(faces[max]),"\n");
+#			RemoveSet(faces[max],upper);
+#			RemoveSet(faces[max-1],lower);
+#			count:=count+1;  
+#			if Length(faces[max])=0 then
+#				max:=max-1;
+#			fi;
+#		else 
+#			break;
+#		fi;
+#	od;
+#
 end);
 
 

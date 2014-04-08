@@ -977,15 +977,15 @@ SCIntFunc.SCChooseMove:=
 	else
 	
 		if SCBistellarOptions.Heating>0 then
-			if IsInt(SCBistellarOptions.Heating/((dim+2)*SCBistellarOptions.BaseHeating))=true and dim>2 then
-				Append(options,moves[1]);
-			else
+			#if IsInt(SCBistellarOptions.Heating/((dim+2)*SCBistellarOptions.BaseHeating))=true and dim>2 then
+			#	Append(options,moves[1]);
+			#else
 				for i in [1..Int((dim+1)/2)] do
 					Append(options,moves[i+1]);
 				od;
-			fi;
+			#fi;
 			if options=[] then
-				for i in [1..(dim+1)] do
+				for i in [1..(dim)] do
 					Append(options,moves[dim+2-i]);
 					if options<>[] and i>=Int((dim+1)/2)-1 then
 						break;
@@ -1018,7 +1018,8 @@ SCIntFunc.SCChooseMove:=
 				od;
 			fi;
 			if SCBistellarOptions.Relaxation=(dim+2)*SCBistellarOptions.BaseRelaxation then
-				SCBistellarOptions.Heating:=(dim+2)*SCBistellarOptions.BaseHeating;
+				#SCBistellarOptions.Heating:=(dim+2)*SCBistellarOptions.BaseHeating;
+				SCBistellarOptions.Heating:=SCBistellarOptions.BaseHeating;
 				SCBistellarOptions.Relaxation:=0;
 			fi;
 			SCBistellarOptions.Relaxation:=SCBistellarOptions.Relaxation+1;
