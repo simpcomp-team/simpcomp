@@ -278,7 +278,7 @@ InstallGlobalFunction(SCsFromGroupExt,
 		if (objectType = 1 and IsInt(d/2)) or objectType = 0 then
 			Info(InfoSimpcomp,2,"Testing vertex link...");
 			if not EulerCharacteristic(link) = 1 + (-1)^(d-1) then
-      	Info(InfoSimpcomp,2,"link not valid.");
+				Info(InfoSimpcomp,2,"link not valid.");
 				return false;
 			fi;
 		fi;
@@ -351,6 +351,29 @@ InstallGlobalFunction(SCsFromGroupExt,
   #MAIN
   ###############################################################################
   
+
+#  #### BEGIN TMP ###
+#  matrix:=[];
+#
+#repHigh:=[];
+#
+#repLow:=[];
+#  
+#  repHighOrbitLen:=[];
+#  repLowCount:=Size(repLow);
+#  repHighCount:=Size(repHigh);
+#
+#  allCount:=[];
+#  allCount[1]:=ListWithIdenticalEntries(repLowCount,0);
+#  allCount[2]:=ListWithIdenticalEntries(repLowCount,0);
+#  for simplex in repHigh do
+#    orbit:=Orbit(G,simplex,OnSets);
+#    Add(repHighOrbitLen,Size(orbit));
+#  od;
+#  Print(matrix,"\n");
+#  #### BEGIN TMP ###
+
+
   #number of (possible) simplices calculated
   maxIdxLow:=Binomial(n-t,d-t); #maximum number of (d-1)-vertices
   maxIdxHigh:=Binomial(n-t,d+1-t); #maximum number of d-vertices
@@ -361,10 +384,12 @@ InstallGlobalFunction(SCsFromGroupExt,
   if(maxIdxLow<1) then maxIdxLow:=1; fi;
   if(maxIdxHigh<1) then maxIdxHigh:=1; fi;
   
+
+#  if 1 = 0 then
   
   Info(InfoSimpcomp,2,"Simplices count low=",maxIdxLow," high=",maxIdxHigh);
   Info(InfoSimpcomp,2,"Generating low simplices count=",maxIdxLow);
-  
+
 	matrix:=[];
 	repLow:=[];
 	forbiddenLow:=[];
@@ -598,15 +623,22 @@ InstallGlobalFunction(SCsFromGroupExt,
 
 	Info(InfoSimpcomp,2,"Matrix calculation done.");
 
+
+#  ### END TMP ###
+#  fi;
+#  ### END TMP ###
+
   #setup matrix  
   matrixRows:=Length(matrix);
   matrixCols:=repLowCount;
   matrixAllowedRows:=[1..matrixRows];
-  
+
   if(matrixRows=0 or matrixCols=0) then
     Info(InfoSimpcomp,2,"Nothing to compute.");
     return [];
   fi;
+
+
   
   #get single results
   singleResults:=[];
