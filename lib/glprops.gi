@@ -932,15 +932,16 @@ function(complex, pos)
 	 		return n;
 	fi;
 
-	if(dim=n-1 and dim > 0) then
-		#simplex
-		f:=Concatenation(SCFVectorBdSimplex(dim),[1]);
-			return f[pos+1];
-	elif(dim=n-2 and n=Length(facets) and dim > 0) then
-		#bd simplex
-		f:=SCFVectorBdSimplex(dim+1);
-			return f[pos+1];
-	fi;
+	# only true for (bounded) manifolds
+	#if(dim=n-1 and dim > 0) then
+	#	#simplex
+	#	f:=Concatenation(SCFVectorBdSimplex(dim),[1]);
+	#		return f[pos+1];
+	#elif(dim=n-2 and n=Length(facets) and dim > 0) then
+	#	#bd simplex
+	#	f:=SCFVectorBdSimplex(dim+1);
+	#		return f[pos+1];
+	#fi;
 	
 	maxexpected:=Sum(List([1..dim],x->x*Binomial(n,x)));
 	if (pos in ComputedSCSkelExs(complex) and Position(ComputedSCSkelExs(complex),pos) mod 2 = 1) or maxexpected<2*10^8 then

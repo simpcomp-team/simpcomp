@@ -15,7 +15,7 @@ Subtitle := "A GAP toolbox for simplicial complexes",
 Version := "%%%VERSION%%%",
 Date := "%%%DATE%%%",
 
-PackageWWWHome := "https://simpcomp.googlecode.com/git/web/",
+PackageWWWHome := "http://simpcomp.googlecode.com/git/web/",
 README_URL := Concatenation( ~.PackageWWWHome, "README" ),
 PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
 
@@ -105,7 +105,7 @@ Autoload := false,
 ##  If the default banner does not suffice then provide a string that is
 ##  printed when the package is loaded (not when it is autoloaded or if
 ##  command line options `-b' or `-q' are given).
-BannerString :=Concatenation("Loading simpcomp ",String(~.Version),"\nby F. Effenberger and J. Spreer\nhttps://code.google.com/p/simpcomp/\n"),
+BannerString :=Concatenation("Loading simpcomp ",String(~.Version),"\nby F. Effenberger and J. Spreer\nhttp://code.google.com/p/simpcomp/\n"),
 
 AvailabilityTest := 
 function()
