@@ -753,7 +753,9 @@ end);
 ## <Func Name="SCLibFlush" Arg="repository, confirm"/>
 ## <Returns><K>true</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Completely empties a given repository <Arg>repository</Arg>. The index and all simplicial complexes in this repository are deleted. The second argument, <Arg>confirm</Arg>, must be the string <C>"yes"</C> in order to confirm the deletion. 
+## Completely empties a given repository <Arg>repository</Arg>. The index and all 
+## simplicial complexes in this repository are deleted. The second argument, 
+## <Arg>confirm</Arg>, must be the string <C>"yes"</C> in order to confirm the deletion. 
 ## <Example>
 ## gap> myRepository:=SCLibInit("~/repository");;
 ## #I  SCLibInit: made directory "~/repository/" for user library.

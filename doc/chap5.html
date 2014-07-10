@@ -15,7 +15,7 @@
 <body class="chap5"  onload="jscontent()">
 
 
-<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chap9.html">9</a>  <a href="chap10.html">10</a>  <a href="chap11.html">11</a>  <a href="chap12.html">12</a>  <a href="chap13.html">13</a>  <a href="chap14.html">14</a>  <a href="chap15.html">15</a>  <a href="chap16.html">16</a>  <a href="chap17.html">17</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chap9.html">9</a>  <a href="chap10.html">10</a>  <a href="chap11.html">11</a>  <a href="chap12.html">12</a>  <a href="chap13.html">13</a>  <a href="chap14.html">14</a>  <a href="chap15.html">15</a>  <a href="chap16.html">16</a>  <a href="chap17.html">17</a>  <a href="chap18.html">18</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap4.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap6.html">[Next Chapter]</a>&nbsp;  </div>
 
@@ -144,7 +144,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertiesDropped</code>( <var class="Arg">complex</var> )</td><td class="tdright">( function )</td></tr></table></div>
 <p>Returns: a object of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
-<p>An object of the type <code class="code">SCSimplicialComplex</code> caches its previously calculated properties such that each property only has to be calculated once. This function returns a copy of <var class="Arg">complex</var> with all properties (apart from Facets, Dim and Name) dropped, clearing all previously computed properties. See also <code class="func">SCPropertyDrop</code> (<a href="chap17.html#X8304C9BC7E8CF4F8"><span class="RefLink">17.1-8</span></a>) and <code class="func">SCPropertyTmpDrop</code> (<a href="chap17.html#X836F936B7E09E5F1"><span class="RefLink">17.1-13</span></a>).</p>
+<p>An object of the type <code class="code">SCSimplicialComplex</code> caches its previously calculated properties such that each property only has to be calculated once. This function returns a copy of <var class="Arg">complex</var> with all properties (apart from Facets, Dim and Name) dropped, clearing all previously computed properties. See also <code class="func">SCPropertyDrop</code> (<a href="chap18.html#X8304C9BC7E8CF4F8"><span class="RefLink">18.1-8</span></a>) and <code class="func">SCPropertyTmpDrop</code> (<a href="chap18.html#X836F936B7E09E5F1"><span class="RefLink">18.1-13</span></a>).</p>
 
 
 <div class="example"><pre>
@@ -159,7 +159,7 @@
  /SimplicialComplex]
  gap&gt; c.F; time;                                 
  [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
- 36
+ 48
  gap&gt; c.F; time;                                 
  [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
  0
@@ -174,7 +174,7 @@
  /SimplicialComplex]
  gap&gt; c.F; time;                                 
  [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
- 36
+ 48
  </pre></div>
 
 <p><a id="X7918944F814850E8" name="X7918944F814850E8"></a></p>
@@ -295,7 +295,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Operation - (SCSimplicialComplex, SCSimplicialComplex)</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
-<p>Calls <code class="func">SCDifference</code> (<a href="chap6.html#X7FB3D29178076EB4"><span class="RefLink">6.10-6</span></a>)(<var class="Arg">complex1</var>, <var class="Arg">complex2</var>)</p>
+<p>Calls <code class="func">SCDifference</code> (<a href="chap6.html#X7FB3D29178076EB4"><span class="RefLink">6.10-5</span></a>)(<var class="Arg">complex1</var>, <var class="Arg">complex2</var>)</p>
 
 <p><a id="X80C8CB3983D4356C" name="X80C8CB3983D4356C"></a></p>
 
@@ -374,7 +374,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Operation Difference (SCSimplicialComplex, SCSimplicialComplex)</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
-<p>Computes the ``difference'' of two simplicial complexes by calling <code class="func">SCDifference</code> (<a href="chap6.html#X7FB3D29178076EB4"><span class="RefLink">6.10-6</span></a>).</p>
+<p>Computes the ``difference'' of two simplicial complexes by calling <code class="func">SCDifference</code> (<a href="chap6.html#X7FB3D29178076EB4"><span class="RefLink">6.10-5</span></a>).</p>
 
 
 <div class="example"><pre>
@@ -395,7 +395,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Operation Intersection (SCSimplicialComplex, SCSimplicialComplex)</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
-<p>Computes the ``intersection'' of two simplicial complexes by calling <code class="func">SCIntersection</code> (<a href="chap6.html#X7B4BE2C783E6D0BF"><span class="RefLink">6.10-9</span></a>).</p>
+<p>Computes the ``intersection'' of two simplicial complexes by calling <code class="func">SCIntersection</code> (<a href="chap6.html#X7B4BE2C783E6D0BF"><span class="RefLink">6.10-8</span></a>).</p>
 
 
 <div class="example"><pre>
@@ -627,7 +627,7 @@
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap4.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap6.html">[Next Chapter]</a>&nbsp;  </div>
 
 
-<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chap9.html">9</a>  <a href="chap10.html">10</a>  <a href="chap11.html">11</a>  <a href="chap12.html">12</a>  <a href="chap13.html">13</a>  <a href="chap14.html">14</a>  <a href="chap15.html">15</a>  <a href="chap16.html">16</a>  <a href="chap17.html">17</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chap9.html">9</a>  <a href="chap10.html">10</a>  <a href="chap11.html">11</a>  <a href="chap12.html">12</a>  <a href="chap13.html">13</a>  <a href="chap14.html">14</a>  <a href="chap15.html">15</a>  <a href="chap16.html">16</a>  <a href="chap17.html">17</a>  <a href="chap18.html">18</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
 
 <hr />
 <p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>

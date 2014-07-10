@@ -54,6 +54,10 @@
 	<#Include Label="morse" />
 </Chapter>
 
+<Chapter Label="chap:DMT"><Heading>Forman's discrete Morse theory</Heading>
+	<#Include Label="DMT" />
+</Chapter>
+
 <Chapter Label="chap:libio"> <Heading>Library and I/O</Heading>
 	<#Include Label="lib" />
 	<#Include Label="io" />

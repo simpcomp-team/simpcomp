@@ -22,25 +22,31 @@
   [[20XBR08[120X]  [16XBarakat,  M.  and  Robertz,  D.[116X,  [17X\tt  homalg:  a  meta-package  for
   homological algebra[117X, [18XJ. Algebra Appl.[118X, [19X7[119X, 3 (2008), 299--317.
   
-  [[20XBABRBWP12[120X]  [16XBenjamin  A.  Burton  Ryan  Budney  William  Pettersson, e. a.[116X,
-  [17XRegina:  Software for 3-manifold topology and normal surface theory, Version
-  4.9.2[117X     (1999--2012),     {\tt    http://\allowbreak    regina.\allowbreak
-  sourceforge.\allowbreak net/}.
+  [[20XBL14a[120X]  [16XBenedetti,  B.  and Lutz, F. H.[116X, [17XRandom discrete Morse theory and a
+  new library of triangulations[117X, [18XExp. Math.[118X, [19X23[119X, 1 (2014), 66--94.
   
   [[20XBL00[120X]  [16XBj{\"o}rner,  A.  and  Lutz,  F. H.[116X, [17XSimplicial manifolds, bistellar
   flips  and  a  16-vertex  triangulation of the Poincar\'e homology 3-sphere[117X,
   [18XExperiment. Math.[118X, [19X9[119X, 2 (2000), 275--289.
   
-  [[20XBK09[120X]  [16XBrehm, U. and K\"uhnel, W.[116X, [17XLattice triangulations of E^3 and of the
-  3-torus[117X (2009), (({To appear in Israel J. Math.})).
-  
   [[20XBK08[120X]  [16XBrehm,  U. and K{\"u}hnel, W.[116X, [17XEquivelar maps on the torus[117X, [18XEuropean
   J. Combin.[118X, [19X29[119X, 8 (2008), 1843--1861.
+  
+  [[20XBK12[120X]  [16XBrehm,  U.  and K{\"u}hnel, W.[116X, [17XLattice triangulations of E^3 and of
+  the 3-torus[117X, [18X{Israel J. Math.}[118X, [19X189[119X (2012), 97--133.
   
   [[20XBL98[120X]  [16XBreuer,  T.  and  Linton,  S.[116X,  [17XThe  GAP  4  type system: organising
   algebraic  algorithms[117X, in Proceedings of the 1998 international symposium on
   Symbolic  and  algebraic  computation,  ACM,  ISSAC  '98,  New York, NY, USA
   (1998), 38--45.
+  
+  [[20XBBPo13[120X]  [16XBurton,  B.  A.,  Budney, R., Pettersson, W. and others, [116X, [17XRegina:
+  normal  surface and 3-manifold topology software, Version 4.95[117X (1999--2013),
+  {\tt http://\allowbreak regina.\allowbreak sourceforge.\allowbreak net/}.
+  
+  [[20XBS14[120X]  [16XBurton,  B.  A.  and Spreer, J.[116X, [17XCombinatorial Seifert fibred spaces
+  with  transitive cyclic automorphism group[117X (2014), ((26 pages, 10 figures)),
+  \texttt{arXiv:1404.3005 [math.GT]}.
   
   [[20XCK01[120X]  [16XCasella,  M.  and K{\"u}hnel, W.[116X, [17XA triangulated K3 surface with the
   minimum number of vertices[117X, [18XTopology[118X, [19X40[119X, 4 (2001), 753--772.
@@ -55,8 +61,8 @@
   computational  modeling[117X,  in  Discrete  differential geometry, Birkh\"auser,
   Oberwolfach Semin., [19X38[119X, Basel (2008), 287--324.
   
-  [[20XDHSW04[120X]  [16XDumas,  J.  -.G.,  Heckenbach, F., Saunders, B. D. and Welker, V.[116X,
-  [17XSimplicial           Homology,           v.           1.4.2[117X          (2004),
+  [[20XDHSW11[120X]  [16XDumas,  J.  -.G.,  Heckenbach, F., Saunders, B. D. and Welker, V.[116X,
+  [17XSimplicial          Homology,         v.         1.4.5[117X         (2001--2011),
   {\url{http://www.cis.udel.edu/~dumas/Homology/}}.
   
   [[20XEff11a[120X]  [16XEffenberger,  F.[116X,  [17XHamiltonian  submanifolds of regular polytopes[117X,
@@ -66,6 +72,9 @@
   [[20XEff11b[120X]  [16XEffenberger,  F.[116X,  [17XStacked  polytopes  and tight triangulations of
   manifolds[117X,  [18XJournal of Combinatorial Theory, Series A[118X, [19X118[119X, 6 (2011), 1843 -
   1862.
+  
+  [[20XEng09[120X]  [16XEngstr{\"o}m, A.[116X, [17XDiscrete Morse functions from Fourier transforms[117X,
+  [18XExperiment. Math.[118X, [19X18[119X, 1 (2009), 45--53.
   
   [[20XFor95[120X] [16XForman, R.[116X, [17XA discrete Morse theory for cell complexes[117X, in Geometry,
   topology,  \&  physics, Int. Press, Cambridge, MA, Conf. Proc. Lecture Notes
@@ -78,9 +87,9 @@
   convex polytopes[117X, in Polytopes---combinatorics and computation (Oberwolfach,
   1997), Birkh{\"a}user, DMV Sem., [19X29[119X, Basel (2000), 43--73.
   
-  [[20XGS09[120X]  [16XGrayson, D. R. and Stillman, M. E.[116X, [17XMacaulay2, a software system for
-  research     in     algebraic     geometry,     Version     1.3.1[117X    (2009),
-  \url{http://www.math.uiuc.edu/Macaulay2/}.
+  [[20XGS[120X]  [16XGrayson,  D.  R. and Stillman, M. E.[116X, [17XMacaulay2, a software system for
+  research        in        algebraic       geometry[117X,       Available       at
+  http://www.math.uiuc.edu/Macaulay2/.
   
   [[20XGr{03[120X] [16XGr{\"u}nbaum, B.[116X, [17XConvex polytopes[117X, Springer-Verlag, Second edition,
   Graduate  Texts  in  Mathematics,  [19X221[119X,  New  York  (2003),  xvi+468  pages,
@@ -108,8 +117,18 @@
   [[20XHup67[120X]  [16XHuppert,  B.[116X, [17XEndliche Gruppen. I[117X, Springer-Verlag, Die Grundlehren
   der Mathematischen Wissenschaften, Band 134, Berlin (1967), xii+793 pages.
   
-  [[20XKN11[120X]  [16XKlee,  S.  and  Novik,  I.[116X,  [17XCentrally  symmetric manifolds with few
-  vertices[117X (2011), {\tt arXiv:1102.0542v1 [math.CO]}, Preprint, 15 pages.
+  [[20XBL14b[120X]  [16XK.  Adiprasito B. Benedetti, and Lutz, F. H.[116X, [17XRandom Discrete Morse
+  Theory  II  and  a Collapsible 5-Manifold Different from the 5-Ball.[117X (2014),
+  {\tt arXiv:1404.4239 [math.CO]}, 20 pages, 6 figures, 2 tables.
+  
+  [[20XKS77[120X]   [16XKirby,  R.  C.  and  Siebenmann,  L.  C.[116X,  [17XFoundational  essays  on
+  topological  manifolds, smoothings, and triangulations[117X, Princeton University
+  Press,  Princeton,  N.J.;  University  of Tokyo Press, Tokyo (1977), vii+355
+  pages, ((With notes by John Milnor and Michael Atiyah, Annals of Mathematics
+  Studies, No. 88)).
+  
+  [[20XKN12[120X]  [16XKlee,  S.  and  Novik,  I.[116X,  [17XCentrally  symmetric manifolds with few
+  vertices[117X, [18XAdv. Math.[118X, [19X229[119X, 1 (2012), 487--500.
   
   [[20XKne29[120X]    [16XKneser,   H.[116X,   [17XGeschlossene   Fl\"achen   in   dreidimensionalen
   Mannigfaltigkeiten[117X, [18XJahresbericht der deutschen Mathematiker-Vereinigung[118X, [19X38[119X
@@ -143,14 +162,17 @@
   [[20XManifoldPage[120X]      [16XLutz,      F.      H.[116X,      [17XThe      Manifold      Page[117X,
   {\url{http://www.math.tu-berlin.de/diskregeom/stellar}}.
   
-  [[20XMcK84[120X]       [16XMcKay,       B.[116X,       [17XThe       nauty       page[117X      (1984),
-  {\url{http://cs.anu.edu.au/people/bdm/nauty/}}.
+  [[20XMP14[120X]  [16XMcKay,  B.  D.  and Piperno, A.[116X, [17XPractical graph isomorphism, \II\ [117X,
+  [18XJournal of Symbolic Computation [118X, [19X60[119X, 0 (2014), 94 - 112, (()).
   
   [[20XPac87[120X]   [16XPachner,   U.[116X,   [17XKonstruktionsmethoden   und  das  kombinatorische
   Hom\"oomorphieproblem    f\"ur   Triangulierungen   kompakter   semilinearer
   Mannigfaltigkeiten[117X, [18XAbh. Math. Sem. Uni. Hamburg[118X, [19X57[119X (1987), 69--86.
   
-  [[20XR\"07[120X]     [16XR\"{o}der,     M.[116X,     [17XGAP     package     polymaking[117X    (2007),
+  [[20XPS14[120X]  [16XPaixao,  J. and Spreer, J.[116X, [17XProbabilistic collapsibility testing and
+  manifold recognition heuristics[117X (2014), ((In preparation, 6 pages)).
+  
+  [[20XR\"13[120X]     [16XR\"{o}der,     M.[116X,     [17XGAP     package     polymaking[117X    (2013),
   {\url{http://www.gap-system.org/Packages/polymaking.html}}.
   
   [[20XRin74[120X]  [16XRingel,  G.[116X,  [17XMap  color theorem[117X, Springer-Verlag, New York (1974),
@@ -165,8 +187,8 @@
   Palermo (2) Suppl.[118X, 35 (1994), 291--298, ((First International Conference on
   Stochastic Geometry, Convex Bodies and Empirical Measures (Palermo, 1993))).
   
-  [[20XSoi06[120X]  [16XSoicher,  L.  H.[116X, [17XGRAPE - GRaph Algorithms using PErmutation groups[117X
-  (2006),                          (({Version                          4.3})),
+  [[20XSoi12[120X]  [16XSoicher,  L.  H.[116X, [17XGRAPE - GRaph Algorithms using PErmutation groups[117X
+  (2012),                         (({Version                         4.6.1})),
   {\url{http://www.gap-system.org/Packages/grape.html}}.
   
   [[20XSpa56[120X]  [16XSpanier,  E.  H.[116X,  [17XThe  homology  of Kummer manifolds[117X, [18XProc. AMS[118X, [19X7[119X
@@ -175,21 +197,19 @@
   [[20XSpa99[120X]   [16XSparla,   E.[116X,   [17XA   new  lower  bound  theorem  for  combinatorial
   2k-manifolds[117X, [18XGraphs Combin.[118X, [19X15[119X, 1 (1999), 109--125.
   
-  [[20XSpr10a[120X]   [16XSpreer,   J.[116X,   [17XBlowups,   slicings  and  permutation  groups  in
-  combinatorial topology[117X (2010), ((In preparation)).
-  
-  [[20XSpr10b[120X]  [16XSpreer,  J.[116X, [17XPartitioning the triangles of the cross polytope into
-  surfaces[117X  (2010),  (({T}o  appear  in  {B}eitr.  {A}lgebra  {G}eom.)),  {\tt
-  arXiv:1009.2642v1 [math.CO]}, preprint, 12 pages, 1 figure.
-  
-  [[20XSpr11a[120X]  [16XSpreer,  J.[116X,  [17XCombinatorial 3-manifolds with a cyclic automorphism
-  group[117X (2011), Stuttgarter Math. Berichte, 2011/028.
+  [[20XSpr11a[120X]   [16XSpreer,   J.[116X,   [17XBlowups,   slicings  and  permutation  groups  in
+  combinatorial  topology[117X,  Ph.D.  thesis,  Logos Verlag Berlin, University of
+  Stuttgart (2011), 251 pages, ((Ph.D. thesis)).
   
   [[20XSpr11b[120X]  [16XSpreer,  J.[116X,  [17XNormal  surfaces as combinatorial slicings[117X, [18XDiscrete
   Math.[118X, [19X311[119X, 14 (2011), 1295--1309, (({\tt doi:10.1016/j.disc.2011.03.013})).
   
-  [[20XSpr13[120X]  [16XSpreer,  J.[116X,  [17XCombinatorial  Seifert  Fibred spaces with transitive
-  cyclic automorphism group[117X (2013), 459, (({I}n preparation)).
+  [[20XSpr12[120X]  [16XSpreer,  J.[116X,  [17XPartitioning the triangles of the cross polytope into
+  surfaces[117X,  [18X{Beitr.  Algebra  Geom. / Contributions to Algebra and Geometry}[118X,
+  [19X53[119X, 2 (2012), 473--486.
+  
+  [[20XSpr14[120X]   [16XSpreer,  J.[116X,  [17XCombinatorial  3-manifolds  with  transitive  cyclic
+  symmetry[117X, [18XDiscrete Comput. Geom.[118X, [19X51[119X, 2 (2014), 394--426.
   
   [[20XSK11[120X]  [16XSpreer,  J.  and  K{\"u}hnel, W.[116X, [17XCombinatorial properties of the K3
   surface:  Simplicial  blowups and slicings[117X, [18XExperiment. Math.[118X, [19X20[119X, 2 (2011),
@@ -197,6 +217,11 @@
   
   [[20XWee99[120X]  [16XWeeks,  J.[116X,  [17XSnapPea  (Software for hyperbolic 3-manifolds)[117X (1999),
   ((\url{http://www.geometrygames.org/SnapPea/})).
+  
+  [[20XWil96[120X]  [16XWilson,  D.  B.[116X, [17XGenerating random spanning trees more quickly than
+  the  cover time[117X, in Proceedings of the Twenty-eighth Annual ACM Symposium on
+  the  Theory  of  Computing  (Philadelphia,  PA, 1996), ACM, New York (1996),
+  296--303.
   
   [[20XZie95[120X]  [16XZiegler,  G.  M.[116X,  [17XLectures on polytopes[117X, Springer-Verlag, Graduate
   Texts in Mathematics, [19X152[119X, New York (1995), x+370 pages.

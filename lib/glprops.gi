@@ -1433,14 +1433,24 @@ function(complex)
 end);
 
 ################################################################################
-##<#GAPDoc Label="SCHomology">
+##<#GAPDoc Label="SCHomologyClassic">
 ## <ManSection>
-## <Meth Name="SCHomology" Arg="complex"/>
+## <Func Name="SCHomologyClassic" Arg="complex"/>
 ## <Returns> a list of pairs of the form <C>[ integer, list ]</C>.</Returns>
 ## <Description>
-## Computes the integral simplicial homology groups of a simplicial complex <Arg>complex</Arg> (internally calls the function <C>SimplicialHomology(complex.FacetsEx)</C> from the <Package>homology</Package> package, version 1.4.2., see <Cite Key="Dumas04Homology" />).<P/>
-## If the <Package>homology</Package> package is not available, this function call falls back to <Ref Meth="SCHomologyInternal" />.
-## The output is a list of homology groups of the form <M>[H_0,....,H_d]</M>, where <M>d</M> is the dimension of <Arg>complex</Arg>. The format of the homology groups <M>H_i</M> is given in terms of their maximal cyclic subgroups, i.e. a homology group <M>H_i\cong \mathbb{Z}^f + \mathbb{Z} / t_1 \mathbb{Z} \times \dots \times \mathbb{Z} / t_n \mathbb{Z}</M> is returned in form of a list <M>[ f, [t_1,...,t_n] ]</M>, where <M>f</M> is the (integer) free part of <M>H_i</M> and <M>t_i</M> denotes the torsion parts of <M>H_i</M> ordered in weakly increasing size.
+## Computes the integral simplicial homology groups of a simplicial complex <Arg>complex</Arg> 
+## (internally calls the function <C>SimplicialHomology(complex.FacetsEx)</C> from the 
+## <Package>homology</Package> package, see <Cite Key="Dumas04Homology" />).<P/>
+##
+## If the <Package>homology</Package> package is not available, this function call 
+## falls back to <Ref Func="SCHomologyInternal" />.
+## The output is a list of homology groups of the form <M>[H_0,....,H_d]</M>, where 
+## <M>d</M> is the dimension of <Arg>complex</Arg>. The format of the homology groups 
+## <M>H_i</M> is given in terms of their maximal cyclic subgroups, i.e. a homology group 
+## <M>H_i\cong \mathbb{Z}^f + \mathbb{Z} / t_1 \mathbb{Z} \times \dots \times \mathbb{Z} / t_n \mathbb{Z}</M> 
+## is returned in form of a list <M>[ f, [t_1,...,t_n] ]</M>, where <M>f</M> is the (integer) 
+## free part of <M>H_i</M> and <M>t_i</M> denotes the torsion parts of <M>H_i</M> ordered in 
+## weakly increasing size.<P/>
 ## <Example>
 ## gap> SCLib.SearchByName("K^2");
 ## gap> kleinBottle:=SCLib.Load(last[1][1]);;
@@ -3078,6 +3088,11 @@ function(complex, k)
 	if(cdim=fail) then
 		return fail;
 	fi;
+
+	facets:=SCFacetsEx(complex);
+	if facets=fail then
+		return fail;
+	fi;
 	
 	if(k<0 or k>cdim) then
 			return [];
@@ -3096,11 +3111,13 @@ function(complex, k)
 		for i in computed[idx] do
 			Append(all,Combinations(i,k+1));
 		od;
+		# in case complex is not pure
+		for i in facets do
+			if Size(i) = k+1 then
+				Add(all,i);
+			fi;
+		od;
 	else
-		facets:=SCFacetsEx(complex);
-		if facets=fail then
-			return fail;
-		fi;
 		for i in facets do
 			Append(all,Combinations(i,k+1));
 		od;
@@ -3734,7 +3751,7 @@ end);
 
 SCIntFunc.heegaardSplitting:=function(arg)
 
-	local M,start,vertices,n,comb,sz,ctr,m1,m2,d1,d2,idx,dim,manifold,j,i,hom,coll,lowerBound,maxGenus,genus,transitivity;
+	local M,start,vertices,n,comb,sl,sz,ctr,m1,m2,d1,d2,idx,dim,manifold,j,i,hom,coll,lowerBound,maxGenus,genus,transitivity;
 	
 	M:=arg[1];
 	if Size(arg) = 2 then
@@ -3802,6 +3819,7 @@ SCIntFunc.heegaardSplitting:=function(arg)
 
 	transitivity:=Transitivity(SCAutomorphismGroup(M));
 
+
 	for j in [idx..Int(n/2)] do
 	  comb:=Combinations(vertices{[transitivity+1..Size(vertices)]},j-transitivity);
 	  sz:=Int(Minimum(1000,Size(comb)/10)); 
@@ -3823,7 +3841,8 @@ SCIntFunc.heegaardSplitting:=function(arg)
 			return fail;
 		fi;
 		if d1 <= 1 and d2 <= 1 then
-			genus:=SCGenus(SCSlicing(M,[List(m1,x->Position(vertices,x)),List(m2,x->Position(vertices,x))]));
+			sl:=SCSlicing(M,[List(m1,x->Position(vertices,x)),List(m2,x->Position(vertices,x))]);
+			genus:=SCGenus(sl);
 			if genus = fail then
 				return fail;
 			else

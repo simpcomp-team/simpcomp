@@ -18,11 +18,13 @@ MakeReadWriteGlobal("SCIntFunc");
 DeclareGlobalVariable("SCSettings");
 DeclareGlobalFunction("SCInfoLevel");
 
+
 ReadPackage("simpcomp","lib/propobject.gd");
 ReadPackage("simpcomp","lib/tools.gd");
 ReadPackage("simpcomp","lib/complex.gd");
 ReadPackage("simpcomp","lib/io.gd");
 ReadPackage("simpcomp","lib/lib.gd");
+ReadPackage("simpcomp","lib/DMT.gd");
 ReadPackage("simpcomp","lib/glprops.gd");
 ReadPackage("simpcomp","lib/operations.gd");
 ReadPackage("simpcomp","lib/labelops.gd");
@@ -36,6 +38,7 @@ ReadPackage("simpcomp","lib/fromgroup.gd");
 ReadPackage("simpcomp","lib/blowups.gd");
 ReadPackage("simpcomp","lib/highlySymmetricSurfaces.gd");
 ReadPackage("simpcomp","lib/isosig.gd");
+
 
 
 # checks if package 'homology' is present and working

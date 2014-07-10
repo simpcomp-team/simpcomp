@@ -246,7 +246,7 @@ void reduce_complex(MovableComplex & complex, unsigned int rounds, int heating, 
                 if (relaxation == (complex.dimension()+2)*baseRelaxation)
                 {
                     //heating = (complex.dimension()+2)*baseHeating;
-		    heating = baseHeating;
+		    heating = 1;
                     relaxation = 0;
                 }
                 relaxation++;

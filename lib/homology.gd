@@ -10,7 +10,12 @@
 
 ## <#GAPDoc Label="homology">
 ##
-## Although <Package>simpcomp</Package> makes use of the &GAP; package ''homology'' <Cite Key="Dumas04Homology" /> for its homology calculations whenever possible (due to efficiency reasons), <Package>simpcomp</Package> comes with an own (co-)homology algorithm as well as some additional homology related functionality, which will be explained in this chapter. 
+## By default, <Package>simpcomp</Package> uses an algorithm based on discrete Morse theory (see Chapter <Ref Chap="chap:DMT" />, <Ref Meth="SCHomology" />) 
+## for its homology computations. However, some additional (co-)homology related functionality cannot be realised using this algorithm. 
+## For this, <Package>simpcomp</Package> contains an additional (co-)homology algorithm (cf. <Ref Func="SCHomologyInternal" />), which will be presented in this chapter.<P />
+##
+## Furthermore, whenever possible <Package>simpcomp</Package> makes use of the &GAP; package ''homology'' <Cite Key="Dumas04Homology" />, for an alternative method to calculate
+## homology groups (cf. <Ref Func="SCHomologyClassic" />) which sometimes is much faster than the built-in discrete Morse theory algorithm. 
 ##
 ## <Section>
 ## <Heading>Homology computation</Heading>

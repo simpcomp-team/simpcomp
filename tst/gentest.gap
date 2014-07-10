@@ -120,6 +120,11 @@ c.GeneratorsEx;
 Size(c.ConnectedComponents);
 Size(c.StronglyConnectedComponents);
 c.MinimalNonFaces;
+hd:=SCHasseDiagram(c);
+is:=SCIsSphere(c);
+isc:=SCIsSimplyConnected(c);
+hc:=SCHomologyClassic(c);
+ism:=SCBistellarIsManifold(c);
 
 c:=complexes[3];;
 SCAlexanderDual(c);
@@ -216,6 +221,11 @@ SCVertexIdentification(c,[1],[2]);
 SCVertices(c);
 SCVerticesEx(c);
 SCIsSimplicialComplex(SCWedge(c,c));
+hd:=SCHasseDiagram(c);
+is:=SCIsSphere(c);
+isc:=SCIsSimplyConnected(c);
+hc:=SCHomologyClassic(c);
+ism:=SCBistellarIsManifold(c);
 
 c:=complexes[4];;
 SCDim(c);
@@ -225,12 +235,14 @@ Size(c.Facets);
 c.Homology;
 c.Cohomology;
 c.HasBoundary;
-Print("test\n");
 c.Orientation;
-Print("test\n");
 Size(c.ConnectedComponents);
 Size(c.StronglyConnectedComponents);
 c.MinimalNonFaces;
+hd:=SCHasseDiagram(c);
+is:=SCIsSphere(c);
+isc:=SCIsSimplyConnected(c);
+hc:=SCHomologyClassic(c);
 
 c:=complexes[5];;
 SCDim(c);
@@ -246,6 +258,11 @@ c.GeneratorsEx;
 Size(c.ConnectedComponents);
 Size(c.StronglyConnectedComponents);
 c.MinimalNonFaces;
+hd:=SCHasseDiagram(c);
+is:=SCIsSphere(c);
+isc:=SCIsSimplyConnected(c);
+hc:=SCHomologyClassic(c);
+ism:=SCBistellarIsManifold(c);
 
 c:=complexes[6];;
 SCDim(c);
@@ -291,6 +308,7 @@ SCCohomology(c);
 h:=SCHomology(c);
 c:=complexes[8];;
 h=SCHomologyInternal(c);
+
 
 #operators
 c:=SCCartesianPower(SCBdSimplex(2),2);;
@@ -363,7 +381,7 @@ G:=Group((1,2)(3,4)(5,6)(7,8)(9,10)(11,12)(13,14)(15,16),
 (1,9)(2,10)(3,11)(4,12)(5,13)(6,14)(7,15)(8,16),
 (2,13,15,11,14,3,5,8,16,7,4,9,10,6,12));;
 K3:=SCFromGenerators(G,[[2,3,4,5,9],[2,5,7,10,11]]);
-ll:=SCsFromGroupExt(G,16,4,0,0,false);
+ll:=SCsFromGroupExt(G,16,4,0,0,false,false,0,[]);
 SCIsIsomorphic(ll[1],K3);
 
 SCInfoLevel(1);

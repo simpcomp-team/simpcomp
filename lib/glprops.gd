@@ -46,7 +46,7 @@
 ## <#Include Label="SCHasInterior"/>
 ## <#Include Label="SCHeegaardSplittingSmallGenus"/>
 ## <#Include Label="SCHeegaardSplitting"/>
-## <#Include Label="SCHomology"/>
+## <#Include Label="SCHomologyClassic"/>
 ## <#Include Label="SCIncidences"/>
 ## <#Include Label="SCIncidencesEx"/>
 ## <#Include Label="SCInterior"/>
@@ -98,7 +98,7 @@ DeclareAttribute("SCGeneratorsEx",SCIsPolyhedralComplex);
 DeclareAttribute("SCHVector",SCIsPolyhedralComplex);
 DeclareAttribute("SCHasBoundary",SCIsPolyhedralComplex);
 DeclareAttribute("SCHasInterior",SCIsPolyhedralComplex);
-DeclareAttribute("SCHomology",SCIsPolyhedralComplex);
+DeclareGlobalFunction("SCHomologyClassic");
 DeclareAttribute("SCInterior",SCIsPolyhedralComplex);
 DeclareAttribute("SCIsCentrallySymmetric",SCIsPolyhedralComplex);
 DeclareAttribute("SCIsConnected",SCIsPolyhedralComplex);
