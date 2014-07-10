@@ -23,7 +23,7 @@
 ## <#Include Label="SCCollapseLex"/>
 ## <#Include Label="SCCollapseRevLex"/>
 ## <#Include Label="SCHasseDiagram"/>
-## <#Include Label="SCMorseEngstrom"/>
+## <#Include Label="SCMorseEngstroem"/>
 ## <#Include Label="SCMorseRandom"/>
 ## <#Include Label="SCMorseRandomLex"/>
 ## <#Include Label="SCMorseRandomRevLex"/>
@@ -48,7 +48,7 @@ DeclareOperation("SCCollapseGreedy",[SCIsSimplicialComplex]);
 DeclareOperation("SCCollapseLex",[SCIsSimplicialComplex]);
 DeclareOperation("SCCollapseRevLex",[SCIsSimplicialComplex]);
 
-DeclareGlobalFunction("SCMorseEngstrom");
+DeclareGlobalFunction("SCMorseEngstroem");
 DeclareGlobalFunction("SCMorseRandom");
 DeclareGlobalFunction("SCMorseRandomLex");
 DeclareGlobalFunction("SCMorseRandomRevLex");

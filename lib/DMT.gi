@@ -71,9 +71,9 @@ end);
 ### Three methods to compute discrete Morse functions ###
 #########################################################
 
-SCIntFunc.SCMorseEngstromEx:=function(c,missing)
+SCIntFunc.SCMorseEngstroemEx:=function(c,missing)
 	local f, cone, dl, ll, size, v, face, i, critical, tmp,
-		SCMorseEngstromEx, SCNumCells, SCLinkLat, SCDelLat,
+		SCMorseEngstroemEx, SCNumCells, SCLinkLat, SCDelLat,
 		SCStarLat,SCMinLink,SCIsCone,SCLexo,SCMorseCone;
 
 	critical:=[];
@@ -206,10 +206,10 @@ SCIntFunc.SCMorseEngstromEx:=function(c,missing)
 	dl:=SCDelLat(c,v);
 	size:=SCNumCells(dl)-1;
 
-	tmp:=SCIntFunc.SCMorseEngstromEx(dl,missing);
+	tmp:=SCIntFunc.SCMorseEngstroemEx(dl,missing);
 	f{[1..size+1]}:=tmp[1];
 	Append(critical,tmp[2]);
-	tmp:=SCIntFunc.SCMorseEngstromEx(ll,Union(missing,[v]));
+	tmp:=SCIntFunc.SCMorseEngstroemEx(ll,Union(missing,[v]));
 	f{[size+2..size+SCNumCells(ll)+1]}:=tmp[1];
 	Append(critical,tmp[2]);
 	
@@ -219,27 +219,27 @@ end;
 
 
 ################################################################################
-##<#GAPDoc Label="SCMorseEngstrom">
+##<#GAPDoc Label="SCMorseEngstroem">
 ## <ManSection>
-## <Func Name="SCMorseEngstrom" Arg="complex"/>
+## <Func Name="SCMorseEngstroem" Arg="complex"/>
 ## <Returns>two lists of small integer lists upon success, <C>fail</C> otherweise.</Returns>
 ## <Description>
-## Builds a discrete Morse function following the Engstrom method by reducing the 
+## Builds a discrete Morse function following the Engstroem method by reducing the 
 ## input complex to smaller complexes defined by minimal link and deletion operations. 
 ## See <Cite Key="Engstroem09DiscMorseFuncFourierTrans" /> for details.
 ## <Example>
 ## gap> c:=SCBdSimplex(3);;
-## gap> f:=SCMorseEngstrom(c);
+## gap> f:=SCMorseEngstroem(c);
 ## </Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
 ################################################################################
-InstallGlobalFunction(SCMorseEngstrom,
+InstallGlobalFunction(SCMorseEngstroem,
 function(cc)
-	local c,tmp,critical,SCMorseEngstromEx;
+	local c,tmp,critical,SCMorseEngstroemEx;
 	c:=SCFaceLattice(cc);
-	tmp:=SCIntFunc.SCMorseEngstromEx(c,[]);
+	tmp:=SCIntFunc.SCMorseEngstroemEx(c,[]);
 	critical:=[tmp[1][1]];
 	Append(critical,tmp[2]);
 	return [tmp[1],critical];
@@ -1048,7 +1048,7 @@ end;
 ## gap> c := SCSeriesHomologySphere(2,3,5);;
 ## gap> SCHomologyEx(c,SCMorseRandomRevLex,SmithNormalFormIntegerMat); time;
 ## gap> c := SCSeriesHomologySphere(2,3,5);;
-## gap> SCHomologyEx(c,SCMorseEngstrom,SmithNormalFormIntegerMat); time;
+## gap> SCHomologyEx(c,SCMorseEngstroem,SmithNormalFormIntegerMat); time;
 ## gap> c := SCSeriesHomologySphere(2,3,5);;
 ## gap> SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;
 ## </Example>
@@ -1164,7 +1164,7 @@ end);
 ## Computes the homology groups of a given simplicial complex <Arg>complex</Arg> using 
 ## <Ref Func="SCMorseRandom"/> to obtain a Morse function and <C>SmithNormalFormIntegerMat</C>.
 ## Use <Ref Func="SCHomologyEx"/> to use alternative methods to compute discrete Morse
-## functions (such as <Ref Func="SCMorseEngstrom"/>, or <Ref Func="SCMorseUST"/>) or
+## functions (such as <Ref Func="SCMorseEngstroem"/>, or <Ref Func="SCMorseUST"/>) or
 ## the Smith normal form. <P/>
 ##
 ## The output is a list of homology groups of the form <M>[H_0,....,H_d]</M>, where 
