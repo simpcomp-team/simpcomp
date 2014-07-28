@@ -174,6 +174,7 @@ function(complex)
 		   Add(rels,gens[Position(egens,edges[1])]*gens[Position(egens,edges[3])]/gens[Position(egens,edges[2])]);
 		fi;
 	od;
+Print(rels,"\n");
 	
 	#factor out relations
 	g:=gprime/rels;
