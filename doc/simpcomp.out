@@ -12,8 +12,9 @@
 \BOOKMARK [1][-]{section.2.3}{From geometry to combinatorics}{chapter.2}
 \BOOKMARK [1][-]{section.2.4}{Discrete Normal surfaces}{chapter.2}
 \BOOKMARK [1][-]{section.2.5}{Polyhedral Morse theory and slicings}{chapter.2}
-\BOOKMARK [1][-]{section.2.6}{Tightness and tight triangulations}{chapter.2}
-\BOOKMARK [1][-]{section.2.7}{Simplicial blowups}{chapter.2}
+\BOOKMARK [1][-]{section.2.6}{Discrete Morse theory}{chapter.2}
+\BOOKMARK [1][-]{section.2.7}{Tightness and tight triangulations}{chapter.2}
+\BOOKMARK [1][-]{section.2.8}{Simplicial blowups}{chapter.2}
 \BOOKMARK [0][-]{chapter.3}{The new GAP object types of simpcomp}{}
 \BOOKMARK [1][-]{section.3.1}{Accessing properties of a SCPolyhedralComplex object}{chapter.3}
 \BOOKMARK [0][-]{chapter.4}{Functions and operations for the GAP object type SCPolyhedralComplex}{}
@@ -53,32 +54,34 @@
 \BOOKMARK [1][-]{section.10.2}{Functions related to simplicial blowups}{chapter.10}
 \BOOKMARK [0][-]{chapter.11}{Polyhedral Morse theory}{}
 \BOOKMARK [1][-]{section.11.1}{Polyhedral Morse theory related functions}{chapter.11}
-\BOOKMARK [0][-]{chapter.12}{Library and I/O}{}
-\BOOKMARK [1][-]{section.12.1}{Simplicial complex library}{chapter.12}
-\BOOKMARK [1][-]{section.12.2}{simpcomp input / output functions}{chapter.12}
-\BOOKMARK [0][-]{chapter.13}{Interfaces to other software packages}{}
-\BOOKMARK [1][-]{section.13.1}{Interface to the GAP-package homalg}{chapter.13}
-\BOOKMARK [0][-]{chapter.14}{Miscellaneous functions}{}
-\BOOKMARK [1][-]{section.14.1}{simpcomp logging}{chapter.14}
-\BOOKMARK [1][-]{section.14.2}{Email notification system}{chapter.14}
-\BOOKMARK [1][-]{section.14.3}{Testing the functionality of simpcomp}{chapter.14}
-\BOOKMARK [0][-]{chapter.15}{Property handlers}{}
-\BOOKMARK [1][-]{section.15.1}{Property handlers of SCPolyhedralComplex}{chapter.15}
-\BOOKMARK [1][-]{section.15.2}{Property handlers of SCSimplicialComplex}{chapter.15}
-\BOOKMARK [1][-]{section.15.3}{Property handlers of SCNormalSurface}{chapter.15}
-\BOOKMARK [1][-]{section.15.4}{Property handlers of SCLibRepository}{chapter.15}
-\BOOKMARK [0][-]{chapter.16}{A demo session with simpcomp}{}
-\BOOKMARK [1][-]{section.16.1}{Creating a SCSimplicialComplex object}{chapter.16}
-\BOOKMARK [1][-]{section.16.2}{Working with a SCSimplicialComplex object}{chapter.16}
-\BOOKMARK [1][-]{section.16.3}{Calculating properties of a SCSimplicialComplex object}{chapter.16}
-\BOOKMARK [1][-]{section.16.4}{Creating new complexes from a SCSimplicialComplex object}{chapter.16}
-\BOOKMARK [1][-]{section.16.5}{Homology related calculations}{chapter.16}
-\BOOKMARK [1][-]{section.16.6}{Bistellar flips}{chapter.16}
-\BOOKMARK [1][-]{section.16.7}{Simplicial blowups}{chapter.16}
-\BOOKMARK [1][-]{section.16.8}{Discrete normal surfaces and slicings}{chapter.16}
-\BOOKMARK [0][-]{chapter.17}{simpcomp internals}{}
-\BOOKMARK [1][-]{section.17.1}{The GAP object type SCPropertyObject}{chapter.17}
-\BOOKMARK [1][-]{section.17.2}{Example of a common attribute}{chapter.17}
-\BOOKMARK [1][-]{section.17.3}{Writing a method for an attribute}{chapter.17}
+\BOOKMARK [0][-]{chapter.12}{Forman's discrete Morse theory}{}
+\BOOKMARK [1][-]{section.12.1}{Functions using discrete Morse theory}{chapter.12}
+\BOOKMARK [0][-]{chapter.13}{Library and I/O}{}
+\BOOKMARK [1][-]{section.13.1}{Simplicial complex library}{chapter.13}
+\BOOKMARK [1][-]{section.13.2}{simpcomp input / output functions}{chapter.13}
+\BOOKMARK [0][-]{chapter.14}{Interfaces to other software packages}{}
+\BOOKMARK [1][-]{section.14.1}{Interface to the GAP-package homalg}{chapter.14}
+\BOOKMARK [0][-]{chapter.15}{Miscellaneous functions}{}
+\BOOKMARK [1][-]{section.15.1}{simpcomp logging}{chapter.15}
+\BOOKMARK [1][-]{section.15.2}{Email notification system}{chapter.15}
+\BOOKMARK [1][-]{section.15.3}{Testing the functionality of simpcomp}{chapter.15}
+\BOOKMARK [0][-]{chapter.16}{Property handlers}{}
+\BOOKMARK [1][-]{section.16.1}{Property handlers of SCPolyhedralComplex}{chapter.16}
+\BOOKMARK [1][-]{section.16.2}{Property handlers of SCSimplicialComplex}{chapter.16}
+\BOOKMARK [1][-]{section.16.3}{Property handlers of SCNormalSurface}{chapter.16}
+\BOOKMARK [1][-]{section.16.4}{Property handlers of SCLibRepository}{chapter.16}
+\BOOKMARK [0][-]{chapter.17}{A demo session with simpcomp}{}
+\BOOKMARK [1][-]{section.17.1}{Creating a SCSimplicialComplex object}{chapter.17}
+\BOOKMARK [1][-]{section.17.2}{Working with a SCSimplicialComplex object}{chapter.17}
+\BOOKMARK [1][-]{section.17.3}{Calculating properties of a SCSimplicialComplex object}{chapter.17}
+\BOOKMARK [1][-]{section.17.4}{Creating new complexes from a SCSimplicialComplex object}{chapter.17}
+\BOOKMARK [1][-]{section.17.5}{Homology related calculations}{chapter.17}
+\BOOKMARK [1][-]{section.17.6}{Bistellar flips}{chapter.17}
+\BOOKMARK [1][-]{section.17.7}{Simplicial blowups}{chapter.17}
+\BOOKMARK [1][-]{section.17.8}{Discrete normal surfaces and slicings}{chapter.17}
+\BOOKMARK [0][-]{chapter.18}{simpcomp internals}{}
+\BOOKMARK [1][-]{section.18.1}{The GAP object type SCPropertyObject}{chapter.18}
+\BOOKMARK [1][-]{section.18.2}{Example of a common attribute}{chapter.18}
+\BOOKMARK [1][-]{section.18.3}{Writing a method for an attribute}{chapter.18}
 \BOOKMARK [0][-]{chapter*.5}{References}{}
 \BOOKMARK [0][-]{section*.6}{Index}{}

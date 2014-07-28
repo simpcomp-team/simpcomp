@@ -1,11 +1,16 @@
   
   [1X8 [33X[0;0Y(Co-)Homology of simplicial complexes[133X[101X
   
-  [33X[0;0YAlthough [5Xsimpcomp[105X makes use of the [5XGAP[105X package ''homology'' [DHSW04] for its
-  homology   calculations  whenever  possible  (due  to  efficiency  reasons),
-  [5Xsimpcomp[105X  comes  with  an  own  (co-)homology  algorithm  as  well  as  some
-  additional  homology  related functionality, which will be explained in this
-  chapter.[133X
+  [33X[0;0YBy  default,  [5Xsimpcomp[105X uses an algorithm based on discrete Morse theory (see
+  Chapter [14X12[114X, [2XSCHomology[102X ([14X7.3-9[114X)) for its homology computations. However, some
+  additional (co-)homology related functionality cannot be realised using this
+  algorithm. For this, [5Xsimpcomp[105X contains an additional (co-)homology algorithm
+  (cf. [2XSCHomologyInternal[102X ([14X8.1-5[114X)), which will be presented in this chapter.[133X
+  
+  [33X[0;0YFurthermore,  whenever  possible  [5Xsimpcomp[105X  makes  use  of  the  [5XGAP[105X package
+  ''homology''  [DHSW11],  for  an  alternative  method  to calculate homology
+  groups  (cf. [2XSCHomologyClassic[102X ([14X6.9-31[114X)) which sometimes is much faster than
+  the built-in discrete Morse theory algorithm.[133X
   
   
   [1X8.1 [33X[0;0YHomology computation[133X[101X
@@ -131,7 +136,7 @@
   Z  /  t_1  Z  ×  dots  ×  Z  /  t_n  Z[122X  is  returned  in form of a list [22X[ f,
   [t_1,...,t_n]  ][122X,  where [22Xf[122X is the (integer) free part of [22XH_i[122X and [22Xt_i[122X denotes
   the  torsion  parts  of  [22XH_i[122X  ordered  in  weakly  incresing  size. See also
-  [2XSCHomology[102X ([14X7.3-9[114X).[133X
+  [2XSCHomology[102X ([14X7.3-9[114X) and [2XSCHomologyClassic[102X ([14X6.9-31[114X).[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SCSurface(1,false);;[128X[104X

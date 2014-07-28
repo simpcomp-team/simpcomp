@@ -16,7 +16,6 @@
 ##
 ## <#Include Label="SCAlexanderDual"/>
 ## <#Include Label="SCClose"/>
-## <#Include Label="SCCollapseGreedy"/>
 ## <#Include Label="SCCone"/>
 ## <#Include Label="SCDeletedJoin"/>
 ## <#Include Label="SCDifference"/>
@@ -45,7 +44,6 @@
 #DeclareOperation("SCAlexanderDual",[IsObject]);
 DeclareOperation("SCAntiStar",[SCIsPolyhedralComplex,IsObject]);
 DeclareGlobalFunction("SCClose");
-DeclareOperation("SCCollapseGreedy",[SCIsSimplicialComplex]);
 #DeclareGlobalFunction("SCCone");
 #DeclareOperation("SCDeletedJoin",[IsObject,IsObject]);
 DeclareGlobalFunction("SCFillSphere",[SCIsSimplicialComplex]);

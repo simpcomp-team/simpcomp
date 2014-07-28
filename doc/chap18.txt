@@ -1,0 +1,248 @@
+  
+  [1X18 [33X[0;0Y[5Xsimpcomp[105X[101X[1X internals[133X[101X
+  
+  [33X[0;0YThe  package  [5Xsimpcomp[105X works with geometric objects for which the [5XGAP[105X object
+  types  [10XSCSimplicialComplex[110X  and  [10XSCNormalSurface[110X  are defined and calculates
+  properties  of  these  objects via so called property handlers. This chapter
+  describes how to extend [5Xsimpcomp[105X by writing own property handlers.[133X
+  
+  [33X[0;0YIf  you  extended [5Xsimpcomp[105X and want to share your extension with other users
+  please  send  your  extension  to  one  of  the authors and we will consider
+  including it (of course with giving credit) in a future release of [5Xsimpcomp[105X.[133X
+  
+  
+  [1X18.1 [33X[0;0YThe [5XGAP[105X[101X[1X object type [10XSCPropertyObject[110X[101X[1X[133X[101X
+  
+  [33X[0;0YIn the following, we present a number of functions to manage a [5XGAP[105X object of
+  type   [10XSCPropertyObject[110X.   Since  most  properties  of  [10XSCPolyhedralComplex[110X,
+  [10XSCSimplicialComplex[110X  and [10XSCNormalSurface[110X are managed by the GAP4 type system
+  (cf.  [BL98]),  the  functions described below are mainly used by the object
+  type [10XSCLibRepository[110X and to store temporary properties.[133X
+  
+  [1X18.1-1 SCProperties[101X
+  
+  [29X[2XSCProperties[102X( [3Xpo[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Ya record upon success.[133X
+  
+  [33X[0;0YReturns the record of all stored properties of the [10XSCPropertyObject[110X [3Xpo[103X.[133X
+  
+  [1X18.1-2 SCPropertiesFlush[101X
+  
+  [29X[2XSCPropertiesFlush[102X( [3Xpo[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success.[133X
+  
+  [33X[0;0YDrops all properties and temporary properties of the [10XSCPropertyObject[110X [3Xpo[103X.[133X
+  
+  [1X18.1-3 SCPropertiesManaged[101X
+  
+  [29X[2XSCPropertiesManaged[102X( [3Xpo[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Ya list of managed properties upon success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YReturns  a  list of all properties that are managed for the [10XSCPropertyObject[110X
+  [3Xpo[103X via property handler functions. See [2XSCPropertyHandlersSet[102X ([14X18.1-9[114X).[133X
+  
+  [1X18.1-4 SCPropertiesNames[101X
+  
+  [29X[2XSCPropertiesNames[102X( [3Xpo[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Ya list upon success.[133X
+  
+  [33X[0;0YReturns   a  list  of  all  the  names  of  the  stored  properties  of  the
+  [10XSCPropertyObject[110X  [3Xpo[103X.  These can be accessed via [2XSCPropertySet[102X ([14X18.1-10[114X) and
+  [2XSCPropertyDrop[102X ([14X18.1-8[114X).[133X
+  
+  [1X18.1-5 SCPropertiesTmp[101X
+  
+  [29X[2XSCPropertiesTmp[102X( [3Xpo[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Ya record upon success.[133X
+  
+  [33X[0;0YReturns  the record of all stored temporary properties (these are mutable in
+  contrast  to  regular  properties  and  not  serialized  when  the object is
+  serialized to XML) of the [10XSCPropertyObject[110X [3Xpo[103X.[133X
+  
+  [1X18.1-6 SCPropertiesTmpNames[101X
+  
+  [29X[2XSCPropertiesTmpNames[102X( [3Xpo[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Ya list upon success.[133X
+  
+  [33X[0;0YReturns  a  list  of all the names of the stored temporary properties of the
+  [10XSCPropertyObject[110X  [3Xpo[103X.  These  can be accessed via [2XSCPropertyTmpSet[102X ([14X18.1-14[114X)
+  and [2XSCPropertyTmpDrop[102X ([14X18.1-13[114X).[133X
+  
+  [1X18.1-7 SCPropertyByName[101X
+  
+  [29X[2XSCPropertyByName[102X( [3Xpo[103X, [3Xname[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Yany value upon success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YReturns  the value of the property with name [3Xname[103X of the [10XSCPropertyObject[110X [3Xpo[103X
+  if  this  property  is  known  for [3Xpo[103X and [9Xfail[109X otherwise. The names of known
+  properties can be accessed via the function [2XSCPropertiesNames[102X ([14X18.1-4[114X)[133X
+  
+  [1X18.1-8 SCPropertyDrop[101X
+  
+  [29X[2XSCPropertyDrop[102X( [3Xpo[103X, [3Xname[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upopn success, [9Xfail[109X otherwise[133X
+  
+  [33X[0;0YDrops  the  property with name [3Xname[103X of the [10XSCPropertyObject[110X [3Xpo[103X. Returns [9Xtrue[109X
+  if  the  property  is  successfully dropped and [9Xfail[109X if a property with that
+  name did not exist.[133X
+  
+  [1X18.1-9 SCPropertyHandlersSet[101X
+  
+  [29X[2XSCPropertyHandlersSet[102X( [3Xpo[103X, [3Xhandlers[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X[133X
+  
+  [33X[0;0YSets  the  property  handling  functions  for  a  SCPropertyObject [3Xpo[103X to the
+  functions  described  in  the  record  [3Xhandlers[103X.  The record [3Xhandlers[103X has to
+  contain  entries of the following structure: [10X[Property Name]:=[Function name
+  computing  and  returning the property][110X. For [10XSCSimplicialComplex[110X for example
+  [5Xsimpcomp[105X   defines   (among   many   others):  [10XF:=SCFVector[110X.  See  the  file
+  [10Xlib/prophandler.gd[110X.[133X
+  
+  [1X18.1-10 SCPropertySet[101X
+  
+  [29X[2XSCPropertySet[102X( [3Xpo[103X, [3Xname[103X, [3Xdata[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success.[133X
+  
+  [33X[0;0YSets  the value of the property with name [3Xname[103X of the [10XSCPropertyObject[110X [3Xpo[103X to
+  [3Xdata[103X.  Note  that  the  argument becomes immutable. If this behaviour is not
+  desired, use [2XSCPropertySetMutable[102X ([14X18.1-11[114X) instead.[133X
+  
+  [1X18.1-11 SCPropertySetMutable[101X
+  
+  [29X[2XSCPropertySetMutable[102X( [3Xpo[103X, [3Xname[103X, [3Xdata[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success.[133X
+  
+  [33X[0;0YSets  the value of the property with name [3Xname[103X of the [10XSCPropertyObject[110X [3Xpo[103X to
+  [3Xdata[103X. Note that the argument does not become immutable. If this behaviour is
+  not desired, use [2XSCPropertySet[102X ([14X18.1-10[114X) instead.[133X
+  
+  [1X18.1-12 SCPropertyTmpByName[101X
+  
+  [29X[2XSCPropertyTmpByName[102X( [3Xpo[103X, [3Xname[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Yany value upon success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YReturns  the  value  of  the  temporary  property  with the name [3Xname[103X of the
+  [10XSCPropertyObject[110X  [3Xpo[103X  if  this  temporary  property is known for [3Xpo[103X and [9Xfail[109X
+  otherwise.  The  names of known temporary properties can be accessed via the
+  function [2XSCPropertiesTmpNames[102X ([14X18.1-6[114X)[133X
+  
+  [1X18.1-13 SCPropertyTmpDrop[101X
+  
+  [29X[2XSCPropertyTmpDrop[102X( [3Xpo[103X, [3Xname[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise[133X
+  
+  [33X[0;0YDrops  the  temporary  property  with  name [3Xname[103X of the [10XSCPropertyObject[110X [3Xpo[103X.
+  Returns [9Xtrue[109X if the property is successfully dropped and [9Xfail[109X if a temporary
+  property with that name did not exist.[133X
+  
+  [1X18.1-14 SCPropertyTmpSet[101X
+  
+  [29X[2XSCPropertyTmpSet[102X( [3Xpo[103X, [3Xname[103X, [3Xdata[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success.[133X
+  
+  [33X[0;0YSets   the   value   of  the  temporary  property  with  name  [3Xname[103X  of  the
+  [10XSCPropertyObject[110X  [3Xpo[103X  to  [3Xdata[103X.  Note  that  the  argument  does  not become
+  immutable. This is the standard behaviour for temporary properties.[133X
+  
+  
+  [1X18.2 [33X[0;0YExample of a common attribute[133X[101X
+  
+  [33X[0;0YIn   this   section   we   will   have   a  look  at  the  property  handler
+  [2XSCEulerCharacteristic[102X  ([14X7.3-3[114X)  in  order  to  explain the inner workings of
+  property  handlers. This is the code of the property handler for calculating
+  the Euler characteristic of a complex in [5Xsimpcomp[105X:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareAttribute("SCEulerCharacteristic",SCIsPolyhedralComplex);[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XInstallMethod(SCEulerCharacteristic,[128X[104X
+    [4X[28X"for SCSimplicialComplex",[128X[104X
+    [4X[28X[SCIsSimplicialComplex],[128X[104X
+    [4X[28Xfunction(complex)[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X	local  f, chi, i;[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X	f:=SCFVector(complex);[128X[104X
+    [4X[28X	if f=fail then[128X[104X
+    [4X[28X		return fail;[128X[104X
+    [4X[28X	fi;[128X[104X
+    [4X[28X	chi:=0;[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X	for i in [1..Size(f)] do[128X[104X
+    [4X[28X			chi:=chi + ((-1)^(i+1))*f[i];[128X[104X
+    [4X[28X	od;[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X	return chi;[128X[104X
+    [4X[28Xend);[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XInstallMethod(SCEulerCharacteristic,[128X[104X
+    [4X[28X"for SCNormalSurface",[128X[104X
+    [4X[28X[SCIsNormalSurface],[128X[104X
+    [4X[28Xfunction(sl)[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X 	local facets, f, chi;[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X  	[128X[104X
+    [4X[28X 	f:=SCFVector(sl);[128X[104X
+    [4X[28X 	if(f=fail) then[128X[104X
+    [4X[28X 		return fail;[128X[104X
+    [4X[28X 	fi;[128X[104X
+    [4X[28X	[128X[104X
+    [4X[28X	if Length(f) = 1 then[128X[104X
+    [4X[28X	 		return f[1];[128X[104X
+    [4X[28X	elif Length(f) =3 then[128X[104X
+    [4X[28X 	 		return f[1]-f[2]+f[3];[128X[104X
+    [4X[28X 	elif Length(f) =4 then[128X[104X
+    [4X[28X 	 		return f[1]-f[2]+f[3]+f[4];[128X[104X
+    [4X[28X 	else[128X[104X
+    [4X[28X 		Info(InfoSimpcomp,1,"SCEulerCharacteristic: illegal f-vector found: ",f,". ");[128X[104X
+    [4X[28X 		return fail;[128X[104X
+    [4X[28X 	fi;[128X[104X
+    [4X[28X[128X[104X
+    [4X[28Xend);[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWhen  looking at the code one already sees the structure that such a handler
+  needs to have:[133X
+  
+  [31X1[131X   [33X[0;6YEach  property  handler (a GAP operation) needs to be defined. This is
+        done by the first line of code. Once an operation is defined, multiple
+        methods  can by implemented for various types of GAP objects (here two
+        methods  are  implemented for the GAP object types [10XSCSimplicialComplex[110X
+        and [10XSCNormalSurface[110X).[133X
+  
+  [31X2[131X   [33X[0;6YFirst  note  that the validity of the arguments is checked by GAP. For
+        example,   the   first   method  only  accepts  an  argument  of  type
+        [10XSCSimplicialComplex[110X.[133X
+  
+  [31X3[131X   [33X[0;6YIf   the   property   was  already  computed,  the  GAP4  type  system
+        automatically  returns the cached property avoiding unnecessary double
+        calculations.[133X
+  
+  [31X4[131X   [33X[0;6YIf the property is not already known. it is computed and returned (and
+        automatically cached by the GAP4 type system).[133X
+  
+  
+  [1X18.3 [33X[0;0YWriting a method for an attribute[133X[101X
+  
+  [33X[0;0YThis section provides the skeleton of a method that can be used when writing
+  own methods:[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28XDeclareAttribute("SCMyPropertyHandler",SCPolyhedralComplex);[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XInstallMethod(SCMyPropertyHandler,[128X[104X
+    [4X[28X"for SCSimplicialComplex[ and further arguments]",[128X[104X
+    [4X[28X[SCIsSimplicialComplex[, further arguments]],[128X[104X
+    [4X[28Xfunction(complex[, further arguments])[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X	local myprop, ...;[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X	# compute the property[128X[104X
+    [4X[28X [ do property computation here][128X[104X
+    [4X[28X[128X[104X
+    [4X[28X	return myprop;[128X[104X
+    [4X[28Xend);[128X[104X
+  [4X[32X[104X
+  

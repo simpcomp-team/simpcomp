@@ -14,12 +14,19 @@ SetHomologyAlgorithm(EliminateGMPAlgorithm);
 SetHomologyGroupFormat(GapFormat);
 HomologyInfo(0);
 
-InstallMethod(SCHomology,
-"for SCSimplicialComplex",
-[SCIsSimplicialComplex],
-	function(complex)
+InstallGlobalFunction(SCHomologyClassic,
+function(complex)
 
 	local hom,facets;
+
+	if(not SCIsSimplicialComplex(complex)) then
+		Info(InfoSimpcomp,1,"SCHomologyClassic: first argument must be of type SCSimplicialComplex.");
+		return fail;
+	fi;
+
+	if HasSCHomology(complex) then
+		return SCHomology(complex);
+	fi;
 	
 	if not IsBoundGlobal("SimplicialHomology") then
 		return SCHomologyInternal(complex);
@@ -36,7 +43,7 @@ InstallMethod(SCHomology,
 	hom:=SimplicialHomology(facets);
 	
 	if(hom=fail) then
-		Info(InfoSimpcomp,1,"SCHomology: computing homology failed.");
+		Info(InfoSimpcomp,1,"SCHomologyClassic: computing homology failed.");
 		return fail;
 	fi;
 	
@@ -45,6 +52,8 @@ InstallMethod(SCHomology,
 	else
 		SetSCIsConnected(complex,false);
 	fi;
+
+	SetSCHomology(complex,hom);
 	return hom;
 end);
 

@@ -111,6 +111,7 @@
 ## <Row><Item>HasBoundary</Item><Item><Ref Meth="SCHasBoundary"/></Item></Row>
 ## <Row><Item>HasInt</Item><Item><Ref Meth="SCHasInterior"/></Item></Row>
 ## <Row><Item>HasInterior</Item><Item><Ref Meth="SCHasInterior"/></Item></Row>
+## <Row><Item>HasseDiagram</Item><Item><Ref Meth="SCHasseDiagram"/></Item></Row>
 ## <Row><Item>Homology</Item><Item><Ref Meth="SCHomology"/></Item></Row>
 ## <Row><Item>HomologyBasis</Item><Item><Ref Meth="SCHomologyBasis"/></Item></Row>
 ## <Row><Item>HomologyBasisAsSimplices</Item><Item><Ref Meth="SCHomologyBasisAsSimplices"/></Item></Row>
@@ -133,17 +134,20 @@
 ## <Row><Item>IsIsomorphic</Item><Item><Ref Meth="SCIsIsomorphic"/></Item></Row>
 ## <Row><Item>IsKNeighborly</Item><Item><Ref Meth="SCIsKNeighborly"/></Item></Row>
 ## <Row><Item>IsKStackedSphere</Item><Item><Ref Meth="SCIsKStackedSphere"/></Item></Row>
-## <Row><Item>IsManifold</Item><Item><Ref Meth="SCIsManifold"/></Item></Row>
 ## </Table>
 
 ## <Table Align="ll">
+## <Row><Item>IsManifold</Item><Item><Ref Meth="SCIsManifold"/></Item></Row>
 ## <Row><Item>IsMovable</Item><Item><Ref Meth="SCIsMovableComplex"/></Item></Row>
 ## <Row><Item>Isomorphism</Item><Item><Ref Meth="SCIsomorphism"/></Item></Row>
 ## <Row><Item>IsomorphismEx</Item><Item><Ref Meth="SCIsomorphismEx"/></Item></Row>
 ## <Row><Item>IsOrientable</Item><Item><Ref Meth="SCIsOrientable"/></Item></Row>
 ## <Row><Item>IsPM</Item><Item><Ref Meth="SCIsPseudoManifold"/></Item></Row>
 ## <Row><Item>IsPure</Item><Item><Ref Meth="SCIsPure"/></Item></Row>
+## <Row><Item>IsSC</Item><Item><Ref Meth="SCIsSimplyConnected"/></Item></Row>
+## <Row><Item>IsSimplyConnected</Item><Item><Ref Meth="SCIsSimplyConnected"/></Item></Row>
 ## <Row><Item>IsShellable</Item><Item><Ref Meth="SCIsShellable"/></Item></Row>
+## <Row><Item>IsSphere</Item><Item><Ref Meth="SCIsSphere"/></Item></Row>
 ## <Row><Item>IsStronglyConnected</Item><Item><Ref Meth="SCIsStronglyConnected"/></Item></Row>
 ## <Row><Item>IsSubcomplex</Item><Item><Ref Meth="SCIsSubcomplex"/></Item></Row>
 ## <Row><Item>IsTight</Item><Item><Ref Meth="SCIsTight"/></Item></Row>
@@ -458,6 +462,12 @@ Union:=SCUnion,
 VertexIdentification:=SCVertexIdentification,
 Wedge:=SCWedge,
 
+#DMT.gi
+HasseDiagram:=SCHasseDiagram,
+IsSC:=SCIsSimplyConnected,
+IsSimplyConnected:=SCIsSimplyConnected,
+IsSphere:=SCIsSphere,
+
 #lib.gd
 DetermineTopologicalType:=SCLibDetermineTopologicalType,
 SCDetermineTopologicalType:=SCLibDetermineTopologicalType,
@@ -473,7 +483,11 @@ Date:=SCDate,
 SetDate:=SCSetDate,
 
 
+
+
 );
+
+
 
 
 ################################################################################
@@ -787,6 +801,12 @@ SCTopologicalType:=1,
 TopologicalType:=1,
 Vertices:=1,
 
+
+#DMT.gi
+HasseDiagram:=1,
+IsSC:=1,
+IsSimplyConnected:=1,
+IsSphere:=1,
 
 
 #library repository

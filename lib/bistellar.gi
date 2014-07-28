@@ -1132,7 +1132,7 @@ end);
 ## <Item> <Ref Meth="SCReduceComplex" Style="Text"/>,</Item>
 ## <Item> <Ref Meth="SCEquivalent" Style="Text"/>,</Item>
 ## <Item> <Ref Meth="SCReduceAsSubcomplex" Style="Text"/>,</Item>
-## <Item> <Ref Meth="SCIsManifold" Style="Text"/>.</Item>
+## <Item> <Ref Func="SCBistellarIsManifold" Style="Text"/>.</Item>
 ## <Item> <Ref Meth="SCRandomize" Style="Text"/>.</Item>
 ## </Enum>
 ## Please see <Ref Func="SCMailIsPending"/> for further information about the email notification system in case <C>SCBistellarOptions.WriteLevel</C> is set to <M>2</M>.<P/>
@@ -1646,46 +1646,53 @@ InstallMethod(SCReduceAsSubcomplex,
 "for SCSimplicialComplex and SCSimplicialComplex",
 [SCIsSimplicialComplex,SCIsSimplicialComplex],
 function(complex1, complex2) 
-	
 	return SCReduceComplexEx(complex1,complex2,2,SCIntFunc.SCChooseMove);
-	
 end);
 
 ################################################################################
-##<#GAPDoc Label="SCIsManifold">
+##<#GAPDoc Label="SCBistellarIsManifold">
 ## <ManSection>
-## <Meth Name="SCIsManifold" Arg="complex"/>
+## <Meth Name="SCBistellarIsManifold" Arg="complex"/>
 ## <Returns><K>true</K> or <K>false</K> upon success, <K>fail</K> otherwise.</Returns> 
 ## <Description>
 ## Tries to prove that a closed simplicial <M>d</M>-pseudomanifold is a combinatorial manifold by reducing its vertex links to the boundary of the d-simplex.<P/>
 ## <K>false</K> is returned if it can be proven that there exists a vertex link which is not PL-homeomorphic to the standard PL-sphere, <K>true</K> is returned if all vertex links are bistellarly equivalent to the boundary of the simplex, <K>fail</K> is returned if the algorithm does not terminate after the number of rounds indicated by <C>SCBistellarOptions.MaxIntervallIsManifold</C>.<P/>
-## Internally calls <Ref Func="SCReduceComplexEx" Style="Text"  /><C>(link,SCEmpty(),0,SCIntFunc.SCChooseMove);</C> for every link of <Arg>complex</Arg>. Note that <K>false</K> is returned in case of a bounded manifold.
+## Internally calls <Ref Func="SCReduceComplexEx" Style="Text"  /><C>(link,SCEmpty(),0,SCIntFunc.SCChooseMove);</C> for every link of <Arg>complex</Arg>. Note that <K>false</K> is returned in case of a bounded manifold.<P/>
+##
+## <Package>simpcomp</Package>'s default method for manifold verification is <Ref Meth="SCIsManifold" />. However, this method sometimes has advantages, 
+## in particular when dealing with <M>4</M>-dimensional vertex links where the smooth Poincare conjecture might be an issue.
 ## <Example>
 ## gap> c:=SCBdCrossPolytope(3);;
-## gap> SCIsManifold(c);
-## #I  SCIsManifold: processing vertex link 1/6
+## gap> SCBistellarIsManifold(c);
+## #I  SCBistellarIsManifold: processing vertex link 1/6
 ## #I  round 0: [ 3, 3 ]
 ## #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
-## #I  SCIsManifold: link is sphere.
+## #I  SCBistellarIsManifold: link is sphere.
 ## ...
-## #I  SCIsManifold: processing vertex link 6/6
+## #I  SCBistellarIsManifold: processing vertex link 6/6
 ## #I  round 0: [ 3, 3 ]
 ## #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
-## #I  SCIsManifold: link is sphere.
+## #I  SCBistellarIsManifold: link is sphere.
 ## true
 ## </Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
 ################################################################################
-InstallMethod(SCIsManifold,
-"for SCSimplicialComplex",
-[SCIsSimplicialComplex],
+InstallGlobalFunction(SCBistellarIsManifold,
 function(complex) 
 	
 	local links, result, f, linkidx, verts, writelevel, maxrounds,
 		type, movable, dim, manifold, im,t;
-		
+
+	if(not SCIsSimplicialComplex(complex)) then
+		Info(InfoSimpcomp,1,"SCBistellarIsManifold: first argument must be of type SCSimplicialComplex.");
+		return fail;
+	fi;
+
+	if HasSCIsManifold(complex) then
+		return SCIsManifold(complex);
+	fi;
 		
 	dim :=SCDim(complex);
 	if dim = fail then
@@ -1693,17 +1700,19 @@ function(complex)
 	fi;
 	verts:=SCVertices(complex);
 	if verts=fail then
-		Info(InfoSimpcomp,2,"SCIsManifold: complex has no vertex labels.");
+		Info(InfoSimpcomp,2,"SCBistellarIsManifold: complex has no vertex labels.");
 		return fail;
 	fi;
 	
 	if SCIsEmpty(complex) then
-		Info(InfoSimpcomp,2,"SCIsManifold: complex is empty.");
-			return false;
+		Info(InfoSimpcomp,2,"SCBistellarIsManifold: complex is empty.");
+		SetSCIsManifold(complex,false);
+		return false;
 	fi;
 	if dim = 0 then
 		im:=Size(verts)=2;
-			return im;
+		SetSCIsManifold(complex,im);
+		return im;
 	fi;
 	
 	links:=SCLinks(complex,0);
@@ -1720,7 +1729,7 @@ function(complex)
 	
 		SCRelabelStandard(links[linkidx]);
 		
-		Info(InfoSimpcomp,2,"SCIsManifold: processing vertex link ",verts[linkidx],"/",Length(verts));
+		Info(InfoSimpcomp,2,"SCBistellarIsManifold: processing vertex link ",verts[linkidx],"/",Length(verts));
 
 		f:=links[linkidx].F[1];
 		if f = fail then
@@ -1729,25 +1738,27 @@ function(complex)
 		if dim = 1 and f = 2 then
 			continue;
 		elif dim = 1 and f <> 2 then
-			Info(InfoSimpcomp,2,"SCIsManifold: link is no sphere.");
-					return false;
+			Info(InfoSimpcomp,2,"SCBistellarIsManifold: link is no sphere.");
+			SetSCIsManifold(complex,false);
+			return false;
 		fi;
 		
 		movable:=SCIsMovableComplex(links[linkidx]);
 		if movable = fail then
-			Info(InfoSimpcomp,2,"SCIsManifold: complex check failed. Invalid link.");
+			Info(InfoSimpcomp,2,"SCBistellarIsManifold: complex check failed. Invalid link.");
 			return fail;
 		fi;
 	
 		if movable then
 			result:=SCReduceComplexEx(links[linkidx],SCEmpty(),0,SCIntFunc.SCChooseMove);
 		else
-			Info(InfoSimpcomp,2,"SCIsManifold: link ",linkidx," is not a closed pseudomanifold.");
-					return false;
+			Info(InfoSimpcomp,2,"SCBistellarIsManifold: link ",linkidx," is not a closed pseudomanifold.");
+			SetSCIsManifold(complex,false);
+			return false;
 		fi;
 		
 		if result=fail then	
-			Info(InfoSimpcomp,1,"SCIsManifold: SCReduceComplexEx returned fail.");
+			Info(InfoSimpcomp,1,"SCBistellarIsManifold: SCReduceComplexEx returned fail.");
 			return fail;
 		fi;
 		
@@ -1757,33 +1768,37 @@ function(complex)
 				return fail;
 			fi;
 			if f[1]<>f[Size(f)] or f[1]<>(Size(f)+1) then
-				Info(InfoSimpcomp,2,"SCIsManifold: link is no sphere.");
+				Info(InfoSimpcomp,2,"SCBistellarIsManifold: link is no sphere.");
 				type:=SCLibDetermineTopologicalType(SCLib,result[2]);
 				if type<>fail and type<>[] then
 					if(Length(type)=1) then
-						Info(InfoSimpcomp,2,"SCIsManifold: link is the following complex:\n",type,".");
+						Info(InfoSimpcomp,2,"SCBistellarIsManifold: link is the following complex:\n",type,".");
 					else
-						Info(InfoSimpcomp,2,"SCIsManifold: link could be PL equivalnet to one of the following complexes specified by their global library ids:\n",type,".");
+						Info(InfoSimpcomp,2,"SCBistellarIsManifold: link could be PL equivalnet to one of the following complexes specified by their global library ids:\n",type,".");
 					fi;
 				else
-					Info(InfoSimpcomp,2,"SCIsManifold: link is not in global library.");
+					Info(InfoSimpcomp,2,"SCBistellarIsManifold: link is not in global library.");
 				fi;
-							return false;
+				SetSCIsManifold(complex,false);
+				return false;
 			else
-				Info(InfoSimpcomp,2,"SCIsManifold: link is sphere.");
+				Info(InfoSimpcomp,2,"SCBistellarIsManifold: link is sphere.");
 				if HasSCAutomorphismGroupTransitivity(complex) and SCAutomorphismGroupTransitivity(complex)>0 then
-					Info(InfoSimpcomp,2,"SCIsManifold: transitive automorphism group, checking only one link.");
-									return true;
+					Info(InfoSimpcomp,2,"SCBistellarIsManifold: transitive automorphism group, checking only one link.");
+					SetSCIsManifold(complex,true);
+					return true;
 				fi;
 			fi;
 		else
-			Info(InfoSimpcomp,2,"SCIsManifold: maximum rounds reached, check link ",linkidx,".");
+			Info(InfoSimpcomp,2,"SCBistellarIsManifold: maximum rounds reached, check link ",linkidx,".");
 			return fail;
 		fi;
 	od;
 	
 	SCBistellarOptions.MaxInterval:=maxrounds;
 	SCBistellarOptions.WriteLevel:=writelevel;
+
+	SetSCIsManifold(complex,true);
 	return true;
 	
 end);

@@ -995,7 +995,8 @@ end);
 ## <Returns> a list of pairs of the form <C>[ integer, list ]</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## This function computes the reduced simplicial homology with integer coefficients of a given simplicial complex <Arg>complex</Arg> with integer coefficients. It uses the algorithm described in <Cite Key="Desbrun08DiscDiffFormCompModel"/>. <P/>
-## The output is a list of homology groups of the form <M>[H_0,....,H_d]</M>, where <M>d</M> is the dimension of <Arg>complex</Arg>. The format of the homology groups <M>H_i</M> is given in terms of their maximal cyclic subgroups, i.e. a homology group <M>H_i\cong \mathbb{Z}^f + \mathbb{Z} / t_1 \mathbb{Z} \times \dots \times \mathbb{Z} / t_n \mathbb{Z}</M> is returned in form of a list <M>[ f, [t_1,...,t_n] ]</M>, where <M>f</M> is the (integer) free part of <M>H_i</M> and <M>t_i</M> denotes the torsion parts of <M>H_i</M> ordered in weakly incresing size. See also <Ref Meth="SCHomology"/>.
+## The output is a list of homology groups of the form <M>[H_0,....,H_d]</M>, where <M>d</M> is the dimension of <Arg>complex</Arg>. The format of the homology groups <M>H_i</M> is given in terms of their maximal cyclic subgroups, i.e. a homology group <M>H_i\cong \mathbb{Z}^f + \mathbb{Z} / t_1 \mathbb{Z} \times \dots \times \mathbb{Z} / t_n \mathbb{Z}</M> is returned in form of a list <M>[ f, [t_1,...,t_n] ]</M>, where <M>f</M> is the (integer) free part of <M>H_i</M> and <M>t_i</M> denotes the torsion parts of <M>H_i</M> ordered in weakly incresing size. See also <Ref Meth="SCHomology"/> and
+## <Ref Func="SCHomologyClassic" />.
 ## <Example>
 ## gap> c:=SCSurface(1,false);;
 ## gap> SCHomologyInternal(c);
