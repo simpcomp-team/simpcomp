@@ -174,14 +174,9 @@ function(complex)
 		   Add(rels,gens[Position(egens,edges[1])]*gens[Position(egens,edges[3])]/gens[Position(egens,edges[2])]);
 		fi;
 	od;
-Print(rels,"\n");
 	
 	#factor out relations
 	g:=gprime/rels;
-	#p:=PresentationFpGroup(g,0);
-	#SimplifyPresentation(p);
-	#g:=FpGroupPresentation(p);
-	
 	return g;
 end);
 
@@ -885,33 +880,31 @@ InstallMethod(SCNumFacesOp,
 "for SCSimplicialComplex and Int",
 [SCIsSimplicialComplex,IsInt],
 function(complex, pos)
-
 	local f,nextFace,dim,n,face,index,k,c,cf,facets,fl,maxexpected;
 	
-	
-	nextFace:=function(face,n)
-	
-		local l,i,dim;
-		
-		l:=Length(face);
-		dim:=l-1;
-		face[l]:=face[l]+1;
-		
-		while(face[l]>n-(dim+1-l) and l>1) do
-			l:=l-1;
-			face[l]:=face[l]+1;
-			for i in [l+1..dim+1] do
-				face[i]:=face[i-1]+1;
-			od;
-		od;
-		
-		if(l=1 and face[1]>n-dim) then
-			return [];
-		fi;
-		
-		return face;
-	end;
-
+#	nextFace:=function(face,n)
+#	
+#		local l,i,dim;
+#		
+#		l:=Length(face);
+#		dim:=l-1;
+#		face[l]:=face[l]+1;
+#		
+#		while(face[l]>n-(dim+1-l) and l>1) do
+#			l:=l-1;
+#			face[l]:=face[l]+1;
+#			for i in [l+1..dim+1] do
+#				face[i]:=face[i-1]+1;
+#			od;
+#		od;
+#		
+#		if(l=1 and face[1]>n-dim) then
+#			return [];
+#		fi;
+#		
+#		return face;
+#	end;
+#
 	dim:=SCDim(complex);
 	if dim = fail then
 		return fail;
@@ -921,54 +914,57 @@ function(complex, pos)
 			return 0;
 	fi;
 	
-	dim:=SCDim(complex);
-	if(dim=fail) then
-		return fail;
-	fi;
-	
-	facets:=SCFacetsEx(complex);
-	n:=Length(SCVertices(complex));
+	fl:=SCFaces(complex,pos);
 
-	if(pos=0) then
-	 		return n;
-	fi;
-
-	# only true for (bounded) manifolds
-	#if(dim=n-1 and dim > 0) then
-	#	#simplex
-	#	f:=Concatenation(SCFVectorBdSimplex(dim),[1]);
-	#		return f[pos+1];
-	#elif(dim=n-2 and n=Length(facets) and dim > 0) then
-	#	#bd simplex
-	#	f:=SCFVectorBdSimplex(dim+1);
-	#		return f[pos+1];
-	#fi;
+	return Size(fl);
 	
-	maxexpected:=Sum(List([1..dim],x->x*Binomial(n,x)));
-	if (pos in ComputedSCSkelExs(complex) and Position(ComputedSCSkelExs(complex),pos) mod 2 = 1) or maxexpected<2*10^8 then
-		fl:=SCSkelEx(complex,pos);
-		if(fl=fail) then
-			return fail;
-		fi;
-			return Length(fl);
-	fi;
-	
-	face:=[1..pos+1];
-	c:=0;
-	repeat
-		for cf in facets do
-			if(IsSubset(cf,face)) then
-				c:=c+1;
-				break;
-			elif(face[pos]<cf[1]) then
-				#MaximumList(face))<MinimumList(cf)
-				break;
-			fi;
-		od;
-		face:=nextFace(face,n);
-	until face=[];
-	
-	return c;
+#	facets:=SCFacetsEx(complex);
+#	n:=Length(SCVertices(complex));
+#
+#	if(pos=0) then
+#	 	return n;
+#	fi;
+#
+#	
+#
+#	# only true for (bounded) manifolds
+#	#if(dim=n-1 and dim > 0) then
+#	#	#simplex
+#	#	f:=Concatenation(SCFVectorBdSimplex(dim),[1]);
+#	#		return f[pos+1];
+#	#elif(dim=n-2 and n=Length(facets) and dim > 0) then
+#	#	#bd simplex
+#	#	f:=SCFVectorBdSimplex(dim+1);
+#	#		return f[pos+1];
+#	#fi;
+#	
+#	
+#
+#	maxexpected:=Sum(List([1..dim],x->x*Binomial(n,x)));
+#	if (pos in ComputedSCSkelExs(complex) and Position(ComputedSCSkelExs(complex),pos) mod 2 = 1) or maxexpected<2*10^8 then
+#		fl:=SCSkelEx(complex,pos);
+#		if(fl=fail) then
+#			return fail;
+#		fi;
+#			return Length(fl);
+#	fi;
+#	
+#	face:=[1..pos+1];
+#	c:=0;
+#	repeat
+#		for cf in facets do
+#			if(IsSubset(cf,face)) then
+#				c:=c+1;
+#				break;
+#			elif(face[pos]<cf[1]) then
+#				#MaximumList(face))<MinimumList(cf)
+#				break;
+#			fi;
+#		od;
+#		face:=nextFace(face,n);
+#	until face=[];
+#	
+#	return c;
 end);
 
 ################################################################################
@@ -1140,7 +1136,7 @@ InstallMethod(SCIsPseudoManifold,
 [SCIsSimplicialComplex],
 function(complex)
 
-	local  i, j, dfaces, dim, incidence, facets, pm, boundary, sc, name, labels;
+	local  i, j, dfaces, dim, incidence, facets, boundary, sc, name, labels, pos, idx, base;
 
 		
 	labels:=SCVertices(complex);
@@ -1162,24 +1158,28 @@ function(complex)
 		SetSCHasBoundary(complex,false);
 			return Size(facets) = 2;
 	fi;
-	
-	# count incidence for each (dim-1)-simplex in the interior of complex
-	for i in [1..Size(dfaces)] do
-		for j in facets do
-			if IsSubset(j,dfaces[i]) then
-				incidence[i]:=incidence[i] + 1;
+
+
+	idx:=[];	
+	for i in [1..dim+1] do
+		idx[i]:=[1..dim+1];
+		Remove(idx[i],i);
+	od;
+	for i in [1..Size(facets)] do
+		for j in [1..dim+1] do
+			base:=facets[i]{idx[j]};
+			pos:=PositionSorted(dfaces,base);
+			incidence[pos]:=incidence[pos]+1;
+			if incidence[pos] > 2 then 
+				return false;
 			fi;
 		od;
-		if not incidence[i] in [1,2] then
-					return false;
-		fi;
 	od;
+
 	boundary:=[];
 	for i in [1..Size(dfaces)] do
 		if incidence[i]=1 then
 			Add(boundary,dfaces[i]);
-		elif incidence[i]>2 then
-					return false;
 		fi;
 	od;
 
@@ -1188,7 +1188,7 @@ function(complex)
 		sc:=SCEmpty();
 	else
 		SetSCHasBoundary(complex,true);
-		sc:=SCFromFacets(SCIntFunc.RelabelSimplexList(boundary,labels));
+		sc:=SCFromFacets(boundary);
 	fi;
 
 	name:=SCName(complex);
@@ -2725,7 +2725,7 @@ InstallMethod(SCBoundaryEx,
 [SCIsSimplicialComplex],
 function(complex)
 
-	local  dim, B, i, incidence, facets, faces, elements, bd,bdc,name,sc,labels;
+	local  dim, labels, ispm;
 
 
 	labels:=SCVertices(complex);
@@ -2739,47 +2739,15 @@ function(complex)
 	fi;
 	if dim = 0 then
 		SetSCHasBoundary(complex,false);
-			return SCEmpty();
+		return SCEmpty();
 	fi;
 	
-	facets:=SCFacetsEx(complex);
-	faces:=SCSkelEx(complex,dim-1);
-	if facets=fail or facets=fail then
+	ispm:=SCIsPseudoManifold(complex);
+	if ispm = fail then
 		return fail;
 	fi;
-	
-	B:=[];
-	incidence:=ListWithIdenticalEntries(Size(faces),0);
-	for elements in facets do
-		for i in [1..Size(faces)] do
-			if IsSubset(elements,faces[i]) then
-				incidence[i]:=incidence[i] + 1;
-				if incidence[i]>2 then
-					Info(InfoSimpcomp,1,"SCBoundaryEx: wrong incidence (",incidence[i],") -- complex is not a pseudomanifold.");
-					return fail;
-				fi;
-			fi;
-		od;
-	od;
 
-	for i in [1..Size(incidence)] do
-		if incidence[i]=1 then
-			Add(B,faces[i]);
-		fi;
-	od;
-
-	if B=[] then
-		SetSCHasBoundary(complex,false);
-		sc:=SCEmpty();
-	else
-		SetSCHasBoundary(complex,true);
-		name:=SCName(complex);
-		sc:=SCFromFacets(B);
-		if(name<>fail) then
-			SCRename(sc,Concatenation(["Bd(",name,")"]));
-		fi;
-	fi;
-	return sc;
+	return SCBoundaryEx(complex);
 end);
 
 
