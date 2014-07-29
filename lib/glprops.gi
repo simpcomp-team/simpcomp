@@ -3080,7 +3080,7 @@ InstallMethod(SCSkelExOp,
 [SCIsSimplicialComplex,IsInt],
 function(complex, k)
 
-	local cdim,i,j,l,all,facets,idx,computed;
+	local cdim,i,j,l,all,facets,idx,computed,dict,isPure;
 	
 	
 	cdim:=SCDim(complex);
@@ -3098,6 +3098,12 @@ function(complex, k)
 			return [];
 	fi;
 
+	isPure:=SCIsPure(complex);
+	if isPure = fail then
+		return fail;
+	fi;
+
+	dict:=NewDictionary([1..k],false);
 	all:=[];
 	computed:=ComputedSCSkelExs(complex);
 	idx:=-1;
@@ -3109,21 +3115,33 @@ function(complex, k)
 	od;
 	if idx > -1 then
 		for i in computed[idx] do
-			Append(all,Combinations(i,k+1));
+			for j in Combinations(i,k+1) do
+				if not KnowsDictionary(dict,j) then
+					AddDictionary(dict,j);
+				fi;
+			od;
 		od;
 		# in case complex is not pure
-		for i in facets do
-			if Size(i) = k+1 then
-				Add(all,i);
-			fi;
-		od;
+		if not isPure then
+			for i in facets do
+				if Size(i) = k+1 then
+					if not KnowsDictionary(dict,j) then
+						AddDictionary(dict,j);
+					fi;
+				fi;
+			od;
+		fi;
 	else
 		for i in facets do
-			Append(all,Combinations(i,k+1));
+			for j in Combinations(i,k+1) do
+				if not KnowsDictionary(dict,j) then
+					AddDictionary(dict,j);
+					Add(all,j);
+				fi;
+			od;
 		od;
 	fi;
-	all:=Set(all);
-	return all;
+	return dict!.list;
 end);
 
 ################################################################################

@@ -631,7 +631,8 @@ function(cc)
 
     local c,i,iii,free,r,R,upward,downward,f,HD,
 		Morse,critical,idx,pairedFace,ctr,available,
-		tmp,pos,fl,dim,v,visited,USPTop,vColl,eColl,e,l,mx;
+		tmp,pos,fl,dim,v,visited,USPTop,vColl,eColl,e,l,mx,
+		edgeVals,vals,relVals;
 
         c:=SCFaceLattice(cc);
     	HD:=SCIntFunc.DeepCopy(SCHasseDiagram(cc));
@@ -651,7 +652,17 @@ function(cc)
 	f[Size(f)]:=f[Size(f)]+1;
 	Remove(available[Size(available)],PositionSorted(available[Size(available)],v));
 
-
+###
+#edgeVals:=List(HD[1][2],x->Size(x));
+#vals:=[];
+#for i in edgeVals do
+#	if IsBound(vals[i]) then
+#		vals[i]:=vals[i]+1;
+#	else
+#		vals[i]:=1;
+#	fi;
+#od;
+###
 
 	visited := [v];
 	USPTop:=[];
@@ -689,20 +700,11 @@ function(cc)
 			pos:=PositionSorted(HD[1][Size(HD[1])-1][i],e);
 			if pos <> fail then
 				Remove(HD[1][Size(HD[1])-1][i],pos);
-		                #pairedFace:=HD[1][Size(HD[1])-1][iii][r][1];
-		                # keep track of Morse function
-		                #Add(Morse,c[iii][r]);
-		                #Add(Morse,c[iii+1][pairedFace]);
-		                #Remove(available[iii],Position(available[iii],r));
-		                #Remove(available[iii+1],Position(available[iii+1],pairedFace));				
-			else
-				Error();
 			fi;
 		od;		
 		Unbind(HD[2][Size(HD[2])-1][e]);
 		Remove(available[Size(available)-1],PositionSorted(available[Size(available)-1],e));
 	od;
-
 
 	upward:=HD[1];
 	downward:=HD[2];
@@ -714,6 +716,27 @@ function(cc)
 				Add(free,i);
 			fi;
 		od;
+
+###
+#relVals:=[];
+#for i in [1..Size(vals)] do
+#	if IsBound(vals[i]) then
+#		relVals[i]:=0;
+#	fi;
+#od;
+#for i in edgeVals{free} do
+#	relVals[i]:=relVals[i]+1;
+#od;
+#for i in [1..Size(vals)] do
+#	if IsBound(vals[i]) then
+#		vals[i]:=relVals[i]/vals[i];
+#	fi;
+#od;
+#return [vals,c[2]];
+return c[2]{free};
+###
+
+#Print(vals," ",relVals,"\n");
 	        while available[iii+1] <> [] do
 	            if free=[] then
 	                f[iii+1]:=f[iii+1]+1;
@@ -1152,6 +1175,14 @@ function(c,morsechoice,smithchoice)
 	Hom[1][1]:=Hom[1][1]-1;
 
 	SetSCHomology(c,Hom);
+
+	##################################
+	# TODO: remove before next update
+	##################################
+	if Hom <> SCHomologyClassic(SC(SCFacets(c))) then
+		Error("found error in homology code...\n");
+	fi;
+	#################################
 	return Hom;
 end);
 
