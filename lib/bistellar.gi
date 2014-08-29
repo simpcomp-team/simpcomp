@@ -796,10 +796,12 @@ function(c, move)
 	else
 		r:=Size(move[2])-1;
 	fi;
+
 	moves:=SCMoves(complex);
 	if moves=fail then
 		return fail;
 	fi;
+
 	if not move in moves[r+1] then
 		Info(InfoSimpcomp,2,"SCMove: 'move' not valid (in standard labeling)");
 		return fail;
@@ -821,7 +823,7 @@ function(c, move)
 		od;
 		for i in [1..Size(tmp[3])] do
 			for j in [1..Size(tmp[3][i])] do
-				tmp[3][i][j]:=SCIntFunc.RelabelSimplexList(tmp[3][i][j],invLabels);
+				tmp[3][i][j]:=List(tmp[3][i][j],s->List(s,x->invLabels[x]));
 			od;
 		od;
 	fi;
@@ -831,6 +833,8 @@ function(c, move)
 		return fail;
 	fi;
 	
+
+
 	fvec:=[];
 	fl:=[];
 	for i in [1..Size(tmp[2])] do
@@ -841,7 +845,6 @@ function(c, move)
 	od;
 	SetComputedSCNumFacess(complex,fvec);
 	SetComputedSCSkelExs(complex,fl);
-		
 	options:=[];
 	for r in [1..dim+1] do
 		options[r]:=SCIntFunc.IBistellarRMoves(r,dim+1,tmp[3][r],tmp[1]);
@@ -1913,15 +1916,19 @@ function(complex,k)
 	writelevel:=SCBistellarOptions.WriteLevel;
 	SCBistellarOptions.WriteLevel:=0;
 	
-	Info(InfoSimpcomp,1,"SCIsKStackedSphere: checking if complex is a ",k,"-stacked sphere...");	
+	Info(InfoSimpcomp,3,"SCIsKStackedSphere: checking if complex is a ",k,"-stacked sphere...");	
 	
-	maxtries:=50;
+	if k = 1 then
+		maxtries:=50;
+	else
+		maxtries:=50;
+	fi;
 	for try in [1..maxtries] do
 
 		cc:=SCCopy(complex);
 		SCRelabelStandard(cc);
 			
-		Info(InfoSimpcomp,1,Concatenation("SCIsKStackedSphere: try ",String(try),"/",String(maxtries)));
+		Info(InfoSimpcomp,3,Concatenation("SCIsKStackedSphere: try ",String(try),"/",String(maxtries)));
 		
 		movable:=SCIsMovableComplex(cc);
 		if movable = fail then
@@ -1952,13 +1959,13 @@ function(complex,k)
 			
 			if result[3]=0 and f[1]<>f[Size(f)] then
 				#could not reduce to boundary of a simplex. not k-stacked? 
-				Info(InfoSimpcomp,1,"SCIsKStackedSphere: complex is not a ",k,"-stacked sphere.");
-							return [false,SCEmpty()];
+				Info(InfoSimpcomp,3,"SCIsKStackedSphere: complex is not a ",k,"-stacked sphere.");
+				return [false,SCEmpty()];
 			fi;
 			
 			if f[1]=d+2 and f[1]=f[Size(f)] then
 				#reduced to boundary of a simplex. k-stacked.
-				Info(InfoSimpcomp,1,"SCIsKStackedSphere: complex is a ",k,"-stacked sphere.");
+				Info(InfoSimpcomp,3,"SCIsKStackedSphere: complex is a ",k,"-stacked sphere.");
 
 				tmp:=SCFacets(result[2]); #get facets of reduced complex
 				if(tmp=fail) then
@@ -1986,7 +1993,7 @@ function(complex,k)
 	SCBistellarOptions.MaxInterval:=maxrounds;
 	SCBistellarOptions.WriteLevel:=writelevel;
 	
-	Info(InfoSimpcomp,1,"SCIsKStackedSphere: could not determine whether given complex is a ",k,"-stacked sphere.");
+	Info(InfoSimpcomp,3,"SCIsKStackedSphere: could not determine whether given complex is a ",k,"-stacked sphere.");
 	return fail;
 end);
 
@@ -2450,7 +2457,6 @@ SCIntFunc.SCMakeFlagComplex:=
 	
 	Info(InfoSimpcomp,1,"SCMakeFlagComplex: trying to make flag complex...");	
 	
-	maxtries:=50;
 	for try in [1..maxtries] do
 
 		cc:=SCCopy(complex);

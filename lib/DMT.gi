@@ -247,7 +247,7 @@ end);
 
 
 SCIntFunc.morseRandom:=function(cc,mode,coll)
-    local fl,i,j,iii,free,r,R,upward,downward,Morse,critical,pairedFace,available,tmp,pos,remainder;
+    local fl,i,j,iii,free,r,R,upward,downward,Morse,critical,pairedFace,available,tmp,pos,remainder,start;
 
     tmp:=SCHasseDiagram(cc);
     fl:=SCFaceLattice(cc);
@@ -265,11 +265,11 @@ SCIntFunc.morseRandom:=function(cc,mode,coll)
                 Add(free,i);
             fi;
         od;
-        while available[iii+1] <> [] do
+	while available[iii+1] <> [] do
             if free=[] then
 		# if in collapsibility mode this should not happen
 		if coll then
-			# TOOD: build remaining complex
+			# build remaining complex
 			remainder:=[];
 			for j in [1..iii+1] do
 				for i in available[j] do
@@ -401,12 +401,15 @@ end);
 ################################################################################
 InstallGlobalFunction(SCMorseRandomLex,
 function(cc)
-    local ccc,sh;
-    ccc:=SCCopy(cc);
-    sh:=Shuffle(ShallowCopy(SCVertices(ccc)));
-    SCRelabel(ccc,sh);
+    local verts,sh,morse;
 
-    return SCIntFunc.morseRandom(ccc,1,false);
+    verts:=SCVertices(cc);
+    sh:=Shuffle(ShallowCopy(SCVertices(cc)));
+    SCRelabel(cc,sh);
+    morse:=SCIntFunc.morseRandom(cc,1,false);
+    SCRelabel(cc,verts);
+
+    return morse;
 end);
 
 
@@ -429,12 +432,15 @@ end);
 ################################################################################
 InstallGlobalFunction(SCMorseRandomRevLex,
 function(cc)
-    local ccc,sh;
-    ccc:=SCCopy(cc);
-    sh:=Shuffle(ShallowCopy(SCVertices(ccc)));
-    SCRelabel(ccc,sh);
+    local verts,sh,morse;
+	
+    verts:=SCVertices(cc);
+    sh:=Shuffle(ShallowCopy(SCVertices(cc)));
+    SCRelabel(cc,sh);
+    morse:=SCIntFunc.morseRandom(cc,2,false);
+    SCRelabel(cc,verts);
 
-    return SCIntFunc.morseRandom(ccc,2,false);
+    return morse;
 
 end);
 
@@ -733,7 +739,7 @@ function(cc)
 #	fi;
 #od;
 #return [vals,c[2]];
-return c[2]{free};
+#return c[2]{free};
 ###
 
 #Print(vals," ",relVals,"\n");
@@ -1524,10 +1530,9 @@ end;
 ################################################################################
 InstallGlobalFunction(SCIsSimplyConnectedEx,
 function(arg)
-	local HD, USPTop, upward, downward, e, R, fl, toDel, q,
-		dim, isconn, i, iii, pos, nn, queue, hom,
-		tmp, gen, g, c, top, tries, f, isTriv, options, P, ctdl,
-		SCHasseDiagram,morsechoice;
+	local upward, downward, R, fl, tmp, g, c, top, tries, f, isTriv, 
+		coll, available, r, pairedFace, pos, free, start, jj, sh, 
+		time, i, iii, isconn, dim, SCHasseDiagram, morsechoice;
 
 	SCHasseDiagram:=function(fl)
 		local downward, upward, i, j, k, d, base, idx;
@@ -1562,27 +1567,31 @@ function(arg)
 	fi;
 
 	if Size(arg) = 1 then
-		c := arg[1];
+		c := SCCopy(arg[1]);
+		SCRelabelStandard(c);
 		top := false;
-		tries := 10;
+		tries := 3;
 		morsechoice:=SCMorseRandom;
 	elif Size(arg) = 2 then
-		c := arg[1];
+		c := SCCopy(arg[1]);
+		SCRelabelStandard(c);
 		if IsBool(arg[2]) then
 			top := arg[2];
-			tries := 10;
+			tries := 3;
 		else
 			top := false;
 			tries := arg[2];
 		fi;
 		morsechoice:=SCMorseRandom;
 	elif Size(arg) = 3 then
-		c := arg[1];
+		c := SCCopy(arg[1]);
+		SCRelabelStandard(c);
 		top := arg[2];
 		tries := arg[3];
 		morsechoice:=SCMorseRandom;
 	elif Size(arg) = 4 then
-		c := arg[1];
+		c := SCCopy(arg[1]);
+		SCRelabelStandard(c);
 		top := arg[2];
 		tries := arg[3];
 		morsechoice:=arg[4];
@@ -1593,19 +1602,6 @@ function(arg)
 		return fail;
 	fi;
 
-	#tmp:=Runtime();
-	#ispure:=SCIsPure(c);
-	#if ispure = fail then
-	#	return fail;
-	#fi;	
-	#if ispure <> true then
-	#	Info(InfoSimpcomp,1,"SCIsSimplyConnectedEx: first argument must be a pure simplicial complex.");
-	#	return fail;
-	#fi;
-	#tmp:=Runtime()-tmp;
-	#Print(tmp,"ms for pureness\n");
-
-	#tmp:=Runtime();
 	isconn:=SCIsConnected(c);
 	if isconn = fail then
 		return fail;
@@ -1614,15 +1610,12 @@ function(arg)
 		Info(InfoSimpcomp,1,"SCIsSimplyConnectedEx: first argument is not connected.");
 		return false;
 	fi;
-	#tmp:=Runtime()-tmp;
-	#Print(tmp,"ms for connectedness\n");
 
 	dim := SCDim(c);
 	if dim = fail then
 		return fail;
 	fi;
 
-	#tmp:=Runtime();
 	if dim < 1 then
 		return true;
 	elif dim = 1 then
@@ -1644,22 +1637,12 @@ function(arg)
 			if [] in f[1] then
 				Remove(f[1],Position(f[1],[]));
 			fi;
-			#tmp:=Runtime();
 			g:=SCIntFunc.MorseFuncToFundGroup(f[1],f[2]);
-
-#			tmp:=Runtime();
-#			g:=SCFundamentalGroup(c);
-#			isTriv:=IsTrivial(g);
-#			tmp:=Runtime()-tmp;
-#			Print(tmp,"ms for fundamental group (conventional)\n");		
 
 			if AbelianInvariants(g) <> [] then
 				return false;
 			fi;
 			g:=SimplifiedFpGroup(g);
-			#tmp:=Runtime()-tmp;
-			#Print(tmp,"ms for fundamental group (using DMT)\n");
-
 
 			if GeneratorsOfGroup(g) = [] then
 				return true;
@@ -1668,130 +1651,121 @@ function(arg)
 				return [fail,g];		
 			fi;
 		fi;
-	fi;	
+	fi;
+
+	#ccc:=SC(SCSkel(c,2));
+	#time:=Runtime();
+	#hom:=SCHomology(ccc);
+	#time:=Runtime()-time;
+	#Info(InfoSimpcomp,3,"SCIsSimplyConnectedEx: computed homology in ",time,"ms.");
+	#if hom{[1,2]} <> [[0,[]],[0,[]]] then
+	#	return false;
+	#fi;
 
 	if top then
 		fl:=[SCSkel(c,dim-2),SCSkel(c,dim-1),SCSkel(c,dim)];
 	else
 		fl:=[SCSkel(c,0),SCSkel(c,1),SCSkel(c,2)];
 	fi;
-	#tmp:=Runtime()-tmp;
-	#Print(tmp,"ms for skeleton\n");
-	if Size(SCSkel(c,2)) = Binomial(Size(SCSkel(c,0)),3) then
-		return true;
-	fi;
 
-	hom:=SCHomology(SC(SCSkel(c,2)));
-	if hom = fail then
-		return fail;
-	fi;
-	if hom[2] <> [0,[]] then
-		return false;
-	fi;
-
-	# build oriented Hasse diagrams (see Lutz Benedetti)
-	#tmp:=Runtime();
-	HD := SCHasseDiagram(fl);
-	#tmp:=Runtime()-tmp;
-	#Print("Computed Hasse diagram in \t\t",Float(tmp),"ms (",Float(tmp/Size(fl[3])),"ms/facet).\n");
-	# start recognition process
-	# (random search for perfect Morse function)
-	#tmp:=Runtime();
-	USPTop := SCSpanningTreeRandom(HD,top);
-	#tmp:=Runtime()-tmp;
-	#Print("Computed spanning tree in \t\t",Float(tmp),"ms (",Float(tmp/Size(fl[3])),"ms/facet).\n");
-
-
-	if top then
-		upward := SCIntFunc.DeepCopy(HD[1][Size(HD[1])-1]);
-		downward := SCIntFunc.DeepCopy(HD[2][Size(HD[2])-1]);
+	if top then 
+		Info(InfoSimpcomp,3,"SCIsSimplyConnectedEx: try to collapse co-dimension one skeleton of complex ",tries," times (see optional arguments 'tries' to adjust number of collapsing attempts, see optional argument 'top' to switch to dual complex (faster for complexes with few facets)).");
 	else
-		upward := SCIntFunc.DeepCopy(HD[2][2]);
-		downward := SCIntFunc.DeepCopy(HD[1][2]);
+		Info(InfoSimpcomp,3,"SCIsSimplyConnectedEx: try to collapse co-dimension one skeleton of dual complex ",tries," times (see optional arguments 'tries' to adjust number of collapsing attempts, see optional argument 'top' to switch to complex (faster for higher dimensional complexes)).");
 	fi;
-	for e in USPTop do
-	R := downward[e];
-		for i in R do
-			pos:=Position(upward[i],e);
-			if pos <> fail then
-				Remove(upward[i],pos);
-			else
-				return fail;
-			fi;
-		od;
-		Unbind(downward[e]);
-	od;
-	
-	# check if there is a perfect alternating cycle free matching
-	#
-	# Golumbic, Hirst, Lewenstein, Thm. 3.1:
-	# "M unique perfect matching on G = 
-	# G contains no alternating cycle with respect to M =
-	# Every induced M -subgraph contains a vertex of degree 1"
-	# 
-	# Golumbic, Hirst, Lewenstein, Cor. 3.2:
-	# In O(|V|+|E|) time it can be veried whether M is uniquely restricted
-	#
-	# Proof:
-	# Uniquely restricted matchings are hereditary, i.e., if M is uniquely restricted
-	# then so is every submatching M'. We now give a process that follows from Theorem 3.1. 
-	# Repeatedly, delete an edge e with an endpoint of degree one in the induced M-subgraph 
-	# and ALL edges connected to the endpoints of e. This process terminates with the empty 
-	# matching if and only if M is uniquely restricted.
-	#tmp:=Runtime();
-	nn := Size(upward);
-	queue := [];
-	#Morse:=[];
-	#critical:=[];
-	#available:=Filtered([1..Size(downward)],x->IsBound(downward[x]));
-	for i in [1..nn] do
-		if IsBound(upward[i]) and Size(upward[i]) = 1 then
-			Add(queue,i);
+	for jj in [1..tries] do
+		time:=Runtime();
+		Info(InfoSimpcomp,3,"SCIsSimplyConnectedEx: try ",jj,"...");
+		sh:=Shuffle(ShallowCopy(SCVertices(c)));
+		tmp := SCHasseDiagram(List(fl,x->SCIntFunc.RelabelSimplexList(x,sh)));
+		if top then
+			upward:=SCIntFunc.DeepCopy(tmp[1]);
+			downward:=SCIntFunc.DeepCopy(tmp[2]);
+			available:=List([1..Size(fl)],x->[1..Size(fl[x])]);
+		else
+			upward:=Reversed(SCIntFunc.DeepCopy(tmp[2]));
+			downward:=Reversed(SCIntFunc.DeepCopy(tmp[1]));
+			available:=List(Reversed([1..Size(fl)]),x->[1..Size(fl[x])]);
 		fi;
-	od;
-	
-	for iii in [1..tries] do 
-	  # queue = free
-	  #while downward <> [] do
-		while queue <> [] do
-			q := Random(queue);
-			if upward[q] = [] then
-				Remove(queue,Position(queue,q));
-				continue;
-			fi;
-			toDel := upward[q][1];
-	                # keep track of Morse function
-			#if top then
-		        #        Add(Morse,fl[1][q]);
-		        #        Add(Morse,fl[2][toDel]);
-			#else
-		        #        Add(Morse,fl[3][q]);
-		        #        Add(Morse,fl[2][toDel]);
-			#fi;
-	                # update upward Hasse diagram
-			for i in downward[toDel] do
-				if i = q then continue; fi;
-				Remove(upward[i],Position(upward[i],toDel));
-				if Size(upward[i]) = 1 then
-					Add(queue,i);
-				fi;
-			od;
-			Unbind(upward[q]);
-			Unbind(downward[toDel]);
-			#Remove(available,PositionSorted(available,toDel));
-			#Remove(queue,Position(queue,q));
-		od;
+		start := true; 
+		coll:=true;
 
-		#tmp:=Runtime()-tmp;
-		#Print("Computed collapsing sequence in \t",Float(tmp),"ms (",Float(tmp/Size(fl[3])),"ms/facet).\n");
-		if downward = [] then 
+		for iii in Reversed([1..(Size(fl)-1)]) do
+			if coll = false then break; fi;
+			free:=[];
+			for i in [1..Size(upward[iii])] do
+			    if Size(upward[iii][i]) = 1 then
+			        Add(free,i);
+			    fi;
+			od;
+			if free <> [] then
+				start := false;
+			fi;
+			while available[iii+1] <> [] do
+		    		if free=[] then
+					if start = true then
+						r:=available[iii+1][1];
+					        Remove(available[iii+1],1);
+						start:=false;
+					else
+						coll:=false;
+						break;
+					fi;
+				        R:=downward[iii][r];
+				        # update upward Hasse diagram
+				        for i in R do
+				            Remove(upward[iii][i],Position(upward[iii][i],r));
+				            if Size(upward[iii][i]) = 1 then
+				                Add(free,i);
+				            fi;
+				        od;
+				else
+					r:=free[1];
+		        		Remove(free,1);
+				        pairedFace:=upward[iii][r][1];
+		        		Remove(available[iii],Position(available[iii],r));
+		        		Remove(available[iii+1],Position(available[iii+1],pairedFace));
+		        		R:=downward[iii][pairedFace];
+		        		# update upward Hasse diagram
+		        		for i in R do
+		        		    Remove(upward[iii][i],Position(upward[iii][i],pairedFace));
+		        		    if Size(upward[iii][i]) = 1 then
+		        		        Add(free,i);
+		        		    elif Size(upward[iii][i]) = 0 then
+		        		        pos:=Position(free,i);
+		        		        if pos <> fail then
+		        		            Remove(free,pos);
+		        		        fi;
+		        		    fi;
+				        od;
+					if iii > 1 then
+					        R:=downward[iii-1][r];
+					else
+						R:=[];
+					fi;
+		        		for i in R do
+		        		    Remove(upward[iii-1][i],Position(upward[iii-1][i],r));
+		        		od;
+
+		    		fi;
+			od;
+		od;
+		time:=Runtime()-time;
+		Info(InfoSimpcomp,3,time,"ms for collapsing attempt no. ",jj,".");
+		if coll = true then 
 			return true;
 		fi;
 	od;
 
 	Info(InfoSimpcomp,1,"SCIsSimplyConnectedEx: Could not determine collapsing seuqence, try simplifying fundamental group instead.");
+	time:=Runtime();
 	g:=SCFundamentalGroup(SC(SCSkel(c,2)));
+	time:=Runtime()-time;
+	Info(InfoSimpcomp,3,"SCIsSimplyConnectedEx: constructed fundamental group in ",time,"ms.");
+	time:=Runtime();
 	g:=SimplifiedFpGroup(g);
+	time:=Runtime()-time;
+	Info(InfoSimpcomp,3,"SCIsSimplyConnectedEx: simplified fundamental group in ",time,"ms.");
 	if AbelianInvariants(g) <> [] then
 		return false;
 	fi;
@@ -1903,12 +1877,20 @@ function(arg)
 		return fail;
 	fi;
 
+	if quasi = true and dim < 5 then
+		Info(InfoSimpcomp,3,"SCIsManifoldEx: dimension of complex < 5, switching argument 'quasi' to 'false'.");
+		quasi:=false;
+	fi;
+
+	Info(InfoSimpcomp,3,"SCIsManifoldEx: compute face lattice.");
+
 	fl:=SCFaceLattice(c);
 	if fl = fail or fail in fl then
 		return fail;
 	fi;
 
 	if aut then
+		Info(InfoSimpcomp,3,"SCIsManifoldEx: automorphism group provided/calculated. Compute orbit representatives in face lattice.");	
 		G:=SCAutomorphismGroup(c);
 		if G = fail then
 			return fail;
@@ -1933,13 +1915,20 @@ function(arg)
 	fi;
 
 	# co-dimension 2 links
-	for j in [1..Size(orbits[dim-1])] do
-		lk:=SCLink(c,orbits[dim-1][j]);
-		if not SCIsPseudoManifold(lk) or SCHasBoundary(lk) then
-			Info(InfoSimpcomp,1,"SCIsManifoldEx: could not reduce link ",orbits[dim-1][j],".");
-			return false;
-		fi;
-	od;
+	if quasi = false then
+		Info(InfoSimpcomp,3,"SCIsManifoldEx: check co-dimension 2 links.");
+		for j in [1..Size(orbits[dim-1])] do
+			if j mod 500 = 0 then
+				Info(InfoSimpcomp,5,"SCIsManifoldEx: 1-dimensional links: ",Int(100*j/Size(orbits[dim-1])),"% done...");
+			fi;
+			lk:=SCLink(c,orbits[dim-1][j]);
+			if not SCIsPseudoManifold(lk) or SCHasBoundary(lk) then
+				Info(InfoSimpcomp,1,"SCIsManifoldEx: could not reduce link ",orbits[dim-1][j],".");
+				return false;
+			fi;
+		od;
+		Info(InfoSimpcomp,3,"SCIsManifoldEx: check higher dimensional links.");
+	fi;
 
 	# links of higher co-dimension
 	for i in Reversed([1..dim-2]) do
@@ -1947,7 +1936,11 @@ function(arg)
 			continue;
 		fi;
 		if quasi = false and i = dim-4 then
+			Info(InfoSimpcomp,3,"SCIsManifoldEx: check 4-dimensional links via bistellar moves.");
 			for j in [1..Size(orbits[i])] do;
+				if j mod 10 = 0 then
+					Info(InfoSimpcomp,1,"SCIsManifoldEx: ",dim-i,"-dimensional links: ",Int(100*j/Size(orbits[i])),"% done...");
+				fi;
 				lk:=SCLink(c,orbits[i][j]);
 				sc:=SCIsSimplyConnected(lk);
 				if sc = false then
@@ -1964,6 +1957,9 @@ function(arg)
 
 
 		for j in [1..Size(orbits[i])] do
+			if j mod 500 = 0 then
+				Info(InfoSimpcomp,5,"SCIsManifoldEx: ",Int(100*j/Size(orbits[i])),"% done...");
+			fi;
 			lk:=SCLink(c,orbits[i][j]);
 			if i = dim-2 then
 				if SCEulerCharacteristic(lk) <> 2 then
