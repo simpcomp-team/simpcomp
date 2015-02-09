@@ -2482,8 +2482,8 @@ SCIntFunc.SCMakeFlagComplex:=
 			return fail;
 		fi;
 		
-		Print("\nF=",result[2].F,"\n");
-		Print("Non-faces:\n",SCMinimalNonFaces(result[2]),"\n\n");
+		Info(InfoSimpcomp,1,"\nF=",result[2].F,"\n");
+		Info(InfoSimpcomp,1,"Non-faces:\n",SCMinimalNonFaces(result[2]),"\n\n");
 	od;
 	
 	SCBistellarOptions.MaxInterval:=maxrounds;

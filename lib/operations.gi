@@ -2241,21 +2241,8 @@ function(complex,all,checkvector)
 			if(killed[i]=0) then continue; fi;
 			if(Intersection(sc[i],sc[cur])<>[]) then
 				AddSet(intersection,Intersection(sc[cur],sc[i]));
-			#else
-			#	failed:=1;
-			#	break;
 			fi;
 		od;
-
-		#if(failed=1) then
-		#	return false;
-		#fi;
-
-		#intersection:=Intersection(sc[cur],prev);
-		#span:=getVertexSpan(sc,intersection);
-		#Print("validshellingfacet: ",sc[cur],": intersection=",intersection,", span=",span);
-
-		#Print("shelling intersection: ",intersection,"\n");
 
 		#consolidate simplices
 		done:=0;
@@ -2275,7 +2262,6 @@ function(complex,all,checkvector)
 			od;
 		od;
 
-		#Print("shelling intersection, reduced: ",intersection,"\n");
 		dim:=List(intersection,Length)-1;
 		
 		if(Size(Set(dim))<>1) then
@@ -2296,44 +2282,32 @@ function(complex,all,checkvector)
 	computeShellingBt:=function(sc,killedn,killed,shellings,all)
 		local i,bd,lkilled;
 
-		#Print("computeShellingBt: ",killedn," - ",killed,"\n");
-
 		if(not 0 in killed) then
-			#found shelling
-			#Print("found shelling: ",killed,"\n");
 			AddSet(shellings,ShallowCopy(killed));
 			return true;
 		fi;
 
 		if(not complexStronglyConnectedShelling(sc,killed)) then
-			# Print("complex not strongly connected\n");
+
 			return false;
 		fi;
 
 		bd:=markBoundaryFactesShelling(sc,killed);
 
-	#	if(Position(bd,1)=fail) then
-			#no more boundaries
-	#	fi;
-
 		lkilled:=ShallowCopy(killed);
 		for i in [1..Length(bd)] do
 			if(bd[i]=1) then
-				#Print("facet ",sc[i],", bd[i]=",bd[i],":\n");
 				if(killedn=1 or isValidNextShellingFacet(sc,killed,i)) then
 					#backtrack
-					#Print("chosen, next step.\n\n");
 					lkilled[i]:=killedn;
 					if(computeShellingBt(sc,killedn+1,lkilled,shellings,all) and not all) then
 						return true;
 					fi;
 					lkilled[i]:=0;
-					#Print("level up, next step.\n\n");
 				fi;
 			fi;
 		od;
 
-		#Print("computeShellingBt: ",killedn," done\n");
 		return false;
 	end;
 
