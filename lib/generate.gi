@@ -843,7 +843,7 @@ function(complex1, complex2)
 		names:=[SCName(complex1),SCName(complex2)];
 	fi;
 	if HasSCTopologicalType(complex1) and HasSCTopologicalType(complex2) then 
-		toptypes:=[SCTopologicalType(complex1),SCTopologicalType(complex1)];
+		toptypes:=[SCTopologicalType(complex1),SCTopologicalType(complex2)];
 	fi;
 	vertices:=[];
 

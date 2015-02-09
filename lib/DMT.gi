@@ -1872,6 +1872,7 @@ function(arg)
 		return fail;
 	fi;
 
+
 	fl:=SCFaceLattice(c);
 	if fl = fail or fail in fl then
 		return fail;
