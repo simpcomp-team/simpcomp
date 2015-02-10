@@ -1982,7 +1982,7 @@ function(arg)
     fi;
     if quasi = false and i = dim-4 then
       Info(InfoSimpcomp,3,"SCIsManifoldEx: check 4-dimensional links via ",
-        bistellar moves.");
+        "bistellar moves.");
       for j in [1..Size(orbits[i])] do;
         if j mod 10 = 0 then
           Info(InfoSimpcomp,2,"SCIsManifoldEx: ",dim-i,"-dimensional links: ",
@@ -1992,7 +1992,7 @@ function(arg)
         sc:=SCIsSimplyConnected(lk);
         if sc = false then
           Info(InfoSimpcomp,2,"SCIsManifoldEx: found non-simply ",
-            connected link ",orbits[i][j],".");
+            "connected link ",orbits[i][j],".");
           return false;
         fi;
         lk:=SCReduceComplex(lk);
@@ -2025,7 +2025,7 @@ function(arg)
         fi;
         if sc <> true then
           Info(InfoSimpcomp,2,"SCIsManifoldEx: could not determine simply ",
-            connectivity of link ",orbits[i][j],".");
+            "connectivity of link ",orbits[i][j],".");
           return fail;
         fi;
 
@@ -2041,7 +2041,7 @@ function(arg)
 
   if quasi then
     Info(InfoSimpcomp,2,"SCIsManifoldEx: WARNING: assuming Smooth Poincare ",
-      conjecture.");
+      "conjecture.");
   fi;
 
   return true;
