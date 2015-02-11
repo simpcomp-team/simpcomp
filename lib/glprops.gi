@@ -845,14 +845,17 @@ InstallMethod(SCFVector,
 [SCIsSimplicialComplex],
 function(complex)
 
-	local f, dim;
+	local i, f, dim;
 	
 	dim:=SCDim(complex);
 	if dim = fail then
 		return fail;
 	fi;
 	
-	f:=List([0..dim],x->SCNumFaces(complex,x));
+	f:=[];
+	for i in Reversed([0..dim]) do
+		f[i+1]:=SCNumFaces(complex,i);
+	od;
 	if fail in f then
 		return fail;
 	fi;
@@ -914,7 +917,7 @@ function(complex, pos)
 			return 0;
 	fi;
 	
-	fl:=SCFaces(complex,pos);
+	fl:=SCFacesEx(complex,pos);
 
 	return Size(fl);
 	
@@ -1136,13 +1139,23 @@ InstallMethod(SCIsPseudoManifold,
 [SCIsSimplicialComplex],
 function(complex)
 
-	local  i, j, dfaces, dim, incidence, facets, boundary, sc, name, labels, pos, idx, base;
+	local  i, j, dfaces, dim, incidence, facets, boundary, sc, name, labels, pos, idx, base, ispure;
 
 		
 	labels:=SCVertices(complex);
 	if(labels=fail) then
 		Info(InfoSimpcomp,1,"SCIsPseudoManifold: complex lacks vertex labels.");
 		return fail;
+	fi;
+
+	ispure:=SCIsPure(complex);
+	if ispure = fail then
+		return fail;
+	fi;
+
+	if ispure = false then
+		Info(InfoSimpcomp,3,"SCIsPseudoManifold: complex not pure.");
+		return false;
 	fi;
 	
 	dim:=SCDim(complex);
@@ -1156,9 +1169,8 @@ function(complex)
 	if dim = 0 then
 		SetSCBoundaryEx(complex,SCEmpty());
 		SetSCHasBoundary(complex,false);
-			return Size(facets) = 2;
+		return Size(facets) = 2;
 	fi;
-
 
 	idx:=[];	
 	for i in [1..dim+1] do
@@ -3049,7 +3061,7 @@ InstallMethod(SCSkelExOp,
 [SCIsSimplicialComplex,IsInt],
 function(complex, k)
 
-	local cdim,i,j,l,all,facets,idx,computed;
+	local cdim,i,facets,face,idx,computed,dict,isPure;
 	
 	
 	cdim:=SCDim(complex);
@@ -3067,7 +3079,12 @@ function(complex, k)
 			return [];
 	fi;
 
-	all:=[];
+	isPure:=SCIsPure(complex);
+	if isPure = fail then
+		return fail;
+	fi;
+
+	dict:=NewDictionary([1..k],false);
 	computed:=ComputedSCSkelExs(complex);
 	idx:=-1;
 	for i in [k+1..cdim+1] do
@@ -3078,21 +3095,32 @@ function(complex, k)
 	od;
 	if idx > -1 then
 		for i in computed[idx] do
-			Append(all,Combinations(i,k+1));
+			for face in Combinations(i,k+1) do
+				if not KnowsDictionary(dict,face) then
+					AddDictionary(dict,face);
+				fi;
+			od;
 		od;
 		# in case complex is not pure
-		for i in facets do
-			if Size(i) = k+1 then
-				Add(all,i);
-			fi;
-		od;
+		if not isPure then
+			for face in facets do
+				if Size(face) = k+1 then
+					if not KnowsDictionary(dict,face) then
+						AddDictionary(dict,face);
+					fi;
+				fi;
+			od;
+		fi;
 	else
 		for i in facets do
-			Append(all,Combinations(i,k+1));
+			for face in Combinations(i,k+1) do
+				if not KnowsDictionary(dict,face) then
+					AddDictionary(dict,face);
+				fi;
+			od;
 		od;
 	fi;
-	all:=Set(all);
-	return all;
+	return dict!.list;
 end);
 
 ################################################################################

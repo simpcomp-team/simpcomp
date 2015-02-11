@@ -1677,17 +1677,27 @@ InstallMethod(SCStronglyConnectedComponents,
 [SCIsSimplicialComplex],
 function(complex)
 
-	local i,j,flag,	treated,untreated,allComponents,curComponent,boundary,faces,comps, labels,dim,facets,name;
+	local ispure, i, j, flag, untreated, allComponents, curComponent, boundary, faces, labels, dim, facets, name;
 	
 	
 	labels:=SCVertices(complex);
 	if(labels=fail) then
-		Info(InfoSimpcomp,1,"SCStronglyConnectedComponents: complex lacks vertex labels.");
+		Info(InfoSimpcomp,1,"SCStronglyConnectedComponents: argument lacks vertex labels.");
 		return fail;
 	fi;
 	
 	dim := SCDim(complex);
 	if dim = fail then
+		return fail;
+	fi;
+
+	ispure := SCIsPure(complex);
+	if ispure = fail then
+		return fail;
+	fi;
+
+	if not ispure then
+		Info(InfoSimpcomp,1,"SCStronglyConnectedComponents: argument must be a pure simplicial complex.");
 		return fail;
 	fi;
 
@@ -1701,47 +1711,42 @@ function(complex)
 			return fail;
 		fi;
 		SetSCIsStronglyConnected(complex,Length(allComponents)=1);
-			return allComponents;
+		return allComponents;
 	fi;
 
 	untreated:=SCIntFunc.DeepCopy(SCFacetsEx(complex));
-
 	if untreated=fail then
 		return fail;
 	fi;
 
-	treated :=[];
 	allComponents :=[];
-
 	while untreated<>[] do
 		curComponent:=[untreated[1]];
+		Remove(untreated,1);
 		flag:=0;
 		while flag=0 do
 			flag:=1;
-			boundary:=SCBoundary(SCFromFacets(SCIntFunc.DeepCopy(curComponent)));
+			boundary:=SCBoundary(SC(curComponent));
 			faces:=SCFacets(boundary);
 			if faces=fail then
 				return fail;
 			fi;
 			for i in faces do
-				for j in untreated do
-				if IsSubset(j,i) then
-					flag:=0;
-				RemoveSet(untreated,j);
-				AddSet(treated,j);
-				AddSet(curComponent,j);
-			fi;
+				for j in Reversed([1..Size(untreated)]) do
+					if IsSubset(untreated[j],i) then
+						flag:=0;
+						Add(curComponent,untreated[j]);
+						Remove(untreated,j);
+					fi;
+				od;
 			od;
 		od;
-		od;
-		
 		AddSet(allComponents,curComponent);
 	od;
 
-	SetSCIsStronglyConnected(complex,Size(allComponents)=1);
-	
+
+
 	name:=SCName(complex);
-	
 	if(name<>fail and Size(allComponents)>0) then
 		for i in [1..Length(allComponents)] do
 			allComponents[i]:=SCFromFacets(SCIntFunc.RelabelSimplexList(allComponents[i],labels));

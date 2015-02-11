@@ -359,7 +359,7 @@ function(str)
 		cc :=[];
 		while l <> fail do
 			if l{[Size(l)]} <> "\n" then
-				Print("SCFromIsoSig: cannot read file format, line ended without newline.\n");
+				Info(InfoSimpcomp,1,"SCFromIsoSig: cannot read file format, line ended without newline.\n");
 				return fail;
 			fi;
 			l := l{[1..Size(l)-1]};
@@ -375,7 +375,7 @@ function(str)
 		if Int(str{[idx]}) = fail then
 			pos:=Position(lut,str[idx]);
 			if pos = fail then
-				Print("SCFromIsoSig: invalid isomorphism signature provided.\n");
+				Info(InfoSimpcomp,1,"SCFromIsoSig: invalid isomorphism signature provided.\n");
 				return fail;
 			fi;
 			return [pos mod 64,idx+1];
@@ -389,7 +389,7 @@ function(str)
 			for i in [1..power] do
 				pos:=Position(lut,str[ctr]);
 				if pos = fail then
-					Print("SCFromIsoSig: invalid isomorphism signature provided.\n");
+					Info(InfoSimpcomp,1,"SCFromIsoSig: invalid isomorphism signature provided.\n");
 					return fail;
 				fi;
 				val := val + (pos mod 64)*64^(power-i);
@@ -400,7 +400,7 @@ function(str)
 	end;
 
 	if str = "" then
-		Print("SCFromIsoSig: isomorphism signature is empty.\n");
+		Info(InfoSimpcomp,1,"SCFromIsoSig: isomorphism signature is empty.\n");
 		return fail;
 	fi;
 
