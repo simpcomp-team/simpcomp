@@ -207,7 +207,7 @@
   [2XSCMappingCylinder[102X  10.2-2
   [2XSCMinimalNonFaces[102X  6.9-49
   [2XSCMinimalNonFacesEx[102X  6.9-50
-  [2XSCMorseEngstrom[102X  12.1-5
+  [2XSCMorseEngstroem[102X  12.1-5
   [2XSCMorseIsPerfect[102X  11.1-2
   [2XSCMorseMultiplicityVector[102X  11.1-4
   [2XSCMorseNumberOfCriticalPoints[102X  11.1-5

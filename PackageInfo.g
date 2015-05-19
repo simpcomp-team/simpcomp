@@ -15,11 +15,11 @@ Subtitle := "A GAP toolbox for simplicial complexes",
 Version := "%%%VERSION%%%",
 Date := "%%%DATE%%%",
 
-PackageWWWHome := "http://simpcomp.googlecode.com/git/web/",
+PackageWWWHome := "http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/",
 README_URL := Concatenation( ~.PackageWWWHome, "README" ),
 PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
 
-ArchiveURL :=Concatenation( "http://simpcomp.googlecode.com/files/simpcomp-",String(~.Version)),
+ArchiveURL :=Concatenation( [ "http://github.com/simpcomp-team/simpcomp/releases/download/v", String(~.Version), "/simpcomp-", String(~.Version) ]),
 ArchiveFormats := ".tar.gz",
 
 Persons := [

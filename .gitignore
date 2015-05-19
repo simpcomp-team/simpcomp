@@ -1,10 +1,5 @@
 *~
 doc/gapdoc/**/*
 doc/gapdoc
-doc/*.aux
-doc/*.idx
-doc/*.ilg
-doc/*.ind
-doc/*.pnr
-doc/*.tex
+doc/**
 

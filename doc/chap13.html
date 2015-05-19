@@ -101,7 +101,7 @@
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/jonathan/apps/gap4r5/pkg/simpcomp/complexes/"
+ Path="/home/felix/Downloads/gap4r7/pkg/simpcomp/complexes/"
  ]
  gap&gt; SCLib.Size;
  7649
@@ -159,17 +159,21 @@
 
 <div class="example"><pre>
  gap&gt; myRepository:=SCLibInit("~/myrepository");
+ #I  SCLibInit: made directory "/home/felix/myrepository/" for user library.
+ #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
+ #I  SCLibUpdate: rebuilding index for /home/felix/myrepository/.
+ #I  SCLibUpdate: rebuilding index done.
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=5
+ Number of complexes in library=0
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/jonathan/myrepository/"
+ Path="/home/felix/myrepository/"
  ]
  gap&gt; complex:=SCBdCrossPolytope(4);;
  gap&gt; SCLibAdd(myRepository,complex);
- #I  SCLibAdd: saving complex to file "complex_2014-07-10_07-20-55.scb".
+ #I  SCLibAdd: saving complex to file "complex_2015-05-19_20-01-38.scb".
  true
  gap&gt; myRepository.Add(complex);; # alternative syntax
  </pre></div>
@@ -204,18 +208,13 @@
 
 <div class="example"><pre>
  gap&gt; myRepository:=SCLibInit("~/myrepository");
- Found a self-reference to an unknown object!
- #I  IO_Unpicklers.SCLR: Error while unpicking library repository. Delete file complexes.idx and complexes.idxb and recreate them with SCLibInit.
- #I  SCIntFunc.SCLibInit: error loading binary index  -- trying to reconstruct it.
- #I  SCLibUpdate: rebuilding index for /home/jonathan/myrepository/.
- #I  SCLibUpdate: rebuilding index done.
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=6
+ Number of complexes in library=1
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/jonathan/myrepository/"
+ Path="/home/felix/myrepository/"
  ]
  gap&gt; SCLibAdd(myRepository,SCSimplex(2));;
  gap&gt; SCLibDelete(myRepository,1);
@@ -245,12 +244,14 @@
  [SimplicialComplex
  
   Properties known: BoundaryEx, Dim, FacetsEx, HasBoundary, 
-                    IsPseudoManifold, Name, SkelExs[], Vertices.
+                    IsPseudoManifold, IsPure, Name, SkelExs[], 
+                    Vertices.
  
-  Name="unnamed complex 38"
+  Name="unnamed complex 86"
   Dim=2
   HasBoundary=false
   IsPseudoManifold=true
+  IsPure=true
  
  /SimplicialComplex]
  </pre></div>
@@ -290,11 +291,11 @@
  gap&gt; myRepository:=SCLibInit("~/myrepository");
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=6
+ Number of complexes in library=1
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/jonathan/myrepository/"
+ Path="/home/felix/myrepository/"
  ]
  </pre></div>
 
@@ -380,7 +381,7 @@
 <div class="example"><pre>
  gap&gt; myRepository:=SCLibInit("~/repository");;
  gap&gt; SCLibUpdate(myRepository);
- #I  SCLibUpdate: rebuilding index for /home/jonathan/repository/.
+ #I  SCLibUpdate: rebuilding index for /home/felix/repository/.
  #I  SCLibUpdate: rebuilding index done.
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
@@ -388,7 +389,7 @@
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/jonathan/repository/"
+ Path="/home/felix/repository/"
  ]
  </pre></div>
 
@@ -410,7 +411,7 @@
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/jonathan/apps/gap4r5/pkg/simpcomp/complexes/"
+ Path="/home/felix/Downloads/gap4r7/pkg/simpcomp/complexes/"
  ]
  </pre></div>
 

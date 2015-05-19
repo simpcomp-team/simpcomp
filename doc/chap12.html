@@ -28,7 +28,7 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap12.html#X797927C68701CB00">12.1-2 SCCollapseLex</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap12.html#X80651CA87E3F067A">12.1-3 SCCollapseRevLex</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap12.html#X80DB575E7FABC370">12.1-4 SCHasseDiagram</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap12.html#X7E2F0FD07838FCAF">12.1-5 SCMorseEngstrom</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap12.html#X7FC55A3082BC56FD">12.1-5 SCMorseEngstroem</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap12.html#X7E9FA762862B2AA2">12.1-6 SCMorseRandom</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap12.html#X8164E5207F7389EF">12.1-7 SCMorseRandomLex</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap12.html#X7C1B8D1C8484754B">12.1-8 SCMorseRandomRevLex</a></span>
@@ -76,7 +76,7 @@
  
   Properties known: Dim, FacetsEx, Name, Vertices.
  
-  Name="collapsed version of T^2 (VT) \ unnamed complex 6"
+  Name="collapsed version of T^2 (VT) \ unnamed complex 8"
   Dim=1
  
  /SimplicialComplex]
@@ -87,11 +87,13 @@
  gap&gt; coll:=SCCollapseGreedy(bdsphere);
  [SimplicialComplex
  
-  Properties known: Dim, FVector, FacetsEx, Name, NumFaces[], Vertices.
+  Properties known: Dim, FVector, FacetsEx, IsPure, Name, NumFaces[], 
+                    SkelExs[], Vertices.
  
-  Name="collapsed version of S^3_5 \ unnamed complex 10"
+  Name="collapsed version of S^3_5 \ unnamed complex 12"
   Dim=0
   FVector=[ 1 ]
+  IsPure=true
  
  /SimplicialComplex]
  gap&gt; coll.Facets;                     
@@ -116,7 +118,7 @@
  
   Properties known: Dim, FacetsEx, Name, Vertices.
  
-  Name="collapsed version of T^2 \ unnamed complex 16"
+  Name="collapsed version of T^2 \ unnamed complex 18"
   Dim=1
  
  /SimplicialComplex]
@@ -127,11 +129,13 @@
  gap&gt; coll:=SCCollapseLex(ball);
  [SimplicialComplex
  
-  Properties known: Dim, FVector, FacetsEx, Name, NumFaces[], Vertices.
+  Properties known: Dim, FVector, FacetsEx, IsPure, Name, NumFaces[], 
+                    SkelExs[], Vertices.
  
-  Name="collapsed version of S^3_5 \ unnamed complex 20"
+  Name="collapsed version of S^3_5 \ unnamed complex 22"
   Dim=0
   FVector=[ 1 ]
+  IsPure=true
  
  /SimplicialComplex]
  gap&gt; coll.Facets;                     
@@ -156,7 +160,7 @@
  
   Properties known: Dim, FacetsEx, Name, Vertices.
  
-  Name="collapsed version of T^2 \ unnamed complex 26"
+  Name="collapsed version of T^2 \ unnamed complex 28"
   Dim=1
  
  /SimplicialComplex]
@@ -167,11 +171,13 @@
  gap&gt; coll:=SCCollapseRevLex(ball);
  [SimplicialComplex
  
-  Properties known: Dim, FVector, FacetsEx, Name, NumFaces[], Vertices.
+  Properties known: Dim, FVector, FacetsEx, IsPure, Name, NumFaces[], 
+                    SkelExs[], Vertices.
  
-  Name="collapsed version of S^3_5 \ unnamed complex 30"
+  Name="collapsed version of S^3_5 \ unnamed complex 32"
   Dim=0
   FVector=[ 1 ]
+  IsPure=true
  
  /SimplicialComplex]
  gap&gt; coll.Facets;                     
@@ -199,19 +205,19 @@
        [ [ 4, 2, 1 ], [ 5, 3, 1 ], [ 6, 3, 2 ], [ 6, 5, 4 ] ] ] ]
  </pre></div>
 
-<p><a id="X7E2F0FD07838FCAF" name="X7E2F0FD07838FCAF"></a></p>
+<p><a id="X7FC55A3082BC56FD" name="X7FC55A3082BC56FD"></a></p>
 
-<h5>12.1-5 SCMorseEngstrom</h5>
+<h5>12.1-5 SCMorseEngstroem</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMorseEngstrom</code>( <var class="Arg">complex</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMorseEngstroem</code>( <var class="Arg">complex</var> )</td><td class="tdright">( function )</td></tr></table></div>
 <p>Returns: two lists of small integer lists upon success, <code class="code">fail</code> otherweise.</p>
 
-<p>Builds a discrete Morse function following the Engstrom method by reducing the input complex to smaller complexes defined by minimal link and deletion operations. See <a href="chapBib.html#biBEngstroem09DiscMorseFuncFourierTrans">[Eng09]</a> for details.</p>
+<p>Builds a discrete Morse function following the Engstroem method by reducing the input complex to smaller complexes defined by minimal link and deletion operations. See <a href="chapBib.html#biBEngstroem09DiscMorseFuncFourierTrans">[Eng09]</a> for details.</p>
 
 
 <div class="example"><pre>
  gap&gt; c:=SCBdSimplex(3);;
- gap&gt; f:=SCMorseEngstrom(c);
+ gap&gt; f:=SCMorseEngstroem(c);
  [ [ [ 2 ], [ 2, 3 ], [ 2, 4 ], [ 2 .. 4 ], [  ], [ 3 ], [ 4 ], [ 3, 4 ], 
        [ 1, 3 ], [ 1, 3, 4 ], [ 1 ], [ 1, 4 ], [ 1, 2, 4 ], [ 1, 2 ], 
        [ 1 .. 3 ] ], [ [ 2 ], [ 1 .. 3 ] ] ]
@@ -288,15 +294,16 @@
 <div class="example"><pre>
  gap&gt; c:=SCSeriesHomologySphere(2,3,5);;
  gap&gt; f:=SCMorseSpec(c,30,SCMorseRandom);
- [ [ 6, [ 1, 2, 2, 1 ], 27 ], [ 8, [ 1, 3, 3, 1 ], 2 ], 
-   [ 10, [ 2, 4, 3, 1 ], 1 ] ]
+ [ [ 6, [ 1, 2, 2, 1 ], 27 ], [ 8, [ 1, 3, 3, 1 ], 3 ] ]
  gap&gt; f:=SCMorseSpec(c,30,SCMorseRandomLex);
- [ [ 6, [ 1, 2, 2, 1 ], 30 ] ]
+ [ [ 6, [ 1, 2, 2, 1 ], 29 ], [ 8, [ 1, 3, 3, 1 ], 1 ] ]
  gap&gt; f:=SCMorseSpec(c,30,SCMorseRandomRevLex);
- [ [ 10, [ 1, 4, 4, 1 ], 30 ] ]
+ [ [ 6, [ 1, 2, 2, 1 ], 7 ], [ 8, [ 1, 3, 3, 1 ], 9 ], 
+   [ 8, [ 2, 3, 2, 1 ], 1 ], [ 10, [ 1, 4, 4, 1 ], 11 ], 
+   [ 12, [ 1, 5, 5, 1 ], 1 ], [ 14, [ 1, 6, 6, 1 ], 1 ] ]
  gap&gt; f:=SCMorseSpec(c,30,SCMorseUST);
- [ [ 6, [ 1, 2, 2, 1 ], 14 ], [ 8, [ 1, 3, 3, 1 ], 13 ], 
-   [ 10, [ 1, 4, 4, 1 ], 3 ] ]
+ [ [ 6, [ 1, 2, 2, 1 ], 18 ], [ 8, [ 1, 3, 3, 1 ], 8 ], 
+   [ 10, [ 1, 4, 4, 1 ], 3 ], [ 12, [ 1, 5, 5, 1 ], 1 ] ]
  </pre></div>
 
 <p><a id="X7AEB02327B49060B" name="X7AEB02327B49060B"></a></p>
@@ -330,9 +337,9 @@
  gap&gt; c:=SCSurface(1,false);;
  gap&gt; HD:=SCHasseDiagram(c);;
  gap&gt; stTop:=SCSpanningTreeRandom(HD,true);
- [ 2, 3, 5, 4, 8, 13, 12, 11, 7 ]
+ [ 3, 10, 13, 8, 1, 15, 12, 6, 14 ]
  gap&gt; stBot:=SCSpanningTreeRandom(HD,false);
- [ 14, 3, 7, 11, 2 ]
+ [ 10, 6, 9, 5, 13 ]
  </pre></div>
 
 <p><a id="X78D66254858CE901" name="X78D66254858CE901"></a></p>
@@ -342,7 +349,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomology</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p>Returns: a list of pairs of the form <code class="code">[ integer, list ]</code> upon success</p>
 
-<p>Computes the homology groups of a given simplicial complex <var class="Arg">complex</var> using <code class="func">SCMorseRandom</code> (<a href="chap12.html#X7E9FA762862B2AA2"><span class="RefLink">12.1-6</span></a>) to obtain a Morse function and <code class="code">SmithNormalFormIntegerMat</code>. Use <code class="func">SCHomologyEx</code> (<a href="chap12.html#X863AA5D481F78D84"><span class="RefLink">12.1-13</span></a>) to use alternative methods to compute discrete Morse functions (such as <code class="func">SCMorseEngstrom</code> (<a href="chap12.html#X7E2F0FD07838FCAF"><span class="RefLink">12.1-5</span></a>), or <code class="func">SCMorseUST</code> (<a href="chap12.html#X7AEB02327B49060B"><span class="RefLink">12.1-10</span></a>)) or the Smith normal form.</p>
+<p>Computes the homology groups of a given simplicial complex <var class="Arg">complex</var> using <code class="func">SCMorseRandom</code> (<a href="chap12.html#X7E9FA762862B2AA2"><span class="RefLink">12.1-6</span></a>) to obtain a Morse function and <code class="code">SmithNormalFormIntegerMat</code>. Use <code class="func">SCHomologyEx</code> (<a href="chap12.html#X863AA5D481F78D84"><span class="RefLink">12.1-13</span></a>) to use alternative methods to compute discrete Morse functions (such as <code class="func">SCMorseEngstroem</code> (<a href="chap12.html#X7FC55A3082BC56FD"><span class="RefLink">12.1-5</span></a>), or <code class="func">SCMorseUST</code> (<a href="chap12.html#X7AEB02327B49060B"><span class="RefLink">12.1-10</span></a>)) or the Smith normal form.</p>
 
 <p>The output is a list of homology groups of the form <span class="SimpleMath">[H_0,....,H_d]</span>, where <span class="SimpleMath">d</span> is the dimension of <var class="Arg">complex</var>. The format of the homology groups <span class="SimpleMath">H_i</span> is given in terms of their maximal cyclic subgroups, i.e. a homology group <span class="SimpleMath">H_i≅ Z^f + Z / t_1 Z × dots × Z / t_n Z</span> is returned in form of a list <span class="SimpleMath">[ f, [t_1,...,t_n] ]</span>, where <span class="SimpleMath">f</span> is the (integer) free part of <span class="SimpleMath">H_i</span> and <span class="SimpleMath">t_i</span> denotes the torsion parts of <span class="SimpleMath">H_i</span> ordered in weakly increasing size.</p>
 
@@ -376,23 +383,23 @@
  gap&gt; c := SCSeriesHomologySphere(2,3,5);;
  gap&gt; SCHomologyEx(c,SCMorseRandom,SmithNormalFormIntegerMat); time;
  [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
- 48
+ 49
  gap&gt; c := SCSeriesHomologySphere(2,3,5);;
  gap&gt; SCHomologyEx(c,SCMorseRandomLex,SmithNormalFormIntegerMat); time;
  [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
- 48
+ 57
  gap&gt; c := SCSeriesHomologySphere(2,3,5);;
  gap&gt; SCHomologyEx(c,SCMorseRandomRevLex,SmithNormalFormIntegerMat); time;
  [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
- 60
+ 51
  gap&gt; c := SCSeriesHomologySphere(2,3,5);;
- gap&gt; SCHomologyEx(c,SCMorseEngstrom,SmithNormalFormIntegerMat); time;
+ gap&gt; SCHomologyEx(c,SCMorseEngstroem,SmithNormalFormIntegerMat); time;
  [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
- 108
+ 116
  gap&gt; c := SCSeriesHomologySphere(2,3,5);;
  gap&gt; SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;
  [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
- 136
+ 153
  </pre></div>
 
 <p><a id="X8067B00B7C959E2D" name="X8067B00B7C959E2D"></a></p>

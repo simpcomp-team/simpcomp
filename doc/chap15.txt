@@ -82,6 +82,7 @@
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCMailSetAddress("johndoe@somehost"); #enables mail notification[128X[104X
     [4X[28X true[128X[104X
+    [4X[28X Please install an MTA on this system if you want to use sendmail![128X[104X
     [4X[28X gap> SCMailIsEnabled();[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
@@ -121,7 +122,6 @@
     [4X[28X gap> SCMailIsEnabled();[128X[104X
     [4X[28X true[128X[104X
     [4X[28X gap> SCMailSend("Hello, this is simpcomp.");[128X[104X
-    [4X[28X WARNING: gnome-keyring:: couldn't connect to: /tmp/keyring-QOH5AH/pkcs11: No such file or directory[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -208,7 +208,7 @@
     [4X[28X Line 1220 : [128X[104X
     [4X[28X + simpcomp package test[128X[104X
     [4X[28X Line 1221 : [128X[104X
-    [4X[28X + GAP4stones: 81665[128X[104X
+    [4X[28X + GAP4stones: 51075[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X

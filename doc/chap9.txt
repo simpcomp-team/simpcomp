@@ -258,9 +258,6 @@
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> SCIsKStackedSphere(l,1);[128X[104X
-    [4X[28X #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...[128X[104X
-    [4X[28X #I  SCIsKStackedSphere: try 1/50[128X[104X
-    [4X[28X #I  SCIsKStackedSphere: complex is a 1-stacked sphere.[128X[104X
     [4X[28X [ true, [SimplicialComplex[128X[104X
     [4X[28X     [128X[104X
     [4X[28X      Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X

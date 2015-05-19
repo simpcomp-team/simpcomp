@@ -78,8 +78,8 @@
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
     [4X[28X [128X[104X
-    [4X[28X  Name="unnamed complex 3874 \ star([ 1 ]) in unnamed complex 3874 cup unnamed \[128X[104X
-    [4X[28X complex 3878 cup unnamed complex 3876"[128X[104X
+    [4X[28X  Name="unnamed complex 4084 \ star([ 1 ]) in unnamed complex 4084 cup unnamed \[128X[104X
+    [4X[28X complex 4088 cup unnamed complex 4086"[128X[104X
     [4X[28X  Dim=4[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
