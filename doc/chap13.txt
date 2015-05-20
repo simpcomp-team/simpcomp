@@ -62,7 +62,7 @@
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
-    [4X[28X Path="/home/jonathan/apps/gap4r5/pkg/simpcomp/complexes/"[128X[104X
+    [4X[28X Path="/home/felix/Downloads/gap4r7/pkg/simpcomp/complexes/"[128X[104X
     [4X[28X ][128X[104X
     [4X[28X gap> SCLib.Size;[128X[104X
     [4X[28X 7649[128X[104X
@@ -122,17 +122,21 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> myRepository:=SCLibInit("~/myrepository");[128X[104X
+    [4X[28X #I  SCLibInit: made directory "/home/felix/myrepository/" for user library.[128X[104X
+    [4X[28X #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.[128X[104X
+    [4X[28X #I  SCLibUpdate: rebuilding index for /home/felix/myrepository/.[128X[104X
+    [4X[28X #I  SCLibUpdate: rebuilding index done.[128X[104X
     [4X[28X [Simplicial complex library. Properties:[128X[104X
     [4X[28X CalculateIndexAttributes=true[128X[104X
-    [4X[28X Number of complexes in library=6[128X[104X
+    [4X[28X Number of complexes in library=0[128X[104X
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
-    [4X[28X Path="/home/jonathan/myrepository/"[128X[104X
+    [4X[28X Path="/home/felix/myrepository/"[128X[104X
     [4X[28X ][128X[104X
     [4X[28X gap> complex:=SCBdCrossPolytope(4);;[128X[104X
     [4X[28X gap> SCLibAdd(myRepository,complex);[128X[104X
-    [4X[28X #I  SCLibAdd: saving complex to file "complex_2015-05-20_00-57-15.scb".[128X[104X
+    [4X[28X #I  SCLibAdd: saving complex to file "complex_2015-05-19_20-01-38.scb".[128X[104X
     [4X[28X true[128X[104X
     [4X[28X gap> myRepository.Add(complex);; # alternative syntax[128X[104X
     [4X[28X [128X[104X
@@ -167,18 +171,13 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> myRepository:=SCLibInit("~/myrepository");[128X[104X
-    [4X[28X Found a self-reference to an unknown object![128X[104X
-    [4X[28X #I  IO_Unpicklers.SCLR: Error while unpicking library repository. Delete file complexes.idx and complexes.idxb and recreate them with SCLibInit.[128X[104X
-    [4X[28X #I  SCIntFunc.SCLibInit: error loading binary index  -- trying to reconstruct it.[128X[104X
-    [4X[28X #I  SCLibUpdate: rebuilding index for /home/jonathan/myrepository/.[128X[104X
-    [4X[28X #I  SCLibUpdate: rebuilding index done.[128X[104X
     [4X[28X [Simplicial complex library. Properties:[128X[104X
     [4X[28X CalculateIndexAttributes=true[128X[104X
-    [4X[28X Number of complexes in library=7[128X[104X
+    [4X[28X Number of complexes in library=1[128X[104X
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
-    [4X[28X Path="/home/jonathan/myrepository/"[128X[104X
+    [4X[28X Path="/home/felix/myrepository/"[128X[104X
     [4X[28X ][128X[104X
     [4X[28X gap> SCLibAdd(myRepository,SCSimplex(2));;[128X[104X
     [4X[28X gap> SCLibDelete(myRepository,1);[128X[104X
@@ -274,11 +273,11 @@
     [4X[28X gap> myRepository:=SCLibInit("~/myrepository");[128X[104X
     [4X[28X [Simplicial complex library. Properties:[128X[104X
     [4X[28X CalculateIndexAttributes=true[128X[104X
-    [4X[28X Number of complexes in library=7[128X[104X
+    [4X[28X Number of complexes in library=1[128X[104X
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
-    [4X[28X Path="/home/jonathan/myrepository/"[128X[104X
+    [4X[28X Path="/home/felix/myrepository/"[128X[104X
     [4X[28X ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -379,7 +378,7 @@
   [4X[32X  Example  [32X[104X
     [4X[28X gap> myRepository:=SCLibInit("~/repository");;[128X[104X
     [4X[28X gap> SCLibUpdate(myRepository);[128X[104X
-    [4X[28X #I  SCLibUpdate: rebuilding index for /home/jonathan/repository/.[128X[104X
+    [4X[28X #I  SCLibUpdate: rebuilding index for /home/felix/repository/.[128X[104X
     [4X[28X #I  SCLibUpdate: rebuilding index done.[128X[104X
     [4X[28X [Simplicial complex library. Properties:[128X[104X
     [4X[28X CalculateIndexAttributes=true[128X[104X
@@ -387,7 +386,7 @@
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
-    [4X[28X Path="/home/jonathan/repository/"[128X[104X
+    [4X[28X Path="/home/felix/repository/"[128X[104X
     [4X[28X ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -413,7 +412,7 @@
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
-    [4X[28X Path="/home/jonathan/apps/gap4r5/pkg/simpcomp/complexes/"[128X[104X
+    [4X[28X Path="/home/felix/Downloads/gap4r7/pkg/simpcomp/complexes/"[128X[104X
     [4X[28X ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
