@@ -6,10 +6,10 @@
                      [1XA [5XGAP[105X toolbox for simplicial complexes[101X
   
   
-                                 Version 2.0.1
+                                 Version 2.1.0
   
   
-                                    Mai 2015
+                                    May 2015
   
   
                                Felix Effenberger

@@ -1061,8 +1061,8 @@ end;
 ## where <M>d</M> is the dimension of <Arg>complex</Arg>. The format of the 
 ## homology groups <M>H_i</M> is given in terms of their maximal cyclic 
 ## subgroups, i.e. a homology group 
-## <M>H_i\cong \mathbb{Z}^f + \mathbb{Z} / t_1 \mathbb{Z} \times \dots 
-## \times \mathbb{Z} / t_n \mathbb{Z}</M> is returned in form of a list 
+## <M>H_i\cong \mathbb{Z}^f + \mathbb{Z} / t_1 \mathbb{Z} \times \dots \times \mathbb{Z} / t_n \mathbb{Z}</M> 
+## is returned in form of a list 
 ## <M>[ f, [t_1,...,t_n] ]</M>, where <M>f</M> is the (integer) 
 ## free part of <M>H_i</M> and <M>t_i</M> denotes the torsion parts of 
 ## <M>H_i</M> ordered in weakly increasing size.<P/>
@@ -1198,13 +1198,14 @@ end);
 ## functions (such as <Ref Func="SCMorseEngstroem"/>, or <Ref Func="SCMorseUST"/>) or
 ## the Smith normal form. <P/>
 ##
-## The output is a list of homology groups of the form <M>[H_0,....,H_d]</M>, where 
-## <M>d</M> is the dimension of <Arg>complex</Arg>. The format of the homology groups 
-## <M>H_i</M> is given in terms of their maximal cyclic subgroups, i.e. a homology group 
+## The output is a list of homology groups of the form <M>[H_0,....,H_d]</M>, 
+## where <M>d</M> is the dimension of <Arg>complex</Arg>. The format of the 
+## homology groups <M>H_i</M> is given in terms of their maximal cyclic 
+## subgroups, i.e. a homology group 
 ## <M>H_i\cong \mathbb{Z}^f + \mathbb{Z} / t_1 \mathbb{Z} \times \dots \times \mathbb{Z} / t_n \mathbb{Z}</M> 
-## is returned in form of a list <M>[ f, [t_1,...,t_n] ]</M>, where <M>f</M> is the (integer) 
-## free part of <M>H_i</M> and <M>t_i</M> denotes the torsion parts of <M>H_i</M> ordered in 
-## weakly increasing size.<P/>
+## is returned in form of a list <M>[ f, [t_1,...,t_n] ]</M>, where <M>f</M> 
+## is the (integer) free part of <M>H_i</M> and <M>t_i</M> denotes the torsion 
+## parts of <M>H_i</M> ordered in weakly increasing size.<P/>
 ## <Example>
 ## gap> c:=SCSeriesTorus(2);;
 ## gap> f:=SCHomology(c);
@@ -1235,11 +1236,12 @@ end);
 ## <Returns>a list of edges upon success, <C>fail</C> otherweise.</Returns>
 ## <Description>
 ## Computes a uniformly sampled spanning tree of the complex belonging
-## to the Hasse diagram <Arg>HD</Arg> using Wilson's algorithm (see <Cite Key="Wilson96UST" />). 
+## to the Hasse diagram <Arg>HD</Arg> using Wilson's algorithm (see 
+## <Cite Key="Wilson96UST" />). 
 ## If <Arg>top = true</Arg> the output is a
 ## spanning tree of the dual graph of the underlying complex. If
-## <Arg>top = false</Arg> the output is a spanning tree of the primal graph (i.e.,
-## the <M>1</M>-skeleton.
+## <Arg>top = false</Arg> the output is a spanning tree of the primal graph 
+## (i.e., the <M>1</M>-skeleton.
 ## <Example>
 ## gap> c:=SCSurface(1,false);;
 ## gap> HD:=SCHasseDiagram(c);;
@@ -1518,12 +1520,13 @@ end;
 ## <Func Name="SCIsSimplyConnectedEx" Arg="c [, top, tries]"/>
 ## <Returns>a boolean value upon success, <C>fail</C> otherweise.</Returns>
 ## <Description>
-## Computes if the <C>SCSimplicialComplex</C> object <Arg>c</Arg> is simply connected.
-## The optional boolean argument <Arg>top</Arg> determines whether a spanning graph in the dual 
-## or the primal graph of <Arg>c</Arg> will be used for a collapsing sequence.
-## The optional positive integer argument <Arg>tries</Arg> determines the number of
-## times the algorithm will try to find a collapsing sequence. The algorithm
-## is a heuristic method and is described in <Cite Key="Paixao143SphereRec" />.
+## Computes if the <C>SCSimplicialComplex</C> object <Arg>c</Arg> is simply 
+## connected. The optional boolean argument <Arg>top</Arg> determines whether 
+## a spanning graph in the dual or the primal graph of <Arg>c</Arg> will be 
+## used for a collapsing sequence. The optional positive integer argument 
+## <Arg>tries</Arg> determines the number of times the algorithm will try to 
+## find a collapsing sequence. The algorithm is a heuristic method and is 
+## described in <Cite Key="Paixao143SphereRec" />.
 ## <Example>
 ## gap> rp2:=SCSurface(1,false);;
 ## gap> SCIsSimplyConnectedEx(rp2);
@@ -1643,7 +1646,8 @@ function(arg)
       return true;
     else
       Info(InfoSimpcomp,2,"SCIsSimplyConnectedEx: Could not determine ",
-        "collapsing seuqence, build fundamental group from Morse function instead.");
+        "collapsing seuqence, build fundamental group from Morse function ",
+        "instead.");
       if [] in f[1] then
         Remove(f[1],Position(f[1],[]));
       fi;
@@ -1808,9 +1812,10 @@ end);
 ## <Func Name="SCIsSimplyConnected" Arg="c"/>
 ## <Returns>a boolean value upon success, <C>fail</C> otherweise.</Returns>
 ## <Description>
-## Computes if the <C>SCSimplicialComplex</C> object <Arg>c</Arg> is simply connected.
-## The algorithm is a heuristic method and is described in <Cite Key="Paixao143SphereRec" />.
-## Internally calls <Ref Func="SCIsSimplyConnectedEx" />.
+## Computes if the <C>SCSimplicialComplex</C> object <Arg>c</Arg> is simply 
+## connected. The algorithm is a heuristic method and is described in 
+## <Cite Key="Paixao143SphereRec" />. Internally calls 
+## <Ref Func="SCIsSimplyConnectedEx" />.
 ## <Example>
 ## gap> rp2:=SCSurface(1,false);;
 ## gap> SCIsSimplyConnected(rp2);
@@ -1852,9 +1857,11 @@ end);
 ## not verified to be standard PL <M>4</M>-spheres and <Arg>c</Arg> is
 ## a combinatorial manifold modulo the smooth Poincare conjecture. 
 ## By default <Arg>quasi</Arg> is set to <C>false</C>. The algorithm
-## is a heuristic method and is described in <Cite Key="Paixao143SphereRec" /> in more detail.<P/>
+## is a heuristic method and is described in <Cite Key="Paixao143SphereRec" /> 
+## in more detail.<P/>
 ##
-## See <Ref Func="SCBistellarIsManifold" /> for an alternative method for manifold verification.
+## See <Ref Func="SCBistellarIsManifold" /> for an alternative method for 
+## manifold verification.
 ## <Example>
 ## gap> c:=SCBdCyclicPolytope(4,20);;
 ## gap> SCIsManifold(c);
@@ -2054,7 +2061,8 @@ end);
 ## <Func Name="SCIsManifold" Arg="c"/>
 ## <Returns>a boolean value upon success, <C>fail</C> otherweise.</Returns>
 ## <Description>
-## The algorithm is a heuristic method and is described in <Cite Key="Paixao143SphereRec" /> in more detail.
+## The algorithm is a heuristic method and is described in 
+## <Cite Key="Paixao143SphereRec" /> in more detail.
 ## Internally calls <Ref Func="SCIsManifoldEx" />.
 ## <Example>
 ## gap> c:=SCBdCyclicPolytope(4,20);;
@@ -2088,9 +2096,12 @@ end);
 ## is a topological sphere.
 ## In dimension <M>\neq 4</M> the algorithm determines whether <Arg>c</Arg>
 ## is PL-homeomorphic to the standard sphere. In dimension <M>4</M>
-## the PL type is not specified. The algorithm uses a result due to <Cite Key="Kirby77PLStructures" />
-## stating that, in dimension <M>\neq 4</M>, any simply connected homology sphere with PL structure
-## is a standard PL sphere. The function calls <Ref Meth="SCIsSimplyConnected" /> which uses
+## the PL type is not specified. The algorithm uses a result due to 
+## <Cite Key="Kirby77PLStructures" />
+## stating that, in dimension <M>\neq 4</M>, any simply connected homology 
+## sphere with PL structure
+## is a standard PL sphere. The function calls 
+## <Ref Meth="SCIsSimplyConnected" /> which uses
 ## a heuristic method described in <Cite Key="Paixao143SphereRec" />.
 ## <Example>
 ## gap> c:=SCBdCyclicPolytope(4,20);;

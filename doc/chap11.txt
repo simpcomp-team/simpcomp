@@ -130,7 +130,7 @@
     [4X[28X #I  SCIsTight: processed 30000 of 40320 rsl-functions so far, all perfect.[128X[104X
     [4X[28X #I  SCIsTight: processed 40000 of 40320 rsl-functions so far, all perfect.[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X 10230[128X[104X
+    [4X[28X 7936[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -149,7 +149,7 @@
     [4X[28X   98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, [128X[104X
     [4X[28X   113, 114, 115, 116, 117, 118, 119, 120 ], complex not tight.[128X[104X
     [4X[28X false[128X[104X
-    [4X[28X 17[128X[104X
+    [4X[28X 12[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -244,6 +244,8 @@
     [4X[28X gap> c.IsTight;                [128X[104X
     [4X[28X #I  SCIsInKd: complex has transitive automorphism group, only checking one link.[128X[104X
     [4X[28X #I  SCIsInKd: checking link 1/1[128X[104X
+    [4X[28X #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...[128X[104X
+    [4X[28X #I  SCIsKStackedSphere: try 1/50[128X[104X
     [4X[28X #I  round 0[128X[104X
     [4X[28X Reduced complex, F: [ 9, 26, 34, 17 ][128X[104X
     [4X[28X #I  round 1[128X[104X
@@ -255,6 +257,7 @@
     [4X[28X #I  round 4[128X[104X
     [4X[28X Reduced complex, F: [ 5, 10, 10, 5 ][128X[104X
     [4X[28X #I  SCReduceComplexEx: computed locally minimal complex after 5 rounds.[128X[104X
+    [4X[28X #I  SCIsKStackedSphere: complex is a 1-stacked sphere.[128X[104X
     [4X[28X #I  SCIsInKd: complex has transitive automorphism group, all links are 1-stacked.[128X[104X
     [4X[28X #I  SCIsTight: complex is in class K(1) and 2-neighborly, thus tight.[128X[104X
     [4X[28X true[128X[104X

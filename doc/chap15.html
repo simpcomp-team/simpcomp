@@ -127,7 +127,6 @@ Reduced complex, F: [ 4, 6, 4 ]
 <div class="example"><pre>
  gap&gt; SCMailSetAddress("johndoe@somehost"); #enables mail notification
  true
- Please install an MTA on this system if you want to use sendmail!
  gap&gt; SCMailIsEnabled();
  true
  </pre></div>
@@ -144,7 +143,7 @@ Reduced complex, F: [ 4, 6, 4 ]
 
 <div class="example"><pre>
  gap&gt; SCMailIsPending();
- false
+ true
  </pre></div>
 
 <p><a id="X7FEA17D37B36BBD4" name="X7FEA17D37B36BBD4"></a></p>
@@ -163,7 +162,8 @@ Reduced complex, F: [ 4, 6, 4 ]
  gap&gt; SCMailIsEnabled();
  true
  gap&gt; SCMailSend("Hello, this is simpcomp.");
- true
+ mail: cannot send message: Process exited with a non-zero status
+ false
  </pre></div>
 
 <p><a id="X82DA7B2682F5F117" name="X82DA7B2682F5F117"></a></p>
@@ -178,7 +178,8 @@ Reduced complex, F: [ 4, 6, 4 ]
 
 <div class="example"><pre>
  gap&gt; SCMailSendPending();
- true
+ mail: cannot send message: Process exited with a non-zero status
+ false
  </pre></div>
 
 <p><a id="X8771F97F7E78B7AC" name="X8771F97F7E78B7AC"></a></p>
@@ -249,7 +250,7 @@ Reduced complex, F: [ 4, 6, 4 ]
  Line 1220 : 
  + simpcomp package test
  Line 1221 : 
- + GAP4stones: 51075
+ + GAP4stones: 69079
  true
  </pre></div>
 

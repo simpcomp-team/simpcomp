@@ -130,7 +130,7 @@
 \contentsline {subsection}{\numberline {6.6.7}\leavevmode {\color {Chapter }SCDifferenceCycleCompress}}{76}{subsection.6.6.7}
 \contentsline {subsection}{\numberline {6.6.8}\leavevmode {\color {Chapter }SCDifferenceCycleExpand}}{77}{subsection.6.6.8}
 \contentsline {subsection}{\numberline {6.6.9}\leavevmode {\color {Chapter }SCStronglyConnectedComponents}}{77}{subsection.6.6.9}
-\contentsline {section}{\numberline {6.7}\leavevmode {\color {Chapter }Simplicial complexes from transitive permutation groups}}{78}{section.6.7}
+\contentsline {section}{\numberline {6.7}\leavevmode {\color {Chapter }Simplicial complexes from transitive permutation groups}}{77}{section.6.7}
 \contentsline {subsection}{\numberline {6.7.1}\leavevmode {\color {Chapter }SCsFromGroupExt}}{78}{subsection.6.7.1}
 \contentsline {subsection}{\numberline {6.7.2}\leavevmode {\color {Chapter }SCsFromGroupByTransitivity}}{79}{subsection.6.7.2}
 \contentsline {section}{\numberline {6.8}\leavevmode {\color {Chapter }The classification of cyclic combinatorial 3-manifolds}}{80}{section.6.8}
@@ -141,9 +141,9 @@
 \contentsline {subsection}{\numberline {6.8.5}\leavevmode {\color {Chapter }SCCyclic3MfldListOfGivenType}}{81}{subsection.6.8.5}
 \contentsline {section}{\numberline {6.9}\leavevmode {\color {Chapter }Computing properties of simplicial complexes}}{82}{section.6.9}
 \contentsline {subsection}{\numberline {6.9.1}\leavevmode {\color {Chapter }SCAltshulerSteinberg}}{82}{subsection.6.9.1}
-\contentsline {subsection}{\numberline {6.9.2}\leavevmode {\color {Chapter }SCAutomorphismGroup}}{83}{subsection.6.9.2}
+\contentsline {subsection}{\numberline {6.9.2}\leavevmode {\color {Chapter }SCAutomorphismGroup}}{82}{subsection.6.9.2}
 \contentsline {subsection}{\numberline {6.9.3}\leavevmode {\color {Chapter }SCAutomorphismGroupInternal}}{83}{subsection.6.9.3}
-\contentsline {subsection}{\numberline {6.9.4}\leavevmode {\color {Chapter }SCAutomorphismGroupSize}}{84}{subsection.6.9.4}
+\contentsline {subsection}{\numberline {6.9.4}\leavevmode {\color {Chapter }SCAutomorphismGroupSize}}{83}{subsection.6.9.4}
 \contentsline {subsection}{\numberline {6.9.5}\leavevmode {\color {Chapter }SCAutomorphismGroupStructure}}{84}{subsection.6.9.5}
 \contentsline {subsection}{\numberline {6.9.6}\leavevmode {\color {Chapter }SCAutomorphismGroupTransitivity}}{84}{subsection.6.9.6}
 \contentsline {subsection}{\numberline {6.9.7}\leavevmode {\color {Chapter }SCBoundary}}{84}{subsection.6.9.7}
@@ -153,16 +153,16 @@
 \contentsline {subsection}{\numberline {6.9.11}\leavevmode {\color {Chapter }SCDim}}{86}{subsection.6.9.11}
 \contentsline {subsection}{\numberline {6.9.12}\leavevmode {\color {Chapter }SCDualGraph}}{87}{subsection.6.9.12}
 \contentsline {subsection}{\numberline {6.9.13}\leavevmode {\color {Chapter }SCEulerCharacteristic}}{87}{subsection.6.9.13}
-\contentsline {subsection}{\numberline {6.9.14}\leavevmode {\color {Chapter }SCFVector}}{88}{subsection.6.9.14}
+\contentsline {subsection}{\numberline {6.9.14}\leavevmode {\color {Chapter }SCFVector}}{87}{subsection.6.9.14}
 \contentsline {subsection}{\numberline {6.9.15}\leavevmode {\color {Chapter }SCFaceLattice}}{88}{subsection.6.9.15}
 \contentsline {subsection}{\numberline {6.9.16}\leavevmode {\color {Chapter }SCFaceLatticeEx}}{88}{subsection.6.9.16}
 \contentsline {subsection}{\numberline {6.9.17}\leavevmode {\color {Chapter }SCFaces}}{88}{subsection.6.9.17}
-\contentsline {subsection}{\numberline {6.9.18}\leavevmode {\color {Chapter }SCFacesEx}}{89}{subsection.6.9.18}
+\contentsline {subsection}{\numberline {6.9.18}\leavevmode {\color {Chapter }SCFacesEx}}{88}{subsection.6.9.18}
 \contentsline {subsection}{\numberline {6.9.19}\leavevmode {\color {Chapter }SCFacets}}{89}{subsection.6.9.19}
 \contentsline {subsection}{\numberline {6.9.20}\leavevmode {\color {Chapter }SCFacetsEx}}{89}{subsection.6.9.20}
 \contentsline {subsection}{\numberline {6.9.21}\leavevmode {\color {Chapter }SCFpBettiNumbers}}{89}{subsection.6.9.21}
-\contentsline {subsection}{\numberline {6.9.22}\leavevmode {\color {Chapter }SCFundamentalGroup}}{90}{subsection.6.9.22}
-\contentsline {subsection}{\numberline {6.9.23}\leavevmode {\color {Chapter }SCGVector}}{91}{subsection.6.9.23}
+\contentsline {subsection}{\numberline {6.9.22}\leavevmode {\color {Chapter }SCFundamentalGroup}}{89}{subsection.6.9.22}
+\contentsline {subsection}{\numberline {6.9.23}\leavevmode {\color {Chapter }SCGVector}}{90}{subsection.6.9.23}
 \contentsline {subsection}{\numberline {6.9.24}\leavevmode {\color {Chapter }SCGenerators}}{91}{subsection.6.9.24}
 \contentsline {subsection}{\numberline {6.9.25}\leavevmode {\color {Chapter }SCGeneratorsEx}}{92}{subsection.6.9.25}
 \contentsline {subsection}{\numberline {6.9.26}\leavevmode {\color {Chapter }SCHVector}}{93}{subsection.6.9.26}
@@ -216,7 +216,7 @@
 \contentsline {subsection}{\numberline {6.10.17}\leavevmode {\color {Chapter }SCShellingExt}}{114}{subsection.6.10.17}
 \contentsline {subsection}{\numberline {6.10.18}\leavevmode {\color {Chapter }SCShellings}}{114}{subsection.6.10.18}
 \contentsline {subsection}{\numberline {6.10.19}\leavevmode {\color {Chapter }SCSpan}}{115}{subsection.6.10.19}
-\contentsline {subsection}{\numberline {6.10.20}\leavevmode {\color {Chapter }SCSuspension}}{115}{subsection.6.10.20}
+\contentsline {subsection}{\numberline {6.10.20}\leavevmode {\color {Chapter }SCSuspension}}{116}{subsection.6.10.20}
 \contentsline {subsection}{\numberline {6.10.21}\leavevmode {\color {Chapter }SCUnion}}{117}{subsection.6.10.21}
 \contentsline {subsection}{\numberline {6.10.22}\leavevmode {\color {Chapter }SCVertexIdentification}}{117}{subsection.6.10.22}
 \contentsline {subsection}{\numberline {6.10.23}\leavevmode {\color {Chapter }SCWedge}}{117}{subsection.6.10.23}
@@ -297,12 +297,12 @@
 \contentsline {section}{\numberline {12.1}\leavevmode {\color {Chapter }Functions using discrete Morse theory}}{166}{section.12.1}
 \contentsline {subsection}{\numberline {12.1.1}\leavevmode {\color {Chapter }SCCollapseGreedy}}{166}{subsection.12.1.1}
 \contentsline {subsection}{\numberline {12.1.2}\leavevmode {\color {Chapter }SCCollapseLex}}{167}{subsection.12.1.2}
-\contentsline {subsection}{\numberline {12.1.3}\leavevmode {\color {Chapter }SCCollapseRevLex}}{167}{subsection.12.1.3}
+\contentsline {subsection}{\numberline {12.1.3}\leavevmode {\color {Chapter }SCCollapseRevLex}}{168}{subsection.12.1.3}
 \contentsline {subsection}{\numberline {12.1.4}\leavevmode {\color {Chapter }SCHasseDiagram}}{168}{subsection.12.1.4}
-\contentsline {subsection}{\numberline {12.1.5}\leavevmode {\color {Chapter }SCMorseEngstrom}}{169}{subsection.12.1.5}
+\contentsline {subsection}{\numberline {12.1.5}\leavevmode {\color {Chapter }SCMorseEngstroem}}{169}{subsection.12.1.5}
 \contentsline {subsection}{\numberline {12.1.6}\leavevmode {\color {Chapter }SCMorseRandom}}{169}{subsection.12.1.6}
 \contentsline {subsection}{\numberline {12.1.7}\leavevmode {\color {Chapter }SCMorseRandomLex}}{169}{subsection.12.1.7}
-\contentsline {subsection}{\numberline {12.1.8}\leavevmode {\color {Chapter }SCMorseRandomRevLex}}{169}{subsection.12.1.8}
+\contentsline {subsection}{\numberline {12.1.8}\leavevmode {\color {Chapter }SCMorseRandomRevLex}}{170}{subsection.12.1.8}
 \contentsline {subsection}{\numberline {12.1.9}\leavevmode {\color {Chapter }SCMorseSpec}}{170}{subsection.12.1.9}
 \contentsline {subsection}{\numberline {12.1.10}\leavevmode {\color {Chapter }SCMorseUST}}{170}{subsection.12.1.10}
 \contentsline {subsection}{\numberline {12.1.11}\leavevmode {\color {Chapter }SCSpanningTreeRandom}}{171}{subsection.12.1.11}

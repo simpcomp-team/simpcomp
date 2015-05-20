@@ -35,7 +35,7 @@
 ## <#Include Label="SCIsSimplyConnected"/>
 ## <#Include Label="SCIsSimplyConnectedEx"/>
 ## <#Include Label="SCIsSphere"/>
-## <#Include Label="SCIsManifoldNew"/>
+## <#Include Label="SCIsManifold"/>
 ## <#Include Label="SCIsManifoldEx"/>
 ##
 ## </Section>

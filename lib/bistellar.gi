@@ -13,19 +13,38 @@
 ## <ManSection>
 ## <Var Name="SCBistellarOptions"/>
 ## <Description>
-## Record of global variables to adjust output an behavior of bistellar moves in <Ref Func="SCIntFunc.SCChooseMove"/> and <Ref Func="SCReduceComplexEx"/> respectively.
+## Record of global variables to adjust output an behavior of bistellar moves 
+## in <Ref Func="SCIntFunc.SCChooseMove"/> and <Ref Func="SCReduceComplexEx"/> 
+## respectively.
 ## <Enum>
-## <Item><C>BaseRelaxation</C>: determines the length of the relaxation period. Default: <M>3</M></Item>
-## <Item><C>BaseHeating</C>: determines the length of the heating period. Default: <M>4</M></Item>
-## <Item><C>Relaxation</C>: value of the current relaxation period. Default: <M>0</M></Item>
-## <Item><C>Heating</C>: value of the current heating period. Default: <M>0</M></Item>
-## <Item><C>MaxRounds</C>: maximal over all number of bistellar flips that will be performed. Default: <M>500000</M></Item>
-## <Item><C>MaxInterval</C>: maximal number of bistellar flips that will be performed without a change of the <M>f</M>-vector of the moved complex. Default: <M>100000</M></Item>
-## <Item><C>Mode</C>: flip mode, <M>0</M>=reducing, <M>1</M>=comparing, <M>2</M>=reduce as sub-complex, <M>3</M>=randomize. Default: <M>0</M> </Item>
-## <Item><C>WriteLevel</C>: <M>0</M>=no output, <M>1</M>=storing of every vertex minimal complex to user library, <M>2</M>=e-mail notification. Default: <M>1</M> </Item>
-## <Item><C>MailNotifyIntervall</C>: (minimum) number of seconds between two e-mail notifications. Default: <M>24 \cdot 60 \cdot 60</M> (one day)</Item>
-## <Item><C>MaxIntervalIsManifold</C>: maximal number of bistellar flips that will be performed without a change of the <M>f</M>-vector of a vertex link while trying to prove that the complex is a combinatorial manifold. Default: <M>5000</M></Item>
-## <Item><C>MaxIntervalRandomize := 50</C>: number of flips performed to create a randomized sphere. Default: <M>50</M></Item>
+## <Item><C>BaseRelaxation</C>: determines the length of the relaxation period. 
+## Default: <M>3</M></Item>
+## <Item><C>BaseHeating</C>: determines the length of the heating period. 
+## Default: <M>4</M></Item>
+## <Item><C>Relaxation</C>: value of the current relaxation period. Default: 
+## <M>0</M></Item>
+## <Item><C>Heating</C>: value of the current heating period. Default: 
+## <M>0</M></Item>
+## <Item><C>MaxRounds</C>: maximal over all number of bistellar flips that 
+## will be performed. Default: <M>500000</M></Item>
+## <Item><C>MaxInterval</C>: maximal number of bistellar flips that will be 
+## performed without a change of the <M>f</M>-vector of the moved complex. 
+## Default: <M>100000</M></Item>
+## <Item><C>Mode</C>: flip mode, <M>0</M>=reducing, <M>1</M>=comparing, 
+## <M>2</M>=reduce as sub-complex, <M>3</M>=randomize. Default: <M>0</M> 
+## </Item>
+## <Item><C>WriteLevel</C>: <M>0</M>=no output, <M>1</M>=storing of every 
+## vertex minimal complex to user library, <M>2</M>=e-mail notification. 
+## Default: <M>1</M> </Item>
+## <Item><C>MailNotifyIntervall</C>: (minimum) number of seconds between 
+## two e-mail notifications. Default: 
+## <M>24 \cdot 60 \cdot 60</M> (one day)</Item>
+## <Item><C>MaxIntervalIsManifold</C>: maximal number of bistellar flips that 
+## will be performed without a change of the <M>f</M>-vector of a vertex link 
+## while trying to prove that the complex is a combinatorial manifold. Default:
+## <M>5000</M></Item>
+## <Item><C>MaxIntervalRandomize := 50</C>: number of flips performed to create 
+## a randomized sphere. Default: <M>50</M></Item>
 ## </Enum>
 ## <Example>
 ## gap> SCBistellarOptions.BaseRelaxation;
@@ -119,7 +138,8 @@ SCIntFunc.IRawBistellarRMoves:=function(arg)
     mode, complex, hd, idx, i, j, base, tmp;
 
   if Size(arg)<3 or Size(arg)=4 or Size(arg)>5 then
-    Info(InfoSimpcomp,2,"SCIntFunc.IRawBistellarRMoves: number of arguments must be 3 or 5");
+    Info(InfoSimpcomp,2,"SCIntFunc.IRawBistellarRMoves: number of arguments ",
+      "must be 3 or 5");
     return fail;
   fi;
   r:=arg[1];
@@ -232,7 +252,8 @@ end;
 ## not (in this case, add them to "raw_options") (this routine is part
 ## of every r-move (at the end))
 ##
-SCIntFunc.BallBoundary:=function(max,faces,raw_options,ball_boundary_faces,mode,complex)
+SCIntFunc.BallBoundary:=function(max,faces,raw_options,ball_boundary_faces,
+    mode,complex)
 
   local element, j, count, linkface, maxface;
 
@@ -241,7 +262,8 @@ SCIntFunc.BallBoundary:=function(max,faces,raw_options,ball_boundary_faces,mode,
     element:=Union(element,j);
   od;
   if Size(element)>(max+1) or Size(element)<(max) then
-    Info(InfoSimpcomp,2,"SCIntFunc.BallBoundary: wrong ball boundary faces - wrong number\nof vertices: ",element,".");
+    Info(InfoSimpcomp,2,"SCIntFunc.BallBoundary: wrong ball boundary faces - ",
+      "wrong number\nof vertices: ",element,".");
     return fail;
   fi;
 
@@ -284,7 +306,8 @@ SCIntFunc.BallBoundary:=function(max,faces,raw_options,ball_boundary_faces,mode,
           fi;
         fi;
       else
-        Info(InfoSimpcomp,1,"SCIntFunc.BallBoundary: wrong flip added: ",[element,linkface]);
+        Info(InfoSimpcomp,1,"SCIntFunc.BallBoundary: wrong flip added: ",
+          [element,linkface]);
         return fail;
       fi;
     fi;
@@ -318,7 +341,8 @@ SCIntFunc.ZeroMove:=function(max,faces,F,randomelement,raw_options,mode,complex)
   elif Size(randomelement[2])=1 then
     maxvertex:=randomelement[2][1];
   else
-    Info(InfoSimpcomp,1,"SCIntFunc.ZeroMove: Ivalid type of 0_Move (Size(randomelement[2])>1)");
+    Info(InfoSimpcomp,1,"SCIntFunc.ZeroMove: Ivalid type of 0_Move ",
+      "(Size(randomelement[2])>1)");
     return fail;
   fi;
 
@@ -350,7 +374,8 @@ SCIntFunc.ZeroMove:=function(max,faces,F,randomelement,raw_options,mode,complex)
         od;
         SubtractSet(linkface,element);
 
-        if (linkface=[] and Size(A)=max) or (linkface<>[] and   Size(A)+Size(linkface)=max + 1) then
+        if (linkface=[] and Size(A)=max) or (linkface<>[] and 
+          Size(A)+Size(linkface)=max + 1) then
           if mode<>4 then
             AddSet(raw_options[max+1-Size(A)],[A,linkface]);
           else
@@ -359,7 +384,8 @@ SCIntFunc.ZeroMove:=function(max,faces,F,randomelement,raw_options,mode,complex)
             fi;
           fi;
         else
-          Info(InfoSimpcomp,1,"SCIntFunc.ZeroMove: wrong flip added: ",[A,linkface]);
+          Info(InfoSimpcomp,1,"SCIntFunc.ZeroMove: wrong flip added: ",
+            [A,linkface]);
         fi;
       fi;
     od;
@@ -373,7 +399,8 @@ SCIntFunc.ZeroMove:=function(max,faces,F,randomelement,raw_options,mode,complex)
     od;
 
     # ... and check if they can be added to "raw_options"
-    raw_options :=   SCIntFunc.BallBoundary(max,faces,raw_options,ball_boundary_faces,mode,complex);
+    raw_options :=   SCIntFunc.BallBoundary(max,faces,raw_options,
+      ball_boundary_faces,mode,complex);
     if raw_options=fail then
       return fail;
     fi;
@@ -416,12 +443,14 @@ SCIntFunc.Move:=function(r,max,faces,F,randomelement,raw_options,mode,complex)
         # update f-vector
         F[max-r+i]:=F[max-r+i]-1;
         if F[max-r+i]<>Size(faces[max-r+i]) then
-          Info(InfoSimpcomp,1,"SCIntFunc.Move: invalid flip was performed.\n",A," not in complex.");
+          Info(InfoSimpcomp,1,"SCIntFunc.Move: invalid flip was performed.\n",
+            A," not in complex.");
           return fail;
         fi;
         if raw_options<>[] then
           # update "raw_options"
-          # remove flips, which involve the recently removed element "A" of "faces"
+          # remove flips, which involve the recently removed element "A" 
+          # of "faces"
           for j in [1..Size(raw_options[r-i+1])] do
             if A=raw_options[r-i+1][j][1] then
               RemoveSet(raw_options[r-i+1],raw_options[r-i+1][j]);
@@ -446,7 +475,8 @@ SCIntFunc.Move:=function(r,max,faces,F,randomelement,raw_options,mode,complex)
         # update f-vector
         F[r+i+1]:=F[r+i+1]+1;
         if F[r+i+1]<>Size(faces[r+i+1]) then
-          Info(InfoSimpcomp,1,"SCIntFunc.Move: invalid flip was performed:\n",A," is already in mainComplex.");
+          Info(InfoSimpcomp,1,"SCIntFunc.Move: invalid flip was performed:\n",
+            A," is already in mainComplex.");
           return fail;
         fi;
         # if i is maximal, add A to the array "new_facets", if not, add it to
@@ -479,7 +509,8 @@ SCIntFunc.Move:=function(r,max,faces,F,randomelement,raw_options,mode,complex)
 
         if raw_options<>[] then
           # update options vector "raw_options"
-          if (linkface=[] and Size(A)=max) or (linkface<>[] and       Size(A)+Size(linkface)=max + 1) then
+          if (linkface=[] and Size(A)=max) or (linkface<>[] and 
+            Size(A)+Size(linkface)=max + 1) then
             if(mode<>4) then
               AddSet(raw_options[max-Size(A)+1],[A,linkface]);
             else
@@ -488,7 +519,8 @@ SCIntFunc.Move:=function(r,max,faces,F,randomelement,raw_options,mode,complex)
               fi;
             fi;
           else
-            Info(InfoSimpcomp,1,"SCIntFunc.Move: wrong flip added: ",[A,linkface]);
+            Info(InfoSimpcomp,1,"SCIntFunc.Move: wrong flip added: ",
+              [A,linkface]);
             return fail;
           fi;
         fi;
@@ -505,7 +537,8 @@ SCIntFunc.Move:=function(r,max,faces,F,randomelement,raw_options,mode,complex)
       od;
       SubtractSet(ball_boundary_faces,ball_interior_faces);
 
-      raw_options:=SCIntFunc.BallBoundary(max,faces,raw_options,ball_boundary_faces,mode,complex);
+      raw_options:=SCIntFunc.BallBoundary(max,faces,raw_options,
+        ball_boundary_faces,mode,complex);
       if raw_options=fail then
         return fail;
       fi;
@@ -521,9 +554,12 @@ end;
 ##<#GAPDoc Label="SCIsMovableComplex">
 ## <ManSection>
 ## <Meth Name="SCIsMovableComplex" Arg="complex"/>
-## <Returns> <K>true</K> or <K>false</K> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns> <K>true</K> or <K>false</K> upon success, <K>fail</K> otherwise.
+## </Returns>
 ## <Description>
-## Checks if a simplicial complex <Arg>complex</Arg> can be modified by bistellar moves, i. e. if it is a pure simplicial complex which fulfills the weak pseudomanifold property with empty boundary.<P/>
+## Checks if a simplicial complex <Arg>complex</Arg> can be modified by 
+## bistellar moves, i. e. if it is a pure simplicial complex which fulfills 
+## the weak pseudomanifold property with empty boundary.<P/>
 ## <Example>
 ## gap> c:=SCBdCrossPolytope(3);;
 ## gap> SCIsMovableComplex(c);
@@ -552,7 +588,8 @@ function(complex)
   fi;
   
   if dim < 1 then
-    Info(InfoSimpcomp,2,"SCIsMovableComplex: complex dimension is smaller than 1, no bistellar moves are possible.");
+    Info(InfoSimpcomp,2,"SCIsMovableComplex: complex dimension is smaller ",
+      "than 1, no bistellar moves are possible.");
     return false;
   fi;
 
@@ -590,10 +627,16 @@ end);
 ##<#GAPDoc Label="SCRMoves">
 ## <ManSection>
 ## <Meth Name="SCRMoves" Arg="complex, r"/>
-## <Returns> a list of pairs of the form <C>[ list, list ]</C>, <K>fail</K> otherwise.</Returns>
+## <Returns> a list of pairs of the form <C>[ list, list ]</C>, <K>fail</K> 
+## otherwise.</Returns>
 ## <Description>
-## A bistellar <M>r</M>-move of a <M>d</M>-dimensional combinatorial manifold <Arg>complex</Arg> is a <M>r</M>-face <M>m_1</M> together with a <M>d-r</M>-tuple <M>m_2</M> where <M>m_1</M> is a common face of exactly <M>(d+1-r)</M> facets and <M>m_2</M> is not a face of <Arg>complex</Arg>.<P/>
-## The <M>r</M>-move removes all facets containing <M>m_1</M> and replaces them by the <M>(r+1)</M> faces obtained by uniting <M>m_2</M> with any subset of <M>m_1</M> of order <M>r</M>.<P/>
+## A bistellar <M>r</M>-move of a <M>d</M>-dimensional combinatorial manifold 
+## <Arg>complex</Arg> is a <M>r</M>-face <M>m_1</M> together with a 
+## <M>d-r</M>-tuple <M>m_2</M> where <M>m_1</M> is a common face of exactly 
+## <M>(d+1-r)</M> facets and <M>m_2</M> is not a face of <Arg>complex</Arg>.<P/>
+## The <M>r</M>-move removes all facets containing <M>m_1</M> and replaces 
+## them by the <M>(r+1)</M> faces obtained by uniting <M>m_2</M> with any 
+## subset of <M>m_1</M> of order <M>r</M>.<P/>
 ## The resulting complex is PL-homeomorphic to <Arg>complex</Arg>. 
 ## <Example>
 ## gap> c:=SCBdCrossPolytope(3);;
@@ -634,7 +677,8 @@ function(complex,r)
     return options[r+1];
   else
     if not SCIsMovableComplex(complex) then
-      Info(InfoSimpcomp,2,"SCRMoves: argument should be a closed pseudomanifold");
+      Info(InfoSimpcomp,2,"SCRMoves: argument should be a closed ",
+        "pseudomanifold");
       return fail;
     fi;
     faces:=SCFaceLatticeEx(complex);
@@ -662,7 +706,8 @@ end);
 ##<#GAPDoc Label="SCMoves">
 ## <ManSection>
 ## <Meth Name="SCMoves" Arg="complex"/>
-## <Returns> a list of list of pairs of lists upon success, <K>fail</K> otherwise.</Returns>
+## <Returns> a list of list of pairs of lists upon success, <K>fail</K> 
+## otherwise.</Returns>
 ## <Description>
 ## See <Ref Meth="SCRMoves"/> for further information.
 ## <Example>
@@ -723,10 +768,16 @@ end);
 ##<#GAPDoc Label="SCMove">
 ## <ManSection>
 ## <Meth Name="SCMove" Arg="c, move"/>
-## <Returns> simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns> simplicial complex of type <C>SCSimplicialComplex</C> upon 
+## success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Applies the bistellar move <Arg>move</Arg> to a simplicial complex <Arg>c</Arg>. <Arg>move</Arg> is given as a <M>(r+1)</M>-tuple together with a <M>(d+1-r)</M>-tuple if <M>d</M> is the dimension of <Arg>c</Arg> and if <Arg>move</Arg> is a <M>r</M>-move. See <Ref Meth="SCRMoves"/> for detailed information about bistellar <M>r</M>-moves.<P/>
-## Note: <Arg>move</Arg> and <Arg>c</Arg> should be given in standard labeling to ensure a correct result.
+## Applies the bistellar move <Arg>move</Arg> to a simplicial complex 
+## <Arg>c</Arg>. <Arg>move</Arg> is given as a <M>(r+1)</M>-tuple together 
+## with a <M>(d+1-r)</M>-tuple if <M>d</M> is the dimension of <Arg>c</Arg> 
+## and if <Arg>move</Arg> is a <M>r</M>-move. See <Ref Meth="SCRMoves"/> for 
+## detailed information about bistellar <M>r</M>-moves.<P/>
+## Note: <Arg>move</Arg> and <Arg>c</Arg> should be given in standard 
+## labeling to ensure a correct result.
 ## <Example>
 ## gap> obj:=SC([[1,2],[2,3],[3,4],[4,1]]);
 ## [SimplicialComplex
@@ -763,7 +814,8 @@ InstallMethod(SCMove,
 [SCIsSimplicialComplex,IsList],
 function(c, move)
 
-  local dim, moves, r, i, j, faces, f, tmp, options, labels, invLabels, max, fvec, fl, complex;
+  local dim, moves, r, i, j, faces, f, tmp, options, labels, invLabels, max,
+    fvec, fl, complex;
 
   complex:=SCCopy(c);
   labels:=SCVertices(complex);
@@ -775,7 +827,8 @@ function(c, move)
     return fail;
   fi;
   if labels <> [1..max] then
-    Info(InfoSimpcomp,2,"SCMove: complex not in standard labeling, relabeling.");
+    Info(InfoSimpcomp,2,"SCMove: complex not in standard labeling, ",
+      "relabeling.");
     SCRelabelStandard(complex);
   fi;
   
@@ -865,12 +918,22 @@ end);
 ##<#GAPDoc Label="SCIntFunc.SCChooseMove">
 ## <ManSection>
 ## <Func Name="SCIntFunc.SCChooseMove" Arg="dim, moves"/>
-## <Returns> a bistellar move, i. e. a pair of lists upon success, <K>fail</K> otherwise.</Returns>
+## <Returns> a bistellar move, i. e. a pair of lists upon success, <K>fail</K> 
+## otherwise.</Returns>
 ## <Description>
-## Since the problem of finding a bistellar flip sequence that reduces a simplicial complex is undecidable, we have to use an heuristic approach to choose the next move. <P/> 
-## The implemented strategy <C>SCIntFunc.SCChooseMove</C> first tries to directly remove vertices, edges, <M>i</M>-faces in increasing dimension etc. If this is not possible it inserts high dimensional faces in decreasing co-dimension. To do this in an efficient way a number of parameters have to be adjusted, namely <C>SCBistellarOptions.BaseHeating</C> and <C>SCBistellarOptions.BaseRelaxation</C>. See <Ref Var="SCBistellarOptions"/> for further options.
+## Since the problem of finding a bistellar flip sequence that reduces a 
+## simplicial complex is undecidable, we have to use an heuristic approach to 
+## choose the next move. <P/> 
+## The implemented strategy <C>SCIntFunc.SCChooseMove</C> first tries to 
+## directly remove vertices, edges, <M>i</M>-faces in increasing dimension etc. 
+## If this is not possible it inserts high dimensional faces in decreasing 
+## co-dimension. To do this in an efficient way a number of parameters have 
+## to be adjusted, namely <C>SCBistellarOptions.BaseHeating</C> and 
+## <C>SCBistellarOptions.BaseRelaxation</C>. See 
+## <Ref Var="SCBistellarOptions"/> for further options.
 ## <P/>
-## If this strategy does not work for you, just implement a customized strategy and pass it to <Ref Func="SCReduceComplexEx"/>.<P/>
+## If this strategy does not work for you, just implement a customized 
+## strategy and pass it to <Ref Func="SCReduceComplexEx"/>.<P/>
 ## See <Ref Meth="SCRMoves" /> for further information.
 ## </Description>
 ## </ManSection>
@@ -986,7 +1049,8 @@ SCIntFunc.SCChooseMove:=
   else
   
     if SCBistellarOptions.Heating>0 then
-      if IsInt(SCBistellarOptions.Heating/((dim+2)*SCBistellarOptions.BaseHeating))=true and dim>2 then
+      if IsInt(SCBistellarOptions.Heating/((dim+2)*SCBistellarOptions.BaseHeating))=true 
+        and dim>2 then
         Append(options,moves[1]);
       else
         for i in [1..Int((dim+1)/2)] do
@@ -1050,9 +1114,11 @@ end;
 ##<#GAPDoc Label="SCExamineComplexBistellar">
 ## <ManSection>
 ## <Meth Name="SCExamineComplexBistellar" Arg="complex"/>
-## <Returns> simplicial complex passed as argument with additional properties upon success, <K>fail</K> otherwise.</Returns>
+## <Returns> simplicial complex passed as argument with additional properties 
+## upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Computes the face lattice, the <M>f</M>-vector, the AS-determinant, the dimension and the maximal vertex label of <Arg>complex</Arg>.
+## Computes the face lattice, the <M>f</M>-vector, the AS-determinant, the 
+## dimension and the maximal vertex label of <Arg>complex</Arg>.
 ## <Example>
 ## gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);
 ## [SimplicialComplex
@@ -1097,7 +1163,8 @@ function(complex)
     return fail;
   fi;
   if not movable then
-    Info(InfoSimpcomp,2,"SCExamineComplexBistellar: 'complex' not closed or no pseudomanifold");
+    Info(InfoSimpcomp,2,"SCExamineComplexBistellar: 'complex' not closed or ",
+      "no pseudomanifold");
     return fail;
   fi;
   f:=SCFVector(complex);
@@ -1127,14 +1194,31 @@ end);
 ## <ManSection>
 ## <Func Name="SCReduceComplexEx" Arg="complex, refComplex, 
 ## mode, choosemove"/>
-## <Returns><C>SCBistellarOptions.WriteLevel=0</C>: a triple of the form <C>[ boolean, simplicial complex, rounds  ]</C> upon termination of the algorithm.<P/>
-## <C>SCBistellarOptions.WriteLevel=1</C>: A library of simplicial complexes with a number of complexes from the reducing process and (upon termination) a triple of the form <C>[ boolean, simplicial complex, rounds ]</C>.<P/>
-## <C>SCBistellarOptions.WriteLevel=2</C>: A mail in case a smaller version of <Arg>complex1</Arg> was found, a library of simplicial complexes with a number of complexes from the reducing process and (upon termination) a triple of the form <C>[ boolean, simplicial complex, rounds ]</C>.<P/>
+## <Returns><C>SCBistellarOptions.WriteLevel=0</C>: a triple of the form 
+## <C>[ boolean, simplicial complex, rounds  ]</C> upon termination of the 
+## algorithm.<P/>
+## <C>SCBistellarOptions.WriteLevel=1</C>: A library of simplicial complexes 
+## with a number of complexes from the reducing process and (upon termination) 
+## a triple of the form <C>[ boolean, simplicial complex, rounds ]</C>.<P/>
+## <C>SCBistellarOptions.WriteLevel=2</C>: A mail in case a smaller version 
+## of <Arg>complex1</Arg> was found, a library of simplicial complexes with 
+## a number of complexes from the reducing process and (upon termination) a 
+## triple of the form <C>[ boolean, simplicial complex, rounds ]</C>.<P/>
 ## Returns <K>fail</K> upon an error.</Returns>
 ## <Description>
-## Reduces a pure simplicial complex <Arg>complex</Arg> satisfying the weak pseudomanifold property via bistellar moves <Arg>mode = 0</Arg>, compares it to the simplicial complex <Arg>refComplex</Arg> (<Arg>mode = 1</Arg>) or reduces it as a sub-complex of <Arg>refComplex</Arg> (<Arg>mode = 2</Arg>).<P/>
-## <Arg>choosemove</Arg> is a function containing a flip strategy, see also <Ref Func="SCIntFunc.SCChooseMove"/>. <P/>
-## The currently smallest complex is stored to the variable <C>minComplex</C>, the currently smallest <M>f</M>-vector to <C>minF</C>. Note that in general the algorithm will not stop until the maximum number of rounds is reached. You can adjust the maximum number of rounds via the property <Ref Var="SCBistellarOptions"/>. The number of rounds performed is returned in the third entry of the triple returned by this function.<P/>
+## Reduces a pure simplicial complex <Arg>complex</Arg> satisfying the weak 
+## pseudomanifold property via bistellar moves <Arg>mode = 0</Arg>, compares 
+## it to the simplicial complex <Arg>refComplex</Arg> (<Arg>mode = 1</Arg>) or 
+## reduces it as a sub-complex of <Arg>refComplex</Arg> 
+## (<Arg>mode = 2</Arg>).<P/>
+## <Arg>choosemove</Arg> is a function containing a flip strategy, see also 
+## <Ref Func="SCIntFunc.SCChooseMove"/>. <P/>
+## The currently smallest complex is stored to the variable <C>minComplex</C>, 
+## the currently smallest <M>f</M>-vector to <C>minF</C>. Note that in general 
+## the algorithm will not stop until the maximum number of rounds is reached. 
+## You can adjust the maximum number of rounds via the property 
+## <Ref Var="SCBistellarOptions"/>. The number of rounds performed is returned 
+## in the third entry of the triple returned by this function.<P/>
 ## This function is called by
 ## <Enum>
 ## <Item> <Ref Meth="SCReduceComplex" Style="Text"/>,</Item>
@@ -1143,7 +1227,9 @@ end);
 ## <Item> <Ref Meth="SCBistellarIsManifold" Style="Text"/>.</Item>
 ## <Item> <Ref Meth="SCRandomize" Style="Text"/>.</Item>
 ## </Enum>
-## Please see <Ref Func="SCMailIsPending"/> for further information about the email notification system in case <C>SCBistellarOptions.WriteLevel</C> is set to <M>2</M>.<P/>
+## Please see <Ref Func="SCMailIsPending"/> for further information about the 
+## email notification system in case <C>SCBistellarOptions.WriteLevel</C> is 
+## set to <M>2</M>.<P/>
 ## <Example>
 ## gap> c:=SCBdCrossPolytope(4);;
 ## gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
@@ -1165,9 +1251,8 @@ end);
 ## [ true, [SimplicialComplex
 ##     
 ##      Properties known: Boundary, Chi, Date, Dim, F, Faces, Facets, G, H, 
-##                        HasBoundary, Homology, IsConnected, IsManifold, IsPM, N\
-## ame, 
-##                        SCVertices, Vertices.
+##                        HasBoundary, Homology, IsConnected, IsManifold, IsPM, 
+##                        Name, SCVertices, Vertices.
 ##     
 ##      Name="ReducedComplex_5_vertices_9"
 ##      Dim=3
@@ -1229,7 +1314,8 @@ InstallGlobalFunction(SCReduceComplexEx,
   function(complex,refComplex,mode,choosemove)
 
   local move,moves,validMoves,rounds,minF,name,globalRounds,minComplex,
-    refFaces,msg,elapsed,stime,i,j,equivalent,time,rep,tmpFaces,tmpF,tmpOptions,dim,tmp,refF;
+    refFaces,msg,elapsed,stime,i,j,equivalent,time,rep,tmpFaces,tmpF,
+    tmpOptions,dim,tmp,refF;
 
   dim:=SCDim(complex);
   if dim = fail then
@@ -1262,7 +1348,8 @@ InstallGlobalFunction(SCReduceComplexEx,
   
   complex:=SCExamineComplexBistellar(complex);
   if complex=fail then
-    Info(InfoSimpcomp,1,"SCReduceComplexEx: can not compute complex properties.");
+    Info(InfoSimpcomp,1,"SCReduceComplexEx: can not compute complex ",
+      "properties.");
     return fail;
   fi;
 
@@ -1317,14 +1404,16 @@ InstallGlobalFunction(SCReduceComplexEx,
     
   
   #loop..
-  while rounds < SCBistellarOptions.MaxInterval and globalRounds < SCBistellarOptions.MaxRounds do
+  while rounds < SCBistellarOptions.MaxInterval and 
+    globalRounds < SCBistellarOptions.MaxRounds do
     
     if mode=1 then
       if tmpF = refF then 
         equivalent:=SCIsIsomorphic(SCFromFacets(tmpFaces[dim+1]),refComplex);
       fi;
       if equivalent=fail then
-        Info(InfoSimpcomp,1,"SCReduceComplexEx: can not compute isomorphism between complexes.");
+        Info(InfoSimpcomp,1,"SCReduceComplexEx: can not compute isomorphism ",
+          "between complexes.");
         return fail;
       fi;      
     fi;
@@ -1386,17 +1475,20 @@ InstallGlobalFunction(SCReduceComplexEx,
           
           if tmpF[1]<minF[1] or rounds>SCBistellarOptions.MaxInterval then
             if SCBistellarOptions.WriteLevel>=1 then
-              name:=Concatenation(["ReducedComplex_",String(tmpF[1]),"_vertices_",String(globalRounds)]);
+              name:=Concatenation(["ReducedComplex_",String(tmpF[1]),
+                "_vertices_",String(globalRounds)]);
               if minComplex<>fail and name<>fail and rep<>fail then
                 SCRename(minComplex,name);
                 SCLibAdd(rep,minComplex);
               else
-                Info(InfoSimpcomp,1,"SCReduceComplexEx: illegal complex, name or rep.");
+                Info(InfoSimpcomp,1,"SCReduceComplexEx: illegal complex, ",
+                  "name or rep.");
                 return fail;
               fi;
             fi;
             if SCBistellarOptions.WriteLevel=2 then
-              msg:=Concatenation(["SCReduceComplex:\n\nReduced complex after ",String(globalRounds)," rounds:\n\n",String(minComplex),"\n"]);
+              msg:=Concatenation(["SCReduceComplex:\n\nReduced complex after ",
+                String(globalRounds)," rounds:\n\n",String(minComplex),"\n"]);
               SCMailSend(msg,stime);
             fi;
           fi;
@@ -1412,7 +1504,9 @@ InstallGlobalFunction(SCReduceComplexEx,
           fi;
           if(SCIntFunc.TimerElapsed()>=SCBistellarOptions.MailNotifyInterval) then
             SCIntFunc.TimerStart();
-            msg:=Concatenation(["SCReduceComplex:\n\nStatus report after ",String(globalRounds)," rounds:\n\n",String(minComplex),"\n\nMinimal complex so far:\n\n",String(minComplex)]);
+            msg:=Concatenation(["SCReduceComplex:\n\nStatus report after ",
+              String(globalRounds)," rounds:\n\n",String(minComplex),
+              "\n\nMinimal complex so far:\n\n",String(minComplex)]);
             SCMailSend(msg,stime);
           fi;
         fi;
@@ -1420,19 +1514,25 @@ InstallGlobalFunction(SCReduceComplexEx,
       else
         # no moves available
         if SCBistellarOptions.WriteLevel>=1 then
-          name:=Concatenation(["ReducedComplex_",String(tmpF[1]),"_vertices_",String(globalRounds)]);
+          name:=Concatenation(["ReducedComplex_",String(tmpF[1]),"_vertices_",
+            String(globalRounds)]);
           SCRename(minComplex,name);
           SCLibAdd(rep,minComplex);
         fi;
         if SCBistellarOptions.WriteLevel=2 then
-          msg:=Concatenation(["SCReduceComplex:\n\nComputed locally minimal complex after ",String(globalRounds)," rounds:\n\n",String(minComplex),"\n"]);
+          msg:=Concatenation(["SCReduceComplex:\n\nComputed locally minimal ",
+            "complex after ",String(globalRounds)," rounds:\n\n",
+            String(minComplex),"\n"]);
           SCMailClearPending();
           SCMailSend(msg,stime,true);
         fi;
         if mode=1 then
-          Info(InfoSimpcomp,1,"SCReduceComplexEx: could not prove bistellar equivalence between 'complex' and 'refComplex'\n(reached local minimum after  ",String(globalRounds)," rounds).");
+          Info(InfoSimpcomp,1,"SCReduceComplexEx: could not prove bistellar ",
+            "equivalence between 'complex' and 'refComplex'\n(reached local ",
+            "minimum after  ",String(globalRounds)," rounds).");
         elif mode<>1 then
-          Info(InfoSimpcomp,2,"SCReduceComplexEx: computed locally minimal complex after ",String(globalRounds)," rounds.");
+          Info(InfoSimpcomp,2,"SCReduceComplexEx: computed locally minimal ",
+            "complex after ",String(globalRounds)," rounds.");
         fi;
         
         if mode=1 then
@@ -1446,18 +1546,21 @@ InstallGlobalFunction(SCReduceComplexEx,
     else
       # equivalent<>false and mode=1 -> bistellarly equivalent
       if SCBistellarOptions.WriteLevel>=1 then
-        name:=Concatenation(["ReducedComplex_",String(tmpF[1]),"_vertices_",String(globalRounds)]);
+        name:=Concatenation(["ReducedComplex_",String(tmpF[1]),"_vertices_",
+          String(globalRounds)]);
         SCRename(minComplex,name);
         SCLibAdd(rep,minComplex);
       fi;
 
       if SCBistellarOptions.WriteLevel=2 then
-        msg:=Concatenation(["SCReduceComplexEx:\n\nComplexes are bistellarly equivalent.\n\n",String(minComplex),"\n"]);
+        msg:=Concatenation(["SCReduceComplexEx:\n\nComplexes are bistellarly ",
+          "equivalent.\n\n",String(minComplex),"\n"]);
         SCMailClearPending();
         SCMailSend(msg,stime,true);
       fi;
       if mode=1 then
-        Info(InfoSimpcomp,1,"SCReduceComplexEx: complexes are bistellarly equivalent.");
+        Info(InfoSimpcomp,1,"SCReduceComplexEx: complexes are bistellarly ",
+          "equivalent.");
       fi;
 
       if mode <> 3 then
@@ -1469,21 +1572,26 @@ InstallGlobalFunction(SCReduceComplexEx,
   od;
 
   if SCBistellarOptions.WriteLevel>=1 then
-    name:=Concatenation(["ReducedComplex_",String(tmpF[1]),"_vertices_",String(globalRounds)]);
+    name:=Concatenation(["ReducedComplex_",String(tmpF[1]),"_vertices_",
+      String(globalRounds)]);
     SCRename(minComplex,name);
     SCLibAdd(rep,minComplex);
   fi;
 
   if SCBistellarOptions.WriteLevel=2 then
-    msg:=Concatenation(["SCReduceComplexEx:\n\nReached maximal number of rounds ",String(globalRounds)," rounds. Reduced complex to:\n\n",String(minComplex),"\n"]);
+    msg:=Concatenation(["SCReduceComplexEx:\n\nReached maximal number of ",
+      "rounds ",String(globalRounds)," rounds. Reduced complex to:\n\n",
+        String(minComplex),"\n"]);
     SCMailClearPending();
     SCMailSend(msg,stime,true);
   fi;
   
   if mode=1 then
-    Info(InfoSimpcomp,1,"SCReduceComplexEx: could not prove bistellar equivalence between 'complex' and 'refComplex'.");
+    Info(InfoSimpcomp,1,"SCReduceComplexEx: could not prove bistellar ",
+      "equivalence between 'complex' and 'refComplex'.");
   elif mode<>1 and mode <> 3 then
-    Info(InfoSimpcomp,2,"SCReduceComplexEx: reached maximal number of rounds. Returning smallest complex found.");
+    Info(InfoSimpcomp,2,"SCReduceComplexEx: reached maximal number of ",
+      "rounds. Returning smallest complex found.");
   fi;
 
   if mode <> 3 then
@@ -1504,13 +1612,13 @@ end);
 ## of the algorithm.<P/>
 ## <C>SCBistellarOptions.WriteLevel=1</C>: A library of simplicial complexes 
 ## with a number of complexes from the reducing process and (upon termination) 
-## a triple of the form <C>[ boolean, simplicial complex, rounds performed ]
-## </C>.<P/>
+## a triple of the form 
+## <C>[ boolean, simplicial complex, rounds performed ]</C>.<P/>
 ## <C>SCBistellarOptions.WriteLevel=2</C>: A mail in case a smaller version 
 ## of <Arg>complex1</Arg> was found, a library of simplicial complexes with a 
 ## number of complexes from the reducing process and (upon termination) a 
-## triple of the form <C>[ boolean, simplicial complex, rounds performed ]
-## </C>.<P/>
+## triple of the form 
+## <C>[ boolean, simplicial complex, rounds performed ]</C>.<P/>
 ## Returns <K>fail</K> upon an error..</Returns>
 ## <Description>
 ## Reduces a pure simplicial complex <Arg>complex</Arg> satisfying the weak 
@@ -1565,7 +1673,7 @@ end);
 ## is returned.<P/>
 ## It is recommended to use a minimal triangulation <Arg>complex2</Arg> for 
 ## the check if possible.<P/>
-## Internally calls <Ref Func="SCReduceComplexEx" Style="Text"  />
+## Internally calls <Ref Func="SCReduceComplexEx" Style="Text"/>
 ## <C>(complex1,complex2,1,SCIntFunc.SCChooseMove);</C>
 ## <Example>
 ## gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes to disk
@@ -1652,8 +1760,8 @@ end);
 ## <C>SCBistellarOptions.WriteLevel=2</C>: A mail in case a smaller version of 
 ## <Arg>complex1</Arg> was found, a library of simplicial complexes with a 
 ## number of complexes from the reducing process and (upon termination) a 
-## triple of the form <C>[ boolean, simplicial complex, rounds performed ]
-## </C>.<P/>
+## triple of the form 
+## <C>[ boolean, simplicial complex, rounds performed ]</C>.<P/>
 ## Returns <K>fail</K> upon an error.</Returns>
 ## <Description>
 ## Reduces a  simplicial complex <Arg>complex1</Arg> (satisfying the weak 
@@ -1709,14 +1817,13 @@ end);
 ## the simplex, <K>fail</K> is returned if the algorithm does not terminate 
 ## after the number of rounds indicated by 
 ## <C>SCBistellarOptions.MaxIntervallIsManifold</C>.<P/>
-## Internally calls <Ref Func="SCReduceComplexEx" Style="Text"  />
+## Internally calls <Ref Func="SCReduceComplexEx" Style="Text"/>
 ## <C>(link,SCEmpty(),0,SCIntFunc.SCChooseMove);</C> for every link of 
 ## <Arg>complex</Arg>. Note that <K>false</K> is returned in case of a bounded 
 ## manifold.<P/>
 ##
 ## See <Ref Func="SCIsManifoldEx" /> and <Ref Func="SCIsManifold" /> for 
 ## alternative methods for manifold verification.
-## <Example>
 ## <Example>
 ## gap> c:=SCBdCrossPolytope(3);;
 ## gap> SCBistellarIsManifold(c);
@@ -2083,7 +2190,19 @@ end);
 ## <Func Name="SCRandomize" Arg="complex [ [, rounds] [,allowedmoves] ]"/>
 ## <Returns>a simplicial complex upon success, <K>fail</K> otherwise.</Returns> 
 ## <Description>
-## Randomizes the given simplicial complex <Arg>complex</Arg> via bistellar moves chosen at random. By passing the optional array <Arg>allowedmoves</Arg>, which has to be a dense array of integer values of length <C>SCDim(complex)</C>, certain moves can be allowed or forbidden in the proccess. An entry <C>allowedmoves[i]=1</C> allows <M>(i-1)</M>-moves and an entry <C>allowedmoves[i]=0</C> forbids <M>(i-1)</M>-moves in the randomization process.<P />With optional positive integer argument <Arg>rounds</Arg>, the amount of randomization can be controlled. The higher the value of <Arg>rounds</Arg>, the more bistellar moves will be randomly performed on <Arg>complex</Arg>. Note that the argument <Arg>rounds</Arg> overrides the global setting <C>SCBistellarOptions.MaxIntervalRandomize</C> (this value is used, if <Arg>rounds</Arg> is not specified).       
+## Randomizes the given simplicial complex <Arg>complex</Arg> via bistellar 
+## moves chosen at random. By passing the optional array 
+## <Arg>allowedmoves</Arg>, which has to be a dense array of integer values 
+## of length <C>SCDim(complex)</C>, certain moves can be allowed or forbidden 
+## in the proccess. An entry <C>allowedmoves[i]=1</C> allows <M>(i-1)</M>-moves 
+## and an entry <C>allowedmoves[i]=0</C> forbids <M>(i-1)</M>-moves in the 
+## randomization process.<P />With optional positive integer argument 
+## <Arg>rounds</Arg>, the amount of randomization can be controlled. The 
+## higher the value of <Arg>rounds</Arg>, the more bistellar moves will be 
+## randomly performed on <Arg>complex</Arg>. Note that the argument 
+## <Arg>rounds</Arg> overrides the global setting 
+## <C>SCBistellarOptions.MaxIntervalRandomize</C> (this value is used, if 
+## <Arg>rounds</Arg> is not specified).       
 ## Internally calls <Ref Func="SCReduceComplexEx" Style="Text" />.
 ## <Example>
 ## gap> c:=SCRandomize(SCBdSimplex(4));
@@ -2106,7 +2225,8 @@ end);
 InstallGlobalFunction(SCRandomize,
 function(arg) 
   
-  local p,complex,tcomplex,allowedmoves,writelevel,maxrounds,d,f,i,movable,rounds,result,randomizeStrategy,arounds;
+  local p,complex,tcomplex,allowedmoves,writelevel,maxrounds,d,f,i,movable,
+    rounds,result,randomizeStrategy,arounds;
     
   randomizeStrategy:=function(dim,moves)
     local options,i;
@@ -2114,7 +2234,8 @@ function(arg)
     options:=[];
     for i in [0..d] do
       if(allowedmoves[i+1]<>0) then
-        if((i>0 and i<d) or (i=0 and (rounds mod 2)=0) or (i=d and (rounds mod 2)=1)) then
+        if((i>0 and i<d) or (i=0 and (rounds mod 2)=0) or 
+          (i=d and (rounds mod 2)=1)) then
           Append(options,moves[i+1]);
         fi;
       fi;
@@ -2131,7 +2252,8 @@ function(arg)
   end;
   
   if(Length(arg)<1 or not SCIsSimplicialComplex(arg[1])) then
-    Info(InfoSimpcomp,2,"SCRandomize: invalid argument list, first argument must be of type SCSimplicialComplex.");
+    Info(InfoSimpcomp,2,"SCRandomize: invalid argument list, first argument ",
+      "must be of type SCSimplicialComplex.");
     return fail;
   fi;
   
@@ -2149,9 +2271,11 @@ function(arg)
     arounds:=0;
   fi;
     
-  if(Length(arg)>1 and IsList(arg[2]) and not IsEmpty(arg[2]) and ForAll(arg[2],x->(x=0 or x=1))) then
+  if(Length(arg)>1 and IsList(arg[2]) and not IsEmpty(arg[2]) 
+    and ForAll(arg[2],x->(x=0 or x=1))) then
     p:=2;
-  elif(Length(arg)>2 and IsList(arg[3]) and not IsEmpty(arg[3]) and ForAll(arg[3],x->(x=0 or x=1))) then
+  elif(Length(arg)>2 and IsList(arg[3]) and not IsEmpty(arg[3]) 
+    and ForAll(arg[3],x->(x=0 or x=1))) then
     p:=3;
   else
     p:=0;
@@ -2178,7 +2302,8 @@ function(arg)
     return fail;
   fi;
   
-  Info(InfoSimpcomp,2,"SCRandomize: randomizing complex ",SCName(complex)," with allowed moves ",allowedmoves);
+  Info(InfoSimpcomp,2,"SCRandomize: randomizing complex ",SCName(complex),
+    " with allowed moves ",allowedmoves);
   
   maxrounds:=SCBistellarOptions.MaxInterval;
   
@@ -2220,7 +2345,8 @@ SCIntFunc.SCReduceComplexEx2:=
   function(complex,refComplex,mode,choosemove)
 
   local move,moves,validMoves,rounds,minF,name,globalRounds,minComplex,
-    refFaces,msg,elapsed,stime,i,j,equivalent,time,rep,tmpFaces,tmpF,tmpOptions,dim,tmp,refF;
+    refFaces,msg,elapsed,stime,i,j,equivalent,time,rep,tmpFaces,tmpF,
+    tmpOptions,dim,tmp,refF;
 
   dim:=SCDim(complex);
   if dim = fail then
@@ -2252,7 +2378,8 @@ SCIntFunc.SCReduceComplexEx2:=
   
   complex:=SCExamineComplexBistellar(complex);
   if complex=fail then
-    Info(InfoSimpcomp,1,"SCReduceComplexEx: can not compute complex properties.");
+    Info(InfoSimpcomp,1,"SCReduceComplexEx: can not compute complex ",
+      "properties.");
     return fail;
   fi;
 
@@ -2307,14 +2434,16 @@ SCIntFunc.SCReduceComplexEx2:=
     
   
   #loop..
-  while rounds < SCBistellarOptions.MaxInterval and globalRounds < SCBistellarOptions.MaxRounds do
+  while rounds < SCBistellarOptions.MaxInterval and 
+    globalRounds < SCBistellarOptions.MaxRounds do
     
     if mode=1 then
       if tmpF = refF then 
         equivalent:=SCIsIsomorphic(SCFromFacets(tmpFaces[dim+1]),refComplex);
       fi;
       if equivalent=fail then
-        Info(InfoSimpcomp,1,"SCReduceComplexEx: can not compute isomorphism between complexes.");
+        Info(InfoSimpcomp,1,"SCReduceComplexEx: can not compute ",
+          "isomorphism between complexes.");
         return fail;
       fi;      
     fi;
@@ -2371,21 +2500,25 @@ SCIntFunc.SCReduceComplexEx2:=
             return fail;
           fi;
 
-          Info(InfoSimpcomp,2,"round ",globalRounds,"\nReduced complex, F: ",tmpF);
+          Info(InfoSimpcomp,2,"round ",globalRounds,"\nReduced complex, F: ",
+            tmpF);
           
           if tmpF[1]<minF[1] or rounds>SCBistellarOptions.MaxInterval then
             if SCBistellarOptions.WriteLevel>=1 then
-              name:=Concatenation(["ReducedComplex_",String(tmpF[1]),"_vertices_",String(globalRounds)]);
+              name:=Concatenation(["ReducedComplex_",String(tmpF[1]),
+                "_vertices_",String(globalRounds)]);
               if minComplex<>fail and name<>fail and rep<>fail then
                 SCRename(minComplex,name);
                 SCLibAdd(rep,minComplex);
               else
-                Info(InfoSimpcomp,1,"SCReduceComplexEx: illegal complex, name or rep.");
+                Info(InfoSimpcomp,1,"SCReduceComplexEx: illegal complex, ",
+                  "name or rep.");
                 return fail;
               fi;
             fi;
             if SCBistellarOptions.WriteLevel=2 then
-              msg:=Concatenation(["SCReduceComplex:\n\nReduced complex after ",String(globalRounds)," rounds:\n\n",String(minComplex),"\n"]);
+              msg:=Concatenation(["SCReduceComplex:\n\nReduced complex after ",
+                String(globalRounds)," rounds:\n\n",String(minComplex),"\n"]);
               SCMailSend(msg,stime);
             fi;
           fi;
@@ -2401,7 +2534,9 @@ SCIntFunc.SCReduceComplexEx2:=
           fi;
           if(SCIntFunc.TimerElapsed()>=SCBistellarOptions.MailNotifyInterval) then
             SCIntFunc.TimerStart();
-            msg:=Concatenation(["SCReduceComplex:\n\nStatus report after ",String(globalRounds)," rounds:\n\n",String(minComplex),"\n\nMinimal complex so far:\n\n",String(minComplex)]);
+            msg:=Concatenation(["SCReduceComplex:\n\nStatus report after ",
+              String(globalRounds)," rounds:\n\n",String(minComplex),
+              "\n\nMinimal complex so far:\n\n",String(minComplex)]);
             SCMailSend(msg,stime);
           fi;
         fi;
@@ -2409,19 +2544,25 @@ SCIntFunc.SCReduceComplexEx2:=
       else
         # no moves available
         if SCBistellarOptions.WriteLevel>=1 then
-          name:=Concatenation(["ReducedComplex_",String(tmpF[1]),"_vertices_",String(globalRounds)]);
+          name:=Concatenation(["ReducedComplex_",String(tmpF[1]),
+            "_vertices_",String(globalRounds)]);
           SCRename(minComplex,name);
           SCLibAdd(rep,minComplex);
         fi;
         if SCBistellarOptions.WriteLevel=2 then
-          msg:=Concatenation(["SCReduceComplex:\n\nComputed locally minimal complex after ",String(globalRounds)," rounds:\n\n",String(minComplex),"\n"]);
+          msg:=Concatenation(["SCReduceComplex:\n\nComputed locally minimal ",
+            "complex after ",String(globalRounds)," rounds:\n\n",
+            String(minComplex),"\n"]);
           SCMailClearPending();
           SCMailSend(msg,stime,true);
         fi;
         if mode=1 then
-          Info(InfoSimpcomp,1,"SCReduceComplexEx: could not prove bistellar equivalence between 'complex' and 'refComplex'\n(reached local minimum after  ",String(globalRounds)," rounds).");
+          Info(InfoSimpcomp,1,"SCReduceComplexEx: could not prove bistellar ",
+          "equivalence between 'complex' and 'refComplex'\n(reached local ",
+          "minimum after  ",String(globalRounds)," rounds).");
         elif mode<>1 then
-          Info(InfoSimpcomp,2,"SCReduceComplexEx: computed locally minimal complex after ",String(globalRounds)," rounds.");
+          Info(InfoSimpcomp,2,"SCReduceComplexEx: computed locally minimal ",
+            "complex after ",String(globalRounds)," rounds.");
         fi;
         
         return [fail,SCFromFacets(tmpFaces[dim+1]),globalRounds];
@@ -2437,18 +2578,21 @@ SCIntFunc.SCReduceComplexEx2:=
     else
       # equivalent<>false and mode=1 -> bistellarly equivalent
       if SCBistellarOptions.WriteLevel>=1 then
-        name:=Concatenation(["ReducedComplex_",String(tmpF[1]),"_vertices_",String(globalRounds)]);
+        name:=Concatenation(["ReducedComplex_",String(tmpF[1]),"_vertices_",
+          String(globalRounds)]);
         SCRename(minComplex,name);
         SCLibAdd(rep,minComplex);
       fi;
 
       if SCBistellarOptions.WriteLevel=2 then
-        msg:=Concatenation(["SCReduceComplexEx:\n\nComplexes are bistellarly equivalent.\n\n",String(minComplex),"\n"]);
+        msg:=Concatenation(["SCReduceComplexEx:\n\nComplexes are bistellarly ",
+          "equivalent.\n\n",String(minComplex),"\n"]);
         SCMailClearPending();
         SCMailSend(msg,stime,true);
       fi;
       if mode=1 then
-        Info(InfoSimpcomp,1,"SCReduceComplexEx: complexes are bistellarly equivalent.");
+        Info(InfoSimpcomp,1,"SCReduceComplexEx: complexes are bistellarly ",
+          "equivalent.");
       fi;
 
       if mode <> 3 then
@@ -2460,21 +2604,26 @@ SCIntFunc.SCReduceComplexEx2:=
   od;
 
   if SCBistellarOptions.WriteLevel>=1 then
-    name:=Concatenation(["ReducedComplex_",String(tmpF[1]),"_vertices_",String(globalRounds)]);
+    name:=Concatenation(["ReducedComplex_",String(tmpF[1]),"_vertices_",
+      String(globalRounds)]);
     SCRename(minComplex,name);
     SCLibAdd(rep,minComplex);
   fi;
 
   if SCBistellarOptions.WriteLevel=2 then
-    msg:=Concatenation(["SCReduceComplexEx:\n\nReached maximal number of rounds ",String(globalRounds)," rounds. Reduced complex to:\n\n",String(minComplex),"\n"]);
+    msg:=Concatenation(["SCReduceComplexEx:\n\nReached maximal number of ",
+      "rounds ",String(globalRounds)," rounds. Reduced complex to:\n\n",
+      String(minComplex),"\n"]);
     SCMailClearPending();
     SCMailSend(msg,stime,true);
   fi;
   
   if mode=1 then
-    Info(InfoSimpcomp,1,"SCReduceComplexEx: could not prove bistellar equivalence between 'complex' and 'refComplex'.");
+    Info(InfoSimpcomp,1,"SCReduceComplexEx: could not prove bistellar ",
+      "equivalence between 'complex' and 'refComplex'.");
   elif mode<>1 and mode <> 3 then
-    Info(InfoSimpcomp,2,"SCReduceComplexEx: reached maximal number of rounds. Returning smallest complex found.");
+    Info(InfoSimpcomp,2,"SCReduceComplexEx: reached maximal number of ",
+      "rounds. Returning smallest complex found.");
   fi;
 
   return [fail,SCFromFacets(tmpFaces[dim+1]),globalRounds];
@@ -2512,7 +2661,8 @@ SCIntFunc.SCMakeFlagComplex:=
   end;
   
   if(not SCIsSimplicialComplex(complex)) then
-    Info(InfoSimpcomp,1,"SCMakeFlagComplex: first argument must be of type SCSimplicialComplex.");
+    Info(InfoSimpcomp,1,"SCMakeFlagComplex: first argument must be of type ",
+      "SCSimplicialComplex.");
     return fail;
   fi;
 
@@ -2543,7 +2693,8 @@ SCIntFunc.SCMakeFlagComplex:=
     cc:=SCCopy(complex);
     SCRelabelStandard(cc);
       
-    Info(InfoSimpcomp,1,Concatenation("SCMakeFlagComplex: try ",String(try),"/",String(maxtries)));
+    Info(InfoSimpcomp,1,Concatenation("SCMakeFlagComplex: try ",String(try),
+      "/",String(maxtries)));
     
     movable:=SCIsMovableComplex(cc);
     if movable = fail then
@@ -2554,12 +2705,14 @@ SCIntFunc.SCMakeFlagComplex:=
     if movable then
       result:=SCReduceComplexEx(cc,SCEmpty(),0,flagStrategy);
     else
-      Info(InfoSimpcomp,1,"SCMakeFlagComplex: complex is not a closed pseudomanifold.");
+      Info(InfoSimpcomp,1,"SCMakeFlagComplex: complex is not a closed ",
+        "pseudomanifold.");
       return false;
     fi;
       
     if result=fail then  
-      Info(InfoSimpcomp,1,"SCMakeFlagComplex: SCReduceComplexEx returned fail.");
+      Info(InfoSimpcomp,1,"SCMakeFlagComplex: SCReduceComplexEx returned ",
+        "fail.");
       return fail;
     fi;
     
@@ -2570,7 +2723,8 @@ SCIntFunc.SCMakeFlagComplex:=
   SCBistellarOptions.MaxInterval:=maxrounds;
   SCBistellarOptions.WriteLevel:=writelevel;
   
-  Info(InfoSimpcomp,1,"SCMakeFlagComplex: could not determine whether given complex is flag.");
+  Info(InfoSimpcomp,1,"SCMakeFlagComplex: could not determine whether given ",
+    "complex is flag.");
   return false;
 end;
 
@@ -2581,7 +2735,8 @@ end;
 ## <Func Name="SCReduceComplexFast" Arg="complex"/>
 ## <Returns>a simplicial complex upon success, <K>fail</K> otherwise.</Returns> 
 ## <Description>
-## Same as <Ref Func="SCReduceComplex" Style="Text" />, but calls an external binary provided with the simpcomp package.
+## Same as <Ref Func="SCReduceComplex" Style="Text" />, but calls an external 
+## binary provided with the simpcomp package.
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -2635,7 +2790,8 @@ InstallGlobalFunction(SCReduceComplexFast,
   CloseStream(stream);
 
   if line{[1..9]} = "resulting" then
-    resultingcomplex := SC(SCIntFunc.ReadArray(line{[22..(Position(line, ' ', 22)-1)]}));
+    resultingcomplex := 
+      SC(SCIntFunc.ReadArray(line{[22..(Position(line, ' ', 22)-1)]}));
     return resultingcomplex;
   else
     return fail;
