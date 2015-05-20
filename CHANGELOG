@@ -1,3 +1,47 @@
+
+20/05/2015 - Version 2.1.0: Major update, support for discrete Morse theory added
+- Added functions SCExportIsoSig, SCExportToString,
+  SCFromIsoSig for isomorphism signature support and
+  compressing
+- Added infinite family of transitive triangulations
+  (S^2xS^2)^k (function SCSeriesS2xS2(k))
+- Added function SCExportRecognizer to export 3-manifolds
+  to Matveev's 3-manifold recognizer
+- Fixed bug in SCFVector, non-manifolds where treated
+  like the simplex or the boundary of the simplex
+- Improved collapsing sequence (it is now using a Hasse
+  diagram, SCIntFunc.SCHasseDiagram())
+- Improved high dimensional bistellar moves flip strategy
+  (both for SCReduceComplex() and SCReduceComplexFast())
+- Updated references
+- Added chapter about discrete Morse theory in documentation
+- Added support for discrete Morse theory (SCHasseDiagram,
+  SCMorseEngstrom, SCMorseRandom, SCMorseUST, SCMorseSpec,
+  SCMorseRandomLex, SCMorseRandomRevLex)
+- Added Wilson's algorithm for uniform spanning trees
+  SCSpanningTreeRandom
+- Added new functionality based on discrete Morse theory:
+  SCHomologyEx, SCHomology, SCIsSphere, SCIsManifold
+- Old homology and manifold verification code is now
+  available under SCHomologyClassic and SCBistellarIsManifold
+- Fixed bug in SCSkelEx and improved performance
+- Fixed bug in SCCyclic3Mfld(22,X),
+  X = 1437, 2087, 2660, 2827, 2844, 3079
+- Fixed bug in SCMove for d-moves
+- Fixed bug in SCStronglyConnectedComponents and improved
+  performance
+- Fixed bug in SCNumFaces
+- Improved functions SCIsPseudoManifold, SCHasBoundary,
+  SCBoundarEx and SCBoundary
+
+12/12/2013 - Version 2.0.0: FIRST RELEASE AS GAP SHARED PACKAGE
+- Added functions SCExportIsoSig, SCExportToString, SCFromIsoSig for 
+  isomorphism signature support and compressing
+- Added infinite family of transitive triangulations (S2xS2)^k
+  (function SCSeriesS2xS2(k))
+- Added function SCExportRecognizer to export 3-manifolds to Matveev's
+  3-manifold recognizer 
+
 31/01/2013 - Version 1.6.1: Minor update.
 - Fixed minor bug in SCChiralMap and SCRegularMap.
 - Updated deployment system.
@@ -52,7 +96,8 @@
 
 16/08/2011 - Version 1.5.1: Minor update
 - Added the GAP package ''io'' to the list of ''NeededOtherPackages''.
-- Fixed bug in function SCMove (thanks to Paul VanKoughnett for reporting!), bistellar move was performed on argument, too.
+- Fixed bug in function SCMove (thanks to Paul VanKoughnett for reporting!), 
+  bistellar move was performed on argument, too.
 - Fixed bug in shelling code (thanks to Samuel Kolins for reporting!),
   shelling intersection was not checked for pureness.
 - Extended SCExportJavaView to work with higher-dimensional complexes.
