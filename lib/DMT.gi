@@ -213,7 +213,7 @@ SCIntFunc.SCMorseEngstroemEx:=function(c,missing)
   f{[size+2..size+SCNumCells(ll)+1]}:=tmp[1];
   Append(critical,tmp[2]);
   
-        return [List(f,x->Union(x,missing)),critical]; 
+  return [List(f,x->Union(x,missing)),critical]; 
 end;
 
 ################################################################################
@@ -2049,7 +2049,7 @@ end);
 
 
 ################################################################################
-##<#GAPDoc Label="SCIsManifoldNew">
+##<#GAPDoc Label="SCIsManifold">
 ## <ManSection>
 ## <Func Name="SCIsManifold" Arg="c"/>
 ## <Returns>a boolean value upon success, <C>fail</C> otherweise.</Returns>

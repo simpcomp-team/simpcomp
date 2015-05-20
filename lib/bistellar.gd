@@ -59,7 +59,7 @@
 ## \begin{itemize}
 ## 	\item Decide, whether two combinatorial manifolds are PL-homeomorphic,
 ## 	\item for a given triangulation of a PL-manifold, try to find a smaller one with less vertices,
-## 	\item check, if an abstract simplicial complex is a combinatorial manifold by reducing all vertex links to the boundary of the $d$-simplex (this can also be done using discrete Morse theory, see Chapter <Ref Chap="chap:DMT" />, <Ref Meth="SCIsManifold" />).
+## 	\item check, if an abstract simplicial complex is a combinatorial manifold by reducing all vertex links to the boundary of the $d$-simplex (this can also be done using discrete Morse theory, see Chapter <Ref Chap="chap:DMT" />, <Ref Meth="SCBistellarIsManifold" />).
 ## \end{itemize}
 ## 	]]>
 ## 	</Alt><P/>
