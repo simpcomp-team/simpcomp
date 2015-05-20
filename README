@@ -146,6 +146,14 @@ Download and installation
 Changes
 =======
 
+12/12/2013 - Version 2.0.0: FIRST RELEASE AS GAP SHARED PACKAGE
+- Added functions SCExportIsoSig, SCExportToString, SCFromIsoSig for 
+  isomorphism signature support and compressing
+- Added infinite family of transitive triangulations (S2xS2)^k
+  (function SCSeriesS2xS2(k))
+- Added function SCExportRecognizer to export 3-manifolds to Matveev's
+  3-manifold recognizer 
+
 31/01/2013 - Version 1.6.1: Minor update.
 - Fixed minor bug in SCChiralMap and SCRegularMap.
 - Updated deployment system.
@@ -200,7 +208,8 @@ Changes
 
 16/08/2011 - Version 1.5.1: Minor update
 - Added the GAP package ''io'' to the list of ''NeededOtherPackages''.
-- Fixed bug in function SCMove (thanks to Paul VanKoughnett for reporting!), bistellar move was performed on argument, too.
+- Fixed bug in function SCMove (thanks to Paul VanKoughnett for reporting!),
+  bistellar move was performed on argument, too.
 - Fixed bug in shelling code (thanks to Samuel Kolins for reporting!),
   shelling intersection was not checked for pureness.
 - Extended SCExportJavaView to work with higher-dimensional complexes.
@@ -333,8 +342,7 @@ simpcomp:
 
  * Further extension of the library
   
-  Flexibilization of bistellar flip interface
-
+ * Flexibilization of bistellar flip interface
 
 		
 Bugs
@@ -348,11 +356,19 @@ authors.
 Contact
 =======
 
-Felix Effenberger, effenberger@mathematik.uni-stuttgart.de
- and
-Jonathan Spreer, spreer@mathematik.uni-stuttgart.de
+Felix Effenberger
+  Max Planck Institute for Mathematics in the Sciences
+  Inselstr. 22, 04103 Leipzig, Germany
 
-Address: University of Stuttgart
-         Department of Mathematics
-         Institute of Geometry and Topology
-         D-70550 Stuttgart, Germany
+  E-Mail: Felix.effenberger@mis.mpg.de
+  Web: http://personal-homepages.mis.mpg.de/effen/
+
+Jonathan Spreer
+  The University of Queensland
+  School of Mathematics and Physics
+  Computational Geometry and Topology Group
+  St. Lucia, Queensland, 4072, Australia
+
+  E-Mail: j.spreer@uq.edu.au
+  Web: http://www.tacet.de/Jonathan
+
