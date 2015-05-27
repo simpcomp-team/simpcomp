@@ -1,6 +1,5 @@
-
-                           The GAP 4 package 'simpcomp'
-                           ============================
+The GAP 4 package 'simpcomp'
+============================
 
 
 About
@@ -136,12 +135,12 @@ Download and installation
  * Run *"SCRunTest();"* for a quick self test of *simpcomp* that assures the package works correctly. The output of the test function should look like this (the number printed after *GAP4stones* is a performance measure of your system and thus may differ from computer to computer):
 <pre>
   gap> SCRunTest();
-  + simpcomp package test
-  + GAP4stones: 28579
+  &#43; simpcomp package test
+  &#43; GAP4stones: 28579
   true
 </pre>
 
- * If you want *simpcomp* to automatically load upon *GAP* startup, either set the variable *Autoload:=true* in *GAPROOT/pkg/simpcomp/PackageInfo.g* (in line ~106) or add the command *LoadPackage("simpcomp");* to your*~/.gaprc*.
+ * If you want *simpcomp* to automatically load upon *GAP* startup, either set the variable *Autoload:=true* in *GAPROOT/pkg/simpcomp/PackageInfo.g* (in line ~106) or add the command *LoadPackage("simpcomp");* to your *~/.gaprc*.
 
 Changes
 =======
@@ -362,8 +361,8 @@ Changes
 26/10/2009 - Version 1.0.403
 - Minor compatibility fixes in this release
 - Fixed some error messages on undefined global variables during loading of
-  simpcomp when the packages `homology' and/or `GRAPE' are not present
-- Fallback to functions of `homology' package are now handled correctly
+  simpcomp when the packages *homology* and/or *GRAPE* are not present
+- Fallback to functions of *homology* package are now handled correctly
 - Added extended testing functionality and SCRunTest
 
 13/10/2009 - Version 1.0.389 
@@ -376,9 +375,13 @@ Roadmap
 The following features are planned to be supported in future versions of
 simpcomp:
 
- * Further extension of the library
-  
- * Flexibilization of bistellar flip interface
+* Algorithm to decide tightness, code for sigma vectors, etc.
+
+* Better simplification strategies
+
+* Coverings (finite index subgroups)
+
+* Presentation two-complex (from fp-group)
 
 		
 Bugs
@@ -392,19 +395,20 @@ authors.
 Contact
 =======
 
-Felix Effenberger
-  Max Planck Institute for Mathematics in the Sciences
-  Inselstr. 22, 04103 Leipzig, Germany
+Felix Effenberger<br/><br/>
 
-  E-Mail: Felix.effenberger@mis.mpg.de
-  Web: http://personal-homepages.mis.mpg.de/effen/
+&nbsp;&nbsp;&nbsp;Max Planck Institute for Mathematics in the Sciences<br/>
+&nbsp;&nbsp;&nbsp;Inselstr. 22, 04103 Leipzig, Germany<br/>
+&nbsp;&nbsp;&nbsp;E-Mail: Felix.effenberger@mis.mpg.de<br/>
+&nbsp;&nbsp;&nbsp;Web: http://personal-homepages.mis.mpg.de/effen/<br/><br/>
 
-Jonathan Spreer
-  The University of Queensland
-  School of Mathematics and Physics
-  Computational Geometry and Topology Group
-  St. Lucia, Queensland, 4072, Australia
+Jonathan Spreer<br/><br/>
 
-  E-Mail: j.spreer@uq.edu.au
-  Web: http://www.tacet.de/Jonathan
+&nbsp;&nbsp;&nbsp;The University of Queensland<br/>
+&nbsp;&nbsp;&nbsp;School of Mathematics and Physics<br/>
+&nbsp;&nbsp;&nbsp;Computational Geometry and Topology Group<br/>
+&nbsp;&nbsp;&nbsp;St. Lucia, Queensland, 4072, Australia<br/>
+&nbsp;&nbsp;&nbsp;E-Mail: j.spreer@uq.edu.au<br/>
+&nbsp;&nbsp;&nbsp;Web: http://www.tacet.de/Jonathan
+
 
