@@ -182,6 +182,14 @@ Changes
 - Improved functions SCIsPseudoManifold, SCHasBoundary,
   SCBoundarEx and SCBoundary
 
+12/12/2013 - Version 2.0.0: FIRST RELEASE AS GAP SHARED PACKAGE
+- Added functions SCExportIsoSig, SCExportToString, SCFromIsoSig for 
+  isomorphism signature support and compressing
+- Added infinite family of transitive triangulations (S2xS2)^k
+  (function SCSeriesS2xS2(k))
+- Added function SCExportRecognizer to export 3-manifolds to Matveev's
+  3-manifold recognizer 
+
 31/01/2013 - Version 1.6.1: Minor update.
 - Fixed minor bug in SCChiralMap and SCRegularMap.
 - Updated deployment system.
