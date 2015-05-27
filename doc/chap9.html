@@ -142,7 +142,7 @@
 
 <p>It is recommended to use a minimal triangulation <var class="Arg">complex2</var> for the check if possible.</p>
 
-<p>Internally calls <code class="func">SCReduceComplexEx</code> (<a href="chap9.html#X814D9AE287F64F74"><span class="RefLink">9.2-14</span></a>) <code class="code">(complex1,complex2,1,SCIntFunc.SCChooseMove);</code></p>
+<p>Internally calls <code class="func">SCReduceComplexEx</code> (<a href="chap9.html#X814D9AE287F64F74"><span class="RefLink">9.2-14</span></a>)<code class="code">(complex1,complex2,1,SCIntFunc.SCChooseMove);</code></p>
 
 
 <div class="example"><pre>
@@ -238,9 +238,6 @@
  
  /SimplicialComplex]
  gap&gt; SCIsKStackedSphere(l,1);
- #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
- #I  SCIsKStackedSphere: try 1/50
- #I  SCIsKStackedSphere: complex is a 1-stacked sphere.
  [ true, [SimplicialComplex
      
       Properties known: Dim, FacetsEx, Name, Vertices.
@@ -262,9 +259,9 @@
 
 <p><code class="keyw">false</code> is returned if it can be proven that there exists a vertex link which is not PL-homeomorphic to the standard PL-sphere, <code class="keyw">true</code> is returned if all vertex links are bistellarly equivalent to the boundary of the simplex, <code class="keyw">fail</code> is returned if the algorithm does not terminate after the number of rounds indicated by <code class="code">SCBistellarOptions.MaxIntervallIsManifold</code>.</p>
 
-<p>Internally calls <code class="func">SCReduceComplexEx</code> (<a href="chap9.html#X814D9AE287F64F74"><span class="RefLink">9.2-14</span></a>) <code class="code">(link,SCEmpty(),0,SCIntFunc.SCChooseMove);</code> for every link of <var class="Arg">complex</var>. Note that <code class="keyw">false</code> is returned in case of a bounded manifold.</p>
+<p>Internally calls <code class="func">SCReduceComplexEx</code> (<a href="chap9.html#X814D9AE287F64F74"><span class="RefLink">9.2-14</span></a>)<code class="code">(link,SCEmpty(),0,SCIntFunc.SCChooseMove);</code> for every link of <var class="Arg">complex</var>. Note that <code class="keyw">false</code> is returned in case of a bounded manifold.</p>
 
-<p>See <code class="func">SCIsManifoldEx</code> (<a href="chap12.html#X86F1B97282A7E01D"><span class="RefLink">12.1-18</span></a>) and <code class="func">SCIsManifold</code> (<a href="chap12.html#X831FFF748201B589"><span class="RefLink">12.1-17</span></a>) for alternative methods for manifold verification.</p>
+<p><strong class="pkg">simpcomp</strong>'s default method for manifold verification is <code class="func">SCIsManifold</code> (<a href="chap12.html#X831FFF748201B589"><span class="RefLink">12.1-17</span></a>). However, this method sometimes has advantages, in particular when dealing with <span class="SimpleMath">4</span>-dimensional vertex links where the smooth Poincare conjecture might be an issue.</p>
 
 
 <div class="example"><pre>
@@ -406,7 +403,7 @@
  
  /SimplicialComplex]
  gap&gt; c.F;
- [ 18, 75, 114, 57 ]
+ [ 17, 74, 114, 57 ]
  </pre></div>
 
 <p><a id="X85D69E4F84E8E7D9" name="X85D69E4F84E8E7D9"></a></p>
@@ -426,7 +423,7 @@
 
 <p>Main application: Reduce a sub-complex of the cross polytope without introducing diagonals.</p>
 
-<p>Internally calls <code class="func">SCReduceComplexEx</code> (<a href="chap9.html#X814D9AE287F64F74"><span class="RefLink">9.2-14</span></a>) <code class="code">(complex1,complex2,2,SCIntFunc.SCChooseMove);</code></p>
+<p>Internally calls <code class="func">SCReduceComplexEx</code> (<a href="chap9.html#X814D9AE287F64F74"><span class="RefLink">9.2-14</span></a>)<code class="code">(complex1,complex2,2,SCIntFunc.SCChooseMove);</code></p>
 
 
 <div class="example"><pre>
@@ -437,7 +434,7 @@
      
       Properties known: Dim, FacetsEx, Name, Vertices.
      
-      Name="unnamed complex 33"
+      Name="unnamed complex 36"
       Dim=1
      
      /SimplicialComplex], 1 ]
@@ -456,26 +453,21 @@
 
 <p>Returns <code class="keyw">fail</code> upon an error..</p>
 
-<p>Reduces a pure simplicial complex <var class="Arg">complex</var> satisfying the weak pseudomanifold property via bistellar moves. Internally calls <code class="func">SCReduceComplexEx</code> (<a href="chap9.html#X814D9AE287F64F74"><span class="RefLink">9.2-14</span></a>) <code class="code">(complex,SCEmpty(),0,SCIntFunc.SCChooseMove);</code></p>
+<p>Reduces a pure simplicial complex <var class="Arg">complex</var> satisfying the weak pseudomanifold property via bistellar moves. Internally calls <code class="func">SCReduceComplexEx</code> (<a href="chap9.html#X814D9AE287F64F74"><span class="RefLink">9.2-14</span></a>)<code class="code">(complex,SCEmpty(),0,SCIntFunc.SCChooseMove);</code></p>
 
 
 <div class="example"><pre>
  gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
  gap&gt; SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
- gap&gt; x x(obj);
- Error, Variable: 'x' must have a value
- not in any function at line 69 of *stdin*
- Syntax error: ; expected
- x x(obj);
-   ^
- [SimplicialComplex
- 
-  Properties known: Dim, FacetsEx, Name, Vertices.
- 
-  Name="unnamed complex 24"
-  Dim=1
- 
- /SimplicialComplex]
+ gap&gt; SCReduceComplex(obj);
+ [ true, [SimplicialComplex
+     
+      Properties known: Dim, FacetsEx, Name, Vertices.
+     
+      Name="unnamed complex 27"
+      Dim=1
+     
+     /SimplicialComplex], 3 ]
  </pre></div>
 
 <p><a id="X814D9AE287F64F74" name="X814D9AE287F64F74"></a></p>
