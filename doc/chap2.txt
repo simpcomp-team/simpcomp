@@ -221,11 +221,9 @@
   
   [1X2.6 [33X[0;0YDiscrete Morse theory[133X[101X
   
-  [33X[0;0YIn  the  following,  we  will  give  a very brief introduction into Forman's
-  discrete Morse theory (compare [For95], not to be confused with Banchoff and
-  Kühnel's  theory  of regular simplexwise linear functions which is described
-  in Section [14X2.5[114X).[133X
-  [33X[0;0YTODO: overview over discrete Morse theory[133X
+  [33X[0;0YFor  an introduction into Forman's discrete Morse theory see [For95], not to
+  be  confused with Banchoff and Kühnel's theory of regular simplexwise linear
+  functions which is described in Section [14X2.5[114X).[133X
   
   
   [1X2.7 [33X[0;0YTightness and tight triangulations[133X[101X

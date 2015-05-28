@@ -110,8 +110,8 @@
 {\Huge \textbf{A \textsf{GAP} toolbox for simplicial complexes\mbox{}}}\\
 \vfill
 
-{\Huge Version 2.1.0\mbox{}}\\[1cm]
-{Mai 2015  \begin{center} \vspace*{1cm}
+{\Huge Version \%\%\%VERSION\%\%\%\mbox{}}\\[1cm]
+{\%\%\%DATESHORT\%\%\%  \begin{center} \vspace*{1cm}
 \includegraphics[width=.4\textwidth]{figures/shrimpmanual}\\ \end{center}  \mbox{}}\\[1cm]
 \mbox{}\\[2cm]
 {\Large \textbf{ Felix Effenberger   \mbox{}}}\\
@@ -163,10 +163,10 @@ the \textsf{GRAPE} package is not available. \mbox{}}\\[1cm]
 {\small 
 \section*{Copyright}
 \logpage{[ 0, 0, 3 ]}
-{\copyright} 2015 Felix Effenberger and Jonathan Spreer. Permission is granted
-to copy, distribute and/or modify this document under the terms of the GNU
-Free Documentation License, Version 1.2 or any later version published by the
-Free Software Foundation, see \href{http://www.fsf.org/licensing/licenses/fdl.html} {\texttt{http://www.fsf.org/licensing/licenses/fdl.html}} for a copy.
+{\copyright} \%\%\%YEAR\%\%\% Felix Effenberger and Jonathan Spreer.
+Permission is granted to copy, distribute and/or modify this document under
+the terms of the GNU Free Documentation License, Version 1.2 or any later
+version published by the Free Software Foundation, see \href{http://www.fsf.org/licensing/licenses/fdl.html} {\texttt{http://www.fsf.org/licensing/licenses/fdl.html}} for a copy.
 
  \textsf{simpcomp} is free software. The code of \textsf{simpcomp} is released under the GPL version 2 or later (at your preference). For the
 text of the GPL see the file \texttt{COPYING} in the \textsf{simpcomp} directory or \href{http://www.gnu.org/licenses/} {\texttt{http://www.gnu.org/licenses/}}. \mbox{}}\\[1cm]
@@ -312,7 +312,7 @@ verifies that the results are correct.
  To test the functionality of \textsf{simpcomp} you can run the function \texttt{SCRunTest} (\ref{SCRunTest}) from the \textsf{GAP} console: 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, Version 2.1.0
+  + test simpcomp package, Version %%%VERSION%%%
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@|
@@ -337,8 +337,8 @@ calls to functions of the package \textsf{simpcomp} can be controlled by setting
   @manual{simpcomp,
   	author = "Felix Effenberger and Jonathan Spreer",
   	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
-  	          {V}ersion 2.1.0",
-  	year   = "2015",
+  	          {V}ersion %%%VERSION%%%",
+  	year   = "%%%YEAR%%%",
   	url    = "\url{http://code.google.com/p/simpcomp}",
   }
 \end{verbatim}
@@ -348,8 +348,8 @@ bibliography environment of LaTeX.
   \bibitem{simpcomp}
   F.~Effenberger and J.~Spreer,
   \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
-  Version 2.1.0, 
-  2015,
+  Version %%%VERSION%%%, 
+  %%%YEAR%%%,
   \url{http://code.google.com/p/simpcomp}.
 \end{verbatim}
  }
@@ -580,11 +580,10 @@ face).} \end{center}  }
 \logpage{[ 2, 6, 0 ]}
 \hyperdef{L}{X84451D2C879613E6}{}
 {
- In the following, we will give a very brief introduction into Forman's
-discrete Morse theory (compare \cite{Forman95DiscrMorseTheoryCellCompl}, not to be confused with Banchoff and K{\"u}hnel's theory of regular
+ For an introduction into Forman's discrete Morse theory see \cite{Forman95DiscrMorseTheoryCellCompl}, not to be confused with Banchoff and K{\"u}hnel's theory of regular
 simplexwise linear functions which is described in Section \ref{sec:MorseTheory}).\\
 \\
- TODO: overview over discrete Morse theory }
+ }
 
  
 \section{\textcolor{Chapter }{Tightness and tight triangulations}}\label{sec:tight}
@@ -1608,7 +1607,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   64
+   36
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
    0
@@ -1623,7 +1622,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   65
+   48
    
 \end{Verbatim}
  }
@@ -2425,10 +2424,10 @@ pseudomanifold. Compare \texttt{SCExportIsoSig} (\ref{SCExportIsoSig}), which re
    gap> c:=SCSeriesBdHandleBody(3,9);;
    gap> s:=SCExportToString(c); time;
    "deffg.h.f.fahaiciai.i.hai.fbgeiagihbhceceba.g.gag"
-   4
+   0
    gap> s:=SCExportIsoSig(c); time;
    "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
-   17
+   12
    
 \end{Verbatim}
  }
@@ -3422,9 +3421,9 @@ from \cite{Spreer10Diss}, Section 3.3.
    gap> Mminus:=SCSpan(c,[1,2,3,4,9,10,11,12]);;                  
    gap> Mplus:=SCSpan(c,[5,6,7,8,13,14,15,16]);;                  
    gap> SCCollapseGreedy(Mminus).Facets;
-   [ [ 1, 9 ], [ 1, 12 ], [ 3, 10 ], [ 3, 12 ], [ 9, 10 ] ]
+   [ [ 1, 2 ], [ 1, 12 ], [ 2, 11 ], [ 11, 12 ] ]
    gap> SCCollapseGreedy(Mplus).Facets; 
-   [ [ 6, 7 ], [ 6, 13 ], [ 7, 16 ], [ 8, 13 ], [ 8, 16 ] ]
+   [ [ 5, 6 ], [ 5, 16 ], [ 6, 15 ], [ 15, 16 ] ]
    
 \end{Verbatim}
  }
@@ -4684,8 +4683,8 @@ always unique, since every non trivial semi-direct product is denoted by ''\text
    [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
    gap> k3surf:=SCLib.Load(last[1][1]);; 
    gap> SCAutomorphismGroup(k3surf);               
-   Group([ (1,3,8,4,9,16,15,2,14,12,6,7,13,5,10), (1,13)(2,14)(3,15)(4,16)(5,9)
-   (6,10)(7,11)(8,12) ])
+   Group([ (1,3,8,4,9,16,15,2,14,12,6,7,13,5,10), 
+     (1,13)(2,14)(3,15)(4,16)(5,9)(6,10)(7,11)(8,12) ])
    
 \end{Verbatim}
  }
@@ -5953,6 +5952,9 @@ indefinite answer to the membership problem.
    gap> c.AutomorphismGroup;
    Group([ (1,3)(4,9)(5,8)(6,7), (1,9,8,7,6,5,4,3,2) ])
    gap> SCIsInKd(c,1);
+   #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
+   #I  SCIsKStackedSphere: try 1/50
+   #I  SCIsKStackedSphere: complex is a 1-stacked sphere.
    true
    
 \end{Verbatim}
@@ -8736,8 +8738,8 @@ PL-homeomorphic, \item for a given triangulation of a PL-manifold, try to find
 a smaller one with less vertices, \item check, if an abstract simplicial
 complex is a combinatorial manifold by reducing all vertex links to the
 boundary of the $d$-simplex (this can also be done using discrete Morse
-theory, see Chapter <Ref Chap="chap:DMT" />, <Ref Meth="SCIsManifold" />).
-\end{itemize} 
+theory, see Chapter <Ref Chap="chap:DMT" />, <Ref Meth="SCBistellarIsManifold"
+/>). \end{itemize} 
 
  In many cases the heuristic reduces a given triangulation but does not reach a
 minimal triangulation after a reasonable amount of flips. Thus, we usually can
@@ -8831,7 +8833,7 @@ can be reduced to the simplicial complex \mbox{\texttt{\mdseries\slshape complex
 
  It is recommended to use a minimal triangulation \mbox{\texttt{\mdseries\slshape complex2}} for the check if possible.
 
- Internally calls \texttt{SCReduceComplexEx} (\ref{SCReduceComplexEx})\texttt{(complex1,complex2,1,SCIntFunc.SCChooseMove);} 
+ Internally calls \texttt{SCReduceComplexEx} (\ref{SCReduceComplexEx}) \texttt{(complex1,complex2,1,SCIntFunc.SCChooseMove);} 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes to disk
    gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
@@ -8951,6 +8953,9 @@ contains the trigangulated $(d+1)$-ball $B$ with $\partial B=S$ and $\operatorna
    
    /SimplicialComplex]
    gap> SCIsKStackedSphere(l,1);
+   #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
+   #I  SCIsKStackedSphere: try 1/50
+   #I  SCIsKStackedSphere: complex is a 1-stacked sphere.
    [ true, [SimplicialComplex
        
         Properties known: Dim, FacetsEx, Name, Vertices.
@@ -8984,11 +8989,9 @@ PL-homeomorphic to the standard PL-sphere, \texttt{true} is returned if all vert
 the simplex, \texttt{fail} is returned if the algorithm does not terminate after the number of rounds
 indicated by \texttt{SCBistellarOptions.MaxIntervallIsManifold}.
 
- Internally calls \texttt{SCReduceComplexEx} (\ref{SCReduceComplexEx})\texttt{(link,SCEmpty(),0,SCIntFunc.SCChooseMove);} for every link of \mbox{\texttt{\mdseries\slshape complex}}. Note that \texttt{false} is returned in case of a bounded manifold.
+ Internally calls \texttt{SCReduceComplexEx} (\ref{SCReduceComplexEx}) \texttt{(link,SCEmpty(),0,SCIntFunc.SCChooseMove);} for every link of \mbox{\texttt{\mdseries\slshape complex}}. Note that \texttt{false} is returned in case of a bounded manifold.
 
- \textsf{simpcomp}'s default method for manifold verification is \texttt{SCIsManifold} (\ref{SCIsManifold}). However, this method sometimes has advantages, in particular when dealing
-with $4$-dimensional vertex links where the smooth Poincare conjecture might be an
-issue. 
+ See \texttt{SCIsManifoldEx} (\ref{SCIsManifoldEx}) and \texttt{SCIsManifold} (\ref{SCIsManifold}) for alternative methods for manifold verification. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> c:=SCBdCrossPolytope(3);;
    gap> SCBistellarIsManifold(c);
@@ -9006,7 +9009,7 @@ issue.
 \label{SCIsMovableComplex}
 }\hfill{\scriptsize (method)}}\\
 \textbf{\indent Returns:\ }
- \texttt{true} or \texttt{false} upon success, \texttt{fail} otherwise.
+ \texttt{true} or \texttt{false} upon success, \texttt{fail} otherwise. 
 
 
 
@@ -9159,7 +9162,7 @@ With optional positive integer argument \mbox{\texttt{\mdseries\slshape rounds}}
    
    /SimplicialComplex]
    gap> c.F;
-   [ 17, 74, 114, 57 ]
+   [ 18, 75, 114, 57 ]
    
 \end{Verbatim}
  }
@@ -9191,7 +9194,7 @@ sub-complex of the simplicial complex \mbox{\texttt{\mdseries\slshape complex2}}
  Main application: Reduce a sub-complex of the cross polytope without
 introducing diagonals. 
 
- Internally calls \texttt{SCReduceComplexEx} (\ref{SCReduceComplexEx})\texttt{(complex1,complex2,2,SCIntFunc.SCChooseMove);} 
+ Internally calls \texttt{SCReduceComplexEx} (\ref{SCReduceComplexEx}) \texttt{(complex1,complex2,2,SCIntFunc.SCChooseMove);} 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> c:=SCFromFacets([[1,3],[3,5],[4,5],[4,1]]);;
    gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
@@ -9200,7 +9203,7 @@ introducing diagonals.
        
         Properties known: Dim, FacetsEx, Name, Vertices.
        
-        Name="unnamed complex 36"
+        Name="unnamed complex 33"
         Dim=1
        
        /SimplicialComplex], 1 ]
@@ -9229,19 +9232,24 @@ the reducing process and (upon termination) a triple of the form \texttt{[ boole
 
 
  Reduces a pure simplicial complex \mbox{\texttt{\mdseries\slshape complex}} satisfying the weak pseudomanifold property via bistellar moves. Internally
-calls \texttt{SCReduceComplexEx} (\ref{SCReduceComplexEx})\texttt{(complex,SCEmpty(),0,SCIntFunc.SCChooseMove);} 
+calls \texttt{SCReduceComplexEx} (\ref{SCReduceComplexEx}) \texttt{(complex,SCEmpty(),0,SCIntFunc.SCChooseMove);} 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
    gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
-   gap> SCReduceComplex(obj);
-   [ true, [SimplicialComplex
-       
-        Properties known: Dim, FacetsEx, Name, Vertices.
-       
-        Name="unnamed complex 27"
-        Dim=1
-       
-       /SimplicialComplex], 3 ]
+   gap> x x(obj);
+   Error, Variable: 'x' must have a value
+   not in any function at line 69 of *stdin*
+   Syntax error: ; expected
+   x x(obj);
+     ^
+   [SimplicialComplex
+   
+    Properties known: Dim, FacetsEx, Name, Vertices.
+   
+    Name="unnamed complex 24"
+    Dim=1
+   
+   /SimplicialComplex]
    
 \end{Verbatim}
  }
@@ -9652,7 +9660,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
    #I  SCIsTight: processed 30000 of 40320 rsl-functions so far, all perfect.
    #I  SCIsTight: processed 40000 of 40320 rsl-functions so far, all perfect.
    true
-   10230
+   7936
    
 \end{Verbatim}
  
@@ -9671,7 +9679,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
      98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 
      113, 114, 115, 116, 117, 118, 119, 120 ], complex not tight.
    false
-   17
+   12
    
 \end{Verbatim}
  
@@ -9766,6 +9774,8 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
    gap> c.IsTight;                
    #I  SCIsInKd: complex has transitive automorphism group, only checking one link.
    #I  SCIsInKd: checking link 1/1
+   #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
+   #I  SCIsKStackedSphere: try 1/50
    #I  round 0
    Reduced complex, F: [ 9, 26, 34, 17 ]
    #I  round 1
@@ -9777,6 +9787,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
    #I  round 4
    Reduced complex, F: [ 5, 10, 10, 5 ]
    #I  SCReduceComplexEx: computed locally minimal complex after 5 rounds.
+   #I  SCIsKStackedSphere: complex is a 1-stacked sphere.
    #I  SCIsInKd: complex has transitive automorphism group, all links are 1-stacked.
    #I  SCIsTight: complex is in class K(1) and 2-neighborly, thus tight.
    true
@@ -10368,23 +10379,23 @@ a list of pairs of the form \texttt{[ integer, list ]} upon success, fail otherw
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandom,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   49
+   64
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   57
+   52
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomRevLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   51
+   60
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseEngstroem,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   116
+   96
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   153
+   140
    
 \end{Verbatim}
  }
@@ -10585,7 +10596,7 @@ usually named by their topological type. As usual, ` S\^{}d' denotes a $d$-spher
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
-   Path="/home/felix/Downloads/gap4r7/pkg/simpcomp/complexes/"
+   Path="/home/jonathan/apps/gap4r5/pkg/simpcomp/complexes/"
    ]
    gap> SCLib.Size;
    7649
@@ -10650,21 +10661,17 @@ usually named by their topological type. As usual, ` S\^{}d' denotes a $d$-spher
 optional argument \mbox{\texttt{\mdseries\slshape name}} and the current time or taken from the name of the complex, if it is named. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> myRepository:=SCLibInit("~/myrepository");
-   #I  SCLibInit: made directory "/home/felix/myrepository/" for user library.
-   #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
-   #I  SCLibUpdate: rebuilding index for /home/felix/myrepository/.
-   #I  SCLibUpdate: rebuilding index done.
    [Simplicial complex library. Properties:
    CalculateIndexAttributes=true
-   Number of complexes in library=0
+   Number of complexes in library=6
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
-   Path="/home/felix/myrepository/"
+   Path="/home/jonathan/myrepository/"
    ]
    gap> complex:=SCBdCrossPolytope(4);;
    gap> SCLibAdd(myRepository,complex);
-   #I  SCLibAdd: saving complex to file "complex_2015-05-19_20-01-38.scb".
+   #I  SCLibAdd: saving complex to file "complex_2015-05-20_00-57-15.scb".
    true
    gap> myRepository.Add(complex);; # alternative syntax
    
@@ -10709,15 +10716,20 @@ optional argument \mbox{\texttt{\mdseries\slshape name}} and the current time or
 
 
  Deletes the simplicial complex with the given id \mbox{\texttt{\mdseries\slshape id}} from the given repository \mbox{\texttt{\mdseries\slshape repository}}. Apart from deleting the complexes' index entry, the associated \texttt{.sc} file is also deleted. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\begin{Verbatim}[commandchars=@|B,fontsize=\small,frame=single,label=Example]
    gap> myRepository:=SCLibInit("~/myrepository");
+   Found a self-reference to an unknown object!
+   #I  IO_Unpicklers.SCLR: Error while unpicking library repository. Delete file complexes.idx and complexes.idxb and recreate them with SCLibInit.
+   #I  SCIntFunc.SCLibInit: error loading binary index  -- trying to reconstruct it.
+   #I  SCLibUpdate: rebuilding index for /home/jonathan/myrepository/.
+   #I  SCLibUpdate: rebuilding index done.
    [Simplicial complex library. Properties:
    CalculateIndexAttributes=true
-   Number of complexes in library=1
+   Number of complexes in library=7
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
-   Path="/home/felix/myrepository/"
+   Path="/home/jonathan/myrepository/"
    ]
    gap> SCLibAdd(myRepository,SCSimplex(2));;
    gap> SCLibDelete(myRepository,1);
@@ -10822,11 +10834,11 @@ stored in its base path in the XML file \texttt{complexes.idx}, the complexes ar
    gap> myRepository:=SCLibInit("~/myrepository");
    [Simplicial complex library. Properties:
    CalculateIndexAttributes=true
-   Number of complexes in library=1
+   Number of complexes in library=7
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
-   Path="/home/felix/myrepository/"
+   Path="/home/jonathan/myrepository/"
    ]
    
 \end{Verbatim}
@@ -10951,7 +10963,7 @@ the simplicial complexes in the repository if set to \texttt{true}.
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> myRepository:=SCLibInit("~/repository");;
    gap> SCLibUpdate(myRepository);
-   #I  SCLibUpdate: rebuilding index for /home/felix/repository/.
+   #I  SCLibUpdate: rebuilding index for /home/jonathan/repository/.
    #I  SCLibUpdate: rebuilding index done.
    [Simplicial complex library. Properties:
    CalculateIndexAttributes=true
@@ -10959,7 +10971,7 @@ the simplicial complexes in the repository if set to \texttt{true}.
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
-   Path="/home/felix/repository/"
+   Path="/home/jonathan/repository/"
    ]
    
 \end{Verbatim}
@@ -10989,7 +11001,7 @@ to the user and only pre-calculated attributes are indexed.
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
-   Path="/home/felix/Downloads/gap4r7/pkg/simpcomp/complexes/"
+   Path="/home/jonathan/apps/gap4r5/pkg/simpcomp/complexes/"
    ]
    
 \end{Verbatim}
@@ -11361,8 +11373,11 @@ complex \mbox{\texttt{\mdseries\slshape complex}} with a ring of coefficients as
    [ [ 16, "CP^2 (VT)" ] ]
    gap> c:=SCLib.Load(last[1][1]);;
    gap> SCHomalgBoundaryMatrices(c,0);
-   Error, Variable: 'SCHomalgBoundaryMatrices' must have a value
-   not in any function at line 7 of *stdin*
+   [ <A 36 x 9 mutable matrix over an internal ring>, 
+     <A 84 x 36 mutable matrix over an internal ring>, 
+     <A 90 x 84 mutable matrix over an internal ring>, 
+     <A 36 x 90 mutable matrix over an internal ring>, 
+     <An unevaluated 0 x 36 zero matrix over an internal ring> ]
    
 \end{Verbatim}
  }
@@ -11389,8 +11404,11 @@ complex \mbox{\texttt{\mdseries\slshape complex}} with a ring of coefficients as
    [ [ 16, "CP^2 (VT)" ] ]
    gap> c:=SCLib.Load(last[1][1]);;
    gap> SCHomalgCoboundaryMatrices(c,0);
-   Error, Variable: 'SCHomalgCoboundaryMatrices' must have a value
-   not in any function at line 13 of *stdin*
+   [ <A 9 x 36 mutable matrix over an internal ring>, 
+     <A 36 x 84 mutable matrix over an internal ring>, 
+     <A 84 x 90 mutable matrix over an internal ring>, 
+     <A 90 x 36 mutable matrix over an internal ring>, 
+     <An unevaluated 36 x 0 zero matrix over an internal ring> ]
    
 \end{Verbatim}
  }
@@ -11417,8 +11435,8 @@ but rather their full structure, have a look at the function \texttt{SCHomalgHom
    [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
    gap> c:=SCLib.Load(last[1][1]);;
    gap> SCHomalgHomology(c,0);
-   Error, Variable: 'SCHomalgHomology' must have a value
-   not in any function at line 19 of *stdin*
+   #I  SCHomalgHomologyOp: Q-homology ranks: [ 1, 0, 22, 0, 1 ]
+   [ 1, 0, 22, 0, 1 ]
    
 \end{Verbatim}
  }
@@ -11448,8 +11466,8 @@ it is better to use the funtion \texttt{SCHomalgHomology} (\ref{SCHomalgHomology
    [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
    gap> c:=SCLib.Load(last[1][1]);;
    gap> SCHomalgHomologyBasis(c,0);
-   Error, Variable: 'SCHomalgHomologyBasis' must have a value
-   not in any function at line 25 of *stdin*
+   #I  SCHomalgHomologyBasisOp: constructed Q-homology groups.
+   <A graded homology object consisting of 5 left modules at degrees [ 0 .. 4 ]>
    
 \end{Verbatim}
  }
@@ -11476,8 +11494,8 @@ groups, but rather their full structure, have a look at the function \texttt{SCH
    [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
    gap> c:=SCLib.Load(last[1][1]);;
    gap> SCHomalgCohomology(c,0);
-   Error, Variable: 'SCHomalgCohomology' must have a value
-   not in any function at line 31 of *stdin*
+   #I  SCHomalgCohomologyOp: Q-cohomology ranks: [ 1, 0, 22, 0, 1 ]
+   [ 1, 0, 22, 0, 1 ]
    
 \end{Verbatim}
  }
@@ -11507,8 +11525,9 @@ then it is better to use the funtion \texttt{SCHomalgCohomology} (\ref{SCHomalgC
    [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
    gap> c:=SCLib.Load(last[1][1]);;
    gap> SCHomalgCohomologyBasis(c,0);
-   Error, Variable: 'SCHomalgCohomologyBasis' must have a value
-   not in any function at line 37 of *stdin*
+   #I  SCHomalgCohomologyBasisOp: constructed Q-cohomology groups.
+   <A graded cohomology object consisting of 5 left modules at degrees 
+   [ 1 .. 5 ]>
    
 \end{Verbatim}
  }
@@ -11616,10 +11635,9 @@ nothing.
 
 
  Returns \texttt{true} when the mail notification system of \textsf{simpcomp} is enabled, \texttt{false} otherwise. Default setting is \texttt{false}. 
-\begin{Verbatim}[commandchars=|BD,fontsize=\small,frame=single,label=Example]
+\begin{Verbatim}[commandchars=!|B,fontsize=\small,frame=single,label=Example]
    gap> SCMailSetAddress("johndoe@somehost"); #enables mail notification
    true
-   Please install an MTA on this system if you want to use sendmail!
    gap> SCMailIsEnabled();
    true
    
@@ -11642,7 +11660,7 @@ nothing.
  Returns \texttt{true} when an email of the \textsf{simpcomp} email notification system is pending, \texttt{false} otherwise. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> SCMailIsPending();
-   false
+   true
    
 \end{Verbatim}
  }
@@ -11670,7 +11688,8 @@ minimal email sending interval, see \texttt{SCMailSetMinInterval} (\ref{SCMailSe
    gap> SCMailIsEnabled();
    true
    gap> SCMailSend("Hello, this is simpcomp.");
-   true
+   mail: cannot send message: Process exited with a non-zero status
+   false
    
 \end{Verbatim}
  }
@@ -11691,7 +11710,8 @@ minimal email sending interval, see \texttt{SCMailSetMinInterval} (\ref{SCMailSe
  Tries to send a pending email of the \textsf{simpcomp} email notification system. Returns \texttt{true} on success or if there was no mail pending. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> SCMailSendPending();
-   true
+   mail: cannot send message: Process exited with a non-zero status
+   false
    
 \end{Verbatim}
  }
@@ -11790,7 +11810,7 @@ differs from system to system.
    Line 1220 : 
    + simpcomp package test
    Line 1221 : 
-   + GAP4stones: 51075
+   + GAP4stones: 69079
    true
    
 \end{Verbatim}
@@ -12260,7 +12280,7 @@ Section \ref{sec:generateFromOld}, which will be described in the next sections.
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@#first run functionality test on simpcomp|
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, version 2.1.0
+  + test simpcomp package, version %%%VERSION%%%
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@#all ok|

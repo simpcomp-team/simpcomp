@@ -1192,11 +1192,13 @@ end);
 ## <Returns>a list of pairs of the form <C>[ integer, list ]</C> upon 
 ## success</Returns>
 ## <Description>
-## Computes the homology groups of a given simplicial complex <Arg>complex</Arg> using 
-## <Ref Func="SCMorseRandom"/> to obtain a Morse function and <C>SmithNormalFormIntegerMat</C>.
-## Use <Ref Func="SCHomologyEx"/> to use alternative methods to compute discrete Morse
-## functions (such as <Ref Func="SCMorseEngstroem"/>, or <Ref Func="SCMorseUST"/>) or
-## the Smith normal form. <P/>
+## Computes the homology groups of a given simplicial complex 
+## <Arg>complex</Arg> using 
+## <Ref Func="SCMorseRandom"/> to obtain a Morse function and 
+## <C>SmithNormalFormIntegerMat</C>.
+## Use <Ref Func="SCHomologyEx"/> to use alternative methods to compute 
+## discrete Morse functions (such as <Ref Func="SCMorseEngstroem"/>, 
+## or <Ref Func="SCMorseUST"/>) or the Smith normal form. <P/>
 ##
 ## The output is a list of homology groups of the form <M>[H_0,....,H_d]</M>, 
 ## where <M>d</M> is the dimension of <Arg>complex</Arg>. The format of the 
@@ -1669,15 +1671,6 @@ function(arg)
       fi;
     fi;
   fi;
-
-  #ccc:=SC(SCSkel(c,2));
-  #time:=Runtime();
-  #hom:=SCHomology(ccc);
-  #time:=Runtime()-time;
-  #Info(InfoSimpcomp,3,"SCIsSimplyConnectedEx: computed homology in ",time,"ms.");
-  #if hom{[1,2]} <> [[0,[]],[0,[]]] then
-  #  return false;
-  #fi;
 
   if top then
     fl:=[SCSkel(c,dim-2),SCSkel(c,dim-1),SCSkel(c,dim)];

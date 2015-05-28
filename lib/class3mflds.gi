@@ -6,9 +6,12 @@
 ## <Func Name="SCNrCyclic3Mflds" Arg="i"/>
 ## <Returns> integer upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>	
-## Returns the number of combinatorial 3-manifolds with transitive cyclic symmetry with <Arg>i</Arg> vertices.
+## Returns the number of combinatorial 3-manifolds with transitive cyclic 
+## symmetry with <Arg>i</Arg> vertices.
 ## 
-## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification of combinatorial 3-manifolds with transitive cyclic symmetry up to <M>22</M> vertices.
+## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification 
+## of combinatorial 3-manifolds with transitive cyclic symmetry up to 
+## <M>22</M> vertices.
 ## <Example>
 ## gap> SCNrCyclic3Mflds(22);
 ## </Example>
@@ -20,9 +23,11 @@ InstallGlobalFunction(SCNrCyclic3Mflds,
 function(i)
 	local allowedInts;
 	
-	allowedInts:=[0, 0, 0, 0, 1, 1, 1, 2, 2, 8, 6, 20, 15, 50, 34, 107, 89, 319, 279, 1008, 1038, 3090];
+	allowedInts:=[0, 0, 0, 0, 1, 1, 1, 2, 2, 8, 6, 20, 15, 50, 34, 107, 89, 319, 
+    279, 1008, 1038, 3090];
 	if i < 5 or i > 22 then
-		Info(InfoSimpcomp,1,"SCSeriesCyclic3Mflds: argument must be a positive integer 5 <= i <= 22.");
+		Info(InfoSimpcomp,1,"SCSeriesCyclic3Mflds: argument must be a positive ",
+      "integer 5 <= i <= 22.");
 		return fail;
 	fi;
 	
@@ -37,9 +42,13 @@ end);
 ## <Func Name="SCCyclic3MfldTopTypes" Arg="i"/>
 ## <Returns> a list of strings upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>	
-## Returns a list of all topological types that occur in the classification combinatorial 3-manifolds with transitive cyclic symmetry with <Arg>i</Arg> vertices.
+## Returns a list of all topological types that occur in the classification 
+## combinatorial 3-manifolds with transitive cyclic symmetry with <Arg>i</Arg> 
+## vertices.
 ## 
-## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification of combinatorial 3-manifolds with transitive cyclic symmetry up to <M>22</M> vertices.
+## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification 
+## of combinatorial 3-manifolds with transitive cyclic symmetry up to 
+## <M>22</M> vertices.
 ## <Example>
 ## gap> SCCyclic3MfldTopTypes(19);
 ## </Example>
@@ -69,16 +78,39 @@ function(i)
 	["RP^3","S^2~S^1","S^3","S^3/Q8","T^3"],
 	["(S^2xS^1)#5","B2","L(3,1)","S^2xS^1","S^2~S^1","S^3","S^3/P24","T^3"],
 	["B2","RP^2xS^1","RP^3","S^2~S^1","S^3","Sigma^3","T^3"],
-	["(S^2xS^1)#7","(S^2~S^1)#7","B2","B4","K^2xS^1","L(5,1)","L(8,3)","RP^3","SFS[RP^2:(2,1)(2,1)(2,1)]","SFS[T^2:(1,1)]",
+	["(S^2xS^1)#7","(S^2~S^1)#7","B2","B4","K^2xS^1","L(5,1)","L(8,3)","RP^3",
+    "SFS[RP^2:(2,1)(2,1)(2,1)]","SFS[T^2:(1,1)]",
 	"S^2xS^1","S^2~S^1","S^3","S^3/Q8","T^3"],
 	["B2","RP^2xS^1","SFS[RP^2:(2,1)(3,1)]","S^2~S^1","S^3","Sigma(2,3,7)","T^3"],
-	["(S^2xS^1)#4","(S^2xS^1)#6","(S^2~S^1)#6","(S^2~S^1)#9","B2","B4","G2","K^2xS^1","L(3,1)","L(8,3)","RP^2xS^1","SFS[D:(3,1)(3,1)]U/mSFS[D:(3,1)(3,1)],m=[-4,5|-3,4]","SFS[K^2/n2:(1,5)]","SFS[RP^2:(2,1)(3,1)]","SFS[RP^2:(3,1)(3,2)]","SFS[S^2:(3,1)(3,1)(4,-3)]","S^2xS^1","S^2~S^1","S^3","S^3/Q28","T^3"],
-	["(RP^2)#3xS^1","(S^2xS^1)#12","B2","G3","K^2xS^1","L(3,1)","RP^2xS^1","RP^3","SFS[K^2:(2,1)(2,1)(2,1)]","SFS[K^2:(2,1)]","SFS[RP^2:(2,1)(2,1)(2,1)]","SFS[RP^2:(3,1)(3,1)(3,1)]","SFS[RP^2:(3,1)(3,1)(3,2)]","SFS[S^2:(2,1)(2,1)(2,1)(3,-5)]","SFS[S^2:(3,2)(3,2)(3,-1)]","SFS[S^2:(4,1)(4,1)(4,-3)]","SFS[S^2:(5,1)(5,1)(5,-4)]","SFS[T^2:(1,7)]","S^2~S^1","S^3","S^3/Q8","T^3"],
-	["(S^2xS^1)#12","(S^2~S^1)#12","B2","B4","HS","K^2xS^1","L(15,4)","L(3,1)","L(5,1)","L(7,1)","L(8,3)","RP^2xS^1","RP^3","SFS[(RP^2)#3:(1,1)]","SFS[A:(2,1)(2,1)]/[1,-11|1,-10]","SFS[D:(2,1)(2,1)]U/mSFS[D:(2,1)(3,1)],m=[-5,11|-4,9]","SFS[D:(2,1)(3,1)]U/mSFS[D:(3,1)(3,1)],m=[-8,11|-5,7]","SFS[D_:(3,1)(3,1)]","SFS[K^2:(2,1)(2,1)]","SFS[K^2:(2,1)]","SFS[K^2:(3,1)]","SFS[RP^2:(2,1)(3,1)]","SFS[RP^2:(2,1)(5,1)]","SFS[RP^2:(3,1)(3,2)]","SFS[RP^2:(3,1)(4,3)]","SFS[RP^2:(5,2)(5,3)]","SFS[S^2:(2,1)(2,1)(3,1)(3,-2)]","SFS[S^2:(2,1)(2,1)(3,1)(3,-4)]","SFS[S^2:(3,1)(3,1)(5,-3)]","SFS[S^2:(3,1)(3,1)(9,-7)]","SFS[S^2:(3,2)(4,1)(4,-3)]","SFS[S^2:(4,1)(5,2)(5,-3)]","S^2xS^1","S^2~S^1","S^3","S^3/P24","S^3/Q16","S^3/Q32","Sigma^3","T^3"]
+	["(S^2xS^1)#4","(S^2xS^1)#6","(S^2~S^1)#6","(S^2~S^1)#9","B2","B4","G2",
+    "K^2xS^1","L(3,1)","L(8,3)","RP^2xS^1",
+    "SFS[D:(3,1)(3,1)]U/mSFS[D:(3,1)(3,1)],m=[-4,5|-3,4]","SFS[K^2/n2:(1,5)]",
+    "SFS[RP^2:(2,1)(3,1)]","SFS[RP^2:(3,1)(3,2)]","SFS[S^2:(3,1)(3,1)(4,-3)]",
+    "S^2xS^1","S^2~S^1","S^3","S^3/Q28","T^3"],
+	["(RP^2)#3xS^1","(S^2xS^1)#12","B2","G3","K^2xS^1","L(3,1)","RP^2xS^1",
+    "RP^3","SFS[K^2:(2,1)(2,1)(2,1)]","SFS[K^2:(2,1)]",
+    "SFS[RP^2:(2,1)(2,1)(2,1)]","SFS[RP^2:(3,1)(3,1)(3,1)]",
+    "SFS[RP^2:(3,1)(3,1)(3,2)]","SFS[S^2:(2,1)(2,1)(2,1)(3,-5)]",
+    "SFS[S^2:(3,2)(3,2)(3,-1)]","SFS[S^2:(4,1)(4,1)(4,-3)]",
+    "SFS[S^2:(5,1)(5,1)(5,-4)]","SFS[T^2:(1,7)]","S^2~S^1","S^3","S^3/Q8",
+    "T^3"],
+	["(S^2xS^1)#12","(S^2~S^1)#12","B2","B4","HS","K^2xS^1","L(15,4)",
+    "L(3,1)","L(5,1)","L(7,1)","L(8,3)","RP^2xS^1","RP^3",
+    "SFS[(RP^2)#3:(1,1)]","SFS[A:(2,1)(2,1)]/[1,-11|1,-10]",
+    "SFS[D:(2,1)(2,1)]U/mSFS[D:(2,1)(3,1)],m=[-5,11|-4,9]",
+    "SFS[D:(2,1)(3,1)]U/mSFS[D:(3,1)(3,1)],m=[-8,11|-5,7]",
+    "SFS[D_:(3,1)(3,1)]","SFS[K^2:(2,1)(2,1)]","SFS[K^2:(2,1)]",
+    "SFS[K^2:(3,1)]","SFS[RP^2:(2,1)(3,1)]","SFS[RP^2:(2,1)(5,1)]",
+    "SFS[RP^2:(3,1)(3,2)]","SFS[RP^2:(3,1)(4,3)]","SFS[RP^2:(5,2)(5,3)]",
+    "SFS[S^2:(2,1)(2,1)(3,1)(3,-2)]","SFS[S^2:(2,1)(2,1)(3,1)(3,-4)]",
+    "SFS[S^2:(3,1)(3,1)(5,-3)]","SFS[S^2:(3,1)(3,1)(9,-7)]",
+    "SFS[S^2:(3,2)(4,1)(4,-3)]","SFS[S^2:(4,1)(5,2)(5,-3)]","S^2xS^1",
+    "S^2~S^1","S^3","S^3/P24","S^3/Q16","S^3/Q32","Sigma^3","T^3"]
 	];
 
 	if i > 22 then
-		Info(InfoSimpcomp,1,"SCCyclic3MfldsTopTypes: argument must be a positive integer < 23.");
+		Info(InfoSimpcomp,1,"SCCyclic3MfldsTopTypes: argument must be a positive ",
+      "integer < 23.");
 		return fail;
 	else
 		return tt[i];
@@ -93,18 +125,23 @@ SCIntFunc.SCCyclic3MfldEx:=function(i,j,type)
 	# type = 2: list of indices of all of given type
 	if type = 0 then
 		if not IsPosInt(j) or not IsPosInt(i) then
-			Info(InfoSimpcomp,1,"SCCyclic3MfldsEx: arguments must be positive integers.");
+			Info(InfoSimpcomp,1,"SCCyclic3MfldsEx: arguments must be positive "
+        "integers.");
 			return fail;
 		fi;
 		
 		if i < 5 or i > 22 then
-			Info(InfoSimpcomp,1,"SCCyclic3MfldsEx: first argument must be a positive integer 5 <= i <= 22.");
+			Info(InfoSimpcomp,1,"SCCyclic3MfldsEx: first argument must be a "
+        "positive integer 5 <= i <= 22.");
 			return fail;
 		fi;
 		
-		allowedInts:=[0, 0, 0, 0, 1, 1, 1, 2, 2, 8, 6, 20, 15, 50, 34, 107, 89, 319, 279, 1008, 1038, 3090];
+		allowedInts:=[0, 0, 0, 0, 1, 1, 1, 2, 2, 8, 6, 20, 15, 50, 34, 107, 89, 
+      319, 279, 1008, 1038, 3090];
 		if j > allowedInts[i] then
-			Info(InfoSimpcomp,1,"SCCyclic3MfldsEx: if first argument i = ",i,", then second argument must be a positive integer j <= ",allowedInts[i],".");
+			Info(InfoSimpcomp,1,"SCCyclic3MfldsEx: if first argument i = ",i,
+        ", then second argument must be a positive integer j <= ",
+        allowedInts[i],".");
 			return fail;
 		fi;
 	fi;
@@ -1669,7 +1706,8 @@ SCIntFunc.SCCyclic3MfldEx:=function(i,j,type)
 	[[3,4,33,146,162,195],"B2"],
 	[[3,4,33,149,153,173,196],"B2"],
 	[[3,4,33,151,156,196],"B2"],
-	[[3,4,35,60,146,160,193,212],"SFS[D:(3,1)(3,1)]U/mSFS[D:(3,1)(3,1)],m=[-4,5|-3,4]"],
+	[[3,4,35,60,146,160,193,212],
+    "SFS[D:(3,1)(3,1)]U/mSFS[D:(3,1)(3,1)],m=[-4,5|-3,4]"],
 	[[3,4,36,61,152,156,196],"B2"],
 	[[3,4,36,63,93,147,156,220,229],"(S^2xS^1)#6"],
 	[[3,4,36,63,93,150,156,197,229],"(S^2xS^1)#6"],
@@ -3912,7 +3950,8 @@ SCIntFunc.SCCyclic3MfldEx:=function(i,j,type)
 	[[1,23,105,191,200,207,214,241,246,257],"B2"],
 	[[1,23,105,193,197,203,224,241,257,318],"L(5,1)"],
 	[[1,23,105,193,201,203,224,241,257,258],"B2"],
-	[[1,23,105,194,200,205,233,257,320,335],"SFS[D:(2,1)(2,1)]U/mSFS[D:(2,1)(3,1)],m=[-5,11|-4,9]"],
+	[[1,23,105,194,200,205,233,257,320,335],
+    "SFS[D:(2,1)(2,1)]U/mSFS[D:(2,1)(3,1)],m=[-5,11|-4,9]"],
 	[[1,23,105,203,214,220,224,241,257],"L(3,1)"],
 	[[1,23,105,203,224,233,241,257],"S^2xS^1"],
 	[[1,23,105,203,224,235,241,257,314],"L(5,1)"],
@@ -3920,16 +3959,19 @@ SCIntFunc.SCCyclic3MfldEx:=function(i,j,type)
 	[[1,23,105,203,224,239,241,257,258,316],"L(5,1)"],
 	[[1,23,105,204,273,279,282,294,296,303],"SFS[RP^2:(2,1)(3,1)]"],
 	[[1,23,105,204,282,293,294,300,303],"SFS[RP^2:(2,1)(3,1)]"],
-	[[1,23,105,205,233,245,257,320,322,335],"SFS[D:(2,1)(2,1)]U/mSFS[D:(2,1)(3,1)],m=[-5,11|-4,9]"],
+	[[1,23,105,205,233,245,257,320,322,335],
+    "SFS[D:(2,1)(2,1)]U/mSFS[D:(2,1)(3,1)],m=[-5,11|-4,9]"],
 	[[1,23,105,205,234,241,283,298,314],"L(5,1)"],
 	[[1,23,105,205,234,241,283,298,325,327],"L(7,1)"],
 	[[1,23,105,205,239,241,255,285,298,314],"L(5,1)"],
 	[[1,23,105,207,214,221,241,244,257],"B2"],
-	[[1,23,105,207,233,254,257,320,331,335],"SFS[D:(2,1)(2,1)]U/mSFS[D:(2,1)(3,1)],m=[-5,11|-4,9]"],
+	[[1,23,105,207,233,254,257,320,331,335],
+    "SFS[D:(2,1)(2,1)]U/mSFS[D:(2,1)(3,1)],m=[-5,11|-4,9]"],
 	[[1,23,105,207,237,241,244,287,300],"L(3,1)"],
 	[[1,23,105,207,239,241,246,285,298,314],"L(5,1)"],
 	[[1,23,105,210,214,217,241,245,257],"B2"],
-	[[1,23,105,212,233,254,255,257,320,335],"SFS[D:(2,1)(2,1)]U/mSFS[D:(2,1)(3,1)],m=[-5,11|-4,9]"],
+	[[1,23,105,212,233,254,255,257,320,335],
+    "SFS[D:(2,1)(2,1)]U/mSFS[D:(2,1)(3,1)],m=[-5,11|-4,9]"],
 	[[1,24,40,41,56,57,71,80,335],"S^3"],
 	[[1,24,40,41,70,80,320,327],"S^3/P24"],
 	[[1,24,40,41,70,80,322,328,329,330],"SFS[K^2:(2,1)]"],
@@ -6615,7 +6657,8 @@ SCIntFunc.SCCyclic3MfldEx:=function(i,j,type)
 	
 	c:=SCFromDifferenceCycles(list);
 	SetSCDifferenceCycles(c,list);
-	SCRename(c,Concatenation("Cyclic 3-mfld (",String(i),",",String(j),"): ",dc[i][j][2]));
+	SCRename(c,Concatenation("Cyclic 3-mfld (",String(i),",",String(j),"): ",
+    dc[i][j][2]));
 	SetSCTopologicalType(c,dc[i][j][2]);
 	SetSCAutomorphismGroupTransitivity(c,1);
 	SetSCIsManifold(c,true);
@@ -6628,11 +6671,16 @@ end;
 ##<#GAPDoc Label="SCCyclic3Mfld">
 ## <ManSection>
 ## <Func Name="SCCyclic3Mfld" Arg="i,j"/>
-## <Returns> simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns> simplicial complex of type <C>SCSimplicialComplex</C> upon 
+## success, <K>fail</K> otherwise.</Returns>
 ## <Description>	
-## Returns the <Arg>j</Arg>th combinatorial 3-manifold with <Arg>i</Arg> vertices in the classification of combinatorial 3-manifolds with transitive cyclic symmetry.
+## Returns the <Arg>j</Arg>th combinatorial 3-manifold with <Arg>i</Arg> 
+## vertices in the classification of combinatorial 3-manifolds with transitive 
+## cyclic symmetry.
 ## 
-## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification of combinatorial 3-manifolds with transitive cyclic symmetry up to <M>22</M> vertices.
+## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification 
+## of combinatorial 3-manifolds with transitive cyclic symmetry up to 
+## <M>22</M> vertices.
 ## <Example>
 ## gap> SCCyclic3Mfld(15,34);
 ## </Example>
@@ -6649,11 +6697,16 @@ end);
 ##<#GAPDoc Label="SCCyclic3MfldByType">
 ## <ManSection>
 ## <Func Name="SCCyclic3MfldByType" Arg="type"/>
-## <Returns> simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns> simplicial complex of type <C>SCSimplicialComplex</C> upon 
+## success, <K>fail</K> otherwise.</Returns>
 ## <Description>	
-## Returns the smallest combinatorial 3-manifolds in the classification of combinatorial 3-manifolds with transitive cyclic symmetry of topological type <Arg>type</Arg>.
+## Returns the smallest combinatorial 3-manifolds in the classification of 
+## combinatorial 3-manifolds with transitive cyclic symmetry of topological 
+## type <Arg>type</Arg>.
 ## 
-## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification of combinatorial 3-manifolds with transitive cyclic symmetry up to <M>22</M> vertices.
+## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification 
+## of combinatorial 3-manifolds with transitive cyclic symmetry up to 
+## <M>22</M> vertices.
 ## <Example>
 ## gap> SCCyclic3MfldByType("T^3");
 ## </Example>
@@ -6673,11 +6726,19 @@ end);
 ##<#GAPDoc Label="SCCyclic3MfldListOfGivenType">
 ## <ManSection>
 ## <Func Name="SCCyclic3MfldListOfGivenType" Arg="type"/>
-## <Returns> simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns> simplicial complex of type <C>SCSimplicialComplex</C> upon 
+## success, <K>fail</K> otherwise.</Returns>
 ## <Description>	
-## Returns a list of indices <M>\{ (i_1, j_1) , (i_1, j_1) , \ldots (i_n, j_n) \}</M> of all combinatorial 3-manifolds in the classification of combinatorial 3-manifolds with transitive cyclic symmetry of topological type <Arg>type</Arg>. Complexes can be obtained by calling <Ref Func="SCCyclic3Mfld" /> using these indices.
+## Returns a list of indices 
+## <M>\{ (i_1, j_1) , (i_1, j_1) , \ldots (i_n, j_n) \}</M> of all 
+## combinatorial 3-manifolds in the classification of combinatorial 
+## 3-manifolds with transitive cyclic symmetry of topological type 
+## <Arg>type</Arg>. Complexes can be obtained by calling 
+## <Ref Func="SCCyclic3Mfld" /> using these indices.
 ## 
-## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification of combinatorial 3-manifolds with transitive cyclic symmetry up to <M>22</M> vertices.
+## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the 
+## classification of combinatorial 3-manifolds with transitive cyclic 
+## symmetry up to <M>22</M> vertices.
 ## <Example>
 ## gap> SCCyclic3MfldListOfGivenType("Sigma(2,3,7)");
 ## </Example>

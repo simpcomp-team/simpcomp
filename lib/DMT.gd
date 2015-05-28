@@ -11,10 +11,14 @@
 
 ## <#GAPDoc Label="DMT">
 ## 
-## In this chapter a framework is provided to use Forman's discrete Morse theory <Cite Key="Forman95DiscrMorseTheoryCellCompl" />
-## within  <Package>simpcomp</Package>. See Section <Ref Chap="sec:DMT" /> for a brief introduction.<P/>
+## In this chapter a framework is provided to use Forman's discrete Morse 
+## theory <Cite Key="Forman95DiscrMorseTheoryCellCompl" />
+## within  <Package>simpcomp</Package>. See Section <Ref Chap="sec:DMT" /> 
+## for a brief introduction.<P/>
 ##
-## Note: this is not to be confused with Banchoff and Kühnel's theory of regular simplexwise linear functions which is described in Chapter <Ref Chap="chap:morse" />.<P/>
+## Note: this is not to be confused with Banchoff and Kühnel's theory of 
+## regular simplexwise linear functions which is described in Chapter 
+## <Ref Chap="chap:morse" />.<P/>
 ##
 ## <Section>
 ## <Heading>Functions using discrete Morse theory</Heading>

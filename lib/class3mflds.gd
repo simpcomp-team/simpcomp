@@ -14,7 +14,8 @@
 ## <Section Label="sec:ClassOf3Mflds">
 ## <Heading>The classification of cyclic combinatorial 3-manifolds</Heading>
 ##
-##  This section contains functions to access the classification of combinatorial 3-manifolds with transitive cyclic symmetry
+##  This section contains functions to access the classification of 
+## combinatorial 3-manifolds with transitive cyclic symmetry
 ##  and up to 22 vertices as presented in <Cite Key="Spreer11CyclicCombMflds"/>.
 ##
 ## <#Include Label="SCNrCyclic3Mflds"/>

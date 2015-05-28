@@ -12,9 +12,12 @@
 ##<#GAPDoc Label="SCIsSimplicialComplex">
 ## <ManSection>
 ## <Filt Name="SCIsSimplicialComplex" Arg="object"/>
-## <Returns><K>true</K> or <K>false</K> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns><K>true</K> or <K>false</K> upon success, <K>fail</K> 
+## otherwise.</Returns>
 ## <Description>
-## Checks if <Arg>object</Arg> is of type <C>SCSimplicialComplex</C>. The object type <C>SCSimplicialComplex</C> is derived from the object type <C>SCPropertyObject</C>.
+## Checks if <Arg>object</Arg> is of type <C>SCSimplicialComplex</C>. The 
+## object type <C>SCSimplicialComplex</C> is derived from the object type 
+## <C>SCPropertyObject</C>.
 ## <Example>
 ## gap> c:=SCEmpty();;
 ## gap> SCIsSimplicialComplex(c);
@@ -25,12 +28,20 @@
 ##<#/GAPDoc>
 ################################################################################
 
-SCSimplicialComplexFamily:=NewFamily("SCSimplicialComplexFamily",SCIsSimplicialComplex and IsMutable and IsCopyable);
-SCSimplicialComplexType:=NewType(SCSimplicialComplexFamily,SCIsSimplicialComplex and IsAttributeStoringRep);
+SCSimplicialComplexFamily:=NewFamily("SCSimplicialComplexFamily",
+  SCIsSimplicialComplex and IsMutable and IsCopyable);
+SCSimplicialComplexType:=NewType(SCSimplicialComplexFamily,
+  SCIsSimplicialComplex and IsAttributeStoringRep);
 
 
 #properties of which the values are displayed by ViewObj of SCSimplicialComplex 
-SCIntFunc.SCViewProperties:=[ "Name", "Dim", "AltshulerSteinberg", "AutomorphismGroupSize", "AutomorphismGroupStructure", "AutomorphismGroupTransitivity", "EulerCharacteristic", "Cohomology", "FVector", "GVector", "HVector", "HasBoundary", "HasInterior", "Homology", "IsCentrallySymmetric", "IsConnected", "IsEulerianManifold", "IsOrientable", "IsPseudoManifold", "IsPure", "IsShellable", "IsStronglyConnected", "Neighborliness", "TopologicalType" ];
+SCIntFunc.SCViewProperties:=[ "Name", "Dim", "AltshulerSteinberg", 
+"AutomorphismGroupSize", "AutomorphismGroupStructure", 
+"AutomorphismGroupTransitivity", "EulerCharacteristic", "Cohomology", 
+"FVector", "GVector", "HVector", "HasBoundary", "HasInterior", "Homology", 
+"IsCentrallySymmetric", "IsConnected", "IsEulerianManifold", "IsOrientable", 
+"IsPseudoManifold", "IsPure", "IsShellable", "IsStronglyConnected", 
+"Neighborliness", "TopologicalType" ];
 
 #print simplicial complex info (in compact format)
 #compact format: dim, chi, fvec, hom
@@ -158,7 +169,8 @@ function(sc,op)
 		c!.SCVertices:=List(labels,op);
 		return c;
 	else
-		Info(InfoSimpcomp,1,"SCIntFunc.OperationsLabels: vertex labels of complex can not be changed by +, -, * or mod.");
+		Info(InfoSimpcomp,1,"SCIntFunc.OperationsLabels: vertex labels of ",
+      "complex can not be changed by +, -, * or mod.");
 		return fail;
 	fi;
 end;
@@ -169,9 +181,12 @@ end;
 ##<#GAPDoc Label="SCOpPlusSCInt">
 ## <ManSection>
 ## <Meth Name="Operation + (SCSimplicialComplex, Integer)" Arg="complex, value"/>
-## <Returns>the simplicial complex passed as argument upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>the simplicial complex passed as argument upon success, 
+## <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Positively shifts the vertex labels of <Arg>complex</Arg> (provided that all labels satisfy the property <C>IsAdditiveElement</C>) by the amount specified in <Arg>value</Arg>.
+## Positively shifts the vertex labels of <Arg>complex</Arg> (provided that 
+## all labels satisfy the property <C>IsAdditiveElement</C>) by the amount 
+## specified in <Arg>value</Arg>.
 ## <Example>
 ## gap> c:=SCBdSimplex(3)+10;;
 ## gap> c.Facets;
@@ -194,7 +209,9 @@ end);
 ## <Meth Name="Operation - (SCSimplicialComplex, Integer)" Arg="complex, value"/>
 ## <Returns>the simplicial complex passed as argument upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Negatively shifts the vertex labels of <Arg>complex</Arg> (provided that all labels satisfy the property <C>IsAdditiveElement</C>) by the amount specified in <Arg>value</Arg>.
+## Negatively shifts the vertex labels of <Arg>complex</Arg> (provided that 
+## all labels satisfy the property <C>IsAdditiveElement</C>) by the amount 
+## specified in <Arg>value</Arg>.
 ## <Example>
 ## gap> c:=SCBdSimplex(3)-1;;
 ## gap> c.Facets;
@@ -215,9 +232,12 @@ end);
 ##<#GAPDoc Label="Operation * (SCSimplicialComplex, Integer)">
 ## <ManSection>
 ## <Meth Name="Operation * (SCSimplicialComplex, Integer" Arg="complex, value"/>
-## <Returns>the simplicial complex passed as argument upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>the simplicial complex passed as argument upon success, 
+## <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Multiplies the vertex labels of <Arg>complex</Arg> (provided that all labels satisfy the property <C>IsAdditiveElement</C>) with the integer specified in <Arg>value</Arg>.
+## Multiplies the vertex labels of <Arg>complex</Arg> (provided that all 
+## labels satisfy the property <C>IsAdditiveElement</C>) with the integer 
+## specified in <Arg>value</Arg>.
 ## <Example>
 ## gap> c:=SCBdSimplex(3)*10;;
 ## gap> c.Facets;
@@ -238,9 +258,13 @@ end);
 ##<#GAPDoc Label="SCOpModSCInt">
 ## <ManSection>
 ## <Meth Name="Operation mod (SCSimplicialComplex, Integer)" Arg="complex, value"/>
-## <Returns>the simplicial complex passed as argument upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>the simplicial complex passed as argument upon success, 
+## <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Takes all vertex labels of <Arg>complex</Arg> modulo the value specified in <Arg>value</Arg> (provided that all labels satisfy the property <C>IsAdditiveElement</C>). Warning: this might result in different vertices being assigned the same label or even in invalid facet lists, so be careful.
+## Takes all vertex labels of <Arg>complex</Arg> modulo the value specified 
+## in <Arg>value</Arg> (provided that all labels satisfy the property 
+## <C>IsAdditiveElement</C>). Warning: this might result in different vertices 
+## being assigned the same label or even in invalid facet lists, so be careful.
 ## <Example>
 ## gap> c:=(SCBdSimplex(3)*10) mod 7;;
 ## gap> c.Facets;
@@ -261,9 +285,13 @@ end);
 ##<#GAPDoc Label="SCOpPowSCInt">
 ## <ManSection>
 ## <Meth Name="Operation ^ (SCSimplicialComplex, Integer)" Arg="complex, value"/>
-## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon 
+## success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Forms the <Arg>value</Arg>-th simplicial cartesian power of <Arg>complex</Arg>, i.e. the <Arg>value</Arg>-fold cartesian product of copies of <Arg>complex</Arg>. The complex passed as argument is not altered. Internally calls <Ref Func="SCCartesianPower"/>.
+## Forms the <Arg>value</Arg>-th simplicial cartesian power of 
+## <Arg>complex</Arg>, i.e. the <Arg>value</Arg>-fold cartesian product of 
+## copies of <Arg>complex</Arg>. The complex passed as argument is not altered. 
+## Internally calls <Ref Func="SCCartesianPower"/>.
 ## <Example>
 ## gap> c:=SCBdSimplex(2)^2; #a torus
 ## [SimplicialComplex
@@ -292,9 +320,13 @@ end);
 ##<#GAPDoc Label="SCOpPlusSCSC">
 ## <ManSection>
 ## <Meth Name="Operation + (SCSimplicialComplex, SCSimplicialComplex)" Arg="complex1, complex2"/>
-## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon 
+## success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Forms the connected sum of <Arg>complex1</Arg> and <Arg>complex2</Arg>. Uses the lexicographically first facets of both complexes to do the gluing. The complexes passed as arguments are not altered. Internally calls <Ref Func="SCConnectedSum"/>.
+## Forms the connected sum of <Arg>complex1</Arg> and <Arg>complex2</Arg>. 
+## Uses the lexicographically first facets of both complexes to do the gluing. 
+## The complexes passed as arguments are not altered. Internally calls 
+## <Ref Func="SCConnectedSum"/>.
 ## <Example>
 ## gap> SCLib.SearchByName("RP^3");
 ## [ [ 45, "RP^3" ], [ 103, "RP^3=L(2,1) (VT)" ], [ 246, "(S^2~S^1)#RP^3" ], 
@@ -331,9 +363,11 @@ end);
 ##<#GAPDoc Label="SCOpMinusSCSC">
 ## <ManSection>
 ## <Meth Name="Operation - (SCSimplicialComplex, SCSimplicialComplex)" Arg="complex1, complex2"/>
-## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, 
+## <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Calls <Ref Func="SCDifference" Style="Text" />(<Arg>complex1</Arg>, <Arg>complex2</Arg>)
+## Calls <Ref Func="SCDifference" Style="Text" />(<Arg>complex1</Arg>, 
+## <Arg>complex2</Arg>)
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -350,9 +384,11 @@ end);
 ##<#GAPDoc Label="SCOpMultSCSC">
 ## <ManSection>
 ## <Meth Name="Operation * (SCSimplicialComplex, SCSimplicialComplex)" Arg="complex1, complex2"/>
-## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon 
+## success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Forms the simplicial cartesian product of <Arg>complex1</Arg> and <Arg>complex2</Arg>. Internally calls <Ref Func="SCCartesianProduct"/>.
+## Forms the simplicial cartesian product of <Arg>complex1</Arg> and 
+## <Arg>complex2</Arg>. Internally calls <Ref Func="SCCartesianProduct"/>.
 ## <Example>
 ## gap> SCLib.SearchByName("RP^2");
 ## [ [ 3, "RP^2 (VT)" ], [ 284, "RP^2xS^1" ] ]
@@ -381,9 +417,11 @@ end);
 ##<#GAPDoc Label="SCOpEqSCSC">
 ## <ManSection>
 ## <Meth Name="Operation = (SCSimplicialComplex, SCSimplicialComplex)" Arg="complex1, complex2"/>
-## <Returns><K>true</K> or <K>false</K> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns><K>true</K> or <K>false</K> upon success, <K>fail</K> 
+## otherwise.</Returns>
 ## <Description>
-## Calculates whether two simplicial complexes are isomorphic, i.e. are equal up to a relabeling of the vertices.
+## Calculates whether two simplicial complexes are isomorphic, i.e. are 
+## equal up to a relabeling of the vertices.
 ## <Example>
 ## gap> c:=SCBdSimplex(3);;
 ## gap> c=c+10;
@@ -409,9 +447,11 @@ end);
 ##<#GAPDoc Label="SCOpUnionSCSC">
 ## <ManSection>
 ## <Meth Name="Operation Union (SCSimplicialComplex, SCSimplicialComplex)" Arg="complex1, complex2"/>
-## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon 
+## success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Computes the union of two simplicial complexes by calling <Ref Func="SCUnion"/>.
+## Computes the union of two simplicial complexes by calling 
+## <Ref Func="SCUnion"/>.
 ## <Example>
 ## gap> c:=Union(SCBdSimplex(3),SCBdSimplex(3)+3); #a wedge of two 2-spheres
 ## [SimplicialComplex
@@ -441,9 +481,11 @@ end);
 ##<#GAPDoc Label="SCOpDiffSCSC">
 ## <ManSection>
 ## <Meth Name="Operation Difference (SCSimplicialComplex, SCSimplicialComplex)" Arg="complex1, complex2"/>
-## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon 
+## success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Computes the ``difference'' of two simplicial complexes by calling <Ref Func="SCDifference" />.
+## Computes the ``difference'' of two simplicial complexes by calling 
+## <Ref Func="SCDifference" />.
 ## <Example>
 ## gap> c:=SCBdSimplex(3);;
 ## gap> d:=SC([[1,2,3]]);;
@@ -470,9 +512,11 @@ end);
 ##<#GAPDoc Label="SCOpIsecSCSC">
 ## <ManSection>
 ## <Meth Name="Operation Intersection (SCSimplicialComplex, SCSimplicialComplex)" Arg="complex1, complex2"/>
-## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon 
+## success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Computes the ``intersection'' of two simplicial complexes by calling <Ref Func="SCIntersection" />.
+## Computes the ``intersection'' of two simplicial complexes by calling 
+## <Ref Func="SCIntersection" />.
 ## <Example>
 ## gap> c:=SCBdSimplex(3);;        
 ## gap> d:=SCBdSimplex(3);;        
@@ -508,9 +552,12 @@ end);
 ##<#GAPDoc Label="SCShallowCopy">
 ## <ManSection>
 ## <Meth Name="ShallowCopy (SCSimplicialComplex)" Arg="complex"/>
-## <Returns>a copy of <Arg>complex</Arg> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>a copy of <Arg>complex</Arg> upon success, <K>fail</K> 
+## otherwise.</Returns>
 ## <Description>
-## Makes a copy of <Arg>complex</Arg>. This is actually a ``deep copy'' such that all properties of the copy can be altered without changing the original complex. Internally calls <Ref Func="SCCopy"/>.
+## Makes a copy of <Arg>complex</Arg>. This is actually a ``deep copy'' 
+## such that all properties of the copy can be altered without changing 
+## the original complex. Internally calls <Ref Func="SCCopy"/>.
 ## <Example>
 ## gap> c:=SCBdCrossPolytope(7);;
 ## gap> d:=ShallowCopy(c)+10;;
@@ -536,7 +583,9 @@ end);
 ## <Meth Name="SCCopy" Arg="complex"/>
 ## <Returns>a copy of <Arg>complex</Arg> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Makes a ``deep copy'' of <Arg>complex</Arg> -- this is a copy such that all properties of the copy can be altered without changing the original complex.
+## Makes a ``deep copy'' of <Arg>complex</Arg> -- this is a copy such that 
+## all properties of the copy can be altered without changing the original 
+## complex.
 ## <Example>
 ## gap> c:=SCBdSimplex(4);;
 ## gap> d:=SCCopy(c)-1;;
@@ -580,7 +629,10 @@ end);
 ## <Meth Name="Size (SCSimplicialComplex)" Arg="complex"/>
 ## <Returns>an integer upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Returns the ``size'' of a simplicial complex. This is <M>d+1</M>, where <M>d</M> is the dimension of the complex. <M>d+1</M> is returned instead of <M>d</M>, as all lists in &GAP; are indexed beginning with 1 -- thus this also holds for all the face lattice related properties of the complex.   
+## Returns the ``size'' of a simplicial complex. This is <M>d+1</M>, where 
+## <M>d</M> is the dimension of the complex. <M>d+1</M> is returned instead 
+## of <M>d</M>, as all lists in &GAP; are indexed beginning with 1 -- thus 
+## this also holds for all the face lattice related properties of the complex.   
 ## <Example>
 ## gap> SCLib.SearchByAttribute("F=[12,66,108,54]");
 ## [ [ 116, "S^2xS^1 (VT)" ], [ 117, "S^2xS^1 (VT)" ], 
@@ -619,7 +671,8 @@ end);
 ## <Meth Name="Length (SCSimplicialComplex)" Arg="complex"/>
 ## <Returns>an integer upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Returns the ``size'' of a simplicial complex by calling <C>Size(</C><Arg>complex</Arg><C>)</C>.   
+## Returns the ``size'' of a simplicial complex by calling 
+## <C>Size(</C><Arg>complex</Arg><C>)</C>.   
 ## <Example>
 ## gap> SCLib.SearchByAttribute("F=[12,66,108,54]");
 ## [ [ 116, "Sˆ2xSˆ1 (VT)" ], [ 117, "Sˆ2xSˆ1 (VT)" ],
@@ -652,7 +705,10 @@ end);
 ## <Meth Name="Operation [] (SCSimplicialComplex)" Arg="complex, pos"/>
 ## <Returns>a list of faces upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Returns the <M>(pos-1)</M>-dimensional faces of <Arg>complex</Arg> as a list. If <M>pos \geq d+2</M>, where <M>d</M> is the dimension of <Arg>complex</Arg>, the empty set is returned. Note that <Arg>pos</Arg> must be <M>\geq 1</M>.
+## Returns the <M>(pos-1)</M>-dimensional faces of <Arg>complex</Arg> as a 
+## list. If <M>pos \geq d+2</M>, where <M>d</M> is the dimension of 
+## <Arg>complex</Arg>, the empty set is returned. Note that <Arg>pos</Arg> 
+## must be <M>\geq 1</M>.
 ## <Example>
 ## gap> SCLib.SearchByName("K^2");
 ## [ [ 19, "K^2 (VT)" ], [ 230, "K^2 (VT)" ] ]
@@ -716,7 +772,8 @@ end);
 ##<#GAPDoc Label="SCIterator">
 ## <ManSection>
 ## <Meth Name="Iterator (SCSimplicialComplex)" Arg="complex"/>
-## <Returns>an iterator on the face lattice of <Arg>complex</Arg> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>an iterator on the face lattice of <Arg>complex</Arg> upon 
+## success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Provides an iterator object for the face lattice of a simplicial complex.   
 ## <Example>
@@ -758,9 +815,15 @@ end);
 ##<#GAPDoc Label="SCPropertiesDropped">
 ## <ManSection>
 ## <Func Name="SCPropertiesDropped" Arg="complex"/>
-## <Returns>a object of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>a object of type <C>SCSimplicialComplex</C> upon success, 
+## <K>fail</K> otherwise.</Returns>
 ## <Description>
-## An object of the type <C>SCSimplicialComplex</C> caches its previously calculated properties such that each property only has to be calculated once. This function returns a copy of <Arg>complex</Arg> with all properties (apart from Facets, Dim and Name) dropped, clearing all previously computed properties. See also <Ref Meth="SCPropertyDrop" /> and <Ref Meth="SCPropertyTmpDrop" />.
+## An object of the type <C>SCSimplicialComplex</C> caches its previously 
+## calculated properties such that each property only has to be calculated 
+## once. This function returns a copy of <Arg>complex</Arg> with all 
+## properties (apart from Facets, Dim and Name) dropped, clearing all 
+## previously computed properties. See also <Ref Meth="SCPropertyDrop" /> 
+## and <Ref Meth="SCPropertyTmpDrop" />.
 ## <Example>
 ## gap> c:=SC(SCFacets(SCBdCyclicPolytope(10,12)));
 ## gap> c.F; time;                                 
@@ -777,7 +840,8 @@ function(complex)
 	local sc;
 	
 	if(not SCIsSimplicialComplex(complex)) then
-		Info(InfoSimpcomp,1,"SCPropertiesDropped: argument must be of type SCSimplicialComplex.");
+		Info(InfoSimpcomp,1,"SCPropertiesDropped: argument must be of type ",
+      "SCSimplicialComplex.");
 		return fail;
 	fi;
 	
@@ -800,10 +864,13 @@ end);
 SCIntFunc.SCNew:=
 function()
 	local sc;
-	sc:=Objectify(SCSimplicialComplexType,rec(Properties:=rec(), PropertiesTmp:=rec(forceCalc:=false), PropertyHandlers:=SCIntFunc.SCPropertyHandlers));
+	sc:=Objectify(SCSimplicialComplexType,rec(Properties:=rec(), 
+  PropertiesTmp:=rec(forceCalc:=false), 
+  PropertyHandlers:=SCIntFunc.SCPropertyHandlers));
 	
 	if(sc=fail) then
-		Info(InfoSimpcomp,1,"SCIntFunc.SCNew: Error creating new instance of SCSimplicialComplex!");
+		Info(InfoSimpcomp,1,"SCIntFunc.SCNew: Error creating new instance of ",
+      "SCSimplicialComplex!");
 	fi;
 	
 	return sc;
@@ -814,5 +881,7 @@ end;
 # create new complex as SCSimplicialComplex with predefined attributes
 SCIntFunc.SCNewWithProperties:=
 function(props)
-	return Objectify(SCSimplicialComplexType,rec(Properties:=ShallowCopy(props),  PropertiesTmp:=rec(forceCalc:=false), PropertyHandlers:=SCIntFunc.SCPropertyHandlers));
+	return Objectify(SCSimplicialComplexType,rec(Properties:=ShallowCopy(props),
+  PropertiesTmp:=rec(forceCalc:=false), 
+  PropertyHandlers:=SCIntFunc.SCPropertyHandlers));
 end;
