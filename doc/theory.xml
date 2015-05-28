@@ -319,10 +319,8 @@
 	</Section>
 	<Section Label="sec:DMT"><Heading>Discrete Morse theory</Heading>
 
-	In the following, we will give a very brief introduction into Forman's discrete Morse theory (compare <Cite Key="Forman95DiscrMorseTheoryCellCompl" />, not to be confused with Banchoff and Kühnel's theory of regular simplexwise linear functions which is described in Section <Ref Chap="sec:MorseTheory" />).<Br/><Br/>
+	For an introduction into Forman's discrete Morse theory see <Cite Key="Forman95DiscrMorseTheoryCellCompl" />, not to be confused with Banchoff and Kühnel's theory of regular simplexwise linear functions which is described in Section <Ref Chap="sec:MorseTheory" />).<Br/><Br/>
 
-	TODO: overview over discrete Morse theory
-	
 	</Section>
 	<Section Label="sec:tight"><Heading>Tightness and tight triangulations</Heading>
 	
