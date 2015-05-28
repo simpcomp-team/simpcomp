@@ -2029,7 +2029,7 @@ end);
 ## gap> b26:=SCSeriesBid(2,6);
 ## gap> s2s2:=SCBoundary(b26);
 ## gap> SCFVector(s2s2);
-## gap> SCAutormophismGroup(s2s2); 
+## gap> SCAutomorphismGroup(s2s2); 
 ## gap> SCIsManifold(s2s2); 
 ## gap> SCHomology(s2s2);
 ## </Example>

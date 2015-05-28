@@ -593,17 +593,21 @@ end);
 ## <Description>
 ## Adds a given simplicial complex <Arg>complex</Arg> to a given repository <Arg>repository</Arg> of type <C>SCIsLibRepository</C>. <Arg>complex</Arg> is saved to a file with suffix <C>.sc</C> in the repositories base path, where the file name is either formed from the optional argument <Arg>name</Arg> and the current time or taken from the name of the complex, if it is named. 
 ## <Example>
+## gap> info:=InfoLevel(InfoSimpcomp);;
+## gap> SCInfoLevel(0);;
 ## gap> myRepository:=SCLibInit("~/myrepository");
 ## #I  SCLibInit: made directory "~/myrepository/" for user library.
 ## #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
 ## #I  SCLibUpdate: rebuilding index for ~/myrepository/.
 ## #I  SCLibUpdate: rebuilding index done.
-## gap> complex:=SCBdCrossPolytope(4);;
-## gap> SCLibAdd(myRepository,complex);
+## gap> complex1:=SCBdCrossPolytope(4);;
+## gap> SCLibAdd(myRepository,complex1);
 ## #I  SCLibAdd: saving complex to file "complex_Bd(beta4)_2009-10-29_17-12-36.sc\
 ## ".
 ## true
-## gap> myRepository.Add(complex);; # alternative syntax
+## gap> complex2:=SCBdCrossPolytope(4);;
+## gap> myRepository.Add(complex2);; # alternative syntax
+## gap> SCInfoLevel(info);;
 ## </Example>
 ## </Description>
 ## </ManSection>

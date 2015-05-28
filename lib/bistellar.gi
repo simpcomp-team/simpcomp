@@ -1628,7 +1628,7 @@ end);
 ## <Example>
 ## gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
 ## gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
-## gap> x x(obj);
+## gap> tmp := SCReduceComplex(obj);
 ## #I  round 0, move: [ [ 6 ], [ 1, 5 ] ]
 ## [ 5, 5 ]
 ## #I  round 1, move: [ [ 4 ], [ 3, 5 ] ]
