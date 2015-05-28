@@ -125,13 +125,13 @@ SCIntFunc.SCCyclic3MfldEx:=function(i,j,type)
 	# type = 2: list of indices of all of given type
 	if type = 0 then
 		if not IsPosInt(j) or not IsPosInt(i) then
-			Info(InfoSimpcomp,1,"SCCyclic3MfldsEx: arguments must be positive "
+			Info(InfoSimpcomp,1,"SCCyclic3MfldsEx: arguments must be positive ",
         "integers.");
 			return fail;
 		fi;
 		
 		if i < 5 or i > 22 then
-			Info(InfoSimpcomp,1,"SCCyclic3MfldsEx: first argument must be a "
+			Info(InfoSimpcomp,1,"SCCyclic3MfldsEx: first argument must be a ",
         "positive integer 5 <= i <= 22.");
 			return fail;
 		fi;
