@@ -411,20 +411,20 @@ end;
 ## <Description>
 ## Recreates the index of a given repository (either via a repository object or a base path of a repository <Arg>repository</Arg>) by scanning the base path for all <C>.sc</C> files containing simplicial complexes of the repository. Returns a repository object with the newly created index on success or <K>fail</K> in case of an error. The optional boolean argument <Arg>recalc</Arg> forces <Package>simpcomp</Package> to recompute all the indexed properties (such as f-vector, homology, etc.) of the simplicial complexes in the repository if set to <K>true</K>. 
 ## <Example>
-## gap> myRepository:=SCLibInit("~/repository");;
-## #I  SCLibInit: made directory "~/repository/" for user library.
+## gap> myRepository:=SCLibInit("/tmp/repository");;
+## #I  SCLibInit: made directory "/tmp/repository/" for user library.
 ## #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
-## #I  SCLibUpdate: rebuilding index for ~/repository/.
+## #I  SCLibUpdate: rebuilding index for /tmp/repository/.
 ## #I  SCLibUpdate: rebuilding index done.
 ## gap> SCLibUpdate(myRepository);
-## #I  SCLibUpdate: rebuilding index for ~/repository/.
+## #I  SCLibUpdate: rebuilding index for /tmp/repository/.
 ## #I  SCLibUpdate: rebuilding index done.
 ## [Simplicial complex library. Properties:
 ## CalculateIndexAttributes=true
 ## Number of complexes in library=0
 ## IndexAttributes=["Name", "Date", "Dim", "F", "G", "H", "Chi", "Homology"]
 ## Loaded=true
-## Path="~/myrepository/"
+## Path="/tmp/myrepository/"
 ##]
 ## </Example>
 ## </Description>
