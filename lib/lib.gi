@@ -424,7 +424,7 @@ end;
 ## Number of complexes in library=0
 ## IndexAttributes=["Name", "Date", "Dim", "F", "G", "H", "Chi", "Homology"]
 ## Loaded=true
-## Path="/tmp/myrepository/"
+## Path="/tmp/repository/"
 ##]
 ## </Example>
 ## </Description>
@@ -595,10 +595,10 @@ end);
 ## <Example>
 ## gap> info:=InfoLevel(InfoSimpcomp);;
 ## gap> SCInfoLevel(0);;
-## gap> myRepository:=SCLibInit("~/myrepository");
-## #I  SCLibInit: made directory "~/myrepository/" for user library.
+## gap> myRepository:=SCLibInit("/tmp/repository");
+## #I  SCLibInit: made directory "/tmp/repository/" for user library.
 ## #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
-## #I  SCLibUpdate: rebuilding index for ~/myrepository/.
+## #I  SCLibUpdate: rebuilding index for /tmp/repository/.
 ## #I  SCLibUpdate: rebuilding index done.
 ## gap> complex1:=SCBdCrossPolytope(4);;
 ## gap> SCLibAdd(myRepository,complex1);
@@ -706,10 +706,10 @@ end);
 ## <Description>
 ## Deletes the simplicial complex with the given id <Arg>id</Arg> from the given repository <Arg>repository</Arg>. Apart from deleting the complexes' index entry, the associated <C>.sc</C> file is also deleted.
 ## <Example>
-## gap> myRepository:=SCLibInit("~/myrepository");
-## #I  SCLibInit: made directory "~/myrepository/" for user library.
+## gap> myRepository:=SCLibInit("/tmp/repository");
+## #I  SCLibInit: made directory "/tmp/repository/" for user library.
 ## #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
-## #I  SCLibUpdate: rebuilding index for ~/myrepository/.
+## #I  SCLibUpdate: rebuilding index for /tmp/repository/.
 ## #I  SCLibUpdate: rebuilding index done.
 ## gap> SCLibAdd(myRepository,SCSimplex(2));;
 ## gap> SCLibDelete(myRepository,1);
@@ -761,10 +761,10 @@ end);
 ## simplicial complexes in this repository are deleted. The second argument, 
 ## <Arg>confirm</Arg>, must be the string <C>"yes"</C> in order to confirm the deletion. 
 ## <Example>
-## gap> myRepository:=SCLibInit("~/repository");;
-## #I  SCLibInit: made directory "~/repository/" for user library.
+## gap> myRepository:=SCLibInit("/tmp/repository");;
+## #I  SCLibInit: made directory "/tmp/repository/" for user library.
 ## #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
-## #I  SCLibUpdate: rebuilding index for ~/repository/.
+## #I  SCLibUpdate: rebuilding index for /tmp/repository/.
 ## #I  SCLibUpdate: rebuilding index done.
 ## gap> SCLibFlush(myRepository,"yes");
 ## #I  SCLibUpdate: rebuilding index for /home/effenbfx/testrepo/.
@@ -1204,17 +1204,17 @@ end);
 ## The function first tries to load the repository index for the given directory to rebuild it (by calling <C>SCLibUpdate</C>) if loading the index fails.
 ## The library index of a library repository is stored in its base path in the XML file <C>complexes.idx</C>, the complexes are stored in files with suffix <C>.sc</C>, also in XML format.
 ## <Example>
-## gap> myRepository:=SCLibInit("~/myrepository");
-## #I  SCLibInit: made directory "~/myrepository/" for user library.
+## gap> myRepository:=SCLibInit("/tmp/repository");
+## #I  SCLibInit: made directory "/tmp/repository/" for user library.
 ## #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
-## #I  SCLibUpdate: rebuilding index for ~/myrepository/.
+## #I  SCLibUpdate: rebuilding index for /tmp/repository/.
 ## #I  SCLibUpdate: rebuilding index done.
 ## [Simplicial complex library. Properties:
 ## CalculateIndexAttributes=true
 ## Number of complexes in library=0
 ## IndexAttributes=["Name", "Date", "Dim", "F", "G", "H", "Chi", "Homology"]
 ## Loaded=true
-## Path="~/myrepository/"
+## Path="/tmp/repository/"
 ##]
 ## </Example>
 ## </Description>
