@@ -406,7 +406,7 @@
  
  /SimplicialComplex]
  gap&gt; c.F;
- [ 18, 75, 114, 57 ]
+ [ 17, 74, 114, 57 ]
  </pre></div>
 
 <p><a id="X85D69E4F84E8E7D9" name="X85D69E4F84E8E7D9"></a></p>
@@ -437,7 +437,7 @@
      
       Properties known: Dim, FacetsEx, Name, Vertices.
      
-      Name="unnamed complex 33"
+      Name="unnamed complex 36"
       Dim=1
      
      /SimplicialComplex], 1 ]
@@ -462,20 +462,15 @@
 <div class="example"><pre>
  gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
  gap&gt; SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
- gap&gt; x x(obj);
- Error, Variable: 'x' must have a value
- not in any function at line 69 of *stdin*
- Syntax error: ; expected
- x x(obj);
-   ^
- [SimplicialComplex
- 
-  Properties known: Dim, FacetsEx, Name, Vertices.
- 
-  Name="unnamed complex 24"
-  Dim=1
- 
- /SimplicialComplex]
+ gap&gt; tmp := SCReduceComplex(obj);
+ [ true, [SimplicialComplex
+     
+      Properties known: Dim, FacetsEx, Name, Vertices.
+     
+      Name="unnamed complex 27"
+      Dim=1
+     
+     /SimplicialComplex], 3 ]
  </pre></div>
 
 <p><a id="X814D9AE287F64F74" name="X814D9AE287F64F74"></a></p>

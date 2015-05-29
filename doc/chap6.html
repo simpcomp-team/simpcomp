@@ -362,10 +362,10 @@
  gap&gt; c:=SCSeriesBdHandleBody(3,9);;
  gap&gt; s:=SCExportToString(c); time;
  "deffg.h.f.fahaiciai.i.hai.fbgeiagihbhceceba.g.gag"
- 0
+ 4
  gap&gt; s:=SCExportIsoSig(c); time;
  "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
- 12
+ 16
  </pre></div>
 
 <p><a id="X80098C5F7B80A621" name="X80098C5F7B80A621"></a></p>
@@ -894,9 +894,8 @@
  /SimplicialComplex]
  gap&gt; SCFVector(s2s2);
  [ 12, 60, 160, 180, 72 ]
- gap&gt; SCAutormophismGroup(s2s2); 
- Error, Variable: 'SCAutormophismGroup' must have a value
- not in any function at line 192 of *stdin*
+ gap&gt; SCAutomorphismGroup(s2s2); 
+ TransitiveGroup(12,28) = D(4)[x]S(3)
  gap&gt; SCIsManifold(s2s2); 
  true
  gap&gt; SCHomology(s2s2);
@@ -1206,9 +1205,9 @@
  gap&gt; Mminus:=SCSpan(c,[1,2,3,4,9,10,11,12]);;                  
  gap&gt; Mplus:=SCSpan(c,[5,6,7,8,13,14,15,16]);;                  
  gap&gt; SCCollapseGreedy(Mminus).Facets;
- [ [ 1, 2 ], [ 1, 12 ], [ 2, 11 ], [ 11, 12 ] ]
+ [ [ 1, 2 ], [ 1, 12 ], [ 2, 10 ], [ 10, 11 ], [ 11, 12 ] ]
  gap&gt; SCCollapseGreedy(Mplus).Facets; 
- [ [ 5, 6 ], [ 5, 16 ], [ 6, 15 ], [ 15, 16 ] ]
+ [ [ 6, 7 ], [ 6, 14 ], [ 7, 16 ], [ 13, 14 ], [ 13, 16 ] ]
  </pre></div>
 
 <p><a id="X813C5B0E7FA7C1A3" name="X813C5B0E7FA7C1A3"></a></p>

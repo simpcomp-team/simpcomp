@@ -110,8 +110,8 @@
 {\Huge \textbf{A \textsf{GAP} toolbox for simplicial complexes\mbox{}}}\\
 \vfill
 
-{\Huge Version \%\%\%VERSION\%\%\%\mbox{}}\\[1cm]
-{\%\%\%DATESHORT\%\%\%  \begin{center} \vspace*{1cm}
+{\Huge Version 2.1.1\mbox{}}\\[1cm]
+{May 2015  \begin{center} \vspace*{1cm}
 \includegraphics[width=.4\textwidth]{figures/shrimpmanual}\\ \end{center}  \mbox{}}\\[1cm]
 \mbox{}\\[2cm]
 {\Large \textbf{ Felix Effenberger   \mbox{}}}\\
@@ -163,10 +163,10 @@ the \textsf{GRAPE} package is not available. \mbox{}}\\[1cm]
 {\small 
 \section*{Copyright}
 \logpage{[ 0, 0, 3 ]}
-{\copyright} \%\%\%YEAR\%\%\% Felix Effenberger and Jonathan Spreer.
-Permission is granted to copy, distribute and/or modify this document under
-the terms of the GNU Free Documentation License, Version 1.2 or any later
-version published by the Free Software Foundation, see \href{http://www.fsf.org/licensing/licenses/fdl.html} {\texttt{http://www.fsf.org/licensing/licenses/fdl.html}} for a copy.
+{\copyright} 2015 Felix Effenberger and Jonathan Spreer. Permission is granted
+to copy, distribute and/or modify this document under the terms of the GNU
+Free Documentation License, Version 1.2 or any later version published by the
+Free Software Foundation, see \href{http://www.fsf.org/licensing/licenses/fdl.html} {\texttt{http://www.fsf.org/licensing/licenses/fdl.html}} for a copy.
 
  \textsf{simpcomp} is free software. The code of \textsf{simpcomp} is released under the GPL version 2 or later (at your preference). For the
 text of the GPL see the file \texttt{COPYING} in the \textsf{simpcomp} directory or \href{http://www.gnu.org/licenses/} {\texttt{http://www.gnu.org/licenses/}}. \mbox{}}\\[1cm]
@@ -312,7 +312,7 @@ verifies that the results are correct.
  To test the functionality of \textsf{simpcomp} you can run the function \texttt{SCRunTest} (\ref{SCRunTest}) from the \textsf{GAP} console: 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, Version %%%VERSION%%%
+  + test simpcomp package, Version 2.1.1
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@|
@@ -337,8 +337,8 @@ calls to functions of the package \textsf{simpcomp} can be controlled by setting
   @manual{simpcomp,
   	author = "Felix Effenberger and Jonathan Spreer",
   	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
-  	          {V}ersion %%%VERSION%%%",
-  	year   = "%%%YEAR%%%",
+  	          {V}ersion 2.1.1",
+  	year   = "2015",
   	url    = "\url{http://code.google.com/p/simpcomp}",
   }
 \end{verbatim}
@@ -348,8 +348,8 @@ bibliography environment of LaTeX.
   \bibitem{simpcomp}
   F.~Effenberger and J.~Spreer,
   \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
-  Version %%%VERSION%%%, 
-  %%%YEAR%%%,
+  Version 2.1.1, 
+  2015,
   \url{http://code.google.com/p/simpcomp}.
 \end{verbatim}
  }
@@ -1622,7 +1622,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   48
+   40
    
 \end{Verbatim}
  }
@@ -2424,10 +2424,10 @@ pseudomanifold. Compare \texttt{SCExportIsoSig} (\ref{SCExportIsoSig}), which re
    gap> c:=SCSeriesBdHandleBody(3,9);;
    gap> s:=SCExportToString(c); time;
    "deffg.h.f.fahaiciai.i.hai.fbgeiagihbhceceba.g.gag"
-   0
+   4
    gap> s:=SCExportIsoSig(c); time;
    "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
-   12
+   16
    
 \end{Verbatim}
  }
@@ -3055,9 +3055,8 @@ of $O(\operatorname{log} (g))$ memory. If \mbox{\texttt{\mdseries\slshape orient
    /SimplicialComplex]
    gap> SCFVector(s2s2);
    [ 12, 60, 160, 180, 72 ]
-   gap> SCAutormophismGroup(s2s2); 
-   Error, Variable: 'SCAutormophismGroup' must have a value
-   not in any function at line 192 of *stdin*
+   gap> SCAutomorphismGroup(s2s2); 
+   TransitiveGroup(12,28) = D(4)[x]S(3)
    gap> SCIsManifold(s2s2); 
    true
    gap> SCHomology(s2s2);
@@ -3421,9 +3420,9 @@ from \cite{Spreer10Diss}, Section 3.3.
    gap> Mminus:=SCSpan(c,[1,2,3,4,9,10,11,12]);;                  
    gap> Mplus:=SCSpan(c,[5,6,7,8,13,14,15,16]);;                  
    gap> SCCollapseGreedy(Mminus).Facets;
-   [ [ 1, 2 ], [ 1, 12 ], [ 2, 11 ], [ 11, 12 ] ]
+   [ [ 1, 2 ], [ 1, 12 ], [ 2, 10 ], [ 10, 11 ], [ 11, 12 ] ]
    gap> SCCollapseGreedy(Mplus).Facets; 
-   [ [ 5, 6 ], [ 5, 16 ], [ 6, 15 ], [ 15, 16 ] ]
+   [ [ 6, 7 ], [ 6, 14 ], [ 7, 16 ], [ 13, 14 ], [ 13, 16 ] ]
    
 \end{Verbatim}
  }
@@ -9162,7 +9161,7 @@ With optional positive integer argument \mbox{\texttt{\mdseries\slshape rounds}}
    
    /SimplicialComplex]
    gap> c.F;
-   [ 18, 75, 114, 57 ]
+   [ 17, 74, 114, 57 ]
    
 \end{Verbatim}
  }
@@ -9203,7 +9202,7 @@ introducing diagonals.
        
         Properties known: Dim, FacetsEx, Name, Vertices.
        
-        Name="unnamed complex 33"
+        Name="unnamed complex 36"
         Dim=1
        
        /SimplicialComplex], 1 ]
@@ -9236,20 +9235,15 @@ calls \texttt{SCReduceComplexEx} (\ref{SCReduceComplexEx}) \texttt{(complex,SCEm
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
    gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
-   gap> x x(obj);
-   Error, Variable: 'x' must have a value
-   not in any function at line 69 of *stdin*
-   Syntax error: ; expected
-   x x(obj);
-     ^
-   [SimplicialComplex
-   
-    Properties known: Dim, FacetsEx, Name, Vertices.
-   
-    Name="unnamed complex 24"
-    Dim=1
-   
-   /SimplicialComplex]
+   gap> tmp := SCReduceComplex(obj);
+   [ true, [SimplicialComplex
+       
+        Properties known: Dim, FacetsEx, Name, Vertices.
+       
+        Name="unnamed complex 27"
+        Dim=1
+       
+       /SimplicialComplex], 3 ]
    
 \end{Verbatim}
  }
@@ -9660,7 +9654,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
    #I  SCIsTight: processed 30000 of 40320 rsl-functions so far, all perfect.
    #I  SCIsTight: processed 40000 of 40320 rsl-functions so far, all perfect.
    true
-   7936
+   7900
    
 \end{Verbatim}
  
@@ -10379,11 +10373,11 @@ a list of pairs of the form \texttt{[ integer, list ]} upon success, fail otherw
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandom,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   64
+   44
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   52
+   76
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomRevLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
@@ -10391,11 +10385,11 @@ a list of pairs of the form \texttt{[ integer, list ]} upon success, fail otherw
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseEngstroem,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   96
+   132
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   140
+   160
    
 \end{Verbatim}
  }
@@ -10660,20 +10654,23 @@ usually named by their topological type. As usual, ` S\^{}d' denotes a $d$-spher
  Adds a given simplicial complex \mbox{\texttt{\mdseries\slshape complex}} to a given repository \mbox{\texttt{\mdseries\slshape repository}} of type \texttt{SCIsLibRepository}. \mbox{\texttt{\mdseries\slshape complex}} is saved to a file with suffix \texttt{.sc} in the repositories base path, where the file name is either formed from the
 optional argument \mbox{\texttt{\mdseries\slshape name}} and the current time or taken from the name of the complex, if it is named. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-   gap> myRepository:=SCLibInit("~/myrepository");
+   gap> info:=InfoLevel(InfoSimpcomp);;
+   gap> SCInfoLevel(0);;
+   gap> myRepository:=SCLibInit("/tmp/repository");
    [Simplicial complex library. Properties:
    CalculateIndexAttributes=true
-   Number of complexes in library=6
+   Number of complexes in library=0
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
-   Path="/home/jonathan/myrepository/"
+   Path="/tmp/repository/"
    ]
-   gap> complex:=SCBdCrossPolytope(4);;
-   gap> SCLibAdd(myRepository,complex);
-   #I  SCLibAdd: saving complex to file "complex_2015-05-20_00-57-15.scb".
+   gap> complex1:=SCBdCrossPolytope(4);;
+   gap> SCLibAdd(myRepository,complex1);
    true
-   gap> myRepository.Add(complex);; # alternative syntax
+   gap> complex2:=SCBdCrossPolytope(4);;
+   gap> myRepository.Add(complex2);; # alternative syntax
+   gap> SCInfoLevel(info);;
    
 \end{Verbatim}
  }
@@ -10716,20 +10713,15 @@ optional argument \mbox{\texttt{\mdseries\slshape name}} and the current time or
 
 
  Deletes the simplicial complex with the given id \mbox{\texttt{\mdseries\slshape id}} from the given repository \mbox{\texttt{\mdseries\slshape repository}}. Apart from deleting the complexes' index entry, the associated \texttt{.sc} file is also deleted. 
-\begin{Verbatim}[commandchars=@|B,fontsize=\small,frame=single,label=Example]
-   gap> myRepository:=SCLibInit("~/myrepository");
-   Found a self-reference to an unknown object!
-   #I  IO_Unpicklers.SCLR: Error while unpicking library repository. Delete file complexes.idx and complexes.idxb and recreate them with SCLibInit.
-   #I  SCIntFunc.SCLibInit: error loading binary index  -- trying to reconstruct it.
-   #I  SCLibUpdate: rebuilding index for /home/jonathan/myrepository/.
-   #I  SCLibUpdate: rebuilding index done.
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+   gap> myRepository:=SCLibInit("/tmp/repository");
    [Simplicial complex library. Properties:
    CalculateIndexAttributes=true
-   Number of complexes in library=7
+   Number of complexes in library=2
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
-   Path="/home/jonathan/myrepository/"
+   Path="/tmp/repository/"
    ]
    gap> SCLibAdd(myRepository,SCSimplex(2));;
    gap> SCLibDelete(myRepository,1);
@@ -10773,7 +10765,7 @@ returned.
                       IsPseudoManifold, IsPure, Name, SkelExs[], 
                       Vertices.
    
-    Name="unnamed complex 86"
+    Name="unnamed complex 167"
     Dim=2
     HasBoundary=false
     IsPseudoManifold=true
@@ -10800,7 +10792,7 @@ returned.
  Completely empties a given repository \mbox{\texttt{\mdseries\slshape repository}}. The index and all simplicial complexes in this repository are deleted. The
 second argument, \mbox{\texttt{\mdseries\slshape confirm}}, must be the string \texttt{"yes"} in order to confirm the deletion. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-   gap> myRepository:=SCLibInit("~/repository");;
+   gap> myRepository:=SCLibInit("/tmp/repository");;
    gap> SCLibFlush(myRepository,"yes");
    #I  SCLibInit: invalid parameters.
    true
@@ -10831,14 +10823,18 @@ a different path since otherwise data may get lost.
 to rebuild it (by calling \texttt{SCLibUpdate}) if loading the index fails. The library index of a library repository is
 stored in its base path in the XML file \texttt{complexes.idx}, the complexes are stored in files with suffix \texttt{.sc}, also in XML format. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-   gap> myRepository:=SCLibInit("~/myrepository");
+   gap> myRepository:=SCLibInit("/tmp/repository");
+   #I  SCLibInit: made directory "/tmp/repository/" for user library.
+   #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
+   #I  SCLibUpdate: rebuilding index for /tmp/repository/.
+   #I  SCLibUpdate: rebuilding index done.
    [Simplicial complex library. Properties:
    CalculateIndexAttributes=true
-   Number of complexes in library=7
+   Number of complexes in library=0
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
-   Path="/home/jonathan/myrepository/"
+   Path="/tmp/repository/"
    ]
    
 \end{Verbatim}
@@ -10961,9 +10957,9 @@ base path of a repository \mbox{\texttt{\mdseries\slshape repository}}) by scann
 object with the newly created index on success or \texttt{fail} in case of an error. The optional boolean argument \mbox{\texttt{\mdseries\slshape recalc}} forces \textsf{simpcomp} to recompute all the indexed properties (such as f-vector, homology, etc.) of
 the simplicial complexes in the repository if set to \texttt{true}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-   gap> myRepository:=SCLibInit("~/repository");;
+   gap> myRepository:=SCLibInit("/tmp/repository");;
    gap> SCLibUpdate(myRepository);
-   #I  SCLibUpdate: rebuilding index for /home/jonathan/repository/.
+   #I  SCLibUpdate: rebuilding index for /tmp/repository/.
    #I  SCLibUpdate: rebuilding index done.
    [Simplicial complex library. Properties:
    CalculateIndexAttributes=true
@@ -10971,7 +10967,7 @@ the simplicial complexes in the repository if set to \texttt{true}.
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
-   Path="/home/jonathan/repository/"
+   Path="/tmp/repository/"
    ]
    
 \end{Verbatim}
@@ -11810,7 +11806,7 @@ differs from system to system.
    Line 1220 : 
    + simpcomp package test
    Line 1221 : 
-   + GAP4stones: 69079
+   + GAP4stones: 65445
    true
    
 \end{Verbatim}
@@ -12280,7 +12276,7 @@ Section \ref{sec:generateFromOld}, which will be described in the next sections.
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@#first run functionality test on simpcomp|
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, version %%%VERSION%%%
+  + test simpcomp package, version 2.1.1
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@#all ok|

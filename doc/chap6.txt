@@ -209,10 +209,10 @@
     [4X[28X gap> c:=SCSeriesBdHandleBody(3,9);;[128X[104X
     [4X[28X gap> s:=SCExportToString(c); time;[128X[104X
     [4X[28X "deffg.h.f.fahaiciai.i.hai.fbgeiagihbhceceba.g.gag"[128X[104X
-    [4X[28X 0[128X[104X
+    [4X[28X 4[128X[104X
     [4X[28X gap> s:=SCExportIsoSig(c); time;[128X[104X
     [4X[28X "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"[128X[104X
-    [4X[28X 12[128X[104X
+    [4X[28X 16[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -741,9 +741,8 @@
     [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> SCFVector(s2s2);[128X[104X
     [4X[28X [ 12, 60, 160, 180, 72 ][128X[104X
-    [4X[28X gap> SCAutormophismGroup(s2s2); [128X[104X
-    [4X[28X Error, Variable: 'SCAutormophismGroup' must have a value[128X[104X
-    [4X[28X not in any function at line 192 of *stdin*[128X[104X
+    [4X[28X gap> SCAutomorphismGroup(s2s2); [128X[104X
+    [4X[28X TransitiveGroup(12,28) = D(4)[x]S(3)[128X[104X
     [4X[28X gap> SCIsManifold(s2s2); [128X[104X
     [4X[28X true[128X[104X
     [4X[28X gap> SCHomology(s2s2);[128X[104X
@@ -1074,9 +1073,9 @@
     [4X[28X gap> Mminus:=SCSpan(c,[1,2,3,4,9,10,11,12]);;                  [128X[104X
     [4X[28X gap> Mplus:=SCSpan(c,[5,6,7,8,13,14,15,16]);;                  [128X[104X
     [4X[28X gap> SCCollapseGreedy(Mminus).Facets;[128X[104X
-    [4X[28X [ [ 1, 2 ], [ 1, 12 ], [ 2, 11 ], [ 11, 12 ] ][128X[104X
+    [4X[28X [ [ 1, 2 ], [ 1, 12 ], [ 2, 10 ], [ 10, 11 ], [ 11, 12 ] ][128X[104X
     [4X[28X gap> SCCollapseGreedy(Mplus).Facets; [128X[104X
-    [4X[28X [ [ 5, 6 ], [ 5, 16 ], [ 6, 15 ], [ 15, 16 ] ][128X[104X
+    [4X[28X [ [ 6, 7 ], [ 6, 14 ], [ 7, 16 ], [ 13, 14 ], [ 13, 16 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   

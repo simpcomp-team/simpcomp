@@ -442,7 +442,7 @@
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> c.F;[128X[104X
-    [4X[28X [ 18, 75, 114, 57 ][128X[104X
+    [4X[28X [ 17, 74, 114, 57 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -484,7 +484,7 @@
     [4X[28X     [128X[104X
     [4X[28X      Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
     [4X[28X     [128X[104X
-    [4X[28X      Name="unnamed complex 33"[128X[104X
+    [4X[28X      Name="unnamed complex 36"[128X[104X
     [4X[28X      Dim=1[128X[104X
     [4X[28X     [128X[104X
     [4X[28X     /SimplicialComplex], 1 ][128X[104X
@@ -517,20 +517,15 @@
   [4X[32X  Example  [32X[104X
     [4X[28X gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon[128X[104X
     [4X[28X gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      [128X[104X
-    [4X[28X gap> x x(obj);[128X[104X
-    [4X[28X Error, Variable: 'x' must have a value[128X[104X
-    [4X[28X not in any function at line 69 of *stdin*[128X[104X
-    [4X[28X Syntax error: ; expected[128X[104X
-    [4X[28X x x(obj);[128X[104X
-    [4X[28X   ^[128X[104X
-    [4X[28X [SimplicialComplex[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Name="unnamed complex 24"[128X[104X
-    [4X[28X  Dim=1[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X /SimplicialComplex][128X[104X
+    [4X[28X gap> tmp := SCReduceComplex(obj);[128X[104X
+    [4X[28X [ true, [SimplicialComplex[128X[104X
+    [4X[28X     [128X[104X
+    [4X[28X      Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
+    [4X[28X     [128X[104X
+    [4X[28X      Name="unnamed complex 27"[128X[104X
+    [4X[28X      Dim=1[128X[104X
+    [4X[28X     [128X[104X
+    [4X[28X     /SimplicialComplex], 3 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
