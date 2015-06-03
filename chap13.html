@@ -101,7 +101,7 @@
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/felix/Downloads/gap4r7/pkg/simpcomp/complexes/"
+ Path="/home/jonathan/apps/gap4r5/pkg/simpcomp/complexes/"
  ]
  gap&gt; SCLib.Size;
  7649
@@ -158,24 +158,23 @@
 
 
 <div class="example"><pre>
- gap&gt; myRepository:=SCLibInit("~/myrepository");
- #I  SCLibInit: made directory "/home/felix/myrepository/" for user library.
- #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
- #I  SCLibUpdate: rebuilding index for /home/felix/myrepository/.
- #I  SCLibUpdate: rebuilding index done.
+ gap&gt; info:=InfoLevel(InfoSimpcomp);;
+ gap&gt; SCInfoLevel(0);;
+ gap&gt; myRepository:=SCLibInit("/tmp/repository");
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
  Number of complexes in library=0
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/felix/myrepository/"
+ Path="/tmp/repository/"
  ]
- gap&gt; complex:=SCBdCrossPolytope(4);;
- gap&gt; SCLibAdd(myRepository,complex);
- #I  SCLibAdd: saving complex to file "complex_2015-05-19_20-01-38.scb".
+ gap&gt; complex1:=SCBdCrossPolytope(4);;
+ gap&gt; SCLibAdd(myRepository,complex1);
  true
- gap&gt; myRepository.Add(complex);; # alternative syntax
+ gap&gt; complex2:=SCBdCrossPolytope(4);;
+ gap&gt; myRepository.Add(complex2);; # alternative syntax
+ gap&gt; SCInfoLevel(info);;
  </pre></div>
 
 <p><a id="X7C0F9B7E868800C7" name="X7C0F9B7E868800C7"></a></p>
@@ -207,14 +206,14 @@
 
 
 <div class="example"><pre>
- gap&gt; myRepository:=SCLibInit("~/myrepository");
+ gap&gt; myRepository:=SCLibInit("/tmp/repository");
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=1
+ Number of complexes in library=2
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/felix/myrepository/"
+ Path="/tmp/repository/"
  ]
  gap&gt; SCLibAdd(myRepository,SCSimplex(2));;
  gap&gt; SCLibDelete(myRepository,1);
@@ -247,7 +246,7 @@
                     IsPseudoManifold, IsPure, Name, SkelExs[], 
                     Vertices.
  
-  Name="unnamed complex 86"
+  Name="unnamed complex 167"
   Dim=2
   HasBoundary=false
   IsPseudoManifold=true
@@ -267,7 +266,7 @@
 
 
 <div class="example"><pre>
- gap&gt; myRepository:=SCLibInit("~/repository");;
+ gap&gt; myRepository:=SCLibInit("/tmp/repository");;
  gap&gt; SCLibFlush(myRepository,"yes");
  #I  SCLibInit: invalid parameters.
  true
@@ -288,14 +287,18 @@
 
 
 <div class="example"><pre>
- gap&gt; myRepository:=SCLibInit("~/myrepository");
+ gap&gt; myRepository:=SCLibInit("/tmp/repository");
+ #I  SCLibInit: made directory "/tmp/repository/" for user library.
+ #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
+ #I  SCLibUpdate: rebuilding index for /tmp/repository/.
+ #I  SCLibUpdate: rebuilding index done.
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=1
+ Number of complexes in library=0
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/felix/myrepository/"
+ Path="/tmp/repository/"
  ]
  </pre></div>
 
@@ -379,9 +382,9 @@
 
 
 <div class="example"><pre>
- gap&gt; myRepository:=SCLibInit("~/repository");;
+ gap&gt; myRepository:=SCLibInit("/tmp/repository");;
  gap&gt; SCLibUpdate(myRepository);
- #I  SCLibUpdate: rebuilding index for /home/felix/repository/.
+ #I  SCLibUpdate: rebuilding index for /tmp/repository/.
  #I  SCLibUpdate: rebuilding index done.
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
@@ -389,7 +392,7 @@
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/felix/repository/"
+ Path="/tmp/repository/"
  ]
  </pre></div>
 
@@ -411,7 +414,7 @@
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/felix/Downloads/gap4r7/pkg/simpcomp/complexes/"
+ Path="/home/jonathan/apps/gap4r5/pkg/simpcomp/complexes/"
  ]
  </pre></div>
 
