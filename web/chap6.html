@@ -365,7 +365,7 @@
  4
  gap&gt; s:=SCExportIsoSig(c); time;
  "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
- 17
+ 16
  </pre></div>
 
 <p><a id="X80098C5F7B80A621" name="X80098C5F7B80A621"></a></p>
@@ -894,9 +894,8 @@
  /SimplicialComplex]
  gap&gt; SCFVector(s2s2);
  [ 12, 60, 160, 180, 72 ]
- gap&gt; SCAutormophismGroup(s2s2); 
- Error, Variable: 'SCAutormophismGroup' must have a value
- not in any function at line 192 of *stdin*
+ gap&gt; SCAutomorphismGroup(s2s2); 
+ TransitiveGroup(12,28) = D(4)[x]S(3)
  gap&gt; SCIsManifold(s2s2); 
  true
  gap&gt; SCHomology(s2s2);
@@ -1206,9 +1205,9 @@
  gap&gt; Mminus:=SCSpan(c,[1,2,3,4,9,10,11,12]);;                  
  gap&gt; Mplus:=SCSpan(c,[5,6,7,8,13,14,15,16]);;                  
  gap&gt; SCCollapseGreedy(Mminus).Facets;
- [ [ 1, 9 ], [ 1, 12 ], [ 3, 10 ], [ 3, 12 ], [ 9, 10 ] ]
+ [ [ 1, 2 ], [ 1, 12 ], [ 2, 10 ], [ 10, 11 ], [ 11, 12 ] ]
  gap&gt; SCCollapseGreedy(Mplus).Facets; 
- [ [ 6, 7 ], [ 6, 13 ], [ 7, 16 ], [ 8, 13 ], [ 8, 16 ] ]
+ [ [ 6, 7 ], [ 6, 14 ], [ 7, 16 ], [ 13, 14 ], [ 13, 16 ] ]
  </pre></div>
 
 <p><a id="X813C5B0E7FA7C1A3" name="X813C5B0E7FA7C1A3"></a></p>
@@ -2212,8 +2211,8 @@
  [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
  gap&gt; k3surf:=SCLib.Load(last[1][1]);; 
  gap&gt; SCAutomorphismGroup(k3surf);               
- Group([ (1,3,8,4,9,16,15,2,14,12,6,7,13,5,10), (1,13)(2,14)(3,15)(4,16)(5,9)
- (6,10)(7,11)(8,12) ])
+ Group([ (1,3,8,4,9,16,15,2,14,12,6,7,13,5,10), 
+   (1,13)(2,14)(3,15)(4,16)(5,9)(6,10)(7,11)(8,12) ])
  </pre></div>
 
 <p><a id="X7A33B8177A7ACD3A" name="X7A33B8177A7ACD3A"></a></p>
@@ -3210,6 +3209,9 @@
  gap&gt; c.AutomorphismGroup;
  Group([ (1,3)(4,9)(5,8)(6,7), (1,9,8,7,6,5,4,3,2) ])
  gap&gt; SCIsInKd(c,1);
+ #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
+ #I  SCIsKStackedSphere: try 1/50
+ #I  SCIsKStackedSphere: complex is a 1-stacked sphere.
  true
  </pre></div>
 
