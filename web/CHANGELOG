@@ -1,3 +1,5 @@
+04/06/2015 - Version 2.1.1: Minor update
+- Minor changes in documentation/manual
 
 20/05/2015 - Version 2.1.0: Major update, support for discrete Morse theory added
 - Added functions SCExportIsoSig, SCExportToString,

@@ -44,20 +44,20 @@ Dependencies
 Download and installation
 =========================
    
- * Install the [http://www.gap-system.org GAP] system, version 4.5 or higher.
+ * Install the GAP system (http://www.gap-system.org), version 4.5 or higher.
 
    + Under Linux, run *"rsync --port=8731 -azv rsync.gap-system.org::gap4r5/gapsync/gapsync ."*
-      followed by *"./gapsync"* (see *[http://www.math.rwth-aachen.de/~Frank.Luebeck/gap/rsync/index.html]*
+      followed by *"./gapsync"* (see http://www.math.rwth-aachen.de/~Frank.Luebeck/gap/rsync/index.html
       for details). You may need admin rights to perform this step.
 
-   + Under Windows: download the Windows installer under *[http://www.gap-system.org/pub/gap/windowsinstaller/gap4r7p5_2014_05_24-20_02.exe]*
-      and follow the instructions given under *[http://www.gap-system.org/ukrgap/wininst/]*.
+   + Under Windows: download the Windows installer under http://www.gap-system.org/pub/gap/windowsinstaller/gap4r7p5_2014_05_24-20_02.exe
+      and follow the instructions given under http://www.gap-system.org/ukrgap/wininst/.
 
-   + Under Mac OS X (or Linux): follow the instructions given under *[http://gap-system.github.io/bob/]*
+   + Under Mac OS X (or Linux): follow the instructions given under http://gap-system.github.io/bob/
 
- * (Optional) Download the current *[http://code.google.com/p/simpcomp/downloads/list simpcomp]* Version (This step is only required if you want to
+ * (Optional) Download the current simpcomp version from above (This step is only required if you want to
    use features of simpcomp which are not yet included in the official release). Copy folder *GAPROOT/pkg/simpcomp* to *GAPROOT/pkg/simpcomp-old*
-   and unpack the archive to the directory *GAPROOT/pkg/* (default for *GAPROOT* is */usr/local/lib/gap4r5*).
+   and unpack the archive to the directory *GAPROOT/pkg/* (default for *GAPROOT* is */usr/local/lib/gap4r7*).
 
  * (Optional) Run *"chmod +x configure; ./configure; make; make install; make clean"* (This step is only required if you want to use 
    *SCReduceComplexFast()*). You may need admin rights to perform this step.
@@ -145,6 +145,8 @@ Download and installation
 Changes
 =======
 
+04/06/2015 - Version 2.1.1: Minor update
+- Minor changes in documentation/manual
 
 20/05/2015 - Version 2.1.0: Major update, support for discrete Morse theory added
 - Added functions SCExportIsoSig, SCExportToString,
