@@ -242,8 +242,8 @@ InstallGlobalFunction(SCsFromGroupExt,
 
   t:=Transitivity(G);
   if t < 1 then
-    Info(InfoSimpcomp,2,"Automorphism is not transitive.");
-    continue;
+    Info(InfoSimpcomp,1,"Automorphism is not transitive.");
+    return fail;
   fi;
   
   #complex
