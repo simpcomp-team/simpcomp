@@ -110,8 +110,8 @@
 {\Huge \textbf{A \textsf{GAP} toolbox for simplicial complexes\mbox{}}}\\
 \vfill
 
-{\Huge Version 2.1.1\mbox{}}\\[1cm]
-{June 2015  \begin{center} \vspace*{1cm}
+{\Huge Version 2.1.2\mbox{}}\\[1cm]
+{November 2015  \begin{center} \vspace*{1cm}
 \includegraphics[width=.4\textwidth]{figures/shrimpmanual}\\ \end{center}  \mbox{}}\\[1cm]
 \mbox{}\\[2cm]
 {\Large \textbf{ Felix Effenberger   \mbox{}}}\\
@@ -312,7 +312,7 @@ verifies that the results are correct.
  To test the functionality of \textsf{simpcomp} you can run the function \texttt{SCRunTest} (\ref{SCRunTest}) from the \textsf{GAP} console: 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, Version 2.1.1
+  + test simpcomp package, Version 2.1.2
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@|
@@ -337,7 +337,7 @@ calls to functions of the package \textsf{simpcomp} can be controlled by setting
   @manual{simpcomp,
   	author = "Felix Effenberger and Jonathan Spreer",
   	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
-  	          {V}ersion 2.1.1",
+  	          {V}ersion 2.1.2",
   	year   = "2015",
   	url    = "\url{http://code.google.com/p/simpcomp}",
   }
@@ -348,7 +348,7 @@ bibliography environment of LaTeX.
   \bibitem{simpcomp}
   F.~Effenberger and J.~Spreer,
   \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
-  Version 2.1.1, 
+  Version 2.1.2, 
   2015,
   \url{http://code.google.com/p/simpcomp}.
 \end{verbatim}
@@ -1607,7 +1607,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   36
+   60
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
    0
@@ -1622,7 +1622,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   40
+   56
    
 \end{Verbatim}
  }
@@ -2427,7 +2427,7 @@ pseudomanifold. Compare \texttt{SCExportIsoSig} (\ref{SCExportIsoSig}), which re
    4
    gap> s:=SCExportIsoSig(c); time;
    "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
-   16
+   24
    
 \end{Verbatim}
  }
@@ -9654,7 +9654,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
    #I  SCIsTight: processed 30000 of 40320 rsl-functions so far, all perfect.
    #I  SCIsTight: processed 40000 of 40320 rsl-functions so far, all perfect.
    true
-   7900
+   8756
    
 \end{Verbatim}
  
@@ -9673,7 +9673,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
      98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 
      113, 114, 115, 116, 117, 118, 119, 120 ], complex not tight.
    false
-   12
+   20
    
 \end{Verbatim}
  
@@ -10373,11 +10373,11 @@ a list of pairs of the form \texttt{[ integer, list ]} upon success, fail otherw
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandom,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   44
+   60
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   76
+   56
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomRevLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
@@ -10385,11 +10385,11 @@ a list of pairs of the form \texttt{[ integer, list ]} upon success, fail otherw
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseEngstroem,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   132
+   120
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   160
+   180
    
 \end{Verbatim}
  }
@@ -11656,7 +11656,7 @@ nothing.
  Returns \texttt{true} when an email of the \textsf{simpcomp} email notification system is pending, \texttt{false} otherwise. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> SCMailIsPending();
-   true
+   false
    
 \end{Verbatim}
  }
@@ -11684,8 +11684,7 @@ minimal email sending interval, see \texttt{SCMailSetMinInterval} (\ref{SCMailSe
    gap> SCMailIsEnabled();
    true
    gap> SCMailSend("Hello, this is simpcomp.");
-   mail: cannot send message: Process exited with a non-zero status
-   false
+   true
    
 \end{Verbatim}
  }
@@ -11706,8 +11705,7 @@ minimal email sending interval, see \texttt{SCMailSetMinInterval} (\ref{SCMailSe
  Tries to send a pending email of the \textsf{simpcomp} email notification system. Returns \texttt{true} on success or if there was no mail pending. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> SCMailSendPending();
-   mail: cannot send message: Process exited with a non-zero status
-   false
+   true
    
 \end{Verbatim}
  }
@@ -11806,7 +11804,7 @@ differs from system to system.
    Line 1220 : 
    + simpcomp package test
    Line 1221 : 
-   + GAP4stones: 65445
+   + GAP4stones: 53282
    true
    
 \end{Verbatim}
@@ -12276,7 +12274,7 @@ Section \ref{sec:generateFromOld}, which will be described in the next sections.
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@#first run functionality test on simpcomp|
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, version 2.1.1
+  + test simpcomp package, version 2.1.2
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@#all ok|

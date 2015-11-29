@@ -97,7 +97,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCMailIsPending();[128X[104X
-    [4X[28X true[128X[104X
+    [4X[28X false[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -121,8 +121,7 @@
     [4X[28X gap> SCMailIsEnabled();[128X[104X
     [4X[28X true[128X[104X
     [4X[28X gap> SCMailSend("Hello, this is simpcomp.");[128X[104X
-    [4X[28X mail: cannot send message: Process exited with a non-zero status[128X[104X
-    [4X[28X false[128X[104X
+    [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -136,8 +135,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCMailSendPending();[128X[104X
-    [4X[28X mail: cannot send message: Process exited with a non-zero status[128X[104X
-    [4X[28X false[128X[104X
+    [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -209,7 +207,7 @@
     [4X[28X Line 1220 : [128X[104X
     [4X[28X + simpcomp package test[128X[104X
     [4X[28X Line 1221 : [128X[104X
-    [4X[28X + GAP4stones: 65445[128X[104X
+    [4X[28X + GAP4stones: 53282[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X

@@ -130,7 +130,7 @@
     [4X[28X #I  SCIsTight: processed 30000 of 40320 rsl-functions so far, all perfect.[128X[104X
     [4X[28X #I  SCIsTight: processed 40000 of 40320 rsl-functions so far, all perfect.[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X 7900[128X[104X
+    [4X[28X 8756[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -149,7 +149,7 @@
     [4X[28X   98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, [128X[104X
     [4X[28X   113, 114, 115, 116, 117, 118, 119, 120 ], complex not tight.[128X[104X
     [4X[28X false[128X[104X
-    [4X[28X 12[128X[104X
+    [4X[28X 20[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
