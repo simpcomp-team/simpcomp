@@ -659,7 +659,11 @@ InstallGlobalFunction(SCsFromGroupExt,
   
   if(matrixRows<1 or matrixCols<1) then
     Info(InfoSimpcomp,2,"No more computations needed (no more rows/cols).");
-    continue;
+    if removeDoubleEntries then
+      return isoSigs;
+    else
+      return complex_collection;
+    fi;
   fi;
     
   GASMAN("collect");
