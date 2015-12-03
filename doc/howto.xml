@@ -173,7 +173,7 @@ If you would like to cite <Package>simpcomp</Package> using BibTeX, you can use 
 	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
 	          {V}ersion 2.1.2",
 	year   = "2015",
-	url    = "\url{http://code.google.com/p/simpcomp}",
+	url    = "\url{https://github.com/simpcomp-team/simpcomp/}",
 }
 </Verb>
 	
@@ -185,7 +185,7 @@ F.~Effenberger and J.~Spreer,
 \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
 Version 2.1.2, 
 2015,
-\url{http://code.google.com/p/simpcomp}.
+\url{https://github.com/simpcomp-team/simpcomp/}.
 </Verb>
 </Section>
 
