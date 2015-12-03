@@ -196,7 +196,7 @@
   	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
   	          {V}ersion 2.1.2",
   	year   = "2015",
-  	url    = "\url{http://code.google.com/p/simpcomp}",
+  	url    = "\url{https://github.com/simpcomp-team/simpcomp/}",
   }
   
   [33X[0;0YIf  you  are  not  using  BibTeX, you can use the following entry inside the
@@ -207,5 +207,5 @@
   \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
   Version 2.1.2, 
   2015,
-  \url{http://code.google.com/p/simpcomp}.
+  \url{https://github.com/simpcomp-team/simpcomp/}.
   
