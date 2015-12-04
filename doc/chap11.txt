@@ -4,7 +4,8 @@
   [33X[0;0YIn  this  chapter  we  present some useful functions dealing with polyhedral
   Morse  theory.  See  Section [14X2.5[114X for a very short introduction to the field,
   see  [K{\95]  for  more  information.  Note: this is not to be confused with
-  Robin Forman's discrete Morse theory for cell complexes [For95].[133X
+  Robin  Forman's  discrete Morse theory for cell complexes which is described
+  in Chapter [14X12[114X.[133X
   
   [33X[0;0YIf  [22XM[122X  is  a combinatorial [22Xd[122X-manifold with [22Xn[122X-vertices a rsl-function will be
   represented  as an ordering on the set of vertices, i. e. a list of length [22Xn[122X
@@ -20,7 +21,7 @@
   
   [33X[0;0YChecks whether a simplicial complex [10Xcomplex[110X is a tight triangulation or not.
   A  simplicial complex with [22Xn[122X vertices is said to be a tight triangulation if
-  it  can  be  tightly  embedded into the [22X(n-1)[122X-simplex. See Section [14X2.6[114X for a
+  it  can  be  tightly  embedded into the [22X(n-1)[122X-simplex. See Section [14X2.7[114X for a
   short introduction to the field of tightness.[133X
   
   [33X[0;0YFirst,  if [10Xcomplex[110X is a [22X(k+1)[122X-neighborly [22X2k[122X-manifold (cf. [K{\95], Corollary
@@ -30,7 +31,7 @@
   cases.   Note  that  it  is  not  computed  whether  or  not  [10Xcomplex[110X  is  a
   combinatorial  manifold  as  this computation might take a long time. Hence,
   only  if  the  manifold  flag of the complex is set (this can be achieved by
-  calling  [2XSCIsManifold[102X  ([14X9.2-6[114X)  and  the  complex  indeed is a combinatorial
+  calling  [2XSCIsManifold[102X  ([14X12.1-17[114X)  and  the complex indeed is a combinatorial
   manifold)  these checks are performed. In a second step, the algorithm first
   checks certain rsl-functions allowing slicings between minimal non faces and
   the  rest  of the complex. In most cases where [10Xcomplex[110X is not tight at least
@@ -129,7 +130,7 @@
     [4X[28X #I  SCIsTight: processed 30000 of 40320 rsl-functions so far, all perfect.[128X[104X
     [4X[28X #I  SCIsTight: processed 40000 of 40320 rsl-functions so far, all perfect.[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X 5628[128X[104X
+    [4X[28X 8300[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -148,7 +149,7 @@
     [4X[28X   98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, [128X[104X
     [4X[28X   113, 114, 115, 116, 117, 118, 119, 120 ], complex not tight.[128X[104X
     [4X[28X false[128X[104X
-    [4X[28X 0[128X[104X
+    [4X[28X 16[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   

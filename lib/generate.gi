@@ -843,7 +843,7 @@ function(complex1, complex2)
 		names:=[SCName(complex1),SCName(complex2)];
 	fi;
 	if HasSCTopologicalType(complex1) and HasSCTopologicalType(complex2) then 
-		toptypes:=[SCTopologicalType(complex1),SCTopologicalType(complex1)];
+		toptypes:=[SCTopologicalType(complex1),SCTopologicalType(complex2)];
 	fi;
 	vertices:=[];
 
@@ -1627,9 +1627,9 @@ end);
 ## <Meth Name="SCStronglyConnectedComponents" Arg="complex"/>
 ## <Returns> a list of simplicial complexes of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Computes all strongly connected components of an arbitrary simplicial complex.
+## Computes all strongly connected components of a pure simplicial complex.
 ## <Example>
-## gap> c:=SC([[1,2,3],[3,4,5],[4,5,6,7,8,9],[6,7,8,9,10,11]]);;
+## gap> c:=SC([[1,2,3],[2,3,4],[4,5,6],[5,6,7]]);;
 ## gap> comps:=SCStronglyConnectedComponents(c);
 ## [ [SimplicialComplex
 ##     
@@ -1642,23 +1642,14 @@ end);
 ##     
 ##      Properties known: Dim, Facets, Name, VertexLabels.
 ##     
-##      Name="Strongly connected component #2 of unnamed complex m"
-##      Dim=5
-##     
-##     /SimplicialComplex], [SimplicialComplex
-##     
-##      Properties known: Dim, Facets, Name, VertexLabels.
-##     
 ##      Name="Strongly connected component #3 of unnamed complex m"
-##      Dim=5
+##      Dim=2
 ##     
 ##     /SimplicialComplex] ]
 ## gap> comps[1].Facets;
-## [ [ 1, 2, 3 ] ]
+## [ [ 1, 2, 3 ], [ 2, 3, 4 ] ]
 ## gap> comps[2].Facets;
-## [ [ 3, 4, 5 ], [ 4, 5, 6, 7, 8, 9 ] ]
-## gap> comps[3].Facets;
-## [ [ 6, 7, 8, 9, 10, 11 ] ]
+## [ [ 4, 5, 6 ], [ 5, 6, 7 ] ]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -1677,17 +1668,27 @@ InstallMethod(SCStronglyConnectedComponents,
 [SCIsSimplicialComplex],
 function(complex)
 
-	local i,j,flag,	treated,untreated,allComponents,curComponent,boundary,faces,comps, labels,dim,facets,name;
+	local ispure, i, j, flag, untreated, allComponents, curComponent, boundary, faces, labels, dim, facets, name;
 	
 	
 	labels:=SCVertices(complex);
 	if(labels=fail) then
-		Info(InfoSimpcomp,1,"SCStronglyConnectedComponents: complex lacks vertex labels.");
+		Info(InfoSimpcomp,1,"SCStronglyConnectedComponents: argument lacks vertex labels.");
 		return fail;
 	fi;
 	
 	dim := SCDim(complex);
 	if dim = fail then
+		return fail;
+	fi;
+
+	ispure := SCIsPure(complex);
+	if ispure = fail then
+		return fail;
+	fi;
+
+	if not ispure then
+		Info(InfoSimpcomp,1,"SCStronglyConnectedComponents: argument must be a pure simplicial complex.");
 		return fail;
 	fi;
 
@@ -1701,47 +1702,42 @@ function(complex)
 			return fail;
 		fi;
 		SetSCIsStronglyConnected(complex,Length(allComponents)=1);
-			return allComponents;
+		return allComponents;
 	fi;
 
 	untreated:=SCIntFunc.DeepCopy(SCFacetsEx(complex));
-
 	if untreated=fail then
 		return fail;
 	fi;
 
-	treated :=[];
 	allComponents :=[];
-
 	while untreated<>[] do
 		curComponent:=[untreated[1]];
+		Remove(untreated,1);
 		flag:=0;
 		while flag=0 do
 			flag:=1;
-			boundary:=SCBoundary(SCFromFacets(SCIntFunc.DeepCopy(curComponent)));
+			boundary:=SCBoundary(SC(curComponent));
 			faces:=SCFacets(boundary);
 			if faces=fail then
 				return fail;
 			fi;
 			for i in faces do
-				for j in untreated do
-				if IsSubset(j,i) then
-					flag:=0;
-				RemoveSet(untreated,j);
-				AddSet(treated,j);
-				AddSet(curComponent,j);
-			fi;
+				for j in Reversed([1..Size(untreated)]) do
+					if IsSubset(untreated[j],i) then
+						flag:=0;
+						Add(curComponent,untreated[j]);
+						Remove(untreated,j);
+					fi;
+				od;
 			od;
 		od;
-		od;
-		
 		AddSet(allComponents,curComponent);
 	od;
 
-	SetSCIsStronglyConnected(complex,Size(allComponents)=1);
-	
+
+
 	name:=SCName(complex);
-	
 	if(name<>fail and Size(allComponents)>0) then
 		for i in [1..Length(allComponents)] do
 			allComponents[i]:=SCFromFacets(SCIntFunc.RelabelSimplexList(allComponents[i],labels));
@@ -2033,7 +2029,7 @@ end);
 ## gap> b26:=SCSeriesBid(2,6);
 ## gap> s2s2:=SCBoundary(b26);
 ## gap> SCFVector(s2s2);
-## gap> SCAutormophismGroup(s2s2); 
+## gap> SCAutomorphismGroup(s2s2); 
 ## gap> SCIsManifold(s2s2); 
 ## gap> SCHomology(s2s2);
 ## </Example>

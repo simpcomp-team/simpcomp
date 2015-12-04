@@ -1,180 +1,690 @@
   
-  [1X13 [33X[0;0YInterfaces to other software packages[133X[101X
-  
-  [33X[0;0Y[5Xsimpcomp[105X contains various interfaces to other software packages (see Chapter
-  [14X12[114X  for  file-related export and import formats). In this chapter, some more
-  sophisticated interfaces to other software packages are described.[133X
-  
-  [33X[0;0YNote  that  this chapter is subject to change and extension as it is planned
-  to  expand  [5Xsimpcomp[105X's  functionality in this area in the course of the next
-  versions.[133X
+  [1X13 [33X[0;0YLibrary and I/O[133X[101X
   
   
-  [1X13.1 [33X[0;0YInterface to the [5XGAP[105X[101X[1X-package [5Xhomalg[105X[101X[1X[133X[101X
+  [1X13.1 [33X[0;0YSimplicial complex library[133X[101X
   
-  [33X[0;0YAs of Version 1.5, [5Xsimpcomp[105X is equipped with an interface to the [5XGAP[105X-package
-  [5Xhomalg[105X  [BR08]  by  Mohamed  Barakat.  This  allows to use [5Xhomalg[105X's powerful
-  capabilities  in  the  field  of  homological algebra to compute topological
-  properties of simplicial complexes.[133X
+  [33X[0;0Y[5Xsimpcomp[105X contains a library of simplicial complexes on few vertices, most of
+  them  (combinatorial)  triangulations  of manifolds and pseudomanifolds. The
+  user  can load these known triangulations from the library in order to study
+  their  properties  or to construct new triangulations out of the known ones.
+  For  example,  a  user  could  determine  the  topological  type  of a given
+  triangulation  --  which  can  be  quite  tedious  if  done  by  hand  -- by
+  establishing a PL equivalence to a complex in the library.[133X
   
-  [33X[0;0YFor the time being, the only functions provided are ones allowing to compute
-  the  homology  and  cohomology groups of simplicial complexes with arbitrary
-  coefficients.  It  is planned to extend the functionality in future releases
-  of  [5Xsimpcomp[105X. See below for a list of functions that provide an interface to
-  [5Xhomalg[105X.[133X
+  [33X[0;0YAmong  other  known  triangulations,  the library contains all of the vertex
+  transitive  triangulations of combinatorial manifolds with up to [22X15[122X vertices
+  (for  [22Xd  ∈  { 2,3,9,10,11,12}[122X) and up to [22X13[122X vertices (for [22Xd ∈ { 4,5,6,7,8 }[122X)
+  and all of the vertex transitive combinatorial pseudomanifolds with up to [22X15[122X
+  vertices (for [22Xd=3[122X) and up to [22X13[122X vertices (for [22Xd ∈ { 4,5,6,7 }[122X) classified by
+  Frank    Lutz    that    can    be    found   on   his   ``Manifold   Page''
+  [7Xhttp://www.math.tu-berlin.de/diskregeom/stellar/[107X,     along     with    some
+  triangulations of sphere bundles and some bounded triangulated PL-manifolds.[133X
   
-  [1X13.1-1 SCHomalgBoundaryMatrices[101X
+  [33X[0;0YSee  [2XSCLib[102X  ([14X13.1-2[114X)  for a naming convention used for the global library of
+  [5Xsimpcomp[105X.  Note: Another way of storing and loading complexes is provided by
+  the   functions   [2XSCExportIsoSig[102X   ([14X6.2-2[114X),   [2XSCExportToString[102X  ([14X6.2-1[114X)  and
+  [2XSCFromIsoSig[102X ([14X6.2-3[114X), see Section [14X6.2[114X for details.[133X
   
-  [29X[2XSCHomalgBoundaryMatrices[102X( [3Xcomplex[103X, [3Xmodulus[103X ) [32X method
-  [6XReturns:[106X  [33X[0;10Ya list of [5Xhomalg[105X objects upon success, [9Xfail[109X otherwise.[133X
+  [1X13.1-1 SCIsLibRepository[101X
   
-  [33X[0;0YThis  function  computes  the  boundary operator matrices for the simplicial
-  complex [3Xcomplex[103X with a ring of coefficients as specified by [3Xmodulus[103X: a value
-  of [10X0[110X yields [22XQ[122X-matrices, a value of [10X1[110X yields [22XZ[122X-matrices and a value of [10Xq[110X, q a
-  prime or a prime power, computes the [22XF_q[122X-matrices.[133X
+  [29X[2XSCIsLibRepository[102X( [3Xobject[103X ) [32X filter
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YFilter  for  the  category of a library repository [10XSCIsLibRepository[110X used by
+  the  [5Xsimpcomp[105X  library.  The  category  [10XSCLibRepository[110X  is derived from the
+  category [10XSCPropertyObject[110X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("CP^2 (VT)");[128X[104X
-    [4X[28X [ [ 16, "CP^2 (VT)" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> SCHomalgBoundaryMatrices(c,0);[128X[104X
-    [4X[28X [ <A 36 x 9 mutable matrix over an internal ring>, [128X[104X
-    [4X[28X   <A 84 x 36 mutable matrix over an internal ring>, [128X[104X
-    [4X[28X   <A 90 x 84 mutable matrix over an internal ring>, [128X[104X
-    [4X[28X   <A 36 x 90 mutable matrix over an internal ring>, [128X[104X
-    [4X[28X   <An unevaluated 0 x 36 zero matrix over an internal ring> ][128X[104X
+    [4X[28X gap> SCIsLibRepository(SCLib); #the global library is stored in SCLib[128X[104X
+    [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
-  [1X13.1-2 SCHomalgCoboundaryMatrices[101X
+  [1X13.1-2 SCLib[101X
   
-  [29X[2XSCHomalgCoboundaryMatrices[102X( [3Xcomplex[103X, [3Xmodulus[103X ) [32X method
-  [6XReturns:[106X  [33X[0;10Ya list of [5Xhomalg[105X objects upon success, [9Xfail[109X otherwise.[133X
+  [29X[2XSCLib[102X[32X global variable
   
-  [33X[0;0YThis  function  computes the coboundary operator matrices for the simplicial
-  complex [3Xcomplex[103X with a ring of coefficients as specified by [3Xmodulus[103X: a value
-  of [10X0[110X yields [22XQ[122X-matrices, a value of [10X1[110X yields [22XZ[122X-matrices and a value of [10Xq[110X, q a
-  prime or a prime power, computes the [22XF_q[122X-matrices.[133X
+  [33X[0;0YThe  global variable [10XSCLib[110X contains the library object of the global library
+  of  [5Xsimpcomp[105X  through which the user can access the library. The path to the
+  global library is [10XGAPROOT/pkg/simpcomp/complexes[110X.[133X
+  
+  [33X[0;0YThe  naming convention in the global library is the following: complexes are
+  usually named by their topological type. As usual, `S^d' denotes a [22Xd[122X-sphere,
+  `T'  a torus, `x' the cartesian product, `~' the twisted product and `#' the
+  connected sum. The Klein Bottle is denoted by `K' or `K^2'.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("CP^2 (VT)");[128X[104X
-    [4X[28X [ [ 16, "CP^2 (VT)" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> SCHomalgCoboundaryMatrices(c,0);[128X[104X
-    [4X[28X [ <A 9 x 36 mutable matrix over an internal ring>, [128X[104X
-    [4X[28X   <A 36 x 84 mutable matrix over an internal ring>, [128X[104X
-    [4X[28X   <A 84 x 90 mutable matrix over an internal ring>, [128X[104X
-    [4X[28X   <A 90 x 36 mutable matrix over an internal ring>, [128X[104X
-    [4X[28X   <An unevaluated 36 x 0 zero matrix over an internal ring> ][128X[104X
+    [4X[28X gap> SCLib;[128X[104X
+    [4X[28X [Simplicial complex library. Properties:[128X[104X
+    [4X[28X CalculateIndexAttributes=true[128X[104X
+    [4X[28X Number of complexes in library=7649[128X[104X
+    [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
+    [4X[28X   "IsManifold" ][128X[104X
+    [4X[28X Loaded=true[128X[104X
+    [4X[28X Path="/home/jonathan/apps/gap4r5/pkg/simpcomp/complexes/"[128X[104X
+    [4X[28X ][128X[104X
+    [4X[28X gap> SCLib.Size;[128X[104X
+    [4X[28X 7649[128X[104X
+    [4X[28X gap> SCLib.SearchByName("S^4~");[128X[104X
+    [4X[28X [ [ 463, "S^4~S^1 (VT)" ], [ 1473, "S^4~S^1 (VT)" ], [ 1474, "S^4~S^1 (VT)" ],[128X[104X
+    [4X[28X   [ 2477, "S^4~S^1 (VT)" ], [ 4395, "S^4~S^1 (VT)" ], [128X[104X
+    [4X[28X   [ 4396, "S^4~S^1 (VT)" ], [ 4397, "S^4~S^1 (VT)" ], [128X[104X
+    [4X[28X   [ 4398, "S^4~S^1 (VT)" ], [ 4399, "S^4~S^1 (VT)" ], [128X[104X
+    [4X[28X   [ 4402, "S^4~S^1 (VT)" ], [ 4403, "S^4~S^1 (VT)" ], [128X[104X
+    [4X[28X   [ 4404, "S^4~S^1 (VT)" ] ][128X[104X
+    [4X[28X gap> SCLib.Load(last[1][1]);          [128X[104X
+    [4X[28X [SimplicialComplex[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Properties known: AltshulerSteinberg, ConnectedComponents, Dim, [128X[104X
+    [4X[28X                    DualGraph, EulerCharacteristic, FVector, FacetsEx, [128X[104X
+    [4X[28X                    GVector, HVector, HasBoundary, HasInterior, [128X[104X
+    [4X[28X                    Homology, Interior, IsConnected, [128X[104X
+    [4X[28X                    IsEulerianManifold, IsManifold, IsOrientable, [128X[104X
+    [4X[28X                    IsPseudoManifold, IsPure, IsStronglyConnected, [128X[104X
+    [4X[28X                    MinimalNonFacesEx, Name, Neighborliness, [128X[104X
+    [4X[28X                    NumFaces[], Orientation, Reference, SkelExs[], [128X[104X
+    [4X[28X                    Vertices.[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Name="S^4~S^1 (VT)"[128X[104X
+    [4X[28X  Dim=5[128X[104X
+    [4X[28X  AltshulerSteinberg=2417917928025780[128X[104X
+    [4X[28X  EulerCharacteristic=0[128X[104X
+    [4X[28X  FVector=[ 13, 78, 195, 260, 195, 65 ][128X[104X
+    [4X[28X  GVector=[ 6, 21, -35 ][128X[104X
+    [4X[28X  HVector=[ 7, 28, -7, 28, 7, 1 ][128X[104X
+    [4X[28X  HasBoundary=false[128X[104X
+    [4X[28X  HasInterior=true[128X[104X
+    [4X[28X  Homology=[ [ 0, [ ] ], [ 1, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 0, [ 2 ] ], [ 0,\[128X[104X
+    [4X[28X  [ ] ] ][128X[104X
+    [4X[28X  IsConnected=true[128X[104X
+    [4X[28X  IsEulerianManifold=true[128X[104X
+    [4X[28X  IsOrientable=false[128X[104X
+    [4X[28X  IsPseudoManifold=true[128X[104X
+    [4X[28X  IsPure=true[128X[104X
+    [4X[28X  IsStronglyConnected=true[128X[104X
+    [4X[28X  Neighborliness=2[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X /SimplicialComplex][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
-  [1X13.1-3 SCHomalgHomology[101X
+  [1X13.1-3 SCLibAdd[101X
   
-  [29X[2XSCHomalgHomology[102X( [3Xcomplex[103X, [3Xmodulus[103X ) [32X method
-  [6XReturns:[106X  [33X[0;10Ya list of integers upon success, [9Xfail[109X otherwise.[133X
+  [29X[2XSCLibAdd[102X( [3Xrepository[103X, [3Xcomplex[103X[, [3Xname[103X] ) [32X function
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
-  [33X[0;0YThis  function  computes  the ranks of the homology groups of [3Xcomplex[103X with a
-  ring  of  coefficients  as  specified  by [3Xmodulus[103X: a value of [10X0[110X computes the
-  [22XQ[122X-homology, a value of [10X1[110X computes the [22XZ[122X-homology and a value of [10Xq[110X, q a prime
-  or a prime power, computes the [22XF_q[122X-homology ranks.[133X
-  
-  [33X[0;0YNote  that  if  you  are  interested  not  only in the ranks of the homology
-  groups,  but  rather  their  full  structure,  have  a  look at the function
-  [2XSCHomalgHomologyBasis[102X ([14X13.1-4[114X).[133X
+  [33X[0;0YAdds  a given simplicial complex [3Xcomplex[103X to a given repository [3Xrepository[103X of
+  type  [10XSCIsLibRepository[110X.  [3Xcomplex[103X  is saved to a file with suffix [10X.sc[110X in the
+  repositories  base  path,  where  the  file  name  is either formed from the
+  optional  argument  [3Xname[103X  and the current time or taken from the name of the
+  complex, if it is named.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
+    [4X[28X gap> info:=InfoLevel(InfoSimpcomp);;[128X[104X
+    [4X[28X gap> SCInfoLevel(0);;[128X[104X
+    [4X[28X gap> myRepository:=SCLibInit("/tmp/repository");[128X[104X
+    [4X[28X [Simplicial complex library. Properties:[128X[104X
+    [4X[28X CalculateIndexAttributes=true[128X[104X
+    [4X[28X Number of complexes in library=0[128X[104X
+    [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
+    [4X[28X   "IsManifold" ][128X[104X
+    [4X[28X Loaded=true[128X[104X
+    [4X[28X Path="/tmp/repository/"[128X[104X
+    [4X[28X ][128X[104X
+    [4X[28X gap> complex1:=SCBdCrossPolytope(4);;[128X[104X
+    [4X[28X gap> SCLibAdd(myRepository,complex1);[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X gap> complex2:=SCBdCrossPolytope(4);;[128X[104X
+    [4X[28X gap> myRepository.Add(complex2);; # alternative syntax[128X[104X
+    [4X[28X gap> SCInfoLevel(info);;[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.1-4 SCLibAllComplexes[101X
+  
+  [29X[2XSCLibAllComplexes[102X( [3Xrepository[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Ylist of entries of the form [10X[ integer, string ][110X upon success, [9Xfail[109X
+            otherwise.[133X
+  
+  [33X[0;0YReturns a list with entries of the form [10X[ ID, NAME ][110X of all the complexes in
+  the given repository [3Xrepository[103X of type [10XSCIsLibRepository[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> all:=SCLibAllComplexes(SCLib);;[128X[104X
+    [4X[28X gap> all[1];[128X[104X
+    [4X[28X [ 1, "Moebius Strip" ][128X[104X
+    [4X[28X gap> Length(all);[128X[104X
+    [4X[28X 7649[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.1-5 SCLibDelete[101X
+  
+  [29X[2XSCLibDelete[102X( [3Xrepository[103X, [3Xid[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YDeletes  the  simplicial  complex  with  the  given  id  [3Xid[103X  from  the given
+  repository  [3Xrepository[103X.  Apart from deleting the complexes' index entry, the
+  associated [10X.sc[110X file is also deleted.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> myRepository:=SCLibInit("/tmp/repository");[128X[104X
+    [4X[28X [Simplicial complex library. Properties:[128X[104X
+    [4X[28X CalculateIndexAttributes=true[128X[104X
+    [4X[28X Number of complexes in library=2[128X[104X
+    [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
+    [4X[28X   "IsManifold" ][128X[104X
+    [4X[28X Loaded=true[128X[104X
+    [4X[28X Path="/tmp/repository/"[128X[104X
+    [4X[28X ][128X[104X
+    [4X[28X gap> SCLibAdd(myRepository,SCSimplex(2));;[128X[104X
+    [4X[28X gap> SCLibDelete(myRepository,1);[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.1-6 SCLibDetermineTopologicalType[101X
+  
+  [29X[2XSCLibDetermineTopologicalType[102X( [[3Xrepository[103X, ][3Xcomplex[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Ysimplicial  complex  of  type  [10XSCSimplicialComplex[110X  or  a  list of
+            integers upon success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YTries  to determine the topological type of a given complex [3Xcomplex[103X by first
+  looking  for  complexes  with  matching  homology  in the library repository
+  [3Xrepository[103X (if no repository is passed, the global repository [10XSCLib[110X is used)
+  and  either  returns  a  simplicial  complex object (that is combinatorially
+  isomorphic  to  the  complex given) or a list of library ids of complexes in
+  the library with the same homology as the complex provided.[133X
+  
+  [33X[0;0YThe  ids  obtained in this way can then be used to compare the corresponding
+  complexes with [3Xcomplex[103X via the function [2XSCEquivalent[102X ([14X9.2-2[114X).[133X
+  
+  [33X[0;0YIf  [3Xcomplex[103X  is a combinatorial manifold of dimension [22X1[122X or [22X2[122X its topological
+  type  is  computed,  stored  to  the property [10XTopologicalType[110X and [3Xcomplex[103X is
+  returned.[133X
+  
+  [33X[0;0YIf  no  complexes  with  matching  homology  can  be found, the empty set is
+  returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> c:=SCFromFacets([[1,2,3],[1,2,6],[1,3,5],[1,4,5],[1,4,6],[128X[104X
+    [4X[28X                       [2,3,4],[2,4,5],[2,5,6],[3,4,6],[3,5,6]]);;[128X[104X
+    [4X[28X gap> SCLibDetermineTopologicalType(c);[128X[104X
+    [4X[28X [SimplicialComplex[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Properties known: BoundaryEx, Dim, FacetsEx, HasBoundary, [128X[104X
+    [4X[28X                    IsPseudoManifold, IsPure, Name, SkelExs[], [128X[104X
+    [4X[28X                    Vertices.[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Name="unnamed complex 167"[128X[104X
+    [4X[28X  Dim=2[128X[104X
+    [4X[28X  HasBoundary=false[128X[104X
+    [4X[28X  IsPseudoManifold=true[128X[104X
+    [4X[28X  IsPure=true[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X /SimplicialComplex][128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.1-7 SCLibFlush[101X
+  
+  [29X[2XSCLibFlush[102X( [3Xrepository[103X, [3Xconfirm[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YCompletely  empties  a  given  repository  [3Xrepository[103X.  The  index  and  all
+  simplicial  complexes  in  this repository are deleted. The second argument,
+  [3Xconfirm[103X, must be the string [10X"yes"[110X in order to confirm the deletion.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> myRepository:=SCLibInit("/tmp/repository");;[128X[104X
+    [4X[28X gap> SCLibFlush(myRepository,"yes");[128X[104X
+    [4X[28X #I  SCLibInit: invalid parameters.[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.1-8 SCLibInit[101X
+  
+  [29X[2XSCLibInit[102X( [3Xdir[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Ylibrary  repository  of  type  [10XSCLibRepository[110X  upon success, [9Xfail[109X
+            otherwise.[133X
+  
+  [33X[0;0YThis  function  initializes  a  library  repository  object  for  the  given
+  directory  [3Xdir[103X  (which  has  to  be provided in form of a [5XGAP[105X object of type
+  [10XString[110X  or  [10XDirectory[110X) and returns that library repository object in case of
+  success.  The  returned  object  then  provides a mean to access the library
+  repository via the [10XSCLib[110X-functions of [5Xsimpcomp[105X.[133X
+  
+  [33X[0;0YThe global library repository of [5Xsimpcomp[105X is loaded automatically at startup
+  and  is  stored  in  the variable [10XSCLib[110X. User repositories can be created by
+  calling  [10XSCLibInit[110X  with  a  desired  destination  directory. Note that each
+  repository  must  reside  in  a  different path since otherwise data may get
+  lost.[133X
+  
+  [33X[0;0YThe  function  first  tries  to  load  the  repository  index  for the given
+  directory to rebuild it (by calling [10XSCLibUpdate[110X) if loading the index fails.
+  The  library index of a library repository is stored in its base path in the
+  XML  file  [10Xcomplexes.idx[110X, the complexes are stored in files with suffix [10X.sc[110X,
+  also in XML format.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> myRepository:=SCLibInit("/tmp/repository");[128X[104X
+    [4X[28X #I  SCLibInit: made directory "/tmp/repository/" for user library.[128X[104X
+    [4X[28X #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.[128X[104X
+    [4X[28X #I  SCLibUpdate: rebuilding index for /tmp/repository/.[128X[104X
+    [4X[28X #I  SCLibUpdate: rebuilding index done.[128X[104X
+    [4X[28X [Simplicial complex library. Properties:[128X[104X
+    [4X[28X CalculateIndexAttributes=true[128X[104X
+    [4X[28X Number of complexes in library=0[128X[104X
+    [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
+    [4X[28X   "IsManifold" ][128X[104X
+    [4X[28X Loaded=true[128X[104X
+    [4X[28X Path="/tmp/repository/"[128X[104X
+    [4X[28X ][128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.1-9 SCLibIsLoaded[101X
+  
+  [29X[2XSCLibIsLoaded[102X( [3Xrepository[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon succes, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YReturns  [9Xtrue[109X when a given library repository [3Xrepository[103X is in loaded state.
+  This  means  that  the  directory  of  this  repository  is accessible and a
+  repository  index file for this repository exists in the repositories' path.
+  If this is not the case [9Xfalse[109X is returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> SCLibIsLoaded(SCLib);[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X gap> SCLib.IsLoaded;[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.1-10 SCLibSearchByAttribute[101X
+  
+  [29X[2XSCLibSearchByAttribute[102X( [3Xrepository[103X, [3Xexpr[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10YA list of items of the form [10X[ integer, string ][110X upon success, [9Xfail[109X
+            otherwise.[133X
+  
+  [33X[0;0YSearches  a  given repository [3Xrepository[103X for complexes for which the boolean
+  expression  [3Xexpr[103X,  passed as string, evaluates to [9Xtrue[109X and returns a list of
+  complexes  with  entries  of  the  form  [10X[ID,  NAME][110X or [9Xfail[109X upon error. The
+  expression  may  use  all  [5XGAP[105X  functions  and  can  access  all the indexed
+  attributes  of  the  complexes  in  the  given repository for the query. The
+  standard  attributes  are:  Dim  (Dimension),  F (f-vector), G (g-vector), H
+  (h-vector),  Chi  (Euler  characteristic), Homology, Name, IsPM, IsManifold.
+  See  [10XSCLib[110X  for  the  set  of  indexed  attributes  of the global library of
+  [5Xsimpcomp[105X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> SCLibSearchByAttribute(SCLib,"Dim=4 and F[3]=Binomial(F[1],3)");[128X[104X
+    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 7648, "K3_16" ] ][128X[104X
+    [4X[28X gap> SCLib.SearchByAttribute("Dim=4 and F[3]=Binomial(F[1],3)");[128X[104X
+    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 7648, "K3_16" ] ][128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.1-11 SCLibSearchByName[101X
+  
+  [29X[2XSCLibSearchByName[102X( [3Xrepository[103X, [3Xname[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10YA list of items of the form [10X[ integer, string ][110X upon success, [9Xfail[109X
+            otherwise.[133X
+  
+  [33X[0;0YSearches a given repository [3Xrepository[103X for complexes that contain the string
+  [3Xname[103X  as  a  substring  of  their  name  attribute and returns a list of the
+  complexes  found with entries of the form [10X[ID, NAME][110X. See [2XSCLib[102X ([14X13.1-2[114X) for
+  a naming convention used for the global library of [5Xsimpcomp[105X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> SCLibSearchByName(SCLib,"K3");[128X[104X
     [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> SCHomalgHomology(c,0);[128X[104X
-    [4X[28X #I  SCHomalgHomologyOp: Q-homology ranks: [ 1, 0, 22, 0, 1 ][128X[104X
-    [4X[28X [ 1, 0, 22, 0, 1 ][128X[104X
+    [4X[28X gap> SCLib.SearchByName("K3"); #alternative syntax[128X[104X
+    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
+    [4X[28X gap> SCLib.SearchByName("S^4x"); #search for products with S^4[128X[104X
+    [4X[28X [ [ 713, "S^4xS^1 (VT)" ], [ 1472, "S^4xS^1 (VT)" ], [ 1475, "S^4xS^1 (VT)" ],[128X[104X
+    [4X[28X   [ 7479, "S^4xS^2" ], [ 7539, "S^4xS^3" ], [ 7573, "S^4xS^4" ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
-  [1X13.1-4 SCHomalgHomologyBasis[101X
+  [1X13.1-12 SCLibSize[101X
   
-  [29X[2XSCHomalgHomologyBasis[102X( [3Xcomplex[103X, [3Xmodulus[103X ) [32X method
-  [6XReturns:[106X  [33X[0;10Ya [5Xhomalg[105X object upon success, [9Xfail[109X otherwise.[133X
+  [29X[2XSCLibSize[102X( [3Xrepository[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Yinteger upon success, [9Xfail[109X otherwise.[133X
   
-  [33X[0;0YThis  function computes the homology groups (including explicit bases of the
-  modules  involved)  of  [3Xcomplex[103X  with a ring of coefficients as specified by
-  [3Xmodulus[103X:  a  value  of  [10X0[110X computes the [22XQ[122X-homology, a value of [10X1[110X computes the
-  [22XZ[122X-homology  and  a  value  of  [10Xq[110X,  q  a prime or a prime power, computes the
-  [22XF_q[122X-homology groups.[133X
-  
-  [33X[0;0YThe    [22Xk[122X-th    homology    group    [10Xhk[110X    can   be   obtained   by   calling
-  [10Xhk:=CertainObject(homology,k);[110X, where [10Xhomology[110X is the [5Xhomalg[105X object returned
-  by   this   function.  The  generators  of  [10Xhk[110X  can  then  be  obtained  via
-  [10XGeneratorsOfModule(hk);[110X.[133X
-  
-  [33X[0;0YNote  that  if  you are only interested in the ranks of the homology groups,
-  then  it is better to use the funtion [2XSCHomalgHomology[102X ([14X13.1-3[114X) which is way
-  faster.[133X
+  [33X[0;0YReturns   the   number  of  complexes  contained  in  the  given  repository
+  [3Xrepository[103X.  Fails  if the library repository was not previously loaded with
+  [10XSCLibInit[110X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> SCHomalgHomologyBasis(c,0);[128X[104X
-    [4X[28X #I  SCHomalgHomologyBasisOp: constructed Q-homology groups.[128X[104X
-    [4X[28X <A graded homology object consisting of 5 left modules at degrees [ 0 .. 4 ]>[128X[104X
+    [4X[28X gap> SCLibSize(SCLib); #SCLib is the repository of the global library[128X[104X
+    [4X[28X 7649[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
-  [1X13.1-5 SCHomalgCohomology[101X
+  [1X13.1-13 SCLibUpdate[101X
   
-  [29X[2XSCHomalgCohomology[102X( [3Xcomplex[103X, [3Xmodulus[103X ) [32X method
-  [6XReturns:[106X  [33X[0;10Ya list of integers upon success, [9Xfail[109X otherwise.[133X
+  [29X[2XSCLibUpdate[102X( [3Xrepository[103X[, [3Xrecalc[103X] ) [32X function
+  [6XReturns:[106X  [33X[0;10Ylibrary  repository  of  type  [10XSCLibRepository[110X  upon success, [9Xfail[109X
+            otherwise.[133X
   
-  [33X[0;0YThis  function computes the ranks of the cohomology groups of [3Xcomplex[103X with a
-  ring  of  coefficients  as  specified  by [3Xmodulus[103X: a value of [10X0[110X computes the
-  [22XQ[122X-cohomology,  a  value of [10X1[110X computes the [22XZ[122X-cohomology and a value of [10Xq[110X, q a
-  prime or a prime power, computes the [22XF_q[122X-cohomology ranks.[133X
-  
-  [33X[0;0YNote  that  if  you  are  interested not only in the ranks of the cohomology
-  groups,  but  rather  their  full  structure,  have  a  look at the function
-  [2XSCHomalgCohomologyBasis[102X ([14X13.1-6[114X).[133X
+  [33X[0;0YRecreates the index of a given repository (either via a repository object or
+  a  base  path  of a repository [3Xrepository[103X) by scanning the base path for all
+  [10X.sc[110X  files  containing  simplicial  complexes  of  the repository. Returns a
+  repository object with the newly created index on success or [9Xfail[109X in case of
+  an  error. The optional boolean argument [3Xrecalc[103X forces [5Xsimpcomp[105X to recompute
+  all  the  indexed  properties  (such  as  f-vector,  homology,  etc.) of the
+  simplicial complexes in the repository if set to [9Xtrue[109X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> SCHomalgCohomology(c,0);[128X[104X
-    [4X[28X #I  SCHomalgCohomologyOp: Q-cohomology ranks: [ 1, 0, 22, 0, 1 ][128X[104X
-    [4X[28X [ 1, 0, 22, 0, 1 ][128X[104X
+    [4X[28X gap> myRepository:=SCLibInit("/tmp/repository");;[128X[104X
+    [4X[28X gap> SCLibUpdate(myRepository);[128X[104X
+    [4X[28X #I  SCLibUpdate: rebuilding index for /tmp/repository/.[128X[104X
+    [4X[28X #I  SCLibUpdate: rebuilding index done.[128X[104X
+    [4X[28X [Simplicial complex library. Properties:[128X[104X
+    [4X[28X CalculateIndexAttributes=true[128X[104X
+    [4X[28X Number of complexes in library=0[128X[104X
+    [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
+    [4X[28X   "IsManifold" ][128X[104X
+    [4X[28X Loaded=true[128X[104X
+    [4X[28X Path="/tmp/repository/"[128X[104X
+    [4X[28X ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
-  [1X13.1-6 SCHomalgCohomologyBasis[101X
+  [1X13.1-14 SCLibStatus[101X
   
-  [29X[2XSCHomalgCohomologyBasis[102X( [3Xcomplex[103X, [3Xmodulus[103X ) [32X method
-  [6XReturns:[106X  [33X[0;10Ya [5Xhomalg[105X object upon success, [9Xfail[109X otherwise.[133X
+  [29X[2XSCLibStatus[102X( [3Xrepository[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Ylibrary  repository  of  type  [10XSCLibRepository[110X  upon success, [9Xfail[109X
+            otherwise.[133X
   
-  [33X[0;0YThis  function  computes  the cohomology groups (including explicit bases of
-  the modules involved) of [3Xcomplex[103X with a ring of coefficients as specified by
-  [3Xmodulus[103X:  a  value of [10X0[110X computes the [22XQ[122X-cohomology, a value of [10X1[110X computes the
-  [22XZ[122X-cohomology  and  a  value  of  [10Xq[110X, q a prime or a prime power, computes the
-  [22XF_q[122X-homology groups.[133X
-  
-  [33X[0;0YThe    [22Xk[122X-th    cohomology    group   [10Xck[110X   can   be   obtained   by   calling
-  [10Xck:=CertainObject(cohomology,k);[110X,  where  [10Xcohomology[110X  is  the  [5Xhomalg[105X object
-  returned  by  this  function.  The generators of [10Xck[110X can then be obtained via
-  [10XGeneratorsOfModule(ck);[110X.[133X
-  
-  [33X[0;0YNote  that if you are only interested in the ranks of the cohomology groups,
-  then  it  is  better to use the funtion [2XSCHomalgCohomology[102X ([14X13.1-5[114X) which is
-  way faster.[133X
+  [33X[0;0YLets  [5XGAP[105X  print  the  status  of  a  given  library  repository [3Xrepository[103X.
+  [10XIndexAttributes[110X  is  the  list of attributes indexed for this repository. If
+  [10XCalculateIndexAttributes[110X  is  true, the index attributes for a complex added
+  to  the  library  are calculated automatically upon addition of the complex,
+  otherwise  this  is  left to the user and only pre-calculated attributes are
+  indexed.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> SCHomalgCohomologyBasis(c,0);[128X[104X
-    [4X[28X #I  SCHomalgCohomologyBasisOp: constructed Q-cohomology groups.[128X[104X
-    [4X[28X <A graded cohomology object consisting of 5 left modules at degrees [128X[104X
-    [4X[28X [ 1 .. 5 ]>[128X[104X
+    [4X[28X gap> SCLibStatus(SCLib);[128X[104X
+    [4X[28X [Simplicial complex library. Properties:[128X[104X
+    [4X[28X CalculateIndexAttributes=true[128X[104X
+    [4X[28X Number of complexes in library=7649[128X[104X
+    [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
+    [4X[28X   "IsManifold" ][128X[104X
+    [4X[28X Loaded=true[128X[104X
+    [4X[28X Path="/home/jonathan/apps/gap4r5/pkg/simpcomp/complexes/"[128X[104X
+    [4X[28X ][128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  
+  [1X13.2 [33X[0;0Y[5Xsimpcomp[105X[101X[1X input / output functions[133X[101X
+  
+  [33X[0;0YThis  section  contains  a  description  of  the  input/output-functionality
+  provided  by  [5Xsimpcomp[105X.  The  package provides the functionality to save and
+  load simplicial complexes (and their known properties) to, respectively from
+  files  in  XML  format.  Furthermore, it provides the user with functions to
+  export simplicial complexes into polymake format (for this format there also
+  exists rudimentary import functionality), as JavaView geometry or in form of
+  a  LaTeX  table.  For  importing  more  complex  polymake  data  the package
+  polymaking [R\"13] can be used.[133X
+  
+  [1X13.2-1 SCLoad[101X
+  
+  [29X[2XSCLoad[102X( [3Xfilename[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
+            otherwise.[133X
+  
+  [33X[0;0YLoads  a simplicial complex stored in a binary format (using [10XIO_Pickle[110X) from
+  a  file specified in [3Xfilename[103X (as string). If [3Xfilename[103X does not end in [10X.scb[110X,
+  this suffix is appended to the file name.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> c:=SCBdSimplex(3);;[128X[104X
+    [4X[28X gap> SCSave(c,"/tmp/bddelta3");[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X gap> d:=SCLoad("/tmp/bddelta3");[128X[104X
+    [4X[28X [SimplicialComplex[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Properties known: AutomorphismGroup, AutomorphismGroupSize, [128X[104X
+    [4X[28X                    AutomorphismGroupStructure, [128X[104X
+    [4X[28X                    AutomorphismGroupTransitivity, Dim, [128X[104X
+    [4X[28X                    EulerCharacteristic, FacetsEx, GeneratorsEx, [128X[104X
+    [4X[28X                    HasBoundary, Homology, IsConnected, [128X[104X
+    [4X[28X                    IsStronglyConnected, Name, NumFaces[], [128X[104X
+    [4X[28X                    TopologicalType, Vertices.[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Name="S^2_4"[128X[104X
+    [4X[28X  Dim=2[128X[104X
+    [4X[28X  AutomorphismGroupSize=24[128X[104X
+    [4X[28X  AutomorphismGroupStructure="S4"[128X[104X
+    [4X[28X  AutomorphismGroupTransitivity=4[128X[104X
+    [4X[28X  EulerCharacteristic=2[128X[104X
+    [4X[28X  HasBoundary=false[128X[104X
+    [4X[28X  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ][128X[104X
+    [4X[28X  IsConnected=true[128X[104X
+    [4X[28X  IsStronglyConnected=true[128X[104X
+    [4X[28X  TopologicalType="S^2"[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X /SimplicialComplex][128X[104X
+    [4X[28X gap> c=d;[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.2-2 SCLoadXML[101X
+  
+  [29X[2XSCLoadXML[102X( [3Xfilename[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
+            otherwise.[133X
+  
+  [33X[0;0YLoads  a  simplicial  complex  stored in XML format from a file specified in
+  [3Xfilename[103X  (as  string).  If  [3Xfilename[103X  does  not  end in [10X.sc[110X, this suffix is
+  appended to the file name.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> c:=SCBdSimplex(3);;[128X[104X
+    [4X[28X gap> SCSaveXML(c,"/tmp/bddelta3");[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X gap> d:=SCLoadXML("/tmp/bddelta3");[128X[104X
+    [4X[28X [SimplicialComplex[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Properties known: AutomorphismGroup, AutomorphismGroupSize, [128X[104X
+    [4X[28X                    AutomorphismGroupStructure, [128X[104X
+    [4X[28X                    AutomorphismGroupTransitivity, Dim, [128X[104X
+    [4X[28X                    EulerCharacteristic, FacetsEx, GeneratorsEx, [128X[104X
+    [4X[28X                    HasBoundary, Homology, IsConnected, [128X[104X
+    [4X[28X                    IsStronglyConnected, Name, NumFaces[], [128X[104X
+    [4X[28X                    TopologicalType, Vertices.[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Name="S^2_4"[128X[104X
+    [4X[28X  Dim=2[128X[104X
+    [4X[28X  AutomorphismGroupSize=24[128X[104X
+    [4X[28X  AutomorphismGroupStructure="S4"[128X[104X
+    [4X[28X  AutomorphismGroupTransitivity=4[128X[104X
+    [4X[28X  EulerCharacteristic=2[128X[104X
+    [4X[28X  HasBoundary=false[128X[104X
+    [4X[28X  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ][128X[104X
+    [4X[28X  IsConnected=true[128X[104X
+    [4X[28X  IsStronglyConnected=true[128X[104X
+    [4X[28X  TopologicalType="S^2"[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X /SimplicialComplex][128X[104X
+    [4X[28X gap> c=d;[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.2-3 SCSave[101X
+  
+  [29X[2XSCSave[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YSaves  a  simplicial  complex in a binary format (using [10XIO_Pickle[110X) to a file
+  specified  in  [3Xfilename[103X  (as string). If [3Xfilename[103X does not end in [10X.scb[110X, this
+  suffix is appended to the file name.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> c:=SCBdSimplex(3);;[128X[104X
+    [4X[28X gap> SCSave(c,"/tmp/bddelta3");[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.2-4 SCSaveXML[101X
+  
+  [29X[2XSCSaveXML[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YSaves  a  simplicial  complex  [3Xcomplex[103X  to  a file specified by [3Xfilename[103X (as
+  string)  in  XML  format.  If  [3Xfilename[103X  does not end in [10X.sc[110X, this suffix is
+  appended to the file name.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> c:=SCBdSimplex(3);;[128X[104X
+    [4X[28X gap> SCSaveXML(c,"/tmp/bddelta3");[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.2-5 SCExportMacaulay2[101X
+  
+  [29X[2XSCExportMacaulay2[102X( [3Xcomplex[103X, [3Xring[103X, [3Xfilename[103X[, [3Xalphalabels[103X] ) [32X function
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YExports  the  facet  list of a given simplicial complex [3Xcomplex[103X in [10XMacaulay2[110X
+  format  to a file specified by [3Xfilename[103X. The argument [3Xring[103X can either be the
+  ring of integers (specified by [10XIntegers[110X) or the ring of rationals (sepcified
+  by  [10XRationals[110X). The optional boolean argument [3Xalphalabels[103X labels the complex
+  with  characters  from [22Xa, dots ,z[122X in the exported file if a value of [9Xtrue[109X is
+  supplied,  while  the  standard  labeling  of the vertices is [22Xv_1, dots ,v_n[122X
+  where  [22Xn[122X  is  the number of vertices of [3Xcomplex[103X. If [3Xcomplex[103X has more than [22X26[122X
+  vertices, the argument [3Xalphalabels[103X is ignored.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> c:=SCBdCrossPolytope(4);;[128X[104X
+    [4X[28X gap> SCExportMacaulay2(c,Integers,"/tmp/bdbeta4.m2");[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.2-6 SCExportPolymake[101X
+  
+  [29X[2XSCExportPolymake[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YExports  the  facet  list  with  vertex labels of a given simplicial complex
+  [3Xcomplex[103X  in [10Xpolymake[110X format to a file specified by [3Xfilename[103X. Currently, only
+  the export in the format of [10Xpolymake[110X version 2.3 is supported.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> c:=SCBdCrossPolytope(4);;[128X[104X
+    [4X[28X gap> SCExportPolymake(c,"/tmp/bdbeta4.poly");[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.2-7 SCImportPolymake[101X
+  
+  [29X[2XSCImportPolymake[102X( [3Xfilename[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
+            otherwise.[133X
+  
+  [33X[0;0YImports  the  facet  list  of  a  [10Xtopaz[110X  [10Xpolymake[110X file specified by [3Xfilename[103X
+  (discarding  any vertex labels) and creates a simplicial complex object from
+  these facets.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> c:=SCBdCrossPolytope(4);;[128X[104X
+    [4X[28X gap> SCExportPolymake(c,"/tmp/bdbeta4.poly");[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X gap> d:=SCImportPolymake("/tmp/bdbeta4.poly");[128X[104X
+    [4X[28X [SimplicialComplex[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Name="polymake import '/tmp/bdbeta4.poly'"[128X[104X
+    [4X[28X  Dim=3[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X /SimplicialComplex][128X[104X
+    [4X[28X gap> c=d;[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.2-8 SCExportLatexTable[101X
+  
+  [29X[2XSCExportLatexTable[102X( [3Xcomplex[103X, [3Xfilename[103X, [3Xitemsperline[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X on success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YExports  the  facet  list of a given simplicial complex [3Xcomplex[103X (or any list
+  given  as  first  argument)  in form of a LaTeX table to a file specified by
+  [3Xfilename[103X.  The argument [3Xitemsperline[103X specifies how many columns the exported
+  table should have. The faces are exported in the format [22X⟨ v_1,dots,v_k ⟩[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> c:=SCBdSimplex(5);;[128X[104X
+    [4X[28X gap> SCExportLatexTable(c,"/tmp/bd5simplex.tex",5);[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.2-9 SCExportJavaView[101X
+  
+  [29X[2XSCExportJavaView[102X( [3Xcomplex[103X, [3Xfile[103X, [3Xcoords[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X on success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YExports  the  2-skeleton  of  the  given  simplicial complex [3Xcomplex[103X (or the
+  facets  if  the  complex is of dimension 2 or less) in [10XJavaView[110X format (file
+  name  suffix  [10X.jvx[110X)  to  a  file specified by [3Xfilename[103X (as string). The list
+  [3Xcoords[103X  must  contain  a  [22X3[122X-tuple  of  real  coordinates  for each vertex of
+  [3Xcomplex[103X,  either  as  tuple  of  length  three  containing  the  coordinates
+  (Warning:  as  [5XGAP[105X  only  has rudimentary support for floating point values,
+  currently  only  integer  numbers  can be used as coordinates when providing
+  [3Xcoords[103X  as  list  of  [22X3[122X-tuples)  or as string of the form [10X"x.x y.y z.z"[110X with
+  decimal  numbers  [10Xx.x[110X,  [10Xy.y[110X,  [10Xz.z[110X  for  the three coordinates (i.e. [10X"1.0 0.0
+  0.0"[110X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> coords:=[[1,0,0],[0,1,0],[0,0,1]];;[128X[104X
+    [4X[28X gap> SCExportJavaView(SCBdSimplex(2),"/tmp/triangle.jvx",coords);[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.2-10 SCExportPolymake[101X
+  
+  [29X[2XSCExportPolymake[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YExports  the  gluings  of the tetrahedra of a given combinatorial [22X3[122X-manifold
+  [3Xcomplex[103X   in   a   format  compatible  with  Matveev's  [22X3[122X-manifold  software
+  [10XRecognizer[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> c:=SCBdCrossPolytope(4);;[128X[104X
+    [4X[28X gap> SCExportRecognizer(c,"/tmp/bdbeta4.mv");[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [1X13.2-11 SCExportSnapPy[101X
+  
+  [29X[2XSCExportSnapPy[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
+  
+  [33X[0;0YExports   the   facet  list  and  orientability  of  a  given  combinatorial
+  [22X3[122X-pseudomanifold [3Xcomplex[103X in [10XSnapPy[110X format to a file specified by [3Xfilename[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> SCLib.SearchByAttribute("Dim=3 and F=[8,28,56,28]");[128X[104X
+    [4X[28X [ [ 8, "PM^3 - TransitiveGroup(8,43), No. 1" ] ][128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> SCExportSnapPy(c,"/tmp/M38.tri");[128X[104X
+    [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   

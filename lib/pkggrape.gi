@@ -12,15 +12,15 @@ InstallMethod(SCAutomorphismGroup,
 [SCIsSimplicialComplex],
 	function(complex)
 
-	local i,j,k,idx, dg, edges, f, gamma, Gprime, G, pm, sc, structure,g,bd,
-		stars,imstars,facets,pfacets,iso,allisos,verts,gens,gapidx;
+	local i, j, k, idx, dg, edges, gamma, Gprime, G, pm, sc, structure, g, bd, dim, v,
+		stars, imstars, facets, pfacets, iso, allisos, verts, gens, gapidx;
 	
 	if not IsBoundGlobal("AutGroupGraph") or not IsBoundGlobal("EdgeOrbitsGraph") then
 		G:=SCAutomorphismGroupInternal(complex);
 		if G = fail then
 			return fail;
 		else
-					return G;
+			return G;
 		fi;
 	fi;
 
@@ -32,23 +32,34 @@ InstallMethod(SCAutomorphismGroup,
 		return fail;
 	fi;
 
-	f:=SCFVector(complex);
-	if f = fail then
+	facets:=SCFacetsEx(complex);
+	if facets = fail then
+		return fail;
+	fi;
+
+	dim:=SCDim(complex);
+	if dim = fail then
+		return fail;
+	fi;
+
+	v:=SCNumFaces(complex,0);
+	if v = fail then
 		return fail;
 	fi;
 
 	#identify simplices
-	if f[1] = f[Size(f)] and pm = true and SCDim(complex) = f[1]-2 then
-		G:=SymmetricGroup(f[1]);
+	if v = Size(facets) and pm = true and dim = v-2 then
+		G:=SymmetricGroup(v);
 		structure:=StructureDescription(G);
 		SetName(G,structure);
 		SetSCAutomorphismGroup(complex,G);
 		SetSCAutomorphismGroupSize(complex,G);
 		SetSCAutomorphismGroupTransitivity(complex,Transitivity(G));
 		SetSCAutomorphismGroupStructure(complex,structure);
-			return G;
+		return G;
 	fi;
 
+	Info(InfoSimpcomp,3,"SCAutomorphismGroup: compute dual graph.");
 	dg:=SCDualGraph(complex);
 	if dg = fail then
 		return fail;
@@ -68,9 +79,10 @@ InstallMethod(SCAutomorphismGroup,
 		Add(edges,Reversed(edges[i]));
 	od;
 	
+	Info(InfoSimpcomp,3,"SCAutomorphismGroup: compute automorphism group of dual graph.");
 	gamma:=EdgeOrbitsGraph(Group([()]),edges,Size(verts));
 	Gprime:=AutGroupGraph(gamma);
-
+	Info(InfoSimpcomp,3,"SCAutomorphismGroup: found ",Order(Gprime)," automorphisms of dual graph.");
 	if(Gprime=fail) then
 		Info(InfoSimpcomp,1,"SCAutomorphismGroup: error calculating automorphism group via GRAPE.");
 		return fail;
@@ -82,9 +94,8 @@ InstallMethod(SCAutomorphismGroup,
 	SetSCAutomorphismGroupStructure(dg,StructureDescription(Gprime));
 	SetSCDualGraph(complex,dg);
 	
-	facets:=SCFacetsEx(complex);
 	stars:=[];
-	for i in [1..f[1]] do
+	for i in [1..v] do
 		stars[i]:=[];
 	od;
 	for j in [1..Size(facets)] do
@@ -94,6 +105,8 @@ InstallMethod(SCAutomorphismGroup,
 			od;
 	od;
 	
+	Info(InfoSimpcomp,3,"SCAutomorphismGroup: determine automorphism group of complex.");
+
 	# for all automorphisms of dual graph
 	G:=Group(());
 	allisos:=[];
@@ -129,6 +142,8 @@ InstallMethod(SCAutomorphismGroup,
 	else
 		G:=Group(());
 	fi;
+
+	Info(InfoSimpcomp,3,"SCAutomorphismGroup: found ",Order(G)," automorphisms of complex, determine structure of group.");
 
 	SetSCAutomorphismGroup(complex,G);
 	SetSCAutomorphismGroupSize(complex,Size(G));

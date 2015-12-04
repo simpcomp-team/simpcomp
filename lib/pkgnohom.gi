@@ -8,14 +8,16 @@
 ##
 ################################################################################
 
-InstallMethod(SCHomology,
-"for SCSimplicialComplex",
-[SCIsSimplicialComplex],
+InstallGlobalFunction(SCHomologyClassic,
 	function(complex)
 
-	if(not SCIsSimplicialComplex(complex)) then
-		Info(InfoSimpcomp,1,"SCHomology: first argument must be of type SCSimplicialComplex.");
+	if(not SCIsPolyhedralComplex(complex)) then
+		Info(InfoSimpcomp,1,"SCHomologyClassic: first argument must be of type SCIsPolyhedralComplex.");
 		return fail;
+	fi;
+
+	if HasSCHomology(complex) then
+		return SCHomology(complex);
 	fi;
 
 	return SCHomologyInternal(complex);

@@ -1,220 +1,180 @@
   
-  [1X14 [33X[0;0YMiscellaneous functions[133X[101X
+  [1X14 [33X[0;0YInterfaces to other software packages[133X[101X
   
-  [33X[0;0YThe  behaviour  of [5Xsimpcomp[105X can be changed by setting cetain global options.
-  This can be achieved by the functions described in the following.[133X
+  [33X[0;0Y[5Xsimpcomp[105X contains various interfaces to other software packages (see Chapter
+  [14X13[114X  for  file-related export and import formats). In this chapter, some more
+  sophisticated interfaces to other software packages are described.[133X
   
-  
-  [1X14.1 [33X[0;0Y[5Xsimpcomp[105X[101X[1X logging[133X[101X
-  
-  [33X[0;0YThe  verbosity  of  the  output of information to the screen during calls to
-  functions  of  the  package  [5Xsimpcomp[105X  can be controlled by setting the info
-  level parameter via the function [2XSCInfoLevel[102X ([14X14.1-1[114X).[133X
-  
-  [1X14.1-1 SCInfoLevel[101X
-  
-  [29X[2XSCInfoLevel[102X( [3Xlevel[103X ) [32X function
-  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X[133X
-  
-  [33X[0;0YSets  the logging verbosity of [5Xsimpcomp[105X. A level of [22X0[122X suppresses all output,
-  a level of [22X1[122X lets [5Xsimpcomp[105X output normal running information, whereas levels
-  of  [22X2[122X  and higher display verbose running information. Examples of functions
-  using more verbose logging are bistellar flip-related functions.[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XSCInfoLevel(3);[127X[104X
-    [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27Xc:=SCBdCrossPolytope(3);;[127X[104X
-    [4X[25Xgap>[125X [27XSCReduceComplex(c); [127X[104X
-    [4X[28X#I  round 0, move: [ [ 4, 6 ], [ 1, 2 ] ][128X[104X
-    [4X[28XF: [ 6, 12, 8 ][128X[104X
-    [4X[28X#I  round 1, move: [ [ 6 ], [ 1, 2, 3 ] ][128X[104X
-    [4X[28XF: [ 5, 9, 6 ][128X[104X
-    [4X[28X#I  round 1[128X[104X
-    [4X[28XReduced complex, F: [ 5, 9, 6 ][128X[104X
-    [4X[28X#I  round 2, move: [ [ 4 ], [ 1, 2, 5 ] ][128X[104X
-    [4X[28XF: [ 4, 6, 4 ][128X[104X
-    [4X[28X#I  round 2[128X[104X
-    [4X[28XReduced complex, F: [ 4, 6, 4 ][128X[104X
-    [4X[28X#I  SCReduceComplexEx: computed locally minimal complex after 3 rounds.[128X[104X
-    [4X[28X[ true, [SimplicialComplex[128X[104X
-    [4X[28X    [128X[104X
-    [4X[28X     Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
-    [4X[28X    [128X[104X
-    [4X[28X     Name="unnamed complex 3"[128X[104X
-    [4X[28X     Dim=2[128X[104X
-    [4X[28X    [128X[104X
-    [4X[28X    /SimplicialComplex], 3 ][128X[104X
-  [4X[32X[104X
+  [33X[0;0YNote  that  this chapter is subject to change and extension as it is planned
+  to  expand  [5Xsimpcomp[105X's  functionality in this area in the course of the next
+  versions.[133X
   
   
-  [1X14.2 [33X[0;0YEmail notification system[133X[101X
+  [1X14.1 [33X[0;0YInterface to the [5XGAP[105X[101X[1X-package [5Xhomalg[105X[101X[1X[133X[101X
   
-  [33X[0;0Y[5Xsimpcomp[105X  comes with an email notification system that can be used for being
-  notified of the progress of lengthy computations (such as reducing a complex
-  via  bistellar  flips). See below for a description of the mail notification
-  related functions. Note that this might not work on non-Unix systems.[133X
+  [33X[0;0YAs of Version 1.5, [5Xsimpcomp[105X is equipped with an interface to the [5XGAP[105X-package
+  [5Xhomalg[105X  [BR08]  by  Mohamed  Barakat.  This  allows to use [5Xhomalg[105X's powerful
+  capabilities  in  the  field  of  homological algebra to compute topological
+  properties of simplicial complexes.[133X
   
-  [33X[0;0YSee  [2XSCReduceComplexEx[102X  ([14X9.2-14[114X)  for an example computation using the email
-  notification system.[133X
+  [33X[0;0YFor the time being, the only functions provided are ones allowing to compute
+  the  homology  and  cohomology groups of simplicial complexes with arbitrary
+  coefficients.  It  is planned to extend the functionality in future releases
+  of  [5Xsimpcomp[105X. See below for a list of functions that provide an interface to
+  [5Xhomalg[105X.[133X
   
-  [1X14.2-1 SCMailClearPending[101X
+  [1X14.1-1 SCHomalgBoundaryMatrices[101X
   
-  [29X[2XSCMailClearPending[102X(  ) [32X function
-  [6XReturns:[106X  [33X[0;10Ynothing.[133X
+  [29X[2XSCHomalgBoundaryMatrices[102X( [3Xcomplex[103X, [3Xmodulus[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Ya list of [5Xhomalg[105X objects upon success, [9Xfail[109X otherwise.[133X
   
-  [33X[0;0YClears a pending mail message.[133X
+  [33X[0;0YThis  function  computes  the  boundary operator matrices for the simplicial
+  complex [3Xcomplex[103X with a ring of coefficients as specified by [3Xmodulus[103X: a value
+  of [10X0[110X yields [22XQ[122X-matrices, a value of [10X1[110X yields [22XZ[122X-matrices and a value of [10Xq[110X, q a
+  prime or a prime power, computes the [22XF_q[122X-matrices.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCMailClearPending();[128X[104X
-    [4X[28X [128X[104X
+    [4X[28X gap> SCLib.SearchByName("CP^2 (VT)");[128X[104X
+    [4X[28X [ [ 16, "CP^2 (VT)" ] ][128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> SCHomalgBoundaryMatrices(c,0);[128X[104X
+    [4X[28X [ <A 36 x 9 mutable matrix over an internal ring>, [128X[104X
+    [4X[28X   <A 84 x 36 mutable matrix over an internal ring>, [128X[104X
+    [4X[28X   <A 90 x 84 mutable matrix over an internal ring>, [128X[104X
+    [4X[28X   <A 36 x 90 mutable matrix over an internal ring>, [128X[104X
+    [4X[28X   <An unevaluated 0 x 36 zero matrix over an internal ring> ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
-  [1X14.2-2 SCMailIsEnabled[101X
+  [1X14.1-2 SCHomalgCoboundaryMatrices[101X
   
-  [29X[2XSCMailIsEnabled[102X(  ) [32X function
-  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
+  [29X[2XSCHomalgCoboundaryMatrices[102X( [3Xcomplex[103X, [3Xmodulus[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Ya list of [5Xhomalg[105X objects upon success, [9Xfail[109X otherwise.[133X
   
-  [33X[0;0YReturns [9Xtrue[109X when the mail notification system of [5Xsimpcomp[105X is enabled, [9Xfalse[109X
-  otherwise. Default setting is [9Xfalse[109X.[133X
+  [33X[0;0YThis  function  computes the coboundary operator matrices for the simplicial
+  complex [3Xcomplex[103X with a ring of coefficients as specified by [3Xmodulus[103X: a value
+  of [10X0[110X yields [22XQ[122X-matrices, a value of [10X1[110X yields [22XZ[122X-matrices and a value of [10Xq[110X, q a
+  prime or a prime power, computes the [22XF_q[122X-matrices.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCMailSetAddress("johndoe@somehost"); #enables mail notification[128X[104X
-    [4X[28X true[128X[104X
-    [4X[28X gap> SCMailIsEnabled();[128X[104X
-    [4X[28X true[128X[104X
+    [4X[28X gap> SCLib.SearchByName("CP^2 (VT)");[128X[104X
+    [4X[28X [ [ 16, "CP^2 (VT)" ] ][128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> SCHomalgCoboundaryMatrices(c,0);[128X[104X
+    [4X[28X [ <A 9 x 36 mutable matrix over an internal ring>, [128X[104X
+    [4X[28X   <A 36 x 84 mutable matrix over an internal ring>, [128X[104X
+    [4X[28X   <A 84 x 90 mutable matrix over an internal ring>, [128X[104X
+    [4X[28X   <A 90 x 36 mutable matrix over an internal ring>, [128X[104X
+    [4X[28X   <An unevaluated 36 x 0 zero matrix over an internal ring> ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
-  [1X14.2-3 SCMailIsPending[101X
+  [1X14.1-3 SCHomalgHomology[101X
   
-  [29X[2XSCMailIsPending[102X(  ) [32X function
-  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
+  [29X[2XSCHomalgHomology[102X( [3Xcomplex[103X, [3Xmodulus[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Ya list of integers upon success, [9Xfail[109X otherwise.[133X
   
-  [33X[0;0YReturns  [9Xtrue[109X  when  an  email  of the [5Xsimpcomp[105X email notification system is
-  pending, [9Xfalse[109X otherwise.[133X
+  [33X[0;0YThis  function  computes  the ranks of the homology groups of [3Xcomplex[103X with a
+  ring  of  coefficients  as  specified  by [3Xmodulus[103X: a value of [10X0[110X computes the
+  [22XQ[122X-homology, a value of [10X1[110X computes the [22XZ[122X-homology and a value of [10Xq[110X, q a prime
+  or a prime power, computes the [22XF_q[122X-homology ranks.[133X
+  
+  [33X[0;0YNote  that  if  you  are  interested  not  only in the ranks of the homology
+  groups,  but  rather  their  full  structure,  have  a  look at the function
+  [2XSCHomalgHomologyBasis[102X ([14X14.1-4[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCMailIsPending();[128X[104X
-    [4X[28X false[128X[104X
+    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
+    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> SCHomalgHomology(c,0);[128X[104X
+    [4X[28X #I  SCHomalgHomologyOp: Q-homology ranks: [ 1, 0, 22, 0, 1 ][128X[104X
+    [4X[28X [ 1, 0, 22, 0, 1 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
-  [1X14.2-4 SCMailSend[101X
+  [1X14.1-4 SCHomalgHomologyBasis[101X
   
-  [29X[2XSCMailSend[102X( [3Xmessage[103X[, [3Xstarttime[103X][, [3Xforcesend[103X] ) [32X function
-  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X  when  the  message  was sent, [9Xfalse[109X if it was not send, [9Xfail[109X
-            upon an error.[133X
+  [29X[2XSCHomalgHomologyBasis[102X( [3Xcomplex[103X, [3Xmodulus[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Ya [5Xhomalg[105X object upon success, [9Xfail[109X otherwise.[133X
   
-  [33X[0;0YTries to send an email to the address specified by [2XSCMailSetAddress[102X ([14X14.2-6[114X)
-  using  the Unix program [10Xmail[110X. The optional parameter [3Xstarttime[103X specifies the
-  starting  time  (as  the  integer  Unix timestamp) a calculation was started
-  (then  the  duration  of  the  calculation  is  included  in the email), the
-  optional  boolean parameter [3Xforcesend[103X can be used to force the sending of an
-  email,  even  if  this  violates  the  minimal  email  sending interval, see
-  [2XSCMailSetMinInterval[102X ([14X14.2-8[114X).[133X
+  [33X[0;0YThis  function computes the homology groups (including explicit bases of the
+  modules  involved)  of  [3Xcomplex[103X  with a ring of coefficients as specified by
+  [3Xmodulus[103X:  a  value  of  [10X0[110X computes the [22XQ[122X-homology, a value of [10X1[110X computes the
+  [22XZ[122X-homology  and  a  value  of  [10Xq[110X,  q  a prime or a prime power, computes the
+  [22XF_q[122X-homology groups.[133X
+  
+  [33X[0;0YThe    [22Xk[122X-th    homology    group    [10Xhk[110X    can   be   obtained   by   calling
+  [10Xhk:=CertainObject(homology,k);[110X, where [10Xhomology[110X is the [5Xhomalg[105X object returned
+  by   this   function.  The  generators  of  [10Xhk[110X  can  then  be  obtained  via
+  [10XGeneratorsOfModule(hk);[110X.[133X
+  
+  [33X[0;0YNote  that  if  you are only interested in the ranks of the homology groups,
+  then  it is better to use the funtion [2XSCHomalgHomology[102X ([14X14.1-3[114X) which is way
+  faster.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCMailSetAddress("johndoe@somehost"); #enables mail notification[128X[104X
-    [4X[28X true[128X[104X
-    [4X[28X gap> SCMailIsEnabled();[128X[104X
-    [4X[28X true[128X[104X
-    [4X[28X gap> SCMailSend("Hello, this is simpcomp.");[128X[104X
-    [4X[28X WARNING: gnome-keyring:: couldn't connect to: /tmp/keyring-1ChErV/pkcs11: No such file or directory[128X[104X
-    [4X[28X true[128X[104X
+    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
+    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> SCHomalgHomologyBasis(c,0);[128X[104X
+    [4X[28X #I  SCHomalgHomologyBasisOp: constructed Q-homology groups.[128X[104X
+    [4X[28X <A graded homology object consisting of 5 left modules at degrees [ 0 .. 4 ]>[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
-  [1X14.2-5 SCMailSendPending[101X
+  [1X14.1-5 SCHomalgCohomology[101X
   
-  [29X[2XSCMailSendPending[102X(  ) [32X function
-  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
+  [29X[2XSCHomalgCohomology[102X( [3Xcomplex[103X, [3Xmodulus[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Ya list of integers upon success, [9Xfail[109X otherwise.[133X
   
-  [33X[0;0YTries  to  send  a  pending email of the [5Xsimpcomp[105X email notification system.
-  Returns [9Xtrue[109X on success or if there was no mail pending.[133X
+  [33X[0;0YThis  function computes the ranks of the cohomology groups of [3Xcomplex[103X with a
+  ring  of  coefficients  as  specified  by [3Xmodulus[103X: a value of [10X0[110X computes the
+  [22XQ[122X-cohomology,  a  value of [10X1[110X computes the [22XZ[122X-cohomology and a value of [10Xq[110X, q a
+  prime or a prime power, computes the [22XF_q[122X-cohomology ranks.[133X
+  
+  [33X[0;0YNote  that  if  you  are  interested not only in the ranks of the cohomology
+  groups,  but  rather  their  full  structure,  have  a  look at the function
+  [2XSCHomalgCohomologyBasis[102X ([14X14.1-6[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCMailSendPending();[128X[104X
-    [4X[28X true[128X[104X
+    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
+    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> SCHomalgCohomology(c,0);[128X[104X
+    [4X[28X #I  SCHomalgCohomologyOp: Q-cohomology ranks: [ 1, 0, 22, 0, 1 ][128X[104X
+    [4X[28X [ 1, 0, 22, 0, 1 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
-  [1X14.2-6 SCMailSetAddress[101X
+  [1X14.1-6 SCHomalgCohomologyBasis[101X
   
-  [29X[2XSCMailSetAddress[102X( [3Xaddress[103X ) [32X function
-  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
+  [29X[2XSCHomalgCohomologyBasis[102X( [3Xcomplex[103X, [3Xmodulus[103X ) [32X method
+  [6XReturns:[106X  [33X[0;10Ya [5Xhomalg[105X object upon success, [9Xfail[109X otherwise.[133X
   
-  [33X[0;0YSets the email address that should be used to send notification messages and
-  enables   the   mail   notification   system   by  calling  [2XSCMailSetEnabled[102X
-  ([14X14.2-7[114X)([9Xtrue[109X).[133X
+  [33X[0;0YThis  function  computes  the cohomology groups (including explicit bases of
+  the modules involved) of [3Xcomplex[103X with a ring of coefficients as specified by
+  [3Xmodulus[103X:  a  value of [10X0[110X computes the [22XQ[122X-cohomology, a value of [10X1[110X computes the
+  [22XZ[122X-cohomology  and  a  value  of  [10Xq[110X, q a prime or a prime power, computes the
+  [22XF_q[122X-homology groups.[133X
   
-  [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCMailSetAddress("johndoe@somehost");[128X[104X
-    [4X[28X true[128X[104X
-    [4X[28X [128X[104X
-  [4X[32X[104X
+  [33X[0;0YThe    [22Xk[122X-th    cohomology    group   [10Xck[110X   can   be   obtained   by   calling
+  [10Xck:=CertainObject(cohomology,k);[110X,  where  [10Xcohomology[110X  is  the  [5Xhomalg[105X object
+  returned  by  this  function.  The generators of [10Xck[110X can then be obtained via
+  [10XGeneratorsOfModule(ck);[110X.[133X
   
-  [1X14.2-7 SCMailSetEnabled[101X
-  
-  [29X[2XSCMailSetEnabled[102X( [3Xflag[103X ) [32X function
-  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
-  
-  [33X[0;0YEnables  or disables the mail notification system of [5Xsimpcomp[105X. By default it
-  is  disabled.  Returns  [9Xfail[109X  if  no  email  message was previously set with
-  [2XSCMailSetAddress[102X ([14X14.2-6[114X).[133X
+  [33X[0;0YNote  that if you are only interested in the ranks of the cohomology groups,
+  then  it  is  better to use the funtion [2XSCHomalgCohomology[102X ([14X14.1-5[114X) which is
+  way faster.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCMailSetAddress("johndoe@somehost"); #enables mail notification[128X[104X
-    [4X[28X true[128X[104X
-    [4X[28X gap> SCMailSetEnabled(false);[128X[104X
-    [4X[28X true[128X[104X
+    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
+    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> SCHomalgCohomologyBasis(c,0);[128X[104X
+    [4X[28X #I  SCHomalgCohomologyBasisOp: constructed Q-cohomology groups.[128X[104X
+    [4X[28X <A graded cohomology object consisting of 5 left modules at degrees [128X[104X
+    [4X[28X [ 1 .. 5 ]>[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
-  
-  [1X14.2-8 SCMailSetMinInterval[101X
-  
-  [29X[2XSCMailSetMinInterval[102X( [3Xinterval[103X ) [32X function
-  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
-  
-  [33X[0;0YSets  the minimal time interval in seconds that mail messages can be sent by
-  [5Xsimpcomp[105X.  This  prevents  a  flooding  of  the specified email address with
-  messages sent by [5Xsimpcomp[105X. Default is 3600, i.e. one hour.[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCMailSetMinInterval(7200);[128X[104X
-    [4X[28X true[128X[104X
-    [4X[28X [128X[104X
-  [4X[32X[104X
-  
-  
-  [1X14.3 [33X[0;0YTesting the functionality of [5Xsimpcomp[105X[101X[1X[133X[101X
-  
-  [33X[0;0Y[5Xsimpcomp[105X  makes  use of the [5XGAP[105X internal testing mechanisms and provides the
-  user with a function to test the functionality of the package.[133X
-  
-  [1X14.3-1 SCRunTest[101X
-  
-  [29X[2XSCRunTest[102X(  ) [32X function
-  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
-  
-  [33X[0;0YTest    whether    the   package   [5Xsimpcomp[105X   is   functional   by   calling
-  [10XReadTest("GAPROOT/pkg/simpcomp/tst/simpcomp.tst");[110X.  The  returned  value of
-  GAP4stones  is  a measure of your system performance and differs from system
-  to system.[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCRunTest();[128X[104X
-    [4X[28X Line 1075 : [128X[104X
-    [4X[28X + simpcomp package test[128X[104X
-    [4X[28X Line 1076 : [128X[104X
-    [4X[28X + GAP4stones: 99314[128X[104X
-    [4X[28X true[128X[104X
-    [4X[28X [128X[104X
-  [4X[32X[104X
-  
-  [33X[0;0YOn  a  modern computer, the function [10XSCRunTest[110X should take about a minute to
-  complete   when  the  packages  [5XGRAPE[105X  [Soi06]  and  [5Xhomology[105X  [DHSW04]  are
-  available.  If  these  packages  are missing, the testing will take slightly
-  longer.[133X
   

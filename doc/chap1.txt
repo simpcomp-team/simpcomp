@@ -4,7 +4,7 @@
   [33X[0;0Y[5Xsimpcomp[105X  is  a  [5XGAP[105X  package  that  provides  the user with functions to do
   calculations  and  constructions with simplicial complexes in the context of
   combinatorial  topology (see abstract). If possible, it makes use of the [5XGAP[105X
-  packages  [5Xhomology[105X  [DHSW04]  by  J.-G. Dumas et al. and [5XGRAPE[105X [Soi06] by L.
+  packages  [5Xhomology[105X  [DHSW11]  by  J.-G. Dumas et al. and [5XGRAPE[105X [Soi12] by L.
   Soicher.[133X
   
   [33X[0;0YMost parts of this manual can be accessed directly from within [5XGAP[105X using its
@@ -33,7 +33,7 @@
   
   [33X[0;0YAs  of  Version  1.4.0,  [5Xsimpcomp[105X  provides  the  possibility  to  perform a
   combinatorial  version  of  algebraic blowups, so-called simplicial blowups,
-  for  combinatorial  [22X4[122X-manfolds  as  described  in  [SK11]  and [Spr10a]. The
+  for  combinatorial  [22X4[122X-manfolds  as  described  in  [SK11]  and [Spr11a]. The
   implementation  can  be  used  as  well to resolve isolated singularities of
   combinatorial  [22X4[122X-pseudomanifolds. It seems that this feature, too, is unique
   to [5Xsimpcomp[105X.[133X
@@ -46,7 +46,7 @@
   [1X1.2 [33X[0;0Y[5Xsimpcomp[105X[101X[1X benefits[133X[101X
   
   [33X[0;0YThe  origin  of  [5Xsimpcomp[105X  is  a  collection  of  scripts of the two authors
-  [Eff11a],  [Spr10a]  that  provide  basic  and  often-needed  functions  and
+  [Eff11a],  [Spr11a]  that  provide  basic  and  often-needed  functions  and
   operations  for  working with simplicial complexes. Apart from some optional
   code  dealing  with  bistellar  moves  (see  Section  [14X9[114X  and  in  particular
   [2XSCReduceComplexFast[102X  ([14X9.2-15[114X)),  it is written entirely in the [5XGAP[105X scripting
@@ -67,7 +67,7 @@
   [33X[0;0Y[5Xsimpcomp[105X  provides  the  user with functions to save and load the simplicial
   complexes  to  and  from files and to import and export a complex in various
   formats  (e.g. from and to [5Xpolymake/TOPAZ[105X [GJ00], [5XSnapPea[105X [Wee99] and [5XRegina[105X
-  [BABRBWP12] (via the [5XSnapPea[105X file format), [5XMacaulay2[105X [GS09], LaTeX, etc.).[133X
+  [BBPo13] (via the [5XSnapPea[105X file format), [5XMacaulay2[105X [GS], LaTeX, etc.).[133X
   
   [33X[0;0YIn  contrast  to  the  software  package  [5Xpolymake[105X [GJ00] providing the most
   efficient algorithms for each task in form of a heterogeneous package (where
@@ -76,7 +76,7 @@
   scripting language), but rather ease of use and ease of extensibility by the
   user   in   the  [5XGAP[105X  language  with  all  its  mathematical  and  algebraic
   capabilities.  Extending  [5Xsimpcomp[105X  is  possible  directly  from within [5XGAP[105X,
-  without having to compile anything, see Chapter [14X17[114X.[133X
+  without having to compile anything, see Chapter [14X18[114X.[133X
   
   
   [1X1.3 [33X[0;0YHow to save time reading this document[133X[101X
@@ -87,7 +87,7 @@
   can  be  created,  accessed and modified. The reader is therefore advised to
   first skim over the Chapters [14X3[114X and [14X5[114X.[133X
   
-  [33X[0;0YThe impatient reader may then directly skip to Chapter [14X16[114X to see [5Xsimpcomp[105X in
+  [33X[0;0YThe impatient reader may then directly skip to Chapter [14X17[114X to see [5Xsimpcomp[105X in
   action.[133X
   
   [33X[0;0YThe  next  advised  step  is  to  have  a look at the functions for creating
@@ -97,7 +97,7 @@
   except   for  the  functions  related  to  (co-)homology,  bistellar  flips,
   simplicial  blowups,  polyhedral  Morse  theory,  slicings  (discrete normal
   surfaces)  and  the  simplicial  complex  library  that are described in the
-  Chapters   [14X8[114X  to  [14X12[114X.  Functions  for  the  more  general  [5XGAP[105X  object  type
+  Chapters   [14X8[114X  to  [14X13[114X.  Functions  for  the  more  general  [5XGAP[105X  object  type
   [10XSCPolyhedralComplex[110X are described in Chapter [14X4[114X .[133X
   
   
@@ -134,24 +134,24 @@
   
   [30X    [33X[0;6YIn Chapter [14X11[114X polyhedral Morse theory is discussed.[133X
   
-  [30X    [33X[0;6YIn  Chapter  [14X12[114X  the  simplicial  complex library and the input output
+  [30X    [33X[0;6YIn  Chapter  [14X13[114X  the  simplicial  complex library and the input output
         functionality that [5Xsimpcomp[105X provides is described in detail.[133X
   
-  [30X    [33X[0;6YChapter [14X14[114X contains descriptions of functions not fitting in the other
+  [30X    [33X[0;6YChapter [14X15[114X contains descriptions of functions not fitting in the other
         chapters, such as the error handling and the email notification system
         of [5Xsimpcomp[105X.[133X
   
-  [30X    [33X[0;6YChapter [14X15[114X contains a list of all property handlers allowing to access
+  [30X    [33X[0;6YChapter [14X16[114X contains a list of all property handlers allowing to access
         properties  of  a [10XSCSimplicialComplex[110X object, a [10XSCNormalSurface[110X object
         or  a  [10XSCLibRepository[110X  object  via  the  dot  operator (pseudo object
         orientation).[133X
   
-  [30X    [33X[0;6YChapter  [14X16[114X  contains  the  transcript of a demo session with [5Xsimpcomp[105X
+  [30X    [33X[0;6YChapter  [14X17[114X  contains  the  transcript of a demo session with [5Xsimpcomp[105X
         showing  some  of  the  constructions and calculations with simplicial
         complexes that can also be used as a first overview of things possible
         with this package.[133X
   
-  [30X    [33X[0;6YFinally,  Chapter  [14X17[114X  focuses  on  the  description  of  the internal
+  [30X    [33X[0;6YFinally,  Chapter  [14X18[114X  focuses  on  the  description  of  the internal
         structure  of  [5Xsimpcomp[105X  and  deals  with  aspects  of  extending  the
         functionality of the package.[133X
   
@@ -164,17 +164,17 @@
   computations and verifies that the results are correct.[133X
   
   [33X[0;0YTo  test  the  functionality  of [5Xsimpcomp[105X you can run the function [2XSCRunTest[102X
-  ([14X14.3-1[114X) from the [5XGAP[105X console:[133X
+  ([14X15.3-1[114X) from the [5XGAP[105X console:[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XSCRunTest();[127X[104X
-    [4X[28X+ test simpcomp package, Version 2.0.0[128X[104X
+    [4X[28X+ test simpcomp package, Version 2.1.2[128X[104X
     [4X[28X+ GAP4stones: 69988[128X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27X[127X[104X
   [4X[32X[104X
   
-  [33X[0;0Y[2XSCRunTest[102X  ([14X14.3-1[114X)  should return [9Xtrue[109X, otherwise the correct functionality
+  [33X[0;0Y[2XSCRunTest[102X  ([14X15.3-1[114X)  should return [9Xtrue[109X, otherwise the correct functionality
   of simpcomp cannot be guaranteed.[133X
   
   
@@ -182,7 +182,7 @@
   
   [33X[0;0YNote  that  the  verbosity of the output of information to the screen during
   calls  to functions of the package [5Xsimpcomp[105X can be controlled by setting the
-  info level parameter via the function [2XSCInfoLevel[102X ([14X14.1-1[114X).[133X
+  info level parameter via the function [2XSCInfoLevel[102X ([14X15.1-1[114X).[133X
   
   
   [1X1.7 [33X[0;0YHow to cite [5Xsimpcomp[105X[101X[1X[133X[101X
@@ -194,9 +194,9 @@
   @manual{simpcomp,
   	author = "Felix Effenberger and Jonathan Spreer",
   	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
-  	          {V}ersion 2.0.0",
-  	year   = "2013",
-  	url    = "\url{http://code.google.com/p/simpcomp}",
+  	          {V}ersion 2.1.2",
+  	year   = "2015",
+  	url    = "\url{https://github.com/simpcomp-team/simpcomp/}",
   }
   
   [33X[0;0YIf  you  are  not  using  BibTeX, you can use the following entry inside the
@@ -205,7 +205,7 @@
   \bibitem{simpcomp}
   F.~Effenberger and J.~Spreer,
   \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
-  Version 2.0.0, 
-  2013,
-  \url{http://code.google.com/p/simpcomp}.
+  Version 2.1.2, 
+  2015,
+  \url{https://github.com/simpcomp-team/simpcomp/}.
   

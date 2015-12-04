@@ -176,7 +176,7 @@
   
   [33X[0;0YIn  the  field  of  PL-topology  Kühnel  developed  what  one  might  call a
   polyhedral  Morse  theory (compare [K{\95], not to be confused with Forman's
-  discrete Morse theory for cell complexes [For95]):[133X
+  discrete Morse theory for cell complexes which is decribed in Section [14X2.6[114X):[133X
   [33X[0;0YLet  [22XM[122X  be a combinatorial [22Xd[122X-manifold. A function [22Xf:M -> R[122X is called [13Xregular
   simplexwise  linear (rsl)[113X if [22Xf(v) ≠ f(w)[122X for any two vertices [22Xw ≠ v[122X and if [22Xf[122X
   is linear when restricted to an arbitrary simplex of the triangulation.[133X
@@ -219,7 +219,14 @@
   [SK11].[133X
   
   
-  [1X2.6 [33X[0;0YTightness and tight triangulations[133X[101X
+  [1X2.6 [33X[0;0YDiscrete Morse theory[133X[101X
+  
+  [33X[0;0YFor  an introduction into Forman's discrete Morse theory see [For95], not to
+  be  confused with Banchoff and Kühnel's theory of regular simplexwise linear
+  functions which is described in Section [14X2.5[114X).[133X
+  
+  
+  [1X2.7 [33X[0;0YTightness and tight triangulations[133X[101X
   
   [33X[0;0YTightness is a notion developed in the field of differential geometry as the
   equality  of the (normalized) [13Xtotal absolute curvature[113X of a submanifold with
@@ -283,7 +290,7 @@
   circle due to Kühnel [K{\95], [K{\86].[133X
   
   
-  [1X2.7 [33X[0;0YSimplicial blowups[133X[101X
+  [1X2.8 [33X[0;0YSimplicial blowups[133X[101X
   
   [33X[0;0YThe  [13Xblowing up process[113X or [13XHopf [22Xσ[122X-process[113X can be described as the resolution
   of  nodes or ordinary double points of a complex algebraic variety. This was

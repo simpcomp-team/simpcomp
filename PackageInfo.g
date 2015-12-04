@@ -12,14 +12,14 @@ SetPackageInfo( rec(
 
 PackageName := "simpcomp",
 Subtitle := "A GAP toolbox for simplicial complexes",
-Version := "%%%VERSION%%%",
-Date := "%%%DATE%%%",
+Version := "2.1.2",
+Date := "03/12/2015",
 
-PackageWWWHome := "https://simpcomp.googlecode.com/git/web/",
+PackageWWWHome := "http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/",
 README_URL := Concatenation( ~.PackageWWWHome, "README" ),
 PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
 
-ArchiveURL :=Concatenation( "http://simpcomp.googlecode.com/files/simpcomp-",String(~.Version)),
+ArchiveURL :=Concatenation( [ "http://github.com/simpcomp-team/simpcomp/releases/download/v", String(~.Version), "/simpcomp-", String(~.Version) ]),
 ArchiveFormats := ".tar.gz",
 
 Persons := [
@@ -105,7 +105,7 @@ Autoload := false,
 ##  If the default banner does not suffice then provide a string that is
 ##  printed when the package is loaded (not when it is autoloaded or if
 ##  command line options `-b' or `-q' are given).
-BannerString :=Concatenation("Loading simpcomp ",String(~.Version),"\nby F. Effenberger and J. Spreer\nhttps://code.google.com/p/simpcomp/\n"),
+BannerString :=Concatenation("Loading simpcomp ",String(~.Version),"\nby F. Effenberger and J. Spreer\nhttp://code.google.com/p/simpcomp/\n"),
 
 AvailabilityTest := 
 function()

@@ -525,11 +525,12 @@ SCIntFunc.MakeDoc:=function(arg)
 	
 	local path, ext, f, main, files, b, bookname,basenames, cp;
 	
-	basenames:=["class3mflds", "propobject", "bistellar", "complex", "generate", "glprops", "io", "labelops", "lib", "operations", "tools", "homology", "morse", "normalsurface", "prophandler", "fromgroup", "blowups", "pkghomalg", "highlySymmetricSurfaces", "isosig" 
+	basenames:=["class3mflds", "propobject", "bistellar", "complex", "generate", 
+    "glprops", "io", "labelops", "lib", "operations", "tools", "homology", 
+    "morse", "normalsurface", "prophandler", "fromgroup", "blowups", 
+    "pkghomalg", "highlySymmetricSurfaces", "isosig", "DMT"
 	];
 	
-	
-		
 	cp:="gapdoc/";
 		
 	if Length(arg) = 1 and IsBool(arg[1]) and arg[1]=true then

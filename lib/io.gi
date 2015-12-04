@@ -13,7 +13,8 @@ SCIntFunc.ListToDenseString:=function(item)
 	if(IsStringRep(item)) then
 		return Concatenation(["\"",item,"\""]);
 	elif(IsList(item) and not IsStringRep(item)) then
-		return Concatenation("[",JoinStringsWithSeparator(List(item,SCIntFunc.ListToDenseString),","),"]");
+		return Concatenation("[",
+      JoinStringsWithSeparator(List(item,SCIntFunc.ListToDenseString),","),"]");
 	else
 		return String(item);
 	fi;
@@ -26,7 +27,8 @@ end;
 SCIntFunc.parseDelim:=',';
 SCIntFunc.parseOpenstruct:='[';
 SCIntFunc.parseClosestruct:=']';
-SCIntFunc.parseArray:=['0','1','2','3','4','5','6','7','8','9',' ',',','[',']','\'','\"'];
+SCIntFunc.parseArray:=['0','1','2','3','4','5','6','7','8','9',' ',',',
+  '[',']','\'','\"'];
 SCIntFunc.parseChar:='\'';
 SCIntFunc.parseString:='\"';
 SCIntFunc.parseEscape:='\\';
@@ -35,7 +37,8 @@ SCIntFunc.parseEscape:='\\';
 SCIntFunc.ReadInteger:=
 function(string)
 	if IsEmptyString(string) or not ForAll(string,x->IsDigitChar(x) or x='-') then
-		Info(InfoSimpcomp,1,"SCIntFunc.ReadInteger: error reading from string \"",string,"\".");
+		Info(InfoSimpcomp,1,"SCIntFunc.ReadInteger: error reading from string \"",
+      string,"\".");
 		return fail;
 	else
 		return Int(string);
@@ -53,7 +56,8 @@ function(string)
 			return true;
 		fi;
 	fi;
-	Info(InfoSimpcomp,1,"SCIntFunc.ReadBoolean: error reading from string \"",string,"\".");
+	Info(InfoSimpcomp,1,"SCIntFunc.ReadBoolean: error reading from string \"",
+    string,"\".");
 	return fail;
 end;
 
@@ -92,7 +96,8 @@ function(string)
 		od;
 
 		if(int=[] or (p=Length(arr) and not arr[Length(arr)]=']')) then
-			Info(InfoSimpcomp,1,"ReadArrayInteger: error reading from string \"",arr,"\" at position ",pos,".");
+			Info(InfoSimpcomp,1,"ReadArrayInteger: error reading from string \"",
+        arr,"\" at position ",pos,".");
 			return [fail,pos];
 		else
 			return [Int(int),p];
@@ -121,7 +126,8 @@ function(string)
 			fi;
 		od;
 
-		Info(InfoSimpcomp,1,"ReadArrayString: error reading from string \"",arr,"\" at position ",pos,".");
+		Info(InfoSimpcomp,1,"ReadArrayString: error reading from string \"",
+      arr,"\" at position ",pos,".");
 		return [fail,pos];
 	end;
 
@@ -154,7 +160,8 @@ function(string)
 				p:=p+2;
 				continue;
 			else
-				Info(InfoSimpcomp,1,"ReadArrayArray: unknown type in string \"",arr,"\" at position ",pos,".");
+				Info(InfoSimpcomp,1,"ReadArrayArray: unknown type in string \"",
+          arr,"\" at position ",pos,".");
 				ret:=fail;
 			fi;
 
@@ -194,7 +201,8 @@ function(string)
 		fi;
 	od;
 
-	Info(InfoSimpcomp,1,"SCIntFunc.ReadArray: no starting sequence found in string \"",string,"\".");
+	Info(InfoSimpcomp,1,"SCIntFunc.ReadArray: no starting sequence found ",
+    "in string \"",string,"\".");
 	return fail;
 end;
 
@@ -249,7 +257,8 @@ function(g)
 	if(HasName(g) and Name(g)<>"") then
 		return String([Name(g),List(GeneratorsOfGroup(g),x->ListPerm(x))]);
 	else
-		return String([StructureDescription(g),List(GeneratorsOfGroup(g),x->ListPerm(x))]);
+		return String([StructureDescription(g),
+      List(GeneratorsOfGroup(g),x->ListPerm(x))]);
 	fi;
 end;
 
@@ -257,8 +266,10 @@ end;
 
 
 
-#position object (gets splitted into elements when serialized to xml, as opposed to list)
-SCPositionalObjectFamily:=NewFamily("SCPositionalObjectFamily",SCIsPositionalObject and IsPositionalObjectRep and IsMutable);
+#position object (gets splitted into elements when serialized to xml, 
+#as opposed to list)
+SCPositionalObjectFamily:=NewFamily("SCPositionalObjectFamily",
+  SCIsPositionalObject and IsPositionalObjectRep and IsMutable);
 SCPositionalObjectType:=NewType(SCPositionalObjectFamily,SCIsPositionalObject);
 
 #create positional object from list
@@ -336,15 +347,19 @@ function(object,name,ident)
 
 			if(SCIntFunc.SCXMLIOHandlers.(type)[4]=true) then
 				#atomic type
-				return Concatenation([prefix,"<",String(name)," type=\"",type,"\">",SCIntFunc.SCXMLIOHandlers.(type)[2](object),"</",name,">\n"]);
+				return Concatenation([prefix,"<",String(name)," type=\"",type,"\">",
+          SCIntFunc.SCXMLIOHandlers.(type)[2](object),"</",name,">\n"]);
 			else
 				#compound type
-				return Concatenation([prefix,"<",String(name)," type=\"",type,"\">\n",SCIntFunc.SCXMLIOHandlers.(type)[2](object,ident),prefix,"</",name,">\n"]);
+				return Concatenation([prefix,"<",String(name)," type=\"",type,"\">\n",
+          SCIntFunc.SCXMLIOHandlers.(type)[2](object,ident),prefix,"</",name,
+          ">\n"]);
 			fi;
 		fi;
 	od;
 
-	Info(InfoSimpcomp,3,"SCIntFunc.SCObjectToXML: ignoring property ",name," -- unknown type.");
+	Info(InfoSimpcomp,3,"SCIntFunc.SCObjectToXML: ignoring property ",name,
+    " -- unknown type.");
 	return "";
 end;
 
@@ -354,7 +369,8 @@ SCIntFunc.SCXMLElementHandler:=
 function(target,pos,root)
 	local type,content,c,value,data,lpos;
 
-	if(root.name="PCDATA" or root.name="XMLPI" or root.name="XMLCOMMENT" or root.name="Ignore") then
+	if(root.name="PCDATA" or root.name="XMLPI" or 
+      root.name="XMLCOMMENT" or root.name="Ignore") then
 		#ignore processing instructions & comments
 		return 0;
 	fi;
@@ -374,7 +390,8 @@ function(target,pos,root)
 
 
 	if(not type in RecNames(SCIntFunc.SCXMLIOHandlers)) then
-		Info(InfoSimpcomp,3,"SCIntFunc.SCXMLElementHandler: warning, ignoring unknown type \"",type,"\".");
+		Info(InfoSimpcomp,3,"SCIntFunc.SCXMLElementHandler: warning, ignoring ",
+      "unknown type \"",type,"\".");
 		return 0;
 	fi;
 
@@ -390,7 +407,8 @@ function(target,pos,root)
 		od;
 
 		if(content=fail) then
-			Info(InfoSimpcomp,1,"SCIntFunc.SCXMLElementHandler: getting content of xml node ",root," failed.");
+			Info(InfoSimpcomp,1,"SCIntFunc.SCXMLElementHandler: getting content of ",
+        "xml node ",root," failed.");
 			return -1;
 		fi;
 
@@ -401,7 +419,8 @@ function(target,pos,root)
 	fi;
 
 	if(value=fail) then
-		Info(InfoSimpcomp,1,"SCIntFunc.SCXMLElementHandler: I/O handler for property ",root.name," failed.");
+		Info(InfoSimpcomp,1,"SCIntFunc.SCXMLElementHandler: I/O handler ",
+      "for property ",root.name," failed.");
 		return -1;
 	fi;
 
@@ -410,7 +429,8 @@ function(target,pos,root)
 	elif(IsList(target)) then
 		target[pos]:=value;
 	else
-		Info(InfoSimpcomp,1,"SCIntFunc.SCXMLElementHandler: target object neither of Record nor of List type. target=",target,".");
+		Info(InfoSimpcomp,1,"SCIntFunc.SCXMLElementHandler: target object ",
+      "neither of Record nor of List type. target=",target,".");
 		return -1;
 	fi;
 	
@@ -427,7 +447,8 @@ function(xml)
 	fi;
 	tree:=ParseTreeXMLString(xml);
 	if(tree=fail) then
-		Info(InfoSimpcomp,1,"SCIntFunc.SCXMLToObject: parsing xml input string failed.");
+		Info(InfoSimpcomp,1,"SCIntFunc.SCXMLToObject: parsing xml ",
+      "input string failed.");
 		return fail;
 	fi;
 	if tree.name="WHOLEDOCUMENT" then
@@ -454,7 +475,8 @@ function(object,ident)
 	local key,subitems;
 	
 	if(not IsRecord(object)) then
-		Info(InfoSimpcomp,1,"SCIntFunc.RecordToXML: first argument must be of type Record.");
+		Info(InfoSimpcomp,1,"SCIntFunc.RecordToXML: first argument must be ",
+      "of type Record.");
 		return "";
 	fi;
 	
@@ -485,7 +507,8 @@ function(object,ident)
 	subitems:="";
 
 	if(not SCIsPositionalObject(object)) then
-		Info(InfoSimpcomp,1,"SCIntFunc.PositionalObjectToXML: first argument must be of type SCPositionalObject.");
+		Info(InfoSimpcomp,1,"SCIntFunc.PositionalObjectToXML: first argument ",
+      "must be of type SCPositionalObject.");
 		return "";
 	fi;
 	
@@ -493,7 +516,8 @@ function(object,ident)
 	prefix:=Concatenation(ListWithIdenticalEntries(ident,"\t"));
 	for key in [1..Length(object)] do
 		if(not IsBound(object[key])) then
-			Append(subitems,Concatenation(prefix,"\t<Entry type=\"SCEmpty\"></Entry>\n"));
+			Append(subitems,Concatenation(prefix,
+        "\t<Entry type=\"SCEmpty\"></Entry>\n"));
 		else
 			Append(subitems,SCIntFunc.SCObjectToXML(object[key],"Entry",ident+1));
 		fi;
@@ -525,15 +549,18 @@ function(object,ident)
 	subitems:="";
 
 	if(not IsFpGroup(object)) then
-		Info(InfoSimpcomp,1,"SCIntFunc.FpGroupToXML: first argument must be of type FpGroup.");
+		Info(InfoSimpcomp,1,"SCIntFunc.FpGroupToXML: first argument must be ",
+      "of type FpGroup.");
 		return "";
 	fi;
 	
 	
 	prefix:=Concatenation(ListWithIdenticalEntries(ident,"\t"));
 	
-	Append(subitems,Concatenation(prefix,"\t<Generators type=\"SCArray\">",String(List(GeneratorsOfGroup(object),String)),"</Generators>\n"));
-	Append(subitems,Concatenation(prefix,"\t<Relators type=\"SCArray\">",String(List(RelatorsOfFpGroup(object),String)),"</Relators>\n"));
+	Append(subitems,Concatenation(prefix,"\t<Generators type=\"SCArray\">",
+    String(List(GeneratorsOfGroup(object),String)),"</Generators>\n"));
+	Append(subitems,Concatenation(prefix,"\t<Relators type=\"SCArray\">",
+    String(List(RelatorsOfFpGroup(object),String)),"</Relators>\n"));
 	
 	#return subitems;
 	return "";
@@ -562,7 +589,8 @@ function(object,ident)
 	subitems:="";
 	
 	if(not SCIsSimplicialComplex(object)) then
-		Info(InfoSimpcomp,1,"SCIsSimplicialComplex: first argument must be of type SCSimplicialComplex.");
+		Info(InfoSimpcomp,1,"SCIsSimplicialComplex: first argument must be of ",
+      "type SCSimplicialComplex.");
 		return "";
 	fi;
 	
@@ -571,7 +599,8 @@ function(object,ident)
 	
 	#legacy format v1
 	#for key in SCPropertiesNames(object) do
-	#	Append(subitems,SCIntFunc.SCObjectToXML(SCPropertyByName(object,key),key,ident+1));
+	#	Append(subitems,SCIntFunc.SCObjectToXML(SCPropertyByName(object,key),
+  # key,ident+1));
 	#od;
 	
 	#new format v2
@@ -615,7 +644,8 @@ function(root)
 			fkey:=EvalString(key);
 		fi;
 		if(Setter(fkey)=false or Setter(fkey)=fail) then
-			Info(InfoSimpcomp,2,"SCIntFunc.SCSimplicialComplexFromXMLv1: legacy format, skipped loading attribute '",key,"'");
+			Info(InfoSimpcomp,2,"SCIntFunc.SCSimplicialComplexFromXMLv1: legacy ",
+        "format, skipped loading attribute '",key,"'");
 			continue;
 		fi;
 		Setter(fkey)(sc,props.(key));
@@ -649,7 +679,8 @@ function(object,ident)
 	subitems:="";
 
 	if(not SCIsLibRepository(object)) then
-		Info(InfoSimpcomp,1,"SCIntFunc.SCLibraryRepositoryToXML: first argument must be of type SCLibRepository.");
+		Info(InfoSimpcomp,1,"SCIntFunc.SCLibraryRepositoryToXML: first argument ",
+      "must be of type SCLibRepository.");
 		return "";
 	fi;
 
@@ -657,7 +688,8 @@ function(object,ident)
 	subitems:="";
 	for key in SCPropertiesNames(object) do
 		if(key="Loaded") then continue; fi;
-		Append(subitems,SCIntFunc.SCObjectToXML(SCPropertyByName(object,key),key,ident+1));
+		Append(subitems,SCIntFunc.SCObjectToXML(SCPropertyByName(object,key),
+      key,ident+1));
 	od;
 	return subitems;
 end;
@@ -683,9 +715,13 @@ end;
 ##<#GAPDoc Label="SCLoad">
 ## <ManSection>
 ## <Func Name="SCLoad" Arg="filename"/>
-## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon 
+## success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Loads a simplicial complex stored in a binary format (using <C>IO_Pickle</C>) from a file specified in <Arg>filename</Arg> (as string). If <Arg>filename</Arg> does not end in <C>.scb</C>, this suffix is appended to the file name.
+## Loads a simplicial complex stored in a binary format (using 
+## <C>IO_Pickle</C>) from a file specified in <Arg>filename</Arg> (as string). 
+## If <Arg>filename</Arg> does not end in <C>.scb</C>, this suffix is 
+## appended to the file name.
 ## <Example>
 ## gap> c:=SCBdSimplex(3);;
 ## gap> SCSave(c,"/tmp/bddelta3");
@@ -725,13 +761,16 @@ InstallGlobalFunction(SCLoad,
 	fi;
 
 	#try to detect format (xml,binary) by extension
-	if(Length(filename)>2 and filename{[Length(filename)-2..Length(filename)]}=".sc") then
-		Info(InfoSimpcomp,2,"SCLoad: assuming XML format for file '",filename,"', falling back to SCLoadXML.");
+	if(Length(filename)>2 and 
+    filename{[Length(filename)-2..Length(filename)]}=".sc") then
+		Info(InfoSimpcomp,2,"SCLoad: assuming XML format for file '",
+      filename,"', falling back to SCLoadXML.");
 		return SCLoadXML(filename);
 	fi;
 	
 	lf:=ShallowCopy(filename);
-	if(Length(filename)<4 or filename{[Length(filename)-3..Length(filename)]}<>".scb") then
+	if(Length(filename)<4 or 
+    filename{[Length(filename)-3..Length(filename)]}<>".scb") then
 		Append(lf,".scb");
 	fi;
 	
@@ -748,7 +787,8 @@ InstallGlobalFunction(SCLoad,
 	IO_Close(fh);
 
 	if(c=IO_Error) then
-		Info(InfoSimpcomp,1,"SCLoad: Error loading simplicial complex from file '",lf,"'.");
+		Info(InfoSimpcomp,1,"SCLoad: Error loading simplicial complex from file '",
+      lf,"'.");
 		return fail;
 	else
 		return c;
@@ -761,9 +801,12 @@ end);
 ##<#GAPDoc Label="SCLoadXML">
 ## <ManSection>
 ## <Func Name="SCLoadXML" Arg="filename"/>
-## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon 
+## success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Loads a simplicial complex stored in XML format from a file specified in <Arg>filename</Arg> (as string). If <Arg>filename</Arg> does not end in <C>.sc</C>, this suffix is appended to the file name.
+## Loads a simplicial complex stored in XML format from a file specified in 
+## <Arg>filename</Arg> (as string). If <Arg>filename</Arg> does not end in 
+## <C>.sc</C>, this suffix is appended to the file name.
 ## <Example>
 ## gap> c:=SCBdSimplex(3);;
 ## gap> SCSaveXML(c,"/tmp/bddelta3");
@@ -803,7 +846,8 @@ InstallGlobalFunction(SCLoadXML,
 	fi;
 	
 	lf:=ShallowCopy(filename);
-	if(Length(filename)<3 or filename{[Length(filename)-2..Length(filename)]}<>".sc") then
+	if(Length(filename)<3 or 
+    filename{[Length(filename)-2..Length(filename)]}<>".sc") then
 		Append(lf,".sc");
 	fi;
 
@@ -831,7 +875,9 @@ end);
 ## <Func Name="SCSave" Arg="complex, filename"/>
 ## <Returns><K>true</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Saves a simplicial complex in a binary format (using <C>IO_Pickle</C>) to a file specified in <Arg>filename</Arg> (as string). If <Arg>filename</Arg> does not end in <C>.scb</C>, this suffix is appended to the file name.
+## Saves a simplicial complex in a binary format (using <C>IO_Pickle</C>) to 
+## a file specified in <Arg>filename</Arg> (as string). If <Arg>filename</Arg> 
+## does not end in <C>.scb</C>, this suffix is appended to the file name.
 ## <Example>
 ## gap> c:=SCBdSimplex(3);;
 ## gap> SCSave(c,"/tmp/bddelta3");
@@ -847,12 +893,14 @@ InstallGlobalFunction(SCSave,
 	local fh,lf;
 
 	if(not SCIsSimplicialComplex(complex) or not IsString(filename)) then
-		Info(InfoSimpcomp,1,"SCSave: first argument must be of type SCSimplicialComplex, second of type String.");
+		Info(InfoSimpcomp,1,"SCSave: first argument must be of type ",
+      "SCSimplicialComplex, second of type String.");
 		return fail;
 	fi;
 
 	lf:=ShallowCopy(filename);
-	if(Length(filename)>2 and filename{[Length(filename)-2..Length(filename)]}=".sc") then
+	if(Length(filename)>2 and 
+    filename{[Length(filename)-2..Length(filename)]}=".sc") then
 		Append(lf,"b");
 	fi;
 
@@ -870,7 +918,8 @@ InstallGlobalFunction(SCSave,
 
 	#pickle
 	if(IO_Pickle(fh,complex)<>IO_OK) then
-		Info(InfoSimpcomp,1,"SCSave: Error saving simplicial complex to file '",lf,"'.");
+		Info(InfoSimpcomp,1,"SCSave: Error saving simplicial complex to file '",
+      lf,"'.");
 		IO_Close(fh);
 		return fail;
 	else
@@ -886,7 +935,9 @@ end);
 ## <Func Name="SCSaveXML" Arg="complex, filename"/>
 ## <Returns><K>true</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Saves a simplicial complex <Arg>complex</Arg> to a file specified by <Arg>filename</Arg> (as string) in XML format. If <Arg>filename</Arg> does not end in <C>.sc</C>, this suffix is appended to the file name.
+## Saves a simplicial complex <Arg>complex</Arg> to a file specified by 
+## <Arg>filename</Arg> (as string) in XML format. If <Arg>filename</Arg> does 
+## not end in <C>.sc</C>, this suffix is appended to the file name.
 ## <Example>
 ## gap> c:=SCBdSimplex(3);;
 ## gap> SCSaveXML(c,"/tmp/bddelta3");
@@ -902,13 +953,15 @@ InstallGlobalFunction(SCSaveXML,
 	local buf,lf;
 	
 	if(not SCIsSimplicialComplex(complex) or not IsString(filename)) then
-		Info(InfoSimpcomp,1,"SCSaveXML: first argument must be of type SCSimplicialComplex, second of type String.");
+		Info(InfoSimpcomp,1,"SCSaveXML: first argument must be of type ",
+      "SCSimplicialComplex, second of type String.");
 		return fail;
 	fi;
 	
 	lf:=ShallowCopy(filename);
 
-	if(Length(filename)>3 and filename{[Length(filename)-3..Length(filename)]}=".scb") then
+	if(Length(filename)>3 and 
+    filename{[Length(filename)-3..Length(filename)]}=".scb") then
 		lf:=lf{[1..Length(lf)-1]};
 	fi;
 
@@ -935,7 +988,8 @@ function(sc,attrs)
 	local buf,pname,prop,ptype;
 
 	if(Length(attrs)>0 and not ForAll(attrs,IsString)) then
-		Info(InfoSimpcomp,1,"SCIntFunc.SCGetSimplicialComplexAttributesXMLEx: invalid attribute list.");
+		Info(InfoSimpcomp,1,"SCIntFunc.SCGetSimplicialComplexAttributesXMLEx: ",
+      "invalid attribute list.");
 		return fail;
 	fi;
 
@@ -966,7 +1020,16 @@ end;
 ## <Func Name="SCExportMacaulay2" Arg="complex, ring,  filename [, alphalabels]"/>
 ## <Returns><K>true</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Exports the facet list of a given simplicial complex <Arg>complex</Arg> in <C>Macaulay2</C> format to a file specified by <Arg>filename</Arg>. The argument <Arg>ring</Arg> can either be the ring of integers (specified by <C>Integers</C>) or the ring of rationals (sepcified by <C>Rationals</C>). The optional boolean argument <Arg>alphalabels</Arg> labels the complex with characters from <M>a, \dots ,z</M> in the exported file if a value of <K>true</K> is supplied, while the standard labeling of the vertices is <M>v_1, \dots ,v_n</M> where <M>n</M> is the number of vertices of <Arg>complex</Arg>. If <Arg>complex</Arg> has more than <M>26</M> vertices, the argument <Arg>alphalabels</Arg> is ignored. 
+## Exports the facet list of a given simplicial complex <Arg>complex</Arg> in 
+## <C>Macaulay2</C> format to a file specified by <Arg>filename</Arg>. The 
+## argument <Arg>ring</Arg> can either be the ring of integers (specified by 
+## <C>Integers</C>) or the ring of rationals (sepcified by <C>Rationals</C>). 
+## The optional boolean argument <Arg>alphalabels</Arg> labels the complex 
+## with characters from <M>a, \dots ,z</M> in the exported file if a value of 
+## <K>true</K> is supplied, while the standard labeling of the vertices is 
+## <M>v_1, \dots ,v_n</M> where <M>n</M> is the number of vertices of 
+## <Arg>complex</Arg>. If <Arg>complex</Arg> has more than <M>26</M> 
+## vertices, the argument <Arg>alphalabels</Arg> is ignored. 
 ## <Example>
 ## gap> c:=SCBdCrossPolytope(4);;
 ## gap> SCExportMacaulay2(c,Integers,"/tmp/bdbeta4.m2");
@@ -980,8 +1043,12 @@ InstallGlobalFunction(SCExportMacaulay2,
 function(arg)
 	local complex,filename,ring,alpha,buf,i,s,v,verts,lut,facets;
 
-	if(Length(arg)<3 or Length(arg)>4 or not SCIsSimplicialComplex(arg[1]) or (not IsIntegers(arg[2]) and not IsRationals(arg[2])) or not IsStringRep(arg[3])) then
-			Info(InfoSimpcomp,1,"SCExportMacaulay2: invalid arguments, first argument must be of type SCSimplicialComplex, seconds a ring (Integers or Rationals), third a string.");
+	if(Length(arg)<3 or Length(arg)>4 or not SCIsSimplicialComplex(arg[1]) or 
+      (not IsIntegers(arg[2]) and not IsRationals(arg[2])) or 
+      not IsStringRep(arg[3])) then
+			Info(InfoSimpcomp,1,"SCExportMacaulay2: invalid arguments, first",
+        "argument must be of type SCSimplicialComplex, seconds a ring ",
+        "(Integers or Rationals), third a string.");
 			return fail;
 	fi;
 	
@@ -1001,7 +1068,8 @@ function(arg)
 	fi;
 	
 	
-	buf:=["-- simpcomp export of complex ",SCName(complex),"\n\nloadPackage \"SimplicialComplexes\";\n\nR = "];
+	buf:=["-- simpcomp export of complex ",SCName(complex),
+    "\n\nloadPackage \"SimplicialComplexes\";\n\nR = "];
 	
 	if(IsIntegers(ring)) then
 		Add(buf,"ZZ[");
@@ -1013,7 +1081,8 @@ function(arg)
 
 	#dump variables
 	if(Length(verts)<27 and alpha) then
-		lut:=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+		lut:=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
+      "p","q","r","s","t","u","v","w","x","y","z"];
 		Add(buf,Concatenation("a..",lut[Length(verts)]));
 	else
 		lut:=[1..Length(verts)];
@@ -1047,7 +1116,8 @@ function(arg)
 	Add(buf,"complex = simplicialComplex Facets;\n\n-- end of export");
 
 	if(FileString(filename,String(Concatenation(buf)))=fail) then
-		Info(InfoSimpcomp,1,"SCExportMacaulay2: file \"",filename,"\" not writeable!");
+		Info(InfoSimpcomp,1,"SCExportMacaulay2: file \"",filename,
+      "\" not writeable!");
 		return fail;
 	else
 		return true;
@@ -1062,7 +1132,10 @@ end);
 ## <Func Name="SCExportPolymake" Arg="complex, filename"/>
 ## <Returns><K>true</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Exports the facet list with vertex labels of a given simplicial complex <Arg>complex</Arg> in <C>polymake</C> format to a file specified by <Arg>filename</Arg>. Currently, only the export in the format of <C>polymake</C> version 2.3 is supported. 
+## Exports the facet list with vertex labels of a given simplicial complex 
+## <Arg>complex</Arg> in <C>polymake</C> format to a file specified by 
+## <Arg>filename</Arg>. Currently, only the export in the format of 
+## <C>polymake</C> version 2.3 is supported. 
 ## <Example>
 ## gap> c:=SCBdCrossPolytope(4);;
 ## gap> SCExportPolymake(c,"/tmp/bdbeta4.poly");
@@ -1098,7 +1171,8 @@ function(complex,filename)
 	Add(buf,"\n\n");
 
 	if(FileString(filename,String(Concatenation(buf)))=fail) then
-		Info(InfoSimpcomp,1,"SCExportPolymake: file \"",filename,"\" not writeable!");
+		Info(InfoSimpcomp,1,"SCExportPolymake: file \"",filename,"\" not ",
+      "writeable!");
 		return fail;
 	else
 		return true;
@@ -1113,7 +1187,9 @@ end);
 ## <Func Name="SCExportPolymake" Arg="complex, filename"/>
 ## <Returns><K>true</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Exports the gluings of the tetrahedra of a given combinatorial <M>3</M>-manifold <Arg>complex</Arg> in a format compatible with Matveev's <M>3</M>-manifold software <C>Recognizer</C>.
+## Exports the gluings of the tetrahedra of a given combinatorial 
+## <M>3</M>-manifold <Arg>complex</Arg> in a format compatible with Matveev's 
+## <M>3</M>-manifold software <C>Recognizer</C>.
 ## <Example>
 ## gap> c:=SCBdCrossPolytope(4);;
 ## gap> SCExportRecognizer(c,"/tmp/bdbeta4.mv");
@@ -1130,7 +1206,8 @@ function(complex,filename)
 	dim := SCDim(complex);
 	pm := SCIsPseudoManifold(complex);
 	if dim <> 3 or pm <> true then
-		Info(InfoSimpcomp,1,"SCExportRecognizer: input must be a 3-dimensional weak pseudomanifold.");
+		Info(InfoSimpcomp,1,"SCExportRecognizer: input must be a 3-dimensional ",
+      "weak pseudomanifold.");
 		return fail;
 	fi;
 
@@ -1146,12 +1223,15 @@ function(complex,filename)
 			if done[i][j] = true then continue; fi;
 			elm := [1..4];
 			Remove(elm,j);
-			Append(buf,["t",String(i),"(",String(elm[1]),",",String(elm[2]),",",String(elm[3]),") - "]);
+			Append(buf,["t",String(i),"(",String(elm[1]),",",String(elm[2]),",",
+        String(elm[3]),") - "]);
 			trig := facets[i]{elm};
 			for k in [i+1..f3] do
 				if IsSubset(facets[k],trig) then
-					elm := [Position(facets[k],trig[1]),Position(facets[k],trig[2]),Position(facets[k],trig[3])];
-					Append(buf,["t",String(k),"(",String(elm[1]),",",String(elm[2]),",",String(elm[3]),"),\n"]);
+					elm := [Position(facets[k],trig[1]),Position(facets[k],trig[2]),
+            Position(facets[k],trig[3])];
+					Append(buf,["t",String(k),"(",String(elm[1]),",",String(elm[2]),",",
+            String(elm[3]),"),\n"]);
 					for l in [1..4] do
 						if not l in elm then
 							done[k][l] := true;
@@ -1165,7 +1245,8 @@ function(complex,filename)
 	od;
 	Add(buf,"end\n");
 	if(FileString(filename,String(Concatenation(buf)))=fail) then
-		Info(InfoSimpcomp,1,"SCExportRecognizer: file \"",filename,"\" not writeable!");
+		Info(InfoSimpcomp,1,"SCExportRecognizer: file \"",filename,
+      "\" not writeable!");
 		return fail;
 	else
 		return true;
@@ -1179,7 +1260,17 @@ end);
 ## <Func Name="SCExportJavaView" Arg="complex, file, coords"/>
 ## <Returns><K>true</K> on success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Exports the 2-skeleton of the given simplicial complex <Arg>complex</Arg> (or the facets if the complex is of dimension 2 or less) in <C>JavaView</C> format (file name suffix <C>.jvx</C>) to a file specified by <Arg>filename</Arg> (as string). The list <Arg>coords</Arg> must contain a <M>3</M>-tuple of real coordinates for each vertex of <Arg>complex</Arg>, either as tuple of length three containing the coordinates (Warning: as &GAP; only has rudimentary support for floating point values, currently only integer numbers can be used as coordinates when providing <Arg>coords</Arg> as list of <M>3</M>-tuples) or as string of the form <C>"x.x y.y z.z"</C> with decimal numbers <C>x.x</C>, <C>y.y</C>, <C>z.z</C> for the three coordinates (i.e. <C>"1.0 0.0 0.0"</C>).
+## Exports the 2-skeleton of the given simplicial complex <Arg>complex</Arg> 
+## (or the facets if the complex is of dimension 2 or less) in <C>JavaView</C> 
+## format (file name suffix <C>.jvx</C>) to a file specified by 
+## <Arg>filename</Arg> (as string). The list <Arg>coords</Arg> must contain a 
+## <M>3</M>-tuple of real coordinates for each vertex of <Arg>complex</Arg>, 
+## either as tuple of length three containing the coordinates (Warning: 
+## as &GAP; only has rudimentary support for floating point values, currently 
+## only integer numbers can be used as coordinates when providing 
+## <Arg>coords</Arg> as list of <M>3</M>-tuples) or as string of the form 
+## <C>"x.x y.y z.z"</C> with decimal numbers <C>x.x</C>, <C>y.y</C>, 
+## <C>z.z</C> for the three coordinates (i.e. <C>"1.0 0.0 0.0"</C>).
 ## <Example>
 ## gap> coords:=[[1,0,0],[0,1,0],[0,0,1]];;
 ## gap> SCExportJavaView(SCBdSimplex(2),"/tmp/triangle.jvx",coords);
@@ -1214,7 +1305,8 @@ function(complex,filename,coords)
 	
 	if(trigs=fail or verts=fail or Length(verts)<>Length(coords)) then
 		if(Length(verts)<>Length(coords)) then
-			Info(InfoSimpcomp,1,"SCExportJavaView: vertex count must match coordinate count.");
+			Info(InfoSimpcomp,1,"SCExportJavaView: vertex count must match ",
+        "coordinate count.");
 		fi;
 		return fail;
 	fi;
@@ -1252,7 +1344,9 @@ function(complex,filename,coords)
 			for i in [1..3] do
 			
 				if(not IsInt(coords[v][i])) then
-					Info(InfoSimpcomp,1,"SCExportJavaView: currently only integer coordinates are supported when passed as list of coordinate tuples. Use list of strings instead.");
+					Info(InfoSimpcomp,1,"SCExportJavaView: currently only integer ",
+            "coordinates are supported when passed as list of coordinate ",
+            "tuples. Use list of strings instead.");
 					return fail;
 				fi;
 				
@@ -1272,7 +1366,8 @@ function(complex,filename,coords)
 			Append(vertices[v],"</p>");
 		else
 			#coordinates as string
-			vertices[v]:=Concatenation("<p name=\"",String(verts[v]),"\">",coords[v],"</p>");
+			vertices[v]:=Concatenation("<p name=\"",String(verts[v]),"\">",
+        coords[v],"</p>");
 		fi;
 		Append(buf,Concatenation("\t\t\t",vertices[v],"\n"));
 	od;
@@ -1341,7 +1436,8 @@ function(complex,filename,coords)
 	</jvx-model>\n");
 	
 	if(FileString(filename,buf)=fail) then
-		Info(InfoSimpcomp,1,"SCExportJavaView: filename \"",filename,"\" not writeable!");
+		Info(InfoSimpcomp,1,"SCExportJavaView: filename \"",filename,
+      "\" not writeable!");
 		return fail;
 	else
 		return true;
@@ -1355,7 +1451,11 @@ end);
 ## <Func Name="SCExportLatexTable" Arg="complex, filename, itemsperline"/>
 ## <Returns><K>true</K> on success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Exports the facet list of a given simplicial complex <Arg>complex</Arg> (or any list given as first argument) in form of a &LaTeX; table to a file specified by <Arg>filename</Arg>. The argument <Arg>itemsperline</Arg> specifies how many columns the exported table should have. The faces are exported in the format <M>\langle v_1,\dots,v_k \rangle</M>.  
+## Exports the facet list of a given simplicial complex <Arg>complex</Arg> 
+## (or any list given as first argument) in form of a &LaTeX; table to a file 
+## specified by <Arg>filename</Arg>. The argument <Arg>itemsperline</Arg> 
+## specifies how many columns the exported table should have. The faces are 
+## exported in the format <M>\langle v_1,\dots,v_k \rangle</M>.  
 ## <Example>
 ## gap> c:=SCBdSimplex(5);;
 ## gap> SCExportLatexTable(c,"/tmp/bd5simplex.tex",5);
@@ -1369,7 +1469,8 @@ function(complex,filename,itemsperline)
 	local i,j,buf,facets;
 
 	if(not SCIsSimplicialComplex(complex) and not IsList(complex)) then
-		Info(InfoSimpcomp,1,"SCExportLatexTable: first argument must be of type SCSimplicialComplex or a list of faces.");
+		Info(InfoSimpcomp,1,"SCExportLatexTable: first argument must be of type ",
+      "SCSimplicialComplex or a list of faces.");
 		return fail;
 	fi;
 		
@@ -1383,13 +1484,15 @@ function(complex,filename,itemsperline)
 		return fail;
 	fi;
 
-	buf:=Concatenation(["\\begin{tabular}{",Concatenation(ListWithIdenticalEntries(itemsperline,"l")),"}\n"]);
+	buf:=Concatenation(["\\begin{tabular}{",
+    Concatenation(ListWithIdenticalEntries(itemsperline,"l")),"}\n"]);
 
 	for i in [1..Length(facets)] do
 		Append(buf,"$\\langle ");
 
 		for j in [1..Length(facets[i])-1] do
-			Append(buf,Concatenation([SCIntFunc.ListToDenseString(facets[i][j]),"\\,"]));
+			Append(buf,
+        Concatenation([SCIntFunc.ListToDenseString(facets[i][j]),"\\,"]));
 		od;
 		Append(buf,SCIntFunc.ListToDenseString(facets[i][Length(facets[i])]));
 
@@ -1398,7 +1501,8 @@ function(complex,filename,itemsperline)
 
 		if(i=Length(facets)) then
 			Append(buf,".");
-			Append(buf,Concatenation(ListWithIdenticalEntries(-(i mod itemsperline) mod itemsperline,"&")));
+			Append(buf,
+        Concatenation(ListWithIdenticalEntries(-(i mod itemsperline) mod itemsperline,"&")));
 			Append(buf,"\n");
 			break;
 		fi;
@@ -1414,7 +1518,8 @@ function(complex,filename,itemsperline)
 	buf:=ReplacedString(buf,"\"","");
 
 	if(FileString(filename,buf)=fail) then
-		Info(InfoSimpcomp,1,"SCExportLatexTable: file \"",filename,"\" not writeable!");
+		Info(InfoSimpcomp,1,"SCExportLatexTable: file \"",filename,
+      "\" not writeable!");
 		return fail;
 	fi;
 
@@ -1470,9 +1575,12 @@ end;
 ##<#GAPDoc Label="SCImportPolymake">
 ## <ManSection>
 ## <Func Name="SCImportPolymake" Arg="filename"/>
-## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon 
+## success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Imports the facet list of a <C>topaz</C> <C>polymake</C> file specified by <Arg>filename</Arg> (discarding any vertex labels) and creates a simplicial complex object from these facets.
+## Imports the facet list of a <C>topaz</C> <C>polymake</C> file specified by 
+## <Arg>filename</Arg> (discarding any vertex labels) and creates a 
+## simplicial complex object from these facets.
 ## <Example>
 ## gap> c:=SCBdCrossPolytope(4);;
 ## gap> SCExportPolymake(c,"/tmp/bdbeta4.poly");
@@ -1498,7 +1606,8 @@ function(filename)
 	file:=StringFile(filename);
 	
 	if(file=fail) then
-		Info(InfoSimpcomp,1,"SCImportPolymake: error reading file \"",filename,"\".");
+		Info(InfoSimpcomp,1,"SCImportPolymake: error reading file \"",
+      filename,"\".");
 		return fail;
 	fi;
 	
@@ -1513,13 +1622,15 @@ function(filename)
 	
 	
 	if(fpos=fail) then
-		Info(InfoSimpcomp,1,"SCImportPolymake: could neither find section VERTICES_IN_FACETS nor section FACETS in polymake file.");
+		Info(InfoSimpcomp,1,"SCImportPolymake: could neither find section ",
+      "VERTICES_IN_FACETS nor section FACETS in polymake file.");
 		return fail;
 	fi;
 	
 	facets:=[];
 	for lidx in [fpos+1..Length(lines)] do
-		if(not IsBound(lines[lidx]) or IsEmptyString(lines[lidx]) or lines[lidx]=" ") then
+		if(not IsBound(lines[lidx]) or IsEmptyString(lines[lidx]) or 
+      lines[lidx]=" ") then
 			break;
 		fi;
 		verts:=SplitString(lines[lidx]," ","{}");
@@ -1567,7 +1678,8 @@ function(f,c,id)
 	# pickle all attributes
 	for p in KnownAttributesOfObject(c) do
 		if(p in SCIntFunc.GeneralPicklerIgnoreList) then
-			Info(InfoSimpcomp,3,"SCIntFunc.GeneralPickler: ignoring attribute ",p," as it is in ignore list (no pickler available).");
+			Info(InfoSimpcomp,3,"SCIntFunc.GeneralPickler: ignoring attribute ",p,
+        " as it is in ignore list (no pickler available).");
 			continue;
 		fi;
 	
@@ -1596,7 +1708,8 @@ function(f,c)
     # read number of attributes
     len:=IO_ReadSmallInt(f);
     if len = IO_Error then
-        Info(InfoSimpcomp,1,"SCIntFunc.GeneralUnpickler: Error during unpicking of attribute name");
+        Info(InfoSimpcomp,1,"SCIntFunc.GeneralUnpickler: Error during ",
+          "unpicking of attribute name");
         return c;
     fi;
 
@@ -1606,14 +1719,16 @@ function(f,c)
         # read attribute name
     	name:=IO_Unpickle(f);
         if name = IO_Error or not(IsString(name)) then
-        	Info(InfoSimpcomp,1,"SCIntFunc.GeneralUnpickler: Error while unpicking  attribute name");
+        	Info(InfoSimpcomp,1,"SCIntFunc.GeneralUnpickler: Error while ",
+            "unpicking  attribute name");
         fi;
         
         # read attribute value
         ob:=IO_Unpickle(f);
         if IO_Result(ob) then
             if ob = IO_Error then
-                Info(InfoSimpcomp,1,"SCIntFunc.GeneralUnpickler: Error while unpicking attribute value of '",name,"'");
+                Info(InfoSimpcomp,1,"SCIntFunc.GeneralUnpickler: Error while ",
+                  "unpicking attribute value of '",name,"'");
             fi;
         else
             Setter(EvalString(name))(c,ob);
@@ -1675,7 +1790,9 @@ function(f)
     
     if IO_Result(prop) then
     	if prop = IO_Error then
-    		Info(InfoSimpcomp,1,"IO_Unpicklers.SCLR: Error while unpicking library repository. Delete file complexes.idx and complexes.idxb and recreate them with SCLibInit.");
+    		Info(InfoSimpcomp,1,"IO_Unpicklers.SCLR: Error while unpicking ",
+          "library repository. Delete file complexes.idx and complexes.idxb ",
+          "and recreate them with SCLibInit.");
     		return IO_Error;
     	fi;
     else
@@ -1686,17 +1803,24 @@ end;
 #handler functions for file load/save operations
 SCIntFunc.SCXMLIOHandlers:=
 rec(
-	SCSimplicialComplex:=[SCIsSimplicialComplex,SCIntFunc.SCSimplicialComplexToXML,SCIntFunc.SCSimplicialComplexFromXMLv1,false],
-	SCSimplicialComplexV2:=[SCIsSimplicialComplex,SCIntFunc.SCSimplicialComplexToXML,SCIntFunc.SCSimplicialComplexFromXMLv2,false],
-	SCLibraryRepository:=[SCIsLibRepository,SCIntFunc.SCLibraryRepositoryToXML,SCIntFunc.SCLibraryRepositoryFromXML,false],
+	SCSimplicialComplex:=[SCIsSimplicialComplex,
+    SCIntFunc.SCSimplicialComplexToXML,SCIntFunc.SCSimplicialComplexFromXMLv1,
+    false],
+	SCSimplicialComplexV2:=[SCIsSimplicialComplex,
+    SCIntFunc.SCSimplicialComplexToXML,SCIntFunc.SCSimplicialComplexFromXMLv2,
+    false],
+	SCLibraryRepository:=[SCIsLibRepository,SCIntFunc.SCLibraryRepositoryToXML,
+    SCIntFunc.SCLibraryRepositoryFromXML,false],
 	SCRecord:=[IsRecord,SCIntFunc.RecordToXML,SCIntFunc.RecordFromXML,false],
-	SCPositionalObject:=[SCIsPositionalObject,SCIntFunc.PositionalObjectToXML,SCIntFunc.PositionalObjectFromXML,false],
+	SCPositionalObject:=[SCIsPositionalObject,SCIntFunc.PositionalObjectToXML,
+    SCIntFunc.PositionalObjectFromXML,false],
 	SCInteger:=[IsInt,String,SCIntFunc.ReadInteger,true],
 	SCBoolean:=[IsBool,SCIntFunc.BooleanToString,SCIntFunc.ReadBoolean,true],
 	SCString:=[IsStringRep,String,SCIntFunc.ReadString,true],
 	SCArray:=[IsList,SCIntFunc.ListToDenseString,SCIntFunc.ReadArray,true],
 	SCPerm:=[IsPerm,SCIntFunc.PermToString,SCIntFunc.ReadPerm,true],
-	SCPermGroup:=[IsPermGroup,SCIntFunc.PermGroupToString,SCIntFunc.ReadPermGroup,true],
+	SCPermGroup:=[IsPermGroup,SCIntFunc.PermGroupToString,SCIntFunc.ReadPermGroup,
+    true],
 	SCFpGroup:=[IsFpGroup,SCIntFunc.FpGroupToXML,SCIntFunc.FpGroupFromXML,false]
 );
 
@@ -1709,7 +1833,9 @@ rec(
 ## <Func Name="SCExportSnapPy" Arg="complex, filename"/>
 ## <Returns><K>true</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Exports the facet list and orientability of a given combinatorial <M>3</M>-pseudomanifold <Arg>complex</Arg> in <C>SnapPy</C> format to a file specified by <Arg>filename</Arg>.
+## Exports the facet list and orientability of a given combinatorial 
+## <M>3</M>-pseudomanifold <Arg>complex</Arg> in <C>SnapPy</C> format to a 
+## file specified by <Arg>filename</Arg>.
 ## <Example>
 ## gap> SCLib.SearchByAttribute("Dim=3 and F=[8,28,56,28]");
 ## gap> c:=SCLib.Load(last[1][1]);;
@@ -1722,7 +1848,8 @@ rec(
 ################################################################################
 InstallGlobalFunction(SCExportSnapPy,
 function(complex,filename)
-	local curvertex,buf,dim,name,orient,lks,i,pmflag,lksconn,kleinb,torus,sphere,lktype,neighbors,gluings,cusps,j,k,trig,remoteidx,verts,facets;
+	local curvertex,buf,dim,name,orient,lks,i,pmflag,lksconn,kleinb,torus,
+    sphere,lktype,neighbors,gluings,cusps,j,k,trig,remoteidx,verts,facets;
 
 	dim:=SCDim(complex);
 	if dim=fail then
@@ -1730,7 +1857,8 @@ function(complex,filename)
 	fi;
 
 	if dim<>3 then
-		Info(InfoSimpcomp,1,"SCExportSnapPy: argument must be a 3-dimensional simplicial complex.");
+		Info(InfoSimpcomp,1,"SCExportSnapPy: argument must be a 3-dimensional ",
+      "simplicial complex.");
 		return fail;
 	fi;
 
@@ -1755,7 +1883,8 @@ function(complex,filename)
 		od;
 	
 		if pmflag<>true then
-			Info(InfoSimpcomp,1,"SCExportSnapPy: argument must be a combinatorial 3-pseudomanifold.");
+			Info(InfoSimpcomp,1,"SCExportSnapPy: argument must be a combinatorial ",
+        "3-pseudomanifold.");
 			return fail;
 		fi;
 
@@ -1768,7 +1897,8 @@ function(complex,filename)
 		od;
 
 		if lksconn<>true then
-			Info(InfoSimpcomp,1,"SCExportSnapPy: argument must be a combinatorial 3-pseudomanifold with connected links.");
+			Info(InfoSimpcomp,1,"SCExportSnapPy: argument must be a combinatorial ",
+        "3-pseudomanifold with connected links.");
 			return fail;
 		fi;
 
@@ -1786,7 +1916,8 @@ function(complex,filename)
 					kleinb:=kleinb+1;
 				fi;
 			else
-				Info(InfoSimpcomp,1,"SCExportSnapPy: argument must be a combinatorial 3-pseudomanifold with links of type S^2, T^2 or K^2.");
+				Info(InfoSimpcomp,1,"SCExportSnapPy: argument must be a combinatorial ",
+          "3-pseudomanifold with links of type S^2, T^2 or K^2.");
 				return fail;
 			fi;
 		od;
@@ -1847,9 +1978,12 @@ function(complex,filename)
 					neighbors[j][k]:=i-1;	
 					gluings[j][k]:=[];
 					gluings[j][k][k]:=remoteidx-1;				
-					gluings[j][k][Position(facets[j],trig[1])]:=Position(facets[i],trig[1])-1;
-					gluings[j][k][Position(facets[j],trig[2])]:=Position(facets[i],trig[2])-1;
-					gluings[j][k][Position(facets[j],trig[3])]:=Position(facets[i],trig[3])-1;
+					gluings[j][k][Position(facets[j],trig[1])]:=
+            Position(facets[i],trig[1])-1;
+					gluings[j][k][Position(facets[j],trig[2])]:=
+            Position(facets[i],trig[2])-1;
+					gluings[j][k][Position(facets[j],trig[3])]:=
+            Position(facets[i],trig[3])-1;
 					cusps[j][k]:=curvertex-1;
 					break;
 				fi;
@@ -1859,9 +1993,19 @@ function(complex,filename)
 
 	Append(buf,["\n",String(SCNumFaces(complex,dim)),"\n"]);
 	for i in [1..Size(facets)] do
-		Append(buf,["    ",String(neighbors[i][1]),"    ",String(neighbors[i][2]),"    ",String(neighbors[i][3]),"    ",String(neighbors[i][4]),"\n"]);
-		Append(buf,["    ",String(gluings[i][1][1]),String(gluings[i][1][2]),String(gluings[i][1][3]),String(gluings[i][1][4])," ",String(gluings[i][2][1]),String(gluings[i][2][2]),String(gluings[i][2][3]),String(gluings[i][2][4])," ",String(gluings[i][3][1]),String(gluings[i][3][2]),String(gluings[i][3][3]),String(gluings[i][3][4])," ",String(gluings[i][4][1]),String(gluings[i][4][2]),String(gluings[i][4][3]),String(gluings[i][4][4]),"\n"]);
-		Append(buf,["    ",String(cusps[i][1]),"    ",String(cusps[i][2]),"    ",String(cusps[i][3]),"    ",String(cusps[i][4]),"\n"]);
+		Append(buf,["    ",String(neighbors[i][1]),"    ",
+      String(neighbors[i][2]),"    ",String(neighbors[i][3]),"    ",
+      String(neighbors[i][4]),"\n"]);
+		Append(buf,["    ",String(gluings[i][1][1]),String(gluings[i][1][2]),
+      String(gluings[i][1][3]),String(gluings[i][1][4])," ",
+      String(gluings[i][2][1]),String(gluings[i][2][2]),
+      String(gluings[i][2][3]),String(gluings[i][2][4])," ",
+      String(gluings[i][3][1]),String(gluings[i][3][2]),
+      String(gluings[i][3][3]),String(gluings[i][3][4])," ",
+      String(gluings[i][4][1]),String(gluings[i][4][2]),
+      String(gluings[i][4][3]),String(gluings[i][4][4]),"\n"]);
+		Append(buf,["    ",String(cusps[i][1]),"    ",String(cusps[i][2]),"    ",
+      String(cusps[i][3]),"    ",String(cusps[i][4]),"\n"]);
 		Append(buf,["    0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n"]);
 		Append(buf,["    0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n"]);
 		Append(buf,["    0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n"]);

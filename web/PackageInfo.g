@@ -12,14 +12,14 @@ SetPackageInfo( rec(
 
 PackageName := "simpcomp",
 Subtitle := "A GAP toolbox for simplicial complexes",
-Version := "2.0.0",
-Date := "12/12/2013",
+Version := "2.1.2",
+Date := "03/12/2015",
 
-PackageWWWHome := "https://simpcomp.googlecode.com/git/web/",
+PackageWWWHome := "http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/",
 README_URL := Concatenation( ~.PackageWWWHome, "README" ),
 PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
 
-ArchiveURL :=Concatenation( "http://simpcomp.googlecode.com/files/simpcomp-",String(~.Version)),
+ArchiveURL :=Concatenation( [ "http://github.com/simpcomp-team/simpcomp/releases/download/v", String(~.Version), "/simpcomp-", String(~.Version) ]),
 ArchiveFormats := ".tar.gz",
 
 Persons := [
@@ -58,7 +58,6 @@ Persons := [
 ##    "dev"           for development versions of packages 
 ##    "other"         for all other packages
 ##
-#Status := "deposited",
 
 Status := "accepted",
 ##  You must provide the next two entries if and only if the status is
@@ -70,7 +69,6 @@ AcceptDate := "11/2013",
 
 AbstractHTML :=
   "<span class=\"pkgname\">simpcomp</span> is a <span class=\"pkgname\">GAP</span> package for working with simplicial complexes. It allows the computation of many properties of simplicial complexes (such as the f-, g- and h-vectors, the face lattice, the automorphism group, (co-)homology with explicit basis computation, intersection form, etc.) and provides the user with functions to compute new complexes from old (simplex links and stars, connected sums, cartesian products, handle additions, bistellar flips, etc.). Furthermore, it comes with an extensive library of known triangulations of manifolds and provides the user with the possibility to create own complex libraries.<br /> <span class=\"pkgname\">simpcomp</span> caches computed properties of a simplicial complex, thus avoiding unnecessary computations, internally handles the vertex labeling of the complexes and insures the consistency of a simplicial complex throughout all operations.<br /> <span class=\"pkgname\">simpcomp</span> relies on the <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">homology</span> for its homology computation, but also provides the user with an own (co-)homology algorithm in case the packacke <span class=\"pkgname\">homology</span> is not available. For automorphism group computation the <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">GRAPE</span> is used, which in turn uses the program <tt>nauty</tt> by Brendan McKay. An internal automorphism group calculation algorithm in used as fallback if the <span class=\"pkgname\">GRAPE</span> package is not available.",
-
 
 Keywords := ["simplicial topology", "combinatorial manifolds", "PL equivalence", "triangulating manifolds"],
 
@@ -107,7 +105,7 @@ Autoload := false,
 ##  If the default banner does not suffice then provide a string that is
 ##  printed when the package is loaded (not when it is autoloaded or if
 ##  command line options `-b' or `-q' are given).
-BannerString :=Concatenation("Loading simpcomp ",String(~.Version),"\nby F. Effenberger and J. Spreer\nhttps://code.google.com/p/simpcomp/\n"),
+BannerString :=Concatenation("Loading simpcomp ",String(~.Version),"\nby F. Effenberger and J. Spreer\nhttp://code.google.com/p/simpcomp/\n"),
 
 AvailabilityTest := 
 function()

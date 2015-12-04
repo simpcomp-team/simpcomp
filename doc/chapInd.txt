@@ -31,6 +31,7 @@
   [2XSCAutomorphismGroupTransitivity[102X  6.9-6
   [2XSCBdCyclicPolytope[102X  6.3-1
   [2XSCBdSimplex[102X  6.3-2
+  [2XSCBistellarIsManifold[102X  9.2-6
   [2XSCBistellarOptions[102X  9.2-1
   [2XSCBlowup[102X  10.2-1
   [2XSCBoundary[102X  6.9-7
@@ -46,8 +47,10 @@
   [2XSCCohomology[102X  8.2-2
   [2XSCCohomologyBasis[102X  8.2-3
   [2XSCCohomologyBasisAsSimplices[102X  8.2-4
-  [2XSCCollapseGreedy[102X  6.10-3
-  [2XSCCone[102X  6.10-4
+  [2XSCCollapseGreedy[102X  12.1-1
+  [2XSCCollapseLex[102X  12.1-2
+  [2XSCCollapseRevLex[102X  12.1-3
+  [2XSCCone[102X  6.10-3
   [2XSCConnectedComponents[102X  6.6-3
   [2XSCConnectedComponents[102X  7.3-1
   [2XSCConnectedProduct[102X  6.6-4
@@ -62,8 +65,8 @@
   [2XSCCyclic3MfldTopTypes[102X  6.8-2
   [2XSCDehnSommervilleCheck[102X  6.9-8
   [2XSCDehnSommervilleMatrix[102X  6.9-9
-  [2XSCDeletedJoin[102X  6.10-5
-  [2XSCDifference[102X  6.10-6
+  [2XSCDeletedJoin[102X  6.10-4
+  [2XSCDifference[102X  6.10-5
   [2XSCDifferenceCycleCompress[102X  6.6-7
   [2XSCDifferenceCycleExpand[102X  6.6-8
   [2XSCDifferenceCycles[102X  6.9-10
@@ -76,12 +79,12 @@
   [2XSCEulerCharacteristic[102X  7.3-3
   [2XSCExamineComplexBistellar[102X  9.2-3
   [2XSCExportIsoSig[102X  6.2-2
-  [2XSCExportJavaView[102X  12.2-9
-  [2XSCExportLatexTable[102X  12.2-8
-  [2XSCExportMacaulay2[102X  12.2-5
-  [2XSCExportPolymake[102X  12.2-10
-  [2XSCExportPolymake[102X  12.2-6
-  [2XSCExportSnapPy[102X  12.2-11
+  [2XSCExportJavaView[102X  13.2-9
+  [2XSCExportLatexTable[102X  13.2-8
+  [2XSCExportMacaulay2[102X  13.2-5
+  [2XSCExportPolymake[102X  13.2-10
+  [2XSCExportPolymake[102X  13.2-6
+  [2XSCExportSnapPy[102X  13.2-11
   [2XSCExportToString[102X  6.2-1
   [2XSCFaceLattice[102X  6.9-15
   [2XSCFaceLattice[102X  7.3-5
@@ -93,7 +96,7 @@
   [2XSCFacets[102X  6.9-19
   [2XSCFacetsEx[102X  4.1-2
   [2XSCFacetsEx[102X  6.9-20
-  [2XSCFillSphere[102X  6.10-7
+  [2XSCFillSphere[102X  6.10-6
   [2XSCFpBettiNumbers[102X  6.9-21
   [2XSCFpBettiNumbers[102X  7.3-7
   [2XSCFromDifferenceCycles[102X  6.1-3
@@ -110,29 +113,32 @@
   [2XSCGeneratorsEx[102X  6.9-25
   [2XSCGenus[102X  7.3-8
   [2XSCGVector[102X  6.9-23
-  [2XSCHandleAddition[102X  6.10-8
+  [2XSCHandleAddition[102X  6.10-7
   [2XSCHasBoundary[102X  6.9-27
   [2XSCHasInterior[102X  6.9-28
+  [2XSCHasseDiagram[102X  12.1-4
   [2XSCHeegaardSplitting[102X  6.9-30
   [2XSCHeegaardSplittingSmallGenus[102X  6.9-29
-  [2XSCHomalgBoundaryMatrices[102X  13.1-1
-  [2XSCHomalgCoboundaryMatrices[102X  13.1-2
-  [2XSCHomalgCohomology[102X  13.1-5
-  [2XSCHomalgCohomologyBasis[102X  13.1-6
-  [2XSCHomalgHomology[102X  13.1-3
-  [2XSCHomalgHomologyBasis[102X  13.1-4
-  [2XSCHomology[102X  6.9-31
+  [2XSCHomalgBoundaryMatrices[102X  14.1-1
+  [2XSCHomalgCoboundaryMatrices[102X  14.1-2
+  [2XSCHomalgCohomology[102X  14.1-5
+  [2XSCHomalgCohomologyBasis[102X  14.1-6
+  [2XSCHomalgHomology[102X  14.1-3
+  [2XSCHomalgHomologyBasis[102X  14.1-4
+  [2XSCHomology[102X  12.1-12
   [2XSCHomology[102X  7.3-9
   [2XSCHomologyBasis[102X  8.1-3
   [2XSCHomologyBasisAsSimplices[102X  8.1-4
+  [2XSCHomologyClassic[102X  6.9-31
+  [2XSCHomologyEx[102X  12.1-13
   [2XSCHomologyInternal[102X  8.1-5
   [2XSCHVector[102X  6.9-26
-  [2XSCImportPolymake[102X  12.2-7
+  [2XSCImportPolymake[102X  13.2-7
   [2XSCIncidences[102X  6.9-32
   [2XSCIncidencesEx[102X  6.9-33
-  [2XSCInfoLevel[102X  14.1-1
+  [2XSCInfoLevel[102X  15.1-1
   [2XSCInterior[102X  6.9-34
-  [2XSCIntersection[102X  6.10-9
+  [2XSCIntersection[102X  6.10-8
   [2XSCIntersectionForm[102X  8.2-6
   [2XSCIntersectionFormDimensionality[102X  8.2-8
   [2XSCIntersectionFormParity[102X  8.2-7
@@ -148,64 +154,74 @@
   [2XSCIsHeegaardSplitting[102X  6.9-40
   [2XSCIsHomologySphere[102X  6.9-41
   [2XSCIsInKd[102X  6.9-42
-  [2XSCIsIsomorphic[102X  6.10-10
+  [2XSCIsIsomorphic[102X  6.10-9
   [2XSCIsKNeighborly[102X  6.9-43
   [2XSCIsKStackedSphere[102X  9.2-5
-  [2XSCIsLibRepository[102X  12.1-1
-  [2XSCIsManifold[102X  9.2-6
+  [2XSCIsLibRepository[102X  13.1-1
+  [2XSCIsManifold[102X  12.1-17
+  [2XSCIsManifoldEx[102X  12.1-18
   [2XSCIsMovableComplex[102X  9.2-7
-  [2XSCIsomorphism[102X  6.10-12
-  [2XSCIsomorphismEx[102X  6.10-13
+  [2XSCIsomorphism[102X  6.10-11
+  [2XSCIsomorphismEx[102X  6.10-12
   [2XSCIsOrientable[102X  6.9-44
   [2XSCIsOrientable[102X  7.3-12
   [2XSCIsPseudoManifold[102X  6.9-45
   [2XSCIsPure[102X  6.9-46
   [2XSCIsShellable[102X  6.9-47
   [2XSCIsSimplicialComplex[102X  5.1-1
+  [2XSCIsSimplyConnected[102X  12.1-14
+  [2XSCIsSimplyConnectedEx[102X  12.1-15
+  [2XSCIsSphere[102X  12.1-16
   [2XSCIsStronglyConnected[102X  6.9-48
-  [2XSCIsSubcomplex[102X  6.10-11
+  [2XSCIsSubcomplex[102X  6.10-10
   [2XSCIsTight[102X  11.1-1
-  [2XSCJoin[102X  6.10-14
+  [2XSCJoin[102X  6.10-13
   [2XSCLabelMax[102X  4.2-1
   [2XSCLabelMin[102X  4.2-2
   [2XSCLabels[102X  4.2-3
-  [2XSCLib[102X  12.1-2
-  [2XSCLibAdd[102X  12.1-3
-  [2XSCLibAllComplexes[102X  12.1-4
-  [2XSCLibDelete[102X  12.1-5
-  [2XSCLibDetermineTopologicalType[102X  12.1-6
-  [2XSCLibFlush[102X  12.1-7
-  [2XSCLibInit[102X  12.1-8
-  [2XSCLibIsLoaded[102X  12.1-9
-  [2XSCLibSearchByAttribute[102X  12.1-10
-  [2XSCLibSearchByName[102X  12.1-11
-  [2XSCLibSize[102X  12.1-12
-  [2XSCLibStatus[102X  12.1-14
-  [2XSCLibUpdate[102X  12.1-13
+  [2XSCLib[102X  13.1-2
+  [2XSCLibAdd[102X  13.1-3
+  [2XSCLibAllComplexes[102X  13.1-4
+  [2XSCLibDelete[102X  13.1-5
+  [2XSCLibDetermineTopologicalType[102X  13.1-6
+  [2XSCLibFlush[102X  13.1-7
+  [2XSCLibInit[102X  13.1-8
+  [2XSCLibIsLoaded[102X  13.1-9
+  [2XSCLibSearchByAttribute[102X  13.1-10
+  [2XSCLibSearchByName[102X  13.1-11
+  [2XSCLibSize[102X  13.1-12
+  [2XSCLibStatus[102X  13.1-14
+  [2XSCLibUpdate[102X  13.1-13
   [2XSCLink[102X  4.3-2
   [2XSCLinks[102X  4.3-3
-  [2XSCLoad[102X  12.2-1
-  [2XSCLoadXML[102X  12.2-2
-  [2XSCMailClearPending[102X  14.2-1
-  [2XSCMailIsEnabled[102X  14.2-2
-  [2XSCMailIsPending[102X  14.2-3
-  [2XSCMailSend[102X  14.2-4
-  [2XSCMailSendPending[102X  14.2-5
-  [2XSCMailSetAddress[102X  14.2-6
-  [2XSCMailSetEnabled[102X  14.2-7
-  [2XSCMailSetMinInterval[102X  14.2-8
+  [2XSCLoad[102X  13.2-1
+  [2XSCLoadXML[102X  13.2-2
+  [2XSCMailClearPending[102X  15.2-1
+  [2XSCMailIsEnabled[102X  15.2-2
+  [2XSCMailIsPending[102X  15.2-3
+  [2XSCMailSend[102X  15.2-4
+  [2XSCMailSendPending[102X  15.2-5
+  [2XSCMailSetAddress[102X  15.2-6
+  [2XSCMailSetEnabled[102X  15.2-7
+  [2XSCMailSetMinInterval[102X  15.2-8
   [2XSCMappingCylinder[102X  10.2-2
   [2XSCMinimalNonFaces[102X  6.9-49
   [2XSCMinimalNonFacesEx[102X  6.9-50
+  [2XSCMorseEngstroem[102X  12.1-5
   [2XSCMorseIsPerfect[102X  11.1-2
   [2XSCMorseMultiplicityVector[102X  11.1-4
   [2XSCMorseNumberOfCriticalPoints[102X  11.1-5
+  [2XSCMorseRandom[102X  12.1-6
+  [2XSCMorseRandomLex[102X  12.1-7
+  [2XSCMorseRandomRevLex[102X  12.1-8
+  [2XSCMorseSpec[102X  12.1-9
+  [2XSCMorseUST[102X  12.1-10
   [2XSCMove[102X  9.2-8
   [2XSCMoves[102X  9.2-9
   [2XSCName[102X  4.2-4
   [2XSCNeighborliness[102X  6.9-51
-  [2XSCNeighbors[102X  6.10-15
-  [2XSCNeighborsEx[102X  6.10-16
+  [2XSCNeighbors[102X  6.10-14
+  [2XSCNeighborsEx[102X  6.10-15
   [2XSCNrChiralTori[102X  6.5-4
   [2XSCNrCyclic3Mflds[102X  6.8-1
   [2XSCNrRegularTorus[102X  6.5-5
@@ -216,21 +232,21 @@
   [2XSCNSTriangulation[102X  7.2-2
   [2XSCNumFaces[102X  6.9-52
   [2XSCOrientation[102X  6.9-53
-  [2XSCProperties[102X  17.1-1
+  [2XSCProperties[102X  18.1-1
   [2XSCPropertiesDropped[102X  5.1-4
-  [2XSCPropertiesFlush[102X  17.1-2
-  [2XSCPropertiesManaged[102X  17.1-3
-  [2XSCPropertiesNames[102X  17.1-4
-  [2XSCPropertiesTmp[102X  17.1-5
-  [2XSCPropertiesTmpNames[102X  17.1-6
-  [2XSCPropertyByName[102X  17.1-7
-  [2XSCPropertyDrop[102X  17.1-8
-  [2XSCPropertyHandlersSet[102X  17.1-9
-  [2XSCPropertySet[102X  17.1-10
-  [2XSCPropertySetMutable[102X  17.1-11
-  [2XSCPropertyTmpByName[102X  17.1-12
-  [2XSCPropertyTmpDrop[102X  17.1-13
-  [2XSCPropertyTmpSet[102X  17.1-14
+  [2XSCPropertiesFlush[102X  18.1-2
+  [2XSCPropertiesManaged[102X  18.1-3
+  [2XSCPropertiesNames[102X  18.1-4
+  [2XSCPropertiesTmp[102X  18.1-5
+  [2XSCPropertiesTmpNames[102X  18.1-6
+  [2XSCPropertyByName[102X  18.1-7
+  [2XSCPropertyDrop[102X  18.1-8
+  [2XSCPropertyHandlersSet[102X  18.1-9
+  [2XSCPropertySet[102X  18.1-10
+  [2XSCPropertySetMutable[102X  18.1-11
+  [2XSCPropertyTmpByName[102X  18.1-12
+  [2XSCPropertyTmpDrop[102X  18.1-13
+  [2XSCPropertyTmpSet[102X  18.1-14
   [2XSCRandomize[102X  9.2-11
   [2XSCReduceAsSubcomplex[102X  9.2-12
   [2XSCReduceComplex[102X  9.2-13
@@ -245,9 +261,9 @@
   [2XSCRelabelTransposition[102X  4.2-8
   [2XSCRename[102X  4.2-9
   [2XSCRMoves[102X  9.2-10
-  [2XSCRunTest[102X  14.3-1
-  [2XSCSave[102X  12.2-3
-  [2XSCSaveXML[102X  12.2-4
+  [2XSCRunTest[102X  15.3-1
+  [2XSCSave[102X  13.2-3
+  [2XSCSaveXML[102X  13.2-4
   [2XSCSeriesAGL[102X  6.4-1
   [2XSCSeriesBdHandleBody[102X  6.4-3
   [2XSCSeriesBid[102X  6.4-4
@@ -271,30 +287,31 @@
   [2XSCSetReference[102X  4.2-10
   [2XSCsFromGroupByTransitivity[102X  6.7-2
   [2XSCsFromGroupExt[102X  6.7-1
-  [2XSCShelling[102X  6.10-17
-  [2XSCShellingExt[102X  6.10-18
-  [2XSCShellings[102X  6.10-19
+  [2XSCShelling[102X  6.10-16
+  [2XSCShellingExt[102X  6.10-17
+  [2XSCShellings[102X  6.10-18
   [2XSCSimplex[102X  6.3-4
   [2XSCSkel[102X  6.9-54
   [2XSCSkel[102X  7.3-13
   [2XSCSkelEx[102X  6.9-55
   [2XSCSkelEx[102X  7.3-14
   [2XSCSlicing[102X  11.1-3
-  [2XSCSpan[102X  6.10-20
+  [2XSCSpan[102X  6.10-19
   [2XSCSpanningTree[102X  6.9-56
+  [2XSCSpanningTreeRandom[102X  12.1-11
   [2XSCStar[102X  4.3-4
   [2XSCStars[102X  4.3-5
   [2XSCStronglyConnectedComponents[102X  6.6-9
   [2XSCSurface[102X  6.3-6
-  [2XSCSuspension[102X  6.10-21
+  [2XSCSuspension[102X  6.10-20
   [2XSCTopologicalType[102X  7.3-15
-  [2XSCUnion[102X  6.10-22
+  [2XSCUnion[102X  6.10-21
   [2XSCUnion[102X  7.3-16
   [2XSCUnlabelFace[102X  4.2-11
-  [2XSCVertexIdentification[102X  6.10-23
+  [2XSCVertexIdentification[102X  6.10-22
   [2XSCVertices[102X  4.1-3
   [2XSCVerticesEx[102X  4.1-4
-  [2XSCWedge[102X  6.10-24
+  [2XSCWedge[102X  6.10-23
   [2XShallowCopy (SCSimplicialComplex)[102X  5.1-3
   [2XSize (SCSimplicialComplex)[102X  5.3-4
   

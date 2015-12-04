@@ -432,115 +432,6 @@ function(complex1,complex2)
 	return scwedge;
 end);
 
-
-################################################################################
-##<#GAPDoc Label="SCCollapseGreedy">
-## <ManSection>
-## <Meth Name="SCCollapseGreedy" Arg="complex"/>
-## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
-## <Description>
-## Employs a greedy collapsing algorithm in order to collapse the simplicial complex <Arg>complex</Arg>. The source code of this function is taken from <Cite Key="Lutz08ManifoldPage" />. 
-## <Example>
-## gap> SCLib.SearchByName("T^2"){[1..6]}; 
-## [ [ 5, "T^2 (VT)" ], [ 7, "T^2 (VT)" ], [ 11, "T^2 (VT)" ], 
-##   [ 12, "T^2 (VT)" ], [ 20, "T^2 (VT)" ], [ 22, "(T^2)#2" ], 
-##   [ 27, "(T^2)#3" ], [ 41, "T^2 (VT)" ], [ 44, "(T^2)#4" ], ... 
-## gap> torus:=SCLib.Load(last[1][1]);;
-## gap> bdtorus:=SCDifference(torus,SC([torus.Facets[1]]));;
-## gap> coll:=SCCollapseGreedy(bdtorus);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="collapsed version of T^2 (VT) \ unnamed complex m"
-##  Dim=1
-## 
-## /SimplicialComplex]
-## gap> coll.Facets;
-## [ [ 3, 6 ], [ 3, 7 ], [ 5, 6 ], [ 5, 7 ], [ 6, 7 ] ]
-## gap> sphere:=SCBdSimplex(4);;                              
-## gap> bdsphere:=SCDifference(sphere,SC([sphere.Facets[1]]));;
-## gap> coll:=SCCollapseGreedy(bdsphere);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="collapsed version of S^3_5 \ unnamed complex m"
-##  Dim=0
-## 
-## /SimplicialComplex]
-## gap> coll.Facets;                     
-## [ [ 5 ] ]
-## </Example>
-## </Description>
-## </ManSection>
-##<#/GAPDoc>
-################################################################################
-InstallMethod(SCCollapseGreedy,
-"for SCSimplicialComplex",
-[SCIsSimplicialComplex],
-function(complex)
-
-	local count, max, stopandremove,faces,number,up,low,upper,lower,labels,coll;
-	
-	if(not SCIntFunc.EnsureParameters("SCCollapseGreedy",[complex],[SCIsSimplicialComplex],["SCSimplicialComplex"])) then
-		return fail;
-	fi;
-	
-	max:=SCDim(complex)+1;
-	labels:=SCIntFunc.DeepCopy(SCVertices(complex));	faces:=SCIntFunc.DeepCopy(SCFaceLatticeEx(complex));
-	
-	if max=fail or faces=fail or labels=fail then
-		return fail;
-	fi;
-	
-	if(max=0) then
-		return SCEmpty();
-	fi;
-	
-	count:=0;
-	while max>1 do 
-		stopandremove:=false;
-	
-		for low in faces[max-1] do
-			if stopandremove=false then
-				number:=0;
-				for up in faces[max] do
-					if IsSubset(up,low) then
-						number:=number+1;
-						lower:=low;
-						upper:=up;
-					fi;
-				od;
-				if number=1 then
-					stopandremove:=true;
-				fi;
-			fi;
-		od;
-	
-		if stopandremove=true then
-			RemoveSet(faces[max],upper);
-			RemoveSet(faces[max-1],lower);
-			count:=count+1;  
-			if Length(faces[max])=0 then
-				max:=max-1;
-			fi;
-		else 
-			break;
-		fi;
-	od;
-
-	coll:=SCFromFacets(SCIntFunc.RelabelSimplexList(Union(SCIntFunc.reduceFaceLattice(faces)),labels));
-	
-	if(SCName(complex)<>fail) then
-		SCRename(coll,Concatenation("collapsed version of ",SCName(complex)));
-	fi;
-	
-	return coll;
-
-end);
-
-
 # check which faces already exist (by dimension)
 SCIntFunc.FacesExist:=
 function(complex,dim)
@@ -2350,21 +2241,8 @@ function(complex,all,checkvector)
 			if(killed[i]=0) then continue; fi;
 			if(Intersection(sc[i],sc[cur])<>[]) then
 				AddSet(intersection,Intersection(sc[cur],sc[i]));
-			#else
-			#	failed:=1;
-			#	break;
 			fi;
 		od;
-
-		#if(failed=1) then
-		#	return false;
-		#fi;
-
-		#intersection:=Intersection(sc[cur],prev);
-		#span:=getVertexSpan(sc,intersection);
-		#Print("validshellingfacet: ",sc[cur],": intersection=",intersection,", span=",span);
-
-		#Print("shelling intersection: ",intersection,"\n");
 
 		#consolidate simplices
 		done:=0;
@@ -2384,7 +2262,6 @@ function(complex,all,checkvector)
 			od;
 		od;
 
-		#Print("shelling intersection, reduced: ",intersection,"\n");
 		dim:=List(intersection,Length)-1;
 		
 		if(Size(Set(dim))<>1) then
@@ -2405,44 +2282,32 @@ function(complex,all,checkvector)
 	computeShellingBt:=function(sc,killedn,killed,shellings,all)
 		local i,bd,lkilled;
 
-		#Print("computeShellingBt: ",killedn," - ",killed,"\n");
-
 		if(not 0 in killed) then
-			#found shelling
-			#Print("found shelling: ",killed,"\n");
 			AddSet(shellings,ShallowCopy(killed));
 			return true;
 		fi;
 
 		if(not complexStronglyConnectedShelling(sc,killed)) then
-			# Print("complex not strongly connected\n");
+
 			return false;
 		fi;
 
 		bd:=markBoundaryFactesShelling(sc,killed);
 
-	#	if(Position(bd,1)=fail) then
-			#no more boundaries
-	#	fi;
-
 		lkilled:=ShallowCopy(killed);
 		for i in [1..Length(bd)] do
 			if(bd[i]=1) then
-				#Print("facet ",sc[i],", bd[i]=",bd[i],":\n");
 				if(killedn=1 or isValidNextShellingFacet(sc,killed,i)) then
 					#backtrack
-					#Print("chosen, next step.\n\n");
 					lkilled[i]:=killedn;
 					if(computeShellingBt(sc,killedn+1,lkilled,shellings,all) and not all) then
 						return true;
 					fi;
 					lkilled[i]:=0;
-					#Print("level up, next step.\n\n");
 				fi;
 			fi;
 		od;
 
-		#Print("computeShellingBt: ",killedn," done\n");
 		return false;
 	end;
 

@@ -177,19 +177,19 @@ void reduce_complex(MovableComplex & complex, unsigned int rounds, int heating, 
         {
             if (heating > 0)
             {
-                if (heating % ((complex.dimension()+2)*baseHeating) == 0)
-                {
-                    moves = complex.validMoves(0);
-                }
-                else
-                {
+                //if (heating % ((complex.dimension()+2)*baseHeating) == 0)
+                //{
+                //    moves = complex.validMoves(0);
+                //}
+                //else
+                //{
                     for (unsigned int i = 1; i < complex.dimension()/2 + 1; i++)
                     {
                         bistellar_move_list_t temp = complex.validMoves(i);
                         if (!temp.empty())
                             moves.insert(moves.begin(), temp.begin(), temp.end());
                     }
-                }
+                //}
                 if (moves.empty())
                 {
                     for (unsigned int i = 1; i < complex.dimension()+2; i++)
@@ -245,7 +245,8 @@ void reduce_complex(MovableComplex & complex, unsigned int rounds, int heating, 
                 }
                 if (relaxation == (complex.dimension()+2)*baseRelaxation)
                 {
-                    heating = (complex.dimension()+2)*baseHeating;
+                    //heating = (complex.dimension()+2)*baseHeating;
+		    heating = 1;
                     relaxation = 0;
                 }
                 relaxation++;

@@ -147,8 +147,8 @@
   [33X[0;0YIt  is  recommended to use a minimal triangulation [3Xcomplex2[103X for the check if
   possible.[133X
   
-  [33X[0;0YInternally                      calls                      [2XSCReduceComplexEx[102X
-  ([14X9.2-14[114X)[10X(complex1,complex2,1,SCIntFunc.SCChooseMove);[110X[133X
+  [33X[0;0YInternally            calls            [2XSCReduceComplexEx[102X            ([14X9.2-14[114X)
+  [10X(complex1,complex2,1,SCIntFunc.SCChooseMove);[110X[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes to disk[128X[104X
@@ -272,9 +272,9 @@
     [4X[28X [128X[104X
   [4X[32X[104X
   
-  [1X9.2-6 SCIsManifold[101X
+  [1X9.2-6 SCBistellarIsManifold[101X
   
-  [29X[2XSCIsManifold[102X( [3Xcomplex[103X ) [32X method
+  [29X[2XSCBistellarIsManifold[102X( [3Xcomplex[103X ) [32X method
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YTries  to prove that a closed simplicial [22Xd[122X-pseudomanifold is a combinatorial
@@ -286,13 +286,16 @@
   is  returned  if the algorithm does not terminate after the number of rounds
   indicated by [10XSCBistellarOptions.MaxIntervallIsManifold[110X.[133X
   
-  [33X[0;0YInternally                      calls                      [2XSCReduceComplexEx[102X
-  ([14X9.2-14[114X)[10X(link,SCEmpty(),0,SCIntFunc.SCChooseMove);[110X   for   every   link   of
-  [3Xcomplex[103X. Note that [9Xfalse[109X is returned in case of a bounded manifold.[133X
+  [33X[0;0YInternally            calls            [2XSCReduceComplexEx[102X            ([14X9.2-14[114X)
+  [10X(link,SCEmpty(),0,SCIntFunc.SCChooseMove);[110X  for  every link of [3Xcomplex[103X. Note
+  that [9Xfalse[109X is returned in case of a bounded manifold.[133X
+  
+  [33X[0;0YSee  [2XSCIsManifoldEx[102X  ([14X12.1-18[114X)  and  [2XSCIsManifold[102X  ([14X12.1-17[114X) for alternative
+  methods for manifold verification.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SCBdCrossPolytope(3);;[128X[104X
-    [4X[28X gap> SCIsManifold(c);[128X[104X
+    [4X[28X gap> SCBistellarIsManifold(c);[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -439,7 +442,7 @@
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> c.F;[128X[104X
-    [4X[28X [ 18, 75, 114, 57 ][128X[104X
+    [4X[28X [ 17, 74, 114, 57 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -470,8 +473,8 @@
   [33X[0;0YMain  application:  Reduce  a  sub-complex  of  the  cross  polytope without
   introducing diagonals.[133X
   
-  [33X[0;0YInternally                      calls                      [2XSCReduceComplexEx[102X
-  ([14X9.2-14[114X)[10X(complex1,complex2,2,SCIntFunc.SCChooseMove);[110X[133X
+  [33X[0;0YInternally            calls            [2XSCReduceComplexEx[102X            ([14X9.2-14[114X)
+  [10X(complex1,complex2,2,SCIntFunc.SCChooseMove);[110X[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SCFromFacets([[1,3],[3,5],[4,5],[4,1]]);;[128X[104X
@@ -508,13 +511,13 @@
             [33X[0;10YReturns [9Xfail[109X upon an error..[133X
   
   [33X[0;0YReduces a pure simplicial complex [3Xcomplex[103X satisfying the weak pseudomanifold
-  property   via   bistellar   moves.   Internally   calls   [2XSCReduceComplexEx[102X
-  ([14X9.2-14[114X)[10X(complex,SCEmpty(),0,SCIntFunc.SCChooseMove);[110X[133X
+  property  via  bistellar  moves. Internally calls [2XSCReduceComplexEx[102X ([14X9.2-14[114X)
+  [10X(complex,SCEmpty(),0,SCIntFunc.SCChooseMove);[110X[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon[128X[104X
     [4X[28X gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      [128X[104X
-    [4X[28X gap> SCReduceComplex(obj);[128X[104X
+    [4X[28X gap> tmp := SCReduceComplex(obj);[128X[104X
     [4X[28X [ true, [SimplicialComplex[128X[104X
     [4X[28X     [128X[104X
     [4X[28X      Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -568,11 +571,11 @@
   
   [31X3[131X   [33X[0;6Y[2XSCReduceAsSubcomplex[102X ([14X9.2-12[114X),[133X
   
-  [31X4[131X   [33X[0;6Y[2XSCIsManifold[102X ([14X9.2-6[114X).[133X
+  [31X4[131X   [33X[0;6Y[2XSCBistellarIsManifold[102X ([14X9.2-6[114X).[133X
   
   [31X5[131X   [33X[0;6Y[2XSCRandomize[102X ([14X9.2-11[114X).[133X
   
-  [33X[0;0YPlease  see [2XSCMailIsPending[102X ([14X14.2-3[114X) for further information about the email
+  [33X[0;0YPlease  see [2XSCMailIsPending[102X ([14X15.2-3[114X) for further information about the email
   notification system in case [10XSCBistellarOptions.WriteLevel[110X is set to [22X2[122X.[133X
   
   [4X[32X  Example  [32X[104X

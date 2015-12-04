@@ -196,7 +196,8 @@ function(p,q)
 				od;
 			fi;
 			if not 	[imv[1][1],imv[2][1]] in verts then
-				Error();
+        Info(InfoSimpcomp,2,"SCSeriesSymmetricTorus: error in vertices.");
+				return fail;
 			fi;
 			if [imv[1][1],imv[2][1]] in 6cycle[idx] then
 				break;
@@ -246,7 +247,8 @@ function(p,q)
 				od;
 			fi;
 			if not 	[imv[1][1],imv[2][1]] in verts then
-				Error();
+        Info(InfoSimpcomp,2,"SCSeriesSymmetricTorus: error in vertices.");
+				return fail;
 			fi;
 			if [imv[1][1],imv[2][1]] in 3cycle[idx] then
 				break;
@@ -296,7 +298,8 @@ function(p,q)
 				od;
 			fi;
 			if not 	[imv[1][1],imv[2][1]] in verts then
-				Error();
+        Info(InfoSimpcomp,2,"SCSeriesSymmetricTorus: error in vertices.");
+				return fail;
 			fi;
 			if [imv[1][1],imv[2][1]] in 2cycle[idx] then
 				break;

@@ -1,6 +1,6 @@
-This is makeindex, version 2.15 [TeX Live 2009] (kpathsea + Thai support).
-Scanning input file simpcomp.idx....done (295 entries accepted, 0 rejected).
-Sorting entries.....done (2481 comparisons).
-Generating output file simpcomp.ind....done (307 lines written, 0 warnings).
+This is makeindex, version 2.15 [TeX Live 2013] (kpathsea + Thai support).
+Scanning input file simpcomp.idx....done (312 entries accepted, 0 rejected).
+Sorting entries.....done (2803 comparisons).
+Generating output file simpcomp.ind....done (324 lines written, 0 warnings).
 Output written in simpcomp.ind.
 Transcript written in simpcomp.ilg.

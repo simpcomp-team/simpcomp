@@ -177,10 +177,6 @@ function(complex)
 	
 	#factor out relations
 	g:=gprime/rels;
-	#p:=PresentationFpGroup(g,0);
-	#SimplifyPresentation(p);
-	#g:=FpGroupPresentation(p);
-	
 	return g;
 end);
 
@@ -849,14 +845,17 @@ InstallMethod(SCFVector,
 [SCIsSimplicialComplex],
 function(complex)
 
-	local f, dim;
+	local i, f, dim;
 	
 	dim:=SCDim(complex);
 	if dim = fail then
 		return fail;
 	fi;
 	
-	f:=List([0..dim],x->SCNumFaces(complex,x));
+	f:=[];
+	for i in Reversed([0..dim]) do
+		f[i+1]:=SCNumFaces(complex,i);
+	od;
 	if fail in f then
 		return fail;
 	fi;
@@ -884,33 +883,31 @@ InstallMethod(SCNumFacesOp,
 "for SCSimplicialComplex and Int",
 [SCIsSimplicialComplex,IsInt],
 function(complex, pos)
-
 	local f,nextFace,dim,n,face,index,k,c,cf,facets,fl,maxexpected;
 	
-	
-	nextFace:=function(face,n)
-	
-		local l,i,dim;
-		
-		l:=Length(face);
-		dim:=l-1;
-		face[l]:=face[l]+1;
-		
-		while(face[l]>n-(dim+1-l) and l>1) do
-			l:=l-1;
-			face[l]:=face[l]+1;
-			for i in [l+1..dim+1] do
-				face[i]:=face[i-1]+1;
-			od;
-		od;
-		
-		if(l=1 and face[1]>n-dim) then
-			return [];
-		fi;
-		
-		return face;
-	end;
-
+#	nextFace:=function(face,n)
+#	
+#		local l,i,dim;
+#		
+#		l:=Length(face);
+#		dim:=l-1;
+#		face[l]:=face[l]+1;
+#		
+#		while(face[l]>n-(dim+1-l) and l>1) do
+#			l:=l-1;
+#			face[l]:=face[l]+1;
+#			for i in [l+1..dim+1] do
+#				face[i]:=face[i-1]+1;
+#			od;
+#		od;
+#		
+#		if(l=1 and face[1]>n-dim) then
+#			return [];
+#		fi;
+#		
+#		return face;
+#	end;
+#
 	dim:=SCDim(complex);
 	if dim = fail then
 		return fail;
@@ -920,53 +917,57 @@ function(complex, pos)
 			return 0;
 	fi;
 	
-	dim:=SCDim(complex);
-	if(dim=fail) then
-		return fail;
-	fi;
-	
-	facets:=SCFacetsEx(complex);
-	n:=Length(SCVertices(complex));
+	fl:=SCFacesEx(complex,pos);
 
-	if(pos=0) then
-	 		return n;
-	fi;
-
-	if(dim=n-1 and dim > 0) then
-		#simplex
-		f:=Concatenation(SCFVectorBdSimplex(dim),[1]);
-			return f[pos+1];
-	elif(dim=n-2 and n=Length(facets) and dim > 0) then
-		#bd simplex
-		f:=SCFVectorBdSimplex(dim+1);
-			return f[pos+1];
-	fi;
+	return Size(fl);
 	
-	maxexpected:=Sum(List([1..dim],x->x*Binomial(n,x)));
-	if (pos in ComputedSCSkelExs(complex) and Position(ComputedSCSkelExs(complex),pos) mod 2 = 1) or maxexpected<2*10^8 then
-		fl:=SCSkelEx(complex,pos);
-		if(fl=fail) then
-			return fail;
-		fi;
-			return Length(fl);
-	fi;
-	
-	face:=[1..pos+1];
-	c:=0;
-	repeat
-		for cf in facets do
-			if(IsSubset(cf,face)) then
-				c:=c+1;
-				break;
-			elif(face[pos]<cf[1]) then
-				#MaximumList(face))<MinimumList(cf)
-				break;
-			fi;
-		od;
-		face:=nextFace(face,n);
-	until face=[];
-	
-	return c;
+#	facets:=SCFacetsEx(complex);
+#	n:=Length(SCVertices(complex));
+#
+#	if(pos=0) then
+#	 	return n;
+#	fi;
+#
+#	
+#
+#	# only true for (bounded) manifolds
+#	#if(dim=n-1 and dim > 0) then
+#	#	#simplex
+#	#	f:=Concatenation(SCFVectorBdSimplex(dim),[1]);
+#	#		return f[pos+1];
+#	#elif(dim=n-2 and n=Length(facets) and dim > 0) then
+#	#	#bd simplex
+#	#	f:=SCFVectorBdSimplex(dim+1);
+#	#		return f[pos+1];
+#	#fi;
+#	
+#	
+#
+#	maxexpected:=Sum(List([1..dim],x->x*Binomial(n,x)));
+#	if (pos in ComputedSCSkelExs(complex) and Position(ComputedSCSkelExs(complex),pos) mod 2 = 1) or maxexpected<2*10^8 then
+#		fl:=SCSkelEx(complex,pos);
+#		if(fl=fail) then
+#			return fail;
+#		fi;
+#			return Length(fl);
+#	fi;
+#	
+#	face:=[1..pos+1];
+#	c:=0;
+#	repeat
+#		for cf in facets do
+#			if(IsSubset(cf,face)) then
+#				c:=c+1;
+#				break;
+#			elif(face[pos]<cf[1]) then
+#				#MaximumList(face))<MinimumList(cf)
+#				break;
+#			fi;
+#		od;
+#		face:=nextFace(face,n);
+#	until face=[];
+#	
+#	return c;
 end);
 
 ################################################################################
@@ -1138,13 +1139,23 @@ InstallMethod(SCIsPseudoManifold,
 [SCIsSimplicialComplex],
 function(complex)
 
-	local  i, j, dfaces, dim, incidence, facets, pm, boundary, sc, name, labels;
+	local  i, j, dfaces, dim, incidence, facets, boundary, sc, name, labels, pos, idx, base, ispure;
 
 		
 	labels:=SCVertices(complex);
 	if(labels=fail) then
 		Info(InfoSimpcomp,1,"SCIsPseudoManifold: complex lacks vertex labels.");
 		return fail;
+	fi;
+
+	ispure:=SCIsPure(complex);
+	if ispure = fail then
+		return fail;
+	fi;
+
+	if ispure = false then
+		Info(InfoSimpcomp,3,"SCIsPseudoManifold: complex not pure.");
+		return false;
 	fi;
 	
 	dim:=SCDim(complex);
@@ -1158,26 +1169,29 @@ function(complex)
 	if dim = 0 then
 		SetSCBoundaryEx(complex,SCEmpty());
 		SetSCHasBoundary(complex,false);
-			return Size(facets) = 2;
+		return Size(facets) = 2;
 	fi;
-	
-	# count incidence for each (dim-1)-simplex in the interior of complex
-	for i in [1..Size(dfaces)] do
-		for j in facets do
-			if IsSubset(j,dfaces[i]) then
-				incidence[i]:=incidence[i] + 1;
+
+	idx:=[];	
+	for i in [1..dim+1] do
+		idx[i]:=[1..dim+1];
+		Remove(idx[i],i);
+	od;
+	for i in [1..Size(facets)] do
+		for j in [1..dim+1] do
+			base:=facets[i]{idx[j]};
+			pos:=PositionSorted(dfaces,base);
+			incidence[pos]:=incidence[pos]+1;
+			if incidence[pos] > 2 then 
+				return false;
 			fi;
 		od;
-		if not incidence[i] in [1,2] then
-					return false;
-		fi;
 	od;
+
 	boundary:=[];
 	for i in [1..Size(dfaces)] do
 		if incidence[i]=1 then
 			Add(boundary,dfaces[i]);
-		elif incidence[i]>2 then
-					return false;
 		fi;
 	od;
 
@@ -1186,7 +1200,7 @@ function(complex)
 		sc:=SCEmpty();
 	else
 		SetSCHasBoundary(complex,true);
-		sc:=SCFromFacets(SCIntFunc.RelabelSimplexList(boundary,labels));
+		sc:=SCFromFacets(boundary);
 	fi;
 
 	name:=SCName(complex);
@@ -1432,14 +1446,24 @@ function(complex)
 end);
 
 ################################################################################
-##<#GAPDoc Label="SCHomology">
+##<#GAPDoc Label="SCHomologyClassic">
 ## <ManSection>
-## <Meth Name="SCHomology" Arg="complex"/>
+## <Func Name="SCHomologyClassic" Arg="complex"/>
 ## <Returns> a list of pairs of the form <C>[ integer, list ]</C>.</Returns>
 ## <Description>
-## Computes the integral simplicial homology groups of a simplicial complex <Arg>complex</Arg> (internally calls the function <C>SimplicialHomology(complex.FacetsEx)</C> from the <Package>homology</Package> package, version 1.4.2., see <Cite Key="Dumas04Homology" />).<P/>
-## If the <Package>homology</Package> package is not available, this function call falls back to <Ref Meth="SCHomologyInternal" />.
-## The output is a list of homology groups of the form <M>[H_0,....,H_d]</M>, where <M>d</M> is the dimension of <Arg>complex</Arg>. The format of the homology groups <M>H_i</M> is given in terms of their maximal cyclic subgroups, i.e. a homology group <M>H_i\cong \mathbb{Z}^f + \mathbb{Z} / t_1 \mathbb{Z} \times \dots \times \mathbb{Z} / t_n \mathbb{Z}</M> is returned in form of a list <M>[ f, [t_1,...,t_n] ]</M>, where <M>f</M> is the (integer) free part of <M>H_i</M> and <M>t_i</M> denotes the torsion parts of <M>H_i</M> ordered in weakly increasing size.
+## Computes the integral simplicial homology groups of a simplicial complex <Arg>complex</Arg> 
+## (internally calls the function <C>SimplicialHomology(complex.FacetsEx)</C> from the 
+## <Package>homology</Package> package, see <Cite Key="Dumas04Homology" />).<P/>
+##
+## If the <Package>homology</Package> package is not available, this function call 
+## falls back to <Ref Func="SCHomologyInternal" />.
+## The output is a list of homology groups of the form <M>[H_0,....,H_d]</M>, where 
+## <M>d</M> is the dimension of <Arg>complex</Arg>. The format of the homology groups 
+## <M>H_i</M> is given in terms of their maximal cyclic subgroups, i.e. a homology group 
+## <M>H_i\cong \mathbb{Z}^f + \mathbb{Z} / t_1 \mathbb{Z} \times \dots \times \mathbb{Z} / t_n \mathbb{Z}</M> 
+## is returned in form of a list <M>[ f, [t_1,...,t_n] ]</M>, where <M>f</M> is the (integer) 
+## free part of <M>H_i</M> and <M>t_i</M> denotes the torsion parts of <M>H_i</M> ordered in 
+## weakly increasing size.<P/>
 ## <Example>
 ## gap> SCLib.SearchByName("K^2");
 ## gap> kleinBottle:=SCLib.Load(last[1][1]);;
@@ -2713,7 +2737,7 @@ InstallMethod(SCBoundaryEx,
 [SCIsSimplicialComplex],
 function(complex)
 
-	local  dim, B, i, incidence, facets, faces, elements, bd,bdc,name,sc,labels;
+	local  dim, labels, ispm;
 
 
 	labels:=SCVertices(complex);
@@ -2727,47 +2751,15 @@ function(complex)
 	fi;
 	if dim = 0 then
 		SetSCHasBoundary(complex,false);
-			return SCEmpty();
+		return SCEmpty();
 	fi;
 	
-	facets:=SCFacetsEx(complex);
-	faces:=SCSkelEx(complex,dim-1);
-	if facets=fail or facets=fail then
+	ispm:=SCIsPseudoManifold(complex);
+	if ispm = fail then
 		return fail;
 	fi;
-	
-	B:=[];
-	incidence:=ListWithIdenticalEntries(Size(faces),0);
-	for elements in facets do
-		for i in [1..Size(faces)] do
-			if IsSubset(elements,faces[i]) then
-				incidence[i]:=incidence[i] + 1;
-				if incidence[i]>2 then
-					Info(InfoSimpcomp,1,"SCBoundaryEx: wrong incidence (",incidence[i],") -- complex is not a pseudomanifold.");
-					return fail;
-				fi;
-			fi;
-		od;
-	od;
 
-	for i in [1..Size(incidence)] do
-		if incidence[i]=1 then
-			Add(B,faces[i]);
-		fi;
-	od;
-
-	if B=[] then
-		SetSCHasBoundary(complex,false);
-		sc:=SCEmpty();
-	else
-		SetSCHasBoundary(complex,true);
-		name:=SCName(complex);
-		sc:=SCFromFacets(B);
-		if(name<>fail) then
-			SCRename(sc,Concatenation(["Bd(",name,")"]));
-		fi;
-	fi;
-	return sc;
+	return SCBoundaryEx(complex);
 end);
 
 
@@ -3069,7 +3061,7 @@ InstallMethod(SCSkelExOp,
 [SCIsSimplicialComplex,IsInt],
 function(complex, k)
 
-	local cdim,i,all,facets;
+	local cdim,i,facets,face,idx,computed,dict,isPure;
 	
 	
 	cdim:=SCDim(complex);
@@ -3077,22 +3069,58 @@ function(complex, k)
 	if(cdim=fail) then
 		return fail;
 	fi;
-	
-	if(k<0 or k>cdim) then
-			return [];
-	fi;
 
 	facets:=SCFacetsEx(complex);
 	if facets=fail then
 		return fail;
 	fi;
-	all:=[];
-	for i in facets do
-		Append(all,Combinations(i,k+1));
-	od;
-	all:=Set(all);
 	
-	return all;
+	if(k<0 or k>cdim) then
+			return [];
+	fi;
+
+	isPure:=SCIsPure(complex);
+	if isPure = fail then
+		return fail;
+	fi;
+
+	dict:=NewDictionary([1..k],false);
+	computed:=ComputedSCSkelExs(complex);
+	idx:=-1;
+	for i in [k+1..cdim+1] do
+		if i in computed then
+			idx:=Position(computed,i)+1;
+			break;
+		fi;
+	od;
+	if idx > -1 then
+		for i in computed[idx] do
+			for face in Combinations(i,k+1) do
+				if not KnowsDictionary(dict,face) then
+					AddDictionary(dict,face);
+				fi;
+			od;
+		od;
+		# in case complex is not pure
+		if not isPure then
+			for face in facets do
+				if Size(face) = k+1 then
+					if not KnowsDictionary(dict,face) then
+						AddDictionary(dict,face);
+					fi;
+				fi;
+			od;
+		fi;
+	else
+		for i in facets do
+			for face in Combinations(i,k+1) do
+				if not KnowsDictionary(dict,face) then
+					AddDictionary(dict,face);
+				fi;
+			od;
+		od;
+	fi;
+	return dict!.list;
 end);
 
 ################################################################################
@@ -3167,7 +3195,10 @@ function(complex)
 	if(dim=fail) then
 		return fail;
 	fi;
-	faces:=List([0..dim],x->SCSkelEx(complex,x));
+	faces:=[];
+	for i in Reversed([0..dim]) do
+		faces[i+1]:=SCSkelEx(complex,i);
+	od;
 	if fail in faces then
 		return fail;
 	fi;
@@ -3717,7 +3748,7 @@ end);
 
 SCIntFunc.heegaardSplitting:=function(arg)
 
-	local M,start,vertices,n,comb,sz,ctr,m1,m2,d1,d2,idx,dim,manifold,j,i,hom,coll,lowerBound,maxGenus,genus,transitivity;
+	local M,start,vertices,n,comb,sl,sz,ctr,m1,m2,d1,d2,idx,dim,manifold,j,i,hom,coll,lowerBound,maxGenus,genus,transitivity;
 	
 	M:=arg[1];
 	if Size(arg) = 2 then
@@ -3785,6 +3816,7 @@ SCIntFunc.heegaardSplitting:=function(arg)
 
 	transitivity:=Transitivity(SCAutomorphismGroup(M));
 
+
 	for j in [idx..Int(n/2)] do
 	  comb:=Combinations(vertices{[transitivity+1..Size(vertices)]},j-transitivity);
 	  sz:=Int(Minimum(1000,Size(comb)/10)); 
@@ -3806,7 +3838,8 @@ SCIntFunc.heegaardSplitting:=function(arg)
 			return fail;
 		fi;
 		if d1 <= 1 and d2 <= 1 then
-			genus:=SCGenus(SCSlicing(M,[List(m1,x->Position(vertices,x)),List(m2,x->Position(vertices,x))]));
+			sl:=SCSlicing(M,[List(m1,x->Position(vertices,x)),List(m2,x->Position(vertices,x))]);
+			genus:=SCGenus(sl);
 			if genus = fail then
 				return fail;
 			else

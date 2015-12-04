@@ -266,7 +266,7 @@
 	<Section Label="sec:MorseTheory">
 	<Heading>Polyhedral Morse theory and slicings</Heading>
 	
-	In the field of PL-topology Kühnel developed what one might call a polyhedral Morse theory (compare <Cite Key="Kuehnel95TightPolySubm" />, not to be confused with Forman's discrete Morse theory for cell complexes <Cite Key="Forman95DiscrMorseTheoryCellCompl" />):<Br/><Br/>
+	In the field of PL-topology Kühnel developed what one might call a polyhedral Morse theory (compare <Cite Key="Kuehnel95TightPolySubm" />, not to be confused with Forman's discrete Morse theory for cell complexes which is decribed in Section <Ref Chap="sec:DMT" />):<Br/><Br/>
 	
 	Let <M>M</M> be a combinatorial <M>d</M>-manifold. A function <M>f:M \to \mathbb{R}</M> is called <E>regular simplexwise linear (rsl)</E> if <M>f(v) \neq f(w)</M> for any two vertices <M>w \neq v</M> and if <M>f</M> is linear when restricted to an arbitrary simplex of the triangulation.<Br/><Br/>
 	
@@ -316,7 +316,11 @@
 	]]>
 	</Alt>
 	
-	
+	</Section>
+	<Section Label="sec:DMT"><Heading>Discrete Morse theory</Heading>
+
+	For an introduction into Forman's discrete Morse theory see <Cite Key="Forman95DiscrMorseTheoryCellCompl" />, not to be confused with Banchoff and Kühnel's theory of regular simplexwise linear functions which is described in Section <Ref Chap="sec:MorseTheory" />).<Br/><Br/>
+
 	</Section>
 	<Section Label="sec:tight"><Heading>Tightness and tight triangulations</Heading>
 	

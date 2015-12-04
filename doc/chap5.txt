@@ -80,7 +80,7 @@
   properties  such  that  each  property  only has to be calculated once. This
   function  returns  a copy of [3Xcomplex[103X with all properties (apart from Facets,
   Dim and Name) dropped, clearing all previously computed properties. See also
-  [2XSCPropertyDrop[102X ([14X17.1-8[114X) and [2XSCPropertyTmpDrop[102X ([14X17.1-13[114X).[133X
+  [2XSCPropertyDrop[102X ([14X18.1-8[114X) and [2XSCPropertyTmpDrop[102X ([14X18.1-13[114X).[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SC(SCFacets(SCBdCyclicPolytope(10,12)));[128X[104X
@@ -94,7 +94,7 @@
     [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> c.F; time;                                 [128X[104X
     [4X[28X [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ][128X[104X
-    [4X[28X 36[128X[104X
+    [4X[28X 60[128X[104X
     [4X[28X gap> c.F; time;                                 [128X[104X
     [4X[28X [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ][128X[104X
     [4X[28X 0[128X[104X
@@ -109,7 +109,7 @@
     [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> c.F; time;                                 [128X[104X
     [4X[28X [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ][128X[104X
-    [4X[28X 36[128X[104X
+    [4X[28X 56[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -235,7 +235,7 @@
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
-  [33X[0;0YCalls [2XSCDifference[102X ([14X6.10-6[114X)([3Xcomplex1[103X, [3Xcomplex2[103X)[133X
+  [33X[0;0YCalls [2XSCDifference[102X ([14X6.10-5[114X)([3Xcomplex1[103X, [3Xcomplex2[103X)[133X
   
   [1X5.2-7 Operation * (SCSimplicialComplex, SCSimplicialComplex)[101X
   
@@ -315,7 +315,7 @@
             otherwise.[133X
   
   [33X[0;0YComputes   the   ``difference''  of  two  simplicial  complexes  by  calling
-  [2XSCDifference[102X ([14X6.10-6[114X).[133X
+  [2XSCDifference[102X ([14X6.10-5[114X).[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SCBdSimplex(3);;[128X[104X
@@ -336,7 +336,7 @@
             otherwise.[133X
   
   [33X[0;0YComputes  the  ``intersection''  of  two  simplicial  complexes  by  calling
-  [2XSCIntersection[102X ([14X6.10-9[114X).[133X
+  [2XSCIntersection[102X ([14X6.10-8[114X).[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SCBdSimplex(3);;        [128X[104X
