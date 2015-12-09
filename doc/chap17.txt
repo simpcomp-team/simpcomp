@@ -667,8 +667,3 @@
     [4X[28X  [  [ 4, 3 ],  [ 4, 5 ],  [ 6, 3 ],  [ 6, 5 ] ] ][128X[104X
   [4X[32X[104X
   
-  [33X[0;0YFurther  example  computations  can  be found in the slides of various talks
-  about     [5Xsimpcomp[105X,     available     from     the     [5Xsimpcomp[105X     homepage
-  ([10Xhttp://www.igt.uni-stuttgart.de/LstDiffgeo/simpcomp/[110X), and in Appendix A of
-  [Spr11a].[133X
-  
