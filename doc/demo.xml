@@ -649,6 +649,5 @@ gap> PrintArray(sl.Facets);
   [  [ 4, 3 ],  [ 4, 5 ],  [ 6, 3 ],  [ 6, 5 ] ] ]
 </Log></Section>
 
-Further example computations can be found in the slides of various talks about <Package>simpcomp</Package>, available from the <Package>simpcomp</Package> homepage (<C>http://www.igt.uni-stuttgart.de/LstDiffgeo/simpcomp/</C>), and in Appendix A of <Cite Key="Spreer10Diss"/>. 
 	</Chapter>
 
