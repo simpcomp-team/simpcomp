@@ -207,7 +207,7 @@
     [4X[28X Line 1220 : [128X[104X
     [4X[28X + simpcomp package test[128X[104X
     [4X[28X Line 1221 : [128X[104X
-    [4X[28X + GAP4stones: 18144[128X[104X
+    [4X[28X + GAP4stones: 18936[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
