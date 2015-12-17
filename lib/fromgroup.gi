@@ -242,8 +242,8 @@ InstallGlobalFunction(SCsFromGroupExt,
 
   t:=Transitivity(G);
   if t < 1 then
-    Info(InfoSimpcomp,2,"Automorphism is not transitive.");
-    continue;
+    Info(InfoSimpcomp,1,"Automorphism is not transitive.");
+    return fail;
   fi;
   
   #complex
@@ -659,7 +659,11 @@ InstallGlobalFunction(SCsFromGroupExt,
   
   if(matrixRows<1 or matrixCols<1) then
     Info(InfoSimpcomp,2,"No more computations needed (no more rows/cols).");
-    continue;
+    if removeDoubleEntries then
+      return isoSigs;
+    else
+      return complex_collection;
+    fi;
   fi;
     
   GASMAN("collect");
