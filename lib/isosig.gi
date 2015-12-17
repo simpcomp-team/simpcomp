@@ -455,7 +455,8 @@ function(str)
 				fi;
 			fi;
 			if not skip then
-				new:=Union(comb,[sig[ctr2]]);
+				new:=Concatenation(comb,[sig[ctr2]]);
+        Sort(new);
 				Add(facets,new);
 				ctr2:=ctr2+1;
 				skip := true;
@@ -467,7 +468,13 @@ function(str)
 		od;
 		if not done then ctr1:=ctr1+1; fi;
 	od;
+
 	c := SCFromFacets(facets);
+
+  if c = fail then
+    Print(facets,"\n");    
+  fi;
+
 	SetSCExportIsoSig(c,str);
 
 	return c;
