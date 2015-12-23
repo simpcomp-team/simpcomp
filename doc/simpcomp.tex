@@ -110,7 +110,7 @@
 {\Huge \textbf{A \textsf{GAP} toolbox for simplicial complexes\mbox{}}}\\
 \vfill
 
-{\Huge Version 2.1.2\mbox{}}\\[1cm]
+{\Huge Version 2.1.4\mbox{}}\\[1cm]
 {December 2015  \begin{center} \vspace*{1cm}
 \includegraphics[width=.4\textwidth]{figures/shrimpmanual}\\ \end{center}  \mbox{}}\\[1cm]
 \mbox{}\\[2cm]
@@ -312,7 +312,7 @@ verifies that the results are correct.
  To test the functionality of \textsf{simpcomp} you can run the function \texttt{SCRunTest} (\ref{SCRunTest}) from the \textsf{GAP} console: 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, Version 2.1.2
+  + test simpcomp package, Version 2.1.4
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@|
@@ -337,9 +337,9 @@ calls to functions of the package \textsf{simpcomp} can be controlled by setting
   @manual{simpcomp,
   	author = "Felix Effenberger and Jonathan Spreer",
   	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
-  	          {V}ersion 2.1.2",
+  	          {V}ersion 2.1.4",
   	year   = "2015",
-  	url    = "\url{https://github.com/simpcomp-team/simpcomp/}",
+  	url    = "\url{https://github.com/simpcomp-team/simpcomp}",
   }
 \end{verbatim}
  If you are not using BibTeX, you can use the following entry inside the
@@ -348,9 +348,9 @@ bibliography environment of LaTeX.
   \bibitem{simpcomp}
   F.~Effenberger and J.~Spreer,
   \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
-  Version 2.1.2, 
+  Version 2.1.4, 
   2015,
-  \url{https://github.com/simpcomp-team/simpcomp/}.
+  \url{https://github.com/simpcomp-team/simpcomp}.
 \end{verbatim}
  }
 
@@ -1607,7 +1607,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   56
+   60
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
    0
@@ -2427,7 +2427,7 @@ pseudomanifold. Compare \texttt{SCExportIsoSig} (\ref{SCExportIsoSig}), which re
    12
    gap> s:=SCExportIsoSig(c); time;
    "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
-   44
+   28
    
 \end{Verbatim}
  }
@@ -9654,7 +9654,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
    #I  SCIsTight: processed 30000 of 40320 rsl-functions so far, all perfect.
    #I  SCIsTight: processed 40000 of 40320 rsl-functions so far, all perfect.
    true
-   23760
+   8136
    
 \end{Verbatim}
  
@@ -9673,7 +9673,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
      98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 
      113, 114, 115, 116, 117, 118, 119, 120 ], complex not tight.
    false
-   48
+   16
    
 \end{Verbatim}
  
@@ -10373,7 +10373,7 @@ a list of pairs of the form \texttt{[ integer, list ]} upon success, fail otherw
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandom,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   56
+   60
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
@@ -10389,7 +10389,7 @@ a list of pairs of the form \texttt{[ integer, list ]} upon success, fail otherw
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   180
+   176
    
 \end{Verbatim}
  }
@@ -11804,7 +11804,7 @@ differs from system to system.
    Line 1220 : 
    + simpcomp package test
    Line 1221 : 
-   + GAP4stones: 18936
+   + GAP4stones: 54525
    true
    
 \end{Verbatim}
@@ -12274,7 +12274,7 @@ Section \ref{sec:generateFromOld}, which will be described in the next sections.
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@#first run functionality test on simpcomp|
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, version 2.1.2
+  + test simpcomp package, version 2.1.4
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@#all ok|
@@ -12925,7 +12925,7 @@ surfaces and slicings see the Sections \ref{sec:NormSurfTheory} and \ref{sec:Mor
 \end{Verbatim}
 }
 
- }
+ Further example computations can be found in the slides of various talks about \textsf{simpcomp}, available from the \textsf{simpcomp} homepage (\texttt{https://github.com/simpcomp-team/simpcomp}), and in Appendix A of \cite{Spreer10Diss}. }
 
  
 \chapter{\textcolor{Chapter }{\textsf{simpcomp} internals}}\label{chap:internals}

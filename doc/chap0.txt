@@ -6,7 +6,7 @@
                      [1XA [5XGAP[105X toolbox for simplicial complexes[101X
   
   
-                                 Version 2.1.2
+                                 Version 2.1.4
   
   
                                  December 2015

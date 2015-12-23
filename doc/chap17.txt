@@ -24,7 +24,7 @@
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27X#first run functionality test on simpcomp[127X[104X
     [4X[25Xgap>[125X [27XSCRunTest();[127X[104X
-    [4X[28X+ test simpcomp package, version 2.1.2[128X[104X
+    [4X[28X+ test simpcomp package, version 2.1.4[128X[104X
     [4X[28X+ GAP4stones: 69988[128X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27X#all ok[127X[104X
@@ -666,4 +666,8 @@
     [4X[28X  [  [ 4, 1 ],  [ 4, 5 ],  [ 6, 1 ],  [ 6, 5 ] ],[128X[104X
     [4X[28X  [  [ 4, 3 ],  [ 4, 5 ],  [ 6, 3 ],  [ 6, 5 ] ] ][128X[104X
   [4X[32X[104X
+  
+  [33X[0;0YFurther  example  computations  can  be found in the slides of various talks
+  about     [5Xsimpcomp[105X,     available     from     the     [5Xsimpcomp[105X     homepage
+  ([10Xhttps://github.com/simpcomp-team/simpcomp[110X), and in Appendix A of [Spr11a].[133X
   
