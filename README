@@ -45,20 +45,20 @@ Dependencies
 Download and installation
 =========================
    
- * Install the GAP system (http://www.gap-system.org), version 4.5 or higher.
+ * Install the [http://www.gap-system.org GAP] system, version 4.5 or higher.
 
-   + Under Linux, run *"rsync --port=8731 -azv rsync.gap-system.org::gap4r5/gapsync/gapsync ."*
-      followed by *"./gapsync"* (see http://www.math.rwth-aachen.de/~Frank.Luebeck/gap/rsync/index.html
-      for details). You may need admin rights to perform this step.
+ ** Under Linux, run *"rsync --port=8731 -azv rsync.gap-system.org::gap4r5/gapsync/gapsync ."*
+    followed by *"./gapsync"* (see *[http://www.math.rwth-aachen.de/~Frank.Luebeck/gap/rsync/index.html]*
+    for details). You may need admin rights to perform this step.
 
-   + Under Windows: download the Windows installer under http://www.gap-system.org/pub/gap/windowsinstaller/gap4r7p5_2014_05_24-20_02.exe
-      and follow the instructions given under http://www.gap-system.org/ukrgap/wininst/.
+ ** Under Windows: download the Windows installer under *[http://www.gap-system.org/pub/gap/windowsinstaller/gap4r7p5_2014_05_24-20_02.exe]*
+    and follow the instructions given under *[http://www.gap-system.org/ukrgap/wininst/]*.
 
-   + Under Mac OS X (or Linux): follow the instructions given under http://gap-system.github.io/bob/
+ ** Under Mac OS X (or Linux): follow the instructions given under *[http://gap-system.github.io/bob/]*
 
- * (Optional) Download the current simpcomp version from above (This step is only required if you want to
+ * (Optional) Download the current *[https://github.com/simpcomp-team/simpcomp simpcomp]* Version (This step is only required if you want to
    use features of simpcomp which are not yet included in the official release). Copy folder *GAPROOT/pkg/simpcomp* to *GAPROOT/pkg/simpcomp-old*
-   and unpack the archive to the directory *GAPROOT/pkg/* (default for *GAPROOT* is */usr/local/lib/gap4r7*).
+   and unpack the archive to the directory *GAPROOT/pkg/* (default for *GAPROOT* is */usr/local/lib/gap4r5*).
 
  * (Optional) Run *"chmod +x configure; ./configure; make; make install; make clean"* (This step is only required if you want to use 
    *SCReduceComplexFast()*). You may need admin rights to perform this step.
@@ -127,7 +127,7 @@ Download and installation
   by Leonard H. Soicher (http://www.maths.qmul.ac.uk/~leonard/).
   Homepage: http://www.maths.qmul.ac.uk/~leonard/grape/
   ──────────────────────────────────────────────────────────────────────────────
-  Loading simpcomp 2.1.1
+  Loading simpcomp 2.1.4
   by F.Effenberger and J.Spreer
   https://github.com/simpcomp-team/simpcomp
   true
@@ -145,52 +145,6 @@ Download and installation
 
 Changes
 =======
-
-04/06/2015 - Version 2.1.1: Minor update
-- Minor changes in documentation/manual
-
-20/05/2015 - Version 2.1.0: Major update, support for discrete Morse theory added
-- Added functions SCExportIsoSig, SCExportToString,
-  SCFromIsoSig for isomorphism signature support and
-  compressing
-- Added infinite family of transitive triangulations
-  (S^2xS^2)^k (function SCSeriesS2xS2(k))
-- Added function SCExportRecognizer to export 3-manifolds
-  to Matveev's 3-manifold recognizer
-- Fixed bug in SCFVector, non-manifolds where treated
-  like the simplex or the boundary of the simplex
-- Improved collapsing sequence (it is now using a Hasse
-  diagram, SCIntFunc.SCHasseDiagram())
-- Improved high dimensional bistellar moves flip strategy
-  (both for SCReduceComplex() and SCReduceComplexFast())
-- Updated references
-- Added chapter about discrete Morse theory in documentation
-- Added support for discrete Morse theory (SCHasseDiagram,
-  SCMorseEngstrom, SCMorseRandom, SCMorseUST, SCMorseSpec,
-  SCMorseRandomLex, SCMorseRandomRevLex)
-- Added Wilson's algorithm for uniform spanning trees
-  SCSpanningTreeRandom
-- Added new functionality based on discrete Morse theory:
-  SCHomologyEx, SCHomology, SCIsSphere, SCIsManifold
-- Old homology and manifold verification code is now
-  available under SCHomologyClassic and SCBistellarIsManifold
-- Fixed bug in SCSkelEx and improved performance
-- Fixed bug in SCCyclic3Mfld(22,X),
-  X = 1437, 2087, 2660, 2827, 2844, 3079
-- Fixed bug in SCMove for d-moves
-- Fixed bug in SCStronglyConnectedComponents and improved
-  performance
-- Fixed bug in SCNumFaces
-- Improved functions SCIsPseudoManifold, SCHasBoundary,
-  SCBoundarEx and SCBoundary
-
-12/12/2013 - Version 2.0.0: FIRST RELEASE AS GAP SHARED PACKAGE
-- Added functions SCExportIsoSig, SCExportToString, SCFromIsoSig for 
-  isomorphism signature support and compressing
-- Added infinite family of transitive triangulations (S2xS2)^k
-  (function SCSeriesS2xS2(k))
-- Added function SCExportRecognizer to export 3-manifolds to Matveev's
-  3-manifold recognizer 
 
 31/01/2013 - Version 1.6.1: Minor update.
 - Fixed minor bug in SCChiralMap and SCRegularMap.
@@ -246,8 +200,7 @@ Changes
 
 16/08/2011 - Version 1.5.1: Minor update
 - Added the GAP package ''io'' to the list of ''NeededOtherPackages''.
-- Fixed bug in function SCMove (thanks to Paul VanKoughnett for reporting!),
-  bistellar move was performed on argument, too.
+- Fixed bug in function SCMove (thanks to Paul VanKoughnett for reporting!), bistellar move was performed on argument, too.
 - Fixed bug in shelling code (thanks to Samuel Kolins for reporting!),
   shelling intersection was not checked for pureness.
 - Extended SCExportJavaView to work with higher-dimensional complexes.
@@ -380,7 +333,8 @@ simpcomp:
 
  * Further extension of the library
   
- * Flexibilization of bistellar flip interface
+  Flexibilization of bistellar flip interface
+
 
 		
 Bugs
@@ -394,19 +348,20 @@ authors.
 Contact
 =======
 
-Felix Effenberger
-  Max Planck Institute for Mathematics in the Sciences
-  Inselstr. 22, 04103 Leipzig, Germany
+Felix Effenberger, felix.effenberger@mis.mpg.de
 
-  E-Mail: Felix.effenberger@mis.mpg.de
-  Web: http://personal-homepages.mis.mpg.de/effen/
+Address: Max Planck Institute for
+         Mathematics in the Sciences
+         Inselstr. 22
+         04103 Leipzig
+         GERMANY
 
-Jonathan Spreer
-  The University of Queensland
-  School of Mathematics and Physics
-  Computational Geometry and Topology Group
-  St. Lucia, Queensland, 4072, Australia
+ and
 
-  E-Mail: j.spreer@uq.edu.au
-  Web: http://www.tacet.de/Jonathan
+Jonathan Spreer, j.spreer@uq.edu.au
 
+Address: Computational Geometry and Topology Group
+         School of Mathematics and Physics
+         The University of Queensland
+         St. Lucia, Queensland, 4072
+         AUSTRALIA
