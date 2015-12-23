@@ -957,7 +957,7 @@ InstallGlobalFunction(SCsFromGroupByTransitivity,
     not IsPosInt(k) or not IsBool(maniflag) or not IsBool(computeAutGroup) 
     or not IsBool(removeDoubleEntries)) then
     Info(InfoSimpcomp,1,"SCsFromGroupCheckByTransitivity: 'n' and 'd' must ",
-      "be positive integers or a list of positive integers, k must be a ",
+      "be positive integers or a list of positive integers, 'k' must be a ",
       "positive integer, 'maniflag', computeAutGroup' and ",
       "'removeDoubleEntries' must be boolean");
     return fail;
@@ -1015,7 +1015,9 @@ InstallGlobalFunction(SCsFromGroupByTransitivity,
       od;
     od;
   else
-    break;
+    Info(InfoSimpcomp,1,"SCsFromGroupByTransitivity: third argument 'k' must ",
+      "be a positive integer.");
+    return fail;
   fi;
   sum:=0;
   for i in Gcollection do
