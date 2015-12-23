@@ -1,3 +1,7 @@
+
+23/12/2015 - Version 2.1.4: Minor update
+- Fixed minor bug in SCsFromGroupByTransitivity();
+
 04/06/2015 - Version 2.1.1: Minor update
 - Minor changes in documentation/manual
 
