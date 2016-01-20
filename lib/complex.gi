@@ -31,7 +31,7 @@
 SCSimplicialComplexFamily:=NewFamily("SCSimplicialComplexFamily",
   SCIsSimplicialComplex and IsMutable and IsCopyable);
 SCSimplicialComplexType:=NewType(SCSimplicialComplexFamily,
-  SCIsSimplicialComplex and IsAttributeStoringRep);
+  SCIsSimplicialComplex and IsAttributeStoringRep and IsCollection);
 
 
 #properties of which the values are displayed by ViewObj of SCSimplicialComplex 
