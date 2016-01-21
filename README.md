@@ -146,7 +146,6 @@ Download and installation
 Changes
 =======
 
-
 23/12/2015 - Version 2.1.4: Minor update
 - Fixed minor bug in SCsFromGroupByTransitivity();
 
@@ -371,10 +370,14 @@ Roadmap
 The following features are planned to be supported in future versions of
 simpcomp:
 
- * Further extension of the library
+ * Algorithm to decide tightness, code for sigma vectors, etc
   
-  Flexibilization of bistellar flip interface
-
+  Better simplification strategies
+  
+  Coverings (finite index subgroups)
+  
+  Presentation two-complex (from fp-group)
+  
 
 		
 Bugs
@@ -404,4 +407,4 @@ Address: Computational Geometry and Topology Group
          School of Mathematics and Physics
          The University of Queensland
          St. Lucia, Queensland, 4072
-         AUSTRALIAny
+         AUSTRALIA
