@@ -127,9 +127,9 @@ Download and installation
   by Leonard H. Soicher (http://www.maths.qmul.ac.uk/~leonard/).
   Homepage: http://www.maths.qmul.ac.uk/~leonard/grape/
   ──────────────────────────────────────────────────────────────────────────────
-  Loading simpcomp 2.1.4
+  Loading simpcomp 2.1.5
   by F.Effenberger and J.Spreer
-  https://github.com/simpcomp-team/simpcomp
+  https://github.com/simpcomp-team/simpcomp/
   true
 </pre>
 
@@ -145,6 +145,16 @@ Download and installation
 
 Changes
 =======
+
+
+21/01/2016 - Version 2.1.5: SHORT RELEASE DESCRIPTION (MINOR/MAJOR UPDATE, etc)
+- FIRST RELEASE COMMENT
+- SECOND RELEASE COMMENT
+  SPREAD
+  OUT
+  ACROSS SEVELRAL LINES
+- LAST RELEASE COMMENT
+  ON TWO LINES
 
 23/12/2015 - Version 2.1.4: Minor update
 - Fixed minor bug in SCsFromGroupByTransitivity();
