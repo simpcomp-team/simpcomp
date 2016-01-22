@@ -411,7 +411,7 @@ end);
 ## complexity is reduced by the factor of <M>n \cdot (n-1) \cdot \dots \cdot 
 ## (n-k+1)</M>.
 ## <Example>
-## gap> list:=SCLib.SearchBy("S^2~S^1 (VT)"){[1..9]};
+## gap> list:=SCLib.SearchByName("S^2~S^1 (VT)"){[1..9]};
 ## gap> s2s1:=SCLib.Load(list[1][1]);
 ## [SimplicialComplex
 ## 
@@ -654,9 +654,9 @@ function(complex)
   
   if dim <= 3 then
     ism:=SCIsManifold(cc);
-  fi;
-  if ism = fail then
-    return fail;
+    if ism = fail then
+      return fail;
+    fi;
   fi;
 
   if SCIsKNeighborly(cc,2) = false then
@@ -693,21 +693,14 @@ function(complex)
 
     if dim = 3 then
       beta:=SCFpBettiNumbers(cc,2);
-      if not (n-4)*(n-5) = 20*beta[2] then
-        Info(InfoSimpcomp,1,"SCIsTight: complex is 3-dimensional but not ",
-          "tight neighbourly, and thus not tight.");
-        return false;
+      if  (n-4)*(n-5) = 20*beta[2] then
+        Info(InfoSimpcomp,1,"SCIsTight: complex is 3-dimensional and ",
+          "tight neighbourly, and thus tight.");
+        return true;
       else
-        tmp:=SCIsInKd(cc,1);
-        if tmp=true then
-          Info(InfoSimpcomp,1,"SCIsTight: complex is 3-dimensional, ",
-            "2-neighbourly, and stacked, and thus tight.");
+         Info(InfoSimpcomp,1,"SCIsTight: complex is 3-dimensional but not ",
+          "tight neighbourly, and thus not tight.");
           return true;
-        elif tmp=false then
-          Info(InfoSimpcomp,1,"SCIsTight: complex is 3-dimensional but not ",
-            "stacked, and thus not tight.");
-          return false;
-        fi;
       fi;
     fi;     
 
