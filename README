@@ -127,7 +127,7 @@ Download and installation
   by Leonard H. Soicher (http://www.maths.qmul.ac.uk/~leonard/).
   Homepage: http://www.maths.qmul.ac.uk/~leonard/grape/
   ──────────────────────────────────────────────────────────────────────────────
-  Loading simpcomp 2.1.5
+  Loading simpcomp 2.1.6
   by F.Effenberger and J.Spreer
   https://github.com/simpcomp-team/simpcomp/
   true
@@ -146,6 +146,9 @@ Download and installation
 Changes
 =======
 
+
+01/02/2016 - Version 2.1.6: Minor update
+- Minor changes in documentation/manual
 
 22/01/2016 - Version 2.1.5: Minor update
 - Minor changes in documentation/manual
