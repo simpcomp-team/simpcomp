@@ -62,7 +62,7 @@
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
-    [4X[28X Path="/home/jonathan/apps/gap4r5/pkg/simpcomp/complexes/"[128X[104X
+    [4X[28X Path="/home/jonathan/apps/gap4r7/pkg/simpcomp/complexes/"[128X[104X
     [4X[28X ][128X[104X
     [4X[28X gap> SCLib.Size;[128X[104X
     [4X[28X 7649[128X[104X
@@ -415,7 +415,7 @@
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
-    [4X[28X Path="/home/jonathan/apps/gap4r5/pkg/simpcomp/complexes/"[128X[104X
+    [4X[28X Path="/home/jonathan/apps/gap4r7/pkg/simpcomp/complexes/"[128X[104X
     [4X[28X ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X

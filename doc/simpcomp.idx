@@ -233,9 +233,9 @@
 \indexentry{SCBlowup@\texttt  {SCBlowup}|hyperpage}{156}
 \indexentry{SCMappingCylinder@\texttt  {SCMappingCylinder}|hyperpage}{158}
 \indexentry{SCIsTight@\texttt  {SCIsTight}|hyperpage}{159}
-\indexentry{SCMorseIsPerfect@\texttt  {SCMorseIsPerfect}|hyperpage}{164}
-\indexentry{SCSlicing@\texttt  {SCSlicing}|hyperpage}{164}
-\indexentry{SCMorseMultiplicityVector@\texttt  {SCMorseMultiplicityVector}|hyperpage}{165}
+\indexentry{SCMorseIsPerfect@\texttt  {SCMorseIsPerfect}|hyperpage}{163}
+\indexentry{SCSlicing@\texttt  {SCSlicing}|hyperpage}{163}
+\indexentry{SCMorseMultiplicityVector@\texttt  {SCMorseMultiplicityVector}|hyperpage}{164}
 \indexentry{SCMorseNumberOfCriticalPoints@\texttt  {SCMorseNumberOfCriticalPoints}|hyperpage}{165}
 \indexentry{SCCollapseGreedy@\texttt  {SCCollapseGreedy}|hyperpage}{166}
 \indexentry{SCCollapseLex@\texttt  {SCCollapseLex}|hyperpage}{167}

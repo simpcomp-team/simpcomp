@@ -281,7 +281,7 @@
   [33X[0;0YBuilds a random Morse function by removing a uniformly sampled spanning tree
   from the dual 1-skeleton followed by a collapsing approach. [3Xcomplex[103X needs to
   be  a  closed  weak  pseudomanifold  for  this  to  work. For details of the
-  algorithm, see [PS14].[133X
+  algorithm, see [PS15].[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SCBdSimplex(3);;[128X[104X
@@ -365,23 +365,23 @@
     [4X[28X gap> c := SCSeriesHomologySphere(2,3,5);;[128X[104X
     [4X[28X gap> SCHomologyEx(c,SCMorseRandom,SmithNormalFormIntegerMat); time;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X 156[128X[104X
+    [4X[28X 60[128X[104X
     [4X[28X gap> c := SCSeriesHomologySphere(2,3,5);;[128X[104X
     [4X[28X gap> SCHomologyEx(c,SCMorseRandomLex,SmithNormalFormIntegerMat); time;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X 164[128X[104X
+    [4X[28X 56[128X[104X
     [4X[28X gap> c := SCSeriesHomologySphere(2,3,5);;[128X[104X
     [4X[28X gap> SCHomologyEx(c,SCMorseRandomRevLex,SmithNormalFormIntegerMat); time;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X 168[128X[104X
+    [4X[28X 56[128X[104X
     [4X[28X gap> c := SCSeriesHomologySphere(2,3,5);;[128X[104X
     [4X[28X gap> SCHomologyEx(c,SCMorseEngstroem,SmithNormalFormIntegerMat); time;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X 336[128X[104X
+    [4X[28X 100[128X[104X
     [4X[28X gap> c := SCSeriesHomologySphere(2,3,5);;[128X[104X
     [4X[28X gap> SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X 500[128X[104X
+    [4X[28X 136[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -391,7 +391,7 @@
   [6XReturns:[106X  [33X[0;10Ya boolean value upon success, [10Xfail[110X otherweise.[133X
   
   [33X[0;0YComputes  if  the  [10XSCSimplicialComplex[110X  object  [3Xc[103X  is  simply connected. The
-  algorithm is a heuristic method and is described in [PS14]. Internally calls
+  algorithm is a heuristic method and is described in [PS15]. Internally calls
   [2XSCIsSimplyConnectedEx[102X ([14X12.1-15[114X).[133X
   
   [4X[32X  Example  [32X[104X
@@ -414,7 +414,7 @@
   dual  or  the  primal graph of [3Xc[103X will be used for a collapsing sequence. The
   optional  positive integer argument [3Xtries[103X determines the number of times the
   algorithm  will  try  to  find  a  collapsing  sequence.  The algorithm is a
-  heuristic method and is described in [PS14].[133X
+  heuristic method and is described in [PS15].[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> rp2:=SCSurface(1,false);;[128X[104X
@@ -437,7 +437,7 @@
   algorithm  uses  a  result due to [KS77] stating that, in dimension [22X≠ 4[122X, any
   simply  connected homology sphere with PL structure is a standard PL sphere.
   The  function  calls  [2XSCIsSimplyConnected[102X  ([14X12.1-14[114X)  which uses a heuristic
-  method described in [PS14].[133X
+  method described in [PS15].[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SCBdCyclicPolytope(4,20);;[128X[104X
@@ -454,7 +454,7 @@
   [29X[2XSCIsManifold[102X( [3Xc[103X ) [32X function
   [6XReturns:[106X  [33X[0;10Ya boolean value upon success, [10Xfail[110X otherweise.[133X
   
-  [33X[0;0YThe  algorithm  is  a  heuristic  method  and is described in [PS14] in more
+  [33X[0;0YThe  algorithm  is  a  heuristic  method  and is described in [PS15] in more
   detail. Internally calls [2XSCIsManifoldEx[102X ([14X12.1-18[114X).[133X
   
   [4X[32X  Example  [32X[104X
@@ -476,7 +476,7 @@
   or  not  [3Xc[103X  is  a combinatorial manifold. If [3Xquasi[103X is [10Xtrue[110X the [22X4[122X-dimensional
   links  are not verified to be standard PL [22X4[122X-spheres and [3Xc[103X is a combinatorial
   manifold  modulo  the smooth Poincare conjecture. By default [3Xquasi[103X is set to
-  [10Xfalse[110X.  The  algorithm  is  a heuristic method and is described in [PS14] in
+  [10Xfalse[110X.  The  algorithm  is  a heuristic method and is described in [PS15] in
   more detail.[133X
   
   [33X[0;0YSee  [2XSCBistellarIsManifold[102X  ([14X9.2-6[114X)  for  an alternative method for manifold

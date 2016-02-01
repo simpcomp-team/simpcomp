@@ -209,10 +209,10 @@
     [4X[28X gap> c:=SCSeriesBdHandleBody(3,9);;[128X[104X
     [4X[28X gap> s:=SCExportToString(c); time;[128X[104X
     [4X[28X "deffg.h.f.fahaiciai.i.hai.fbgeiagihbhceceba.g.gag"[128X[104X
-    [4X[28X 12[128X[104X
+    [4X[28X 0[128X[104X
     [4X[28X gap> s:=SCExportIsoSig(c); time;[128X[104X
     [4X[28X "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"[128X[104X
-    [4X[28X 60[128X[104X
+    [4X[28X 20[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -1073,9 +1073,9 @@
     [4X[28X gap> Mminus:=SCSpan(c,[1,2,3,4,9,10,11,12]);;                  [128X[104X
     [4X[28X gap> Mplus:=SCSpan(c,[5,6,7,8,13,14,15,16]);;                  [128X[104X
     [4X[28X gap> SCCollapseGreedy(Mminus).Facets;[128X[104X
-    [4X[28X [ [ 1, 2 ], [ 1, 12 ], [ 2, 10 ], [ 10, 11 ], [ 11, 12 ] ][128X[104X
+    [4X[28X [ [ 1, 9 ], [ 1, 10 ], [ 3, 10 ], [ 3, 11 ], [ 4, 9 ], [ 4, 12 ], [ 11, 12 ] ][128X[104X
     [4X[28X gap> SCCollapseGreedy(Mplus).Facets; [128X[104X
-    [4X[28X [ [ 6, 7 ], [ 6, 14 ], [ 7, 16 ], [ 13, 14 ], [ 13, 16 ] ][128X[104X
+    [4X[28X [ [ 5, 8 ], [ 5, 16 ], [ 6, 14 ], [ 6, 15 ], [ 8, 15 ], [ 13, 14 ], [ 13, 16 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -2188,8 +2188,8 @@
     [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
     [4X[28X gap> k3surf:=SCLib.Load(last[1][1]);; [128X[104X
     [4X[28X gap> SCAutomorphismGroup(k3surf);               [128X[104X
-    [4X[28X Group([ (1,3,8,4,9,16,15,2,14,12,6,7,13,5,10), [128X[104X
-    [4X[28X   (1,13)(2,14)(3,15)(4,16)(5,9)(6,10)(7,11)(8,12) ])[128X[104X
+    [4X[28X Group([ (1,3,8,4,9,16,15,2,14,12,6,7,13,5,10), (1,13)(2,14)(3,15)(4,16)(5,9)[128X[104X
+    [4X[28X (6,10)(7,11)(8,12) ])[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -3709,7 +3709,7 @@
   
   [33X[0;0YFills  the  given simplicial sphere [3Xcomplex[103X by forming the suspension of the
   anti  star of [3Xvertex[103X over [3Xvertex[103X. This is a triangulated [22X(d+1)[122X-ball with the
-  boundary  [3Xcomplex[103X,  see  [BD08a].  If  the  optional  argument [3Xvertex[103X is not
+  boundary  [3Xcomplex[103X,  see  [BD08].  If  the  optional  argument  [3Xvertex[103X is not
   supplied, the first vertex of [3Xcomplex[103X is chosen.[133X
   
   [33X[0;0YNote that it is not checked whether [3Xcomplex[103X really is a simplicial sphere --
@@ -3767,7 +3767,7 @@
   [3Xf1[103X  with  the ones from facet [3Xf2[103X in [3Xcomplex[103X. A combinatorial handle addition
   is  possible,  whenever  we have d[22X(v,w) ≥ 3[122X for any two vertices [22Xv ∈[122X[3Xf1[103X and [22Xw
   ∈[122X[3Xf2[103X,  where  d[22X(⋅,⋅)[122X  is  the  length  of the shortest path from [22Xv[122X to [22Xw[122X. This
-  condition  is  not  checked  by  this  algorithm.  See  [BD08b]  for further
+  condition  is  not  checked  by  this  algorithm.  See  [BD11]  for  further
   information.[133X
   
   [4X[32X  Example  [32X[104X

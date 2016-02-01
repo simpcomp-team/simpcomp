@@ -19,24 +19,32 @@
   [29X[2XSCIsTight[102X( [3Xcomplex[103X ) [32X method
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
-  [33X[0;0YChecks whether a simplicial complex [10Xcomplex[110X is a tight triangulation or not.
-  A  simplicial complex with [22Xn[122X vertices is said to be a tight triangulation if
-  it  can  be  tightly  embedded into the [22X(n-1)[122X-simplex. See Section [14X2.7[114X for a
-  short introduction to the field of tightness.[133X
+  [33X[0;0YChecks  whether  a simplicial complex [10Xcomplex[110X ([10Xcomplex[110X must satisfy the weak
+  pseudomanifold  property  and must be closed) is a tight triangulation (with
+  respect  to the field with two elements) or not. A simplicial complex with [22Xn[122X
+  vertices  is  said to be a tight triangulation if it can be tightly embedded
+  into  the  [22X(n-1)[122X-simplex.  See  Section  [14X2.7[114X for a short introduction to the
+  field of tightness.[133X
   
   [33X[0;0YFirst,  if [10Xcomplex[110X is a [22X(k+1)[122X-neighborly [22X2k[122X-manifold (cf. [K{\95], Corollary
-  4.7)  or  if  [10Xcomplex[110X  is of dimension [22Xd≥ 4[122X, [22X2[122X-neighborly and all its vertex
-  links  are  stacked spheres (i.e. the complex is in Walkup's class [22XK(d)[122X, see
-  [Eff11b]), [9Xtrue[109X is returned as the complex is a tight triangulation in these
-  cases.   Note  that  it  is  not  computed  whether  or  not  [10Xcomplex[110X  is  a
-  combinatorial  manifold  as  this computation might take a long time. Hence,
+  4.7), or [10Xcomplex[110X is of dimension [22Xd≥ 4[122X, [22X2[122X-neighborly and all its vertex links
+  are  stacked  spheres  (i.e.  the  complex  is  in  Walkup's class [22XK(d)[122X, see
+  [Eff11b])  [9Xtrue[109X is returned as the complex is a tight triangulation in these
+  cases.  If  [10Xcomplex[110X  is  of dimension [22Xd = 3[122X, [9Xtrue[109X is returned if and only if
+  [10Xcomplex[110X  is [22X2[122X-neighborly and stacked (i.e. tight-neighbourly, see [BDSS15]),
+  otherwise [9Xfalse[109X is returned, see [BDS16].[133X
+  
+  [33X[0;0YNote that, for dimension [22Xd ≥ 4[122X, it is not computed whether or not [10Xcomplex[110X is
+  a  combinatorial manifold as this computation might take a long time. Hence,
   only  if  the  manifold  flag of the complex is set (this can be achieved by
   calling  [2XSCIsManifold[102X  ([14X12.1-17[114X)  and  the complex indeed is a combinatorial
-  manifold)  these checks are performed. In a second step, the algorithm first
-  checks certain rsl-functions allowing slicings between minimal non faces and
-  the  rest  of the complex. In most cases where [10Xcomplex[110X is not tight at least
-  one  of these rsl-functions is not perfect and thus [10Xfalse[110X is returned as the
-  complex is not a tight triangulation.[133X
+  manifold) these checks are performed.[133X
+  
+  [33X[0;0YIn  a second step, the algorithm first checks certain rsl-functions allowing
+  slicings  between  minimal  non  faces  and the rest of the complex. In most
+  cases  where [10Xcomplex[110X is not tight at least one of these rsl-functions is not
+  perfect  and  thus  [10Xfalse[110X  is  returned  as  the  complex  is  not  a  tight
+  triangulation.[133X
   
   [33X[0;0YIf  the  complex  passed  all checks so far, the remaining rsl-functions are
   checked  for  being  perfect  functions. As there are ``only'' [22X2^n[122X different
@@ -50,32 +58,10 @@
   of [22Xn ⋅ (n-1) ⋅ dots ⋅ (n-k+1)[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> list:=SCLib.SearchByName("S^2~S^1 (VT)");[128X[104X
+    [4X[28X gap> list:=SCLib.SearchByName("S^2~S^1 (VT)"){[1..9]};[128X[104X
     [4X[28X [ [ 12, "S^2~S^1 (VT)" ], [ 27, "S^2~S^1 (VT)" ], [ 28, "S^2~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 43, "S^2~S^1 (VT)" ], [ 47, "S^2~S^1 (VT)" ], [ 49, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 89, "S^2~S^1 (VT)" ], [ 90, "S^2~S^1 (VT)" ], [ 111, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 140, "S^2~S^1 (VT)" ], [ 146, "S^2~S^1 (VT)" ], [ 147, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 148, "S^2~S^1 (VT)" ], [ 149, "S^2~S^1 (VT)" ], [ 150, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 156, "S^2~S^1 (VT)" ], [ 157, "S^2~S^1 (VT)" ], [ 391, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 393, "S^2~S^1 (VT)" ], [ 394, "S^2~S^1 (VT)" ], [ 396, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 407, "S^2~S^1 (VT)" ], [ 408, "S^2~S^1 (VT)" ], [ 410, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 412, "S^2~S^1 (VT)" ], [ 413, "S^2~S^1 (VT)" ], [ 578, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 579, "S^2~S^1 (VT)" ], [ 582, "S^2~S^1 (VT)" ], [ 596, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 597, "S^2~S^1 (VT)" ], [ 598, "S^2~S^1 (VT)" ], [ 640, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 642, "S^2~S^1 (VT)" ], [ 644, "S^2~S^1 (VT)" ], [ 645, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 769, "S^2~S^1 (VT)" ], [ 770, "S^2~S^1 (VT)" ], [ 774, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 775, "S^2~S^1 (VT)" ], [ 776, "S^2~S^1 (VT)" ], [ 2401, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2409, "S^2~S^1 (VT)" ], [ 2410, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2411, "S^2~S^1 (VT)" ], [ 2428, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2429, "S^2~S^1 (VT)" ], [ 2430, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2431, "S^2~S^1 (VT)" ], [ 2432, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2433, "S^2~S^1 (VT)" ], [ 2434, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2435, "S^2~S^1 (VT)" ], [ 2500, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2501, "S^2~S^1 (VT)" ], [ 2504, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2505, "S^2~S^1 (VT)" ], [ 2506, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2510, "S^2~S^1 (VT)" ], [ 2511, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2512, "S^2~S^1 (VT)" ], [ 2513, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2514, "S^2~S^1 (VT)" ], [ 2515, "S^2~S^1 (VT)" ] ][128X[104X
+    [4X[28X   [ 89, "S^2~S^1 (VT)" ], [ 90, "S^2~S^1 (VT)" ], [ 111, "S^2~S^1 (VT)" ] ][128X[104X
     [4X[28X gap> s2s1:=SCLib.Load(list[1][1]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
@@ -118,19 +104,9 @@
     [4X[28X gap> SCInfoLevel(2); # print information while running[128X[104X
     [4X[28X true[128X[104X
     [4X[28X gap> SCIsTight(s2s1); time;[128X[104X
-    [4X[28X #I  SCIsTight: checking non faces...[128X[104X
-    [4X[28X #I  SCIsTight: found no contradiction so far.[128X[104X
-    [4X[28X #I  SCIsTight: generating lookup table...[128X[104X
-    [4X[28X #I  SCIsTight: lookup table done, size = 2304.[128X[104X
-    [4X[28X #I  SCIsTight: computing automorphism group...[128X[104X
-    [4X[28X #I  SCIsTight: automorphism group done, transitivity = 1.[128X[104X
-    [4X[28X #I  SCIsTight: checking rsl-functions...[128X[104X
-    [4X[28X #I  SCIsTight: processed 10000 of 40320 rsl-functions so far, all perfect.[128X[104X
-    [4X[28X #I  SCIsTight: processed 20000 of 40320 rsl-functions so far, all perfect.[128X[104X
-    [4X[28X #I  SCIsTight: processed 30000 of 40320 rsl-functions so far, all perfect.[128X[104X
-    [4X[28X #I  SCIsTight: processed 40000 of 40320 rsl-functions so far, all perfect.[128X[104X
+    [4X[28X #I  SCIsTight: complex is 3-dimensional and tight neighbourly, and thus tight.[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X 23164[128X[104X
+    [4X[28X 4[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -140,16 +116,9 @@
     [4X[28X gap> id:=last[1][1];;[128X[104X
     [4X[28X gap> c:=SCLib.Load(id);;[128X[104X
     [4X[28X gap> SCIsTight(c); time;[128X[104X
-    [4X[28X #I  SCIsTight: checking non faces...[128X[104X
-    [4X[28X #I  SCIsTight: found non perfect rsl-function: [ 1, 3, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, [128X[104X
-    [4X[28X   22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, [128X[104X
-    [4X[28X   41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, [128X[104X
-    [4X[28X   60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, [128X[104X
-    [4X[28X   79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, [128X[104X
-    [4X[28X   98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, [128X[104X
-    [4X[28X   113, 114, 115, 116, 117, 118, 119, 120 ], complex not tight.[128X[104X
+    [4X[28X #I  SCIsTight: complex is connected but not 2-neighbourly, and thus not tight.[128X[104X
     [4X[28X false[128X[104X
-    [4X[28X 44[128X[104X
+    [4X[28X 8[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -161,10 +130,24 @@
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCIsManifold(c);[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCInfoLevel(2);[128X[104X
+    [4X[28X gap> SCInfoLevel(1);[128X[104X
     [4X[28X true[128X[104X
     [4X[28X gap> c.IsTight;                 [128X[104X
     [4X[28X #I  SCIsTight: complex is (k+1)-neighborly 2k-manifold and thus tight.[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X [128X[104X
+  [4X[32X[104X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X gap> SCInfoLevel(1);[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X gap> dc:=[ [ 1, 1, 1, 1, 45 ], [ 1, 2, 1, 27, 18 ], [ 1, 27, 9, 9, 3 ], [128X[104X
+    [4X[28X > [ 4, 7, 20, 9, 9 ], [ 9, 9, 11, 9, 11 ], [ 6, 9, 9, 17, 8 ], [128X[104X
+    [4X[28X > [ 6, 10, 8, 17, 8 ], [ 8, 8, 8, 8, 17 ], [ 5, 6, 9, 9, 20 ] ];;[128X[104X
+    [4X[28X gap> c:=SCBoundary(SCFromDifferenceCycles(dc));;[128X[104X
+    [4X[28X gap> SCAutomorphismGroup(c);;[128X[104X
+    [4X[28X gap> SCIsTight(c);[128X[104X
+    [4X[28X #I SCIsTight: complex is 3-dimensional and tight neighbourly, and thus tight.[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X

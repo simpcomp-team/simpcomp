@@ -217,8 +217,8 @@
   \item \texttt  {SCMinimalNonFaces}, \hyperpage{102}
   \item \texttt  {SCMinimalNonFacesEx}, \hyperpage{103}
   \item \texttt  {SCMorseEngstroem}, \hyperpage{169}
-  \item \texttt  {SCMorseIsPerfect}, \hyperpage{164}
-  \item \texttt  {SCMorseMultiplicityVector}, \hyperpage{165}
+  \item \texttt  {SCMorseIsPerfect}, \hyperpage{163}
+  \item \texttt  {SCMorseMultiplicityVector}, \hyperpage{164}
   \item \texttt  {SCMorseNumberOfCriticalPoints}, \hyperpage{165}
   \item \texttt  {SCMorseRandom}, \hyperpage{169}
   \item \texttt  {SCMorseRandomLex}, \hyperpage{169}
@@ -302,7 +302,7 @@
   \item \texttt  {SCSimplex}, \hyperpage{52}
   \item \texttt  {SCSkel}, \hyperpage{104}, \hyperpage{129}
   \item \texttt  {SCSkelEx}, \hyperpage{104}, \hyperpage{129}
-  \item \texttt  {SCSlicing}, \hyperpage{164}
+  \item \texttt  {SCSlicing}, \hyperpage{163}
   \item \texttt  {SCSpan}, \hyperpage{115}
   \item \texttt  {SCSpanningTree}, \hyperpage{105}
   \item \texttt  {SCSpanningTreeRandom}, \hyperpage{171}

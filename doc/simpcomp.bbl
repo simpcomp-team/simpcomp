@@ -12,23 +12,32 @@ Thomas~F. Banchoff.
   bands.
 \newblock {\em Math. Ann.}, 207:233--243, 1974.
 
-\bibitem[BBP{\etalchar{+}}13]{regina}
+\bibitem[BBP{\etalchar{+}}14]{regina}
 B.~A. Burton, Ryan Budney, William Pettersson, et~al.
 \newblock Regina: normal surface and 3-manifold topology software, version
-  4.95.
+  4.97.
 \newblock {\tt http://\allowbreak regina.\allowbreak sourceforge.\allowbreak
-  net/}, 1999--2013.
+  net/}, 1999--2014.
 
-\bibitem[BD08a]{Bagchi08LBTNormPseudoMnf}
+\bibitem[BD08]{Bagchi08LBTNormPseudoMnf}
 Bhaskar Bagchi and Basudeb Datta.
 \newblock {L}ower bound theorem for normal pseudomanifolds.
 \newblock {\em Expo. Math.}, 26(4):327--351, 2008.
 
-\bibitem[BD08b]{Bagchi08OnWalkupKd}
+\bibitem[BD11]{Bagchi08OnWalkupKd}
 Bhaskar Bagchi and Basudeb Datta.
-\newblock {O}n {W}alkup's class $\mathcal{K}(d)$ and a minimal triangulation of
-  a 4-manifold.
-\newblock {\tt arXiv:0804.2153v1 [math.GT]}, Preprint, 8 pages, 2008.
+\newblock On {W}alkup's class {$\scr K(d)$} and a minimal triangulation of
+  {$(S3\mathop{\hbox{$}\times{$}\!\!\!\!\lower 3pt\hbox{--}}\ S1)^{\#3}$}.
+\newblock {\em Discrete Math.}, 311(12):989--995, 2011.
+
+\bibitem[BDS]{Bagchi16Tight3Mflds}
+B.~Bagchi, B.~Datta, and J.~Spreer.
+\newblock A characterization of tightly triangulated 3-manifolds.
+
+\bibitem[BDSS15]{BDSSSepIndex}
+Benjamin~A. Burton, Basudeb Datta, Nitin Singh, and Jonathan Spreer.
+\newblock Separation index of graphs and stacked 2-spheres.
+\newblock {\em J. Combin. Theory Ser. A}, 136:184--197, 2015.
 
 \bibitem[BK97]{Banchoff97TightSubmSmoothPoly}
 Thomas~F. Banchoff and Wolfgang K{\"u}hnel.
@@ -75,7 +84,7 @@ B.~A. Burton and J.~Spreer.
 \newblock Combinatorial seifert fibred spaces with transitive cyclic
   automorphism group.
 \newblock \texttt{arXiv:1404.3005 [math.GT]}, 2014.
-\newblock 26 pages, 10 figures.
+\newblock 26 pages, 10 figures. To appear in Israel Journal of Mathematics.
 
 \bibitem[CK01]{Casella01TrigK3MinNumVert}
 Mario Casella and Wolfgang K{\"u}hnel.
@@ -273,11 +282,11 @@ Udo Pachner.
   {M}annigfaltigkeiten.
 \newblock {\em Abh. Math. Sem. Uni. Hamburg}, 57:69--86, 1987.
 
-\bibitem[PS14]{Paixao143SphereRec}
-J.~Paixao and J.~Spreer.
-\newblock Probabilistic collapsibility testing and manifold recognition
-  heuristics, 2014.
-\newblock In preparation, 6 pages.
+\bibitem[PS15]{Paixao143SphereRec}
+J.~Paix{\~a}o and J.~Spreer.
+\newblock Random collapsibility and 3-sphere recognition.
+\newblock \texttt{arXiv:1509.07607 [math.GT]}, 2015.
+\newblock Preprint, 18 pages, 6 figures.
 
 \bibitem[R\"13]{Roeder07Polymaking}
 Marc R\"{o}der.

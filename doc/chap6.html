@@ -362,10 +362,10 @@
  gap&gt; c:=SCSeriesBdHandleBody(3,9);;
  gap&gt; s:=SCExportToString(c); time;
  "deffg.h.f.fahaiciai.i.hai.fbgeiagihbhceceba.g.gag"
- 12
+ 0
  gap&gt; s:=SCExportIsoSig(c); time;
  "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
- 60
+ 20
  </pre></div>
 
 <p><a id="X80098C5F7B80A621" name="X80098C5F7B80A621"></a></p>
@@ -1205,9 +1205,9 @@
  gap&gt; Mminus:=SCSpan(c,[1,2,3,4,9,10,11,12]);;                  
  gap&gt; Mplus:=SCSpan(c,[5,6,7,8,13,14,15,16]);;                  
  gap&gt; SCCollapseGreedy(Mminus).Facets;
- [ [ 1, 2 ], [ 1, 12 ], [ 2, 10 ], [ 10, 11 ], [ 11, 12 ] ]
+ [ [ 1, 9 ], [ 1, 10 ], [ 3, 10 ], [ 3, 11 ], [ 4, 9 ], [ 4, 12 ], [ 11, 12 ] ]
  gap&gt; SCCollapseGreedy(Mplus).Facets; 
- [ [ 6, 7 ], [ 6, 14 ], [ 7, 16 ], [ 13, 14 ], [ 13, 16 ] ]
+ [ [ 5, 8 ], [ 5, 16 ], [ 6, 14 ], [ 6, 15 ], [ 8, 15 ], [ 13, 14 ], [ 13, 16 ] ]
  </pre></div>
 
 <p><a id="X813C5B0E7FA7C1A3" name="X813C5B0E7FA7C1A3"></a></p>
@@ -2211,8 +2211,8 @@
  [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
  gap&gt; k3surf:=SCLib.Load(last[1][1]);; 
  gap&gt; SCAutomorphismGroup(k3surf);               
- Group([ (1,3,8,4,9,16,15,2,14,12,6,7,13,5,10), 
-   (1,13)(2,14)(3,15)(4,16)(5,9)(6,10)(7,11)(8,12) ])
+ Group([ (1,3,8,4,9,16,15,2,14,12,6,7,13,5,10), (1,13)(2,14)(3,15)(4,16)(5,9)
+ (6,10)(7,11)(8,12) ])
  </pre></div>
 
 <p><a id="X7A33B8177A7ACD3A" name="X7A33B8177A7ACD3A"></a></p>
@@ -3664,7 +3664,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFillSphere</code>( <var class="Arg">complex</var>[, <var class="Arg">vertex</var>] )</td><td class="tdright">( function )</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise .</p>
 
-<p>Fills the given simplicial sphere <var class="Arg">complex</var> by forming the suspension of the anti star of <var class="Arg">vertex</var> over <var class="Arg">vertex</var>. This is a triangulated <span class="SimpleMath">(d+1)</span>-ball with the boundary <var class="Arg">complex</var>, see <a href="chapBib.html#biBBagchi08LBTNormPseudoMnf">[BD08a]</a>. If the optional argument <var class="Arg">vertex</var> is not supplied, the first vertex of <var class="Arg">complex</var> is chosen.</p>
+<p>Fills the given simplicial sphere <var class="Arg">complex</var> by forming the suspension of the anti star of <var class="Arg">vertex</var> over <var class="Arg">vertex</var>. This is a triangulated <span class="SimpleMath">(d+1)</span>-ball with the boundary <var class="Arg">complex</var>, see <a href="chapBib.html#biBBagchi08LBTNormPseudoMnf">[BD08]</a>. If the optional argument <var class="Arg">vertex</var> is not supplied, the first vertex of <var class="Arg">complex</var> is chosen.</p>
 
 <p>Note that it is not checked whether <var class="Arg">complex</var> really is a simplicial sphere -- this has to be done by the user!</p>
 
@@ -3718,7 +3718,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHandleAddition</code>( <var class="Arg">complex</var>, <var class="Arg">f1</var>, <var class="Arg">f2</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code>, <code class="keyw">fail</code> otherwise.</p>
 
-<p>Returns a simplicial complex obtained by identifying the vertices of facet <var class="Arg">f1</var> with the ones from facet <var class="Arg">f2</var> in <var class="Arg">complex</var>. A combinatorial handle addition is possible, whenever we have d<span class="SimpleMath">(v,w) ≥ 3</span> for any two vertices <span class="SimpleMath">v ∈</span><var class="Arg">f1</var> and <span class="SimpleMath">w ∈</span><var class="Arg">f2</var>, where d<span class="SimpleMath">(⋅,⋅)</span> is the length of the shortest path from <span class="SimpleMath">v</span> to <span class="SimpleMath">w</span>. This condition is not checked by this algorithm. See <a href="chapBib.html#biBBagchi08OnWalkupKd">[BD08b]</a> for further information.</p>
+<p>Returns a simplicial complex obtained by identifying the vertices of facet <var class="Arg">f1</var> with the ones from facet <var class="Arg">f2</var> in <var class="Arg">complex</var>. A combinatorial handle addition is possible, whenever we have d<span class="SimpleMath">(v,w) ≥ 3</span> for any two vertices <span class="SimpleMath">v ∈</span><var class="Arg">f1</var> and <span class="SimpleMath">w ∈</span><var class="Arg">f2</var>, where d<span class="SimpleMath">(⋅,⋅)</span> is the length of the shortest path from <span class="SimpleMath">v</span> to <span class="SimpleMath">w</span>. This condition is not checked by this algorithm. See <a href="chapBib.html#biBBagchi08OnWalkupKd">[BD11]</a> for further information.</p>
 
 
 <div class="example"><pre>

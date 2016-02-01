@@ -70,7 +70,7 @@
 
 <p>The main benefit when working with <strong class="pkg">simpcomp</strong> over implementing the needed functions from scratch is that <strong class="pkg">simpcomp</strong> encapsulates all methods and properties of a simplicial complex in a new <strong class="pkg">GAP</strong> object type (as an abstract data type). This way, among other things, <strong class="pkg">simpcomp</strong> can transparently cache properties already calculated, thus preventing unnecessary double calculations. It also takes care of the error-prone vertex labeling of a complex. As of Version 1.5, <strong class="pkg">simpcomp</strong> makes use of <strong class="pkg">GAP</strong>'s caching mechanism (as described in <a href="chapBib.html#biBBreuer98GAP4TypeSystem">[BL98]</a>) to cache all known properties of a simplicial complex. In addition, a customized data structure is provided to organize the complex library and to cache temporary information about a complex.</p>
 
-<p><strong class="pkg">simpcomp</strong> provides the user with functions to save and load the simplicial complexes to and from files and to import and export a complex in various formats (e.g. from and to <strong class="pkg">polymake/TOPAZ</strong> <a href="chapBib.html#biBJoswig00Polymake">[GJ00]</a>, <strong class="pkg">SnapPea</strong> <a href="chapBib.html#biBSnapPea">[Wee99]</a> and <strong class="pkg">Regina</strong> <a href="chapBib.html#biBregina">[BBPo13]</a> (via the <strong class="pkg">SnapPea</strong> file format), <strong class="pkg">Macaulay2</strong> <a href="chapBib.html#biBM2">[GS]</a>, LaTeX, etc.).</p>
+<p><strong class="pkg">simpcomp</strong> provides the user with functions to save and load the simplicial complexes to and from files and to import and export a complex in various formats (e.g. from and to <strong class="pkg">polymake/TOPAZ</strong> <a href="chapBib.html#biBJoswig00Polymake">[GJ00]</a>, <strong class="pkg">SnapPea</strong> <a href="chapBib.html#biBSnapPea">[Wee99]</a> and <strong class="pkg">Regina</strong> <a href="chapBib.html#biBregina">[BBPo14]</a> (via the <strong class="pkg">SnapPea</strong> file format), <strong class="pkg">Macaulay2</strong> <a href="chapBib.html#biBM2">[GS]</a>, LaTeX, etc.).</p>
 
 <p>In contrast to the software package <strong class="pkg">polymake</strong> <a href="chapBib.html#biBJoswig00Polymake">[GJ00]</a> providing the most efficient algorithms for each task in form of a heterogeneous package (where algorithms are implemented in various languages), the primary goal when developing <strong class="pkg">simpcomp</strong> was not efficiency (this is already limited by the <strong class="pkg">GAP</strong> scripting language), but rather ease of use and ease of extensibility by the user in the <strong class="pkg">GAP</strong> language with all its mathematical and algebraic capabilities. Extending <strong class="pkg">simpcomp</strong> is possible directly from within <strong class="pkg">GAP</strong>, without having to compile anything, see Chapter <a href="chap18.html#X7DC2620E7DCC6C94"><span class="RefLink">18</span></a>.</p>
 
@@ -151,7 +151,7 @@
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCRunTest();</span>
-+ test simpcomp package, Version 2.1.5
++ test simpcomp package, Version 2.1.6
 + GAP4stones: 69988
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput"></span>
@@ -177,7 +177,7 @@ true
 @manual{simpcomp,
 	author = "Felix Effenberger and Jonathan Spreer",
 	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
-	          {V}ersion 2.1.5",
+	          {V}ersion 2.1.6",
 	year   = "2016",
 	url    = "\url{https://github.com/simpcomp-team/simpcomp}",
 }
@@ -192,7 +192,7 @@ true
 \bibitem{simpcomp}
 F.~Effenberger and J.~Spreer,
 \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
-Version 2.1.5, 
+Version 2.1.6, 
 2016,
 \url{https://github.com/simpcomp-team/simpcomp}.
 

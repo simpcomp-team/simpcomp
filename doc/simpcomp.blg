@@ -3,6 +3,11 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: simpcomp.aux
 The style file: alpha.bst
 Database file #1: biblio.bib
+I was expecting a `,' or a `}'---line 137 of file biblio.bib
+ :   
+ :   year = {2016},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Name 1 in "K. Adiprasito, B. Benedetti, and F. H. Lutz" has a comma at the end for entry Adiprasito14RDMTII
 while executing---line 1185 of file alpha.bst
 Name 1 in "K. Adiprasito, B. Benedetti, and F. H. Lutz" has a comma at the end for entry Adiprasito14RDMTII
@@ -10,45 +15,45 @@ while executing---line 1185 of file alpha.bst
 Name 1 in "K. Adiprasito, B. Benedetti, and F. H. Lutz" has a comma at the end for entry Adiprasito14RDMTII
 while executing---line 1250 of file alpha.bst
 Warning--there's a number but no volume in Schulz94PolyhMnfPoly
-You've used 62 entries,
+You've used 64 entries,
             2543 wiz_defined-function locations,
-            1006 strings with 15404 characters,
-and the built_in function-call counts, 22912 in all, are:
-= -- 2389
-> -- 790
+            1021 strings with 15826 characters,
+and the built_in function-call counts, 23853 in all, are:
+= -- 2485
+> -- 846
 < -- 55
-+ -- 240
-- -- 235
-* -- 1525
-:= -- 3661
-add.period$ -- 208
-call.type$ -- 62
-change.case$ -- 328
-chr.to.int$ -- 59
-cite$ -- 63
-duplicate$ -- 976
-empty$ -- 1838
-format.name$ -- 334
-if$ -- 4776
-int.to.chr$ -- 4
++ -- 261
+- -- 256
+* -- 1604
+:= -- 3820
+add.period$ -- 214
+call.type$ -- 64
+change.case$ -- 343
+chr.to.int$ -- 62
+cite$ -- 65
+duplicate$ -- 1004
+empty$ -- 1897
+format.name$ -- 357
+if$ -- 4958
+int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 57
-newline$ -- 325
-num.names$ -- 186
-pop$ -- 329
+missing$ -- 59
+newline$ -- 335
+num.names$ -- 192
+pop$ -- 339
 preamble$ -- 1
-purify$ -- 400
+purify$ -- 417
 quote$ -- 0
-skip$ -- 790
+skip$ -- 815
 stack$ -- 0
-substring$ -- 1432
-swap$ -- 150
+substring$ -- 1497
+swap$ -- 152
 text.length$ -- 55
 text.prefix$ -- 38
 top$ -- 0
-type$ -- 460
+type$ -- 476
 warning$ -- 1
-while$ -- 233
-width$ -- 69
-write$ -- 843
-(There were 3 error messages)
+while$ -- 243
+width$ -- 71
+write$ -- 868
+(There were 4 error messages)
