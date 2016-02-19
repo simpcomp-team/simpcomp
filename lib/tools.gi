@@ -513,8 +513,6 @@ end;
 #reread the package
 SCReread:=
 function()
-	local path;
-	path:=DirectoriesLibrary("pkg/simpcomp")[1];
 	Print("rereading init.g ",RereadPackage("simpcomp","init.g"),"\n");
 	Print("rereading read.g ",RereadPackage("simpcomp","read.g"),"\n");
 end;
@@ -541,7 +539,7 @@ SCIntFunc.MakeDoc:=function(arg)
 	fi;
 	
 	files:=[];
-	path:=DirectoriesLibrary("pkg/simpcomp/doc/");
+	path:=DirectoriesPackageLibrary("simpcomp", "doc");
 
 	for b in basenames do
 		for ext in [".gd",".gi"] do
@@ -608,7 +606,7 @@ end;
 InstallGlobalFunction(SCRunTest,
 function()
 	local path;
-	path:=DirectoriesLibrary("pkg/simpcomp/tst")[1];
+	path:=DirectoriesPackageLibrary("simpcomp", "tst");
 	return Test(Filename(path,"simpcomp.tst"));
 end);
 

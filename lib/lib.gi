@@ -1263,12 +1263,12 @@ SCIntFunc.SCLibGlobalInit:=
 function()
 	local rep,path;
 
-	path:=DirectoriesLibrary("pkg/simpcomp/complexes");
+	path:=DirectoriesPackageLibrary("simpcomp", "complexes");
 	if(path=fail) then
 		Info(InfoSimpcomp,1,"SCIntFunc.SCLibGlobalInit: failed to load library -- directory \"",path,"\" does not exist or is not readable.");
 		return fail;
 	else
-		path:=Filename(path[1],"");
+		path:=Filename(path,"");
 	fi;
 
 	rep:=SCIntFunc.SCLibInit(path);
