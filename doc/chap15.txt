@@ -198,7 +198,7 @@
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YTest    whether    the   package   [5Xsimpcomp[105X   is   functional   by   calling
-  [10XReadTest("GAPROOT/pkg/simpcomp/tst/simpcomp.tst");[110X.  The  returned  value of
+  [10XTest("GAPROOT/pkg/simpcomp/tst/simpcomp.tst");[110X.  The  returned  value of
   GAP4stones  is  a measure of your system performance and differs from system
   to system.[133X
   
