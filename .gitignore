@@ -3,3 +3,12 @@ doc/gapdoc/**/*
 doc/gapdoc
 doc/**
 
++/Makefile
++/autom4te.cache/
++/bistellar
++/config.log
++/config.status
++
++/bin/
++/src/*.o
++/src/.deps
