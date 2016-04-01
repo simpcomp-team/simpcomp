@@ -66,10 +66,13 @@
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCInfoLevel(3);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCInfoLevel(3);
+</span>
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=SCBdCrossPolytope(3);;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCReduceComplex(c); </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=SCBdCrossPolytope(3);;
+</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCReduceComplex(c); 
+</span>
 #I  round 0, move: [ [ 4, 6 ], [ 1, 2 ] ]
 F: [ 6, 12, 8 ]
 #I  round 1, move: [ [ 6 ], [ 1, 2, 3 ] ]
@@ -240,7 +243,7 @@ Reduced complex, F: [ 4, 6, 4 ]
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCRunTest</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
-<p>Test whether the package <strong class="pkg">simpcomp</strong> is functional by calling <code class="code">ReadTest("GAPROOT/pkg/simpcomp/tst/simpcomp.tst");</code>. The returned value of GAP4stones is a measure of your system performance and differs from system to system.</p>
+<p>Test whether the package <strong class="pkg">simpcomp</strong> is functional by calling <code class="code">Test("GAPROOT/pkg/simpcomp/tst/simpcomp.tst");</code>. The returned value of GAP4stones is a measure of your system performance and differs from system to system.</p>
 
 
 <div class="example"><pre>
