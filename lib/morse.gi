@@ -481,7 +481,7 @@ end);
 ## 28
 ## </Example>
 ## <Example>
-## gap> SCInfoLevel(0);
+## gap> SCInfoLevel(1);
 ## gap> SCLib.SearchByName("K3");  
 ## [ [ 551, "K3 surface" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
@@ -493,6 +493,7 @@ end);
 ## true
 ## </Example>
 ## <Example>
+## gap> SCInfoLevel(1);
 ## gap> dc:=[ [ 1, 1, 1, 1, 45 ], [ 1, 2, 1, 27, 18 ], [ 1, 27, 9, 9, 3 ], 
 ## > [ 4, 7, 20, 9, 9 ], [ 9, 9, 11, 9, 11 ], [ 6, 9, 9, 17, 8 ], 
 ## > [ 6, 10, 8, 17, 8 ], [ 8, 8, 8, 8, 17 ], [ 5, 6, 9, 9, 20 ] ];;
