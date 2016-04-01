@@ -244,7 +244,7 @@ function(dir)
     ldir:=dir;
     dir:=Filename(ldir,"");
 	elif(IsString(dir)) then
-		ldir:=Directory(dir)
+		ldir:=Directory(dir);
 	else
 		Info(InfoSimpcomp,1,"SCIntFunc.SCLibInit: first argument must be a valid path name.");
 		return fail;
