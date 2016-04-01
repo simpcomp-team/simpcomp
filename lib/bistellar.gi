@@ -2753,7 +2753,7 @@ InstallGlobalFunction(SCReduceComplexFast,
     return fail;
   fi;
   
-  dir := DirectoriesLibrary("pkg/simpcomp/bin");
+  dir := DirectoriesPackageLibrary("simpcomp", "bin");
   if dir = fail then
     Info(InfoSimpcomp, 1, "SCReduceComplexFast: cannot find executable.");
     return fail;

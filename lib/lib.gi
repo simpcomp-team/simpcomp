@@ -241,9 +241,10 @@ function(dir)
 	local a,b,c,id,ldir,data,r,repository,fh;
 
 	if(IsDirectory(dir)) then
-		ldir:=Filename(dir,"");
+    ldir:=dir;
+    dir:=Filename(ldir,"");
 	elif(IsString(dir)) then
-		ldir:=Filename(Directory(dir),"");
+		ldir:=Directory(dir)
 	else
 		Info(InfoSimpcomp,1,"SCIntFunc.SCLibInit: first argument must be a valid path name.");
 		return fail;
@@ -256,23 +257,23 @@ function(dir)
 	fi;
 	
 	
-	if(IsReadableFile(Filename(Directory(ldir),"complexes.idxb"))) then
+	if(IsReadableFile(Filename(ldir,"complexes.idxb"))) then
 		#first try to read binary format
-		fh:=IO_File(Filename(Directory(ldir),"complexes.idxb"),"r");
+		fh:=IO_File(Filename(ldir,"complexes.idxb"),"r");
 		repository:=IO_Unpickle(fh);
 		IO_Close(fh);
 		
 		if(IO_Result(repository) and repository<>IO_OK) then
 			Info(InfoSimpcomp,1,"SCIntFunc.SCLibInit: error loading binary index  -- trying to reconstruct it.");
-			return SCLibUpdate(Directory(ldir));
+			return SCLibUpdate(ldir);
 		fi;
 	else
 		#if not found, fall back to xml format
-		data:=StringFile(Filename(Directory(ldir),"complexes.idx"));
+		data:=StringFile(Filename(ldir,"complexes.idx"));
 		if(data=fail or IsEmptyString(data)) then
 			#index not found or not readable -- try to (re)construct
 			Info(InfoSimpcomp,1,"SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.");
-			return SCLibUpdate(Directory(ldir));
+			return SCLibUpdate(ldir);
 		fi;
 		repository:=SCIntFunc.SCXMLToObject(data);
 		
@@ -292,7 +293,7 @@ function(dir)
 		SCPropertySet(repository,"Index",SCIntFunc.SCPositionalObjectFromList([]));
 	fi;
 	SCPropertySet(repository,"Loaded",true);
-	SCPropertySet(repository,"Path",ldir);
+	SCPropertySet(repository,"Path",dir);
 	return repository;
 end;
 
@@ -1263,12 +1264,12 @@ SCIntFunc.SCLibGlobalInit:=
 function()
 	local rep,path;
 
-	path:=DirectoriesLibrary("pkg/simpcomp/complexes");
+	path:=DirectoriesPackageLibrary("simpcomp", "complexes");
 	if(path=fail) then
 		Info(InfoSimpcomp,1,"SCIntFunc.SCLibGlobalInit: failed to load library -- directory \"",path,"\" does not exist or is not readable.");
 		return fail;
 	else
-		path:=Filename(path[1],"");
+		path:=Filename(path,"");
 	fi;
 
 	rep:=SCIntFunc.SCLibInit(path);

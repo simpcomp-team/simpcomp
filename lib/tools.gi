@@ -513,8 +513,6 @@ end;
 #reread the package
 SCReread:=
 function()
-	local path;
-	path:=DirectoriesLibrary("pkg/simpcomp")[1];
 	Print("rereading init.g ",RereadPackage("simpcomp","init.g"),"\n");
 	Print("rereading read.g ",RereadPackage("simpcomp","read.g"),"\n");
 end;
@@ -541,7 +539,7 @@ SCIntFunc.MakeDoc:=function(arg)
 	fi;
 	
 	files:=[];
-	path:=DirectoriesLibrary("pkg/simpcomp/doc/");
+	path:=DirectoriesPackageLibrary("simpcomp", "doc");
 
 	for b in basenames do
 		for ext in [".gd",".gi"] do
@@ -594,7 +592,7 @@ end;
 ## <Func Name="SCRunTest" Arg=""/>
 ## <Returns><K>true</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Test whether the package <Package>simpcomp</Package> is functional by calling <C>ReadTest("GAPROOT/pkg/simpcomp/tst/simpcomp.tst");</C>. The returned value of GAP4stones is a measure of your system performance and differs from system to system.
+## Test whether the package <Package>simpcomp</Package> is functional by calling <C>Test("GAPROOT/pkg/simpcomp/tst/simpcomp.tst");</C>. The returned value of GAP4stones is a measure of your system performance and differs from system to system.
 ## <Example>
 ## gap> SCRunTest();
 ## + test simpcomp package, version %%%VERSION%%%
@@ -608,7 +606,7 @@ end;
 InstallGlobalFunction(SCRunTest,
 function()
 	local path;
-	path:=DirectoriesLibrary("pkg/simpcomp/tst")[1];
-	return ReadTest(Filename(path,"simpcomp.tst"));
+  path:=DirectoriesPackageLibrary("simpcomp", "tst");
+  return Test(Filename(path,"simpcomp.tst"));
 end);
 
