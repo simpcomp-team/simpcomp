@@ -18,7 +18,11 @@ Date := "%%%DATE%%%",
 PackageWWWHome := "http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/",
 README_URL := Concatenation( ~.PackageWWWHome, "README" ),
 PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-
+SourceRepository := rec( 
+  Type := "git", 
+  URL := "https://github.com/simpcomp-team/simpcomp"
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
 ArchiveURL :=Concatenation( [ "http://github.com/simpcomp-team/simpcomp/releases/download/v", String(~.Version), "/simpcomp-", String(~.Version) ]),
 ArchiveFormats := ".tar.gz",
 
