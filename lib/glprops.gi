@@ -800,19 +800,47 @@ InstallMethod(SCIsFlag,
 [SCIsSimplicialComplex],
 function(complex)
 	
-	local nf,f;
+	local nf,f,dim,edges,trigs,face,comb;
 	
-	
-	nf:=SCMinimalNonFacesEx(complex);
-	if(nf=fail) then
+  dim:=SCDim(complex);
+  if dim = fail then
+    continue;
+  fi;
+  
+  if dim < 1 then
+		Info(InfoSimpcomp,1,"SCIsFlag: complex must be at least 1-dimensional.");
 		return fail;
 	fi;
 	
-	if(Length(nf)<3 or ForAll(nf{[3..Length(nf)]},IsEmpty)) then
+
+  if(dim<3) then
 		f:=true;
+    edges:=SCSkel(complex,1);
+    if dim = 2 then
+      trigs:=SCSkel(complex,2);
+    else
+      trigs:=[];
+    fi;
+    for comb in Combinations(edges,3) do
+      face:=Union(comb);
+      if Size(face) = 3 and not face in trigs then
+        # found missing triangle
+        f:=false;
+        break;
+      fi;
+    od;
 	else
-		f:=false;
-	fi;
+	  nf:=SCMinimalNonFacesEx(complex);
+	  if(nf=fail) then
+		  return fail;
+	  fi;
+    if(ForAll(nf{[3..Length(nf)]},IsEmpty)) then
+  		f:=true;
+    else
+      f:=false;
+    fi;
+  fi;
+
 	
 	return f;
 end);
