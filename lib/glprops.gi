@@ -3529,8 +3529,9 @@ function(complex,k)
 	if dim = fail then
 		return fail;
 	fi;
+
 	
-	if(k > 0 and k > Int((SCDim(complex)+1)/2)) then
+	if(k <= 0 or k > Int((SCDim(complex)+1)/2)) then
 		Info(InfoSimpcomp,1,"SCIsInKd: second argument must be a positive integer k with 1 <= k <= \\lfloor (SCDim(complex)+1)/2 \\rfloor.");
 		return fail;
 	fi;
