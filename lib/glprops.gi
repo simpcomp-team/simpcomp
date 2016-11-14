@@ -804,7 +804,7 @@ function(complex)
 	
   dim:=SCDim(complex);
   if dim = fail then
-    continue;
+    return fail;
   fi;
   
   if dim < 1 then
