@@ -799,8 +799,7 @@ InstallMethod(SCIsFlag,
 "for SCSimplicialComplex",
 [SCIsSimplicialComplex],
 function(complex)
-	
-	local nf,f,dim,edges,trigs,face,comb;
+  local dim,i,edges,skel,face,vFace,comb;
 	
   dim:=SCDim(complex);
   if dim = fail then
@@ -808,41 +807,37 @@ function(complex)
   fi;
   
   if dim < 1 then
-		Info(InfoSimpcomp,1,"SCIsFlag: complex must be at least 1-dimensional.");
-		return fail;
-	fi;
-	
-
-  if(dim<3) then
-		f:=true;
-    edges:=SCSkel(complex,1);
-    if dim = 2 then
-      trigs:=SCSkel(complex,2);
-    else
-      trigs:=[];
-    fi;
-    for comb in Combinations(edges,3) do
-      face:=Union(comb);
-      if Size(face) = 3 and not face in trigs then
-        # found missing triangle
-        f:=false;
-        break;
-      fi;
-    od;
-	else
-	  nf:=SCMinimalNonFacesEx(complex);
-	  if(nf=fail) then
-		  return fail;
-	  fi;
-    if(ForAll(nf{[3..Length(nf)]},IsEmpty)) then
-  		f:=true;
-    else
-      f:=false;
-    fi;
+    Info(InfoSimpcomp,1,"SCIsFlag: complex must be at least 1-dimensional.");
+    return fail;
   fi;
 
-	
-	return f;
+  edges:=SCSkel(complex,1);
+  
+  # a graph is a flag complex if and only if it does not have any 3-qlique
+  if dim = 1 then
+    for comb in Combinations(edges,3) do
+      vFace:=Union(comb);
+      if Size(vFace) = 3 then
+	Info(InfoSimpcomp,2,"SCIsFlag: found missing clique ",vFace,": complex is not flag.");
+        return false;
+      fi;
+    od;
+    return true;
+  fi;
+
+  # if dimension of complex is greater or equal to two
+  for i in [2..dim] do
+    skel := SCSkel(complex,i);
+    for comb in Combinations(edges,Binomial(i+1,2)) do
+      vFace:=Union(comb);
+      if Size(vFace) = i+1 and not vFace in skel then
+        Info(InfoSimpcomp,2,"SCIsFlag: found missing clique ",vFace,": complex is not flag.");
+        return false;
+      fi;
+    od;
+  od;
+
+  return true;    
 end);
 
 	
