@@ -799,10 +799,11 @@ InstallMethod(SCIsFlag,
 "for SCSimplicialComplex",
 [SCIsSimplicialComplex],
 function(complex)
-  local dim,i,edges,skel,face,vFace,comb;
+  local dim,isconn,i,lowskel,skel,face,vFace,comb;
 	
   dim:=SCDim(complex);
-  if dim = fail then
+  isconn:=SCIsConnected(complex);
+  if dim = fail or isconn = fail then
     return fail;
   fi;
   
@@ -811,24 +812,25 @@ function(complex)
     return fail;
   fi;
 
-  edges:=SCSkel(complex,1);
-  
-  # a graph is a flag complex if and only if it does not have any 3-qlique
-  if dim = 1 then
-    for comb in Combinations(edges,3) do
-      vFace:=Union(comb);
-      if Size(vFace) = 3 then
-	Info(InfoSimpcomp,2,"SCIsFlag: found missing clique ",vFace,": complex is not flag.");
-        return false;
-      fi;
-    od;
-    return true;
-  fi;
+  if not isconn then
+    Info(InfoSimpcomp,1,"SCIsFlag: complex must be connected.");
+    return fail;
+  fi;  
 
-  # if dimension of complex is greater or equal to two
-  for i in [2..dim] do
-    skel := SCSkel(complex,i);
-    for comb in Combinations(edges,Binomial(i+1,2)) do
+  # check for every dimension 
+  #
+  #           1 <= i <= DIM(complex) + 1 
+  #
+  # if there exist a clique in the one-skeleton of the complex
+  # which in not a face of the complex
+  for i in [2..dim+1] do
+    lowskel:=SCSkelEx(complex,i-1);
+    if i > dim then
+      skel := [];
+    else
+      skel := SCSkelEx(complex,i);
+    fi;
+    for comb in Combinations(lowskel,i+1) do
       vFace:=Union(comb);
       if Size(vFace) = i+1 and not vFace in skel then
         Info(InfoSimpcomp,2,"SCIsFlag: found missing clique ",vFace,": complex is not flag.");
