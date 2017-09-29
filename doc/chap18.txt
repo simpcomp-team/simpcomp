@@ -153,54 +153,54 @@
   the Euler characteristic of a complex in [5Xsimpcomp[105X:[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28XDeclareAttribute("SCEulerCharacteristic",SCIsPolyhedralComplex);[128X[104X
-    [4X[28X[128X[104X
-    [4X[28XInstallMethod(SCEulerCharacteristic,[128X[104X
-    [4X[28X"for SCSimplicialComplex",[128X[104X
-    [4X[28X[SCIsSimplicialComplex],[128X[104X
-    [4X[28Xfunction(complex)[128X[104X
-    [4X[28X[128X[104X
-    [4X[28X	local  f, chi, i;[128X[104X
-    [4X[28X[128X[104X
-    [4X[28X	f:=SCFVector(complex);[128X[104X
-    [4X[28X	if f=fail then[128X[104X
-    [4X[28X		return fail;[128X[104X
-    [4X[28X	fi;[128X[104X
-    [4X[28X	chi:=0;[128X[104X
-    [4X[28X[128X[104X
-    [4X[28X	for i in [1..Size(f)] do[128X[104X
-    [4X[28X			chi:=chi + ((-1)^(i+1))*f[i];[128X[104X
-    [4X[28X	od;[128X[104X
-    [4X[28X[128X[104X
-    [4X[28X	return chi;[128X[104X
-    [4X[28Xend);[128X[104X
-    [4X[28X[128X[104X
-    [4X[28XInstallMethod(SCEulerCharacteristic,[128X[104X
-    [4X[28X"for SCNormalSurface",[128X[104X
-    [4X[28X[SCIsNormalSurface],[128X[104X
-    [4X[28Xfunction(sl)[128X[104X
-    [4X[28X[128X[104X
-    [4X[28X 	local facets, f, chi;[128X[104X
-    [4X[28X[128X[104X
-    [4X[28X  	[128X[104X
-    [4X[28X 	f:=SCFVector(sl);[128X[104X
-    [4X[28X 	if(f=fail) then[128X[104X
-    [4X[28X 		return fail;[128X[104X
-    [4X[28X 	fi;[128X[104X
-    [4X[28X	[128X[104X
-    [4X[28X	if Length(f) = 1 then[128X[104X
-    [4X[28X	 		return f[1];[128X[104X
-    [4X[28X	elif Length(f) =3 then[128X[104X
-    [4X[28X 	 		return f[1]-f[2]+f[3];[128X[104X
-    [4X[28X 	elif Length(f) =4 then[128X[104X
-    [4X[28X 	 		return f[1]-f[2]+f[3]+f[4];[128X[104X
-    [4X[28X 	else[128X[104X
-    [4X[28X 		Info(InfoSimpcomp,1,"SCEulerCharacteristic: illegal f-vector found: ",f,". ");[128X[104X
-    [4X[28X 		return fail;[128X[104X
-    [4X[28X 	fi;[128X[104X
-    [4X[28X[128X[104X
-    [4X[28Xend);[128X[104X
-    [4X[28X[128X[104X
+    [4X[28XDeclareAttribute("SCEulerCharacteristic",SCIsPolyhedralComplex);[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XInstallMethod(SCEulerCharacteristic,[128X[104X
+    [4X[28X"for SCSimplicialComplex",[128X[104X
+    [4X[28X[SCIsSimplicialComplex],[128X[104X
+    [4X[28Xfunction(complex)[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X	local  f, chi, i;[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X	f:=SCFVector(complex);[128X[104X
+    [4X[28X	if f=fail then[128X[104X
+    [4X[28X		return fail;[128X[104X
+    [4X[28X	fi;[128X[104X
+    [4X[28X	chi:=0;[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X	for i in [1..Size(f)] do[128X[104X
+    [4X[28X			chi:=chi + ((-1)^(i+1))*f[i];[128X[104X
+    [4X[28X	od;[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X	return chi;[128X[104X
+    [4X[28Xend);[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XInstallMethod(SCEulerCharacteristic,[128X[104X
+    [4X[28X"for SCNormalSurface",[128X[104X
+    [4X[28X[SCIsNormalSurface],[128X[104X
+    [4X[28Xfunction(sl)[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X 	local facets, f, chi;[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X  	[128X[104X
+    [4X[28X 	f:=SCFVector(sl);[128X[104X
+    [4X[28X 	if(f=fail) then[128X[104X
+    [4X[28X 		return fail;[128X[104X
+    [4X[28X 	fi;[128X[104X
+    [4X[28X	[128X[104X
+    [4X[28X	if Length(f) = 1 then[128X[104X
+    [4X[28X	 		return f[1];[128X[104X
+    [4X[28X	elif Length(f) =3 then[128X[104X
+    [4X[28X 	 		return f[1]-f[2]+f[3];[128X[104X
+    [4X[28X 	elif Length(f) =4 then[128X[104X
+    [4X[28X 	 		return f[1]-f[2]+f[3]+f[4];[128X[104X
+    [4X[28X 	else[128X[104X
+    [4X[28X 		Info(InfoSimpcomp,1,"SCEulerCharacteristic: illegal f-vector found: ",f,". ");[128X[104X
+    [4X[28X 		return fail;[128X[104X
+    [4X[28X 	fi;[128X[104X
+    [4X[28X[128X[104X
+    [4X[28Xend);[128X[104X
+    [4X[28X[128X[104X
   [4X[32X[104X
   
   [33X[0;0YWhen  looking at the code one already sees the structure that such a handler
@@ -230,19 +230,19 @@
   own methods:[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28XDeclareAttribute("SCMyPropertyHandler",SCPolyhedralComplex);[128X[104X
-    [4X[28X[128X[104X
-    [4X[28XInstallMethod(SCMyPropertyHandler,[128X[104X
-    [4X[28X"for SCSimplicialComplex[ and further arguments]",[128X[104X
-    [4X[28X[SCIsSimplicialComplex[, further arguments]],[128X[104X
-    [4X[28Xfunction(complex[, further arguments])[128X[104X
-    [4X[28X[128X[104X
-    [4X[28X	local myprop, ...;[128X[104X
-    [4X[28X[128X[104X
-    [4X[28X	# compute the property[128X[104X
-    [4X[28X [ do property computation here][128X[104X
-    [4X[28X[128X[104X
-    [4X[28X	return myprop;[128X[104X
-    [4X[28Xend);[128X[104X
+    [4X[28XDeclareAttribute("SCMyPropertyHandler",SCPolyhedralComplex);[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XInstallMethod(SCMyPropertyHandler,[128X[104X
+    [4X[28X"for SCSimplicialComplex[ and further arguments]",[128X[104X
+    [4X[28X[SCIsSimplicialComplex[, further arguments]],[128X[104X
+    [4X[28Xfunction(complex[, further arguments])[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X	local myprop, ...;[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X	# compute the property[128X[104X
+    [4X[28X [ do property computation here][128X[104X
+    [4X[28X[128X[104X
+    [4X[28X	return myprop;[128X[104X
+    [4X[28Xend);[128X[104X
   [4X[32X[104X
   

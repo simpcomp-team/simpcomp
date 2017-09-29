@@ -110,8 +110,8 @@
 {\Huge \textbf{A \textsf{GAP} toolbox for simplicial complexes\mbox{}}}\\
 \vfill
 
-{\Huge Version 2.1.6\mbox{}}\\[1cm]
-{February 2016  \begin{center} \vspace*{1cm}
+{\Huge Version 2.1.7\mbox{}}\\[1cm]
+{September 2017  \begin{center} \vspace*{1cm}
 \includegraphics[width=.4\textwidth]{figures/shrimpmanual}\\ \end{center}  \mbox{}}\\[1cm]
 \mbox{}\\[2cm]
 {\Large \textbf{ Felix Effenberger   \mbox{}}}\\
@@ -163,7 +163,7 @@ the \textsf{GRAPE} package is not available. \mbox{}}\\[1cm]
 {\small 
 \section*{Copyright}
 \logpage{[ 0, 0, 3 ]}
-{\copyright} 2016 Felix Effenberger and Jonathan Spreer. Permission is granted
+{\copyright} 2017 Felix Effenberger and Jonathan Spreer. Permission is granted
 to copy, distribute and/or modify this document under the terms of the GNU
 Free Documentation License, Version 1.2 or any later version published by the
 Free Software Foundation, see \href{http://www.fsf.org/licensing/licenses/fdl.html} {\texttt{http://www.fsf.org/licensing/licenses/fdl.html}} for a copy.
@@ -311,13 +311,11 @@ verifies that the results are correct.
 
  To test the functionality of \textsf{simpcomp} you can run the function \texttt{SCRunTest} (\ref{SCRunTest}) from the \textsf{GAP} console: 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@SCRunTest();
-|
-  + test simpcomp package, Version 2.1.6
+  !gapprompt@gap>| !gapinput@SCRunTest();|
+  + test simpcomp package, Version 2.1.7
   + GAP4stones: 69988
   true
-  !gapprompt@gap>| !gapinput@
-|
+  !gapprompt@gap>| !gapinput@|
 \end{Verbatim}
  \texttt{SCRunTest} (\ref{SCRunTest}) should return \texttt{true}, otherwise the correct functionality of simpcomp cannot be guaranteed. }
 
@@ -339,8 +337,8 @@ calls to functions of the package \textsf{simpcomp} can be controlled by setting
   @manual{simpcomp,
   	author = "Felix Effenberger and Jonathan Spreer",
   	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
-  	          {V}ersion 2.1.6",
-  	year   = "2016",
+  	          {V}ersion 2.1.7",
+  	year   = "2017",
   	url    = "\url{https://github.com/simpcomp-team/simpcomp}",
   }
 \end{verbatim}
@@ -350,8 +348,8 @@ bibliography environment of LaTeX.
   \bibitem{simpcomp}
   F.~Effenberger and J.~Spreer,
   \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
-  Version 2.1.6, 
-  2016,
+  Version 2.1.7, 
+  2017,
   \url{https://github.com/simpcomp-team/simpcomp}.
 \end{verbatim}
  }
@@ -705,26 +703,20 @@ always the simplicial complex for which the property should be calculated, in
 some cases followed by further arguments of the property handler function. An
 example would be: 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@c:=SCBdSimplex(3);; # create a SCSimplicialComplex object
-|
-  !gapprompt@gap>| !gapinput@SCFVector(c);
-|
+  !gapprompt@gap>| !gapinput@c:=SCBdSimplex(3);; # create a SCSimplicialComplex object|
+  !gapprompt@gap>| !gapinput@SCFVector(c);|
   [ 4, 6, 4 ]
-  !gapprompt@gap>| !gapinput@SCSkel(c,0);
-|
+  !gapprompt@gap>| !gapinput@SCSkel(c,0);|
   [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ]
 \end{Verbatim}
  Here the functions \texttt{SCFVector} and \texttt{SCSkel} are the property handler functions, see Chapter \ref{chap:prophandler} for a list of all property handlers of a \texttt{SCPolyhedralComplex}, \texttt{SCSimplicialComplex} or \texttt{SCNormalSurface} object. Apart from this (standard) method of calling the property handlers
 directly with a \texttt{SCPolyhedralComplex} object, \textsf{simpcomp} provides the user with another more object oriented method which calls
 property handlers of a \texttt{SCPolyhedralComplex} object indirectly and more conveniently: 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@c:=SCBdSimplex(3);; # create a SCSimplicialComplex object
-|
-  !gapprompt@gap>| !gapinput@c.F;
-|
+  !gapprompt@gap>| !gapinput@c:=SCBdSimplex(3);; # create a SCSimplicialComplex object|
+  !gapprompt@gap>| !gapinput@c.F;|
   [ 4, 6, 4 ]
-  !gapprompt@gap>| !gapinput@c.Skel(0);
-|
+  !gapprompt@gap>| !gapinput@c.Skel(0);|
   [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ]
 \end{Verbatim}
  Note that the code in this example calculates the same properties as in the
@@ -1615,7 +1607,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   44
+   48
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
    0
@@ -1630,7 +1622,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   36
+   44
    
 \end{Verbatim}
  }
@@ -2435,7 +2427,7 @@ pseudomanifold. Compare \texttt{SCExportIsoSig} (\ref{SCExportIsoSig}), which re
    0
    gap> s:=SCExportIsoSig(c); time;
    "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
-   20
+   16
    
 \end{Verbatim}
  }
@@ -2770,8 +2762,7 @@ of $O(\operatorname{log} (g))$ memory. If \mbox{\texttt{\mdseries\slshape orient
 
  Computes the $f$-vector of the $d$-dimensional cross polytope without generating the underlying complex. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@SCFVectorBdCrossPolytope(50);
-|
+  !gapprompt@gap>| !gapinput@SCFVectorBdCrossPolytope(50);|
   [ 100, 4900, 156800, 3684800, 67800320, 1017004800, 12785203200, 
     137440934400, 1282782054400, 10518812846080, 76500457062400, 
     497252970905600, 2907017368371200, 15365663232819200, 73755183517532160, 
@@ -2805,8 +2796,7 @@ of $O(\operatorname{log} (g))$ memory. If \mbox{\texttt{\mdseries\slshape orient
 
  Computes the $f$-vector of the \mbox{\texttt{\mdseries\slshape d}}-dimensional cyclic polytope on \mbox{\texttt{\mdseries\slshape n}} vertices, $n\geq d+2$, without generating the underlying complex. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@SCFVectorBdCyclicPolytope(25,198); 
-|
+  !gapprompt@gap>| !gapinput@SCFVectorBdCyclicPolytope(25,198); |
   [ 198, 19503, 1274196, 62117055, 2410141734, 77526225777, 2126433621312, 
     50768602708824, 1071781612741840, 20256672480820776, 346204947854027808, 
     5395027104058600008, 48354596155522298656, 262068846498922699590, 
@@ -3430,9 +3420,9 @@ from \cite{Spreer10Diss}, Section 3.3.
    gap> Mminus:=SCSpan(c,[1,2,3,4,9,10,11,12]);;                  
    gap> Mplus:=SCSpan(c,[5,6,7,8,13,14,15,16]);;                  
    gap> SCCollapseGreedy(Mminus).Facets;
-   [ [ 1, 9 ], [ 1, 10 ], [ 3, 10 ], [ 3, 11 ], [ 4, 9 ], [ 4, 12 ], [ 11, 12 ] ]
+   [ [ 1, 2 ], [ 1, 12 ], [ 2, 11 ], [ 11, 12 ] ]
    gap> SCCollapseGreedy(Mplus).Facets; 
-   [ [ 5, 8 ], [ 5, 16 ], [ 6, 14 ], [ 6, 15 ], [ 8, 15 ], [ 13, 14 ], [ 13, 16 ] ]
+   [ [ 7, 14 ], [ 7, 15 ], [ 8, 13 ], [ 8, 16 ], [ 13, 14 ], [ 15, 16 ] ]
    
 \end{Verbatim}
  }
@@ -4729,7 +4719,7 @@ always unique, since every non trivial semi-direct product is denoted by ''\text
    gap> g:=SCAutomorphismGroupInternal(c);
    PrimitiveGroup(3,2) = S(3)
    gap> List(g);
-   [ (), (1,2,3), (1,3,2), (2,3), (1,2), (1,3) ]
+   [ (), (1,3,2), (1,2,3), (2,3), (1,3), (1,2) ]
    gap> StructureDescription(g);
    "S3"
    
@@ -5875,15 +5865,14 @@ free involution.
 
 
 
- Checks if \mbox{\texttt{\mdseries\slshape complex}} is flag. A simplicial complex is a flag complex if all edges of a potential
-face of the complex are in the complex, or equivalently if all of its minimal
-non-faces are edges (cf. \cite{Frohmader08FaceVecFlagCompl}). 
+ Checks if \mbox{\texttt{\mdseries\slshape complex}} is flag. A connected simplicial complex of dimension at least one is a flag
+complex if all cliques in its 1-skeleton span a face of the complex (cf. \cite{Frohmader08FaceVecFlagCompl}). 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> SCLib.SearchByName("RP^2");   
    [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ]
    gap> rp2_6:=SCLib.Load(last[1][1]);;
    gap> SCIsFlag(rp2_6);
-   true
+   false
    
 \end{Verbatim}
  }
@@ -5962,7 +5951,7 @@ indefinite answer to the membership problem.
    Group([ (1,3)(4,9)(5,8)(6,7), (1,9,8,7,6,5,4,3,2) ])
    gap> SCIsInKd(c,1);
    #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
-   #I  SCIsKStackedSphere: try 1/50
+   #I  SCIsKStackedSphere: try 1/1
    #I  SCIsKStackedSphere: complex is a 1-stacked sphere.
    true
    
@@ -8963,7 +8952,7 @@ contains the trigangulated $(d+1)$-ball $B$ with $\partial B=S$ and $\operatorna
    /SimplicialComplex]
    gap> SCIsKStackedSphere(l,1);
    #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
-   #I  SCIsKStackedSphere: try 1/50
+   #I  SCIsKStackedSphere: try 1/1
    #I  SCIsKStackedSphere: complex is a 1-stacked sphere.
    [ true, [SimplicialComplex
        
@@ -9171,7 +9160,7 @@ With optional positive integer argument \mbox{\texttt{\mdseries\slshape rounds}}
    
    /SimplicialComplex]
    gap> c.F;
-   [ 17, 74, 114, 57 ]
+   [ 16, 65, 98, 49 ]
    
 \end{Verbatim}
  }
@@ -9319,7 +9308,7 @@ returned by this function.
         Name="unnamed complex 18"
         Dim=3
        
-       /SimplicialComplex], 7 ]
+       /SimplicialComplex], 9 ]
    gap> SCMailSetAddress("johndoe@somehost");   
    true
    gap> SCMailIsEnabled();                     
@@ -9339,7 +9328,7 @@ returned by this function.
 \begin{Verbatim}[commandchars=@|J,fontsize=\small,frame=single,label=Example]
    Greetings master,
    
-   this is simpcomp 2.1.6 running on igt215.mathematik.uni-stuttgart.de
+   this is simpcomp 2.1.7 running on igt215.mathematik.uni-stuttgart.de
    (Linux igt215 2.6.26-2-amd64 #1 SMP Thu Nov 5 02:23:12 UTC 2009 x86_64
    GNU/Linux), GAP 4.4.12.
    
@@ -9353,20 +9342,20 @@ returned by this function.
    
    [SimplicialComplex
    
-   \A0Properties known: Boundary, Chi, Date, Dim, F, Faces, Facets, G, H,
+    Properties known: Boundary, Chi, Date, Dim, F, Faces, Facets, G, H,
     HasBoundary, Homology, IsConnected, IsManifold, IsPM, Name, SCVertices,
     Vertices.
    
-   \A0Name="ReducedComplex_5_vertices_7"
-   \A0Dim=3
-   \A0Chi=0
-   \A0F=[ 5, 10, 10, 5 ]
-   \A0G=[ 0, 0 ]
-   \A0H=[ 1, 1, 1, 1 ]
-   \A0HasBoundary=false
-   \A0Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-   \A0IsConnected=true
-   \A0IsPM=true
+    Name="ReducedComplex_5_vertices_7"
+    Dim=3
+    Chi=0
+    F=[ 5, 10, 10, 5 ]
+    G=[ 0, 0 ]
+    H=[ 1, 1, 1, 1 ]
+    HasBoundary=false
+    Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
+    IsConnected=true
+    IsPM=true
    
    /SimplicialComplex]
    
@@ -9456,12 +9445,13 @@ versions.
    #I  SCBlowup: boundaries not isomorphic, initializing bistellar moves...
    #I  SCBlowup: found complex with smaller boundary: f = [ 15, 74, 118, 59 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 14, 70, 112, 56 ].
-   #I  SCBlowup: found complex with smaller boundary: f = [ 14, 67, 106, 53 ].
+   #I  SCBlowup: found complex with smaller boundary: f = [ 14, 69, 110, 55 ].
+   #I  SCBlowup: found complex with smaller boundary: f = [ 14, 68, 108, 54 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 13, 65, 104, 52 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 13, 64, 102, 51 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 13, 63, 100, 50 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 13, 62, 98, 49 ].
-   #I  SCBlowup: found complex with smaller boundary: f = [ 12, 58, 92, 46 ].
+   #I  SCBlowup: found complex with smaller boundary: f = [ 13, 61, 96, 48 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 12, 57, 90, 45 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 12, 56, 88, 44 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 12, 55, 86, 43 ].
@@ -9476,8 +9466,8 @@ versions.
    
     Properties known: Dim, FacetsEx, Name, Vertices.
    
-    Name="unnamed complex 4084 \ star([ 1 ]) in unnamed complex 4084 cup unnamed \
-   complex 4088 cup unnamed complex 4086"
+    Name="unnamed complex 2735 \ star([ 1 ]) in unnamed complex 2735 cup unnamed \
+   complex 2739 cup unnamed complex 2737"
     Dim=4
    
    /SimplicialComplex]
@@ -9649,7 +9639,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
    gap> SCIsTight(c); time;
    #I  SCIsTight: complex is connected but not 2-neighbourly, and thus not tight.
    false
-   8
+   12
    
 \end{Verbatim}
  
@@ -9678,7 +9668,6 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
    gap> c:=SCBoundary(SCFromDifferenceCycles(dc));;
    gap> SCAutomorphismGroup(c);;
    gap> SCIsTight(c);
-   #I SCIsTight: complex is 3-dimensional and tight neighbourly, and thus tight.
    true
    
 \end{Verbatim}
@@ -9759,7 +9748,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
    #I  SCIsInKd: complex has transitive automorphism group, only checking one link.
    #I  SCIsInKd: checking link 1/1
    #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
-   #I  SCIsKStackedSphere: try 1/50
+   #I  SCIsKStackedSphere: try 1/1
    #I  round 0
    Reduced complex, F: [ 9, 26, 34, 17 ]
    #I  round 1
@@ -9967,7 +9956,7 @@ simplicial complex of type \texttt{SCSimplicialComplex} upon success, \texttt{fa
    
    /SimplicialComplex]
    gap> coll.Facets;
-   [ [ 1, 3 ], [ 1, 5 ], [ 2, 3 ], [ 2, 5 ], [ 3, 4 ], [ 3, 7 ], [ 4, 7 ] ]
+   [ [ 2, 5 ], [ 2, 6 ], [ 2, 7 ], [ 5, 6 ], [ 5, 7 ] ]
    gap> sphere:=SCBdSimplex(4);;                              
    gap> bdsphere:=SCDifference(sphere,SC([sphere.Facets[1]]));;
    gap> coll:=SCCollapseGreedy(bdsphere);
@@ -9983,7 +9972,7 @@ simplicial complex of type \texttt{SCSimplicialComplex} upon success, \texttt{fa
    
    /SimplicialComplex]
    gap> coll.Facets;                     
-   [ [ 5 ] ]
+   [ [ 2 ] ]
    
 \end{Verbatim}
  }
@@ -10016,7 +10005,7 @@ simplicial complex \mbox{\texttt{\mdseries\slshape complex}}. See also \texttt{S
    
    /SimplicialComplex]
    gap> coll.Facets;
-   [ [ 1, 3 ], [ 1, 5 ], [ 3, 6 ], [ 3, 7 ], [ 5, 6 ], [ 6, 7 ] ]
+   [ [ 1, 6 ], [ 1, 7 ], [ 2, 5 ], [ 2, 7 ], [ 5, 7 ], [ 6, 7 ] ]
    gap> sphere:=SCBdSimplex(4);;                              
    gap> ball:=SCDifference(sphere,SC([sphere.Facets[1]]));;
    gap> coll:=SCCollapseLex(ball);
@@ -10065,7 +10054,7 @@ collapse the simplicial complex \mbox{\texttt{\mdseries\slshape complex}}. See a
    
    /SimplicialComplex]
    gap> coll.Facets;
-   [ [ 1, 3 ], [ 1, 6 ], [ 3, 6 ], [ 3, 7 ], [ 6, 7 ] ]
+   [ [ 1, 3 ], [ 1, 7 ], [ 3, 4 ], [ 3, 5 ], [ 4, 7 ], [ 5, 7 ] ]
    gap> sphere:=SCBdSimplex(4);;                              
    gap> ball:=SCDifference(sphere,SC([sphere.Facets[1]]));;
    gap> coll:=SCCollapseRevLex(ball);
@@ -10241,16 +10230,15 @@ and how often they ocurred (see \cite{Benedetti13RandomDMT} for details).
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> c:=SCSeriesHomologySphere(2,3,5);;
    gap> f:=SCMorseSpec(c,30,SCMorseRandom);
-   [ [ 6, [ 1, 2, 2, 1 ], 27 ], [ 8, [ 1, 3, 3, 1 ], 3 ] ]
+   [ [ 6, [ 1, 2, 2, 1 ], 25 ], [ 8, [ 1, 3, 3, 1 ], 5 ] ]
    gap> f:=SCMorseSpec(c,30,SCMorseRandomLex);
-   [ [ 6, [ 1, 2, 2, 1 ], 29 ], [ 8, [ 1, 3, 3, 1 ], 1 ] ]
+   [ [ 6, [ 1, 2, 2, 1 ], 30 ] ]
    gap> f:=SCMorseSpec(c,30,SCMorseRandomRevLex);
-   [ [ 6, [ 1, 2, 2, 1 ], 7 ], [ 8, [ 1, 3, 3, 1 ], 9 ], 
-     [ 8, [ 2, 3, 2, 1 ], 1 ], [ 10, [ 1, 4, 4, 1 ], 11 ], 
-     [ 12, [ 1, 5, 5, 1 ], 1 ], [ 14, [ 1, 6, 6, 1 ], 1 ] ]
+   [ [ 6, [ 1, 2, 2, 1 ], 7 ], [ 8, [ 1, 3, 3, 1 ], 13 ], 
+     [ 10, [ 1, 4, 4, 1 ], 9 ], [ 10, [ 2, 4, 3, 1 ], 1 ] ]
    gap> f:=SCMorseSpec(c,30,SCMorseUST);
    [ [ 6, [ 1, 2, 2, 1 ], 18 ], [ 8, [ 1, 3, 3, 1 ], 8 ], 
-     [ 10, [ 1, 4, 4, 1 ], 3 ], [ 12, [ 1, 5, 5, 1 ], 1 ] ]
+     [ 10, [ 1, 4, 4, 1 ], 4 ] ]
    
 \end{Verbatim}
  }
@@ -10299,9 +10287,9 @@ Hasse diagram \mbox{\texttt{\mdseries\slshape HD}} using Wilson's algorithm (see
    gap> c:=SCSurface(1,false);;
    gap> HD:=SCHasseDiagram(c);;
    gap> stTop:=SCSpanningTreeRandom(HD,true);
-   [ 3, 10, 13, 8, 1, 15, 12, 6, 14 ]
+   [ 15, 2, 6, 12, 7, 8, 1, 3, 11 ]
    gap> stBot:=SCSpanningTreeRandom(HD,false);
-   [ 10, 6, 9, 5, 13 ]
+   [ 9, 5, 3, 6, 11 ]
    
 \end{Verbatim}
  }
@@ -10363,23 +10351,23 @@ a list of pairs of the form \texttt{[ integer, list ]} upon success, fail otherw
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandom,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   60
+   40
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   56
+   40
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomRevLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   56
+   44
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseEngstroem,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   100
+   92
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   136
+   92
    
 \end{Verbatim}
  }
@@ -10580,7 +10568,7 @@ usually named by their topological type. As usual, ` S\^{}d' denotes a $d$-spher
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
-   Path="/home/jonathan/apps/gap4r7/pkg/simpcomp/complexes/"
+   Path="/home/mi/spreerjn/private/apps/gap4r8/pkg/simpcomp/complexes/"
    ]
    gap> SCLib.Size;
    7649
@@ -10987,7 +10975,7 @@ to the user and only pre-calculated attributes are indexed.
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
-   Path="/home/jonathan/apps/gap4r7/pkg/simpcomp/complexes/"
+   Path="/home/mi/spreerjn/private/apps/gap4r8/pkg/simpcomp/complexes/"
    ]
    
 \end{Verbatim}
@@ -11549,20 +11537,17 @@ functions of the package \textsf{simpcomp} can be controlled by setting the info
  Sets the logging verbosity of \textsf{simpcomp}. A level of $0$ suppresses all output, a level of $1$ lets \textsf{simpcomp} output normal running information, whereas levels of $2$ and higher display verbose running information. Examples of functions using
 more verbose logging are bistellar flip-related functions. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@SCInfoLevel(3);
-|
+  !gapprompt@gap>| !gapinput@SCInfoLevel(3);|
   true
-  !gapprompt@gap>| !gapinput@c:=SCBdCrossPolytope(3);;
-|
-  !gapprompt@gap>| !gapinput@SCReduceComplex(c); 
-|
-  #I  round 0, move: [ [ 4, 6 ], [ 1, 2 ] ]
+  !gapprompt@gap>| !gapinput@c:=SCBdCrossPolytope(3);;|
+  !gapprompt@gap>| !gapinput@SCReduceComplex(c); |
+  #I  round 0, move: [ [ 4, 5 ], [ 1, 2 ] ]
   F: [ 6, 12, 8 ]
-  #I  round 1, move: [ [ 6 ], [ 1, 2, 3 ] ]
+  #I  round 1, move: [ [ 5 ], [ 1, 2, 3 ] ]
   F: [ 5, 9, 6 ]
   #I  round 1
   Reduced complex, F: [ 5, 9, 6 ]
-  #I  round 2, move: [ [ 4 ], [ 1, 2, 5 ] ]
+  #I  round 2, move: [ [ 3 ], [ 1, 2, 6 ] ]
   F: [ 4, 6, 4 ]
   #I  round 2
   Reduced complex, F: [ 4, 6, 4 ]
@@ -11649,7 +11634,7 @@ nothing.
  Returns \texttt{true} when an email of the \textsf{simpcomp} email notification system is pending, \texttt{false} otherwise. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> SCMailIsPending();
-   true
+   false
    
 \end{Verbatim}
  }
@@ -11790,14 +11775,13 @@ functionality of the package.
 
 
 
- Test whether the package \textsf{simpcomp} is functional by calling \texttt{Test("GAPROOT/pkg/simpcomp/tst/simpcomp.tst");}. The returned value of GAP4stones is a measure of your system performance and
+ Test whether the package \textsf{simpcomp} is functional by calling \texttt{Test("GAPROOT/pkg/simpcomp/tst/simpcomp.tst",rec(compareFunction :=
+"uptowhitespace"));}. The returned value of GAP4stones is a measure of your system performance and
 differs from system to system. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> SCRunTest();
-   Line 1220 : 
-   + simpcomp package test
-   Line 1221 : 
-   + GAP4stones: 67385
+   simpcomp package test
+   GAP4stones: 69463
    true
    
 \end{Verbatim}
@@ -12265,17 +12249,13 @@ package.
 (pseudo)manifolds (complexes \texttt{c5}, \texttt{c6}, \texttt{c7}, see Section \ref{sec:Series} and the function prefix \texttt{SCSeries...}). There are also functions creating new simplicial complexes from old, see
 Section \ref{sec:generateFromOld}, which will be described in the next sections. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@#first run functionality test on simpcomp
-|
-  !gapprompt@gap>| !gapinput@SCRunTest();
-|
-  + test simpcomp package, version 2.1.6
+  !gapprompt@gap>| !gapinput@#first run functionality test on simpcomp|
+  !gapprompt@gap>| !gapinput@SCRunTest();|
+  + test simpcomp package, version 2.1.7
   + GAP4stones: 69988
   true
-  !gapprompt@gap>| !gapinput@#all ok
-|
-  !gapprompt@gap>| !gapinput@c1:=SCFromFacets([[1,2],[2,3],[3,1]]);
-|
+  !gapprompt@gap>| !gapinput@#all ok|
+  !gapprompt@gap>| !gapinput@c1:=SCFromFacets([[1,2],[2,3],[3,1]]);|
   [SimplicialComplex
   
    Properties known: Dim, Facets, Name, VertexLabels.
@@ -12284,22 +12264,16 @@ Section \ref{sec:generateFromOld}, which will be described in the next sections.
    Dim=1
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@G:=Group([(2,12,11,6,8,3)(4,7,10)(5,9),(1,11,6,4,5,3,10,8,9,7,2,12)]);
-|
+  !gapprompt@gap>| !gapinput@G:=Group([(2,12,11,6,8,3)(4,7,10)(5,9),(1,11,6,4,5,3,10,8,9,7,2,12)]);|
   Group([ (2,12,11,6,8,3)(4,7,10)(5,9), (1,11,6,4,5,3,10,8,9,7,2,12) ])
-  !gapprompt@gap>| !gapinput@StructureDescription(G);
-|
+  !gapprompt@gap>| !gapinput@StructureDescription(G);|
   "S4 x S3"
-  !gapprompt@gap>| !gapinput@Size(G);
-|
+  !gapprompt@gap>| !gapinput@Size(G);|
   144
-  !gapprompt@gap>| !gapinput@c2:=SCFromGenerators(G,[[1,2,3]]);;
-|
-  !gapprompt@gap>| !gapinput@c2.IsManifold;                    
-|
+  !gapprompt@gap>| !gapinput@c2:=SCFromGenerators(G,[[1,2,3]]);;|
+  !gapprompt@gap>| !gapinput@c2.IsManifold;                    |
   true
-  !gapprompt@gap>| !gapinput@SCLibDetermineTopologicalType(c2);
-|
+  !gapprompt@gap>| !gapinput@SCLibDetermineTopologicalType(c2);|
   [SimplicialComplex
   
    Properties known: AutomorphismGroup, AutomorphismGroupSize, 
@@ -12319,8 +12293,7 @@ Section \ref{sec:generateFromOld}, which will be described in the next sections.
    TopologicalType="T^2"
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@c3:=SCFromDifferenceCycles([[1,1,6],[3,3,2]]);
-|
+  !gapprompt@gap>| !gapinput@c3:=SCFromDifferenceCycles([[1,1,6],[3,3,2]]);|
   [SimplicialComplex
   
    Properties known: Dim, Facets, Name, VertexLabels.
@@ -12329,8 +12302,7 @@ Section \ref{sec:generateFromOld}, which will be described in the next sections.
    Dim=2
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@c4:=SCBdSimplex(2);
-|
+  !gapprompt@gap>| !gapinput@c4:=SCBdSimplex(2);|
   [SimplicialComplex
   
    Properties known: AutomorphismGroup, AutomorphismGroupOrder, 
@@ -12351,10 +12323,8 @@ Section \ref{sec:generateFromOld}, which will be described in the next sections.
    TopologicalType="S^1"
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@c5:=SCSeriesCSTSurface(2,16);;    
-|
-  !gapprompt@gap>| !gapinput@SCLibDetermineTopologicalType(c5);
-|
+  !gapprompt@gap>| !gapinput@c5:=SCSeriesCSTSurface(2,16);;    |
+  !gapprompt@gap>| !gapinput@SCLibDetermineTopologicalType(c5);|
   [SimplicialComplex
   
    Properties known: Boundary, Dim, Faces, Facets, HasBoundary, IsPM, Name, 
@@ -12367,21 +12337,15 @@ Section \ref{sec:generateFromOld}, which will be described in the next sections.
    TopologicalType="T^2 U T^2"
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@c6:=SCSeriesD2n(22);;
-|
-  !gapprompt@gap>| !gapinput@c6.Homology;
-|
+  !gapprompt@gap>| !gapinput@c6:=SCSeriesD2n(22);;|
+  !gapprompt@gap>| !gapinput@c6.Homology;|
   [ [ 0, [  ] ], [ 1, [  ] ], [ 0, [ 2 ] ], [ 0, [  ] ] ]
-  !gapprompt@gap>| !gapinput@c6.F;
-|
+  !gapprompt@gap>| !gapinput@c6.F;|
   [ 44, 264, 440, 220 ]
-  !gapprompt@gap>| !gapinput@SCSeriesAGL(17);
-|
+  !gapprompt@gap>| !gapinput@SCSeriesAGL(17);|
   [ AGL(1,17), [ [ 1, 2, 4, 8, 16 ] ] ]
-  !gapprompt@gap>| !gapinput@c7:=SCFromGenerators(last[1],last[2]);;
-|
-  !gapprompt@gap>| !gapinput@c7.AutomorphismGroupTransitivity;
-|
+  !gapprompt@gap>| !gapinput@c7:=SCFromGenerators(last[1],last[2]);;|
+  !gapprompt@gap>| !gapinput@c7.AutomorphismGroupTransitivity;|
   2
 \end{Verbatim}
  }
@@ -12395,24 +12359,18 @@ Section \ref{sec:generateFromOld}, which will be described in the next sections.
 be given to the object oriented notation in this demo session. The code listed
 below 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@c:=SCBdSimplex(3);; # create a simplicial complex object
-|
-  !gapprompt@gap>| !gapinput@SCFVector(c);
-|
+  !gapprompt@gap>| !gapinput@c:=SCBdSimplex(3);; # create a simplicial complex object|
+  !gapprompt@gap>| !gapinput@SCFVector(c);|
   [ 4, 6, 4 ]
-  !gapprompt@gap>| !gapinput@SCSkel(c,0);
-|
+  !gapprompt@gap>| !gapinput@SCSkel(c,0);|
   [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ]
 \end{Verbatim}
  is equivalent to 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@c:=SCBdSimplex(3);; # create a simplicial complex object
-|
-  !gapprompt@gap>| !gapinput@c.F;
-|
+  !gapprompt@gap>| !gapinput@c:=SCBdSimplex(3);; # create a simplicial complex object|
+  !gapprompt@gap>| !gapinput@c.F;|
   [ 4, 6, 4 ]
-  !gapprompt@gap>| !gapinput@c.Skel(0);
-|
+  !gapprompt@gap>| !gapinput@c.Skel(0);|
   [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ]
 \end{Verbatim}
  }
@@ -12425,56 +12383,40 @@ below
   \textsf{simpcomp} provides a variety of functions for calculating properties of simplicial
 complexes, see Section \ref{sec:glprops}. All these properties are only calculated once and stored in the \texttt{SCSimplicialComplex} object. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@c1.F;     
-|
+  !gapprompt@gap>| !gapinput@c1.F;     |
   [ 3, 3 ]
-  !gapprompt@gap>| !gapinput@c1.FaceLattice;
-|
+  !gapprompt@gap>| !gapinput@c1.FaceLattice;|
   [ [ [ 1 ], [ 2 ], [ 3 ] ], [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ] ]
-  !gapprompt@gap>| !gapinput@c1.AutomorphismGroup;
-|
+  !gapprompt@gap>| !gapinput@c1.AutomorphismGroup;|
   S3
-  !gapprompt@gap>| !gapinput@c1.Generators;
-|
+  !gapprompt@gap>| !gapinput@c1.Generators;|
   [ [ [ 1, 2 ], 3 ] ]
-  !gapprompt@gap>| !gapinput@c3.Facets;
-|
+  !gapprompt@gap>| !gapinput@c3.Facets;|
   [ [ 1, 2, 3 ], [ 1, 2, 8 ], [ 1, 3, 6 ], [ 1, 4, 6 ], [ 1, 4, 7 ], 
     [ 1, 7, 8 ], [ 2, 3, 4 ], [ 2, 4, 7 ], [ 2, 5, 7 ], [ 2, 5, 8 ], 
     [ 3, 4, 5 ], [ 3, 5, 8 ], [ 3, 6, 8 ], [ 4, 5, 6 ], [ 5, 6, 7 ], 
     [ 6, 7, 8 ] ]
-  !gapprompt@gap>| !gapinput@c3.F;
-|
+  !gapprompt@gap>| !gapinput@c3.F;|
   [ 8, 24, 16 ]
-  !gapprompt@gap>| !gapinput@c3.G;
-|
+  !gapprompt@gap>| !gapinput@c3.G;|
   [ 4 ]
-  !gapprompt@gap>| !gapinput@c3.H;
-|
+  !gapprompt@gap>| !gapinput@c3.H;|
   [ 5, 11, -1 ]
-  !gapprompt@gap>| !gapinput@c3.ASDet;
-|
+  !gapprompt@gap>| !gapinput@c3.ASDet;|
   186624
-  !gapprompt@gap>| !gapinput@c3.Chi;
-|
+  !gapprompt@gap>| !gapinput@c3.Chi;|
   0
-  !gapprompt@gap>| !gapinput@c3.Generators;
-|
+  !gapprompt@gap>| !gapinput@c3.Generators;|
   [ [ [ 1, 2, 3 ], 16 ] ]
-  !gapprompt@gap>| !gapinput@c3.HasBoundary;
-|
+  !gapprompt@gap>| !gapinput@c3.HasBoundary;|
   false
-  !gapprompt@gap>| !gapinput@c3.IsConnected;
-|
+  !gapprompt@gap>| !gapinput@c3.IsConnected;|
   true
-  !gapprompt@gap>| !gapinput@c3.IsCentrallySymmetric;
-|
+  !gapprompt@gap>| !gapinput@c3.IsCentrallySymmetric;|
   true
-  !gapprompt@gap>| !gapinput@c3.Vertices;
-|
+  !gapprompt@gap>| !gapinput@c3.Vertices;|
   [ 1, 2, 3, 4, 5, 6, 7, 8 ]
-  !gapprompt@gap>| !gapinput@c3.ConnectedComponents;
-|
+  !gapprompt@gap>| !gapinput@c3.ConnectedComponents;|
   [ [SimplicialComplex
       
        Properties known: Dim, Facets, Name, VertexLabels.
@@ -12484,8 +12426,7 @@ complexes, see Section \ref{sec:glprops}. All these properties are only calculat
        Dim=2
       
       /SimplicialComplex] ]
-  !gapprompt@gap>| !gapinput@c3.UnknownProperty;
-|
+  !gapprompt@gap>| !gapinput@c3.UnknownProperty;|
   #I  SCPropertyObject: unhandled property 'UnknownProperty'. Handled properties\
    are [ "Equivalent", "IsKStackedSphere", "IsManifold", "IsMovable", "Move", 
     "Moves", "RMoves", "ReduceAsSubcomplex", "Reduce", "ReduceEx", "Copy", 
@@ -12528,8 +12469,7 @@ complexes, see Section \ref{sec:glprops}. All these properties are only calculat
   As already mentioned, there is the possibility to generate new objects of type \texttt{SCSimplicialComplex} from existing ones using standard constructions. The functions used in this
 section are described in more detail in Section \ref{sec:generateFromOld}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@d:=c3+c3;
-|
+  !gapprompt@gap>| !gapinput@d:=c3+c3;|
   [SimplicialComplex
   
    Properties known: Dim, Facets, Name, VertexLabels, Vertices.
@@ -12539,11 +12479,9 @@ section are described in more detail in Section \ref{sec:generateFromOld}.
    Dim=2
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@SCRename(d,"T^2#T^2");
-|
+  !gapprompt@gap>| !gapinput@SCRename(d,"T^2#T^2");|
   true
-  !gapprompt@gap>| !gapinput@SCLink(d,1);
-|
+  !gapprompt@gap>| !gapinput@SCLink(d,1);|
   [SimplicialComplex
   
    Properties known: Dim, Facets, Name, VertexLabels.
@@ -12552,8 +12490,7 @@ section are described in more detail in Section \ref{sec:generateFromOld}.
    Dim=1
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@SCStar(d,[1,2]);
-|
+  !gapprompt@gap>| !gapinput@SCStar(d,[1,2]);|
   [SimplicialComplex
   
    Properties known: Dim, Facets, Name, VertexLabels.
@@ -12562,11 +12499,9 @@ section are described in more detail in Section \ref{sec:generateFromOld}.
    Dim=2
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@SCRename(c3,"T^2");
-|
+  !gapprompt@gap>| !gapinput@SCRename(c3,"T^2");|
   true
-  !gapprompt@gap>| !gapinput@SCConnectedProduct(c3,4);
-|
+  !gapprompt@gap>| !gapinput@SCConnectedProduct(c3,4);|
   [SimplicialComplex
   
    Properties known: Dim, Facets, Name, VertexLabels, Vertices.
@@ -12575,8 +12510,7 @@ section are described in more detail in Section \ref{sec:generateFromOld}.
    Dim=2
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@SCCartesianProduct(c4,c4);
-|
+  !gapprompt@gap>| !gapinput@SCCartesianProduct(c4,c4);|
   [SimplicialComplex
   
    Properties known: Dim, Facets, Name, TopologicalType, VertexLabels.
@@ -12586,8 +12520,7 @@ section are described in more detail in Section \ref{sec:generateFromOld}.
    TopologicalType="S^1xS^1"
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@SCCartesianPower(c4,3);
-|
+  !gapprompt@gap>| !gapinput@SCCartesianPower(c4,3);|
   [SimplicialComplex
   
    Properties known: Dim, Facets, Name, TopologicalType, VertexLabels.
@@ -12608,8 +12541,7 @@ section are described in more detail in Section \ref{sec:generateFromOld}.
   \textsf{simpcomp} relies on the GAP package homology \cite{Dumas04Homology} for its homology computations but provides further (co-)homology related
 functions, see Chapter \ref{chap:homology}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@s2s2:=SCCartesianProduct(SCBdSimplex(3),SCBdSimplex(3));
-|
+  !gapprompt@gap>| !gapinput@s2s2:=SCCartesianProduct(SCBdSimplex(3),SCBdSimplex(3));|
   [SimplicialComplex
   
    Properties known: Dim, Facets, Name, TopologicalType, VertexLabels.
@@ -12619,25 +12551,20 @@ functions, see Chapter \ref{chap:homology}.
    TopologicalType="S^2xS^2"
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@SCHomology(s2s2);
-|
+  !gapprompt@gap>| !gapinput@SCHomology(s2s2);|
   [ [ 0, [  ] ], [ 0, [  ] ], [ 2, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-  !gapprompt@gap>| !gapinput@SCHomologyInternal(s2s2);
-|
+  !gapprompt@gap>| !gapinput@SCHomologyInternal(s2s2);|
   [ [ 0, [  ] ], [ 0, [  ] ], [ 2, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-  !gapprompt@gap>| !gapinput@SCHomologyBasis(s2s2,2);
-|
+  !gapprompt@gap>| !gapinput@SCHomologyBasis(s2s2,2);|
   [ [ 1, [ [ 1, 70 ], [ -1, 12 ], [ 1, 2 ], [ -1, 1 ] ] ], 
     [ 1, [ [ 1, 143 ], [ -1, 51 ], [ 1, 29 ], [ -1, 25 ] ] ] ]
-  !gapprompt@gap>| !gapinput@SCHomologyBasisAsSimplices(s2s2,2);
-|
+  !gapprompt@gap>| !gapinput@SCHomologyBasisAsSimplices(s2s2,2);|
   [ [ 1, 
         [ [ 1, [ 2, 3, 4 ] ], [ -1, [ 1, 3, 4 ] ], [ 1, [ 1, 2, 4 ] ], [ -1, [ 1
                       , 2, 3 ] ] ] ], 
     [ 1, [ [ 1, [ 5, 9, 13 ] ], [ -1, [ 1, 9, 13 ] ], [ 1, [ 1, 5, 13 ] ], 
             [ -1, [ 1, 5, 9 ] ] ] ] ]
-  !gapprompt@gap>| !gapinput@SCCohomologyBasis(s2s2,2);
-|
+  !gapprompt@gap>| !gapinput@SCCohomologyBasis(s2s2,2);|
   [ [ 1, 
         [ [ 1, 122 ], [ 1, 115 ], [ 1, 112 ], [ 1, 111 ], [ 1, 93 ], [ 1, 90 ], 
             [ 1, 89 ], [ 1, 84 ], [ 1, 83 ], [ 1, 82 ], [ 1, 46 ], [ 1, 43 ], 
@@ -12647,8 +12574,7 @@ functions, see Chapter \ref{chap:homology}.
             [ 1, 150 ], [ 1, 147 ], [ 1, 131 ], [ 1, 128 ], [ 1, 125 ], 
             [ 1, 67 ], [ 1, 58 ], [ 1, 55 ], [ 1, 39 ], [ 1, 36 ], [ 1, 33 ], 
             [ 1, 10 ], [ 1, 7 ], [ 1, 4 ], [ 1, 1 ] ] ] ]
-  !gapprompt@gap>| !gapinput@SCCohomologyBasisAsSimplices(s2s2,2);
-|
+  !gapprompt@gap>| !gapinput@SCCohomologyBasisAsSimplices(s2s2,2);|
   [ [ 1, [ [ 1, [ 4, 8, 12 ] ], [ 1, [ 3, 8, 12 ] ], [ 1, [ 3, 7, 12 ] ], 
             [ 1, [ 3, 7, 11 ] ], [ 1, [ 2, 8, 12 ] ], [ 1, [ 2, 7, 12 ] ], 
             [ 1, [ 2, 7, 11 ] ], [ 1, [ 2, 6, 12 ] ], [ 1, [ 2, 6, 11 ] ], 
@@ -12663,12 +12589,10 @@ functions, see Chapter \ref{chap:homology}.
             [ 1, [ 1, 10, 11 ] ], [ 1, [ 1, 6, 15 ] ], [ 1, [ 1, 6, 11 ] ], 
             [ 1, [ 1, 6, 7 ] ], [ 1, [ 1, 2, 15 ] ], [ 1, [ 1, 2, 11 ] ], 
             [ 1, [ 1, 2, 7 ] ], [ 1, [ 1, 2, 3 ] ] ] ] ]
-  !gapprompt@gap>| !gapinput@PrintArray(SCIntersectionForm(s2s2));
-|
+  !gapprompt@gap>| !gapinput@PrintArray(SCIntersectionForm(s2s2));|
   [ [  0,  1 ],
     [  1,  0 ] ]
-  !gapprompt@gap>| !gapinput@c:=s2s2+s2s2;
-|
+  !gapprompt@gap>| !gapinput@c:=s2s2+s2s2;|
   [SimplicialComplex
   
    Properties known: Dim, Facets, Name, VertexLabels, Vertices.
@@ -12677,8 +12601,7 @@ functions, see Chapter \ref{chap:homology}.
    Dim=4
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@PrintArray(SCIntersectionForm(c));
-|
+  !gapprompt@gap>| !gapinput@PrintArray(SCIntersectionForm(c));|
   [ [   0,  -1,   0,   0 ],
     [  -1,   0,   0,   0 ],
     [   0,   0,   0,  -1 ],
@@ -12694,12 +12617,9 @@ functions, see Chapter \ref{chap:homology}.
   For a more detailed description of functions related to bistellar flips as
 well as a very short introduction into the topic, see Chapter \ref{chap:bistellar}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@beta4:=SCBdCrossPolytope(4);;    
-|
-  !gapprompt@gap>| !gapinput@s3:=SCBdSimplex(4);;             
-|
-  !gapprompt@gap>| !gapinput@SCEquivalent(beta4,s3);
-|
+  !gapprompt@gap>| !gapinput@beta4:=SCBdCrossPolytope(4);;    |
+  !gapprompt@gap>| !gapinput@s3:=SCBdSimplex(4);;             |
+  !gapprompt@gap>| !gapinput@SCEquivalent(beta4,s3);|
   #I  round 0, move: [ [ 2, 6, 7 ], [ 3, 4 ] ]
   [ 8, 25, 34, 17 ]
   #I  round 1, move: [ [ 2, 7 ], [ 3, 4, 5 ] ]
@@ -12716,14 +12636,11 @@ well as a very short introduction into the topic, see Chapter \ref{chap:bistella
   [ 5, 10, 10, 5 ]
   #I  SCReduceComplexEx: complexes are bistellarly equivalent.
   true
-  !gapprompt@gap>| !gapinput@SCBistellarOptions.WriteLevel;   
-|
+  !gapprompt@gap>| !gapinput@SCBistellarOptions.WriteLevel;   |
   0
-  !gapprompt@gap>| !gapinput@SCBistellarOptions.WriteLevel:=1;
-|
+  !gapprompt@gap>| !gapinput@SCBistellarOptions.WriteLevel:=1;|
   1
-  !gapprompt@gap>| !gapinput@SCEquivalent(beta4,s3);          
-|
+  !gapprompt@gap>| !gapinput@SCEquivalent(beta4,s3);          |
   #I  SCLibInit: made directory "~/PATH" for user library.
   #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
   #I  SCLibUpdate: rebuilding index for ~/PATH.
@@ -12753,8 +12670,7 @@ well as a very short introduction into the topic, see Chapter \ref{chap:bistella
   -10-27_11-40-00.sc".
   #I  SCReduceComplexEx: complexes are bistellarly equivalent.
   true
-  !gapprompt@gap>| !gapinput@myLib:=SCLibInit("~/PATH"); # copy path from above             
-|
+  !gapprompt@gap>| !gapinput@myLib:=SCLibInit("~/PATH"); # copy path from above             |
   [Simplicial complex library. Properties:
   CalculateIndexAttributes=true
   Number of complexes in library=4
@@ -12762,8 +12678,7 @@ well as a very short introduction into the topic, see Chapter \ref{chap:bistella
   Loaded=true
   Path="/home/spreerjn/reducedComplexes/2009-10-27_11-40-00/"
   ]
-  !gapprompt@gap>| !gapinput@s3:=myLib.Load(3);
-|
+  !gapprompt@gap>| !gapinput@s3:=myLib.Load(3);|
   [SimplicialComplex
   
    Properties known: Chi, Date, Dim, F, Faces, Facets, G, H, Homology, 
@@ -12779,8 +12694,7 @@ well as a very short introduction into the topic, see Chapter \ref{chap:bistella
    IsConnected=true
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@s3:=myLib.Load(2);
-|
+  !gapprompt@gap>| !gapinput@s3:=myLib.Load(2);|
   [SimplicialComplex
   
    Properties known: Chi, Date, Dim, F, Faces, Facets, G, H, Homology, 
@@ -12796,19 +12710,14 @@ well as a very short introduction into the topic, see Chapter \ref{chap:bistella
    IsConnected=true
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@t2:=SCCartesianProduct(SCBdSimplex(2),SCBdSimplex(2));;
-|
-  !gapprompt@gap>| !gapinput@t2.F;
-|
+  !gapprompt@gap>| !gapinput@t2:=SCCartesianProduct(SCBdSimplex(2),SCBdSimplex(2));;|
+  !gapprompt@gap>| !gapinput@t2.F;|
   [ 9, 27, 18 ]
-  !gapprompt@gap>| !gapinput@SCBistellarOptions.WriteLevel:=0;
-|
+  !gapprompt@gap>| !gapinput@SCBistellarOptions.WriteLevel:=0;|
   0
-  !gapprompt@gap>| !gapinput@SCBistellarOptions.LogLevel:=0;  
-|
+  !gapprompt@gap>| !gapinput@SCBistellarOptions.LogLevel:=0;  |
   0
-  !gapprompt@gap>| !gapinput@mint2:=SCReduceComplex(t2);    
-|
+  !gapprompt@gap>| !gapinput@mint2:=SCReduceComplex(t2);    |
   [ true, [SimplicialComplex
       
        Properties known: Dim, Facets, Name, VertexLabels.
@@ -12829,11 +12738,9 @@ well as a very short introduction into the topic, see Chapter \ref{chap:bistella
   For a more detailed description of functions related to simplicial blowups see
 Chapter \ref{chap:blowups}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@list:=SCLib.SearchByName("Kummer");
-|
+  !gapprompt@gap>| !gapinput@list:=SCLib.SearchByName("Kummer");|
   [ [ 7493, "4-dimensional Kummer variety (VT)" ] ]
-  !gapprompt@gap>| !gapinput@c:=SCLib.Load(7493);
-|
+  !gapprompt@gap>| !gapinput@c:=SCLib.Load(7493);|
   [SimplicialComplex
   
    Properties known: AltshulerSteinberg, AutomorphismGroup, 
@@ -12871,8 +12778,7 @@ Chapter \ref{chap:blowups}.
    Neighborliness=2
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@lk:=SCLink(c,1);
-|
+  !gapprompt@gap>| !gapinput@lk:=SCLink(c,1);|
   [SimplicialComplex
   
    Properties known: Dim, FacetsEx, Name, Vertices.
@@ -12881,23 +12787,17 @@ Chapter \ref{chap:blowups}.
    Dim=3
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@SCHomology(lk);
-|
+  !gapprompt@gap>| !gapinput@SCHomology(lk);|
   [ [ 0, [  ] ], [ 0, [ 2 ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-  !gapprompt@gap>| !gapinput@SCLibDetermineTopologicalType(lk);
-|
+  !gapprompt@gap>| !gapinput@SCLibDetermineTopologicalType(lk);|
   [ 45, 113, 2426, 2502, 7470 ]
-  !gapprompt@gap>| !gapinput@d:=SCLib.Load(45);;
-|
-  !gapprompt@gap>| !gapinput@d.Name;
-|
+  !gapprompt@gap>| !gapinput@d:=SCLib.Load(45);;|
+  !gapprompt@gap>| !gapinput@d.Name;|
   "RP^3"
-  !gapprompt@gap>| !gapinput@SCEquivalent(lk,d);
-|
+  !gapprompt@gap>| !gapinput@SCEquivalent(lk,d);|
   #I  SCReduceComplexEx: complexes are bistellarly equivalent.
   true
-  !gapprompt@gap>| !gapinput@e:=SCBlowup(c,1);
-|
+  !gapprompt@gap>| !gapinput@e:=SCBlowup(c,1);|
   #I  SCBlowup: checking if singularity is a combinatorial manifold...
   #I  SCBlowup: ...true
   #I  SCBlowup: checking type of singularity...
@@ -12933,11 +12833,9 @@ Chapter \ref{chap:blowups}.
    Dim=4
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@SCHomology(c);
-|
+  !gapprompt@gap>| !gapinput@SCHomology(c);|
   [ [ 0, [  ] ], [ 0, [  ] ], [ 6, [ 2, 2, 2, 2, 2 ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-  !gapprompt@gap>| !gapinput@SCHomology(e);
-|
+  !gapprompt@gap>| !gapinput@SCHomology(e);|
   [ [ 0, [  ] ], [ 0, [  ] ], [ 7, [ 2, 2, 2, 2 ] ], [ 0, [  ] ], [ 1, [  ] ] ]
   			
 \end{Verbatim}
@@ -12952,10 +12850,8 @@ Chapter \ref{chap:blowups}.
 surfaces and slicings see the Sections \ref{sec:NormSurfTheory} and \ref{sec:MorseTheory}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   		
-  !gapprompt@gap>| !gapinput@# the boundary of the cyclic 4-polytope with 6 vertices		
-|
-  !gapprompt@gap>| !gapinput@c:=SCBdCyclicPolytope(4,6); 
-|
+  !gapprompt@gap>| !gapinput@# the boundary of the cyclic 4-polytope with 6 vertices		|
+  !gapprompt@gap>| !gapinput@c:=SCBdCyclicPolytope(4,6); |
   [SimplicialComplex
   
    Properties known: Dim, EulerCharacteristic, FacetsEx, HasBoundary, Homology,\
@@ -12971,10 +12867,8 @@ surfaces and slicings see the Sections \ref{sec:NormSurfTheory} and \ref{sec:Mor
    TopologicalType="S^3"
   
   /SimplicialComplex]
-  !gapprompt@gap>| !gapinput@# slicing in between the odd and the even vertex labels, a polyhedral torus
-|
-  !gapprompt@gap>| !gapinput@sl:=SCSlicing(c,[[2,4,6],[1,3,5]]);   
-|
+  !gapprompt@gap>| !gapinput@# slicing in between the odd and the even vertex labels, a polyhedral torus|
+  !gapprompt@gap>| !gapinput@sl:=SCSlicing(c,[[2,4,6],[1,3,5]]);   |
   [NormalSurface
   
    Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector,\
@@ -12989,17 +12883,13 @@ surfaces and slicings see the Sections \ref{sec:NormSurfTheory} and \ref{sec:Mor
    TopologicalType="T^2"
   
   /NormalSurface]
-  !gapprompt@gap>| !gapinput@sl.Homology;
-|
+  !gapprompt@gap>| !gapinput@sl.Homology;|
   [ [ 0, [  ] ], [ 2, [  ] ], [ 1, [  ] ] ]
-  !gapprompt@gap>| !gapinput@sl.Genus;
-|
+  !gapprompt@gap>| !gapinput@sl.Genus;|
   1
-  !gapprompt@gap>| !gapinput@sl.F; # the slicing constists of 9 quadrilaterals and 0 triangles
-|
+  !gapprompt@gap>| !gapinput@sl.F; # the slicing constists of 9 quadrilaterals and 0 triangles|
   [ 9, 18, 0, 9 ]
-  !gapprompt@gap>| !gapinput@PrintArray(sl.Facets);
-|
+  !gapprompt@gap>| !gapinput@PrintArray(sl.Facets);|
   [ [  [ 2, 1 ],  [ 2, 3 ],  [ 4, 1 ],  [ 4, 3 ] ],
     [  [ 2, 1 ],  [ 2, 3 ],  [ 6, 1 ],  [ 6, 3 ] ],
     [  [ 2, 1 ],  [ 2, 5 ],  [ 4, 1 ],  [ 4, 5 ] ],

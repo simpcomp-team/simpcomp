@@ -23,7 +23,7 @@
   [10XSCNormalSurface[110X with empty facet list.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCNSEmpty();[128X[104X
+    [4X[28X gap> SCNSEmpty();[128X[104X
     [4X[28X [NormalSurface[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -45,7 +45,7 @@
   [2XSCFromFacets[102X ([14X6.1-1[114X) for details.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> sl:=SCNSFromFacets([[1,2,3],[1,2,4,5],[1,3,4,6],[2,3,5,6],[4,5,6]]);[128X[104X
+    [4X[28X gap> sl:=SCNSFromFacets([[1,2,3],[1,2,4,5],[1,3,4,6],[2,3,5,6],[4,5,6]]);[128X[104X
     [4X[28X [NormalSurface[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -66,7 +66,7 @@
   [33X[0;0YInternally calls [2XSCNSFromFacets[102X ([14X7.1-2[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> sl:=SCNS([[1,2,3],[1,2,4,5],[1,3,4,6],[2,3,5,6],[4,5,6]]);[128X[104X
+    [4X[28X gap> sl:=SCNS([[1,2,3],[1,2,4,5],[1,3,4,6],[2,3,5,6],[4,5,6]]);[128X[104X
     [4X[28X [NormalSurface[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -90,10 +90,10 @@
   vertex labels of [3Xcomplex[103X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByAttribute("F=[ 10, 35, 50, 25 ]");[128X[104X
+    [4X[28X gap> SCLib.SearchByAttribute("F=[ 10, 35, 50, 25 ]");[128X[104X
     [4X[28X [ [ 19, "S^3 (VT)" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;                       [128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1..5],[6..10]]);    [128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;                       [128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1..5],[6..10]]);    [128X[104X
     [4X[28X [NormalSurface[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\[128X[104X
@@ -108,7 +108,7 @@
     [4X[28X  TopologicalType="S^2"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /NormalSurface][128X[104X
-    [4X[28X gap> sl.Facets;[128X[104X
+    [4X[28X gap> sl.Facets;[128X[104X
     [4X[28X [ [ [ 1, 6 ], [ 1, 8 ], [ 1, 9 ] ], [ [ 1, 6 ], [ 1, 8 ], [ 3, 6 ], [ 3, 8 ] ][128X[104X
     [4X[28X     , [ [ 1, 6 ], [ 1, 9 ], [ 4, 6 ], [ 4, 9 ] ], [128X[104X
     [4X[28X   [ [ 1, 6 ], [ 3, 6 ], [ 4, 6 ] ], [ [ 1, 8 ], [ 1, 9 ], [ 1, 10 ] ], [128X[104X
@@ -123,7 +123,7 @@
     [4X[28X     , [ [ 3, 8 ], [ 3, 10 ], [ 5, 8 ], [ 5, 10 ] ], [128X[104X
     [4X[28X   [ [ 4, 6 ], [ 4, 7 ], [ 4, 9 ] ], [ [ 4, 6 ], [ 4, 7 ], [ 5, 6 ], [ 5, 7 ] ][128X[104X
     [4X[28X     , [ [ 5, 6 ], [ 5, 7 ], [ 5, 8 ] ], [ [ 5, 7 ], [ 5, 8 ], [ 5, 10 ] ] ][128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1,3,5,7,9],[2,4,6,8,10]]);    [128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1,3,5,7,9],[2,4,6,8,10]]);    [128X[104X
     [4X[28X [NormalSurface[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\[128X[104X
@@ -138,7 +138,7 @@
     [4X[28X  TopologicalType="T^2"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /NormalSurface][128X[104X
-    [4X[28X gap> sl.Facets;                           [128X[104X
+    [4X[28X gap> sl.Facets;                           [128X[104X
     [4X[28X [ [ [ 1, 2 ], [ 1, 4 ], [ 3, 2 ], [ 3, 4 ] ], [128X[104X
     [4X[28X   [ [ 1, 2 ], [ 1, 4 ], [ 9, 2 ], [ 9, 4 ] ], [128X[104X
     [4X[28X   [ [ 1, 2 ], [ 1, 10 ], [ 3, 2 ], [ 3, 10 ] ], [128X[104X
@@ -184,7 +184,7 @@
   [33X[0;0YCopies a [5XGAP[105X object of type [10XSCNormalSurface[110X (cf. [2XSCCopy[102X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> sl:=SCNSSlicing(SCBdSimplex(4),[[1],[2..5]]);[128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(SCBdSimplex(4),[[1],[2..5]]);[128X[104X
     [4X[28X [NormalSurface[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\[128X[104X
@@ -199,7 +199,7 @@
     [4X[28X  TopologicalType="S^2"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /NormalSurface][128X[104X
-    [4X[28X gap> sl_2:=SCCopy(sl);                          [128X[104X
+    [4X[28X gap> sl_2:=SCCopy(sl);                          [128X[104X
     [4X[28X [NormalSurface[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\[128X[104X
@@ -214,7 +214,7 @@
     [4X[28X  TopologicalType="S^2"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /NormalSurface][128X[104X
-    [4X[28X gap> IsIdenticalObj(sl,sl_2);                     [128X[104X
+    [4X[28X gap> IsIdenticalObj(sl,sl_2);                     [128X[104X
     [4X[28X false[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -231,14 +231,14 @@
   computation.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByAttribute("F=[ 10, 35, 50, 25 ]");[128X[104X
+    [4X[28X gap> SCLib.SearchByAttribute("F=[ 10, 35, 50, 25 ]");[128X[104X
     [4X[28X [ [ 19, "S^3 (VT)" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1,3,5,7,9],[2,4,6,8,10]]);;[128X[104X
-    [4X[28X gap> sl.F; [128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1,3,5,7,9],[2,4,6,8,10]]);;[128X[104X
+    [4X[28X gap> sl.F; [128X[104X
     [4X[28X [ 25, 50, 0, 25 ][128X[104X
-    [4X[28X gap> sc:=SCNSTriangulation(sl);;[128X[104X
-    [4X[28X gap> sc.F;[128X[104X
+    [4X[28X gap> sc:=SCNSTriangulation(sl);;[128X[104X
+    [4X[28X gap> sc.F;[128X[104X
     [4X[28X [ 25, 75, 50 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -259,7 +259,7 @@
   [33X[0;0YComputes all connected components of an arbitrary normal surface.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> sl:=SCNSSlicing(SCBdCrossPolytope(4),[[1,2],[3..8]]);[128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(SCBdCrossPolytope(4),[[1,2],[3..8]]);[128X[104X
     [4X[28X [NormalSurface[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\[128X[104X
@@ -274,7 +274,7 @@
     [4X[28X  TopologicalType="S^2 U S^2"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /NormalSurface][128X[104X
-    [4X[28X gap> cc:=SCConnectedComponents(sl);[128X[104X
+    [4X[28X gap> cc:=SCConnectedComponents(sl);[128X[104X
     [4X[28X [ [NormalSurface[128X[104X
     [4X[28X     [128X[104X
     [4X[28X      Properties known: Dim, EulerCharacteristic, FVector, FacetsEx, Genus, IsC\[128X[104X
@@ -312,11 +312,11 @@
   the slicing [3Xsl[103X is not empty).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> sl:=SCNSEmpty();;                                                    [128X[104X
-    [4X[28X gap> SCDim(sl);                                                         [128X[104X
+    [4X[28X gap> sl:=SCNSEmpty();;                                                    [128X[104X
+    [4X[28X gap> SCDim(sl);                                                         [128X[104X
     [4X[28X -1[128X[104X
-    [4X[28X gap> sl:=SCNSFromFacets([[1,2,3],[1,2,4,5],[1,3,4,6],[2,3,5,6],[4,5,6]]);;[128X[104X
-    [4X[28X gap> SCDim(sl);                                                         [128X[104X
+    [4X[28X gap> sl:=SCNSFromFacets([[1,2,3],[1,2,4,5],[1,3,4,6],[2,3,5,6],[4,5,6]]);;[128X[104X
+    [4X[28X gap> SCDim(sl);                                                         [128X[104X
     [4X[28X 2[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -330,10 +330,10 @@
   [2XSCEulerCharacteristic[102X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> list:=SCLib.SearchByName("S^2xS^1");;  [128X[104X
-    [4X[28X gap> c:=SCLib.Load(list[1][1]);;             [128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1..5],[6..10]]);;[128X[104X
-    [4X[28X gap> SCEulerCharacteristic(sl);                 [128X[104X
+    [4X[28X gap> list:=SCLib.SearchByName("S^2xS^1");;  [128X[104X
+    [4X[28X gap> c:=SCLib.Load(list[1][1]);;             [128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1..5],[6..10]]);;[128X[104X
+    [4X[28X gap> SCEulerCharacteristic(sl);                 [128X[104X
     [4X[28X 4[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -348,10 +348,10 @@
   vertices, edges, triangles and quadrilaterals of [3Xsl[103X, cf. [2XSCFVector[102X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> list:=SCLib.SearchByName("S^2xS^1");;[128X[104X
-    [4X[28X gap> c:=SCLib.Load(list[1][1]);;             [128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1..5],[6..10]]);;[128X[104X
-    [4X[28X gap> SCFVector(sl);                 [128X[104X
+    [4X[28X gap> list:=SCLib.SearchByName("S^2xS^1");;[128X[104X
+    [4X[28X gap> c:=SCLib.Load(list[1][1]);;             [128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1..5],[6..10]]);;[128X[104X
+    [4X[28X gap> SCFVector(sl);                 [128X[104X
     [4X[28X [ 20, 40, 16, 8 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -366,9 +366,9 @@
   ([14X6.9-54[114X)).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdSimplex(4);;              [128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1,2],[3..5]]);;[128X[104X
-    [4X[28X gap> SCFaceLattice(sl);                            [128X[104X
+    [4X[28X gap> c:=SCBdSimplex(4);;              [128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1,2],[3..5]]);;[128X[104X
+    [4X[28X gap> SCFaceLattice(sl);                            [128X[104X
     [4X[28X [ [ [ [ 1, 3 ] ], [ [ 1, 4 ] ], [ [ 1, 5 ] ], [ [ 2, 3 ] ], [ [ 2, 4 ] ], [128X[104X
     [4X[28X       [ [ 2, 5 ] ] ], [128X[104X
     [4X[28X   [ [ [ 1, 3 ], [ 1, 4 ] ], [ [ 1, 3 ], [ 1, 5 ] ], [ [ 1, 3 ], [ 2, 3 ] ], [128X[104X
@@ -378,7 +378,7 @@
     [4X[28X   [ [ [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 4 ] ], [128X[104X
     [4X[28X       [ [ 1, 3 ], [ 1, 5 ], [ 2, 3 ], [ 2, 5 ] ], [128X[104X
     [4X[28X       [ [ 1, 4 ], [ 1, 5 ], [ 2, 4 ], [ 2, 5 ] ] ] ][128X[104X
-    [4X[28X gap> sl.F;[128X[104X
+    [4X[28X gap> sl.F;[128X[104X
     [4X[28X [ 6, 9, 2, 3 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -393,14 +393,14 @@
   ([14X6.9-55[114X)).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdSimplex(4);;              [128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1,2],[3..5]]);;[128X[104X
-    [4X[28X gap> SCFaceLatticeEx(sl);                            [128X[104X
+    [4X[28X gap> c:=SCBdSimplex(4);;              [128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1,2],[3..5]]);;[128X[104X
+    [4X[28X gap> SCFaceLatticeEx(sl);                            [128X[104X
     [4X[28X [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], [128X[104X
     [4X[28X   [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 5 ], [ 3, 6 ], [ 4, 5 ], [128X[104X
     [4X[28X       [ 4, 6 ], [ 5, 6 ] ], [ [ 1, 2, 3 ], [ 4, 5, 6 ] ], [128X[104X
     [4X[28X   [ [ 1, 2, 4, 5 ], [ 1, 3, 4, 6 ], [ 2, 3, 5, 6 ] ] ][128X[104X
-    [4X[28X gap> sl.F;[128X[104X
+    [4X[28X gap> sl.F;[128X[104X
     [4X[28X [ 6, 9, 2, 3 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -415,13 +415,13 @@
   computed via [2XSCFpBettiNumbers[102X using the triangulation.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("(S^2xS^1)#20");       [128X[104X
+    [4X[28X gap> SCLib.SearchByName("(S^2xS^1)#20");       [128X[104X
     [4X[28X [ [ 7617, "(S^2xS^1)#20" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> c.F;[128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> c.F;[128X[104X
     [4X[28X [ 27, 298, 542, 271 ][128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1..13],[14..27]]);;[128X[104X
-    [4X[28X gap> SCFpBettiNumbers(sl,2);[128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1..13],[14..27]]);;[128X[104X
+    [4X[28X gap> SCFpBettiNumbers(sl,2);[128X[104X
     [4X[28X [ 2, 14, 2 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -434,15 +434,15 @@
   [33X[0;0YComputes the genus of a discrete normal surface [3Xsl[103X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("(S^2xS^1)#20");[128X[104X
+    [4X[28X gap> SCLib.SearchByName("(S^2xS^1)#20");[128X[104X
     [4X[28X [ [ 7617, "(S^2xS^1)#20" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;               [128X[104X
-    [4X[28X gap> c.F;                               [128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;               [128X[104X
+    [4X[28X gap> c.F;                               [128X[104X
     [4X[28X [ 27, 298, 542, 271 ][128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1..12],[13..27]]);;[128X[104X
-    [4X[28X gap> SCIsConnected(sl);[128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1..12],[13..27]]);;[128X[104X
+    [4X[28X gap> SCIsConnected(sl);[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCGenus(sl);                     [128X[104X
+    [4X[28X gap> SCGenus(sl);                     [128X[104X
     [4X[28X 7[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -457,16 +457,16 @@
   [2XSCHomology[102X using the triangulation.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("(S^2xS^1)#20");       [128X[104X
+    [4X[28X gap> SCLib.SearchByName("(S^2xS^1)#20");       [128X[104X
     [4X[28X [ [ 7617, "(S^2xS^1)#20" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> c.F;[128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> c.F;[128X[104X
     [4X[28X [ 27, 298, 542, 271 ][128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1..12],[13..27]]);;   [128X[104X
-    [4X[28X gap> sl.Homology;[128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1..12],[13..27]]);;   [128X[104X
+    [4X[28X gap> sl.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 14, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1..13],[14..27]]);;[128X[104X
-    [4X[28X gap> sl.Homology;                       [128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1..13],[14..27]]);;[128X[104X
+    [4X[28X gap> sl.Homology;                       [128X[104X
     [4X[28X [ [ 1, [  ] ], [ 14, [  ] ], [ 2, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -479,8 +479,8 @@
   [33X[0;0YChecks if a normal surface [3Xcomplex[103X is connected.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> list:=SCLib.SearchByAttribute("Dim=3 and F[1]=10");;[128X[104X
-    [4X[28X gap> c:=SCLib.Load(list[1][1]);[128X[104X
+    [4X[28X gap> list:=SCLib.SearchByAttribute("Dim=3 and F[1]=10");;[128X[104X
+    [4X[28X gap> c:=SCLib.Load(list[1][1]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: AltshulerSteinberg, AutomorphismGroup, [128X[104X
@@ -519,7 +519,7 @@
     [4X[28X  Neighborliness=1[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1..5],[6..10]]);[128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1..5],[6..10]]);[128X[104X
     [4X[28X [NormalSurface[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\[128X[104X
@@ -534,7 +534,7 @@
     [4X[28X  TopologicalType="S^2"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /NormalSurface][128X[104X
-    [4X[28X gap> SCIsConnected(sl);[128X[104X
+    [4X[28X gap> SCIsConnected(sl);[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -548,8 +548,8 @@
   [10XSCNormalSurface[110X object with empty facet list.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> sl:=SCNS([]);;[128X[104X
-    [4X[28X gap> SCIsEmpty(sl);[128X[104X
+    [4X[28X gap> sl:=SCNS([]);;[128X[104X
+    [4X[28X gap> SCIsEmpty(sl);[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -562,8 +562,8 @@
   [33X[0;0YChecks if a discrete normal surface [3Xsl[103X is orientable.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdSimplex(4);;[128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1,2],[3,4,5]]);[128X[104X
+    [4X[28X gap> c:=SCBdSimplex(4);;[128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1,2],[3,4,5]]);[128X[104X
     [4X[28X [NormalSurface[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\[128X[104X
@@ -578,7 +578,7 @@
     [4X[28X  TopologicalType="S^2"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /NormalSurface][128X[104X
-    [4X[28X gap> SCIsOrientable(sl);[128X[104X
+    [4X[28X gap> SCIsOrientable(sl);[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -597,21 +597,21 @@
   cardinalities contained in [3Xk[103X are computed.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdSimplex(4);;              [128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1],[2..5]]);;[128X[104X
-    [4X[28X gap> SCSkel(sl,1);                            [128X[104X
+    [4X[28X gap> c:=SCBdSimplex(4);;              [128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1],[2..5]]);;[128X[104X
+    [4X[28X gap> SCSkel(sl,1);                            [128X[104X
     [4X[28X [ [ [ 1, 2 ], [ 1, 3 ] ], [ [ 1, 2 ], [ 1, 4 ] ], [ [ 1, 2 ], [ 1, 5 ] ], [128X[104X
     [4X[28X   [ [ 1, 3 ], [ 1, 4 ] ], [ [ 1, 3 ], [ 1, 5 ] ], [ [ 1, 4 ], [ 1, 5 ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdSimplex(4);;              [128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1],[2..5]]);;[128X[104X
-    [4X[28X gap> SCSkel(sl,3);                            [128X[104X
+    [4X[28X gap> c:=SCBdSimplex(4);;              [128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1],[2..5]]);;[128X[104X
+    [4X[28X gap> SCSkel(sl,3);                            [128X[104X
     [4X[28X [  ][128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1,2],[3..5]]);;[128X[104X
-    [4X[28X gap> SCSkelEx(sl,3);                            [128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1,2],[3..5]]);;[128X[104X
+    [4X[28X gap> SCSkelEx(sl,3);                            [128X[104X
     [4X[28X [ [ 1, 2, 4, 5 ], [ 1, 3, 4, 6 ], [ 2, 3, 5, 6 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -630,20 +630,20 @@
   cardinalities contained in [3Xk[103X are computed.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdSimplex(4);;              [128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1],[2..5]]);;[128X[104X
-    [4X[28X gap> SCSkelEx(sl,1);                            [128X[104X
+    [4X[28X gap> c:=SCBdSimplex(4);;              [128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1],[2..5]]);;[128X[104X
+    [4X[28X gap> SCSkelEx(sl,1);                            [128X[104X
     [4X[28X [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 4 ], [ 3, 4 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdSimplex(4);;              [128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1],[2..5]]);;[128X[104X
-    [4X[28X gap> SCSkelEx(sl,3);                            [128X[104X
+    [4X[28X gap> c:=SCBdSimplex(4);;              [128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1],[2..5]]);;[128X[104X
+    [4X[28X gap> SCSkelEx(sl,3);                            [128X[104X
     [4X[28X [  ][128X[104X
-    [4X[28X gap> sl:=SCNSSlicing(c,[[1,2],[3..5]]);;[128X[104X
-    [4X[28X gap> SCSkelEx(sl,3);                            [128X[104X
+    [4X[28X gap> sl:=SCNSSlicing(c,[[1,2],[3..5]]);;[128X[104X
+    [4X[28X gap> SCSkelEx(sl,3);                            [128X[104X
     [4X[28X [ [ 1, 2, 4, 5 ], [ 1, 3, 4, 6 ], [ 2, 3, 5, 6 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -658,12 +658,12 @@
   each connected component is computed.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("(S^2xS^1)#20");      [128X[104X
+    [4X[28X gap> SCLib.SearchByName("(S^2xS^1)#20");      [128X[104X
     [4X[28X [ [ 7617, "(S^2xS^1)#20" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> c.F;[128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> c.F;[128X[104X
     [4X[28X [ 27, 298, 542, 271 ][128X[104X
-    [4X[28X gap> for i in [1..26] do sl:=SCNSSlicing(c,[[1..i],[i+1..27]]); Print(sl.TopologicalType,"\n"); od;                                           [128X[104X
+    [4X[28X gap> for i in [1..26] do sl:=SCNSSlicing(c,[[1..i],[i+1..27]]); Print(sl.TopologicalType,"\n"); od;                                           [128X[104X
     [4X[28X S^2[128X[104X
     [4X[28X S^2[128X[104X
     [4X[28X S^2[128X[104X
@@ -707,8 +707,8 @@
   one facet in the new complex.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> list:=SCLib.SearchByAttribute("Dim=3 and F[1]=10");;[128X[104X
-    [4X[28X gap> c:=SCLib.Load(list[1][1]);[128X[104X
+    [4X[28X gap> list:=SCLib.SearchByAttribute("Dim=3 and F[1]=10");;[128X[104X
+    [4X[28X gap> c:=SCLib.Load(list[1][1]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: AltshulerSteinberg, AutomorphismGroup, [128X[104X
@@ -747,10 +747,10 @@
     [4X[28X  Neighborliness=1[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> sl1:=SCNSSlicing(c,[[1..5],[6..10]]);;[128X[104X
-    [4X[28X gap> sl2:=sl1+10;;[128X[104X
-    [4X[28X gap> sl3:=SCUnion(sl1,sl2);;[128X[104X
-    [4X[28X gap> SCTopologicalType(sl3);[128X[104X
+    [4X[28X gap> sl1:=SCNSSlicing(c,[[1..5],[6..10]]);;[128X[104X
+    [4X[28X gap> sl2:=sl1+10;;[128X[104X
+    [4X[28X gap> sl3:=SCUnion(sl1,sl2);;[128X[104X
+    [4X[28X gap> SCTopologicalType(sl3);[128X[104X
     [4X[28X "S^2 U S^2"[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X

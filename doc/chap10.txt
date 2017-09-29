@@ -44,10 +44,10 @@
   versions.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("Kummer variety");[128X[104X
+    [4X[28X gap> SCLib.SearchByName("Kummer variety");[128X[104X
     [4X[28X [ [ 7493, "4-dimensional Kummer variety (VT)" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;                [128X[104X
-    [4X[28X gap> d:= SCBlowup(c,1);[128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;                [128X[104X
+    [4X[28X gap> d:= SCBlowup(c,1);[128X[104X
     [4X[28X #I  SCBlowup: checking if singularity is a combinatorial manifold...[128X[104X
     [4X[28X #I  SCBlowup: ...true[128X[104X
     [4X[28X #I  SCBlowup: checking type of singularity...[128X[104X
@@ -58,12 +58,13 @@
     [4X[28X #I  SCBlowup: boundaries not isomorphic, initializing bistellar moves...[128X[104X
     [4X[28X #I  SCBlowup: found complex with smaller boundary: f = [ 15, 74, 118, 59 ].[128X[104X
     [4X[28X #I  SCBlowup: found complex with smaller boundary: f = [ 14, 70, 112, 56 ].[128X[104X
-    [4X[28X #I  SCBlowup: found complex with smaller boundary: f = [ 14, 67, 106, 53 ].[128X[104X
+    [4X[28X #I  SCBlowup: found complex with smaller boundary: f = [ 14, 69, 110, 55 ].[128X[104X
+    [4X[28X #I  SCBlowup: found complex with smaller boundary: f = [ 14, 68, 108, 54 ].[128X[104X
     [4X[28X #I  SCBlowup: found complex with smaller boundary: f = [ 13, 65, 104, 52 ].[128X[104X
     [4X[28X #I  SCBlowup: found complex with smaller boundary: f = [ 13, 64, 102, 51 ].[128X[104X
     [4X[28X #I  SCBlowup: found complex with smaller boundary: f = [ 13, 63, 100, 50 ].[128X[104X
     [4X[28X #I  SCBlowup: found complex with smaller boundary: f = [ 13, 62, 98, 49 ].[128X[104X
-    [4X[28X #I  SCBlowup: found complex with smaller boundary: f = [ 12, 58, 92, 46 ].[128X[104X
+    [4X[28X #I  SCBlowup: found complex with smaller boundary: f = [ 13, 61, 96, 48 ].[128X[104X
     [4X[28X #I  SCBlowup: found complex with smaller boundary: f = [ 12, 57, 90, 45 ].[128X[104X
     [4X[28X #I  SCBlowup: found complex with smaller boundary: f = [ 12, 56, 88, 44 ].[128X[104X
     [4X[28X #I  SCBlowup: found complex with smaller boundary: f = [ 12, 55, 86, 43 ].[128X[104X
@@ -78,8 +79,8 @@
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
     [4X[28X [128X[104X
-    [4X[28X  Name="unnamed complex 4084 \ star([ 1 ]) in unnamed complex 4084 cup unnamed \[128X[104X
-    [4X[28X complex 4088 cup unnamed complex 4086"[128X[104X
+    [4X[28X  Name="unnamed complex 2735 \ star([ 1 ]) in unnamed complex 2735 cup unnamed \[128X[104X
+    [4X[28X complex 2739 cup unnamed complex 2737"[128X[104X
     [4X[28X  Dim=4[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
@@ -87,22 +88,22 @@
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> # resolving the singularities of a 4 dimensional Kummer variety[128X[104X
-    [4X[28X gap> SCLib.SearchByName("Kummer variety");[128X[104X
-    [4X[28X [ [ 7488, "4-dimensional Kummer variety (VT)" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> for i in [1..16] do[128X[104X
-    [4X[28X        for j in SCLabels(c) do [128X[104X
-    [4X[28X          lk:=SCLink(c,j);[128X[104X
-    [4X[28X          if lk.Homology = [[0],[0],[0],[1]] then continue; fi; [128X[104X
-    [4X[28X          singularity := j; break;[128X[104X
-    [4X[28X        od;[128X[104X
-    [4X[28X        c:=SCBlowup(c,singularity); [128X[104X
-    [4X[28X      od;[128X[104X
-    [4X[28X gap> d.IsManifold;[128X[104X
-    [4X[28X true[128X[104X
-    [4X[28X gap> d.Homology;[128X[104X
-    [4X[28X [ [ 0, [ ] ], [ 0, [ ] ], [ 22, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ][128X[104X
+    [4X[28X gap> # resolving the singularities of a 4 dimensional Kummer variety[128X[104X
+    [4X[28X gap> SCLib.SearchByName("Kummer variety");[128X[104X
+    [4X[28X [ [ 7488, "4-dimensional Kummer variety (VT)" ] ][128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> for i in [1..16] do[128X[104X
+    [4X[28X        for j in SCLabels(c) do [128X[104X
+    [4X[28X          lk:=SCLink(c,j);[128X[104X
+    [4X[28X          if lk.Homology = [[0],[0],[0],[1]] then continue; fi; [128X[104X
+    [4X[28X          singularity := j; break;[128X[104X
+    [4X[28X        od;[128X[104X
+    [4X[28X        c:=SCBlowup(c,singularity); [128X[104X
+    [4X[28X      od;[128X[104X
+    [4X[28X gap> d.IsManifold;[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X gap> d.Homology;[128X[104X
+    [4X[28X [ [ 0, [ ] ], [ 0, [ ] ], [ 22, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -116,11 +117,11 @@
   simplicial blowup, compare [SK11]) with boundary [22XL([122X[10Xk[110X[22X,1)[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> mapCyl:=SCMappingCylinder(3);;[128X[104X
-    [4X[28X gap> mapCyl.Homology;              [128X[104X
+    [4X[28X gap> mapCyl:=SCMappingCylinder(3);;[128X[104X
+    [4X[28X gap> mapCyl.Homology;              [128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ], [ 0, [  ] ], [ 0, [  ] ] ][128X[104X
-    [4X[28X gap> l31:=SCBoundary(mapCyl);;[128X[104X
-    [4X[28X gap> l31.Homology;[128X[104X
+    [4X[28X gap> l31:=SCBoundary(mapCyl);;[128X[104X
+    [4X[28X gap> l31.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [ 3 ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X

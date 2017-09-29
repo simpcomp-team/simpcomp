@@ -61,13 +61,13 @@
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">#first run functionality test on simpcomp</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCRunTest();</span>
-+ test simpcomp package, version 2.1.6
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">#first run functionality test on simpcomp</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCRunTest();</span>
++ test simpcomp package, version 2.1.7
 + GAP4stones: 69988
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">#all ok</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c1:=SCFromFacets([[1,2],[2,3],[3,1]]);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">#all ok</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c1:=SCFromFacets([[1,2],[2,3],[3,1]]);</span>
 [SimplicialComplex
 
  Properties known: Dim, Facets, Name, VertexLabels.
@@ -76,16 +76,16 @@ true
  Dim=1
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G:=Group([(2,12,11,6,8,3)(4,7,10)(5,9),(1,11,6,4,5,3,10,8,9,7,2,12)]);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G:=Group([(2,12,11,6,8,3)(4,7,10)(5,9),(1,11,6,4,5,3,10,8,9,7,2,12)]);</span>
 Group([ (2,12,11,6,8,3)(4,7,10)(5,9), (1,11,6,4,5,3,10,8,9,7,2,12) ])
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StructureDescription(G);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StructureDescription(G);</span>
 "S4 x S3"
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(G);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(G);</span>
 144
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c2:=SCFromGenerators(G,[[1,2,3]]);;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c2.IsManifold;                    </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c2:=SCFromGenerators(G,[[1,2,3]]);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c2.IsManifold;                    </span>
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCLibDetermineTopologicalType(c2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCLibDetermineTopologicalType(c2);</span>
 [SimplicialComplex
 
  Properties known: AutomorphismGroup, AutomorphismGroupSize, 
@@ -105,7 +105,7 @@ true
  TopologicalType="T^2"
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3:=SCFromDifferenceCycles([[1,1,6],[3,3,2]]);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3:=SCFromDifferenceCycles([[1,1,6],[3,3,2]]);</span>
 [SimplicialComplex
 
  Properties known: Dim, Facets, Name, VertexLabels.
@@ -114,7 +114,7 @@ true
  Dim=2
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c4:=SCBdSimplex(2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c4:=SCBdSimplex(2);</span>
 [SimplicialComplex
 
  Properties known: AutomorphismGroup, AutomorphismGroupOrder, 
@@ -135,8 +135,8 @@ true
  TopologicalType="S^1"
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c5:=SCSeriesCSTSurface(2,16);;    </span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCLibDetermineTopologicalType(c5);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c5:=SCSeriesCSTSurface(2,16);;    </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCLibDetermineTopologicalType(c5);</span>
 [SimplicialComplex
 
  Properties known: Boundary, Dim, Faces, Facets, HasBoundary, IsPM, Name, 
@@ -149,15 +149,15 @@ true
  TopologicalType="T^2 U T^2"
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c6:=SCSeriesD2n(22);;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c6.Homology;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c6:=SCSeriesD2n(22);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c6.Homology;</span>
 [ [ 0, [  ] ], [ 1, [  ] ], [ 0, [ 2 ] ], [ 0, [  ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c6.F;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c6.F;</span>
 [ 44, 264, 440, 220 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCSeriesAGL(17);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCSeriesAGL(17);</span>
 [ AGL(1,17), [ [ 1, 2, 4, 8, 16 ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c7:=SCFromGenerators(last[1],last[2]);;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c7.AutomorphismGroupTransitivity;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c7:=SCFromGenerators(last[1],last[2]);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c7.AutomorphismGroupTransitivity;</span>
 2
 </pre></div>
 
@@ -169,10 +169,10 @@ true
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=SCBdSimplex(3);; # create a simplicial complex object</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCFVector(c);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=SCBdSimplex(3);; # create a simplicial complex object</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCFVector(c);</span>
 [ 4, 6, 4 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCSkel(c,0);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCSkel(c,0);</span>
 [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ]
 </pre></div>
 
@@ -180,10 +180,10 @@ true
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=SCBdSimplex(3);; # create a simplicial complex object</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c.F;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=SCBdSimplex(3);; # create a simplicial complex object</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c.F;</span>
 [ 4, 6, 4 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c.Skel(0);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c.Skel(0);</span>
 [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ]
 </pre></div>
 
@@ -195,40 +195,40 @@ true
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c1.F;     </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c1.F;     </span>
 [ 3, 3 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c1.FaceLattice;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c1.FaceLattice;</span>
 [ [ [ 1 ], [ 2 ], [ 3 ] ], [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c1.AutomorphismGroup;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c1.AutomorphismGroup;</span>
 S3
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c1.Generators;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c1.Generators;</span>
 [ [ [ 1, 2 ], 3 ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.Facets;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.Facets;</span>
 [ [ 1, 2, 3 ], [ 1, 2, 8 ], [ 1, 3, 6 ], [ 1, 4, 6 ], [ 1, 4, 7 ], 
   [ 1, 7, 8 ], [ 2, 3, 4 ], [ 2, 4, 7 ], [ 2, 5, 7 ], [ 2, 5, 8 ], 
   [ 3, 4, 5 ], [ 3, 5, 8 ], [ 3, 6, 8 ], [ 4, 5, 6 ], [ 5, 6, 7 ], 
   [ 6, 7, 8 ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.F;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.F;</span>
 [ 8, 24, 16 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.G;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.G;</span>
 [ 4 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.H;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.H;</span>
 [ 5, 11, -1 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.ASDet;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.ASDet;</span>
 186624
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.Chi;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.Chi;</span>
 0
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.Generators;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.Generators;</span>
 [ [ [ 1, 2, 3 ], 16 ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.HasBoundary;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.HasBoundary;</span>
 false
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.IsConnected;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.IsConnected;</span>
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.IsCentrallySymmetric;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.IsCentrallySymmetric;</span>
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.Vertices;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.Vertices;</span>
 [ 1, 2, 3, 4, 5, 6, 7, 8 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.ConnectedComponents;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.ConnectedComponents;</span>
 [ [SimplicialComplex
     
      Properties known: Dim, Facets, Name, VertexLabels.
@@ -238,7 +238,7 @@ true
      Dim=2
     
     /SimplicialComplex] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.UnknownProperty;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3.UnknownProperty;</span>
 #I  SCPropertyObject: unhandled property 'UnknownProperty'. Handled properties\
  are [ "Equivalent", "IsKStackedSphere", "IsManifold", "IsMovable", "Move", 
   "Moves", "RMoves", "ReduceAsSubcomplex", "Reduce", "ReduceEx", "Copy", 
@@ -280,7 +280,7 @@ fail
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d:=c3+c3;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d:=c3+c3;</span>
 [SimplicialComplex
 
  Properties known: Dim, Facets, Name, VertexLabels, Vertices.
@@ -290,9 +290,9 @@ fcycles [ [ 1, 1, 6 ], [ 3, 3, 2 ] ]"
  Dim=2
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCRename(d,"T^2#T^2");</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCRename(d,"T^2#T^2");</span>
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCLink(d,1);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCLink(d,1);</span>
 [SimplicialComplex
 
  Properties known: Dim, Facets, Name, VertexLabels.
@@ -301,7 +301,7 @@ true
  Dim=1
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCStar(d,[1,2]);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCStar(d,[1,2]);</span>
 [SimplicialComplex
 
  Properties known: Dim, Facets, Name, VertexLabels.
@@ -310,9 +310,9 @@ true
  Dim=2
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCRename(c3,"T^2");</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCRename(c3,"T^2");</span>
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCConnectedProduct(c3,4);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCConnectedProduct(c3,4);</span>
 [SimplicialComplex
 
  Properties known: Dim, Facets, Name, VertexLabels, Vertices.
@@ -321,7 +321,7 @@ true
  Dim=2
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCCartesianProduct(c4,c4);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCCartesianProduct(c4,c4);</span>
 [SimplicialComplex
 
  Properties known: Dim, Facets, Name, TopologicalType, VertexLabels.
@@ -331,7 +331,7 @@ true
  TopologicalType="S^1xS^1"
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCCartesianPower(c4,3);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCCartesianPower(c4,3);</span>
 [SimplicialComplex
 
  Properties known: Dim, Facets, Name, TopologicalType, VertexLabels.
@@ -351,7 +351,7 @@ true
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s2s2:=SCCartesianProduct(SCBdSimplex(3),SCBdSimplex(3));</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s2s2:=SCCartesianProduct(SCBdSimplex(3),SCBdSimplex(3));</span>
 [SimplicialComplex
 
  Properties known: Dim, Facets, Name, TopologicalType, VertexLabels.
@@ -361,20 +361,20 @@ true
  TopologicalType="S^2xS^2"
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCHomology(s2s2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCHomology(s2s2);</span>
 [ [ 0, [  ] ], [ 0, [  ] ], [ 2, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCHomologyInternal(s2s2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCHomologyInternal(s2s2);</span>
 [ [ 0, [  ] ], [ 0, [  ] ], [ 2, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCHomologyBasis(s2s2,2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCHomologyBasis(s2s2,2);</span>
 [ [ 1, [ [ 1, 70 ], [ -1, 12 ], [ 1, 2 ], [ -1, 1 ] ] ], 
   [ 1, [ [ 1, 143 ], [ -1, 51 ], [ 1, 29 ], [ -1, 25 ] ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCHomologyBasisAsSimplices(s2s2,2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCHomologyBasisAsSimplices(s2s2,2);</span>
 [ [ 1, 
       [ [ 1, [ 2, 3, 4 ] ], [ -1, [ 1, 3, 4 ] ], [ 1, [ 1, 2, 4 ] ], [ -1, [ 1
                     , 2, 3 ] ] ] ], 
   [ 1, [ [ 1, [ 5, 9, 13 ] ], [ -1, [ 1, 9, 13 ] ], [ 1, [ 1, 5, 13 ] ], 
           [ -1, [ 1, 5, 9 ] ] ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCCohomologyBasis(s2s2,2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCCohomologyBasis(s2s2,2);</span>
 [ [ 1, 
       [ [ 1, 122 ], [ 1, 115 ], [ 1, 112 ], [ 1, 111 ], [ 1, 93 ], [ 1, 90 ], 
           [ 1, 89 ], [ 1, 84 ], [ 1, 83 ], [ 1, 82 ], [ 1, 46 ], [ 1, 43 ], 
@@ -384,7 +384,7 @@ true
           [ 1, 150 ], [ 1, 147 ], [ 1, 131 ], [ 1, 128 ], [ 1, 125 ], 
           [ 1, 67 ], [ 1, 58 ], [ 1, 55 ], [ 1, 39 ], [ 1, 36 ], [ 1, 33 ], 
           [ 1, 10 ], [ 1, 7 ], [ 1, 4 ], [ 1, 1 ] ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCCohomologyBasisAsSimplices(s2s2,2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCCohomologyBasisAsSimplices(s2s2,2);</span>
 [ [ 1, [ [ 1, [ 4, 8, 12 ] ], [ 1, [ 3, 8, 12 ] ], [ 1, [ 3, 7, 12 ] ], 
           [ 1, [ 3, 7, 11 ] ], [ 1, [ 2, 8, 12 ] ], [ 1, [ 2, 7, 12 ] ], 
           [ 1, [ 2, 7, 11 ] ], [ 1, [ 2, 6, 12 ] ], [ 1, [ 2, 6, 11 ] ], 
@@ -399,10 +399,10 @@ true
           [ 1, [ 1, 10, 11 ] ], [ 1, [ 1, 6, 15 ] ], [ 1, [ 1, 6, 11 ] ], 
           [ 1, [ 1, 6, 7 ] ], [ 1, [ 1, 2, 15 ] ], [ 1, [ 1, 2, 11 ] ], 
           [ 1, [ 1, 2, 7 ] ], [ 1, [ 1, 2, 3 ] ] ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintArray(SCIntersectionForm(s2s2));</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintArray(SCIntersectionForm(s2s2));</span>
 [ [  0,  1 ],
   [  1,  0 ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=s2s2+s2s2;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=s2s2+s2s2;</span>
 [SimplicialComplex
 
  Properties known: Dim, Facets, Name, VertexLabels, Vertices.
@@ -411,7 +411,7 @@ true
  Dim=4
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintArray(SCIntersectionForm(c));</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintArray(SCIntersectionForm(c));</span>
 [ [   0,  -1,   0,   0 ],
   [  -1,   0,   0,   0 ],
   [   0,   0,   0,  -1 ],
@@ -426,9 +426,9 @@ true
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">beta4:=SCBdCrossPolytope(4);;    </span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s3:=SCBdSimplex(4);;             </span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCEquivalent(beta4,s3);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">beta4:=SCBdCrossPolytope(4);;    </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s3:=SCBdSimplex(4);;             </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCEquivalent(beta4,s3);</span>
 #I  round 0, move: [ [ 2, 6, 7 ], [ 3, 4 ] ]
 [ 8, 25, 34, 17 ]
 #I  round 1, move: [ [ 2, 7 ], [ 3, 4, 5 ] ]
@@ -445,11 +445,11 @@ true
 [ 5, 10, 10, 5 ]
 #I  SCReduceComplexEx: complexes are bistellarly equivalent.
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCBistellarOptions.WriteLevel;   </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCBistellarOptions.WriteLevel;   </span>
 0
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCBistellarOptions.WriteLevel:=1;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCBistellarOptions.WriteLevel:=1;</span>
 1
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCEquivalent(beta4,s3);          </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCEquivalent(beta4,s3);          </span>
 #I  SCLibInit: made directory "~/PATH" for user library.
 #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
 #I  SCLibUpdate: rebuilding index for ~/PATH.
@@ -479,7 +479,7 @@ true
 -10-27_11-40-00.sc".
 #I  SCReduceComplexEx: complexes are bistellarly equivalent.
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">myLib:=SCLibInit("~/PATH"); # copy path from above             </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">myLib:=SCLibInit("~/PATH"); # copy path from above             </span>
 [Simplicial complex library. Properties:
 CalculateIndexAttributes=true
 Number of complexes in library=4
@@ -487,7 +487,7 @@ IndexAttributes=[ "Name", "Date", "Dim", "F", "G", "H", "Chi", "Homology" ]
 Loaded=true
 Path="/home/spreerjn/reducedComplexes/2009-10-27_11-40-00/"
 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s3:=myLib.Load(3);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s3:=myLib.Load(3);</span>
 [SimplicialComplex
 
  Properties known: Chi, Date, Dim, F, Faces, Facets, G, H, Homology, 
@@ -503,7 +503,7 @@ Path="/home/spreerjn/reducedComplexes/2009-10-27_11-40-00/"
  IsConnected=true
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s3:=myLib.Load(2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s3:=myLib.Load(2);</span>
 [SimplicialComplex
 
  Properties known: Chi, Date, Dim, F, Faces, Facets, G, H, Homology, 
@@ -519,14 +519,14 @@ Path="/home/spreerjn/reducedComplexes/2009-10-27_11-40-00/"
  IsConnected=true
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t2:=SCCartesianProduct(SCBdSimplex(2),SCBdSimplex(2));;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t2.F;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t2:=SCCartesianProduct(SCBdSimplex(2),SCBdSimplex(2));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t2.F;</span>
 [ 9, 27, 18 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCBistellarOptions.WriteLevel:=0;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCBistellarOptions.WriteLevel:=0;</span>
 0
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCBistellarOptions.LogLevel:=0;  </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCBistellarOptions.LogLevel:=0;  </span>
 0
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mint2:=SCReduceComplex(t2);    </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mint2:=SCReduceComplex(t2);    </span>
 [ true, [SimplicialComplex
     
      Properties known: Dim, Facets, Name, VertexLabels.
@@ -545,9 +545,9 @@ Path="/home/spreerjn/reducedComplexes/2009-10-27_11-40-00/"
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list:=SCLib.SearchByName("Kummer");</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list:=SCLib.SearchByName("Kummer");</span>
 [ [ 7493, "4-dimensional Kummer variety (VT)" ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=SCLib.Load(7493);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=SCLib.Load(7493);</span>
 [SimplicialComplex
 
  Properties known: AltshulerSteinberg, AutomorphismGroup, 
@@ -585,7 +585,7 @@ Path="/home/spreerjn/reducedComplexes/2009-10-27_11-40-00/"
  Neighborliness=2
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">lk:=SCLink(c,1);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">lk:=SCLink(c,1);</span>
 [SimplicialComplex
 
  Properties known: Dim, FacetsEx, Name, Vertices.
@@ -594,17 +594,17 @@ Path="/home/spreerjn/reducedComplexes/2009-10-27_11-40-00/"
  Dim=3
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCHomology(lk);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCHomology(lk);</span>
 [ [ 0, [  ] ], [ 0, [ 2 ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCLibDetermineTopologicalType(lk);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCLibDetermineTopologicalType(lk);</span>
 [ 45, 113, 2426, 2502, 7470 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d:=SCLib.Load(45);;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d.Name;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d:=SCLib.Load(45);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d.Name;</span>
 "RP^3"
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCEquivalent(lk,d);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCEquivalent(lk,d);</span>
 #I  SCReduceComplexEx: complexes are bistellarly equivalent.
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">e:=SCBlowup(c,1);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">e:=SCBlowup(c,1);</span>
 #I  SCBlowup: checking if singularity is a combinatorial manifold...
 #I  SCBlowup: ...true
 #I  SCBlowup: checking type of singularity...
@@ -640,9 +640,9 @@ true
  Dim=4
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCHomology(c);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCHomology(c);</span>
 [ [ 0, [  ] ], [ 0, [  ] ], [ 6, [ 2, 2, 2, 2, 2 ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCHomology(e);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCHomology(e);</span>
 [ [ 0, [  ] ], [ 0, [  ] ], [ 7, [ 2, 2, 2, 2 ] ], [ 0, [  ] ], [ 1, [  ] ] ]
 			</pre></div>
 
@@ -655,8 +655,8 @@ true
 
 <div class="example"><pre>		
 		
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># the boundary of the cyclic 4-polytope with 6 vertices		</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=SCBdCyclicPolytope(4,6); </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># the boundary of the cyclic 4-polytope with 6 vertices		</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=SCBdCyclicPolytope(4,6); </span>
 [SimplicialComplex
 
  Properties known: Dim, EulerCharacteristic, FacetsEx, HasBoundary, Homology,\
@@ -672,8 +672,8 @@ true
  TopologicalType="S^3"
 
 /SimplicialComplex]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># slicing in between the odd and the even vertex labels, a polyhedral torus</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">sl:=SCSlicing(c,[[2,4,6],[1,3,5]]);   </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># slicing in between the odd and the even vertex labels, a polyhedral torus</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">sl:=SCSlicing(c,[[2,4,6],[1,3,5]]);   </span>
 [NormalSurface
 
  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector,\
@@ -688,13 +688,13 @@ true
  TopologicalType="T^2"
 
 /NormalSurface]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">sl.Homology;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">sl.Homology;</span>
 [ [ 0, [  ] ], [ 2, [  ] ], [ 1, [  ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">sl.Genus;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">sl.Genus;</span>
 1
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">sl.F; # the slicing constists of 9 quadrilaterals and 0 triangles</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">sl.F; # the slicing constists of 9 quadrilaterals and 0 triangles</span>
 [ 9, 18, 0, 9 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintArray(sl.Facets);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintArray(sl.Facets);</span>
 [ [  [ 2, 1 ],  [ 2, 3 ],  [ 4, 1 ],  [ 4, 3 ] ],
   [  [ 2, 1 ],  [ 2, 3 ],  [ 6, 1 ],  [ 6, 3 ] ],
   [  [ 2, 1 ],  [ 2, 5 ],  [ 4, 1 ],  [ 4, 5 ] ],

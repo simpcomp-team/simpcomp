@@ -66,20 +66,17 @@
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCInfoLevel(3);
-</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCInfoLevel(3);</span>
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=SCBdCrossPolytope(3);;
-</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCReduceComplex(c); 
-</span>
-#I  round 0, move: [ [ 4, 6 ], [ 1, 2 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=SCBdCrossPolytope(3);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCReduceComplex(c); </span>
+#I  round 0, move: [ [ 4, 5 ], [ 1, 2 ] ]
 F: [ 6, 12, 8 ]
-#I  round 1, move: [ [ 6 ], [ 1, 2, 3 ] ]
+#I  round 1, move: [ [ 5 ], [ 1, 2, 3 ] ]
 F: [ 5, 9, 6 ]
 #I  round 1
 Reduced complex, F: [ 5, 9, 6 ]
-#I  round 2, move: [ [ 4 ], [ 1, 2, 5 ] ]
+#I  round 2, move: [ [ 3 ], [ 1, 2, 6 ] ]
 F: [ 4, 6, 4 ]
 #I  round 2
 Reduced complex, F: [ 4, 6, 4 ]
@@ -146,7 +143,7 @@ Reduced complex, F: [ 4, 6, 4 ]
 
 <div class="example"><pre>
  gap&gt; SCMailIsPending();
- true
+ false
  </pre></div>
 
 <p><a id="X7FEA17D37B36BBD4" name="X7FEA17D37B36BBD4"></a></p>
@@ -243,15 +240,13 @@ Reduced complex, F: [ 4, 6, 4 ]
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCRunTest</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
-<p>Test whether the package <strong class="pkg">simpcomp</strong> is functional by calling <code class="code">Test("GAPROOT/pkg/simpcomp/tst/simpcomp.tst");</code>. The returned value of GAP4stones is a measure of your system performance and differs from system to system.</p>
+<p>Test whether the package <strong class="pkg">simpcomp</strong> is functional by calling <code class="code">Test("GAPROOT/pkg/simpcomp/tst/simpcomp.tst",rec(compareFunction := "uptowhitespace"));</code>. The returned value of GAP4stones is a measure of your system performance and differs from system to system.</p>
 
 
 <div class="example"><pre>
  gap&gt; SCRunTest();
- Line 1220 : 
- + simpcomp package test
- Line 1221 : 
- + GAP4stones: 67385
+ simpcomp package test
+ GAP4stones: 69463
  true
  </pre></div>
 

@@ -30,7 +30,7 @@
   ([14X4.2-7[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCFromFacets([[1,2,5], [1,4,5], [1,4,6], [2,3,5], [3,4,6], [3,5,6]]);[128X[104X
+    [4X[28X gap> c:=SCFromFacets([[1,2,5], [1,4,5], [1,4,6], [2,3,5], [3,4,6], [3,5,6]]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -39,7 +39,7 @@
     [4X[28X  Dim=2[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> c:=SCFromFacets([["a","b","c"], ["a","b",1], ["a","c",1], ["b","c",1]]);[128X[104X
+    [4X[28X gap> c:=SCFromFacets([["a","b","c"], ["a","b",1], ["a","c",1], ["b","c",1]]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -61,7 +61,7 @@
   calls [2XSCFromFacets[102X ([14X6.1-1[114X)([3Xfacets[103X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SC(Combinations([1..6],5));[128X[104X
+    [4X[28X gap> c:=SC(Combinations([1..6],5));[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -94,18 +94,18 @@
   all integer ranges usually start from [22X1[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCFromDifferenceCycles([[1,1,6],[2,3,3]]);;[128X[104X
-    [4X[28X gap> c.F;[128X[104X
+    [4X[28X gap> c:=SCFromDifferenceCycles([[1,1,6],[2,3,3]]);;[128X[104X
+    [4X[28X gap> c.F;[128X[104X
     [4X[28X [ 8, 24, 16 ][128X[104X
-    [4X[28X gap> c.Homology;[128X[104X
+    [4X[28X gap> c.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 2, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> c.Chi;[128X[104X
+    [4X[28X gap> c.Chi;[128X[104X
     [4X[28X 0[128X[104X
-    [4X[28X gap> c.HasBoundary;[128X[104X
+    [4X[28X gap> c.HasBoundary;[128X[104X
     [4X[28X false[128X[104X
-    [4X[28X gap> SCIsPseudoManifold(c);[128X[104X
+    [4X[28X gap> SCIsPseudoManifold(c);[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCIsManifold(c);[128X[104X
+    [4X[28X gap> SCIsManifold(c);[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -125,9 +125,9 @@
   and [2XSCFromFacets[102X ([14X6.1-1[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> #group: AGL(1,7) of order 42[128X[104X
-    [4X[28X gap> G:=Group([(2,6,5,7,3,4),(1,3,5,7,2,4,6)]);;[128X[104X
-    [4X[28X gap> c:=SCFromGenerators(G,[[ 1, 2, 4 ]]);[128X[104X
+    [4X[28X gap> #group: AGL(1,7) of order 42[128X[104X
+    [4X[28X gap> G:=Group([(2,6,5,7,3,4),(1,3,5,7,2,4,6)]);;[128X[104X
+    [4X[28X gap> c:=SCFromGenerators(G,[[ 1, 2, 4 ]]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -136,7 +136,7 @@
     [4X[28X  Dim=2[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCLib.DetermineTopologicalType(c);[128X[104X
+    [4X[28X gap> SCLib.DetermineTopologicalType(c);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: BoundaryEx, Dim, FacetsEx, HasBoundary, [128X[104X
@@ -212,7 +212,7 @@
     [4X[28X 0[128X[104X
     [4X[28X gap> s:=SCExportIsoSig(c); time;[128X[104X
     [4X[28X "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"[128X[104X
-    [4X[28X 20[128X[104X
+    [4X[28X 16[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -278,7 +278,7 @@
   combinatorial [22Xd-1[122X-sphere) on [3Xn[103X vertices, where [22Xn≥ d+2[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCBdCyclicPolytope(3,8); [128X[104X
+    [4X[28X gap> SCBdCyclicPolytope(3,8); [128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, EulerCharacteristic, FacetsEx, HasBoundary, [128X[104X
@@ -307,7 +307,7 @@
   [33X[0;0YGenerates the boundary of the [22Xd[122X-simplex [22X∆^d[122X, a combinatorial [22Xd-1[122X-sphere.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCBdSimplex(5);[128X[104X
+    [4X[28X gap> SCBdSimplex(5);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: AutomorphismGroup, AutomorphismGroupSize, [128X[104X
@@ -344,7 +344,7 @@
   object with empty facet list.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCEmpty();[128X[104X
+    [4X[28X gap> SCEmpty();[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -365,7 +365,7 @@
   [33X[0;0YGenerates the [3Xd[103X-simplex.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCSimplex(3);[128X[104X
+    [4X[28X gap> SCSimplex(3);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, EulerCharacteristic, FacetsEx, Name, [128X[104X
@@ -389,7 +389,7 @@
   [33X[0;0YGenerates the [22Xd[122X-torus described in [K{\86].[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> t4:=SCSeriesTorus(4);[128X[104X
+    [4X[28X gap> t4:=SCSeriesTorus(4);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -400,7 +400,7 @@
     [4X[28X  TopologicalType="T^4"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> t4.Homology;[128X[104X
+    [4X[28X gap> t4.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 4, [  ] ], [ 6, [  ] ], [ 4, [  ] ], [ 1, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -418,7 +418,7 @@
   [10Xfalse[110X and [3Xg[103X[22X≥ 100[122X only the difference cycles of the surface are returned[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCSurface(23,true); [128X[104X
+    [4X[28X gap> c:=SCSurface(23,true); [128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -429,11 +429,11 @@
     [4X[28X  TopologicalType="(T^2)^#23"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> c.Homology;[128X[104X
+    [4X[28X gap> c.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 46, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> c.TopologicalType;[128X[104X
+    [4X[28X gap> c.TopologicalType;[128X[104X
     [4X[28X "(T^2)^#23"[128X[104X
-    [4X[28X gap> c:=SCSurface(23,false); [128X[104X
+    [4X[28X gap> c:=SCSurface(23,false); [128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -444,17 +444,17 @@
     [4X[28X  TopologicalType="(RP^2)^#23"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> c.Homology;[128X[104X
+    [4X[28X gap> c.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 22, [ 2 ] ], [ 0, [  ] ] ][128X[104X
-    [4X[28X gap> c.TopologicalType;[128X[104X
+    [4X[28X gap> c.TopologicalType;[128X[104X
     [4X[28X "(RP^2)^#23"[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> dc:=SCSurface(345,true);[128X[104X
+    [4X[28X gap> dc:=SCSurface(345,true);[128X[104X
     [4X[28X [ [ 1, 1, 1374 ], [ 2, 343, 1031 ], [ 343, 345, 688 ] ][128X[104X
-    [4X[28X gap> c:=SCFromDifferenceCycles(dc);[128X[104X
+    [4X[28X gap> c:=SCFromDifferenceCycles(dc);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -464,9 +464,9 @@
     [4X[28X  Dim=2[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> c.Chi;[128X[104X
+    [4X[28X gap> c.Chi;[128X[104X
     [4X[28X -688[128X[104X
-    [4X[28X gap> dc:=SCSurface(12345678910,true); time;[128X[104X
+    [4X[28X gap> dc:=SCSurface(12345678910,true); time;[128X[104X
     [4X[28X [ [ 1, 1, 24691357816 ], [ 2, 4, 24691357812 ], [ 3, 3, 24691357812 ], [128X[104X
     [4X[28X   [ 4, 12345678907, 12345678907 ] ][128X[104X
     [4X[28X 0[128X[104X
@@ -482,7 +482,7 @@
   the underlying complex.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XSCFVectorBdCrossPolytope(50);[127X[104X
+    [4X[25Xgap>[125X [27XSCFVectorBdCrossPolytope(50);[127X[104X
     [4X[28X[ 100, 4900, 156800, 3684800, 67800320, 1017004800, 12785203200, [128X[104X
     [4X[28X  137440934400, 1282782054400, 10518812846080, 76500457062400, [128X[104X
     [4X[28X  497252970905600, 2907017368371200, 15365663232819200, 73755183517532160, [128X[104X
@@ -509,7 +509,7 @@
   d+2[122X, without generating the underlying complex.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XSCFVectorBdCyclicPolytope(25,198); [127X[104X
+    [4X[25Xgap>[125X [27XSCFVectorBdCyclicPolytope(25,198); [127X[104X
     [4X[28X[ 198, 19503, 1274196, 62117055, 2410141734, 77526225777, 2126433621312, [128X[104X
     [4X[28X  50768602708824, 1071781612741840, 20256672480820776, 346204947854027808, [128X[104X
     [4X[28X  5395027104058600008, 48354596155522298656, 262068846498922699590, [128X[104X
@@ -528,7 +528,7 @@
   complex.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCFVectorBdSimplex(100);[128X[104X
+    [4X[28X gap> SCFVectorBdSimplex(100);[128X[104X
     [4X[28X [ 101, 5050, 166650, 4082925, 79208745, 1267339920, 17199613200, [128X[104X
     [4X[28X   202095455100, 2088319702700, 19212541264840, 158940114100040, [128X[104X
     [4X[28X   1192050855750300, 8160963550905900, 51297485177122800, 297525414027312240, [128X[104X
@@ -586,36 +586,36 @@
   with [3Xp[103X vertices exists only the group is returned.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> gens:=SCSeriesAGL(17);[128X[104X
+    [4X[28X gap> gens:=SCSeriesAGL(17);[128X[104X
     [4X[28X [ AGL(1,17), [ [ 1, 2, 4, 8, 16 ] ] ][128X[104X
-    [4X[28X gap> c:=SCFromGenerators(gens[1],gens[2]);;[128X[104X
-    [4X[28X gap> SCIsManifold(SCLink(c,1));[128X[104X
+    [4X[28X gap> c:=SCFromGenerators(gens[1],gens[2]);;[128X[104X
+    [4X[28X gap> SCIsManifold(SCLink(c,1));[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> List([19..23],x->SCSeriesAGL(x));     [128X[104X
+    [4X[28X gap> List([19..23],x->SCSeriesAGL(x));     [128X[104X
     [4X[28X #I  SCSeriesAGL: argument must be a prime > 13.[128X[104X
     [4X[28X #I  SCSeriesAGL: argument must be a prime > 13.[128X[104X
     [4X[28X #I  SCSeriesAGL: argument must be a prime > 13.[128X[104X
     [4X[28X [ [ AGL(1,19), [ [ 1, 2, 10, 12, 17 ] ] ], fail, fail, fail, [128X[104X
     [4X[28X   [ AGL(1,23), [ [ 1, 2, 7, 9, 19 ], [ 1, 2, 4, 8, 22 ] ] ] ][128X[104X
-    [4X[28X gap> for i in [80000..80100] do if IsPrime(i) then Print(i,"\n"); fi; od;[128X[104X
+    [4X[28X gap> for i in [80000..80100] do if IsPrime(i) then Print(i,"\n"); fi; od;[128X[104X
     [4X[28X 80021[128X[104X
     [4X[28X 80039[128X[104X
     [4X[28X 80051[128X[104X
     [4X[28X 80071[128X[104X
     [4X[28X 80077[128X[104X
-    [4X[28X gap> SCSeriesAGL(80021);                                                 [128X[104X
+    [4X[28X gap> SCSeriesAGL(80021);                                                 [128X[104X
     [4X[28X AGL(1,80021)[128X[104X
-    [4X[28X gap> SCSeriesAGL(80039);                                                 [128X[104X
+    [4X[28X gap> SCSeriesAGL(80039);                                                 [128X[104X
     [4X[28X [ AGL(1,80039), [ [ 1, 2, 6496, 73546, 78018 ] ] ][128X[104X
-    [4X[28X gap> SCSeriesAGL(80051);                                                 [128X[104X
+    [4X[28X gap> SCSeriesAGL(80051);                                                 [128X[104X
     [4X[28X [ AGL(1,80051), [ [ 1, 2, 31498, 37522, 48556 ] ] ][128X[104X
-    [4X[28X gap> SCSeriesAGL(80071);                                                 [128X[104X
+    [4X[28X gap> SCSeriesAGL(80071);                                                 [128X[104X
     [4X[28X AGL(1,80071)[128X[104X
-    [4X[28X gap> SCSeriesAGL(80077);                                                 [128X[104X
+    [4X[28X gap> SCSeriesAGL(80077);                                                 [128X[104X
     [4X[28X [ AGL(1,80077), [ [ 1, 2, 4126, 39302, 40778 ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -631,7 +631,7 @@
   [BK12][133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> T3:=SCSeriesBrehmKuehnelTorus(15);[128X[104X
+    [4X[28X gap> T3:=SCSeriesBrehmKuehnelTorus(15);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -642,11 +642,11 @@
     [4X[28X  TopologicalType="T^3"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> T3.Homology;[128X[104X
+    [4X[28X gap> T3.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 3, [  ] ], [ 3, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> T3.Neighborliness;[128X[104X
+    [4X[28X gap> T3.Neighborliness;[128X[104X
     [4X[28X 2[128X[104X
-    [4X[28X gap> T3:=SCSeriesBrehmKuehnelTorus(16);[128X[104X
+    [4X[28X gap> T3:=SCSeriesBrehmKuehnelTorus(16);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -657,9 +657,9 @@
     [4X[28X  TopologicalType="T^3"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> T3.Homology;[128X[104X
+    [4X[28X gap> T3.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 3, [  ] ], [ 3, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> T3.IsCentrallySymmetric;[128X[104X
+    [4X[28X gap> T3.IsCentrallySymmetric;[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -677,7 +677,7 @@
   Internally calls [2XSCFromDifferenceCycles[102X ([14X6.1-3[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCSeriesBdHandleBody(2,7);[128X[104X
+    [4X[28X gap> c:=SCSeriesBdHandleBody(2,7);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, IsOrientable, Name, TopologicalType, [128X[104X
@@ -689,7 +689,7 @@
     [4X[28X  TopologicalType="S^1 x S^1"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCLib.DetermineTopologicalType(c);[128X[104X
+    [4X[28X gap> SCLib.DetermineTopologicalType(c);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: BoundaryEx, Dim, FacetsEx, HasBoundary, [128X[104X
@@ -705,7 +705,7 @@
     [4X[28X  TopologicalType="S^1 x S^1"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCIsIsomorphic(c,SCSeriesHandleBody(3,7).Boundary);[128X[104X
+    [4X[28X gap> SCIsIsomorphic(c,SCSeriesHandleBody(3,7).Boundary);[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -721,7 +721,7 @@
   transitive automorphism group.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> b26:=SCSeriesBid(2,6);[128X[104X
+    [4X[28X gap> b26:=SCSeriesBid(2,6);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Reference, Vertices.[128X[104X
@@ -730,7 +730,7 @@
     [4X[28X  Dim=5[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> s2s2:=SCBoundary(b26);[128X[104X
+    [4X[28X gap> s2s2:=SCBoundary(b26);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -739,13 +739,13 @@
     [4X[28X  Dim=4[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCFVector(s2s2);[128X[104X
+    [4X[28X gap> SCFVector(s2s2);[128X[104X
     [4X[28X [ 12, 60, 160, 180, 72 ][128X[104X
-    [4X[28X gap> SCAutomorphismGroup(s2s2); [128X[104X
+    [4X[28X gap> SCAutomorphismGroup(s2s2); [128X[104X
     [4X[28X TransitiveGroup(12,28) = D(4)[x]S(3)[128X[104X
-    [4X[28X gap> SCIsManifold(s2s2); [128X[104X
+    [4X[28X gap> SCIsManifold(s2s2); [128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCHomology(s2s2);[128X[104X
+    [4X[28X gap> SCHomology(s2s2);[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 2, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -765,7 +765,7 @@
   ([14X6.4-1[114X). Internally calls [2XSCFromDifferenceCycles[102X ([14X6.1-3[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCSeriesC2n(8);[128X[104X
+    [4X[28X gap> c:=SCSeriesC2n(8);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -776,15 +776,15 @@
     [4X[28X  TopologicalType="S^2 ~ S^1"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCGenerators(c);  [128X[104X
+    [4X[28X gap> SCGenerators(c);  [128X[104X
     [4X[28X [ [ [ 1, 2, 3, 6 ], 32 ], [ [ 1, 2, 5, 6 ], 16 ], [ [ 1, 3, 6, 8 ], 16 ], [128X[104X
     [4X[28X   [ [ 1, 3, 8, 10 ], 16 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCSeriesC2n(8);;[128X[104X
-    [4X[28X gap> d:=SCSeriesD2n(8); [128X[104X
+    [4X[28X gap> c:=SCSeriesC2n(8);;[128X[104X
+    [4X[28X gap> d:=SCSeriesD2n(8); [128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -795,13 +795,13 @@
     [4X[28X  TopologicalType="S^2 ~ S^1"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCIsIsomorphic(c,d);[128X[104X
+    [4X[28X gap> SCIsIsomorphic(c,d);[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> c:=SCSeriesC2n(11);;[128X[104X
-    [4X[28X gap> d:=SCSeriesD2n(11);;[128X[104X
-    [4X[28X gap> c.Homology;[128X[104X
+    [4X[28X gap> c:=SCSeriesC2n(11);;[128X[104X
+    [4X[28X gap> d:=SCSeriesD2n(11);;[128X[104X
+    [4X[28X gap> c.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 1, [  ] ], [ 1, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> d.Homology;[128X[104X
+    [4X[28X gap> d.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 1, [  ] ], [ 0, [ 2 ] ], [ 0, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -817,7 +817,7 @@
   described in [BS14].[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCSeriesConnectedSum(12);[128X[104X
+    [4X[28X gap> c:=SCSeriesConnectedSum(12);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -828,13 +828,13 @@
     [4X[28X  TopologicalType="(S^2xS^1)^#12)"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> c.Homology;[128X[104X
+    [4X[28X gap> c.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 12, [  ] ], [ 12, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> g:=SimplifiedFpGroup(SCFundamentalGroup(c));[128X[104X
+    [4X[28X gap> g:=SimplifiedFpGroup(SCFundamentalGroup(c));[128X[104X
     [4X[28X <fp group of size infinity on the generators [128X[104X
     [4X[28X [ [2,3], [2,14], [3,4], [6,7], [9,10], [10,11], [11,12], [12,13], [26,32], [128X[104X
     [4X[28X   [26,34], [29,31], [33,35] ]>[128X[104X
-    [4X[28X gap> RelatorsOfFpGroup(g);[128X[104X
+    [4X[28X gap> RelatorsOfFpGroup(g);[128X[104X
     [4X[28X [  ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -850,7 +850,7 @@
   [22XS_(l,2k)[122X from [Spr12], Section 4.4.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCSeriesCSTSurface(2,4,14);[128X[104X
+    [4X[28X gap> SCSeriesCSTSurface(2,4,14);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -859,9 +859,9 @@
     [4X[28X  Dim=2[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> last.Homology;[128X[104X
+    [4X[28X gap> last.Homology;[128X[104X
     [4X[28X [ [ 1, [  ] ], [ 4, [  ] ], [ 2, [  ] ] ][128X[104X
-    [4X[28X gap> SCSeriesCSTSurface(2,10);  [128X[104X
+    [4X[28X gap> SCSeriesCSTSurface(2,10);  [128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -870,7 +870,7 @@
     [4X[28X  Dim=2[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> last.Homology;                    [128X[104X
+    [4X[28X gap> last.Homology;                    [128X[104X
     [4X[28X [ [ 0, [  ] ], [ 1, [ 2 ] ], [ 0, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -889,7 +889,7 @@
   from [2XSCSeriesAGL[102X ([14X6.4-1[114X). Internally calls [2XSCFromDifferenceCycles[102X ([14X6.1-3[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> d:=SCSeriesD2n(15);[128X[104X
+    [4X[28X gap> d:=SCSeriesD2n(15);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -900,16 +900,16 @@
     [4X[28X  TopologicalType="S^2 ~ S^1"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCAutomorphismGroup(d);  [128X[104X
+    [4X[28X gap> SCAutomorphismGroup(d);  [128X[104X
     [4X[28X TransitiveGroup(30,14) = t30n14[128X[104X
-    [4X[28X gap> StructureDescription(last);[128X[104X
+    [4X[28X gap> StructureDescription(last);[128X[104X
     [4X[28X "D60"[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCSeriesC2n(8);;[128X[104X
-    [4X[28X gap> d:=SCSeriesD2n(8); [128X[104X
+    [4X[28X gap> c:=SCSeriesC2n(8);;[128X[104X
+    [4X[28X gap> d:=SCSeriesD2n(8); [128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -920,13 +920,13 @@
     [4X[28X  TopologicalType="S^2 ~ S^1"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCIsIsomorphic(c,d);[128X[104X
+    [4X[28X gap> SCIsIsomorphic(c,d);[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> c:=SCSeriesC2n(11);;[128X[104X
-    [4X[28X gap> d:=SCSeriesD2n(11);;[128X[104X
-    [4X[28X gap> c.Homology;[128X[104X
+    [4X[28X gap> c:=SCSeriesC2n(11);;[128X[104X
+    [4X[28X gap> d:=SCSeriesD2n(11);;[128X[104X
+    [4X[28X gap> c.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 1, [  ] ], [ 1, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> d.Homology;[128X[104X
+    [4X[28X gap> d.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 1, [  ] ], [ 0, [ 2 ] ], [ 0, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -945,7 +945,7 @@
   Internally calls [2XSCFromDifferenceCycles[102X ([14X6.1-3[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCSeriesHandleBody(3,7);[128X[104X
+    [4X[28X gap> c:=SCSeriesHandleBody(3,7);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, IsOrientable, [128X[104X
@@ -957,12 +957,12 @@
     [4X[28X  TopologicalType="B^2 x S^1"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCAutomorphismGroup(c);    [128X[104X
+    [4X[28X gap> SCAutomorphismGroup(c);    [128X[104X
     [4X[28X PrimitiveGroup(7,2) = D(2*7)[128X[104X
-    [4X[28X gap> bd:=SCBoundary(c);;[128X[104X
-    [4X[28X gap> SCAutomorphismGroup(bd);[128X[104X
+    [4X[28X gap> bd:=SCBoundary(c);;[128X[104X
+    [4X[28X gap> SCAutomorphismGroup(bd);[128X[104X
     [4X[28X PrimitiveGroup(7,4) = AGL(1, 7)[128X[104X
-    [4X[28X gap> SCIsIsomorphic(bd,SCSeriesBdHandleBody(2,7));[128X[104X
+    [4X[28X gap> SCIsIsomorphic(bd,SCSeriesBdHandleBody(2,7));[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -978,7 +978,7 @@
   transitive cyclic symmetry as described in [BS14].[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCSeriesHomologySphere(2,3,5);[128X[104X
+    [4X[28X gap> c:=SCSeriesHomologySphere(2,3,5);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -989,9 +989,9 @@
     [4X[28X  TopologicalType="Sigma(2,3,5)"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> c.Homology;[128X[104X
+    [4X[28X gap> c.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> c:=SCSeriesHomologySphere(3,4,13);[128X[104X
+    [4X[28X gap> c:=SCSeriesHomologySphere(3,4,13);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -1002,7 +1002,7 @@
     [4X[28X  TopologicalType="Sigma(3,4,13)"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> c.Homology;[128X[104X
+    [4X[28X gap> c.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -1021,15 +1021,15 @@
   [2XSCSeriesL[102X ([14X6.4-13[114X) for a list of series of order [22X2[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> cc:=List([1..10],x->SCSeriesK(x,0));;                                                                                                                                                                                                  [128X[104X
-    [4X[28X gap> Set(List(cc,x->x.F));                                                                                                                                                                                                                        [128X[104X
+    [4X[28X gap> cc:=List([1..10],x->SCSeriesK(x,0));;                                                                                                                                                                                                  [128X[104X
+    [4X[28X gap> Set(List(cc,x->x.F));                                                                                                                                                                                                                        [128X[104X
     [4X[28X [ [ 9, 36, 54, 27 ], [ 11, 55, 88, 44 ], [ 13, 65, 104, 52 ], [128X[104X
     [4X[28X   [ 13, 78, 130, 65 ], [ 15, 90, 150, 75 ], [ 15, 105, 180, 90 ] ][128X[104X
-    [4X[28X gap> cc:=List([1..10],x->SCSeriesK(x,10));;[128X[104X
-    [4X[28X gap> gap> cc:=List([1..10],x->SCSeriesK(x,10));;[128X[104X
-    [4X[28X gap> Set(List(cc,x->x.Homology));[128X[104X
+    [4X[28X gap> cc:=List([1..10],x->SCSeriesK(x,10));;[128X[104X
+    [4X[28X gap> gap> cc:=List([1..10],x->SCSeriesK(x,10));;[128X[104X
+    [4X[28X gap> Set(List(cc,x->x.Homology));[128X[104X
     [4X[28X [ [ [ 0, [  ] ], [ 1, [  ] ], [ 0, [ 2 ] ], [ 0, [  ] ] ] ][128X[104X
-    [4X[28X gap> Set(List(cc,x->x.IsManifold));[128X[104X
+    [4X[28X gap> Set(List(cc,x->x.IsManifold));[128X[104X
     [4X[28X [ true ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -1045,7 +1045,7 @@
   slicings from [Spr11a], Section 3.3.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCSeriesKu(4);                                    [128X[104X
+    [4X[28X gap> c:=SCSeriesKu(4);                                    [128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -1054,7 +1054,7 @@
     [4X[28X  Dim=3[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCSlicing(c,[[1,2,3,4,9,10,11,12],[5,6,7,8,13,14,15,16]]);[128X[104X
+    [4X[28X gap> SCSlicing(c,[[1,2,3,4,9,10,11,12],[5,6,7,8,13,14,15,16]]);[128X[104X
     [4X[28X [NormalSurface[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\[128X[104X
@@ -1070,12 +1070,12 @@
     [4X[28X  TopologicalType="T^2"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /NormalSurface][128X[104X
-    [4X[28X gap> Mminus:=SCSpan(c,[1,2,3,4,9,10,11,12]);;                  [128X[104X
-    [4X[28X gap> Mplus:=SCSpan(c,[5,6,7,8,13,14,15,16]);;                  [128X[104X
-    [4X[28X gap> SCCollapseGreedy(Mminus).Facets;[128X[104X
-    [4X[28X [ [ 1, 9 ], [ 1, 10 ], [ 3, 10 ], [ 3, 11 ], [ 4, 9 ], [ 4, 12 ], [ 11, 12 ] ][128X[104X
-    [4X[28X gap> SCCollapseGreedy(Mplus).Facets; [128X[104X
-    [4X[28X [ [ 5, 8 ], [ 5, 16 ], [ 6, 14 ], [ 6, 15 ], [ 8, 15 ], [ 13, 14 ], [ 13, 16 ] ][128X[104X
+    [4X[28X gap> Mminus:=SCSpan(c,[1,2,3,4,9,10,11,12]);;                  [128X[104X
+    [4X[28X gap> Mplus:=SCSpan(c,[5,6,7,8,13,14,15,16]);;                  [128X[104X
+    [4X[28X gap> SCCollapseGreedy(Mminus).Facets;[128X[104X
+    [4X[28X [ [ 1, 2 ], [ 1, 12 ], [ 2, 11 ], [ 11, 12 ] ][128X[104X
+    [4X[28X gap> SCCollapseGreedy(Mplus).Facets; [128X[104X
+    [4X[28X [ [ 7, 14 ], [ 7, 15 ], [ 8, 13 ], [ 8, 16 ], [ 13, 14 ], [ 15, 16 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -1094,12 +1094,12 @@
   from [2XSCSeriesK[102X ([14X6.4-11[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> cc:=List([1..18],x->SCSeriesL(x,0));;[128X[104X
-    [4X[28X gap> Set(List(cc,x->x.F));[128X[104X
+    [4X[28X gap> cc:=List([1..18],x->SCSeriesL(x,0));;[128X[104X
+    [4X[28X gap> Set(List(cc,x->x.F));[128X[104X
     [4X[28X [ [ 10, 45, 70, 35 ], [ 12, 60, 96, 48 ], [ 12, 66, 108, 54 ], [128X[104X
     [4X[28X   [ 14, 77, 126, 63 ], [ 14, 84, 140, 70 ], [ 14, 91, 154, 77 ] ][128X[104X
-    [4X[28X gap> cc:=List([1..18],x->SCSeriesL(x,10));; [128X[104X
-    [4X[28X gap> Set(List(cc,x->x.IsManifold));[128X[104X
+    [4X[28X gap> cc:=List([1..18],x->SCSeriesL(x,10));; [128X[104X
+    [4X[28X gap> Set(List(cc,x->x.IsManifold));[128X[104X
     [4X[28X [ true ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -1116,7 +1116,7 @@
   the classification in [Lut03].[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCSeriesLe(7);                     [128X[104X
+    [4X[28X gap> c:=SCSeriesLe(7);                     [128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -1126,8 +1126,8 @@
     [4X[28X  Dim=3[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> d:=SCLib.DetermineTopologicalType(c);;[128X[104X
-    [4X[28X gap> SCReference(d);[128X[104X
+    [4X[28X gap> d:=SCLib.DetermineTopologicalType(c);;[128X[104X
+    [4X[28X gap> SCReference(d);[128X[104X
     [4X[28X "manifold_3_14_1_5 in F.H.Lutz: 'The Manifold Page', http://www.math.tu-berlin\[128X[104X
     [4X[28X .de/diskregeom/stellar/,\r\nF.H.Lutz: 'Triangulated manifolds with few vertice\[128X[104X
     [4X[28X s and vertex-transitive group actions', Doctoral Thesis TU Berlin 1999, Shaker\[128X[104X
@@ -1146,7 +1146,7 @@
   transitive cyclic automorphism group.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> l154:=SCSeriesLensSpace(15,4);[128X[104X
+    [4X[28X gap> l154:=SCSeriesLensSpace(15,4);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -1157,17 +1157,17 @@
     [4X[28X  TopologicalType="L(15,4)"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> l154.Homology;[128X[104X
+    [4X[28X gap> l154.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [ 15 ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> g:=SimplifiedFpGroup(SCFundamentalGroup(l154));[128X[104X
+    [4X[28X gap> g:=SimplifiedFpGroup(SCFundamentalGroup(l154));[128X[104X
     [4X[28X <fp group on the generators [ [2,5] ]>[128X[104X
-    [4X[28X gap> StructureDescription(g);[128X[104X
+    [4X[28X gap> StructureDescription(g);[128X[104X
     [4X[28X "C15"[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> l151:=SCSeriesLensSpace(15,1);[128X[104X
+    [4X[28X gap> l151:=SCSeriesLensSpace(15,1);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -1178,11 +1178,11 @@
     [4X[28X  TopologicalType="L(15,1)"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> l151.Homology;[128X[104X
+    [4X[28X gap> l151.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [ 15 ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> g:=SimplifiedFpGroup(SCFundamentalGroup(l151));[128X[104X
+    [4X[28X gap> g:=SimplifiedFpGroup(SCFundamentalGroup(l151));[128X[104X
     [4X[28X <fp group on the generators [ [2,3] ]>[128X[104X
-    [4X[28X gap> StructureDescription(g);[128X[104X
+    [4X[28X gap> StructureDescription(g);[128X[104X
     [4X[28X "C15"[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -1198,8 +1198,8 @@
   must be any prime number greater than [22X6[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> l:=List([2..19],x->SCSeriesPrimeTorus(1,x,41));; [128X[104X
-    [4X[28X gap> Set(List(l,x->SCHomology(x)));[128X[104X
+    [4X[28X gap> l:=List([2..19],x->SCSeriesPrimeTorus(1,x,41));; [128X[104X
+    [4X[28X gap> Set(List(l,x->SCHomology(x)));[128X[104X
     [4X[28X [ [ [ 0, [  ] ], [ 2, [  ] ], [ 1, [  ] ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -1231,7 +1231,7 @@
   [22X3[122X-manifolds with transitive cyclic symmetry as described in [BS14].[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCSeriesSeifertFibredSpace(2,3,15);[128X[104X
+    [4X[28X gap> c:=SCSeriesSeifertFibredSpace(2,3,15);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -1242,7 +1242,7 @@
     [4X[28X  TopologicalType="SFS [ S^2 : (2,b1)^3, (5,b3) ]"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> c.Homology;[128X[104X
+    [4X[28X gap> c.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [ 2, 2 ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -1256,7 +1256,7 @@
   [33X[0;0YGenerates a combinatorial version of [22X(S^2 × S^2)^# k[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCSeriesS2xS2(3);[128X[104X
+    [4X[28X gap> c:=SCSeriesS2xS2(3);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: DifferenceCycles, Dim, FacetsEx, Name, [128X[104X
@@ -1267,7 +1267,7 @@
     [4X[28X  TopologicalType="(S^2 x S^2)^(# 3)"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> c.Homology;[128X[104X
+    [4X[28X gap> c.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 6, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -1545,8 +1545,8 @@
   simplicial) but a simplicial subdivision of [3Xcomplex[103X[22X^n[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdSimplex(2);;[128X[104X
-    [4X[28X gap> 4torus:=SCCartesianPower(c,4);[128X[104X
+    [4X[28X gap> c:=SCBdSimplex(2);;[128X[104X
+    [4X[28X gap> 4torus:=SCCartesianPower(c,4);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, TopologicalType, Vertices.[128X[104X
@@ -1556,11 +1556,11 @@
     [4X[28X  TopologicalType="(S^1)^4"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> 4torus.Homology;[128X[104X
+    [4X[28X gap> 4torus.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 4, [  ] ], [ 6, [  ] ], [ 4, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> 4torus.Chi;[128X[104X
+    [4X[28X gap> 4torus.Chi;[128X[104X
     [4X[28X 0[128X[104X
-    [4X[28X gap> 4torus.F;[128X[104X
+    [4X[28X gap> 4torus.F;[128X[104X
     [4X[28X [ 81, 1215, 4050, 4860, 1944 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -1583,9 +1583,9 @@
   of vertices of the arguments.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c1:=SCBdSimplex(2);;[128X[104X
-    [4X[28X gap> c2:=SCBdSimplex(3);;[128X[104X
-    [4X[28X gap> c3:=SCCartesianProduct(c1,c2);[128X[104X
+    [4X[28X gap> c1:=SCBdSimplex(2);;[128X[104X
+    [4X[28X gap> c2:=SCBdSimplex(3);;[128X[104X
+    [4X[28X gap> c3:=SCCartesianProduct(c1,c2);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, TopologicalType, Vertices.[128X[104X
@@ -1595,9 +1595,9 @@
     [4X[28X  TopologicalType="S^1xS^2"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> c3.Homology;[128X[104X
+    [4X[28X gap> c3.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 1, [  ] ], [ 1, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> c3.F;[128X[104X
+    [4X[28X gap> c3.F;[128X[104X
     [4X[28X [ 12, 48, 72, 36 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -1611,9 +1611,9 @@
   [33X[0;0YComputes all connected components of an arbitrary simplicial complex.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SC([[1,2,3],[3,4,5],[4,5,6,7,8]]);;[128X[104X
-    [4X[28X gap> SCRename(c,"connected complex");;[128X[104X
-    [4X[28X gap> SCConnectedComponents(c);[128X[104X
+    [4X[28X gap> c:=SC([[1,2,3],[3,4,5],[4,5,6,7,8]]);;[128X[104X
+    [4X[28X gap> SCRename(c,"connected complex");;[128X[104X
+    [4X[28X gap> SCConnectedComponents(c);[128X[104X
     [4X[28X [ [SimplicialComplex[128X[104X
     [4X[28X     [128X[104X
     [4X[28X      Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -1622,9 +1622,9 @@
     [4X[28X      Dim=4[128X[104X
     [4X[28X     [128X[104X
     [4X[28X     /SimplicialComplex] ][128X[104X
-    [4X[28X gap> c:=SC([[1,2,3],[4,5],[6,7,8]]);;[128X[104X
-    [4X[28X gap> SCRename(c,"non-connected complex");;[128X[104X
-    [4X[28X gap> SCConnectedComponents(c);[128X[104X
+    [4X[28X gap> c:=SC([[1,2,3],[4,5],[6,7,8]]);;[128X[104X
+    [4X[28X gap> SCRename(c,"non-connected complex");;[128X[104X
+    [4X[28X gap> SCConnectedComponents(c);[128X[104X
     [4X[28X [ [SimplicialComplex[128X[104X
     [4X[28X     [128X[104X
     [4X[28X      Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -1660,11 +1660,11 @@
   ×[122X [2XSCConnectedSumMinus[102X ([14X6.6-6[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("T^2"){[1..6]};[128X[104X
+    [4X[28X gap> SCLib.SearchByName("T^2"){[1..6]};[128X[104X
     [4X[28X [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], [ 10, "T^2 (VT)" ],[128X[104X
     [4X[28X   [ 18, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ][128X[104X
-    [4X[28X gap> torus:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> genus10:=SCConnectedProduct(torus,10);[128X[104X
+    [4X[28X gap> torus:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> genus10:=SCConnectedProduct(torus,10);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -1674,9 +1674,9 @@
     [4X[28X  Dim=2[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> genus10.Chi;[128X[104X
+    [4X[28X gap> genus10.Chi;[128X[104X
     [4X[28X -18[128X[104X
-    [4X[28X gap> genus10.F;[128X[104X
+    [4X[28X gap> genus10.F;[128X[104X
     [4X[28X [ 43, 183, 122 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -1696,11 +1696,11 @@
   do not allow an orientation reversing homeomorphism.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("T^2"){[1..6]};[128X[104X
+    [4X[28X gap> SCLib.SearchByName("T^2"){[1..6]};[128X[104X
     [4X[28X [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], [ 10, "T^2 (VT)" ],[128X[104X
     [4X[28X   [ 18, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ][128X[104X
-    [4X[28X gap> torus:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> genus2:=SCConnectedSum(torus,torus);[128X[104X
+    [4X[28X gap> torus:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> genus2:=SCConnectedSum(torus,torus);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -1709,31 +1709,31 @@
     [4X[28X  Dim=2[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> genus2.Homology;[128X[104X
+    [4X[28X gap> genus2.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 4, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> genus2.Chi;[128X[104X
+    [4X[28X gap> genus2.Chi;[128X[104X
     [4X[28X -2[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("CP^2");[128X[104X
+    [4X[28X gap> SCLib.SearchByName("CP^2");[128X[104X
     [4X[28X [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#-CP^2" ], [ 100, "CP^2#CP^2" ], [128X[104X
     [4X[28X   [ 400, "CP^2#(S^2xS^2)" ], [ 2486, "Gaifullin CP^2" ], [128X[104X
     [4X[28X   [ 4401, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ][128X[104X
-    [4X[28X gap> cp2:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> c1:=SCConnectedSum(cp2,cp2);;[128X[104X
-    [4X[28X gap> c2:=SCConnectedSumMinus(cp2,cp2);;[128X[104X
-    [4X[28X gap> c1.F=c2.F;[128X[104X
+    [4X[28X gap> cp2:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> c1:=SCConnectedSum(cp2,cp2);;[128X[104X
+    [4X[28X gap> c2:=SCConnectedSumMinus(cp2,cp2);;[128X[104X
+    [4X[28X gap> c1.F=c2.F;[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> c1.ASDet=c2.ASDet;[128X[104X
+    [4X[28X gap> c1.ASDet=c2.ASDet;[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCIsIsomorphic(c1,c2);[128X[104X
+    [4X[28X gap> SCIsIsomorphic(c1,c2);[128X[104X
     [4X[28X false[128X[104X
-    [4X[28X gap> PrintArray(SCIntersectionForm(c1));[128X[104X
+    [4X[28X gap> PrintArray(SCIntersectionForm(c1));[128X[104X
     [4X[28X [ [  1,  0 ],[128X[104X
     [4X[28X   [  0,  1 ] ][128X[104X
-    [4X[28X gap> PrintArray(SCIntersectionForm(c2));[128X[104X
+    [4X[28X gap> PrintArray(SCIntersectionForm(c2));[128X[104X
     [4X[28X [ [   1,   0 ],[128X[104X
     [4X[28X   [   0,  -1 ] ][128X[104X
     [4X[28X [128X[104X
@@ -1754,11 +1754,11 @@
   orientation reversing homeomorphism.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("T^2"){[1..6]};[128X[104X
+    [4X[28X gap> SCLib.SearchByName("T^2"){[1..6]};[128X[104X
     [4X[28X [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], [ 10, "T^2 (VT)" ],[128X[104X
     [4X[28X   [ 18, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ][128X[104X
-    [4X[28X gap> torus:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> genus2:=SCConnectedSumMinus(torus,torus);[128X[104X
+    [4X[28X gap> torus:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> genus2:=SCConnectedSumMinus(torus,torus);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -1767,31 +1767,31 @@
     [4X[28X  Dim=2[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> genus2.Homology;[128X[104X
+    [4X[28X gap> genus2.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 4, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> genus2.Chi;[128X[104X
+    [4X[28X gap> genus2.Chi;[128X[104X
     [4X[28X -2[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("CP^2");[128X[104X
+    [4X[28X gap> SCLib.SearchByName("CP^2");[128X[104X
     [4X[28X [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#-CP^2" ], [ 100, "CP^2#CP^2" ], [128X[104X
     [4X[28X   [ 400, "CP^2#(S^2xS^2)" ], [ 2486, "Gaifullin CP^2" ], [128X[104X
     [4X[28X   [ 4401, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ][128X[104X
-    [4X[28X gap> cp2:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> c1:=SCConnectedSum(cp2,cp2);;[128X[104X
-    [4X[28X gap> c2:=SCConnectedSumMinus(cp2,cp2);;[128X[104X
-    [4X[28X gap> c1.F=c2.F;[128X[104X
+    [4X[28X gap> cp2:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> c1:=SCConnectedSum(cp2,cp2);;[128X[104X
+    [4X[28X gap> c2:=SCConnectedSumMinus(cp2,cp2);;[128X[104X
+    [4X[28X gap> c1.F=c2.F;[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> c1.ASDet=c2.ASDet;[128X[104X
+    [4X[28X gap> c1.ASDet=c2.ASDet;[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCIsIsomorphic(c1,c2);[128X[104X
+    [4X[28X gap> SCIsIsomorphic(c1,c2);[128X[104X
     [4X[28X false[128X[104X
-    [4X[28X gap> PrintArray(SCIntersectionForm(c1));[128X[104X
+    [4X[28X gap> PrintArray(SCIntersectionForm(c1));[128X[104X
     [4X[28X [ [  1,  0 ],[128X[104X
     [4X[28X   [  0,  1 ] ][128X[104X
-    [4X[28X gap> PrintArray(SCIntersectionForm(c2));[128X[104X
+    [4X[28X gap> PrintArray(SCIntersectionForm(c2));[128X[104X
     [4X[28X [ [   1,   0 ],[128X[104X
     [4X[28X   [   0,  -1 ] ][128X[104X
     [4X[28X [128X[104X
@@ -1807,13 +1807,13 @@
   sense this is the inverse operation of [2XSCDifferenceCycleExpand[102X ([14X6.6-8[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> sphere:=SCBdSimplex(4);;[128X[104X
-    [4X[28X gap> gens:=SCGenerators(sphere);[128X[104X
+    [4X[28X gap> sphere:=SCBdSimplex(4);;[128X[104X
+    [4X[28X gap> gens:=SCGenerators(sphere);[128X[104X
     [4X[28X [ [ [ 1, 2, 3, 4 ], [ 5 ] ] ][128X[104X
-    [4X[28X gap> diffcycle:=SCDifferenceCycleCompress(gens[1][1],5);[128X[104X
+    [4X[28X gap> diffcycle:=SCDifferenceCycleCompress(gens[1][1],5);[128X[104X
     [4X[28X [ 1, 1, 1, 2 ][128X[104X
-    [4X[28X gap> c:=SCDifferenceCycleExpand([1,1,1,2]);;[128X[104X
-    [4X[28X gap> c.Facets;[128X[104X
+    [4X[28X gap> c:=SCDifferenceCycleExpand([1,1,1,2]);;[128X[104X
+    [4X[28X gap> c.Facets;[128X[104X
     [4X[28X [ [ 1, 2, 3, 4 ], [ 1, 2, 3, 5 ], [ 1, 2, 4, 5 ], [ 1, 3, 4, 5 ], [128X[104X
     [4X[28X   [ 2, 3, 4, 5 ] ][128X[104X
     [4X[28X [128X[104X
@@ -1834,8 +1834,8 @@
   all integer ranges usually start from [22X1[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCDifferenceCycleExpand([1,1,2]);;[128X[104X
-    [4X[28X gap> c.Facets;[128X[104X
+    [4X[28X gap> c:=SCDifferenceCycleExpand([1,1,2]);;[128X[104X
+    [4X[28X gap> c.Facets;[128X[104X
     [4X[28X [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 3, 4 ], [ 2, 3, 4 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -1849,8 +1849,8 @@
   [33X[0;0YComputes all strongly connected components of a pure simplicial complex.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SC([[1,2,3],[2,3,4],[4,5,6],[5,6,7]]);;[128X[104X
-    [4X[28X gap> comps:=SCStronglyConnectedComponents(c);[128X[104X
+    [4X[28X gap> c:=SC([[1,2,3],[2,3,4],[4,5,6],[5,6,7]]);;[128X[104X
+    [4X[28X gap> comps:=SCStronglyConnectedComponents(c);[128X[104X
     [4X[28X [ [SimplicialComplex[128X[104X
     [4X[28X     [128X[104X
     [4X[28X      Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -1866,9 +1866,9 @@
     [4X[28X      Dim=2[128X[104X
     [4X[28X     [128X[104X
     [4X[28X     /SimplicialComplex] ][128X[104X
-    [4X[28X gap> comps[1].Facets;[128X[104X
+    [4X[28X gap> comps[1].Facets;[128X[104X
     [4X[28X [ [ 1, 2, 3 ], [ 2, 3, 4 ] ][128X[104X
-    [4X[28X gap> comps[2].Facets;[128X[104X
+    [4X[28X gap> comps[2].Facets;[128X[104X
     [4X[28X [ [ 4, 5, 6 ], [ 5, 6, 7 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -1911,15 +1911,15 @@
   subset of [10XmatrixAllowedRows[110X the argument is ignored.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> G:=PrimitiveGroup(8,5);[128X[104X
+    [4X[28X gap> G:=PrimitiveGroup(8,5);[128X[104X
     [4X[28X PGL(2, 7)[128X[104X
-    [4X[28X gap> Size(G);[128X[104X
+    [4X[28X gap> Size(G);[128X[104X
     [4X[28X 336[128X[104X
-    [4X[28X gap> Transitivity(G);[128X[104X
+    [4X[28X gap> Transitivity(G);[128X[104X
     [4X[28X 3[128X[104X
-    [4X[28X gap> list:=SCsFromGroupExt(G,8,3,1,0,true,false,0,[]);[128X[104X
+    [4X[28X gap> list:=SCsFromGroupExt(G,8,3,1,0,true,false,0,[]);[128X[104X
     [4X[28X [ "defgh.g.h.fah.e.gaf.h.eag.e.faf.a.haa.g.fah.a.gjhzh" ][128X[104X
-    [4X[28X gap> c:=SCFromIsoSig(list[1]);[128X[104X
+    [4X[28X gap> c:=SCFromIsoSig(list[1]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, ExportIsoSig, FacetsEx, Name, Vertices.[128X[104X
@@ -1928,13 +1928,13 @@
     [4X[28X  Dim=3[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCNeighborliness(c); [128X[104X
+    [4X[28X gap> SCNeighborliness(c); [128X[104X
     [4X[28X 3[128X[104X
-    [4X[28X gap> c.F;[128X[104X
+    [4X[28X gap> c.F;[128X[104X
     [4X[28X [ 8, 28, 56, 28 ][128X[104X
-    [4X[28X gap> c.IsManifold; [128X[104X
+    [4X[28X gap> c.IsManifold; [128X[104X
     [4X[28X false[128X[104X
-    [4X[28X gap> SCLibDetermineTopologicalType(SCLink(c,1));[128X[104X
+    [4X[28X gap> SCLibDetermineTopologicalType(SCLink(c,1));[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: BoundaryEx, Dim, FacetsEx, HasBoundary, [128X[104X
@@ -1948,8 +1948,8 @@
     [4X[28X  IsPure=true[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> # there are no 3-neighborly 3-manifolds with 8 vertices[128X[104X
-    [4X[28X gap> list:=SCsFromGroupExt(PrimitiveGroup(8,5),8,3,0,0,true,false,0,[]); [128X[104X
+    [4X[28X gap> # there are no 3-neighborly 3-manifolds with 8 vertices[128X[104X
+    [4X[28X gap> list:=SCsFromGroupExt(PrimitiveGroup(8,5),8,3,0,0,true,false,0,[]); [128X[104X
     [4X[28X gap> [  ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -1975,7 +1975,7 @@
   [2XSCsFromGroupExt[102X ([14X6.7-1[114X) for every group.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> list:=SCsFromGroupByTransitivity(8,3,2,true,true,true);[128X[104X
+    [4X[28X gap> list:=SCsFromGroupByTransitivity(8,3,2,true,true,true);[128X[104X
     [4X[28X #I  SCsFromGroupByTransitivity: Building list of groups...[128X[104X
     [4X[28X #I  SCsFromGroupByTransitivity: ...2 groups found.[128X[104X
     [4X[28X #I  degree 8: [ AGL(1, 8), PSL(2, 7) ][128X[104X
@@ -2223,7 +2223,7 @@
     [4X[28X gap> g:=SCAutomorphismGroupInternal(c);[128X[104X
     [4X[28X PrimitiveGroup(3,2) = S(3)[128X[104X
     [4X[28X gap> List(g);[128X[104X
-    [4X[28X [ (), (1,2,3), (1,3,2), (2,3), (1,2), (1,3) ][128X[104X
+    [4X[28X [ (), (1,3,2), (1,2,3), (2,3), (1,3), (1,2) ][128X[104X
     [4X[28X gap> StructureDescription(g);[128X[104X
     [4X[28X "S3"[128X[104X
     [4X[28X [128X[104X
@@ -3151,16 +3151,16 @@
   [29X[2XSCIsFlag[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
-  [33X[0;0YChecks  if  [3Xcomplex[103X  is  flag. A simplicial complex is a flag complex if all
-  edges of a potential face of the complex are in the complex, or equivalently
-  if all of its minimal non-faces are edges (cf. [Fro08]).[133X
+  [33X[0;0YChecks  if  [3Xcomplex[103X  is flag. A connected simplicial complex of dimension at
+  least  one is a flag complex if all cliques in its 1-skeleton span a face of
+  the complex (cf. [Fro08]).[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("RP^2");   [128X[104X
     [4X[28X [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ][128X[104X
     [4X[28X gap> rp2_6:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCIsFlag(rp2_6);[128X[104X
-    [4X[28X true[128X[104X
+    [4X[28X false[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -3227,7 +3227,7 @@
     [4X[28X Group([ (1,3)(4,9)(5,8)(6,7), (1,9,8,7,6,5,4,3,2) ])[128X[104X
     [4X[28X gap> SCIsInKd(c,1);[128X[104X
     [4X[28X #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...[128X[104X
-    [4X[28X #I  SCIsKStackedSphere: try 1/50[128X[104X
+    [4X[28X #I  SCIsKStackedSphere: try 1/1[128X[104X
     [4X[28X #I  SCIsKStackedSphere: complex is a 1-stacked sphere.[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
@@ -3555,13 +3555,13 @@
   complement in [22XV[122X is a non-face of [3Xcomplex[103X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SC([[1,2],[2,3],[3,4],[4,1]]);;[128X[104X
-    [4X[28X gap> dual:=SCAlexanderDual(c);;[128X[104X
-    [4X[28X gap> dual.F;[128X[104X
+    [4X[28X gap> c:=SC([[1,2],[2,3],[3,4],[4,1]]);;[128X[104X
+    [4X[28X gap> dual:=SCAlexanderDual(c);;[128X[104X
+    [4X[28X gap> dual.F;[128X[104X
     [4X[28X [ 4, 2 ][128X[104X
-    [4X[28X gap> dual.IsConnected;[128X[104X
+    [4X[28X gap> dual.IsConnected;[128X[104X
     [4X[28X false[128X[104X
-    [4X[28X gap> dual.Facets;[128X[104X
+    [4X[28X gap> dual.Facets;[128X[104X
     [4X[28X [ [ 1, 3 ], [ 2, 4 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -3578,10 +3578,10 @@
   is chosen and [3Xcomplex[103X is returned in the standard labeling.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> s:=SCSimplex(5);;                                       [128X[104X
-    [4X[28X gap> b:=SCSimplex(5);;[128X[104X
-    [4X[28X gap> s:=SCClose(b,13);;[128X[104X
-    [4X[28X gap> SCIsIsomorphic(s,SCBdSimplex(6));                       [128X[104X
+    [4X[28X gap> s:=SCSimplex(5);;                                       [128X[104X
+    [4X[28X gap> b:=SCSimplex(5);;[128X[104X
+    [4X[28X gap> s:=SCClose(b,13);;[128X[104X
+    [4X[28X gap> SCIsIsomorphic(s,SCBdSimplex(6));                       [128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -3604,7 +3604,7 @@
   available.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("RP^3");[128X[104X
+    [4X[28X gap> SCLib.SearchByName("RP^3");[128X[104X
     [4X[28X [ [ 45, "RP^3" ], [ 113, "RP^3=L(2,1) (VT)" ], [ 589, "(S^2~S^1)#RP^3" ], [128X[104X
     [4X[28X   [ 590, "(S^2xS^1)#RP^3" ], [ 632, "(S^2~S^1)#2#RP^3" ], [128X[104X
     [4X[28X   [ 633, "(S^2xS^1)#2#RP^3" ], [ 2414, "RP^3#RP^3" ], [128X[104X
@@ -3612,23 +3612,23 @@
     [4X[28X   [ 2489, "(S^2xS^1)#3#RP^3" ], [ 2502, "RP^3=L(2,1) (VT)" ], [128X[104X
     [4X[28X   [ 7473, "(S^2~S^1)#4#RP^3" ], [ 7474, "(S^2xS^1)#4#RP^3" ], [128X[104X
     [4X[28X   [ 7504, "(S^2~S^1)#5#RP^3" ], [ 7505, "(S^2xS^1)#5#RP^3" ] ][128X[104X
-    [4X[28X gap> rp3:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> rp3.F;[128X[104X
+    [4X[28X gap> rp3:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> rp3.F;[128X[104X
     [4X[28X [ 11, 51, 80, 40 ][128X[104X
-    [4X[28X gap> cone:=SCCone(rp3);;[128X[104X
-    [4X[28X gap> cone.F;[128X[104X
+    [4X[28X gap> cone:=SCCone(rp3);;[128X[104X
+    [4X[28X gap> cone.F;[128X[104X
     [4X[28X [ 12, 62, 131, 120, 40 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> s:=SCBdSimplex(4)+12;;[128X[104X
-    [4X[28X gap> s.Facets;             [128X[104X
+    [4X[28X gap> s:=SCBdSimplex(4)+12;;[128X[104X
+    [4X[28X gap> s.Facets;             [128X[104X
     [4X[28X [ [ 13, 14, 15, 16 ], [ 13, 14, 15, 17 ], [ 13, 14, 16, 17 ], [128X[104X
     [4X[28X   [ 13, 15, 16, 17 ], [ 14, 15, 16, 17 ] ][128X[104X
-    [4X[28X gap> cc:=SCCone(s,13);;    [128X[104X
-    [4X[28X gap> cc:=SCCone(s,12);;[128X[104X
-    [4X[28X gap> cc.Facets;[128X[104X
+    [4X[28X gap> cc:=SCCone(s,13);;    [128X[104X
+    [4X[28X gap> cc:=SCCone(s,12);;[128X[104X
+    [4X[28X gap> cc.Facets;[128X[104X
     [4X[28X [ [ 12, 13, 14, 15, 16 ], [ 12, 13, 14, 15, 17 ], [ 12, 13, 14, 16, 17 ], [128X[104X
     [4X[28X   [ 12, 13, 15, 16, 17 ], [ 12, 14, 15, 16, 17 ] ][128X[104X
     [4X[28X [128X[104X
@@ -3646,7 +3646,7 @@
   if available.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> deljoin:=SCDeletedJoin(SCBdSimplex(3),SCBdSimplex(3));[128X[104X
+    [4X[28X gap> deljoin:=SCDeletedJoin(SCBdSimplex(3),SCBdSimplex(3));[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -3655,10 +3655,10 @@
     [4X[28X  Dim=3[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> bddeljoin:=SCBoundary(deljoin);;[128X[104X
-    [4X[28X gap> bddeljoin.Homology;[128X[104X
+    [4X[28X gap> bddeljoin:=SCBoundary(deljoin);;[128X[104X
+    [4X[28X gap> bddeljoin.Homology;[128X[104X
     [4X[28X [ [ 1, [  ] ], [ 0, [  ] ], [ 2, [  ] ] ][128X[104X
-    [4X[28X gap> deljoin.Facets;[128X[104X
+    [4X[28X gap> deljoin.Facets;[128X[104X
     [4X[28X [ [ [ 1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 2 ] ], [128X[104X
     [4X[28X   [ [ 1, 1 ], [ 2, 1 ], [ 3, 2 ], [ 4, 1 ] ], [128X[104X
     [4X[28X   [ [ 1, 1 ], [ 2, 1 ], [ 3, 2 ], [ 4, 2 ] ], [128X[104X
@@ -3690,13 +3690,13 @@
   SCSimplicialComplex)[102X ([14X5.3-2[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdSimplex(3);;[128X[104X
-    [4X[28X gap> d:=SC([[1,2,3]]);;[128X[104X
-    [4X[28X gap> disc:=SCDifference(c,d);;[128X[104X
-    [4X[28X gap> disc.Facets;[128X[104X
+    [4X[28X gap> c:=SCBdSimplex(3);;[128X[104X
+    [4X[28X gap> d:=SC([[1,2,3]]);;[128X[104X
+    [4X[28X gap> disc:=SCDifference(c,d);;[128X[104X
+    [4X[28X gap> disc.Facets;[128X[104X
     [4X[28X [ [ 1, 2, 4 ], [ 1, 3, 4 ], [ 2, 3, 4 ] ][128X[104X
-    [4X[28X gap> empty:=SCDifference(d,c);;[128X[104X
-    [4X[28X gap> empty.Dim;[128X[104X
+    [4X[28X gap> empty:=SCDifference(d,c);;[128X[104X
+    [4X[28X gap> empty.Dim;[128X[104X
     [4X[28X -1[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -3716,7 +3716,7 @@
   this has to be done by the user![133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("S^4");[128X[104X
+    [4X[28X gap> SCLib.SearchByName("S^4");[128X[104X
     [4X[28X [ [ 36, "S^4 (VT)" ], [ 37, "S^4 (VT)" ], [ 38, "S^4 (VT)" ], [128X[104X
     [4X[28X   [ 130, "S^4 (VT)" ], [ 463, "S^4~S^1 (VT)" ], [ 713, "S^4xS^1 (VT)" ], [128X[104X
     [4X[28X   [ 1472, "S^4xS^1 (VT)" ], [ 1473, "S^4~S^1 (VT)" ], [128X[104X
@@ -3727,8 +3727,8 @@
     [4X[28X   [ 4399, "S^4~S^1 (VT)" ], [ 4402, "S^4~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 4403, "S^4~S^1 (VT)" ], [ 4404, "S^4~S^1 (VT)" ], [ 7479, "S^4xS^2" ], [128X[104X
     [4X[28X   [ 7539, "S^4xS^3" ], [ 7573, "S^4xS^4" ] ][128X[104X
-    [4X[28X gap> s:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> filled:=SCFillSphere(s);[128X[104X
+    [4X[28X gap> s:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> filled:=SCFillSphere(s);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -3737,10 +3737,10 @@
     [4X[28X  Dim=5[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCHomology(filled);[128X[104X
+    [4X[28X gap> SCHomology(filled);[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [128X[104X
     [4X[28X   [ 0, [  ] ] ][128X[104X
-    [4X[28X gap> SCCollapseGreedy(filled);[128X[104X
+    [4X[28X gap> SCCollapseGreedy(filled);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FVector, FacetsEx, IsPure, Name, NumFaces[], [128X[104X
@@ -3752,8 +3752,8 @@
     [4X[28X  IsPure=true[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> bd:=SCBoundary(filled);;[128X[104X
-    [4X[28X gap> bd=s;[128X[104X
+    [4X[28X gap> bd:=SCBoundary(filled);;[128X[104X
+    [4X[28X gap> bd=s;[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -3771,21 +3771,21 @@
   information.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SC([[1,2,4],[2,4,5],[2,3,5],[3,5,6],[1,3,6],[1,4,6]]);;[128X[104X
-    [4X[28X gap> c:=SCUnion(c,SCUnion(SCCopy(c)+3,SCCopy(c)+6));;[128X[104X
-    [4X[28X gap> c:=SCUnion(c,SC([[1,2,3],[10,11,12]]));;[128X[104X
-    [4X[28X gap> c.Facets;[128X[104X
+    [4X[28X gap> c:=SC([[1,2,4],[2,4,5],[2,3,5],[3,5,6],[1,3,6],[1,4,6]]);;[128X[104X
+    [4X[28X gap> c:=SCUnion(c,SCUnion(SCCopy(c)+3,SCCopy(c)+6));;[128X[104X
+    [4X[28X gap> c:=SCUnion(c,SC([[1,2,3],[10,11,12]]));;[128X[104X
+    [4X[28X gap> c.Facets;[128X[104X
     [4X[28X [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 3, 6 ], [ 1, 4, 6 ], [ 2, 3, 5 ], [128X[104X
     [4X[28X   [ 2, 4, 5 ], [ 3, 5, 6 ], [ 4, 5, 7 ], [ 4, 6, 9 ], [ 4, 7, 9 ], [128X[104X
     [4X[28X   [ 5, 6, 8 ], [ 5, 7, 8 ], [ 6, 8, 9 ], [ 7, 8, 10 ], [ 7, 9, 12 ], [128X[104X
     [4X[28X   [ 7, 10, 12 ], [ 8, 9, 11 ], [ 8, 10, 11 ], [ 9, 11, 12 ], [ 10, 11, 12 ] ][128X[104X
-    [4X[28X gap> c.Homology;[128X[104X
+    [4X[28X gap> c.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> torus:=SCHandleAddition(c,[1,2,3],[10,11,12]);;[128X[104X
-    [4X[28X gap> torus.Homology;[128X[104X
+    [4X[28X gap> torus:=SCHandleAddition(c,[1,2,3],[10,11,12]);;[128X[104X
+    [4X[28X gap> torus.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 2, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X gap> ism:=SCIsManifold(torus);;[128X[104X
-    [4X[28X gap> ism;[128X[104X
+    [4X[28X gap> ism:=SCIsManifold(torus);;[128X[104X
+    [4X[28X gap> ism;[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -3804,15 +3804,15 @@
   SCSimplicialComplex)[102X ([14X5.3-3[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdSimplex(3);;        [128X[104X
-    [4X[28X gap> d:=SCBdSimplex(3)+1;;      [128X[104X
-    [4X[28X gap> d.Facets;[128X[104X
+    [4X[28X gap> c:=SCBdSimplex(3);;        [128X[104X
+    [4X[28X gap> d:=SCBdSimplex(3)+1;;      [128X[104X
+    [4X[28X gap> d.Facets;[128X[104X
     [4X[28X [ [ 2, 3, 4 ], [ 2, 3, 5 ], [ 2, 4, 5 ], [ 3, 4, 5 ] ][128X[104X
-    [4X[28X gap> c:=SCBdSimplex(3);;  [128X[104X
-    [4X[28X gap> d:=SCBdSimplex(3);;  [128X[104X
-    [4X[28X gap> d:=SCMove(d,[[1,2,3],[]])+1;;[128X[104X
-    [4X[28X gap> s1:=SCIntersection(c,d);;[128X[104X
-    [4X[28X gap> s1.Facets;               [128X[104X
+    [4X[28X gap> c:=SCBdSimplex(3);;  [128X[104X
+    [4X[28X gap> d:=SCBdSimplex(3);;  [128X[104X
+    [4X[28X gap> d:=SCMove(d,[[1,2,3],[]])+1;;[128X[104X
+    [4X[28X gap> s1:=SCIntersection(c,d);;[128X[104X
+    [4X[28X gap> s1.Facets;               [128X[104X
     [4X[28X [ [ 2, 3 ], [ 2, 4 ], [ 3, 4 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -3826,12 +3826,12 @@
   are combinatorially isomorphic, [9Xfalse[109X if not.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c1:=SC([[11,12,13],[11,12,14],[11,13,14],[12,13,14]]);;[128X[104X
-    [4X[28X gap> c2:=SCBdSimplex(3);;[128X[104X
-    [4X[28X gap> SCIsIsomorphic(c1,c2);[128X[104X
+    [4X[28X gap> c1:=SC([[11,12,13],[11,12,14],[11,13,14],[12,13,14]]);;[128X[104X
+    [4X[28X gap> c2:=SCBdSimplex(3);;[128X[104X
+    [4X[28X gap> SCIsIsomorphic(c1,c2);[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> c3:=SCBdCrossPolytope(3);;[128X[104X
-    [4X[28X gap> SCIsIsomorphic(c1,c3);[128X[104X
+    [4X[28X gap> c3:=SCBdCrossPolytope(3);;[128X[104X
+    [4X[28X gap> SCIsIsomorphic(c1,c3);[128X[104X
     [4X[28X false[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -3848,20 +3848,20 @@
   complexes are taken into account.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByAttribute("F[1]=10"){[1..10]};[128X[104X
+    [4X[28X gap> SCLib.SearchByAttribute("F[1]=10"){[1..10]};[128X[104X
     [4X[28X [ [ 17, "K^2 (VT)" ], [ 18, "T^2 (VT)" ], [ 19, "S^3 (VT)" ], [128X[104X
     [4X[28X   [ 20, "(T^2)#2" ], [ 21, "S^3 (VT)" ], [ 22, "S^2xS^1 (VT)" ], [128X[104X
     [4X[28X   [ 23, "S^3 (VT)" ], [ 24, "(T^2)#3" ], [ 25, "(P^2)#7 (VT)" ], [128X[104X
     [4X[28X   [ 26, "S^3 (VT)" ] ][128X[104X
-    [4X[28X gap> k:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> c:=SCBdSimplex(9);;[128X[104X
-    [4X[28X gap> k.F;[128X[104X
+    [4X[28X gap> k:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> c:=SCBdSimplex(9);;[128X[104X
+    [4X[28X gap> k.F;[128X[104X
     [4X[28X [ 10, 30, 20 ][128X[104X
-    [4X[28X gap> c.F;[128X[104X
+    [4X[28X gap> c.F;[128X[104X
     [4X[28X [ 10, 45, 120, 210, 252, 210, 120, 45, 10 ][128X[104X
-    [4X[28X gap> SCIsSubcomplex(c,k);[128X[104X
+    [4X[28X gap> SCIsSubcomplex(c,k);[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCIsSubcomplex(k,c);[128X[104X
+    [4X[28X gap> SCIsSubcomplex(k,c);[128X[104X
     [4X[28X false[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -3877,11 +3877,11 @@
   [9Xfalse[109X otherwise. Internally calls [2XSCIsomorphismEx[102X ([14X6.10-12[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c1:=SC([[11,12,13],[11,12,14],[11,13,14],[12,13,14]]);;[128X[104X
-    [4X[28X gap> c2:=SCBdSimplex(3);;[128X[104X
-    [4X[28X gap> SCIsomorphism(c1,c2);[128X[104X
+    [4X[28X gap> c1:=SC([[11,12,13],[11,12,14],[11,13,14],[12,13,14]]);;[128X[104X
+    [4X[28X gap> c2:=SCBdSimplex(3);;[128X[104X
+    [4X[28X gap> SCIsomorphism(c1,c2);[128X[104X
     [4X[28X [ [ 11, 1 ], [ 12, 2 ], [ 13, 3 ], [ 14, 4 ] ][128X[104X
-    [4X[28X gap> SCIsomorphismEx(c1,c2);[128X[104X
+    [4X[28X gap> SCIsomorphismEx(c1,c2);[128X[104X
     [4X[28X [ [ [ 1, 1 ], [ 2, 2 ], [ 3, 3 ], [ 4, 4 ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -3899,11 +3899,11 @@
   [10XSCIntFunc.SCComputeIsomorphismsEx(complex1,complex2,true)[110X is called.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c1:=SC([[11,12,13],[11,12,14],[11,13,14],[12,13,14]]);;[128X[104X
-    [4X[28X gap> c2:=SCBdSimplex(3);;[128X[104X
-    [4X[28X gap> SCIsomorphism(c1,c2);[128X[104X
+    [4X[28X gap> c1:=SC([[11,12,13],[11,12,14],[11,13,14],[12,13,14]]);;[128X[104X
+    [4X[28X gap> c2:=SCBdSimplex(3);;[128X[104X
+    [4X[28X gap> SCIsomorphism(c1,c2);[128X[104X
     [4X[28X [ [ 11, 1 ], [ 12, 2 ], [ 13, 3 ], [ 14, 4 ] ][128X[104X
-    [4X[28X gap> SCIsomorphismEx(c1,c2);[128X[104X
+    [4X[28X gap> SCIsomorphismEx(c1,c2);[128X[104X
     [4X[28X [ [ [ 1, 1 ], [ 2, 2 ], [ 3, 3 ], [ 4, 4 ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -3921,7 +3921,7 @@
   passed as arguments are not propagated to the new complex.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> sphere:=SCJoin(SCBdSimplex(2),SCBdSimplex(2));[128X[104X
+    [4X[28X gap> sphere:=SCJoin(SCBdSimplex(2),SCBdSimplex(2));[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -3930,9 +3930,9 @@
     [4X[28X  Dim=3[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCHasBoundary(sphere);[128X[104X
+    [4X[28X gap> SCHasBoundary(sphere);[128X[104X
     [4X[28X false[128X[104X
-    [4X[28X gap> sphere.Facets;[128X[104X
+    [4X[28X gap> sphere.Facets;[128X[104X
     [4X[28X [ [ [ 1, 1 ], [ 1, 2 ], [ 2, 1 ], [ 2, 2 ] ], [128X[104X
     [4X[28X   [ [ 1, 1 ], [ 1, 2 ], [ 2, 1 ], [ 2, 3 ] ], [128X[104X
     [4X[28X   [ [ 1, 1 ], [ 1, 2 ], [ 2, 2 ], [ 2, 3 ] ], [128X[104X
@@ -3942,13 +3942,13 @@
     [4X[28X   [ [ 1, 2 ], [ 1, 3 ], [ 2, 1 ], [ 2, 2 ] ], [128X[104X
     [4X[28X   [ [ 1, 2 ], [ 1, 3 ], [ 2, 1 ], [ 2, 3 ] ], [128X[104X
     [4X[28X   [ [ 1, 2 ], [ 1, 3 ], [ 2, 2 ], [ 2, 3 ] ] ][128X[104X
-    [4X[28X gap> sphere.Homology;[128X[104X
+    [4X[28X gap> sphere.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> ball:=SCJoin(SC([[1]]),SCBdSimplex(2));[128X[104X
+    [4X[28X gap> ball:=SCJoin(SC([[1]]),SCBdSimplex(2));[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -3957,9 +3957,9 @@
     [4X[28X  Dim=2[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> ball.Homology;[128X[104X
+    [4X[28X gap> ball.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ] ][128X[104X
-    [4X[28X gap> ball.Facets;[128X[104X
+    [4X[28X gap> ball.Facets;[128X[104X
     [4X[28X [ [ [ 1, 1 ], [ 2, 1 ], [ 2, 2 ] ], [ [ 1, 1 ], [ 2, 1 ], [ 2, 3 ] ], [128X[104X
     [4X[28X   [ [ 1, 1 ], [ 2, 2 ], [ 2, 3 ] ] ][128X[104X
     [4X[28X [128X[104X
@@ -3975,7 +3975,7 @@
   are returned in the original labeling.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCFromFacets(Combinations(["a","b","c"],2));[128X[104X
+    [4X[28X gap> c:=SCFromFacets(Combinations(["a","b","c"],2));[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -3984,7 +3984,7 @@
     [4X[28X  Dim=1[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCNeighbors(c,["a","d"]);[128X[104X
+    [4X[28X gap> SCNeighbors(c,["a","d"]);[128X[104X
     [4X[28X [ [ "a", "b" ], [ "a", "c" ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -3999,7 +3999,7 @@
   are returned in the standard labeling.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCFromFacets(Combinations(["a","b","c"],2));[128X[104X
+    [4X[28X gap> c:=SCFromFacets(Combinations(["a","b","c"],2));[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -4008,9 +4008,9 @@
     [4X[28X  Dim=1[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCLabels(c);[128X[104X
+    [4X[28X gap> SCLabels(c);[128X[104X
     [4X[28X [ "a", "b", "c" ][128X[104X
-    [4X[28X gap> SCNeighborsEx(c,[1,2]);[128X[104X
+    [4X[28X gap> SCNeighborsEx(c,[1,2]);[128X[104X
     [4X[28X [ [ 1, 3 ], [ 2, 3 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -4036,8 +4036,8 @@
   about shellings see [Zie95], [Pac87].[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SC([[1,2,3],[1,2,4],[1,3,4]]);;[128X[104X
-    [4X[28X gap> SCShelling(c);[128X[104X
+    [4X[28X gap> c:=SC([[1,2,3],[1,2,4],[1,3,4]]);;[128X[104X
+    [4X[28X gap> SCShelling(c);[128X[104X
     [4X[28X [ [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 3, 4 ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -4067,16 +4067,16 @@
   [33X[0;0YSee [Zie95], [Pac87] to learn more about shellings.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdSimplex(4);;[128X[104X
-    [4X[28X gap> c:=SCDifference(c,SC([c.Facets[1]]));; # bounded version[128X[104X
-    [4X[28X gap> all:=SCShellingExt(c,true,[]);;[128X[104X
-    [4X[28X gap> Size(all);                                  [128X[104X
+    [4X[28X gap> c:=SCBdSimplex(4);;[128X[104X
+    [4X[28X gap> c:=SCDifference(c,SC([c.Facets[1]]));; # bounded version[128X[104X
+    [4X[28X gap> all:=SCShellingExt(c,true,[]);;[128X[104X
+    [4X[28X gap> Size(all);                                  [128X[104X
     [4X[28X 24[128X[104X
-    [4X[28X gap> all[1];[128X[104X
+    [4X[28X gap> all[1];[128X[104X
     [4X[28X [ [ 1, 2, 3, 5 ], [ 1, 2, 4, 5 ], [ 1, 3, 4, 5 ], [ 2, 3, 4, 5 ] ][128X[104X
-    [4X[28X gap> all:=SCShellingExt(c,false,[]);[128X[104X
+    [4X[28X gap> all:=SCShellingExt(c,false,[]);[128X[104X
     [4X[28X [ [ [ 1, 2, 3, 5 ], [ 1, 2, 4, 5 ], [ 1, 3, 4, 5 ], [ 2, 3, 4, 5 ] ] ][128X[104X
-    [4X[28X gap> all:=SCShellingExt(c,true,[1..4]);[128X[104X
+    [4X[28X gap> all:=SCShellingExt(c,true,[1..4]);[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -4102,8 +4102,8 @@
   about shellings see [Zie95], [Pac87].[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SC([[1,2,3],[1,2,4],[1,3,4]]);;[128X[104X
-    [4X[28X gap> SCShellings(c);[128X[104X
+    [4X[28X gap> c:=SC([[1,2,3],[1,2,4],[1,3,4]]);;[128X[104X
+    [4X[28X gap> SCShellings(c);[128X[104X
     [4X[28X [ [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 3, 4 ] ], [128X[104X
     [4X[28X   [ [ 1, 2, 3 ], [ 1, 3, 4 ], [ 1, 2, 4 ] ], [128X[104X
     [4X[28X   [ [ 1, 2, 4 ], [ 1, 2, 3 ], [ 1, 3, 4 ] ], [128X[104X
@@ -4124,10 +4124,10 @@
   [3Xcomplex[103X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdCrossPolytope(4);;[128X[104X
-    [4X[28X gap> SCVertices(c);[128X[104X
+    [4X[28X gap> c:=SCBdCrossPolytope(4);;[128X[104X
+    [4X[28X gap> SCVertices(c);[128X[104X
     [4X[28X [ 1, 2, 3, 4, 5, 6, 7, 8 ][128X[104X
-    [4X[28X gap> span:=SCSpan(c,[1,2,3,4]);[128X[104X
+    [4X[28X gap> span:=SCSpan(c,[1,2,3,4]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -4136,14 +4136,14 @@
     [4X[28X  Dim=1[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> span.Facets;[128X[104X
+    [4X[28X gap> span.Facets;[128X[104X
     [4X[28X [ [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 4 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SC([[1,2],[1,4,5],[2,3,4]]);;[128X[104X
-    [4X[28X gap> span:=SCSpan(c,[2,3,5]);[128X[104X
+    [4X[28X gap> c:=SC([[1,2],[1,4,5],[2,3,4]]);;[128X[104X
+    [4X[28X gap> span:=SCSpan(c,[2,3,5]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -4152,7 +4152,7 @@
     [4X[28X  Dim=1[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCFacets(span);[128X[104X
+    [4X[28X gap> SCFacets(span);[128X[104X
     [4X[28X [ [ 2, 3 ], [ 5 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -4169,9 +4169,9 @@
   complexes passed as arguments are not propagated to the new complex.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("Poincare");[128X[104X
+    [4X[28X gap> SCLib.SearchByName("Poincare");[128X[104X
     [4X[28X [ [ 7469, "Poincare_sphere" ] ][128X[104X
-    [4X[28X gap> phs:=SCLib.Load(last[1][1]);[128X[104X
+    [4X[28X gap> phs:=SCLib.Load(last[1][1]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: AltshulerSteinberg, AutomorphismGroup, [128X[104X
@@ -4209,8 +4209,8 @@
     [4X[28X  Neighborliness=1[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> susp:=SCSuspension(phs);;[128X[104X
-    [4X[28X gap> edwardsSphere:=SCSuspension(susp);[128X[104X
+    [4X[28X gap> susp:=SCSuspension(phs);;[128X[104X
+    [4X[28X gap> edwardsSphere:=SCSuspension(susp);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -4236,7 +4236,7 @@
   arguments are treated as one facet in the new complex.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCUnion(SCBdSimplex(3),SCBdSimplex(3)+3); #a wedge of two 2-spheres[128X[104X
+    [4X[28X gap> c:=SCUnion(SCBdSimplex(3),SCBdSimplex(3)+3); #a wedge of two 2-spheres[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -4259,11 +4259,11 @@
   possible whenever d([3Xv1[103X,[3Xv2[103X) [22X≥ 3[122X. This is not checked by this algorithm.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SC([[1,2],[2,3],[3,4]]);;[128X[104X
-    [4X[28X gap> circle:=SCVertexIdentification(c,[1],[4]);;[128X[104X
-    [4X[28X gap> circle.Facets;[128X[104X
+    [4X[28X gap> c:=SC([[1,2],[2,3],[3,4]]);;[128X[104X
+    [4X[28X gap> circle:=SCVertexIdentification(c,[1],[4]);;[128X[104X
+    [4X[28X gap> circle.Facets;[128X[104X
     [4X[28X [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ][128X[104X
-    [4X[28X gap> circle.Homology;[128X[104X
+    [4X[28X gap> circle.Homology;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -4279,7 +4279,7 @@
   propagated to the new complex.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> wedge:=SCWedge(SCBdSimplex(2),SCBdSimplex(2));[128X[104X
+    [4X[28X gap> wedge:=SCWedge(SCBdSimplex(2),SCBdSimplex(2));[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -4288,7 +4288,7 @@
     [4X[28X  Dim=1[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> wedge.Facets;[128X[104X
+    [4X[28X gap> wedge.Facets;[128X[104X
     [4X[28X [ [ 1, [ 1, 2 ] ], [ 1, [ 1, 3 ] ], [ 1, [ 2, 2 ] ], [ 1, [ 2, 3 ] ], [128X[104X
     [4X[28X   [ [ 1, 2 ], [ 1, 3 ] ], [ [ 2, 2 ], [ 2, 3 ] ] ][128X[104X
     [4X[28X [128X[104X

@@ -34,10 +34,10 @@
   prime or a prime power, computes the [22XF_q[122X-matrices.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("CP^2 (VT)");[128X[104X
+    [4X[28X gap> SCLib.SearchByName("CP^2 (VT)");[128X[104X
     [4X[28X [ [ 16, "CP^2 (VT)" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> SCHomalgBoundaryMatrices(c,0);[128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> SCHomalgBoundaryMatrices(c,0);[128X[104X
     [4X[28X [ <A 36 x 9 mutable matrix over an internal ring>, [128X[104X
     [4X[28X   <A 84 x 36 mutable matrix over an internal ring>, [128X[104X
     [4X[28X   <A 90 x 84 mutable matrix over an internal ring>, [128X[104X
@@ -57,10 +57,10 @@
   prime or a prime power, computes the [22XF_q[122X-matrices.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("CP^2 (VT)");[128X[104X
+    [4X[28X gap> SCLib.SearchByName("CP^2 (VT)");[128X[104X
     [4X[28X [ [ 16, "CP^2 (VT)" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> SCHomalgCoboundaryMatrices(c,0);[128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> SCHomalgCoboundaryMatrices(c,0);[128X[104X
     [4X[28X [ <A 9 x 36 mutable matrix over an internal ring>, [128X[104X
     [4X[28X   <A 36 x 84 mutable matrix over an internal ring>, [128X[104X
     [4X[28X   <A 84 x 90 mutable matrix over an internal ring>, [128X[104X
@@ -84,10 +84,10 @@
   [2XSCHomalgHomologyBasis[102X ([14X14.1-4[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
+    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
     [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> SCHomalgHomology(c,0);[128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> SCHomalgHomology(c,0);[128X[104X
     [4X[28X #I  SCHomalgHomologyOp: Q-homology ranks: [ 1, 0, 22, 0, 1 ][128X[104X
     [4X[28X [ 1, 0, 22, 0, 1 ][128X[104X
     [4X[28X [128X[104X
@@ -114,10 +114,10 @@
   faster.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
+    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
     [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> SCHomalgHomologyBasis(c,0);[128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> SCHomalgHomologyBasis(c,0);[128X[104X
     [4X[28X #I  SCHomalgHomologyBasisOp: constructed Q-homology groups.[128X[104X
     [4X[28X <A graded homology object consisting of 5 left modules at degrees [ 0 .. 4 ]>[128X[104X
     [4X[28X [128X[104X
@@ -138,10 +138,10 @@
   [2XSCHomalgCohomologyBasis[102X ([14X14.1-6[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
+    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
     [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> SCHomalgCohomology(c,0);[128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> SCHomalgCohomology(c,0);[128X[104X
     [4X[28X #I  SCHomalgCohomologyOp: Q-cohomology ranks: [ 1, 0, 22, 0, 1 ][128X[104X
     [4X[28X [ 1, 0, 22, 0, 1 ][128X[104X
     [4X[28X [128X[104X
@@ -168,10 +168,10 @@
   way faster.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
+    [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
     [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> SCHomalgCohomologyBasis(c,0);[128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> SCHomalgCohomologyBasis(c,0);[128X[104X
     [4X[28X #I  SCHomalgCohomologyBasisOp: constructed Q-cohomology groups.[128X[104X
     [4X[28X <A graded cohomology object consisting of 5 left modules at degrees [128X[104X
     [4X[28X [ 1 .. 5 ]>[128X[104X

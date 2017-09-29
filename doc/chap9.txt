@@ -107,27 +107,27 @@
         randomized sphere. Default: [22X50[122X[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCBistellarOptions.BaseRelaxation;[128X[104X
+    [4X[28X gap> SCBistellarOptions.BaseRelaxation;[128X[104X
     [4X[28X 3[128X[104X
-    [4X[28X gap> SCBistellarOptions.BaseHeating;[128X[104X
+    [4X[28X gap> SCBistellarOptions.BaseHeating;[128X[104X
     [4X[28X 4[128X[104X
-    [4X[28X gap> SCBistellarOptions.Relaxation;[128X[104X
+    [4X[28X gap> SCBistellarOptions.Relaxation;[128X[104X
     [4X[28X 0[128X[104X
-    [4X[28X gap> SCBistellarOptions.Heating;[128X[104X
+    [4X[28X gap> SCBistellarOptions.Heating;[128X[104X
     [4X[28X 0[128X[104X
-    [4X[28X gap> SCBistellarOptions.MaxRounds;[128X[104X
+    [4X[28X gap> SCBistellarOptions.MaxRounds;[128X[104X
     [4X[28X 500000[128X[104X
-    [4X[28X gap> SCBistellarOptions.MaxInterval;[128X[104X
+    [4X[28X gap> SCBistellarOptions.MaxInterval;[128X[104X
     [4X[28X 100000[128X[104X
-    [4X[28X gap> SCBistellarOptions.Mode;[128X[104X
+    [4X[28X gap> SCBistellarOptions.Mode;[128X[104X
     [4X[28X 0[128X[104X
-    [4X[28X gap> SCBistellarOptions.WriteLevel;[128X[104X
+    [4X[28X gap> SCBistellarOptions.WriteLevel;[128X[104X
     [4X[28X 0[128X[104X
-    [4X[28X gap> SCBistellarOptions.MailNotifyInterval;[128X[104X
+    [4X[28X gap> SCBistellarOptions.MailNotifyInterval;[128X[104X
     [4X[28X 86400[128X[104X
-    [4X[28X gap> SCBistellarOptions.MaxIntervalIsManifold;[128X[104X
+    [4X[28X gap> SCBistellarOptions.MaxIntervalIsManifold;[128X[104X
     [4X[28X 5000[128X[104X
-    [4X[28X gap> SCBistellarOptions.MaxIntervalRandomize;[128X[104X
+    [4X[28X gap> SCBistellarOptions.MaxIntervalRandomize;[128X[104X
     [4X[28X 50[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -151,10 +151,10 @@
   [10X(complex1,complex2,1,SCIntFunc.SCChooseMove);[110X[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes to disk[128X[104X
-    [4X[28X gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon[128X[104X
-    [4X[28X gap> refObj:=SCBdSimplex(2);; # triangle as a (minimal) reference object[128X[104X
-    [4X[28X gap> SCEquivalent(obj,refObj);[128X[104X
+    [4X[28X gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes to disk[128X[104X
+    [4X[28X gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon[128X[104X
+    [4X[28X gap> refObj:=SCBdSimplex(2);; # triangle as a (minimal) reference object[128X[104X
+    [4X[28X gap> SCEquivalent(obj,refObj);[128X[104X
     [4X[28X #I  SCReduceComplexEx: complexes are bistellarly equivalent.[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
@@ -170,7 +170,7 @@
   and the maximal vertex label of [3Xcomplex[103X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);[128X[104X
+    [4X[28X gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -179,7 +179,7 @@
     [4X[28X  Dim=1[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCExamineComplexBistellar(obj);[128X[104X
+    [4X[28X gap> SCExamineComplexBistellar(obj);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: AltshulerSteinberg, BoundaryEx, Dim, FVector, [128X[104X
@@ -240,15 +240,15 @@
   [33X[0;0YInternally calls [2XSCReduceComplexEx[102X ([14X9.2-14[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("S^4~S^1");[128X[104X
+    [4X[28X gap> SCLib.SearchByName("S^4~S^1");[128X[104X
     [4X[28X [ [ 463, "S^4~S^1 (VT)" ], [ 1473, "S^4~S^1 (VT)" ], [ 1474, "S^4~S^1 (VT)" ],[128X[104X
     [4X[28X   [ 2477, "S^4~S^1 (VT)" ], [ 4395, "S^4~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 4396, "S^4~S^1 (VT)" ], [ 4397, "S^4~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 4398, "S^4~S^1 (VT)" ], [ 4399, "S^4~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 4402, "S^4~S^1 (VT)" ], [ 4403, "S^4~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 4404, "S^4~S^1 (VT)" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> l:=SCLink(c,1);[128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> l:=SCLink(c,1);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -257,9 +257,9 @@
     [4X[28X  Dim=4[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCIsKStackedSphere(l,1);[128X[104X
+    [4X[28X gap> SCIsKStackedSphere(l,1);[128X[104X
     [4X[28X #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...[128X[104X
-    [4X[28X #I  SCIsKStackedSphere: try 1/50[128X[104X
+    [4X[28X #I  SCIsKStackedSphere: try 1/1[128X[104X
     [4X[28X #I  SCIsKStackedSphere: complex is a 1-stacked sphere.[128X[104X
     [4X[28X [ true, [SimplicialComplex[128X[104X
     [4X[28X     [128X[104X
@@ -294,8 +294,8 @@
   methods for manifold verification.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdCrossPolytope(3);;[128X[104X
-    [4X[28X gap> SCBistellarIsManifold(c);[128X[104X
+    [4X[28X gap> c:=SCBdCrossPolytope(3);;[128X[104X
+    [4X[28X gap> SCBistellarIsManifold(c);[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -310,8 +310,8 @@
   pseudomanifold property with empty boundary.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdCrossPolytope(3);;[128X[104X
-    [4X[28X gap> SCIsMovableComplex(c);[128X[104X
+    [4X[28X gap> c:=SCBdCrossPolytope(3);;[128X[104X
+    [4X[28X gap> SCIsMovableComplex(c);[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -319,8 +319,8 @@
   [33X[0;0YComplex with non-empty boundary:[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SC([[1,2],[2,3],[3,4],[3,1]]);;[128X[104X
-    [4X[28X gap> SCIsMovableComplex(c);[128X[104X
+    [4X[28X gap> c:=SC([[1,2],[2,3],[3,4],[3,1]]);;[128X[104X
+    [4X[28X gap> SCIsMovableComplex(c);[128X[104X
     [4X[28X false[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -340,7 +340,7 @@
   result.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> obj:=SC([[1,2],[2,3],[3,4],[4,1]]);[128X[104X
+    [4X[28X gap> obj:=SC([[1,2],[2,3],[3,4],[4,1]]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -349,12 +349,12 @@
     [4X[28X  Dim=1[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> moves:=SCMoves(obj);[128X[104X
+    [4X[28X gap> moves:=SCMoves(obj);[128X[104X
     [4X[28X [ [ [ [ 1, 2 ], [  ] ], [ [ 1, 4 ], [  ] ], [ [ 2, 3 ], [  ] ], [128X[104X
     [4X[28X       [ [ 3, 4 ], [  ] ] ], [128X[104X
     [4X[28X   [ [ [ 1 ], [ 2, 4 ] ], [ [ 2 ], [ 1, 3 ] ], [ [ 3 ], [ 2, 4 ] ], [128X[104X
     [4X[28X       [ [ 4 ], [ 1, 3 ] ] ] ][128X[104X
-    [4X[28X gap> obj:=SCMove(obj,last[2][1]);[128X[104X
+    [4X[28X gap> obj:=SCMove(obj,last[2][1]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, NumFaces[], SkelExs[], [128X[104X
@@ -375,8 +375,8 @@
   [33X[0;0YSee [2XSCRMoves[102X ([14X9.2-10[114X) for further information.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdCrossPolytope(3);;[128X[104X
-    [4X[28X gap> moves:=SCMoves(c);[128X[104X
+    [4X[28X gap> c:=SCBdCrossPolytope(3);;[128X[104X
+    [4X[28X gap> moves:=SCMoves(c);[128X[104X
     [4X[28X [ [ [ [ 1, 3, 5 ], [  ] ], [ [ 1, 3, 6 ], [  ] ], [ [ 1, 4, 5 ], [  ] ], [128X[104X
     [4X[28X       [ [ 1, 4, 6 ], [  ] ], [ [ 2, 3, 5 ], [  ] ], [ [ 2, 3, 6 ], [  ] ], [128X[104X
     [4X[28X       [ [ 2, 4, 5 ], [  ] ], [ [ 2, 4, 6 ], [  ] ] ], [128X[104X
@@ -403,8 +403,8 @@
   [33X[0;0YThe resulting complex is PL-homeomorphic to [3Xcomplex[103X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdCrossPolytope(3);;[128X[104X
-    [4X[28X gap> moves:=SCRMoves(c,1);[128X[104X
+    [4X[28X gap> c:=SCBdCrossPolytope(3);;[128X[104X
+    [4X[28X gap> moves:=SCRMoves(c,1);[128X[104X
     [4X[28X [ [ [ 1, 3 ], [ 5, 6 ] ], [ [ 1, 4 ], [ 5, 6 ] ], [ [ 1, 5 ], [ 3, 4 ] ], [128X[104X
     [4X[28X   [ [ 1, 6 ], [ 3, 4 ] ], [ [ 2, 3 ], [ 5, 6 ] ], [ [ 2, 4 ], [ 5, 6 ] ], [128X[104X
     [4X[28X   [ [ 2, 5 ], [ 3, 4 ] ], [ [ 2, 6 ], [ 3, 4 ] ], [ [ 3, 5 ], [ 1, 2 ] ], [128X[104X
@@ -432,7 +432,7 @@
   [2XSCReduceComplexEx[102X ([14X9.2-14[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCRandomize(SCBdSimplex(4));[128X[104X
+    [4X[28X gap> c:=SCRandomize(SCBdSimplex(4));[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -441,8 +441,8 @@
     [4X[28X  Dim=3[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> c.F;[128X[104X
-    [4X[28X [ 17, 74, 114, 57 ][128X[104X
+    [4X[28X gap> c.F;[128X[104X
+    [4X[28X [ 16, 65, 98, 49 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -477,9 +477,9 @@
   [10X(complex1,complex2,2,SCIntFunc.SCChooseMove);[110X[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCFromFacets([[1,3],[3,5],[4,5],[4,1]]);;[128X[104X
-    [4X[28X gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      [128X[104X
-    [4X[28X gap> SCReduceAsSubcomplex(c,SCBdCrossPolytope(3));[128X[104X
+    [4X[28X gap> c:=SCFromFacets([[1,3],[3,5],[4,5],[4,1]]);;[128X[104X
+    [4X[28X gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      [128X[104X
+    [4X[28X gap> SCReduceAsSubcomplex(c,SCBdCrossPolytope(3));[128X[104X
     [4X[28X [ true, [SimplicialComplex[128X[104X
     [4X[28X     [128X[104X
     [4X[28X      Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -515,9 +515,9 @@
   [10X(complex,SCEmpty(),0,SCIntFunc.SCChooseMove);[110X[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon[128X[104X
-    [4X[28X gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      [128X[104X
-    [4X[28X gap> tmp := SCReduceComplex(obj);[128X[104X
+    [4X[28X gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon[128X[104X
+    [4X[28X gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      [128X[104X
+    [4X[28X gap> tmp := SCReduceComplex(obj);[128X[104X
     [4X[28X [ true, [SimplicialComplex[128X[104X
     [4X[28X     [128X[104X
     [4X[28X      Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -579,9 +579,9 @@
   notification system in case [10XSCBistellarOptions.WriteLevel[110X is set to [22X2[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdCrossPolytope(4);;[128X[104X
-    [4X[28X gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      [128X[104X
-    [4X[28X gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);[128X[104X
+    [4X[28X gap> c:=SCBdCrossPolytope(4);;[128X[104X
+    [4X[28X gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      [128X[104X
+    [4X[28X gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);[128X[104X
     [4X[28X [ true, [SimplicialComplex[128X[104X
     [4X[28X     [128X[104X
     [4X[28X      Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -590,7 +590,7 @@
     [4X[28X      Dim=3[128X[104X
     [4X[28X     [128X[104X
     [4X[28X     /SimplicialComplex], 7 ][128X[104X
-    [4X[28X gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);[128X[104X
+    [4X[28X gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);[128X[104X
     [4X[28X [ true, [SimplicialComplex[128X[104X
     [4X[28X     [128X[104X
     [4X[28X      Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -598,12 +598,12 @@
     [4X[28X      Name="unnamed complex 18"[128X[104X
     [4X[28X      Dim=3[128X[104X
     [4X[28X     [128X[104X
-    [4X[28X     /SimplicialComplex], 7 ][128X[104X
-    [4X[28X gap> SCMailSetAddress("johndoe@somehost");   [128X[104X
+    [4X[28X     /SimplicialComplex], 9 ][128X[104X
+    [4X[28X gap> SCMailSetAddress("johndoe@somehost");   [128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCMailIsEnabled();                     [128X[104X
+    [4X[28X gap> SCMailIsEnabled();                     [128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);[128X[104X
+    [4X[28X gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);[128X[104X
     [4X[28X [ true, [SimplicialComplex[128X[104X
     [4X[28X     [128X[104X
     [4X[28X      Properties known: Dim, FacetsEx, Name, Vertices.[128X[104X
@@ -618,42 +618,42 @@
   [33X[0;0YContent of sent mail:[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X Greetings master,[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X this is simpcomp 2.1.6 running on igt215.mathematik.uni-stuttgart.de[128X[104X
-    [4X[28X (Linux igt215 2.6.26-2-amd64 #1 SMP Thu Nov 5 02:23:12 UTC 2009 x86_64[128X[104X
-    [4X[28X GNU/Linux), GAP 4.4.12.[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X I have been working hard for 0 seconds and have a message for you, see below.[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X #### START MESSAGE ####[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X SCReduceComplex:[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X Computed locally minimal complex after 7 rounds:[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X [SimplicialComplex[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Properties known: Boundary, Chi, Date, Dim, F, Faces, Facets, G, H,[128X[104X
-    [4X[28X  HasBoundary, Homology, IsConnected, IsManifold, IsPM, Name, SCVertices,[128X[104X
-    [4X[28X  Vertices.[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Name="ReducedComplex_5_vertices_7"[128X[104X
-    [4X[28X  Dim=3[128X[104X
-    [4X[28X  Chi=0[128X[104X
-    [4X[28X  F=[ 5, 10, 10, 5 ][128X[104X
-    [4X[28X  G=[ 0, 0 ][128X[104X
-    [4X[28X  H=[ 1, 1, 1, 1 ][128X[104X
-    [4X[28X  HasBoundary=false[128X[104X
-    [4X[28X  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ][128X[104X
-    [4X[28X  IsConnected=true[128X[104X
-    [4X[28X  IsPM=true[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X [128X[104X
-    [4X[28X ##### END MESSAGE #####[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X That's all, I hope this is good news! Have a nice day.[128X[104X
+    [4X[28X Greetings master,[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X this is simpcomp 2.1.7 running on igt215.mathematik.uni-stuttgart.de[128X[104X
+    [4X[28X (Linux igt215 2.6.26-2-amd64 #1 SMP Thu Nov 5 02:23:12 UTC 2009 x86_64[128X[104X
+    [4X[28X GNU/Linux), GAP 4.4.12.[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X I have been working hard for 0 seconds and have a message for you, see below.[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X #### START MESSAGE ####[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X SCReduceComplex:[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X Computed locally minimal complex after 7 rounds:[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X [SimplicialComplex[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Properties known: Boundary, Chi, Date, Dim, F, Faces, Facets, G, H,[128X[104X
+    [4X[28X  HasBoundary, Homology, IsConnected, IsManifold, IsPM, Name, SCVertices,[128X[104X
+    [4X[28X  Vertices.[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X  Name="ReducedComplex_5_vertices_7"[128X[104X
+    [4X[28X  Dim=3[128X[104X
+    [4X[28X  Chi=0[128X[104X
+    [4X[28X  F=[ 5, 10, 10, 5 ][128X[104X
+    [4X[28X  G=[ 0, 0 ][128X[104X
+    [4X[28X  H=[ 1, 1, 1, 1 ][128X[104X
+    [4X[28X  HasBoundary=false[128X[104X
+    [4X[28X  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ][128X[104X
+    [4X[28X  IsConnected=true[128X[104X
+    [4X[28X  IsPM=true[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X /SimplicialComplex][128X[104X
+    [4X[28X [128X[104X
+    [4X[28X ##### END MESSAGE #####[128X[104X
+    [4X[28X [128X[104X
+    [4X[28X That's all, I hope this is good news! Have a nice day.[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   

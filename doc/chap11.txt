@@ -58,11 +58,11 @@
   of [22Xn ⋅ (n-1) ⋅ dots ⋅ (n-k+1)[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> list:=SCLib.SearchByName("S^2~S^1 (VT)"){[1..9]};[128X[104X
+    [4X[28X gap> list:=SCLib.SearchByName("S^2~S^1 (VT)"){[1..9]};[128X[104X
     [4X[28X [ [ 12, "S^2~S^1 (VT)" ], [ 27, "S^2~S^1 (VT)" ], [ 28, "S^2~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 43, "S^2~S^1 (VT)" ], [ 47, "S^2~S^1 (VT)" ], [ 49, "S^2~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 89, "S^2~S^1 (VT)" ], [ 90, "S^2~S^1 (VT)" ], [ 111, "S^2~S^1 (VT)" ] ][128X[104X
-    [4X[28X gap> s2s1:=SCLib.Load(list[1][1]);[128X[104X
+    [4X[28X gap> s2s1:=SCLib.Load(list[1][1]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: AltshulerSteinberg, AutomorphismGroup, [128X[104X
@@ -101,9 +101,9 @@
     [4X[28X  Neighborliness=2[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCInfoLevel(2); # print information while running[128X[104X
+    [4X[28X gap> SCInfoLevel(2); # print information while running[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCIsTight(s2s1); time;[128X[104X
+    [4X[28X gap> SCIsTight(s2s1); time;[128X[104X
     [4X[28X #I  SCIsTight: complex is 3-dimensional and tight neighbourly, and thus tight.[128X[104X
     [4X[28X true[128X[104X
     [4X[28X 4[128X[104X
@@ -111,49 +111,48 @@
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByAttribute("F[1] = 120");[128X[104X
+    [4X[28X gap> SCLib.SearchByAttribute("F[1] = 120");[128X[104X
     [4X[28X [ [ 7647, "Bd(600-cell)" ] ][128X[104X
-    [4X[28X gap> id:=last[1][1];;[128X[104X
-    [4X[28X gap> c:=SCLib.Load(id);;[128X[104X
-    [4X[28X gap> SCIsTight(c); time;[128X[104X
+    [4X[28X gap> id:=last[1][1];;[128X[104X
+    [4X[28X gap> c:=SCLib.Load(id);;[128X[104X
+    [4X[28X gap> SCIsTight(c); time;[128X[104X
     [4X[28X #I  SCIsTight: complex is connected but not 2-neighbourly, and thus not tight.[128X[104X
     [4X[28X false[128X[104X
-    [4X[28X 8[128X[104X
+    [4X[28X 12[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCInfoLevel(0);[128X[104X
+    [4X[28X gap> SCInfoLevel(0);[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCLib.SearchByName("K3");  [128X[104X
+    [4X[28X gap> SCLib.SearchByName("K3");  [128X[104X
     [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
-    [4X[28X gap> SCIsManifold(c);[128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
+    [4X[28X gap> SCIsManifold(c);[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCInfoLevel(1);[128X[104X
+    [4X[28X gap> SCInfoLevel(1);[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> c.IsTight;                 [128X[104X
+    [4X[28X gap> c.IsTight;                 [128X[104X
     [4X[28X #I  SCIsTight: complex is (k+1)-neighborly 2k-manifold and thus tight.[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCInfoLevel(1);[128X[104X
-    [4X[28X true[128X[104X
-    [4X[28X gap> dc:=[ [ 1, 1, 1, 1, 45 ], [ 1, 2, 1, 27, 18 ], [ 1, 27, 9, 9, 3 ], [128X[104X
-    [4X[28X > [ 4, 7, 20, 9, 9 ], [ 9, 9, 11, 9, 11 ], [ 6, 9, 9, 17, 8 ], [128X[104X
-    [4X[28X > [ 6, 10, 8, 17, 8 ], [ 8, 8, 8, 8, 17 ], [ 5, 6, 9, 9, 20 ] ];;[128X[104X
-    [4X[28X gap> c:=SCBoundary(SCFromDifferenceCycles(dc));;[128X[104X
-    [4X[28X gap> SCAutomorphismGroup(c);;[128X[104X
-    [4X[28X gap> SCIsTight(c);[128X[104X
-    [4X[28X #I SCIsTight: complex is 3-dimensional and tight neighbourly, and thus tight.[128X[104X
+    [4X[28X gap> SCInfoLevel(1);[128X[104X
+    [4X[28X true[128X[104X
+    [4X[28X gap> dc:=[ [ 1, 1, 1, 1, 45 ], [ 1, 2, 1, 27, 18 ], [ 1, 27, 9, 9, 3 ], [128X[104X
+    [4X[28X > [ 4, 7, 20, 9, 9 ], [ 9, 9, 11, 9, 11 ], [ 6, 9, 9, 17, 8 ], [128X[104X
+    [4X[28X > [ 6, 10, 8, 17, 8 ], [ 8, 8, 8, 8, 17 ], [ 5, 6, 9, 9, 20 ] ];;[128X[104X
+    [4X[28X gap> c:=SCBoundary(SCFromDifferenceCycles(dc));;[128X[104X
+    [4X[28X gap> SCAutomorphismGroup(c);;[128X[104X
+    [4X[28X gap> SCIsTight(c);[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> list:=SCLib.SearchByName("S^3xS^1");[128X[104X
+    [4X[28X gap> list:=SCLib.SearchByName("S^3xS^1");[128X[104X
     [4X[28X [ [ 55, "S^3xS^1 (VT)" ], [ 128, "S^3xS^1 (VT)" ], [ 399, "S^3xS^1 (VT)" ], [128X[104X
     [4X[28X   [ 459, "S^3xS^1 (VT)" ], [ 460, "S^3xS^1 (VT)" ], [ 461, "S^3xS^1 (VT)" ], [128X[104X
     [4X[28X   [ 462, "S^3xS^1 (VT)" ], [ 588, "S^3xS^1 (VT)" ], [ 612, "S^3xS^1 (VT)" ], [128X[104X
@@ -179,7 +178,7 @@
     [4X[28X   [ 3429, "S^3xS^1 (VT)" ], [ 3430, "S^3xS^1 (VT)" ], [128X[104X
     [4X[28X   [ 3431, "S^3xS^1 (VT)" ], [ 3432, "S^3xS^1 (VT)" ], [128X[104X
     [4X[28X   [ 3433, "S^3xS^1 (VT)" ], [ 3434, "S^3xS^1 (VT)" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(list[1][1]);           [128X[104X
+    [4X[28X gap> c:=SCLib.Load(list[1][1]);           [128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: AltshulerSteinberg, AutomorphismGroup, [128X[104X
@@ -218,17 +217,17 @@
     [4X[28X  Neighborliness=2[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
-    [4X[28X gap> SCInfoLevel(0);[128X[104X
+    [4X[28X gap> SCInfoLevel(0);[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCIsManifold(c);[128X[104X
+    [4X[28X gap> SCIsManifold(c);[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCInfoLevel(2); [128X[104X
+    [4X[28X gap> SCInfoLevel(2); [128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> c.IsTight;                [128X[104X
+    [4X[28X gap> c.IsTight;                [128X[104X
     [4X[28X #I  SCIsInKd: complex has transitive automorphism group, only checking one link.[128X[104X
     [4X[28X #I  SCIsInKd: checking link 1/1[128X[104X
     [4X[28X #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...[128X[104X
-    [4X[28X #I  SCIsKStackedSphere: try 1/50[128X[104X
+    [4X[28X #I  SCIsKStackedSphere: try 1/1[128X[104X
     [4X[28X #I  round 0[128X[104X
     [4X[28X Reduced complex, F: [ 9, 26, 34, 17 ][128X[104X
     [4X[28X #I  round 1[128X[104X
@@ -258,12 +257,12 @@
   the Betti numbers of [10Xc[110X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdCyclicPolytope(4,6);;[128X[104X
-    [4X[28X gap> SCMinimalNonFaces(c);[128X[104X
+    [4X[28X gap> c:=SCBdCyclicPolytope(4,6);;[128X[104X
+    [4X[28X gap> SCMinimalNonFaces(c);[128X[104X
     [4X[28X [ [  ], [  ], [ [ 1, 3, 5 ], [ 2, 4, 6 ] ] ][128X[104X
-    [4X[28X gap> SCMorseIsPerfect(c,[1..6]);[128X[104X
+    [4X[28X gap> SCMorseIsPerfect(c,[1..6]);[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X gap> SCMorseIsPerfect(c,[1,3,5,2,4,6]);   [128X[104X
+    [4X[28X gap> SCMorseIsPerfect(c,[1,3,5,2,4,6]);   [128X[104X
     [4X[28X false[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -288,12 +287,12 @@
   , v_2 ⟨[122X defined by the intersection of [3Xslicing[103X with [3Xcomplex[103X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdCyclicPolytope(4,6);;[128X[104X
-    [4X[28X gap> v:=SCVertices(c);[128X[104X
+    [4X[28X gap> c:=SCBdCyclicPolytope(4,6);;[128X[104X
+    [4X[28X gap> v:=SCVertices(c);[128X[104X
     [4X[28X [ 1, 2, 3, 4, 5, 6 ][128X[104X
-    [4X[28X gap> SCMinimalNonFaces(c);[128X[104X
+    [4X[28X gap> SCMinimalNonFaces(c);[128X[104X
     [4X[28X [ [  ], [  ], [ [ 1, 3, 5 ], [ 2, 4, 6 ] ] ][128X[104X
-    [4X[28X gap> ns:=SCSlicing(c,[v{[1,3,5]},v{[2,4,6]}]);     [128X[104X
+    [4X[28X gap> ns:=SCSlicing(c,[v{[1,3,5]},v{[2,4,6]}]);     [128X[104X
     [4X[28X [NormalSurface[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\[128X[104X
@@ -312,10 +311,10 @@
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> c:=SCBdSimplex(5);;[128X[104X
-    [4X[28X gap> v:=SCVertices(c);[128X[104X
+    [4X[28X gap> c:=SCBdSimplex(5);;[128X[104X
+    [4X[28X gap> v:=SCVertices(c);[128X[104X
     [4X[28X [ 1, 2, 3, 4, 5, 6 ][128X[104X
-    [4X[28X gap> slicing:=SCSlicing(c,[v{[1,3,5]},v{[2,4,6]}]);[128X[104X
+    [4X[28X gap> slicing:=SCSlicing(c,[v{[1,3,5]},v{[2,4,6]}]);[128X[104X
     [4X[28X [ [ [ 1, 2 ], [ 1, 4 ], [ 3, 2 ], [ 3, 4 ], [ 5, 2 ], [ 5, 4 ] ], [128X[104X
     [4X[28X   [ [ 1, 2 ], [ 1, 4 ], [ 1, 6 ], [ 3, 2 ], [ 3, 4 ], [ 3, 6 ] ], [128X[104X
     [4X[28X   [ [ 1, 2 ], [ 1, 6 ], [ 3, 2 ], [ 3, 6 ], [ 5, 2 ], [ 5, 6 ] ], [128X[104X
@@ -337,12 +336,12 @@
   list denotes the multiplicity vector of vertex [22Xv_i[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("K3");      [128X[104X
+    [4X[28X gap> SCLib.SearchByName("K3");      [128X[104X
     [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;    [128X[104X
-    [4X[28X gap> f:=SCVertices(c);              [128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;    [128X[104X
+    [4X[28X gap> f:=SCVertices(c);              [128X[104X
     [4X[28X [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ][128X[104X
-    [4X[28X gap> SCMorseMultiplicityVector(c,f);[128X[104X
+    [4X[28X gap> SCMorseMultiplicityVector(c,f);[128X[104X
     [4X[28X [ [ 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0 ], [128X[104X
     [4X[28X   [ 0, 0, 2, 0, 0 ], [ 0, 0, 1, 0, 0 ], [ 0, 0, 4, 0, 0 ], [ 0, 0, 3, 0, 0 ], [128X[104X
     [4X[28X   [ 0, 0, 3, 0, 0 ], [ 0, 0, 4, 0, 0 ], [ 0, 0, 1, 0, 0 ], [ 0, 0, 2, 0, 0 ], [128X[104X
@@ -359,12 +358,12 @@
   a simplicial complex [10Xc[110X as well as the total number of critical points.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("K3");      [128X[104X
+    [4X[28X gap> SCLib.SearchByName("K3");      [128X[104X
     [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
-    [4X[28X gap> c:=SCLib.Load(last[1][1]);;    [128X[104X
-    [4X[28X gap> f:=SCVertices(c);              [128X[104X
+    [4X[28X gap> c:=SCLib.Load(last[1][1]);;    [128X[104X
+    [4X[28X gap> f:=SCVertices(c);              [128X[104X
     [4X[28X [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ][128X[104X
-    [4X[28X gap> SCMorseNumberOfCriticalPoints(c,f);[128X[104X
+    [4X[28X gap> SCMorseNumberOfCriticalPoints(c,f);[128X[104X
     [4X[28X [ 24, [ 1, 0, 22, 0, 1 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X

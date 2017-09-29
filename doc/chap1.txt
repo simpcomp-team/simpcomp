@@ -167,11 +167,11 @@
   ([14X15.3-1[114X) from the [5XGAP[105X console:[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XSCRunTest();[127X[104X
-    [4X[28X+ test simpcomp package, Version 2.1.6[128X[104X
-    [4X[28X+ GAP4stones: 69988[128X[104X
-    [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27X[127X[104X
+    [4X[25Xgap>[125X [27XSCRunTest();[127X[104X
+    [4X[28X+ test simpcomp package, Version 2.1.7[128X[104X
+    [4X[28X+ GAP4stones: 69988[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X[127X[104X
   [4X[32X[104X
   
   [33X[0;0Y[2XSCRunTest[102X  ([14X15.3-1[114X)  should return [9Xtrue[109X, otherwise the correct functionality
@@ -194,8 +194,8 @@
   @manual{simpcomp,
   	author = "Felix Effenberger and Jonathan Spreer",
   	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
-  	          {V}ersion 2.1.6",
-  	year   = "2016",
+  	          {V}ersion 2.1.7",
+  	year   = "2017",
   	url    = "\url{https://github.com/simpcomp-team/simpcomp}",
   }
   
@@ -205,7 +205,7 @@
   \bibitem{simpcomp}
   F.~Effenberger and J.~Spreer,
   \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
-  Version 2.1.6, 
-  2016,
+  Version 2.1.7, 
+  2017,
   \url{https://github.com/simpcomp-team/simpcomp}.
   

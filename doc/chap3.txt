@@ -64,10 +64,10 @@
   function. An example would be:[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27Xc:=SCBdSimplex(3);; # create a SCSimplicialComplex object[127X[104X
-    [4X[25Xgap>[125X [27XSCFVector(c);[127X[104X
+    [4X[25Xgap>[125X [27Xc:=SCBdSimplex(3);; # create a SCSimplicialComplex object[127X[104X
+    [4X[25Xgap>[125X [27XSCFVector(c);[127X[104X
     [4X[28X[ 4, 6, 4 ][128X[104X
-    [4X[25Xgap>[125X [27XSCSkel(c,0);[127X[104X
+    [4X[25Xgap>[125X [27XSCSkel(c,0);[127X[104X
     [4X[28X[ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ][128X[104X
   [4X[32X[104X
   
@@ -80,10 +80,10 @@
   more conveniently:[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27Xc:=SCBdSimplex(3);; # create a SCSimplicialComplex object[127X[104X
-    [4X[25Xgap>[125X [27Xc.F;[127X[104X
+    [4X[25Xgap>[125X [27Xc:=SCBdSimplex(3);; # create a SCSimplicialComplex object[127X[104X
+    [4X[25Xgap>[125X [27Xc.F;[127X[104X
     [4X[28X[ 4, 6, 4 ][128X[104X
-    [4X[25Xgap>[125X [27Xc.Skel(0);[127X[104X
+    [4X[25Xgap>[125X [27Xc.Skel(0);[127X[104X
     [4X[28X[ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ][128X[104X
   [4X[32X[104X
   
