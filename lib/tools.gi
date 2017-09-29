@@ -592,7 +592,7 @@ end;
 ## <Func Name="SCRunTest" Arg=""/>
 ## <Returns><K>true</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Test whether the package <Package>simpcomp</Package> is functional by calling <C>Test("GAPROOT/pkg/simpcomp/tst/simpcomp.tst");</C>. The returned value of GAP4stones is a measure of your system performance and differs from system to system.
+## Test whether the package <Package>simpcomp</Package> is functional by calling <C>Test("GAPROOT/pkg/simpcomp/tst/simpcomp.tst",rec(compareFunction := "uptowhitespace"));</C>. The returned value of GAP4stones is a measure of your system performance and differs from system to system.
 ## <Example>
 ## gap> SCRunTest();
 ## + test simpcomp package, version %%%VERSION%%%
@@ -607,6 +607,6 @@ InstallGlobalFunction(SCRunTest,
 function()
 	local path;
   path:=DirectoriesPackageLibrary("simpcomp", "tst");
-  return Test(Filename(path,"simpcomp.tst"));
+  return Test(Filename(path,"simpcomp.tst"), rec( compareFunction := "uptowhitespace" ));
 end);
 

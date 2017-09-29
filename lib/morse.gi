@@ -481,7 +481,7 @@ end);
 ## 28
 ## </Example>
 ## <Example>
-## gap> SCInfoLevel(1);
+## gap> SCInfoLevel(0);
 ## gap> SCLib.SearchByName("K3");  
 ## [ [ 551, "K3 surface" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;

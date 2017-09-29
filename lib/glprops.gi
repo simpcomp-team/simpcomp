@@ -785,7 +785,7 @@ end);
 ## <Meth Name="SCIsFlag" Arg="complex,k"/>
 ## <Returns><K>true</K> or <K>false</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Checks if <Arg>complex</Arg> is flag. A simplicial complex is a flag complex  if all edges of a potential face of the complex are in the complex, or equivalently if all of its minimal non-faces are edges (cf. <Cite Key="Frohmader08FaceVecFlagCompl" />). 
+## Checks if <Arg>complex</Arg> is flag. A connected simplicial complex of dimension at least one is a flag complex if all cliques in its 1-skeleton span a face of the complex (cf. <Cite Key="Frohmader08FaceVecFlagCompl" />). 
 ## <Example>
 ## gap> SCLib.SearchByName("RP^2");   
 ## gap> rp2_6:=SCLib.Load(last[1][1]);;
