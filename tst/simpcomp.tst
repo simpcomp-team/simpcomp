@@ -1185,28 +1185,28 @@ gap> ll:=SCsFromGroupExt(G,16,4,0,0,false,false,0,[]);
     
      Properties known: Dim, FacetsEx, Name, Vertices.
     
-     Name="Complex 1 of ((C2 x C2 x C2 x C2) : C5) : C3 (multiple orbits)"
+     Name="Complex 1 of (C2 x C2 x C2 x C2) : C15 (multiple orbits)"
      Dim=4
     
     /SimplicialComplex], [SimplicialComplex
     
      Properties known: Dim, FacetsEx, Name, Vertices.
     
-     Name="Complex 2 of ((C2 x C2 x C2 x C2) : C5) : C3 (multiple orbits)"
+     Name="Complex 2 of (C2 x C2 x C2 x C2) : C15 (multiple orbits)"
      Dim=4
     
     /SimplicialComplex], [SimplicialComplex
     
      Properties known: Dim, FacetsEx, Name, Vertices.
     
-     Name="Complex 3 of ((C2 x C2 x C2 x C2) : C5) : C3 (multiple orbits)"
+     Name="Complex 3 of (C2 x C2 x C2 x C2) : C15 (multiple orbits)"
      Dim=4
     
     /SimplicialComplex], [SimplicialComplex
     
      Properties known: Dim, FacetsEx, Name, Vertices.
     
-     Name="Complex 4 of ((C2 x C2 x C2 x C2) : C5) : C3 (multiple orbits)"
+     Name="Complex 4 of (C2 x C2 x C2 x C2) : C15 (multiple orbits)"
      Dim=4
     
     /SimplicialComplex] ]
