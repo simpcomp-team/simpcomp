@@ -12,8 +12,8 @@ SetPackageInfo( rec(
 
 PackageName := "simpcomp",
 Subtitle := "A GAP toolbox for simplicial complexes",
-Version := "2.1.7",
-Date := "29/09/2017",
+Version := "2.1.8",
+Date := "05/02/2018",
 
 PackageWWWHome := "http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/",
 README_URL := Concatenation( ~.PackageWWWHome, "README" ),
