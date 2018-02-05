@@ -110,8 +110,8 @@
 {\Huge \textbf{A \textsf{GAP} toolbox for simplicial complexes\mbox{}}}\\
 \vfill
 
-{\Huge Version 2.1.7\mbox{}}\\[1cm]
-{September 2017  \begin{center} \vspace*{1cm}
+{\Huge Version 2.1.8\mbox{}}\\[1cm]
+{February 2018  \begin{center} \vspace*{1cm}
 \includegraphics[width=.4\textwidth]{figures/shrimpmanual}\\ \end{center}  \mbox{}}\\[1cm]
 \mbox{}\\[2cm]
 {\Large \textbf{ Felix Effenberger   \mbox{}}}\\
@@ -163,7 +163,7 @@ the \textsf{GRAPE} package is not available. \mbox{}}\\[1cm]
 {\small 
 \section*{Copyright}
 \logpage{[ 0, 0, 3 ]}
-{\copyright} 2017 Felix Effenberger and Jonathan Spreer. Permission is granted
+{\copyright} 2018 Felix Effenberger and Jonathan Spreer. Permission is granted
 to copy, distribute and/or modify this document under the terms of the GNU
 Free Documentation License, Version 1.2 or any later version published by the
 Free Software Foundation, see \href{http://www.fsf.org/licensing/licenses/fdl.html} {\texttt{http://www.fsf.org/licensing/licenses/fdl.html}} for a copy.
@@ -312,7 +312,7 @@ verifies that the results are correct.
  To test the functionality of \textsf{simpcomp} you can run the function \texttt{SCRunTest} (\ref{SCRunTest}) from the \textsf{GAP} console: 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, Version 2.1.7
+  + test simpcomp package, Version 2.1.8
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@|
@@ -337,8 +337,8 @@ calls to functions of the package \textsf{simpcomp} can be controlled by setting
   @manual{simpcomp,
   	author = "Felix Effenberger and Jonathan Spreer",
   	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
-  	          {V}ersion 2.1.7",
-  	year   = "2017",
+  	          {V}ersion 2.1.8",
+  	year   = "2018",
   	url    = "\url{https://github.com/simpcomp-team/simpcomp}",
   }
 \end{verbatim}
@@ -348,8 +348,8 @@ bibliography environment of LaTeX.
   \bibitem{simpcomp}
   F.~Effenberger and J.~Spreer,
   \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
-  Version 2.1.7, 
-  2017,
+  Version 2.1.8, 
+  2018,
   \url{https://github.com/simpcomp-team/simpcomp}.
 \end{verbatim}
  }
@@ -1607,7 +1607,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   48
+   28
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
    0
@@ -1622,7 +1622,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   44
+   28
    
 \end{Verbatim}
  }
@@ -2427,7 +2427,7 @@ pseudomanifold. Compare \texttt{SCExportIsoSig} (\ref{SCExportIsoSig}), which re
    0
    gap> s:=SCExportIsoSig(c); time;
    "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
-   16
+   12
    
 \end{Verbatim}
  }
@@ -3420,9 +3420,10 @@ from \cite{Spreer10Diss}, Section 3.3.
    gap> Mminus:=SCSpan(c,[1,2,3,4,9,10,11,12]);;                  
    gap> Mplus:=SCSpan(c,[5,6,7,8,13,14,15,16]);;                  
    gap> SCCollapseGreedy(Mminus).Facets;
-   [ [ 1, 2 ], [ 1, 12 ], [ 2, 11 ], [ 11, 12 ] ]
+   [ [ 1, 9 ], [ 1, 10 ], [ 3, 10 ], [ 3, 11 ], [ 4, 9 ], [ 4, 12 ], [ 11, 12 ] ]
    gap> SCCollapseGreedy(Mplus).Facets; 
-   [ [ 7, 14 ], [ 7, 15 ], [ 8, 13 ], [ 8, 16 ], [ 13, 14 ], [ 15, 16 ] ]
+   [ [ 5, 8 ], [ 5, 16 ], [ 6, 14 ], [ 6, 15 ], [ 8, 15 ], [ 13, 14 ], 
+     [ 13, 16 ] ]
    
 \end{Verbatim}
  }
@@ -4719,7 +4720,7 @@ always unique, since every non trivial semi-direct product is denoted by ''\text
    gap> g:=SCAutomorphismGroupInternal(c);
    PrimitiveGroup(3,2) = S(3)
    gap> List(g);
-   [ (), (1,3,2), (1,2,3), (2,3), (1,3), (1,2) ]
+   [ (), (1,2,3), (1,3,2), (2,3), (1,2), (1,3) ]
    gap> StructureDescription(g);
    "S3"
    
@@ -9160,7 +9161,7 @@ With optional positive integer argument \mbox{\texttt{\mdseries\slshape rounds}}
    
    /SimplicialComplex]
    gap> c.F;
-   [ 16, 65, 98, 49 ]
+   [ 17, 74, 114, 57 ]
    
 \end{Verbatim}
  }
@@ -9308,7 +9309,7 @@ returned by this function.
         Name="unnamed complex 18"
         Dim=3
        
-       /SimplicialComplex], 9 ]
+       /SimplicialComplex], 7 ]
    gap> SCMailSetAddress("johndoe@somehost");   
    true
    gap> SCMailIsEnabled();                     
@@ -9328,7 +9329,7 @@ returned by this function.
 \begin{Verbatim}[commandchars=@|J,fontsize=\small,frame=single,label=Example]
    Greetings master,
    
-   this is simpcomp 2.1.7 running on igt215.mathematik.uni-stuttgart.de
+   this is simpcomp 2.1.8 running on igt215.mathematik.uni-stuttgart.de
    (Linux igt215 2.6.26-2-amd64 #1 SMP Thu Nov 5 02:23:12 UTC 2009 x86_64
    GNU/Linux), GAP 4.4.12.
    
@@ -9445,13 +9446,12 @@ versions.
    #I  SCBlowup: boundaries not isomorphic, initializing bistellar moves...
    #I  SCBlowup: found complex with smaller boundary: f = [ 15, 74, 118, 59 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 14, 70, 112, 56 ].
-   #I  SCBlowup: found complex with smaller boundary: f = [ 14, 69, 110, 55 ].
-   #I  SCBlowup: found complex with smaller boundary: f = [ 14, 68, 108, 54 ].
+   #I  SCBlowup: found complex with smaller boundary: f = [ 14, 67, 106, 53 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 13, 65, 104, 52 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 13, 64, 102, 51 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 13, 63, 100, 50 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 13, 62, 98, 49 ].
-   #I  SCBlowup: found complex with smaller boundary: f = [ 13, 61, 96, 48 ].
+   #I  SCBlowup: found complex with smaller boundary: f = [ 12, 58, 92, 46 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 12, 57, 90, 45 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 12, 56, 88, 44 ].
    #I  SCBlowup: found complex with smaller boundary: f = [ 12, 55, 86, 43 ].
@@ -9466,8 +9466,8 @@ versions.
    
     Properties known: Dim, FacetsEx, Name, Vertices.
    
-    Name="unnamed complex 2735 \ star([ 1 ]) in unnamed complex 2735 cup unnamed \
-   complex 2739 cup unnamed complex 2737"
+    Name="unnamed complex 4084 \ star([ 1 ]) in unnamed complex 4084 cup unnamed \
+   complex 4088 cup unnamed complex 4086"
     Dim=4
    
    /SimplicialComplex]
@@ -9639,7 +9639,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
    gap> SCIsTight(c); time;
    #I  SCIsTight: complex is connected but not 2-neighbourly, and thus not tight.
    false
-   12
+   8
    
 \end{Verbatim}
  
@@ -9956,7 +9956,7 @@ simplicial complex of type \texttt{SCSimplicialComplex} upon success, \texttt{fa
    
    /SimplicialComplex]
    gap> coll.Facets;
-   [ [ 2, 5 ], [ 2, 6 ], [ 2, 7 ], [ 5, 6 ], [ 5, 7 ] ]
+   [ [ 1, 3 ], [ 1, 5 ], [ 2, 3 ], [ 2, 5 ], [ 3, 4 ], [ 3, 7 ], [ 4, 7 ] ]
    gap> sphere:=SCBdSimplex(4);;                              
    gap> bdsphere:=SCDifference(sphere,SC([sphere.Facets[1]]));;
    gap> coll:=SCCollapseGreedy(bdsphere);
@@ -9972,7 +9972,7 @@ simplicial complex of type \texttt{SCSimplicialComplex} upon success, \texttt{fa
    
    /SimplicialComplex]
    gap> coll.Facets;                     
-   [ [ 2 ] ]
+   [ [ 5 ] ]
    
 \end{Verbatim}
  }
@@ -10005,7 +10005,7 @@ simplicial complex \mbox{\texttt{\mdseries\slshape complex}}. See also \texttt{S
    
    /SimplicialComplex]
    gap> coll.Facets;
-   [ [ 1, 6 ], [ 1, 7 ], [ 2, 5 ], [ 2, 7 ], [ 5, 7 ], [ 6, 7 ] ]
+   [ [ 1, 3 ], [ 1, 5 ], [ 3, 6 ], [ 3, 7 ], [ 5, 6 ], [ 6, 7 ] ]
    gap> sphere:=SCBdSimplex(4);;                              
    gap> ball:=SCDifference(sphere,SC([sphere.Facets[1]]));;
    gap> coll:=SCCollapseLex(ball);
@@ -10054,7 +10054,7 @@ collapse the simplicial complex \mbox{\texttt{\mdseries\slshape complex}}. See a
    
    /SimplicialComplex]
    gap> coll.Facets;
-   [ [ 1, 3 ], [ 1, 7 ], [ 3, 4 ], [ 3, 5 ], [ 4, 7 ], [ 5, 7 ] ]
+   [ [ 1, 3 ], [ 1, 6 ], [ 3, 6 ], [ 3, 7 ], [ 6, 7 ] ]
    gap> sphere:=SCBdSimplex(4);;                              
    gap> ball:=SCDifference(sphere,SC([sphere.Facets[1]]));;
    gap> coll:=SCCollapseRevLex(ball);
@@ -10230,15 +10230,16 @@ and how often they ocurred (see \cite{Benedetti13RandomDMT} for details).
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> c:=SCSeriesHomologySphere(2,3,5);;
    gap> f:=SCMorseSpec(c,30,SCMorseRandom);
-   [ [ 6, [ 1, 2, 2, 1 ], 25 ], [ 8, [ 1, 3, 3, 1 ], 5 ] ]
+   [ [ 6, [ 1, 2, 2, 1 ], 27 ], [ 8, [ 1, 3, 3, 1 ], 3 ] ]
    gap> f:=SCMorseSpec(c,30,SCMorseRandomLex);
-   [ [ 6, [ 1, 2, 2, 1 ], 30 ] ]
+   [ [ 6, [ 1, 2, 2, 1 ], 29 ], [ 8, [ 1, 3, 3, 1 ], 1 ] ]
    gap> f:=SCMorseSpec(c,30,SCMorseRandomRevLex);
-   [ [ 6, [ 1, 2, 2, 1 ], 7 ], [ 8, [ 1, 3, 3, 1 ], 13 ], 
-     [ 10, [ 1, 4, 4, 1 ], 9 ], [ 10, [ 2, 4, 3, 1 ], 1 ] ]
+   [ [ 6, [ 1, 2, 2, 1 ], 7 ], [ 8, [ 1, 3, 3, 1 ], 9 ], 
+     [ 8, [ 2, 3, 2, 1 ], 1 ], [ 10, [ 1, 4, 4, 1 ], 11 ], 
+     [ 12, [ 1, 5, 5, 1 ], 1 ], [ 14, [ 1, 6, 6, 1 ], 1 ] ]
    gap> f:=SCMorseSpec(c,30,SCMorseUST);
    [ [ 6, [ 1, 2, 2, 1 ], 18 ], [ 8, [ 1, 3, 3, 1 ], 8 ], 
-     [ 10, [ 1, 4, 4, 1 ], 4 ] ]
+     [ 10, [ 1, 4, 4, 1 ], 3 ], [ 12, [ 1, 5, 5, 1 ], 1 ] ]
    
 \end{Verbatim}
  }
@@ -10287,9 +10288,9 @@ Hasse diagram \mbox{\texttt{\mdseries\slshape HD}} using Wilson's algorithm (see
    gap> c:=SCSurface(1,false);;
    gap> HD:=SCHasseDiagram(c);;
    gap> stTop:=SCSpanningTreeRandom(HD,true);
-   [ 15, 2, 6, 12, 7, 8, 1, 3, 11 ]
+   [ 3, 10, 13, 8, 1, 15, 12, 6, 14 ]
    gap> stBot:=SCSpanningTreeRandom(HD,false);
-   [ 9, 5, 3, 6, 11 ]
+   [ 10, 6, 9, 5, 13 ]
    
 \end{Verbatim}
  }
@@ -10351,23 +10352,23 @@ a list of pairs of the form \texttt{[ integer, list ]} upon success, fail otherw
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandom,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   40
+   24
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   40
+   28
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomRevLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   44
+   24
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseEngstroem,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   92
+   56
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   92
+   88
    
 \end{Verbatim}
  }
@@ -10568,7 +10569,7 @@ usually named by their topological type. As usual, ` S\^{}d' denotes a $d$-spher
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
-   Path="/home/mi/spreerjn/private/apps/gap4r8/pkg/simpcomp/complexes/"
+   Path="/home/jspreer/apps/gap4r8/pkg/simpcomp/complexes/"
    ]
    gap> SCLib.Size;
    7649
@@ -10975,7 +10976,7 @@ to the user and only pre-calculated attributes are indexed.
    IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
      "IsManifold" ]
    Loaded=true
-   Path="/home/mi/spreerjn/private/apps/gap4r8/pkg/simpcomp/complexes/"
+   Path="/home/jspreer/apps/gap4r8/pkg/simpcomp/complexes/"
    ]
    
 \end{Verbatim}
@@ -11541,13 +11542,13 @@ more verbose logging are bistellar flip-related functions.
   true
   !gapprompt@gap>| !gapinput@c:=SCBdCrossPolytope(3);;|
   !gapprompt@gap>| !gapinput@SCReduceComplex(c); |
-  #I  round 0, move: [ [ 4, 5 ], [ 1, 2 ] ]
+  #I  round 0, move: [ [ 4, 6 ], [ 1, 2 ] ]
   F: [ 6, 12, 8 ]
-  #I  round 1, move: [ [ 5 ], [ 1, 2, 3 ] ]
+  #I  round 1, move: [ [ 6 ], [ 1, 2, 3 ] ]
   F: [ 5, 9, 6 ]
   #I  round 1
   Reduced complex, F: [ 5, 9, 6 ]
-  #I  round 2, move: [ [ 3 ], [ 1, 2, 6 ] ]
+  #I  round 2, move: [ [ 4 ], [ 1, 2, 5 ] ]
   F: [ 4, 6, 4 ]
   #I  round 2
   Reduced complex, F: [ 4, 6, 4 ]
@@ -11781,7 +11782,7 @@ differs from system to system.
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> SCRunTest();
    simpcomp package test
-   GAP4stones: 69463
+   GAP4stones: 113019
    true
    
 \end{Verbatim}
@@ -12251,7 +12252,7 @@ Section \ref{sec:generateFromOld}, which will be described in the next sections.
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@#first run functionality test on simpcomp|
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, version 2.1.7
+  + test simpcomp package, version 2.1.8
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@#all ok|

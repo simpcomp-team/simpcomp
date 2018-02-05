@@ -127,7 +127,7 @@ Download and installation
   by Leonard H. Soicher (http://www.maths.qmul.ac.uk/~leonard/).
   Homepage: http://www.maths.qmul.ac.uk/~leonard/grape/
   ──────────────────────────────────────────────────────────────────────────────
-  Loading simpcomp 2.1.7
+  Loading simpcomp 2.1.8
   by F.Effenberger and J.Spreer
   https://github.com/simpcomp-team/simpcomp/
   true
@@ -146,6 +146,10 @@ Download and installation
 Changes
 =======
 
+
+05/02/2018 - Version 2.1.8: MINOR UPDATE
+- Minor changes in documentation/manual
+- Adjusted output of test file for GAP 4.9
 
 29/09/2017 - Version 2.1.7: Minor update
 - Adjusted SCRunTest (simpcomp testing facility)
