@@ -2145,7 +2145,11 @@ function(complex)
 		return fail;
 	fi;
 	
-	G:=Group(SmallGeneratingSet(Group(List(List(isos,SCIntFunc.PairToList),PermList))));
+        if List(List(isos,SCIntFunc.PairToList),PermList) = [] then
+          G:=Group(());
+        else
+	  G:=Group(SmallGeneratingSet(Group(List(List(isos,SCIntFunc.PairToList),PermList))));
+        fi;
 
 	SetSCAutomorphismGroup(complex,G);
 	SetSCAutomorphismGroupSize(complex,Size(G));
@@ -2184,7 +2188,7 @@ function(complex)
 		fi;
 	fi;
 	SetSCAutomorphismGroupStructure(complex,structure);
-	SetName(G,structure);
+	#SetName(G,structure);
 		
 	if SCMailIsEnabled() then
 		SCMailSend(Concatenation(["Computed the automorphism group of the simplicial complex\n\n",String(complex),".\n\nElements of automorphism group [Element, Order]:\n",SCIntFunc.ArrayLineString(List(Elements(G),x->[x,Order(x)])),"\n"]),start);

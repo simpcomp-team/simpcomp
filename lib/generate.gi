@@ -2279,7 +2279,11 @@ function(n)
 	od;	
 	perm[3]:=PermList(tmp);
 
-	G:=Group(perm);
+        if perm = [] then
+          G:=Group(());
+        else
+          G:=Group(perm);
+        fi;
 	c:=SCFromGenerators(G,[[1,2,n+1,2*n+1],[1,2,2*n+1,2*n+2],[1,n+1,2*n+1,4*n]]);
 	SCRename(c,Concatenation(["Sl_",String(4*n)," = G{ [1,2,",String(n+1),",",String(2*n+1),"],[1,2,",String(2*n+1),",",String(2*n+2),"],[1,",String(n+1),",",String(2*n+1),",",String(4*n),"] }"]));
 	return c;
@@ -3707,7 +3711,7 @@ function(g,orient)
 		elif g = 6 then
 			Info(InfoSimpcomp,1,"SCSurface: there is no surface of non-orientable genus 6 with transitive automorphism group KNOWN to the authours.");
 			return fail;
-			G:=Group([]);
+			G:=Group(());
 			c:=SCFromGenerators(G,[]);
 		elif g = 7 then
 			G:=Group([ (1,3,5,7,9)(2,4,6,8,10), 
@@ -3732,7 +3736,7 @@ function(g,orient)
 		elif g = 13 then
 			Info(InfoSimpcomp,1,"SCSurface: there is no surface of non-orientable genus 13 with transitive automorphism group KNOWN to the authours.");
 			return fail;
-			G:=Group([]);
+			G:=Group(());
 			c:=SCFromGenerators(G,[]);
 		elif g = 14 then
 			c:=SCFromDifferenceCycles([[1,1,16],[2,6,10],[4,4,10],[6,6,6]]);

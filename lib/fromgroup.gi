@@ -79,10 +79,14 @@ InstallGlobalFunction(SCsFromGroupExt,
   candidateCount:=0;
   
   if not IsString(outfile) then
-  outfile:=false;
+    outfile:=false;
   else
-  tmp:=SmallGeneratingSet(G);
-  PrintTo(outfile,"G:=Group(\n",SmallGeneratingSet(G),"\n);\nc:=[];\n\n");
+    tmp:=SmallGeneratingSet(G);
+    if tmp = [] then
+      PrintTo(outfile,"G:=Group(());\nc:=[];\n\n");
+    else
+      PrintTo(outfile,"G:=Group(\n",SmallGeneratingSet(G),"\n);\nc:=[];\n\n");
+    fi;
   fi;
   #upper boundaries for link length
   if IsInt(maxLinkSize) and maxLinkSize > 0 then

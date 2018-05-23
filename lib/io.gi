@@ -252,8 +252,6 @@ end;
 
 SCIntFunc.PermGroupToString:=
 function(g)
-	#Print("in SCIntFunc.PermGroupToString\n");
-	
 	if(HasName(g) and Name(g)<>"") then
 		return String([Name(g),List(GeneratorsOfGroup(g),x->ListPerm(x))]);
 	else
@@ -1720,7 +1718,7 @@ function(f,c)
     	name:=IO_Unpickle(f);
         if name = IO_Error or not(IsString(name)) then
         	Info(InfoSimpcomp,1,"SCIntFunc.GeneralUnpickler: Error while ",
-            "unpicking  attribute name");
+            "unpicking attribute name");
         fi;
         
         # read attribute value
@@ -1729,9 +1727,10 @@ function(f,c)
             if ob = IO_Error then
                 Info(InfoSimpcomp,1,"SCIntFunc.GeneralUnpickler: Error while ",
                   "unpicking attribute value of '",name,"'");
+                Error();
             fi;
         else
-            Setter(EvalString(name))(c,ob);
+	    Setter(EvalString(name))(c,ob);
         fi;
     od;
     IO_FinalizeUnpickled();
