@@ -179,9 +179,9 @@ gap> SCAntiStar(c,1);
 
 /SimplicialComplex]
 gap> SCAutomorphismGroup(c);
-TransitiveGroup(8,44) = [2^4]S(4)
+Group([ (7,8), (5,7)(6,8), (3,5)(4,6), (1,3)(2,4) ])
 gap> SCAutomorphismGroupInternal(c);
-TransitiveGroup(8,44) = [2^4]S(4)
+Group([ (7,8), (5,7)(6,8), (3,5)(4,6), (1,3)(2,4) ])
 gap> SCAutomorphismGroupSize(c);
 384
 gap> SCAutomorphismGroupStructure(c);
@@ -747,7 +747,7 @@ false
 gap> c.Orientation;
 [  ]
 gap> c.AutomorphismGroup;
-TransitiveGroup(9,3) = D(9)=9:2
+Group([ (1,2,3,4,5,6,7,8,9), (1,3)(4,9)(5,8)(6,7) ])
 gap> c.GeneratorsEx;
 [ [ [ 1, 2, 3, 5 ], 18 ], [ [ 1, 2, 4, 5 ], 9 ] ]
 gap> Size(c.ConnectedComponents);
@@ -866,7 +866,8 @@ gap> c.Orientation;
   1, -1, 1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 
   -1, -1, 1, 1, -1, 1, 1, -1, 1, -1 ]
 gap> c.AutomorphismGroup;
-PrimitiveGroup(16,3) = AGL(1, 16)
+Group([ (1,2)(3,4)(5,6)(7,8)(9,10)(11,12)(13,14)(15,16), (1,2,8,14,5)
+(3,11,9,4,13)(6,7,12,15,10), (1,3,2)(5,11,14)(6,9,15)(7,10,13)(8,12,16) ])
 gap> c.GeneratorsEx;
 [ [ [ 1, 2, 3, 8, 12 ], 240 ], [ [ 1, 2, 5, 8, 14 ], 48 ] ]
 gap> Size(c.ConnectedComponents);
