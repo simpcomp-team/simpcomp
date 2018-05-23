@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?><Module><ModulePrefs title="Changelog" /><Content type="html"><![CDATA[ <div style="width:100%; font-size:10pt; font-family:courier new" ><ul><li>12/12/2013 - Version 2.0.0: FIRST RELEASE AS AN OFFICIAL GAP PACKAGE
+	<ul>
+		<li>added functions SCExportIsoSig, SCExportToString, SCFromIsoSig for isomorphism signature support and compressing</li>
+		<li>added infinite family of transitive triangulations (S^2xS^2)^k (function SCSeriesS2xS2(k))</li>
+		<li>added function SCExportRecognizer to export 3-manifolds to Matveev's 3-manifold recognizer
+		</li>
+
+	</ul>
+</li></ul><div /> ]]></Content></Module>
