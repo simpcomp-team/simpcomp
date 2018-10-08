@@ -1719,7 +1719,6 @@ function(f,c)
         if name = IO_Error or not(IsString(name)) then
             Info(InfoSimpcomp,1,"SCIntFunc.GeneralUnpickler: Error while ",
                 "unpicking attribute name");
-            Print(name,"\n");
         fi;
         
         # read attribute value
