@@ -1553,7 +1553,7 @@ InstallMethod(SCFromDifferenceCycles,
 [IsList],
 function(diffcycles)
 
-	local modulus,expanded,complex;
+	local modulus,expanded,complex,facets;
 
 	if(Length(diffcycles)<1 or not ForAll(diffcycles,IsList)) then
 		Info(InfoSimpcomp,1,"SCFromDifferenceCycles: invalid difference cycle list.");
@@ -1568,7 +1568,8 @@ function(diffcycles)
 		return fail;
 	fi;
 	
-	complex:=Union(expanded);
+        facets:=List(expanded,SCFacets);
+	complex:=SC(Union(facets));
 	
 	if complex=fail then
 		return fail;

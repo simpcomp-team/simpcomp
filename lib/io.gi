@@ -1717,8 +1717,9 @@ function(f,c)
         # read attribute name
     	name:=IO_Unpickle(f);
         if name = IO_Error or not(IsString(name)) then
-        	Info(InfoSimpcomp,1,"SCIntFunc.GeneralUnpickler: Error while ",
-            "unpicking attribute name");
+            Info(InfoSimpcomp,1,"SCIntFunc.GeneralUnpickler: Error while ",
+                "unpicking attribute name");
+            Print(name,"\n");
         fi;
         
         # read attribute value
@@ -1727,7 +1728,6 @@ function(f,c)
             if ob = IO_Error then
                 Info(InfoSimpcomp,1,"SCIntFunc.GeneralUnpickler: Error while ",
                   "unpicking attribute value of '",name,"'");
-                Error();
             fi;
         else
 	    Setter(EvalString(name))(c,ob);

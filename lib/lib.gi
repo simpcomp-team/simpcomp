@@ -231,7 +231,6 @@ function(repository,id)
 		return fail;
 	fi;
 
-        #Print(Filename(Directory(SCPropertyByName(repository,"Path")),index[id].File),"\n");
 	return SCLoad(Filename(Directory(SCPropertyByName(repository,"Path")),index[id].File));
 end);
 

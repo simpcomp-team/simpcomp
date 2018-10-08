@@ -156,17 +156,13 @@ SCIntFunc.IRawBistellarRMoves:=function(arg)
   
   idx:=Combinations([1..max],max-r);  
 
-  #tmp:=Runtime();
   for i in [1..Size(faces[max])] do
     for j in idx do
       base:=faces[max][i]{j};
       Add(hd[PositionSorted(faces[max-r],base)],i);
     od;
   od;
-  #tmp:=Runtime()-tmp;
-  #Print(tmp,"\n");
 
-  #tmp:=Runtime();
   for i in [1..Size(hd)] do
     if Size(hd[i]) <> r+1 then continue; fi;
     linkface:=Union(faces[max]{hd[i]});
@@ -180,8 +176,6 @@ SCIntFunc.IRawBistellarRMoves:=function(arg)
         fi;
     fi;
   od;
-  #tmp:=Runtime()-tmp;
-  #Print(tmp,"\n");
 
   return rawOptions;
 end;
@@ -2721,8 +2715,6 @@ SCIntFunc.SCMakeFlagComplex:=
       return fail;
     fi;
     
-    #Print("\nF=",result[2].F,"\n");
-    #Print("Non-faces:\n",SCMinimalNonFaces(result[2]),"\n\n");
   od;
   
   SCBistellarOptions.MaxInterval:=maxrounds;

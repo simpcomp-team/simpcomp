@@ -1658,12 +1658,10 @@ function(arg)
         Remove(f[1],Position(f[1],[]));
       fi;
       g:=SCIntFunc.MorseFuncToFundGroup(f[1],f[2]);
-
       if AbelianInvariants(g) <> [] then
         return false;
       fi;
       g:=SimplifiedFpGroup(g);
-
       if GeneratorsOfGroup(g) = [] then
         return true;
       else
