@@ -1470,6 +1470,10 @@ SCIntFunc.MorseFuncToFundGroup := function(Morse,critical)
   down := Filtered(critical,x->Size(x)=2);
   up := Filtered(critical,x->Size(x)=3);
 
+  if down = [] then
+    return FreeGroup([]);
+  fi;
+
   gens:=List(down,x->Concatenation("[ ",String(x[1]),", ",String(x[2])," ]"));
   g:=FreeGroup(gens);
   gens:=GeneratorsOfGroup(g);

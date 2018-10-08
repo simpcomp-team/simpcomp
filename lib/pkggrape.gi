@@ -51,7 +51,7 @@ InstallMethod(SCAutomorphismGroup,
 	if v = Size(facets) and pm = true and dim = v-2 then
 		G:=SymmetricGroup(v);
 		structure:=StructureDescription(G);
-		SetName(G,structure);
+		#SetName(G,structure);
 		SetSCAutomorphismGroup(complex,G);
 		SetSCAutomorphismGroupSize(complex,G);
 		SetSCAutomorphismGroupTransitivity(complex,Transitivity(G));
@@ -80,7 +80,7 @@ InstallMethod(SCAutomorphismGroup,
 	od;
 	
 	Info(InfoSimpcomp,3,"SCAutomorphismGroup: compute automorphism group of dual graph.");
-	gamma:=EdgeOrbitsGraph(Group([()]),edges,Size(verts));
+	gamma:=EdgeOrbitsGraph(Group(()),edges,Size(verts));
 	Gprime:=AutGroupGraph(gamma);
 	Info(InfoSimpcomp,3,"SCAutomorphismGroup: found ",Order(Gprime)," automorphisms of dual graph.");
 	if(Gprime=fail) then
@@ -131,7 +131,11 @@ InstallMethod(SCAutomorphismGroup,
 		
 		if iso <> fail then
 			Add(gens,g);
-			G:=Group(gens);
+                        if gens = [] then
+                          G:=Group(());
+                        else
+			  G:=Group(gens);
+                        fi;
 			Add(allisos,iso);
 		fi;
 	od;
@@ -181,7 +185,7 @@ InstallMethod(SCAutomorphismGroup,
 			fi;
 		fi;
 	fi;
-	SetName(G,structure);
+	#SetName(G,structure);
 	SetSCAutomorphismGroupStructure(complex,structure);
 	
 	return G;
