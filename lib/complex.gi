@@ -865,12 +865,12 @@ SCIntFunc.SCNew:=
 function()
 	local sc;
 	sc:=Objectify(SCSimplicialComplexType,rec(Properties:=rec(), 
-  PropertiesTmp:=rec(forceCalc:=false), 
-  PropertyHandlers:=SCIntFunc.SCPropertyHandlers));
+	PropertiesTmp:=rec(forceCalc:=false), 
+	PropertyHandlers:=SCIntFunc.SCPropertyHandlers));
 	
 	if(sc=fail) then
 		Info(InfoSimpcomp,1,"SCIntFunc.SCNew: Error creating new instance of ",
-      "SCSimplicialComplex!");
+		"SCSimplicialComplex!");
 	fi;
 	
 	return sc;
@@ -882,6 +882,6 @@ end;
 SCIntFunc.SCNewWithProperties:=
 function(props)
 	return Objectify(SCSimplicialComplexType,rec(Properties:=ShallowCopy(props),
-  PropertiesTmp:=rec(forceCalc:=false), 
-  PropertyHandlers:=SCIntFunc.SCPropertyHandlers));
+	PropertiesTmp:=rec(forceCalc:=false), 
+	PropertyHandlers:=SCIntFunc.SCPropertyHandlers));
 end;

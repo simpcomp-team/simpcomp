@@ -29,7 +29,8 @@
 
 #library repository object family/type
 SCLibRepositoryFamily:=NewFamily("SCLibRepositoryFamily",SCIsLibRepository);
-SCLibRepositoryType:=NewType(SCLibRepositoryFamily,SCIsLibRepository);
+SCLibRepositoryType:=NewType(SCLibRepositoryFamily,SCIsLibRepository and IsAttributeStoringRep and IsListOrCollection);
+
 
 #standard index attributes for global library
 SCIntFunc.LibGlobalStandardAttributes:=
@@ -44,17 +45,24 @@ SCIntFunc.LibStandardAttributes:=
 # create new empty library repository
 SCIntFunc.LibRepositoryEmpty:=
 function()
-	return Objectify(SCLibRepositoryType,
-		rec(
-			Properties:=rec(
+	local lib;
+	lib:=Objectify(SCLibRepositoryType,rec(
+		Properties:=rec(
 			Loaded:=false,
 			IndexAttributes:=ShallowCopy(SCIntFunc.LibStandardAttributes),
 			CalculateIndexAttributes:=true
-			),
-			PropertiesTmp:=rec(),
-			PropertyHandlers:=SCIntFunc.SCLibRepositoryPropertyHandlers
-		));
+		),
+		PropertiesTmp:=rec(),
+		PropertyHandlers:=SCIntFunc.SCLibRepositoryPropertyHandlers));
+
+	if(lib=fail) then
+		Info(InfoSimpcomp,1,"SCIntFunc.LibRepositoryEmpty: Error creating new instance of ",
+		"SCLibRepository!");
+	fi;
+
+	return lib;
 end;
+
 
 
 # create new library repository with given attributes
@@ -241,8 +249,8 @@ function(dir)
 	local a,b,c,id,ldir,data,r,repository,fh;
 
 	if(IsDirectory(dir)) then
-    ldir:=dir;
-    dir:=Filename(ldir,"");
+		ldir:=dir;
+		dir:=Filename(ldir,"");
 	elif(IsString(dir)) then
 		ldir:=Directory(dir);
 	else
@@ -293,7 +301,9 @@ function(dir)
 		SCPropertySet(repository,"Index",SCIntFunc.SCPositionalObjectFromList([]));
 	fi;
 	SCPropertySet(repository,"Loaded",true);
+	SCLibIsLoaded(repository);;
 	SCPropertySet(repository,"Path",dir);
+
 	return repository;
 end;
 
