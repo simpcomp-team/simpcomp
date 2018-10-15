@@ -16,8 +16,9 @@ Version := "%%%VERSION%%%",
 Date := "%%%DATE%%%",
 
 PackageWWWHome := "https://simpcomp-team.github.io/simpcomp/chap0.html",
-README_URL := "http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/README",
-PackageInfoURL := "http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/PackageInfo.g",
+README_URL := "https://simpcomp-team.github.io/simpcomp/README",
+PackageInfoURL := "https://simpcomp-team.github.io/simpcomp/PackageInfo.g",
+
 SourceRepository := rec( 
   Type := "git", 
   URL := "https://github.com/simpcomp-team/simpcomp"
