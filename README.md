@@ -398,20 +398,14 @@ authors.
 
 ## Contact
 
-Felix Effenberger, felix.effenberger@mis.mpg.de
+Felix Effenberger, exilef@gmail.com
 
-Address: Max Planck Institute for
-         Mathematics in the Sciences
-         Inselstr. 22
-         04103 Leipzig
+and
+
+Jonathan Spreer, jonathan.spreer@fu-berlin.de
+
+Address: Discrete Geometry Group
+         Mathematical Institute
+         Freie Universität Berlin
+         Arnimallee 2, 14195 Berlin
          GERMANY
-
- and
-
-Jonathan Spreer, j.spreer@uq.edu.au
-
-Address: Computational Geometry and Topology Group
-         School of Mathematics and Physics
-         The University of Queensland
-         St. Lucia, Queensland, 4072
-         AUSTRALIA
