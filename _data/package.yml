@@ -82,8 +82,9 @@ bibtex: |
       month =            {Feb},
       year =             {2018},
       note =             {Refereed GAP package},
-      howpublished =     {\href      {http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/}      {\texttt{http://raw.githubusercontent.com/}\discretionary
-                          {}{}{}\texttt{simpcomp-team/}\discretionary {}{}{}\texttt{simpcomp/}\discretionary {}{}{}\texttt{master/}\discretionary {}{}{}\texttt{web/}}},
+      howpublished =     {\href                                {http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/}
+                          {\texttt{http://raw.githubusercontent.com/}\discretionary      {}{}{}\texttt{simpcomp-team/}\discretionary
+                          {}{}{}\texttt{simpcomp/}\discretionary {}{}{}\texttt{master/}\discretionary {}{}{}\texttt{web/}}},
       keywords =         {simplicial topology; combinatorial manifolds; PL equivalence; triangulating manifolds},
       printedkey =       {ES18}
     }
