@@ -319,7 +319,7 @@ a.buttons:hover {
 section {
   /*width:560px;*/
   width:720px;
-  float:right;
+  float:left;
   padding-bottom:50px;
 }
 
