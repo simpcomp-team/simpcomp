@@ -1,8 +1,8 @@
-# The GAP 4 package 'simpcomp'
+# The GAP 4 package `simpcomp`
 
 ## About
 
-simpcomp is a GAP package for working with simplicial complexes. 
+`simpcomp` is a GAP package for working with simplicial complexes. 
 It allows the computation of many properties of simplicial 
 complexes (such as the f-, g- and h-vecors, the face lattice, 
 the automorphism group, (co-)homology with explicit basis 
@@ -12,55 +12,50 @@ stars, connected sums, cartesian products, handle additions,
 bistellar flips, etc.). Furthermore, it comes with an extensive 
 library of known triangulations of manifolds and provides the 
 user with the possibility to create own complex libraries. 
-simpcomp caches computed properties of a simplicial complex, thus
+`simpcomp` caches computed properties of a simplicial complex, thus
 avoiding unnecessary computations, internally handles the vertex 
 labeling of the complexes and insures the consistency of a 
-simplicial complex throughout all operations. simpcomp relies on 
-the GAP package homology for its homology computation, but also 
+simplicial complex throughout all operations. `simpcomp` relies on 
+the GAP package `homology` for its homology computation, but also 
 provides the user with an own (co-)homology algorithm in case 
-the packacke homology is not available. For automorphism group 
-computation the GAP package GRAPE is used, which in turn uses the
-program nauty by Brendan McKay. An internal automorphism group 
-calculation algorithm in used as fallback if the GRAPE package is 
-not available.
+`homology` is not available. For automorphism group computation 
+the GAP package `GRAPE` is used, which in turn uses the program 
+`nauty` by Brendan McKay. An internal automorphism group 
+calculation algorithm in used as fallback if `GRAPE` is not 
+available.
 
 ## License
 
-simpcomp is free software. The code is released under the GPL 
+`simpcomp` is free software. The code is released under the GPL 
 version 2 or later (at your preference). For the text of the GPL 
-see the file COPYING in the simpcomp directory or 
+see the file COPYING in the `simpcomp` directory or 
 [http://www.gnu.org/licenses/](http://www.gnu.org/licenses/).
 
 ## Dependencies
 
-- GAP (>=4.4)
-- Depending on GAP packages: GAPDoc (>= 0.9999), part of the core 
+- `GAP` (>=4.4)
+- Depending on GAP packages: `GAPDoc` (>= 0.9999), part of the core 
   GAP system.
-- Strongly suggested other packages: Homology (>= 1.4.2), 
-  GRAPE (>= 4.2)
+- Strongly suggested other packages: `Homology` (>= 1.4.2), 
+  `GRAPE` (>= 4.2)
 
 
 ## Download and installation
    
  - Install the [GAP](http://www.gap-system.org) system, version 4.5 or higher.
 
-   - Under Linux, run *"rsync --port=8731 -azv rsync.gap-system.org::gap4r5/gapsync/gapsync ."*
-      followed by *"./gapsync"* (see *[http://www.math.rwth-aachen.de/~Frank.Luebeck/gap/rsync/index.html]*
-      for details). You may need admin rights to perform this step.
+ - (Optional) Download the current [simpcomp](https://github.com/simpcomp-team/simpcomp) 
+   Version (This step is only required if you want to use features of `simpcomp` 
+   which are not yet included in the official release). Copy folder `GAPROOT/pkg/simpcomp`
+   to `GAPROOT/pkg/simpcomp-old` and unpack the archive to the directory 
+   `GAPROOT/pkg/` (default for `GAPROOT` is `/usr/local/lib/gap4r5`).
 
-   - Under Windows: download the Windows installer under *[http://www.gap-system.org/pub/gap/windowsinstaller/gap4r7p5_2014_05_24-20_02.exe]*
-      and follow the instructions given under *[http://www.gap-system.org/ukrgap/wininst/]*.
-
-   - Under Mac OS X (or Linux): follow the instructions given under *[http://gap-system.github.io/bob/]*
-
- - (Optional) Download the current *[https://github.com/simpcomp-team/simpcomp simpcomp]* Version (This step is only required if you want to
-   use features of simpcomp which are not yet included in the official release). Copy folder *GAPROOT/pkg/simpcomp* to *GAPROOT/pkg/simpcomp-old*
-   and unpack the archive to the directory *GAPROOT/pkg/* (default for *GAPROOT* is */usr/local/lib/gap4r5*).
-
- - (Optional) Run *"chmod +x configure; ./configure; make; make install; make clean"* (This step is only required if you want to use 
-   *SCReduceComplexFast()*). You may need admin rights to perform this step.
+ - (Optional) Run `./autogen.sh; ./configure; make; make install; make clean` 
+   (This step is only required if you want to use `SCReduceComplexFast()`). 
+   You may need admin rights to perform this step.
    
- - From within *GAP*, load *simpcomp* using the following command which should return *true*. Based on which packages are already loaded, you 
+ - From within `GAP`, load `simpcomp` using the following command which should 
+   return `true`. Based on which packages are already loaded, you 
    will see something like the following:
 
 <pre>
@@ -131,7 +126,10 @@ see the file COPYING in the simpcomp directory or
   true
 </pre>
 
- - Run *"SCRunTest();"* for a quick self test of *simpcomp* that assures the package works correctly. The output of the test function should look like this (the number printed after *GAP4stones* is a performance measure of your system and thus may differ from computer to computer):
+ - Run `SCRunTest();` for a quick self test of `simpcomp` that assures the package 
+   works correctly. The output of the test function should look like this (the 
+   number printed after `GAP4stones` is a performance measure of your system and 
+   thus may differ from computer to computer):
 <pre>
   gap> SCRunTest();
   + simpcomp package test
@@ -139,7 +137,9 @@ see the file COPYING in the simpcomp directory or
   true
 </pre>
 
- - If you want *simpcomp* to automatically load upon *GAP* startup, either set the variable *Autoload:=true* in *GAPROOT/pkg/simpcomp/PackageInfo.g* (in line ~106) or add the command *LoadPackage("simpcomp");* to your*~/.gaprc*.
+ - If you want `simpcomp` to automatically load upon `GAP` startup, either set the 
+   variable `Autoload:=true` in `GAPROOT/pkg/simpcomp/PackageInfo.g` (in line ~94) 
+   or add the command `LoadPackage("simpcomp");` to your `~/.gaprc`.
 
 ## Changes
 
