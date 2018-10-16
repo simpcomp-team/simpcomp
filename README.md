@@ -44,14 +44,14 @@ see the file COPYING in the simpcomp directory or
    
  - Install the [GAP](http://www.gap-system.org) system, version 4.5 or higher.
 
- -- Under Linux, run *"rsync --port=8731 -azv rsync.gap-system.org::gap4r5/gapsync/gapsync ."*
+ .- Under Linux, run *"rsync --port=8731 -azv rsync.gap-system.org::gap4r5/gapsync/gapsync ."*
     followed by *"./gapsync"* (see *[http://www.math.rwth-aachen.de/~Frank.Luebeck/gap/rsync/index.html]*
     for details). You may need admin rights to perform this step.
 
- -- Under Windows: download the Windows installer under *[http://www.gap-system.org/pub/gap/windowsinstaller/gap4r7p5_2014_05_24-20_02.exe]*
+ .- Under Windows: download the Windows installer under *[http://www.gap-system.org/pub/gap/windowsinstaller/gap4r7p5_2014_05_24-20_02.exe]*
     and follow the instructions given under *[http://www.gap-system.org/ukrgap/wininst/]*.
 
- -- Under Mac OS X (or Linux): follow the instructions given under *[http://gap-system.github.io/bob/]*
+ .- Under Mac OS X (or Linux): follow the instructions given under *[http://gap-system.github.io/bob/]*
 
  - (Optional) Download the current *[https://github.com/simpcomp-team/simpcomp simpcomp]* Version (This step is only required if you want to
    use features of simpcomp which are not yet included in the official release). Copy folder *GAPROOT/pkg/simpcomp* to *GAPROOT/pkg/simpcomp-old*
