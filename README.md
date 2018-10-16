@@ -2,60 +2,60 @@
 
 ## About
 
-`simpcomp` is a GAP package for working with simplicial complexes. 
-It allows the computation of many properties of simplicial 
-complexes (such as the f-, g- and h-vecors, the face lattice, 
-the automorphism group, (co-)homology with explicit basis 
+`simpcomp` is a GAP package for working with simplicial complexes.
+It allows the computation of many properties of simplicial
+complexes (such as the f-, g- and h-vecors, the face lattice,
+the automorphism group, (co-)homology with explicit basis
 computation, intersection form, etc.) and provides the user with
-functions to compute new complexes from old (simplex links and 
-stars, connected sums, cartesian products, handle additions, 
-bistellar flips, etc.). Furthermore, it comes with an extensive 
-library of known triangulations of manifolds and provides the 
-user with the possibility to create own complex libraries. 
+functions to compute new complexes from old (simplex links and
+stars, connected sums, cartesian products, handle additions,
+bistellar flips, etc.). Furthermore, it comes with an extensive
+library of known triangulations of manifolds and provides the
+user with the possibility to create own complex libraries.
 `simpcomp` caches computed properties of a simplicial complex, thus
-avoiding unnecessary computations, internally handles the vertex 
-labeling of the complexes and insures the consistency of a 
-simplicial complex throughout all operations. `simpcomp` relies on 
-the GAP package `homology` for its homology computation, but also 
-provides the user with an own (co-)homology algorithm in case 
-`homology` is not available. For automorphism group computation 
-the GAP package `GRAPE` is used, which in turn uses the program 
-`nauty` by Brendan McKay. An internal automorphism group 
-calculation algorithm in used as fallback if `GRAPE` is not 
+avoiding unnecessary computations, internally handles the vertex
+labeling of the complexes and insures the consistency of a
+simplicial complex throughout all operations. `simpcomp` relies on
+the GAP package `homology` for its homology computation, but also
+provides the user with an own (co-)homology algorithm in case
+`homology` is not available. For automorphism group computation
+the GAP package `GRAPE` is used, which in turn uses the program
+`nauty` by Brendan McKay. An internal automorphism group
+calculation algorithm in used as fallback if `GRAPE` is not
 available.
 
 ## License
 
-`simpcomp` is free software. The code is released under the GPL 
-version 2 or later (at your preference). For the text of the GPL 
-see the file COPYING in the `simpcomp` directory or 
+`simpcomp` is free software. The code is released under the GPL
+version 2 or later (at your preference). For the text of the GPL
+see the file COPYING in the `simpcomp` directory or
 [http://www.gnu.org/licenses/](http://www.gnu.org/licenses/).
 
 ## Dependencies
 
 - `GAP` (>=4.4)
-- Depending on GAP packages: `GAPDoc` (>= 0.9999), part of the core 
+- Depending on GAP packages: `GAPDoc` (>= 0.9999), part of the core
   GAP system.
-- Strongly suggested other packages: `Homology` (>= 1.4.2), 
+- Strongly suggested other packages: `Homology` (>= 1.4.2),
   `GRAPE` (>= 4.2)
 
 
 ## Download and installation
-   
+
  - Install the [GAP](http://www.gap-system.org) system, version 4.5 or higher.
 
- - (Optional) Download the current [simpcomp](https://github.com/simpcomp-team/simpcomp) 
-   Version (This step is only required if you want to use features of `simpcomp` 
+ - (Optional) Download the current [simpcomp](https://github.com/simpcomp-team/simpcomp)
+   Version (This step is only required if you want to use features of `simpcomp`
    which are not yet included in the official release). Copy folder `GAPROOT/pkg/simpcomp`
-   to `GAPROOT/pkg/simpcomp-old` and unpack the archive to the directory 
+   to `GAPROOT/pkg/simpcomp-old` and unpack the archive to the directory
    `GAPROOT/pkg/` (default for `GAPROOT` is `/usr/local/lib/gap4r5`).
 
- - (Optional) Run `./autogen.sh; ./configure; make; make install; make clean` 
-   (This step is only required if you want to use `SCReduceComplexFast()`). 
+ - (Optional) Run `./autogen.sh; ./configure; make; make install; make clean`
+   (This step is only required if you want to use `SCReduceComplexFast()`).
    You may need admin rights to perform this step.
-   
- - From within `GAP`, load `simpcomp` using the following command which should 
-   return `true`. Based on which packages are already loaded, you 
+
+ - From within `GAP`, load `simpcomp` using the following command which should
+   return `true`. Based on which packages are already loaded, you
    will see something like the following:
 
 <pre>
@@ -126,9 +126,9 @@ see the file COPYING in the `simpcomp` directory or
   true
 </pre>
 
- - Run `SCRunTest();` for a quick self test of `simpcomp` that assures the package 
-   works correctly. The output of the test function should look like this (the 
-   number printed after `GAP4stones` is a performance measure of your system and 
+ - Run `SCRunTest();` for a quick self test of `simpcomp` that assures the package
+   works correctly. The output of the test function should look like this (the
+   number printed after `GAP4stones` is a performance measure of your system and
    thus may differ from computer to computer):
 <pre>
   gap> SCRunTest();
@@ -137,8 +137,8 @@ see the file COPYING in the `simpcomp` directory or
   true
 </pre>
 
- - If you want `simpcomp` to automatically load upon `GAP` startup, either set the 
-   variable `Autoload:=true` in `GAPROOT/pkg/simpcomp/PackageInfo.g` (in line ~94) 
+ - If you want `simpcomp` to automatically load upon `GAP` startup, either set the
+   variable `Autoload:=true` in `GAPROOT/pkg/simpcomp/PackageInfo.g` (in line ~94)
    or add the command `LoadPackage("simpcomp");` to your `~/.gaprc`.
 
 ## Changes
@@ -167,37 +167,37 @@ see the file COPYING in the `simpcomp` directory or
 04/06/2015 - Version 2.1.1: Minor update
 - Minor changes in documentation/manual
 
-20/05/2015 - Version 2.1.0: Major update, support for discrete 
+20/05/2015 - Version 2.1.0: Major update, support for discrete
              Morse theory added
-- Fixed bug in SCFVector, non-manifolds where treated like the simplex or the 
+- Fixed bug in SCFVector, non-manifolds where treated like the simplex or the
   boundary of the simplex
-- Improved collapsing sequence (it is now using a Hasse diagram, 
+- Improved collapsing sequence (it is now using a Hasse diagram,
   SCIntFunc.SCHasseDiagram())
-- Improved high dimensional bistellar moves flip strategy (both for 
+- Improved high dimensional bistellar moves flip strategy (both for
   SCReduceComplex() and SCReduceComplexFast())
 - Updated references
 - Added chapter about discrete Morse theory in documentation
-- Added support for discrete Morse theory (SCHasseDiagram, SCMorseEngstrom, 
+- Added support for discrete Morse theory (SCHasseDiagram, SCMorseEngstrom,
   SCMorseRandom, SCMorseUST, SCMorseSpec, SCMorseRandomLex, SCMorseRandomRevLex)
 - Added Wilson's algorithm for uniform spanning trees SCSpanningTreeRandom
-- Added new functionality based on discrete Morse theory: SCHomologyEx, 
+- Added new functionality based on discrete Morse theory: SCHomologyEx,
   SCHomology, SCIsSphere, SCIsManifold
-- Old homology and manifold verification code is now available under 
+- Old homology and manifold verification code is now available under
   SCHomologyClassic and SCBistellarIsManifold
 - Fixed bug in SCSkelEx and improved performance
 - Fixed bug in SCCyclic3Mfld(22,X), X = 1437, 2087, 2660, 2827, 2844, 3079
 - Fixed bug in SCMove for d-moves
 - Fixed bug in SCStronglyConnectedComponents and improved performance
 - Fixed bug in SCNumFaces
-- Improved functions SCIsPseudoManifold, SCHasBoundary, SCBoundarEx and 
+- Improved functions SCIsPseudoManifold, SCHasBoundary, SCBoundarEx and
   SCBoundary
 
 12/12/2013 - Version 2.0.0: FIRST RELEASE AS GAP SHARED PACKAGE
 - Added functions SCExportIsoSig, SCExportToString, SCFromIsoSig for isomorphism
   signature support and compressing
-- Added infinite family of transitive triangulations (S2xS2)^k (function 
+- Added infinite family of transitive triangulations (S2xS2)^k (function
   SCSeriesS2xS2(k))
-- Added function SCExportRecognizer to export 3-manifolds to Matveev's 
+- Added function SCExportRecognizer to export 3-manifolds to Matveev's
   3-manifold recognizer
 
 31/01/2013 - Version 1.6.1: Minor update.
@@ -315,7 +315,7 @@ see the file COPYING in the `simpcomp` directory or
 - Fixed minor issues with undeclared local variables
 - Fixed wrong output format of SCAutomorphismGroupInternal
 
-26/05/2010 - Version 1.3.0: Major update. 
+26/05/2010 - Version 1.3.0: Major update.
              New functions, updated library and bug fixes.
 - simpcomp has learned to generate all triangulations with k-transitive
   automorphism groups given a prescribed dimension and vertex number. See the
@@ -365,7 +365,7 @@ see the file COPYING in the `simpcomp` directory or
   calculating eigenvalues.
 
 11/11/2009 - Version 1.0.435
-- Updated Documentation 
+- Updated Documentation
 - Updated GRAPE availability test to reliably work with GRAPE 4.3
 
 26/10/2009 - Version 1.0.403
@@ -375,7 +375,7 @@ see the file COPYING in the `simpcomp` directory or
 - Fallback to functions of `homology' package are now handled correctly
 - Added extended testing functionality and SCRunTest
 
-13/10/2009 - Version 1.0.389 
+13/10/2009 - Version 1.0.389
 - Initial version
 
 
@@ -387,7 +387,7 @@ simpcomp:
  - Better simplification strategies
  - Coverings (finite index subgroups)
  - Presentation two-complex (from fp-group)
-  
+
 		
 ## Bugs
 
@@ -404,8 +404,9 @@ and
 
 Jonathan Spreer, jonathan.spreer@fu-berlin.de
 
-Address: Discrete Geometry Group
-         Mathematical Institute
-         Freie Universität Berlin
-         Arnimallee 2, 14195 Berlin
-         GERMANY
+Address:  
+Discrete Geometry Group  
+Mathematical Institute  
+Freie Universität Berlin  
+Arnimallee 2, 14195 Berlin  
+GERMANY  
