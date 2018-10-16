@@ -3,7 +3,7 @@
                            ============================
 
 
-About
+## About
 =====
 
 simpcomp is a GAP package for working with simplicial complexes. It allows the 
