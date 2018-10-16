@@ -15,9 +15,11 @@ Subtitle := "A GAP toolbox for simplicial complexes",
 Version := "2.1.8",
 Date := "05/02/2018",
 
-PackageWWWHome := "http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/",
+PackageWWWHome := "https://simpcomp-team.github.io/simpcomp",
 README_URL := Concatenation( ~.PackageWWWHome, "README" ),
 PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+
+
 SourceRepository := rec( 
   Type := "git", 
   URL := "https://github.com/simpcomp-team/simpcomp"
@@ -32,27 +34,26 @@ Persons := [
       FirstNames    := "Felix",
       IsAuthor      := true,
       IsMaintainer  := true,
-      Email         := "felix.effenberger@mis.mpg.de",
-      WWWHome       := "http://personal-homepages.mis.mpg.de/effen/",
+      Email         := "exilef@gmail.com",
+      WWWHome       := "https://www.linkedin.com/in/felix-effenberger-26013a146/?originalSubdomain=de",
       PostalAddress := Concatenation( [
-            "Max Planck Institute for\n",
-            "Mathematics in the Sciences\n",
-            "Inselstr. 22" ] ),
-      Place         := "04103 Leipzig",
-      Institution   := "Max Planck Institute for Mathematics in the Sciences"),
+            "Frankfurt Institute for Advanced Studies\n",
+            "Ruth-Moufang-Straße 1" ] ),
+      Place         := "60438 Frankfurt am Main",
+      Institution   := "Frankfurt Institute for Advanced Studies"),
   rec(
       LastName      := "Spreer",
       FirstNames    := "Jonathan",
       IsAuthor      := true,
       IsMaintainer  := true,
-      Email         := "j.spreer@uq.edu.au",
+      Email         := "jonathan.spreer@fu-berlin.de",
       WWWHome       := "http://www.tacet.de/Jonathan",
       PostalAddress := Concatenation( [
-            "Computational Geometry and Topology Group\n",
-            "School of Mathematics and Physics\n",
-            "The University of Queensland" ] ),
-      Place         := "St. Lucia, Queensland, 4072",
-      Institution   := "The University of Queensland")
+            "Discrete Geometry Group\n",
+            "Institut fuer Mathematik\n",
+            "Freie Universitaet Berlin" ] ),
+      Place         := "Arnimallee 2, 14195 Berlin",
+      Institution   := "Freie Universitaet Berlin")
     ],
 
 ##  Status information. Currently the following cases are recognized:
