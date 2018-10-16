@@ -2,41 +2,47 @@
 
 ## About
 
-simpcomp is a GAP package for working with simplicial complexes. It allows the 
-computation of many properties of simplicial complexes (such as the f-, g- and 
-h-vecors, the face lattice, the automorphism group, (co-)homology with explicit
-basis computation, intersection form, etc.) and provides the user with functions
-to compute new complexes from old (simplex links and stars, connected sums,
-cartesian products, handle additions, bistellar flips, etc.). Furthermore, it
-comes with an extensive library of known triangulations of manifolds and
-provides the user with the possibility to create own complex libraries.
-simpcomp caches computed properties of a simplicial complex, thus avoiding
-unnecessary computations, internally handles the vertex labeling of the
-complexes and insures the consistency of a simplicial complex throughout all
-operations.
-simpcomp relies on the GAP package homology for its homology computation, but
-also provides the user with an own (co-)homology algorithm in case the packacke
-homology is not available. For automorphism group computation the GAP package
-GRAPE is used, which in turn uses the program nauty by Brendan McKay. An
-internal automorphism group calculation algorithm in used as fallback if the
-GRAPE package is not available.
+simpcomp is a GAP package for working with simplicial complexes. 
+It allows the computation of many properties of simplicial 
+complexes (such as the f-, g- and h-vecors, the face lattice, 
+the automorphism group, (co-)homology with explicit basis 
+computation, intersection form, etc.) and provides the user with
+functions to compute new complexes from old (simplex links and 
+stars, connected sums, cartesian products, handle additions, 
+bistellar flips, etc.). Furthermore, it comes with an extensive 
+library of known triangulations of manifolds and provides the 
+user with the possibility to create own complex libraries. 
+simpcomp caches computed properties of a simplicial complex, thus
+avoiding unnecessary computations, internally handles the vertex 
+labeling of the complexes and insures the consistency of a 
+simplicial complex throughout all operations. simpcomp relies on 
+the GAP package homology for its homology computation, but also 
+provides the user with an own (co-)homology algorithm in case 
+the packacke homology is not available. For automorphism group 
+computation the GAP package GRAPE is used, which in turn uses the
+program nauty by Brendan McKay. An internal automorphism group 
+calculation algorithm in used as fallback if the GRAPE package is 
+not available.
 
 ## License
 
-simpcomp is free software. The code is released under the GPL version 2 or 
-later (at your preference). For the text of the GPL see the file COPYING in the
-simpcomp directory or http://www.gnu.org/licenses/.
+simpcomp is free software. The code is released under the GPL 
+version 2 or later (at your preference). For the text of the GPL 
+see the file COPYING in the simpcomp directory or 
+[http://www.gnu.org/licenses/](http://www.gnu.org/licenses/).
 
 ## Dependencies
 
 - GAP (>=4.4)
-- Depending on GAP packages: GAPDoc (>= 0.9999), part of the core GAP system.
-- Strongly suggested other packages: Homology (>= 1.4.2), GRAPE (>= 4.2)
+- Depending on GAP packages: GAPDoc (>= 0.9999), part of the core 
+  GAP system.
+- Strongly suggested other packages: Homology (>= 1.4.2), 
+  GRAPE (>= 4.2)
 
 
 ## Download and installation
    
- - Install the [http://www.gap-system.org GAP] system, version 4.5 or higher.
+ - Install the [GAP](http://www.gap-system.org) system, version 4.5 or higher.
 
  -- Under Linux, run *"rsync --port=8731 -azv rsync.gap-system.org::gap4r5/gapsync/gapsync ."*
     followed by *"./gapsync"* (see *[http://www.math.rwth-aachen.de/~Frank.Luebeck/gap/rsync/index.html]*
