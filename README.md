@@ -373,27 +373,24 @@ simpcomp directory or http://www.gnu.org/licenses/.
 - Initial version
 
 
-Roadmap
-=======
+## Roadmap
 
 The following features are planned to be supported in future versions of
 simpcomp:
 
- * Better simplification strategies
- * Coverings (finite index subgroups)
- * Presentation two-complex (from fp-group)
+ - Better simplification strategies
+ - Coverings (finite index subgroups)
+ - Presentation two-complex (from fp-group)
   
 		
-Bugs
-====
+## Bugs
+
 
 We have thorougly tested simpcomp on errors. If you none the less encouter
 errors or inconsistencies when working with simpcomp, please contact the
 authors.
 
-
-Contact
-=======
+## Contact
 
 Felix Effenberger, felix.effenberger@mis.mpg.de
 
