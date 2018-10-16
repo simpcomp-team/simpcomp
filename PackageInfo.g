@@ -1,102 +1,127 @@
-#############################################################################
-##  
-##  Demo PackageInfo.g for the GitHubPagesForGAP
+################################################################################
 ##
+##  simpcomp / PackageInfo.g
+##
+##  PackageInfo.g for package simpcomp
+##
+##  $Id$
+##
+################################################################################
 
 SetPackageInfo( rec(
 
-PackageName := "GitHubPagesForGAP",
+PackageName := "simpcomp",
+Subtitle := "A GAP toolbox for simplicial complexes",
+Version := "2.1.8",
+Date := "05/02/2018",
 
-Subtitle := "A GitHub Pages generator for GAP packages",
-Version := "0.2",
-Date := "04/02/2017", # dd/mm/yyyy format
+PackageWWWHome := "http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/",
+README_URL := Concatenation( ~.PackageWWWHome, "README" ),
+PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+SourceRepository := rec( 
+  Type := "git", 
+  URL := "https://github.com/simpcomp-team/simpcomp"
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+ArchiveURL :=Concatenation( [ "http://github.com/simpcomp-team/simpcomp/releases/download/v", String(~.Version), "/simpcomp-", String(~.Version) ]),
+ArchiveFormats := ".tar.gz",
 
 Persons := [
   rec(
-    LastName      := "Horn",
-    FirstNames    := "Max",
-    IsAuthor      := true,
-    IsMaintainer  := true,
-    Email         := "max.horn@math.uni-giessen.de",
-    WWWHome       := "http://www.quendi.de/math",
-    PostalAddress := Concatenation(
-                       "AG Algebra\n",
-                       "Mathematisches Institut\n",
-                       "Justus-Liebig-Universität Gießen\n",
-                       "Arndtstraße 2\n",
-                       "35392 Gießen\n",
-                       "Germany" ),
-    Place         := "Gießen",
-    Institution   := "Justus-Liebig-Universität Gießen"
-  ),
-
+      LastName      := "Effenberger",
+      FirstNames    := "Felix",
+      IsAuthor      := true,
+      IsMaintainer  := true,
+      Email         := "felix.effenberger@mis.mpg.de",
+      WWWHome       := "http://personal-homepages.mis.mpg.de/effen/",
+      PostalAddress := Concatenation( [
+            "Max Planck Institute for\n",
+            "Mathematics in the Sciences\n",
+            "Inselstr. 22" ] ),
+      Place         := "04103 Leipzig",
+      Institution   := "Max Planck Institute for Mathematics in the Sciences"),
   rec(
-    LastName      := "Thor",
-    FirstNames    := "A. U.",
-    IsAuthor      := true,
-    IsMaintainer  := false,
-    #Email         := "author@example.com",
-  ),
+      LastName      := "Spreer",
+      FirstNames    := "Jonathan",
+      IsAuthor      := true,
+      IsMaintainer  := true,
+      Email         := "j.spreer@uq.edu.au",
+      WWWHome       := "http://www.tacet.de/Jonathan",
+      PostalAddress := Concatenation( [
+            "Computational Geometry and Topology Group\n",
+            "School of Mathematics and Physics\n",
+            "The University of Queensland" ] ),
+      Place         := "St. Lucia, Queensland, 4072",
+      Institution   := "The University of Queensland")
+    ],
 
-  rec(
-    LastName      := "Itor",
-    FirstNames    := "Jan",
-    IsAuthor      := false,
-    IsMaintainer  := true,
-    #Email         := "janitor@example.com",
-  ),
-],
+##  Status information. Currently the following cases are recognized:
+##    "accepted"      for successfully refereed packages
+##    "deposited"     for packages for which the GAP developers agreed 
+##                    to distribute them with the core GAP system
+##    "dev"           for development versions of packages 
+##    "other"         for all other packages
+##
 
-Status := "other",
+Status := "accepted",
+##  You must provide the next two entries if and only if the status is
+##  "accepted":
+# format: 'name (place)'
+CommunicatedBy := "Graham Ellis (Galway)",
+# format: mm/yyyy
+AcceptDate := "11/2013",
 
-# The following are not strictly necessary in your own PackageInfo.g
-# (in the sense that update.g only looks at the usual fields
-# like PackageWWWHome, ArchiveURL etc.). But they are convenient
-# if you use exactly the scheme for your package website that we propose.
-GithubUser := "gap-system",
-GithubRepository := ~.PackageName,
-GithubWWW := Concatenation("https://github.com/", ~.GithubUser, "/", ~.GithubRepository),
+AbstractHTML :=
+  "<span class=\"pkgname\">simpcomp</span> is a <span class=\"pkgname\">GAP</span> package for working with simplicial complexes. It allows the computation of many properties of simplicial complexes (such as the f-, g- and h-vectors, the face lattice, the automorphism group, (co-)homology with explicit basis computation, intersection form, etc.) and provides the user with functions to compute new complexes from old (simplex links and stars, connected sums, cartesian products, handle additions, bistellar flips, etc.). Furthermore, it comes with an extensive library of known triangulations of manifolds and provides the user with the possibility to create own complex libraries.<br /> <span class=\"pkgname\">simpcomp</span> caches computed properties of a simplicial complex, thus avoiding unnecessary computations, internally handles the vertex labeling of the complexes and insures the consistency of a simplicial complex throughout all operations.<br /> <span class=\"pkgname\">simpcomp</span> relies on the <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">homology</span> for its homology computation, but also provides the user with an own (co-)homology algorithm in case the packacke <span class=\"pkgname\">homology</span> is not available. For automorphism group computation the <span class=\"pkgname\">GAP</span> package <span class=\"pkgname\">GRAPE</span> is used, which in turn uses the program <tt>nauty</tt> by Brendan McKay. An internal automorphism group calculation algorithm in used as fallback if the <span class=\"pkgname\">GRAPE</span> package is not available.",
 
-PackageWWWHome := Concatenation("https://", ~.GithubUser, ".github.io/", ~.GithubRepository, "/"),
-README_URL     := Concatenation( ~.PackageWWWHome, "README.md" ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-# The following assumes you are using the Github releases system. If not, adjust
-# it accordingly.
-ArchiveURL     := Concatenation(~.GithubWWW,
-                    "/releases/download/v", ~.Version, "/",
-                    ~.GithubRepository, "-", ~.Version),
-
-ArchiveFormats := ".tar.gz .tar.bz2",
-
-AbstractHTML := 
-  "This is a pseudo package that contains no actual\
-  <span class=\"pkgname\">GAP</span> code. Instead, it is a template for other\
-  GAP packages that allows to quickly setup GitHub Pages.",
+Keywords := ["simplicial topology", "combinatorial manifolds", "PL equivalence", "triangulating manifolds"],
 
 PackageDoc := rec(
-  BookName  := "GitHubPagesForGAP",
+  # use same as in GAP
+  BookName  := "simpcomp",
+  # format/extension can be one of .zoo, .tar.gz, .tar.bz2, -win.zip
+  #Archive := Concatenation("simpcomp-doc-",String(~.Version),".tar.gz"),
   ArchiveURLSubset := ["doc"],
   HTMLStart := "doc/chap0.html",
   PDFFile   := "doc/manual.pdf",
+  # the path to the .six file used by GAP's help system
   SixFile   := "doc/manual.six",
-  LongTitle := "A GitHub Pages generator for GAP packages",
+  # a longer title of the book, this together with the book name should
+  # fit on a single text line (appears with the '?books' command in GAP)
+  LongTitle := "A GAP toolbox for simplicial complexes",
+  # Should this help book be autoloaded when GAP starts up? This should
+  # usually be 'true', otherwise say 'false'.
+  Autoload  := true
 ),
 
-# The following dependencies are fake and for testing / demo purposes
+
+##  Are there restrictions on the operating system for this package? Or does
+##  the package need other packages to be available?
 Dependencies := rec(
-  GAP := ">=4.8.1",
-  NeededOtherPackages := [
-    ["GAPDoc", ">= 1.2"],
-    ["IO", ">= 4.1"],
-  ],
-  SuggestedOtherPackages := [["orb", ">= 4.2"]],
-  ExternalConditions := []
+  GAP := ">=4.5",
+  NeededOtherPackages := [[ "GAPDoc", ">=0.9999" ],[ "io", ">=3.0" ]],
+  SuggestedOtherPackages := [[ "Homology", ">=1.4.4" ],[ "GRAPE", ">=4.4" ],["Gauss", ">=2011.08.22"],["MatricesForHomalg", ">=2011.10.08"],["homalg", ">=2011.10.05"],["GaussForHomalg", ">=2011.08.10"],["Modules", ">=2011.10.05"]],
+	ExternalConditions := []
 ),
 
-AvailabilityTest := ReturnTrue,
+Autoload := false,
 
-Keywords := ["GitHub Pages", "GAP"]
+##  If the default banner does not suffice then provide a string that is
+##  printed when the package is loaded (not when it is autoloaded or if
+##  command line options `-b' or `-q' are given).
+BannerString :=Concatenation("Loading simpcomp ",String(~.Version),"\nby F. Effenberger and J. Spreer\nhttps://github.com/simpcomp-team/simpcomp\n"),
+
+AvailabilityTest := 
+function()
+	if not ARCH_IS_UNIX() then
+	  Info(InfoWarning, 1, "simpcomp: non-Unix architecture, some functionality will not be available.");
+	fi;
+	
+	return true;
+end,
+
+##  *Optional*, but recommended: path relative to package root to a file which
+##  contains as many tests of the package functionality as sensible.
+TestFile := "tst/simpcomp.tst"
 
 ));
-
-
