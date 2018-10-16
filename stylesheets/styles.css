@@ -317,9 +317,8 @@ a.buttons:hover {
 /* Section - for main page content */
 
 section {
-  /*width:560px;*/
-  width:720px;
-  float:left;
+  width:560px;
+  float:right;
   padding-bottom:50px;
 }
 
@@ -419,8 +418,4 @@ footer {
     font-size:12pt;
     color:#444;
   }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 5fc8020dd75cd611062d750c076c77e23ab3c594
+
