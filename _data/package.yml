@@ -6,13 +6,13 @@ description: |
 
 authors:
     - name: Felix Effenberger
-      url: http://personal-homepages.mis.mpg.de/effen/
+      url: https://www.linkedin.com/in/felix-effenberger-26013a146/?originalSubdomain=de
     - name: Jonathan Spreer
       url: http://www.tacet.de/Jonathan
 
 maintainers:
     - name: Felix Effenberger
-      url: http://personal-homepages.mis.mpg.de/effen/
+      url: https://www.linkedin.com/in/felix-effenberger-26013a146/?originalSubdomain=de
     - name: Jonathan Spreer
       url: http://www.tacet.de/Jonathan
 
@@ -48,9 +48,9 @@ suggested-pkgs:
       version: ">=2011.10.05"
       url: "http://homalg-project.github.io/homalg_project/Modules/"
 
-www: http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/
-readme: README
-packageinfo: http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/PackageInfo.g
+www: https://simpcomp-team.github.io/simpcomp
+readme: simpcompREADME
+packageinfo: https://simpcomp-team.github.io/simpcompPackageInfo.g
 
 downloads:
     - name: .tar.gz
@@ -71,7 +71,7 @@ citeas: |
              Version 2.1.8</i>
      (<span class='BibYear'>2018</span>)<br />
     (<span class='BibNote'>Refereed GAP package</span>),
-    <span class='BibHowpublished'><a href="http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/">http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/</a></span>.
+    <span class='BibHowpublished'><a href="https://simpcomp-team.github.io/simpcomp">https://simpcomp-team.github.io/simpcomp</a></span>.
     </p>
     
 
@@ -83,13 +83,9 @@ bibtex: |
       month =            {Feb},
       year =             {2018},
       note =             {Refereed GAP package},
-      howpublished =     {\href
-                          {http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/}
-                          {\texttt{http://raw.githubusercontent.com/}\discretionary
-                          {}{}{}\texttt{simpcomp-team/}\discretionary
-                          {}{}{}\texttt{simpcomp/}\discretionary
-                          {}{}{}\texttt{master/}\discretionary
-                          {}{}{}\texttt{web/}}},
+      howpublished =     {\href       {https://simpcomp-team.github.io/simpcomp}
+                          {\texttt{https://simpcomp-team.github.io/}\discretionary
+                          {}{}{}\texttt{simpcomp}}},
       keywords =         {simplicial   topology;   combinatorial  manifolds;  PL
                           equivalence; triangulating manifolds},
       printedkey =       {ES18}
