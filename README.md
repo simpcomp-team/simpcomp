@@ -1,4 +1,4 @@
-# The GAP 4 package `simpcomp`
+# The GAP 4 package simpcomp
 
 ## About
 
