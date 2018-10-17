@@ -16,7 +16,7 @@ Version := "%%%VERSION%%%",
 Date := "%%%DATE%%%",
 
 PackageWWWHome := "https://simpcomp-team.github.io/simpcomp/",
-README_URL := Concatenation( ~.PackageWWWHome, "README" ),
+README_URL := Concatenation( ~.PackageWWWHome, "README.md" ),
 PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
 
 
