@@ -11,8 +11,6 @@ authors:
       url: http://www.tacet.de/Jonathan
 
 maintainers:
-    - name: Felix Effenberger
-      url: https://www.linkedin.com/in/felix-effenberger-26013a146/?originalSubdomain=de
     - name: Jonathan Spreer
       url: http://www.tacet.de/Jonathan
 
@@ -48,9 +46,9 @@ suggested-pkgs:
       version: ">=2011.10.05"
       url: "http://homalg-project.github.io/homalg_project/Modules/"
 
-www: https://simpcomp-team.github.io/simpcomp
-readme: simpcompREADME
-packageinfo: https://simpcomp-team.github.io/simpcompPackageInfo.g
+www: https://simpcomp-team.github.io/simpcomp/
+readme: README
+packageinfo: https://simpcomp-team.github.io/simpcomp/PackageInfo.g
 
 downloads:
     - name: .tar.gz
@@ -63,7 +61,7 @@ status: accepted
 doc-html: doc/chap0.html
 doc-pdf: doc/manual.pdf
 keywords: |
-    simplicial topology, combinatorial manifolds, PL equivalence, triangulating manifolds.
+    simplicial complexes, combinatorial topology, combinatorial manifolds, PL equivalence, triangulating manifolds.
 citeas: |
     <p class='BibEntry'>
     [<span class='BibKey'>ES18</span>]   <b class='BibAuthor'>Effenberger, F. and Spreer, J.</b>,
@@ -71,7 +69,7 @@ citeas: |
              Version 2.1.8</i>
      (<span class='BibYear'>2018</span>)<br />
     (<span class='BibNote'>Refereed GAP package</span>),
-    <span class='BibHowpublished'><a href="https://simpcomp-team.github.io/simpcomp">https://simpcomp-team.github.io/simpcomp</a></span>.
+    <span class='BibHowpublished'><a href="https://simpcomp-team.github.io/simpcomp/">https://simpcomp-team.github.io/simpcomp/</a></span>.
     </p>
     
 
@@ -82,8 +80,8 @@ bibtex: |
       month =            {Feb},
       year =             {2018},
       note =             {Refereed GAP package},
-      howpublished =     {\href {https://simpcomp-team.github.io/simpcomp} {\texttt{https://simpcomp-team.github.io/}\discretionary {}{}{}\texttt{simpcomp}}},
-      keywords =         {simplicial topology; combinatorial manifolds; PL equivalence; triangulating manifolds},
+      howpublished =     {\href {https://simpcomp-team.github.io/simpcomp/} {\texttt{https://simpcomp-team.github.io/}\discretionary {}{}{}\texttt{simpcomp/}}},
+      keywords =         {simplicial complexes; combinatorial topology; combinatorial manifolds; PL equivalence; triangulating manifolds},
       printedkey =       {ES18}
     }
 
