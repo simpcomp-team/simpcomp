@@ -42,94 +42,48 @@ see the file COPYING in the `simpcomp` directory or
 
 ## Download and installation
 
- - Install the [GAP](http://www.gap-system.org) system, version 4.5 or higher.
+- Install the [GAP](http://www.gap-system.org) system, 
+  version 4.5 or higher.
 
- - (Optional) Download the current [simpcomp](https://github.com/simpcomp-team/simpcomp)
-   Version (This step is only required if you want to use features of `simpcomp`
-   which are not yet included in the official release). Copy folder `GAPROOT/pkg/simpcomp`
-   to `GAPROOT/pkg/simpcomp-old` and unpack the archive to the directory
-   `GAPROOT/pkg/` (default for `GAPROOT` is `/usr/local/lib/gap4r5`).
+- (Optional) Download the current [simpcomp](https://github.com/simpcomp-team/simpcomp)
+  Version (This step is only required if you want to use features of `simpcomp`
+  which are not yet included in the official release). Copy folder `GAPROOT/pkg/simpcomp`
+  to `GAPROOT/pkg/simpcomp-old` and unpack the archive to the directory
+  `GAPROOT/pkg/` (default for `GAPROOT` is `/usr/local/lib/gap4r5`).
 
- - (Optional) Run `./autogen.sh; ./configure; make; make install; make clean`
-   (This step is only required if you want to use `SCReduceComplexFast()`).
-   You may need admin rights to perform this step.
+- (Optional) Run `./autogen.sh; ./configure; make; make install; make clean`
+  (This step is only required if you want to use `SCReduceComplexFast()`).
+  You may need admin rights to perform this step.
 
- - From within `GAP`, load `simpcomp` using the following command which should
-   return `true`. Based on which packages are already loaded, you
-   will see something like the following:
+- From within `GAP`, load `simpcomp` using the following command which should
+  return `true`. Based on which packages are already loaded, you
+  will see something like the following:
 
 <pre>
   gap> SCLoadPackage("simpcomp");
-  ──────────────────────────────────────────────────────────────────────────────
+  ─────────────────────────────────────────────────────────────────────────
   Loading  AutoDoc 2014.08.21 (Generate documentation from GAP source code)
   by Sebastian Gutsche (http://wwwb.math.rwth-aachen.de/~gutsche/) and
      Max Horn (http://www.quendi.de/math).
   Homepage: http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/AutoDoc
-  ──────────────────────────────────────────────────────────────────────────────
-  ──────────────────────────────────────────────────────────────────────────────
-  Loading  Gauss 2013.06.26 (Extended Gauss functionality for GAP)
-  by Simon Goertzen (http://wwwb.math.rwth-aachen.de/goertzen).
-  Homepage: http://homalg.math.rwth-aachen.de/index.php/extensions/gaussgaussforhomalg
-  ──────────────────────────────────────────────────────────────────────────────
-  ──────────────────────────────────────────────────────────────────────────────
-  Loading  Homology 1.4.5 (Simplicial Homology)
-  by Jean-Guillaume Dumas (http://ljk.imag.fr/membres/Jean-Guillaume.Dumas),
-     Frank Heckenbach (http://www.mi.uni-erlangen.de/~heckenb),
-     B. David Saunders (http://www.cis.udel.edu/~saunders), and
-     Volkmar Welker (http://www.mathematik.uni-marburg.de/~welker).
-  Homepage: http://www.cis.udel.edu/~dumas/Homology/Homology
-  ──────────────────────────────────────────────────────────────────────────────
-  ──────────────────────────────────────────────────────────────────────────────
-  Loading  ToolsForHomalg 2014.04.10 (Provides special methods and knowledge propagation tools)
-  by Mohamed Barakat (http://www.mathematik.uni-kl.de/~barakat/),
-     Sebastian Gutsche (http://wwwb.math.rwth-aachen.de/~gutsche/), and
-     Markus Lange-Hegermann (http://wwwb.math.rwth-aachen.de/~markus/).
-  Homepage: http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/ToolsForHomalg
-  ──────────────────────────────────────────────────────────────────────────────
-  ──────────────────────────────────────────────────────────────────────────────
-  Loading  homalg 2014.09.14 (A homological algebra meta-package for computable Abelian categories)
-  by Mohamed Barakat (http://www.mathematik.uni-kl.de/~barakat/),
-     Sebastian Gutsche (http://wwwb.math.rwth-aachen.de/~gutsche/), and
-     Markus Lange-Hegermann (http://wwwb.math.rwth-aachen.de/~markus/).
-  Homepage: http://homalg.math.rwth-aachen.de/index.php/core-packages/homalg-package
-  ──────────────────────────────────────────────────────────────────────────────
-  ──────────────────────────────────────────────────────────────────────────────
-  Loading  MatricesForHomalg 2014.08.26 (Lazy evaluated matrices with clever operations for the homalg project)
-  by Mohamed Barakat (http://www.mathematik.uni-kl.de/~barakat/),
-     Markus Lange-Hegermann (http://wwwb.math.rwth-aachen.de/~markus/),
-     Martin Leuner (http://wwwb.math.rwth-aachen.de/Mitarbeiter/leuner.php), and
-     Vinay Wagh (http://www.iitg.ernet.in/vinay.wagh/).
-  Homepage: http://homalg.math.rwth-aachen.de/index.php/core-packages/matricesforhomalg
-  ──────────────────────────────────────────────────────────────────────────────
-  ──────────────────────────────────────────────────────────────────────────────
-  Loading  GaussForHomalg 2013.09.20 (Gauss functionality for the homalg project)
-  by Simon Goertzen (http://wwwb.math.rwth-aachen.de/goertzen).
-  Homepage: http://homalg.math.rwth-aachen.de/index.php/extensions/gaussgaussforhomalg
-  ──────────────────────────────────────────────────────────────────────────────
-  ──────────────────────────────────────────────────────────────────────────────
-  Loading  Modules 2014.07.02 (A homalg based package for the Abelian category of finitely presented modules over computable rings)
-  by Thomas Bächler (http://wwwb.math.rwth-aachen.de/~thomas/),
-     Mohamed Barakat (http://www.mathematik.uni-kl.de/~barakat/),
-     Florian Diebold (),
-     Sebastian Gutsche (http://wwwb.math.rwth-aachen.de/~gutsche/), and
-     Markus Lange-Hegermann (http://wwwb.math.rwth-aachen.de/~markus/).
-  Homepage: http://homalg.math.rwth-aachen.de/index.php/core-packages/modules
-  ──────────────────────────────────────────────────────────────────────────────
-  ──────────────────────────────────────────────────────────────────────────────
+  ─────────────────────────────────────────────────────────────────────────
+  ...
+  ─────────────────────────────────────────────────────────────────────────
   Loading  GRAPE 4.6.1 (GRaph Algorithms using PErmutation groups)
   by Leonard H. Soicher (http://www.maths.qmul.ac.uk/~leonard/).
   Homepage: http://www.maths.qmul.ac.uk/~leonard/grape/
-  ──────────────────────────────────────────────────────────────────────────────
+  ─────────────────────────────────────────────────────────────────────────
   Loading simpcomp 2.1.8
   by F.Effenberger and J.Spreer
   https://github.com/simpcomp-team/simpcomp/
   true
 </pre>
 
- - Run `SCRunTest();` for a quick self test of `simpcomp` that assures the package
-   works correctly. The output of the test function should look like this (the
-   number printed after `GAP4stones` is a performance measure of your system and
-   thus may differ from computer to computer):
+- Run `SCRunTest();` for a quick self test of `simpcomp` that assures the package
+  works correctly. The output of the test function should look like this (the
+  number printed after `GAP4stones` is a performance measure of your system and
+  thus may differ from computer to computer):
+
 <pre>
   gap> SCRunTest();
   + simpcomp package test
@@ -137,9 +91,9 @@ see the file COPYING in the `simpcomp` directory or
   true
 </pre>
 
- - If you want `simpcomp` to automatically load upon `GAP` startup, either set the
-   variable `Autoload:=true` in `GAPROOT/pkg/simpcomp/PackageInfo.g` (in line ~94)
-   or add the command `LoadPackage("simpcomp");` to your `~/.gaprc`.
+- If you want `simpcomp` to automatically load upon `GAP` startup, either set the
+  variable `Autoload:=true` in `GAPROOT/pkg/simpcomp/PackageInfo.g` (in line ~94)
+  or add the command `LoadPackage("simpcomp");` to your `~/.gaprc`.
 
 ## Changes
 
