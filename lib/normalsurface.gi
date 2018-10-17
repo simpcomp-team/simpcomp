@@ -9,7 +9,7 @@
 ################################################################################
 
 SCNormalSurfaceFamily:=NewFamily("SCNormalSurfaceFamily",SCIsNormalSurface and IsMutable and IsCopyable);
-SCNormalSurfaceType:=NewType(SCNormalSurfaceFamily,SCIsNormalSurface and IsAttributeStoringRep);
+SCNormalSurfaceType:=NewType(SCNormalSurfaceFamily,SCIsNormalSurface and IsAttributeStoringRep and IsListOrCollection);
 
 #properties of which the values are displayed by ViewObj of SCNormalSurface 
 SCIntFunc.SCNSViewProperties:=[ "Name", "Dim", "FVector", "EulerCharacteristic", "IsOrientable", "Homology", "TopologicalType" ];
