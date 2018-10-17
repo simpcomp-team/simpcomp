@@ -15,7 +15,7 @@ Subtitle := "A GAP toolbox for simplicial complexes",
 Version := "2.1.8",
 Date := "05/02/2018",
 
-PackageWWWHome := "https://simpcomp-team.github.io/simpcomp",
+PackageWWWHome := "https://simpcomp-team.github.io/simpcomp/",
 README_URL := Concatenation( ~.PackageWWWHome, "README" ),
 PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
 
