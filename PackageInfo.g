@@ -33,7 +33,7 @@ Persons := [
       LastName      := "Effenberger",
       FirstNames    := "Felix",
       IsAuthor      := true,
-      IsMaintainer  := true,
+      IsMaintainer  := false,
       Email         := "exilef@gmail.com",
       WWWHome       := "https://www.linkedin.com/in/felix-effenberger-26013a146/?originalSubdomain=de",
       PostalAddress := Concatenation( [
@@ -50,10 +50,10 @@ Persons := [
       WWWHome       := "http://www.tacet.de/Jonathan",
       PostalAddress := Concatenation( [
             "Discrete Geometry Group\n",
-            "Institut fuer Mathematik\n",
-            "Freie Universitaet Berlin" ] ),
+            "Mathematical Institute\n",
+            "Freie Universität Berlin" ] ),
       Place         := "Arnimallee 2, 14195 Berlin",
-      Institution   := "Freie Universitaet Berlin")
+      Institution   := "Freie Universität Berlin")
     ],
 
 ##  Status information. Currently the following cases are recognized:
