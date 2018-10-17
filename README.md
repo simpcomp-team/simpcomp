@@ -42,7 +42,8 @@ see the file COPYING in the `simpcomp` directory or
 
 ## Download and installation
 
-- Install the [GAP](http://www.gap-system.org) system, version 4.5 or higher.
+- Install the [GAP](http://www.gap-system.org) system, 
+  version 4.5 or higher.
 
 - (Optional) Download the current [simpcomp](https://github.com/simpcomp-team/simpcomp)
   Version (This step is only required if you want to use features of `simpcomp`
