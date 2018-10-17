@@ -16,3 +16,6 @@ doc/**
 /missing
 /src/.deps/
 /src/*.o
+
+/gh-pages/
+/tmp/
