@@ -47,7 +47,7 @@ suggested-pkgs:
       url: "http://homalg-project.github.io/homalg_project/Modules/"
 
 www: https://simpcomp-team.github.io/simpcomp/
-readme: README
+readme: README.md
 packageinfo: https://simpcomp-team.github.io/simpcomp/PackageInfo.g
 
 downloads:
