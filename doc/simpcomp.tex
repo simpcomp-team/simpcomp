@@ -2478,7 +2478,7 @@ pseudomanifold. Compare \texttt{SCExportIsoSig} (\ref{SCExportIsoSig}), which re
    gap> c:=SCSeriesBdHandleBody(3,9);;
    gap> s:=SCExportToString(c); time;
    "deffg.h.f.fahaiciai.i.hai.fbgeiagihbhceceba.g.gag"
-   4
+   0
    gap> s:=SCExportIsoSig(c); time;
    "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
    12
@@ -9410,10 +9410,8 @@ returned by this function.
 \begin{Verbatim}[commandchars=@|J,fontsize=\small,frame=single,label=Example]
    Greetings master,
    
-   this is simpcomp 2.1.9 running on igt215.mathematik.uni-stuttgart.de
-   (Linux igt215 2.6.26-2-amd64 #1 SMP Thu Nov 5 02:23:12 UTC 2009 x86_64
-   GNU/Linux), GAP 4.4.12.
-   
+   this is simpcomp 2.1.9 running on comp01.maths.fancytown.edu
+  
    I have been working hard for 0 seconds and have a message for you, see below.
    
    #### START MESSAGE ####
@@ -10437,15 +10435,15 @@ a list of pairs of the form \texttt{[ integer, list ]} upon success, fail otherw
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   36
+   32
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomRevLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   36
+   32
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseEngstroem,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   80
+   76
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
@@ -11864,7 +11862,7 @@ differs from system to system.
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> SCRunTest();
    simpcomp package test
-   msecs: 9588
+   msecs: 7100
    true
    
 \end{Verbatim}

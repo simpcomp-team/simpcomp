@@ -258,7 +258,7 @@ entries :=
       "X7AD9737B7BAF4816" ], [ "\033[2XSCMoves\033[102X", "9.2-9", [ 9, 2, 9 ], 370, 150, "scmoves", "X87B1CBC97FC5C120" ], [ "\033[2XSCRMoves\033[102X", "9.2-10", [ 9, 2, 10 ], 391, 150, "scrmoves", 
       "X7E70D44179ED6A78" ], [ "\033[2XSCRandomize\033[102X", "9.2-11", [ 9, 2, 11 ], 415, 151, "scrandomize", "X8176063785DC4C35" ], [ "\033[2XSCReduceAsSubcomplex\033[102X", "9.2-12", [ 9, 2, 12 ], 
       449, 151, "screduceassubcomplex", "X85D69E4F84E8E7D9" ], [ "\033[2XSCReduceComplex\033[102X", "9.2-13", [ 9, 2, 13 ], 493, 152, "screducecomplex", "X7FF4BBEC8574C58F" ], 
-  [ "\033[2XSCReduceComplexEx\033[102X", "9.2-14", [ 9, 2, 14 ], 532, 153, "screducecomplexex", "X814D9AE287F64F74" ], [ "\033[2XSCReduceComplexFast\033[102X", "9.2-15", [ 9, 2, 15 ], 660, 155, 
+  [ "\033[2XSCReduceComplexEx\033[102X", "9.2-14", [ 9, 2, 14 ], 532, 153, "screducecomplexex", "X814D9AE287F64F74" ], [ "\033[2XSCReduceComplexFast\033[102X", "9.2-15", [ 9, 2, 15 ], 658, 155, 
       "screducecomplexfast", "X8714A0A578A281C0" ], [ "\033[2XSCBlowup\033[102X", "10.2-1", [ 10, 2, 1 ], 25, 156, "scblowup", "X80BB246E818412B1" ], 
   [ "\033[2XSCMappingCylinder\033[102X", "10.2-2", [ 10, 2, 2 ], 110, 158, "scmappingcylinder", "X7EC03E0C7EA8AA00" ], [ "\033[2XSCIsTight\033[102X", "11.1-1", [ 11, 1, 1 ], 17, 159, "scistight", 
       "X8337AE0E7B0A91D4" ], [ "\033[2XSCMorseIsPerfect\033[102X", "11.1-2", [ 11, 1, 2 ], 249, 163, "scmorseisperfect", "X7E5B488D7F2C61C2" ], 
