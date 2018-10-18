@@ -1,8 +1,17 @@
 *~
 doc/gapdoc/**/*
 doc/gapdoc
-
-
+doc/simpcomp.aux
+doc/simpcomp.bbl
+doc/simpcomp.blg
+doc/simpcomp.brf
+doc/simpcomp.idx
+doc/simpcomp.ilg
+doc/simpcomp.ind
+doc/simpcomp.log
+doc/simpcomp.out
+doc/simpcomp.pnr
+doc/simpcomp.toc
 
 /aclocal.m4
 /autom4te.cache/
