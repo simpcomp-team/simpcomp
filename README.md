@@ -73,7 +73,7 @@ see the file COPYING in the `simpcomp` directory or
   by Leonard H. Soicher (http://www.maths.qmul.ac.uk/~leonard/).
   Homepage: http://www.maths.qmul.ac.uk/~leonard/grape/
   ─────────────────────────────────────────────────────────────────────────
-  Loading simpcomp %%%VERSION%%%
+  Loading simpcomp 2.1.8
   by F.Effenberger and J.Spreer
   https://github.com/simpcomp-team/simpcomp/
   true
@@ -96,7 +96,6 @@ see the file COPYING in the `simpcomp` directory or
   or add the command `LoadPackage("simpcomp");` to your `~/.gaprc`.
 
 ## Changes
-
 
 05/02/2018 - Version 2.1.8: MINOR UPDATE
 - Minor changes in documentation/manual
