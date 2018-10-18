@@ -15,3 +15,7 @@ bistellar_SOURCES = src/bistellar_move.cpp src/bistellar_move.h \
 all-local: bistellar
 	mkdir -p bin
 	cp bistellar bin/bistellar
+	rm -f bistellar
+	rm -f *.o
+	rm -f src/*.o
+
