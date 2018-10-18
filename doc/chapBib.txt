@@ -104,7 +104,7 @@
   
   [[20XLut05[120X] [16XLutz, F. H.[116X, [17XTriangulated Manifolds with Few Vertices: Combinatorial Manifolds[117X (2005), {\tt arXiv:math/0506372v1 [math.CO]}, Preprint, 37 pages.
   
-  [[20XMP14[120X] [16XMcKay, B. D. and Piperno, A.[116X, [17XPractical graph isomorphism, \II\ [117X, [18XJournal of Symbolic Computation [118X, [19X60[119X, 0 (2014), 94 - 112, (()).
+  [[20XMP14[120X] [16XMcKay, B. D. and Piperno, A.[116X, [17XPractical graph isomorphism, \II\ [117X, [18XJournal of Symbolic Computation [118X, [19X60[119X, 0 (2014), 94 - 112.
   
   [[20XPac87[120X]  [16XPachner,  U.[116X,  [17XKonstruktionsmethoden  und  das kombinatorische Hom\"oomorphieproblem f\"ur Triangulierungen kompakter semilinearer Mannigfaltigkeiten[117X, [18XAbh. Math. Sem. Uni. Hamburg[118X, [19X57[119X (1987),
   69--86.

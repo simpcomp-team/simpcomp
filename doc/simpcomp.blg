@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: simpcomp.aux
 The style file: alpha.bst
 Database file #1: biblio.bib
-I was expecting a `,' or a `}'---line 69 of file biblio.bib
+I was expecting a `,' or a `}'---line 58 of file biblio.bib
  :   
  :   year = {2016},
 (Error may have been on previous line)
@@ -17,7 +17,7 @@ while executing---line 1250 of file alpha.bst
 Warning--there's a number but no volume in Schulz94PolyhMnfPoly
 You've used 64 entries,
             2543 wiz_defined-function locations,
-            1021 strings with 15826 characters,
+            1020 strings with 15814 characters,
 and the built_in function-call counts, 23853 in all, are:
 = -- 2485
 > -- 846
@@ -40,11 +40,11 @@ int.to.str$ -- 0
 missing$ -- 59
 newline$ -- 335
 num.names$ -- 192
-pop$ -- 339
+pop$ -- 340
 preamble$ -- 1
 purify$ -- 417
 quote$ -- 0
-skip$ -- 815
+skip$ -- 814
 stack$ -- 0
 substring$ -- 1497
 swap$ -- 152
