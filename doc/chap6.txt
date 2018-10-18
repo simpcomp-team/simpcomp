@@ -10,7 +10,7 @@
   
   [1X6.1-1 SCFromFacets[101X
   
-  [29X[2XSCFromFacets[102X( [3Xfacets[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFromFacets[102X( [3Xfacets[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -53,7 +53,7 @@
   
   [1X6.1-2 SC[101X
   
-  [29X[2XSC[102X( [3Xfacets[103X ) [32X method
+  [33X[1;0Y[29X[2XSC[102X( [3Xfacets[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -75,7 +75,7 @@
   
   [1X6.1-3 SCFromDifferenceCycles[101X
   
-  [29X[2XSCFromDifferenceCycles[102X( [3Xdiffcycles[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFromDifferenceCycles[102X( [3Xdiffcycles[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -112,7 +112,7 @@
   
   [1X6.1-4 SCFromGenerators[101X
   
-  [29X[2XSCFromGenerators[102X( [3Xgroup[103X, [3Xgenerators[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFromGenerators[102X( [3Xgroup[103X, [3Xgenerators[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -198,7 +198,7 @@
   
   [1X6.2-1 SCExportToString[101X
   
-  [29X[2XSCExportToString[102X( [3Xc[103X ) [32X function
+  [33X[1;0Y[29X[2XSCExportToString[102X( [3Xc[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ystring upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  one  string representation of a closed and strongly connected weak
@@ -209,7 +209,7 @@
     [4X[28X gap> c:=SCSeriesBdHandleBody(3,9);;[128X[104X
     [4X[28X gap> s:=SCExportToString(c); time;[128X[104X
     [4X[28X "deffg.h.f.fahaiciai.i.hai.fbgeiagihbhceceba.g.gag"[128X[104X
-    [4X[28X 0[128X[104X
+    [4X[28X 4[128X[104X
     [4X[28X gap> s:=SCExportIsoSig(c); time;[128X[104X
     [4X[28X "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"[128X[104X
     [4X[28X 12[128X[104X
@@ -218,7 +218,7 @@
   
   [1X6.2-2 SCExportIsoSig[101X
   
-  [29X[2XSCExportIsoSig[102X( [3Xc[103X ) [32X method
+  [33X[1;0Y[29X[2XSCExportIsoSig[102X( [3Xc[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ystring upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  isomorphism  signature  of  a closed, strongly connected weak
@@ -234,7 +234,7 @@
   
   [1X6.2-3 SCFromIsoSig[101X
   
-  [29X[2XSCFromIsoSig[102X( [3Xstr[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFromIsoSig[102X( [3Xstr[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya SCSimplicialComplex object upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes a simplicial complex from its isomorphism signature. If a file with
@@ -256,7 +256,7 @@
     [4X[28X     [128X[104X
     [4X[28X      Properties known: Dim, ExportIsoSig, FacetsEx, Name, Vertices.[128X[104X
     [4X[28X     [128X[104X
-    [4X[28X      Name="unnamed complex 7"[128X[104X
+    [4X[28X      Name="unnamed complex 9"[128X[104X
     [4X[28X      Dim=3[128X[104X
     [4X[28X     [128X[104X
     [4X[28X     /SimplicialComplex] ][128X[104X
@@ -270,7 +270,7 @@
   
   [1X6.3-1 SCBdCyclicPolytope[101X
   
-  [29X[2XSCBdCyclicPolytope[102X( [3Xd[103X, [3Xn[103X ) [32X function
+  [33X[1;0Y[29X[2XSCBdCyclicPolytope[102X( [3Xd[103X, [3Xn[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -300,7 +300,7 @@
   
   [1X6.3-2 SCBdSimplex[101X
   
-  [29X[2XSCBdSimplex[102X( [3Xd[103X ) [32X function
+  [33X[1;0Y[29X[2XSCBdSimplex[102X( [3Xd[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -336,7 +336,7 @@
   
   [1X6.3-3 SCEmpty[101X
   
-  [29X[2XSCEmpty[102X(  ) [32X function
+  [33X[1;0Y[29X[2XSCEmpty[102X(  ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -358,7 +358,7 @@
   
   [1X6.3-4 SCSimplex[101X
   
-  [29X[2XSCSimplex[102X( [3Xd[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSimplex[102X( [3Xd[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -382,11 +382,11 @@
   
   [1X6.3-5 SCSeriesTorus[101X
   
-  [29X[2XSCSeriesTorus[102X( [3Xd[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesTorus[102X( [3Xd[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
-  [33X[0;0YGenerates the [22Xd[122X-torus described in [K{\86].[133X
+  [33X[0;0YGenerates the [22Xd[122X-torus described in [K\t86].[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> t4:=SCSeriesTorus(4);[128X[104X
@@ -407,7 +407,7 @@
   
   [1X6.3-6 SCSurface[101X
   
-  [29X[2XSCSurface[102X( [3Xg[103X, [3Xorient[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSurface[102X( [3Xg[103X, [3Xorient[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -475,7 +475,7 @@
   
   [1X6.3-7 SCFVectorBdCrossPolytope[101X
   
-  [29X[2XSCFVectorBdCrossPolytope[102X( [3Xd[103X ) [32X function
+  [33X[1;0Y[29X[2XSCFVectorBdCrossPolytope[102X( [3Xd[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya list of integers of size [10Xd + 1[110X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes the [22Xf[122X-vector of the [22Xd[122X-dimensional cross polytope without generating
@@ -502,7 +502,7 @@
   
   [1X6.3-8 SCFVectorBdCyclicPolytope[101X
   
-  [29X[2XSCFVectorBdCyclicPolytope[102X( [3Xd[103X, [3Xn[103X ) [32X function
+  [33X[1;0Y[29X[2XSCFVectorBdCyclicPolytope[102X( [3Xd[103X, [3Xn[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya list of integers of size [10Xd+1[110X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes the [22Xf[122X-vector of the [3Xd[103X-dimensional cyclic polytope on [3Xn[103X vertices, [22Xn≥
@@ -521,7 +521,7 @@
   
   [1X6.3-9 SCFVectorBdSimplex[101X
   
-  [29X[2XSCFVectorBdSimplex[102X( [3Xd[103X ) [32X function
+  [33X[1;0Y[29X[2XSCFVectorBdSimplex[102X( [3Xd[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya list of integers of size [10Xd + 1[110X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  [22Xf[122X-vector  of  the [22Xd[122X-simplex without generating the underlying
@@ -575,7 +575,7 @@
   
   [1X6.4-1 SCSeriesAGL[101X
   
-  [29X[2XSCSeriesAGL[102X( [3Xp[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesAGL[102X( [3Xp[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya  permutation  group  and  a  list  of  [22X5[122X-tuples of integers upon
             success, [9Xfail[109X otherwise.[133X
   
@@ -622,7 +622,7 @@
   
   [1X6.4-2 SCSeriesBrehmKuehnelTorus[101X
   
-  [29X[2XSCSeriesBrehmKuehnelTorus[102X( [3Xn[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesBrehmKuehnelTorus[102X( [3Xn[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -666,7 +666,7 @@
   
   [1X6.4-3 SCSeriesBdHandleBody[101X
   
-  [29X[2XSCSeriesBdHandleBody[102X( [3Xd[103X, [3Xn[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesBdHandleBody[102X( [3Xd[103X, [3Xn[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -712,7 +712,7 @@
   
   [1X6.4-4 SCSeriesBid[101X
   
-  [29X[2XSCSeriesBid[102X( [3Xi[103X, [3Xd[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesBid[102X( [3Xi[103X, [3Xd[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya simplicial complex upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YConstructs the complex [22XB(i,d)[122X as described in [KN12], cf. [Eff11a], [Spa99].
@@ -742,7 +742,8 @@
     [4X[28X gap> SCFVector(s2s2);[128X[104X
     [4X[28X [ 12, 60, 160, 180, 72 ][128X[104X
     [4X[28X gap> SCAutomorphismGroup(s2s2); [128X[104X
-    [4X[28X TransitiveGroup(12,28) = D(4)[x]S(3)[128X[104X
+    [4X[28X Group([ (1,3)(4,6)(7,9)(10,12), (1,5)(2,10)(4,8)(6,12)(7,11), (1,10,7,4)[128X[104X
+    [4X[28X (2,3,8,9)(5,12,11,6) ])[128X[104X
     [4X[28X gap> SCIsManifold(s2s2); [128X[104X
     [4X[28X true[128X[104X
     [4X[28X gap> SCHomology(s2s2);[128X[104X
@@ -752,7 +753,7 @@
   
   [1X6.4-5 SCSeriesC2n[101X
   
-  [29X[2XSCSeriesC2n[102X( [3Xn[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesC2n[102X( [3Xn[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -808,7 +809,7 @@
   
   [1X6.4-6 SCSeriesConnectedSum[101X
   
-  [29X[2XSCSeriesConnectedSum[102X( [3Xk[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesConnectedSum[102X( [3Xk[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -841,7 +842,7 @@
   
   [1X6.4-7 SCSeriesCSTSurface[101X
   
-  [29X[2XSCSeriesCSTSurface[102X( [3Xl[103X[, [3Xj[103X], [3X2k[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesCSTSurface[102X( [3Xl[103X[, [3Xj[103X], [3X2k[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -877,7 +878,7 @@
   
   [1X6.4-8 SCSeriesD2n[101X
   
-  [29X[2XSCSeriesD2n[102X( [3Xn[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesD2n[102X( [3Xn[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -901,7 +902,9 @@
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> SCAutomorphismGroup(d);  [128X[104X
-    [4X[28X TransitiveGroup(30,14) = t30n14[128X[104X
+    [4X[28X Group([ (1,3)(4,30)(5,29)(6,28)(7,27)(8,26)(9,25)(10,24)(11,23)(12,22)(13,21)[128X[104X
+    [4X[28X (14,20)(15,19)(16,18), (1,4)(2,3)(5,30)(6,29)(7,28)(8,27)(9,26)(10,25)(11,24)[128X[104X
+    [4X[28X (12,23)(13,22)(14,21)(15,20)(16,19)(17,18) ])[128X[104X
     [4X[28X gap> StructureDescription(last);[128X[104X
     [4X[28X "D60"[128X[104X
     [4X[28X [128X[104X
@@ -933,7 +936,7 @@
   
   [1X6.4-9 SCSeriesHandleBody[101X
   
-  [29X[2XSCSeriesHandleBody[102X( [3Xd[103X, [3Xn[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesHandleBody[102X( [3Xd[103X, [3Xn[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -958,10 +961,10 @@
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> SCAutomorphismGroup(c);    [128X[104X
-    [4X[28X PrimitiveGroup(7,2) = D(2*7)[128X[104X
+    [4X[28X Group([ (1,3)(4,7)(5,6), (1,4)(2,3)(5,7) ])[128X[104X
     [4X[28X gap> bd:=SCBoundary(c);;[128X[104X
     [4X[28X gap> SCAutomorphismGroup(bd);[128X[104X
-    [4X[28X PrimitiveGroup(7,4) = AGL(1, 7)[128X[104X
+    [4X[28X Group([ (1,2)(3,7)(4,6), (1,4,2)(3,5,6) ])[128X[104X
     [4X[28X gap> SCIsIsomorphic(bd,SCSeriesBdHandleBody(2,7));[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
@@ -969,7 +972,7 @@
   
   [1X6.4-10 SCSeriesHomologySphere[101X
   
-  [29X[2XSCSeriesHomologySphere[102X( [3Xp[103X, [3Xq[103X, [3Xr[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesHomologySphere[102X( [3Xp[103X, [3Xq[103X, [3Xr[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -1009,7 +1012,7 @@
   
   [1X6.4-11 SCSeriesK[101X
   
-  [29X[2XSCSeriesK[102X( [3Xi[103X, [3Xk[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesK[102X( [3Xi[103X, [3Xk[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -1036,7 +1039,7 @@
   
   [1X6.4-12 SCSeriesKu[101X
   
-  [29X[2XSCSeriesKu[102X( [3Xn[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesKu[102X( [3Xn[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -1073,16 +1076,15 @@
     [4X[28X gap> Mminus:=SCSpan(c,[1,2,3,4,9,10,11,12]);;                  [128X[104X
     [4X[28X gap> Mplus:=SCSpan(c,[5,6,7,8,13,14,15,16]);;                  [128X[104X
     [4X[28X gap> SCCollapseGreedy(Mminus).Facets;[128X[104X
-    [4X[28X [ [ 1, 9 ], [ 1, 10 ], [ 3, 10 ], [ 3, 11 ], [ 4, 9 ], [ 4, 12 ], [ 11, 12 ] ][128X[104X
+    [4X[28X [ [ 3, 4 ], [ 3, 10 ], [ 4, 12 ], [ 9, 10 ], [ 9, 12 ] ][128X[104X
     [4X[28X gap> SCCollapseGreedy(Mplus).Facets; [128X[104X
-    [4X[28X [ [ 5, 8 ], [ 5, 16 ], [ 6, 14 ], [ 6, 15 ], [ 8, 15 ], [ 13, 14 ], [128X[104X
-    [4X[28X   [ 13, 16 ] ][128X[104X
+    [4X[28X [ [ 5, 6 ], [ 5, 8 ], [ 6, 14 ], [ 7, 8 ], [ 7, 15 ], [ 14, 15 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [1X6.4-13 SCSeriesL[101X
   
-  [29X[2XSCSeriesL[102X( [3Xi[103X, [3Xk[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesL[102X( [3Xi[103X, [3Xk[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -1107,7 +1109,7 @@
   
   [1X6.4-14 SCSeriesLe[101X
   
-  [29X[2XSCSeriesLe[102X( [3Xk[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesLe[102X( [3Xk[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -1138,7 +1140,7 @@
   
   [1X6.4-15 SCSeriesLensSpace[101X
   
-  [29X[2XSCSeriesLensSpace[102X( [3Xp[103X, [3Xq[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesLensSpace[102X( [3Xp[103X, [3Xq[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -1190,7 +1192,7 @@
   
   [1X6.4-16 SCSeriesPrimeTorus[101X
   
-  [29X[2XSCSeriesPrimeTorus[102X( [3Xl[103X, [3Xj[103X, [3Xp[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesPrimeTorus[102X( [3Xl[103X, [3Xj[103X, [3Xp[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -1207,23 +1209,24 @@
   
   [1X6.4-17 SCSeriesSeifertFibredSpace[101X
   
-  [29X[2XSCSeriesSeifertFibredSpace[102X( [3Xp[103X, [3Xq[103X, [3Xr[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesSeifertFibredSpace[102X( [3Xp[103X, [3Xq[103X, [3Xr[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
   [33X[0;0YGenerates a combinatorial Seifert fibred space of type[133X
   
   
-        [33X[1;6Y[24X[33X[0;0YSFS [ (\mathbb{T}^2)^{(a-1)(b-1)} : (p/a,b_1)^b , (q/b,b_2)^a,
-        (r/ab,b_3) ][133X [124X[133X
+  [24X[33X[0;6YSFS [ (\mathbb{T}^2)^{(a-1)(b-1)} : (p/a,b_1)^b , (q/b,b_2)^a, (r/ab,b_3) ][133X
   
+  [124X
   
   [33X[0;0Ywhere  [22Xp[122X  and [22Xq[122X are co-prime, [22Xa = operatornamegcd (p,r)[122X, [22Xb = operatornamegcd
   (p,r)[122X, and the [22Xb_i[122X are given by the identity[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\frac{b_1}{p} + \frac{b_2}{q} + \frac{b_3}{r} = \frac{\pm ab}{pqr}.[133X [124X[133X
+  [24X[33X[0;6Y\frac{b_1}{p} + \frac{b_2}{q} + \frac{b_3}{r} = \frac{\pm ab}{pqr}.[133X
   
+  [124X
   
   [33X[0;0YThis  [22X3[122X-parameter  family of combinatorial [22X3[122X-manifolds contains the families
   generated  by  [2XSCSeriesHomologySphere[102X ([14X6.4-10[114X), [2XSCSeriesConnectedSum[102X ([14X6.4-6[114X)
@@ -1250,7 +1253,7 @@
   
   [1X6.4-18 SCSeriesS2xS2[101X
   
-  [29X[2XSCSeriesS2xS2[102X( [3Xk[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesS2xS2[102X( [3Xk[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -1278,7 +1281,7 @@
   
   [1X6.5-1 SCChiralMap[101X
   
-  [29X[2XSCChiralMap[102X( [3Xm[103X, [3Xg[103X ) [32X function
+  [33X[1;0Y[29X[2XSCChiralMap[102X( [3Xm[103X, [3Xg[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya [9XSCSimplicialComplex[109X object upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  the  (hyperbolic)  chiral  map  of  vertex valence [3Xm[103X and genus [3Xg[103X if
@@ -1308,7 +1311,7 @@
   
   [1X6.5-2 SCChiralMaps[101X
   
-  [29X[2XSCChiralMaps[102X(  ) [32X function
+  [33X[1;0Y[29X[2XSCChiralMaps[102X(  ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya list of lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  a  list  of  all  simplicial (hyperbolic) chiral maps of orientable
@@ -1340,7 +1343,7 @@
   
   [1X6.5-3 SCChiralTori[101X
   
-  [29X[2XSCChiralTori[102X( [3Xn[103X ) [32X function
+  [33X[1;0Y[29X[2XSCChiralTori[102X( [3Xn[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya [9XSCSimplicialComplex[109X object upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  a  list  of chiral triangulations of the torus with [22Xn[122X vertices. See
@@ -1374,7 +1377,7 @@
   
   [1X6.5-4 SCNrChiralTori[101X
   
-  [29X[2XSCNrChiralTori[102X( [3Xn[103X ) [32X function
+  [33X[1;0Y[29X[2XSCNrChiralTori[102X( [3Xn[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Yan integer upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  the  number of simplicial chiral maps on the torus with [22Xn[122X vertices,
@@ -1390,7 +1393,7 @@
   
   [1X6.5-5 SCNrRegularTorus[101X
   
-  [29X[2XSCNrRegularTorus[102X( [3Xn[103X ) [32X function
+  [33X[1;0Y[29X[2XSCNrRegularTorus[102X( [3Xn[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Yan integer upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  the number of simplicial regular maps on the torus with [22Xn[122X vertices,
@@ -1406,7 +1409,7 @@
   
   [1X6.5-6 SCRegularMap[101X
   
-  [29X[2XSCRegularMap[102X( [3Xm[103X, [3Xg[103X, [3Xorient[103X ) [32X function
+  [33X[1;0Y[29X[2XSCRegularMap[102X( [3Xm[103X, [3Xg[103X, [3Xorient[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya [9XSCSimplicialComplex[109X object upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  the  (hyperbolic)  regular  map  of  vertex  valence [3Xm[103X, genus [3Xg[103X and
@@ -1440,7 +1443,7 @@
   
   [1X6.5-7 SCRegularMaps[101X
   
-  [29X[2XSCRegularMaps[102X(  ) [32X function
+  [33X[1;0Y[29X[2XSCRegularMaps[102X(  ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya list of lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  a  list  of  all simplicial (hyperbolic) regular maps of orientable
@@ -1475,7 +1478,7 @@
   
   [1X6.5-8 SCRegularTorus[101X
   
-  [29X[2XSCRegularTorus[102X( [3Xn[103X ) [32X function
+  [33X[1;0Y[29X[2XSCRegularTorus[102X( [3Xn[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya [9XSCSimplicialComplex[109X object upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  a  list of regular triangulations of the torus with [22Xn[122X vertices (the
@@ -1502,7 +1505,7 @@
   
   [1X6.5-9 SCSeriesSymmetricTorus[101X
   
-  [29X[2XSCSeriesSymmetricTorus[102X( [3Xp[103X, [3Xq[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSeriesSymmetricTorus[102X( [3Xp[103X, [3Xq[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya [9XSCSimplicialComplex[109X object upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  the  equivarient  triangulation  of  the  torus  [22X{ 3,6 }_(p,q)[122X with
@@ -1534,7 +1537,7 @@
   
   [1X6.6-1 SCCartesianPower[101X
   
-  [29X[2XSCCartesianPower[102X( [3Xcomplex[103X, [3Xn[103X ) [32X method
+  [33X[1;0Y[29X[2XSCCartesianPower[102X( [3Xcomplex[103X, [3Xn[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -1568,7 +1571,7 @@
   
   [1X6.6-2 SCCartesianProduct[101X
   
-  [29X[2XSCCartesianProduct[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCCartesianProduct[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -1605,7 +1608,7 @@
   
   [1X6.6-3 SCConnectedComponents[101X
   
-  [29X[2XSCConnectedComponents[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCConnectedComponents[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  simplicial complexes of type [10XSCSimplicialComplex[110X upon
             success, [9Xfail[109X otherwise.[133X
   
@@ -1653,7 +1656,7 @@
   
   [1X6.6-4 SCConnectedProduct[101X
   
-  [29X[2XSCConnectedProduct[102X( [3Xcomplex[103X, [3Xn[103X ) [32X method
+  [33X[1;0Y[29X[2XSCConnectedProduct[102X( [3Xcomplex[103X, [3Xn[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -1684,7 +1687,7 @@
   
   [1X6.6-5 SCConnectedSum[101X
   
-  [29X[2XSCConnectedSum[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCConnectedSum[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -1719,7 +1722,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("CP^2");[128X[104X
-    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#-CP^2" ], [ 100, "CP^2#CP^2" ], [128X[104X
+    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#CP^2" ], [ 100, "CP^2#-CP^2" ], [128X[104X
     [4X[28X   [ 400, "CP^2#(S^2xS^2)" ], [ 2486, "Gaifullin CP^2" ], [128X[104X
     [4X[28X   [ 4401, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ][128X[104X
     [4X[28X gap> cp2:=SCLib.Load(last[1][1]);;[128X[104X
@@ -1742,7 +1745,7 @@
   
   [1X6.6-6 SCConnectedSumMinus[101X
   
-  [29X[2XSCConnectedSumMinus[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCConnectedSumMinus[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -1777,7 +1780,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("CP^2");[128X[104X
-    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#-CP^2" ], [ 100, "CP^2#CP^2" ], [128X[104X
+    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#CP^2" ], [ 100, "CP^2#-CP^2" ], [128X[104X
     [4X[28X   [ 400, "CP^2#(S^2xS^2)" ], [ 2486, "Gaifullin CP^2" ], [128X[104X
     [4X[28X   [ 4401, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ][128X[104X
     [4X[28X gap> cp2:=SCLib.Load(last[1][1]);;[128X[104X
@@ -1800,7 +1803,7 @@
   
   [1X6.6-7 SCDifferenceCycleCompress[101X
   
-  [29X[2XSCDifferenceCycleCompress[102X( [3Xsimplex[103X, [3Xmodulus[103X ) [32X function
+  [33X[1;0Y[29X[2XSCDifferenceCycleCompress[102X( [3Xsimplex[103X, [3Xmodulus[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ylist with possibly duplicate entries upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YA  difference  cycle  is  returned, i. e. a list of integer values of length
@@ -1822,7 +1825,7 @@
   
   [1X6.6-8 SCDifferenceCycleExpand[101X
   
-  [29X[2XSCDifferenceCycleExpand[102X( [3Xdiffcycle[103X ) [32X function
+  [33X[1;0Y[29X[2XSCDifferenceCycleExpand[102X( [3Xdiffcycle[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -1843,7 +1846,7 @@
   
   [1X6.6-9 SCStronglyConnectedComponents[101X
   
-  [29X[2XSCStronglyConnectedComponents[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCStronglyConnectedComponents[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  simplicial complexes of type [10XSCSimplicialComplex[110X upon
             success, [9Xfail[109X otherwise.[133X
   
@@ -1882,11 +1885,11 @@
   the  corresponding  group  is a subgroup of the full automorphism group, but
   not  necessarily  the full automorphism group of the triangulations obtained
   in  this  way. The methods and algorithms are based on the works of Frank H.
-  Lutz [Lut03], [ManifoldPage] and in particular his program [10XMANIFOLD_VT[110X.[133X
+  Lutz [Lut03], [Lut] and in particular his program [10XMANIFOLD_VT[110X.[133X
   
   [1X6.7-1 SCsFromGroupExt[101X
   
-  [29X[2XSCsFromGroupExt[102X( [3XG[103X, [3Xn[103X, [3Xd[103X, [3XobjectType[103X, [3Xcache[103X, [3XremoveDoubleEntries[103X, [3Xoutfile[103X, [3XmaxLinkSize[103X, [3Xsubset[103X ) [32X function
+  [33X[1;0Y[29X[2XSCsFromGroupExt[102X( [3XG[103X, [3Xn[103X, [3Xd[103X, [3XobjectType[103X, [3Xcache[103X, [3XremoveDoubleEntries[103X, [3Xoutfile[103X, [3XmaxLinkSize[103X, [3Xsubset[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  simplicial complexes of type [10XSCSimplicialComplex[110X upon
             success, [9Xfail[109X otherwise.[133X
   
@@ -1957,7 +1960,7 @@
   
   [1X6.7-2 SCsFromGroupByTransitivity[101X
   
-  [29X[2XSCsFromGroupByTransitivity[102X( [3Xn[103X, [3Xd[103X, [3Xk[103X, [3Xmaniflag[103X, [3XcomputeAutGroup[103X, [3XremoveDoubleEntries[103X ) [32X function
+  [33X[1;0Y[29X[2XSCsFromGroupByTransitivity[102X( [3Xn[103X, [3Xd[103X, [3Xk[103X, [3Xmaniflag[103X, [3XcomputeAutGroup[103X, [3XremoveDoubleEntries[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  simplicial complexes of type [10XSCSimplicialComplex[110X upon
             success, [9Xfail[109X otherwise.[133X
   
@@ -2005,7 +2008,7 @@
   
   [1X6.8-1 SCNrCyclic3Mflds[101X
   
-  [29X[2XSCNrCyclic3Mflds[102X( [3Xi[103X ) [32X function
+  [33X[1;0Y[29X[2XSCNrCyclic3Mflds[102X( [3Xi[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Yinteger upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  the  number  of  combinatorial  3-manifolds  with transitive cyclic
@@ -2020,7 +2023,7 @@
   
   [1X6.8-2 SCCyclic3MfldTopTypes[101X
   
-  [29X[2XSCCyclic3MfldTopTypes[102X( [3Xi[103X ) [32X function
+  [33X[1;0Y[29X[2XSCCyclic3MfldTopTypes[102X( [3Xi[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya list of strings upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  a  list  of  all topological types that occur in the classification
@@ -2037,7 +2040,7 @@
   
   [1X6.8-3 SCCyclic3Mfld[101X
   
-  [29X[2XSCCyclic3Mfld[102X( [3Xi[103X, [3Xj[103X ) [32X function
+  [33X[1;0Y[29X[2XSCCyclic3Mfld[102X( [3Xi[103X, [3Xj[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -2065,7 +2068,7 @@
   
   [1X6.8-4 SCCyclic3MfldByType[101X
   
-  [29X[2XSCCyclic3MfldByType[102X( [3Xtype[103X ) [32X function
+  [33X[1;0Y[29X[2XSCCyclic3MfldByType[102X( [3Xtype[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -2093,7 +2096,7 @@
   
   [1X6.8-5 SCCyclic3MfldListOfGivenType[101X
   
-  [29X[2XSCCyclic3MfldListOfGivenType[102X( [3Xtype[103X ) [32X function
+  [33X[1;0Y[29X[2XSCCyclic3MfldListOfGivenType[102X( [3Xtype[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -2129,7 +2132,7 @@
   
   [1X6.9-1 SCAltshulerSteinberg[101X
   
-  [29X[2XSCAltshulerSteinberg[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCAltshulerSteinberg[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya non-negative integer upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes the Altshuler-Steinberg determinant.[133X
@@ -2163,7 +2166,7 @@
   
   [1X6.9-2 SCAutomorphismGroup[101X
   
-  [29X[2XSCAutomorphismGroup[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCAutomorphismGroup[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya [5XGAP[105X permutation group upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  automorphism  group  of  a  strongly connected pseudomanifold
@@ -2186,7 +2189,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("K3");            [128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
+    [4X[28X [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ][128X[104X
     [4X[28X gap> k3surf:=SCLib.Load(last[1][1]);; [128X[104X
     [4X[28X gap> SCAutomorphismGroup(k3surf);               [128X[104X
     [4X[28X Group([ (1,3,8,4,9,16,15,2,14,12,6,7,13,5,10), (1,13)(2,14)(3,15)(4,16)(5,9)[128X[104X
@@ -2196,7 +2199,7 @@
   
   [1X6.9-3 SCAutomorphismGroupInternal[101X
   
-  [29X[2XSCAutomorphismGroupInternal[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCAutomorphismGroupInternal[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya [5XGAP[105X permutation group upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  automorphism  group  of  a  strongly connected pseudomanifold
@@ -2222,7 +2225,7 @@
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SC([[1,2],[2,3],[1,3]]);;[128X[104X
     [4X[28X gap> g:=SCAutomorphismGroupInternal(c);[128X[104X
-    [4X[28X PrimitiveGroup(3,2) = S(3)[128X[104X
+    [4X[28X Group([ (1,2), (1,3) ])[128X[104X
     [4X[28X gap> List(g);[128X[104X
     [4X[28X [ (), (1,2,3), (1,3,2), (2,3), (1,2), (1,3) ][128X[104X
     [4X[28X gap> StructureDescription(g);[128X[104X
@@ -2232,7 +2235,7 @@
   
   [1X6.9-4 SCAutomorphismGroupSize[101X
   
-  [29X[2XSCAutomorphismGroupSize[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCAutomorphismGroupSize[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya positive integer group upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  size  of  the  automorphism  group  of  a  strongly connected
@@ -2240,7 +2243,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("K3");            [128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
+    [4X[28X [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ][128X[104X
     [4X[28X gap> k3surf:=SCLib.Load(last[1][1]);;           [128X[104X
     [4X[28X gap> SCAutomorphismGroupSize(k3surf);               [128X[104X
     [4X[28X 240[128X[104X
@@ -2249,7 +2252,7 @@
   
   [1X6.9-5 SCAutomorphismGroupStructure[101X
   
-  [29X[2XSCAutomorphismGroupStructure[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCAutomorphismGroupStructure[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ythe [5XGAP[105X structure description upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  [5XGAP[105X  structure  description  of  the  automorphism group of a
@@ -2257,7 +2260,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("K3");     [128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
+    [4X[28X [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ][128X[104X
     [4X[28X gap> k3surf:=SCLib.Load(last[1][1]);;      [128X[104X
     [4X[28X gap> SCAutomorphismGroupStructure(k3surf);[128X[104X
     [4X[28X "((C2 x C2 x C2 x C2) : C5) : C3"[128X[104X
@@ -2266,7 +2269,7 @@
   
   [1X6.9-6 SCAutomorphismGroupTransitivity[101X
   
-  [29X[2XSCAutomorphismGroupTransitivity[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCAutomorphismGroupTransitivity[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya positive integer upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the transitivity of the automorphism group of a strongly connected
@@ -2276,7 +2279,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("K3");            [128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
+    [4X[28X [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ][128X[104X
     [4X[28X gap> k3surf:=SCLib.Load(last[1][1]);;           [128X[104X
     [4X[28X gap> SCAutomorphismGroupTransitivity(k3surf);               [128X[104X
     [4X[28X 2[128X[104X
@@ -2285,7 +2288,7 @@
   
   [1X6.9-7 SCBoundary[101X
   
-  [29X[2XSCBoundary[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCBoundary[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -2337,7 +2340,7 @@
   
   [1X6.9-8 SCDehnSommervilleCheck[101X
   
-  [29X[2XSCDehnSommervilleCheck[102X( [3Xc[103X ) [32X method
+  [33X[1;0Y[29X[2XSCDehnSommervilleCheck[102X( [3Xc[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks  if the simplicial complex [3Xc[103X fulfills the Dehn Sommerville equations:
@@ -2357,7 +2360,7 @@
   
   [1X6.9-9 SCDehnSommervilleMatrix[101X
   
-  [29X[2XSCDehnSommervilleMatrix[102X( [3Xd[103X ) [32X method
+  [33X[1;0Y[29X[2XSCDehnSommervilleMatrix[102X( [3Xd[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  [10X(d+1)[110X[22X×[122X[10XInt(d+1/2)[110X matrix with integer entries upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -2378,7 +2381,7 @@
   
   [1X6.9-10 SCDifferenceCycles[101X
   
-  [29X[2XSCDifferenceCycles[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCDifferenceCycles[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes the difference cycles of [3Xcomplex[103X in standard labeling if [3Xcomplex[103X is
@@ -2405,7 +2408,7 @@
   
   [1X6.9-11 SCDim[101X
   
-  [29X[2XSCDim[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCDim[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Yan integer [22X≥ -1[122X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the dimension of a simplicial complex. If the complex is not pure,
@@ -2423,7 +2426,7 @@
   
   [1X6.9-12 SCDualGraph[101X
   
-  [29X[2XSCDualGraph[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCDualGraph[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y1-dimensional  simplicial complex of type [10XSCSimplicialComplex[110X upon
             success, [9Xfail[109X otherwise.[133X
   
@@ -2452,7 +2455,7 @@
   
   [1X6.9-13 SCEulerCharacteristic[101X
   
-  [29X[2XSCEulerCharacteristic[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCEulerCharacteristic[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Yinteger upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  Euler characteristic [23X \chi(C)=\sum \limits_{i=0}^{d} (-1)^{i}
@@ -2471,7 +2474,7 @@
   
   [1X6.9-14 SCFVector[101X
   
-  [29X[2XSCFVector[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFVector[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of non-negative integers upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes the [22Xf[122X-vector of the simplicial complex [3Xcomplex[103X, i. e. the number of
@@ -2488,7 +2491,7 @@
   
   [1X6.9-15 SCFaceLattice[101X
   
-  [29X[2XSCFaceLattice[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFaceLattice[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of face lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  entire face lattice of a [22Xd[122X-dimensional simplicial complex, i.
@@ -2508,7 +2511,7 @@
   
   [1X6.9-16 SCFaceLatticeEx[101X
   
-  [29X[2XSCFaceLatticeEx[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFaceLatticeEx[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of face lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  entire face lattice of a [22Xd[122X-dimensional simplicial complex, i.
@@ -2526,21 +2529,21 @@
   
   [1X6.9-17 SCFaces[101X
   
-  [29X[2XSCFaces[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFaces[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya face list upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YThis is a synonym of the function [2XSCSkel[102X ([14X7.3-13[114X).[133X
   
   [1X6.9-18 SCFacesEx[101X
   
-  [29X[2XSCFacesEx[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFacesEx[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya face list upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YThis is a synonym of the function [2XSCSkelEx[102X ([14X7.3-14[114X).[133X
   
   [1X6.9-19 SCFacets[101X
   
-  [29X[2XSCFacets[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFacets[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya facet list upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns the facets of a simplicial complex in the original vertex labeling.[133X
@@ -2554,7 +2557,7 @@
   
   [1X6.9-20 SCFacetsEx[101X
   
-  [29X[2XSCFacetsEx[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFacetsEx[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya facet list upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  the  facets  of a simplicial complex as they are stored, i. e. with
@@ -2569,7 +2572,7 @@
   
   [1X6.9-21 SCFpBettiNumbers[101X
   
-  [29X[2XSCFpBettiNumbers[102X( [3Xcomplex[103X, [3Xp[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFpBettiNumbers[102X( [3Xcomplex[103X, [3Xp[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of non-negative integers upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes the Betti numbers of a simplicial complex with respect to the field
@@ -2590,7 +2593,7 @@
   
   [1X6.9-22 SCFundamentalGroup[101X
   
-  [29X[2XSCFundamentalGroup[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFundamentalGroup[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya [5XGAP[105X fp group upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  first fundamental group of [3Xcomplex[103X, which must be a connected
@@ -2601,7 +2604,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> list:=SCLib.SearchByName("RP^2");[128X[104X
-    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ][128X[104X
+    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(list[1][1]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
@@ -2649,7 +2652,7 @@
   
   [1X6.9-23 SCGVector[101X
   
-  [29X[2XSCGVector[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCGVector[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of integers upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  g-vector  of a simplicial complex. The [22Xg[122X-vector is defined as
@@ -2662,7 +2665,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("RP^2");[128X[104X
-    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ][128X[104X
+    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ][128X[104X
     [4X[28X gap> rp2_6:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCFVector(rp2_6);[128X[104X
     [4X[28X [ 6, 15, 10 ][128X[104X
@@ -2675,7 +2678,7 @@
   
   [1X6.9-24 SCGenerators[101X
   
-  [29X[2XSCGenerators[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCGenerators[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of pairs of the form [10X[ list, integer ][110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -2698,7 +2701,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
+    [4X[28X [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ][128X[104X
     [4X[28X gap> SCLib.Load(last[1][1]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
@@ -2744,7 +2747,7 @@
   
   [1X6.9-25 SCGeneratorsEx[101X
   
-  [29X[2XSCGeneratorsEx[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCGeneratorsEx[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of pairs of the form [10X[ list, integer ][110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -2767,7 +2770,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
+    [4X[28X [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ][128X[104X
     [4X[28X gap> SCLib.Load(last[1][1]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
@@ -2813,7 +2816,7 @@
   
   [1X6.9-26 SCHVector[101X
   
-  [29X[2XSCHVector[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCHVector[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of integers upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  [22Xh[122X-vector of a simplicial complex. The [22Xh[122X-vector is defined as [23X
@@ -2823,7 +2826,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("RP^2");[128X[104X
-    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ][128X[104X
+    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ][128X[104X
     [4X[28X gap> rp2_6:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCFVector(rp2_6);[128X[104X
     [4X[28X [ 6, 15, 10 ][128X[104X
@@ -2834,7 +2837,7 @@
   
   [1X6.9-27 SCHasBoundary[101X
   
-  [29X[2XSCHasBoundary[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCHasBoundary[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks  if  a  simplicial  complex  [3Xcomplex[103X  that  fulfills  the weak pseudo
@@ -2860,7 +2863,7 @@
   
   [1X6.9-28 SCHasInterior[101X
   
-  [29X[2XSCHasInterior[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCHasInterior[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  [9Xtrue[109X  if  a  simplicial  complex  [3Xcomplex[103X  that  fulfills  the weak
@@ -2881,7 +2884,7 @@
   
   [1X6.9-29 SCHeegaardSplittingSmallGenus[101X
   
-  [29X[2XSCHeegaardSplittingSmallGenus[102X( [3XM[103X ) [32X method
+  [33X[1;0Y[29X[2XSCHeegaardSplittingSmallGenus[102X( [3XM[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  an  integer, a list of two sublists and a string upon
             success, [9Xfail[109X otherwise.[133X
   
@@ -2903,7 +2906,7 @@
   
   [1X6.9-30 SCHeegaardSplitting[101X
   
-  [29X[2XSCHeegaardSplitting[102X( [3XM[103X ) [32X method
+  [33X[1;0Y[29X[2XSCHeegaardSplitting[102X( [3XM[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  an  integer, a list of two sublists and a string upon
             success, [9Xfail[109X otherwise.[133X
   
@@ -2940,7 +2943,7 @@
   
   [1X6.9-31 SCHomologyClassic[101X
   
-  [29X[2XSCHomologyClassic[102X( [3Xcomplex[103X ) [32X function
+  [33X[1;0Y[29X[2XSCHomologyClassic[102X( [3Xcomplex[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya list of pairs of the form [10X[ integer, list ][110X.[133X
   
   [33X[0;0YComputes  the  integral  simplicial  homology groups of a simplicial complex
@@ -2963,10 +2966,10 @@
     [4X[28X gap> kleinBottle.Homology;          [128X[104X
     [4X[28X [ [ 0, [  ] ], [ 1, [ 2 ] ], [ 0, [  ] ] ][128X[104X
     [4X[28X gap> SCLib.SearchByName("L_"){[1..10]};[128X[104X
-    [4X[28X [ [ 139, "L_3_1" ], [ 634, "L_4_1" ], [ 754, "L_5_2" ], [128X[104X
+    [4X[28X [ [ 161, "L_3_1" ], [ 643, "L_4_1" ], [ 752, "L_5_2" ], [128X[104X
     [4X[28X   [ 2416, "(S^2~S^1)#L_3_1" ], [ 2417, "(S^2xS^1)#L_3_1" ], [ 2490, "L_5_1" ],[128X[104X
-    [4X[28X   [ 2492, "(S^2~S^1)#2#L_3_1" ], [ 2494, "(S^2xS^1)#2#L_3_1" ], [128X[104X
-    [4X[28X   [ 7467, "L_7_2" ], [ 7468, "L_8_3" ] ][128X[104X
+    [4X[28X   [ 2492, "(S^2xS^1)#2#L_3_1" ], [ 2493, "(S^2~S^1)#2#L_3_1" ], [128X[104X
+    [4X[28X   [ 7467, "L_7_2" ], [ 7469, "L_8_3" ] ][128X[104X
     [4X[28X gap> c:=SCConnectedSum(SCLib.Load(last[9][1]),[128X[104X
     [4X[28X                        SCConnectedProduct(SCLib.Load(last[10][1]),2));[128X[104X
     [4X[28X > [SimplicialComplex[128X[104X
@@ -2988,7 +2991,7 @@
   
   [1X6.9-32 SCIncidences[101X
   
-  [29X[2XSCIncidences[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIncidences[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of face lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns a list of all [3Xk[103X-faces of the simplicial complex [3Xcomplex[103X. The list is
@@ -3007,7 +3010,7 @@
   
   [1X6.9-33 SCIncidencesEx[101X
   
-  [29X[2XSCIncidencesEx[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIncidencesEx[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of face lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns a list of all [3Xk[103X-faces of the simplicial complex [3Xcomplex[103X. The list is
@@ -3026,7 +3029,7 @@
   
   [1X6.9-34 SCInterior[101X
   
-  [29X[2XSCInterior[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCInterior[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -3047,7 +3050,7 @@
   
   [1X6.9-35 SCIsCentrallySymmetric[101X
   
-  [29X[2XSCIsCentrallySymmetric[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsCentrallySymmetric[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks  if a simplicial complex [3Xcomplex[103X is centrally symmetric, i. e. if its
@@ -3069,7 +3072,7 @@
   
   [1X6.9-36 SCIsConnected[101X
   
-  [29X[2XSCIsConnected[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsConnected[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks if a simplicial complex [3Xcomplex[103X is connected.[133X
@@ -3086,7 +3089,7 @@
   
   [1X6.9-37 SCIsEmpty[101X
   
-  [29X[2XSCIsEmpty[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsEmpty[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks  if  a  simplicial  complex  [3Xcomplex[103X  is  the  empty complex, i. e. a
@@ -3107,7 +3110,7 @@
   
   [1X6.9-38 SCIsEulerianManifold[101X
   
-  [29X[2XSCIsEulerianManifold[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsEulerianManifold[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks  whether a given simplicial complex [3Xcomplex[103X is a Eulerian manifold or
@@ -3149,7 +3152,7 @@
   
   [1X6.9-39 SCIsFlag[101X
   
-  [29X[2XSCIsFlag[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsFlag[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks  if  [3Xcomplex[103X  is flag. A connected simplicial complex of dimension at
@@ -3158,7 +3161,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("RP^2");   [128X[104X
-    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ][128X[104X
+    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ][128X[104X
     [4X[28X gap> rp2_6:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCIsFlag(rp2_6);[128X[104X
     [4X[28X false[128X[104X
@@ -3167,7 +3170,7 @@
   
   [1X6.9-40 SCIsHeegaardSplitting[101X
   
-  [29X[2XSCIsHeegaardSplitting[102X( [3Xc[103X, [3Xlist[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsHeegaardSplitting[102X( [3Xc[103X, [3Xlist[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks  whether  [3Xlist[103X  defines  a  Heegaard  splitting of [3Xc[103X or not. See also
@@ -3189,7 +3192,7 @@
   
   [1X6.9-41 SCIsHomologySphere[101X
   
-  [29X[2XSCIsHomologySphere[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsHomologySphere[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks  whether a simplicial complex [3Xcomplex[103X is a homology sphere, i. e. has
@@ -3204,7 +3207,7 @@
   
   [1X6.9-42 SCIsInKd[101X
   
-  [29X[2XSCIsInKd[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsInKd[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X / [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks  whether  the simplicial complex [3Xcomplex[103X that must be a combinatorial
@@ -3236,12 +3239,12 @@
   
   [1X6.9-43 SCIsKNeighborly[101X
   
-  [29X[2XSCIsKNeighborly[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsKNeighborly[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("RP^2");   [128X[104X
-    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ][128X[104X
+    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ][128X[104X
     [4X[28X gap> rp2_6:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCFVector(rp2_6);[128X[104X
     [4X[28X [ 6, 15, 10 ][128X[104X
@@ -3254,7 +3257,7 @@
   
   [1X6.9-44 SCIsOrientable[101X
   
-  [29X[2XSCIsOrientable[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsOrientable[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks  if  a simplicial complex [3Xcomplex[103X, satisfying the weak pseudomanifold
@@ -3269,7 +3272,7 @@
   
   [1X6.9-45 SCIsPseudoManifold[101X
   
-  [29X[2XSCIsPseudoManifold[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsPseudoManifold[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks  if  a  simplicial  complex  [3Xcomplex[103X fulfills the weak pseudomanifold
@@ -3288,7 +3291,7 @@
   
   [1X6.9-46 SCIsPure[101X
   
-  [29X[2XSCIsPure[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsPure[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya boolean upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks if a simplicial complex [3Xcomplex[103X is pure.[133X
@@ -3305,7 +3308,7 @@
   
   [1X6.9-47 SCIsShellable[101X
   
-  [29X[2XSCIsShellable[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsShellable[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YThe  simplicial  complex  [3Xcomplex[103X  must be pure, strongly connected and must
@@ -3330,7 +3333,7 @@
   
   [1X6.9-48 SCIsStronglyConnected[101X
   
-  [29X[2XSCIsStronglyConnected[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsStronglyConnected[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks  if  a simplicial complex [3Xcomplex[103X is strongly connected, i. e. if for
@@ -3357,7 +3360,7 @@
   
   [1X6.9-49 SCMinimalNonFaces[101X
   
-  [29X[2XSCMinimalNonFaces[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCMinimalNonFaces[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of face lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes all missing proper faces of a simplicial complex [3Xcomplex[103X by calling
@@ -3373,7 +3376,7 @@
   
   [1X6.9-50 SCMinimalNonFacesEx[101X
   
-  [29X[2XSCMinimalNonFacesEx[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCMinimalNonFacesEx[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of face lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  all missing proper faces of a simplicial complex [3Xcomplex[103X, i.e. the
@@ -3400,7 +3403,7 @@
   
   [1X6.9-51 SCNeighborliness[101X
   
-  [29X[2XSCNeighborliness[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCNeighborliness[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya positive integer upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns   [22Xk[122X  if  a  simplicial  complex  [3Xcomplex[103X  is  [22Xk[122X-neighborly  but  not
@@ -3416,7 +3419,7 @@
     [4X[28X gap> SCNeighborliness(c);[128X[104X
     [4X[28X 1[128X[104X
     [4X[28X gap> SCLib.SearchByAttribute("F[3]=Binomial(F[1],3) and Dim=4");[128X[104X
-    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 7648, "K3_16" ] ][128X[104X
+    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 7494, "K3_16" ] ][128X[104X
     [4X[28X gap> cp2:=SCLib.Load(last[2][1]);;[128X[104X
     [4X[28X gap> SCNeighborliness(cp2);[128X[104X
     [4X[28X 3[128X[104X
@@ -3425,7 +3428,7 @@
   
   [1X6.9-52 SCNumFaces[101X
   
-  [29X[2XSCNumFaces[102X( [3Xcomplex[103X[, [3Xi[103X] ) [32X method
+  [33X[1;0Y[29X[2XSCNumFaces[102X( [3Xcomplex[103X[, [3Xi[103X] ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Yan integer or a list of integers upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YIf  [3Xi[103X  is not specified the function computes the [22Xf[122X-vector of the simplicial
@@ -3443,7 +3446,7 @@
   
   [1X6.9-53 SCOrientation[101X
   
-  [29X[2XSCOrientation[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCOrientation[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  the  type  [22X{  ±  1  }^f_d[122X  or  [10X[ ][110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -3461,7 +3464,7 @@
   
   [1X6.9-54 SCSkel[101X
   
-  [29X[2XSCSkel[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCSkel[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya face list or a list of face lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YIf  [3Xk[103X  is  an integer, the [3Xk[103X-skeleton of a simplicial complex [3Xcomplex[103X, i. e.
@@ -3471,7 +3474,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("RP^2"); [128X[104X
-    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ][128X[104X
+    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ][128X[104X
     [4X[28X gap> rp2_6:=SCLib.Load(last[1][1]);;      [128X[104X
     [4X[28X gap> rp2_6:=SC(rp2_6.Facets+10);;[128X[104X
     [4X[28X gap> SCSkelEx(rp2_6,1);[128X[104X
@@ -3487,7 +3490,7 @@
   
   [1X6.9-55 SCSkelEx[101X
   
-  [29X[2XSCSkelEx[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCSkelEx[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya face list or a list of face lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YIf  [3Xk[103X  is  an integer, the [3Xk[103X-skeleton of a simplicial complex [3Xcomplex[103X, i. e.
@@ -3497,7 +3500,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("RP^2"); [128X[104X
-    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ][128X[104X
+    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ][128X[104X
     [4X[28X gap> rp2_6:=SCLib.Load(last[1][1]);;      [128X[104X
     [4X[28X gap> rp2_6:=SC(rp2_6.Facets+10);;[128X[104X
     [4X[28X gap> SCSkelEx(rp2_6,1);[128X[104X
@@ -3513,7 +3516,7 @@
   
   [1X6.9-56 SCSpanningTree[101X
   
-  [29X[2XSCSpanningTree[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCSpanningTree[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -3547,7 +3550,7 @@
   
   [1X6.10-1 SCAlexanderDual[101X
   
-  [29X[2XSCAlexanderDual[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCAlexanderDual[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -3569,7 +3572,7 @@
   
   [1X6.10-2 SCClose[101X
   
-  [29X[2XSCClose[102X( [3Xcomplex[103X[, [3Xapex[103X] ) [32X function
+  [33X[1;0Y[29X[2XSCClose[102X( [3Xcomplex[103X[, [3Xapex[103X] ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -3589,7 +3592,7 @@
   
   [1X6.10-3 SCCone[101X
   
-  [29X[2XSCCone[102X( [3Xcomplex[103X, [3Xapex[103X ) [32X function
+  [33X[1;0Y[29X[2XSCCone[102X( [3Xcomplex[103X, [3Xapex[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -3606,13 +3609,13 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("RP^3");[128X[104X
-    [4X[28X [ [ 45, "RP^3" ], [ 113, "RP^3=L(2,1) (VT)" ], [ 589, "(S^2~S^1)#RP^3" ], [128X[104X
-    [4X[28X   [ 590, "(S^2xS^1)#RP^3" ], [ 632, "(S^2~S^1)#2#RP^3" ], [128X[104X
-    [4X[28X   [ 633, "(S^2xS^1)#2#RP^3" ], [ 2414, "RP^3#RP^3" ], [128X[104X
-    [4X[28X   [ 2426, "RP^3=L(2,1) (VT)" ], [ 2488, "(S^2~S^1)#3#RP^3" ], [128X[104X
-    [4X[28X   [ 2489, "(S^2xS^1)#3#RP^3" ], [ 2502, "RP^3=L(2,1) (VT)" ], [128X[104X
-    [4X[28X   [ 7473, "(S^2~S^1)#4#RP^3" ], [ 7474, "(S^2xS^1)#4#RP^3" ], [128X[104X
-    [4X[28X   [ 7504, "(S^2~S^1)#5#RP^3" ], [ 7505, "(S^2xS^1)#5#RP^3" ] ][128X[104X
+    [4X[28X [ [ 45, "RP^3" ], [ 111, "RP^3=L(2,1) (VT)" ], [ 589, "(S^2~S^1)#RP^3" ], [128X[104X
+    [4X[28X   [ 590, "(S^2xS^1)#RP^3" ], [ 644, "(S^2~S^1)#2#RP^3" ], [128X[104X
+    [4X[28X   [ 646, "(S^2xS^1)#2#RP^3" ], [ 2414, "RP^3#RP^3" ], [128X[104X
+    [4X[28X   [ 2428, "RP^3=L(2,1) (VT)" ], [ 2488, "(S^2~S^1)#3#RP^3" ], [128X[104X
+    [4X[28X   [ 2489, "(S^2xS^1)#3#RP^3" ], [ 2503, "RP^3=L(2,1) (VT)" ], [128X[104X
+    [4X[28X   [ 7473, "(S^2xS^1)#4#RP^3" ], [ 7474, "(S^2~S^1)#4#RP^3" ], [128X[104X
+    [4X[28X   [ 7505, "(S^2xS^1)#5#RP^3" ], [ 7507, "(S^2~S^1)#5#RP^3" ] ][128X[104X
     [4X[28X gap> rp3:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> rp3.F;[128X[104X
     [4X[28X [ 11, 51, 80, 40 ][128X[104X
@@ -3637,7 +3640,7 @@
   
   [1X6.10-4 SCDeletedJoin[101X
   
-  [29X[2XSCDeletedJoin[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCDeletedJoin[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -3679,7 +3682,7 @@
   
   [1X6.10-5 SCDifference[101X
   
-  [29X[2XSCDifference[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCDifference[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -3704,7 +3707,7 @@
   
   [1X6.10-6 SCFillSphere[101X
   
-  [29X[2XSCFillSphere[102X( [3Xcomplex[103X[, [3Xvertex[103X] ) [32X function
+  [33X[1;0Y[29X[2XSCFillSphere[102X( [3Xcomplex[103X[, [3Xvertex[103X] ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise .[133X
   
@@ -3720,14 +3723,14 @@
     [4X[28X gap> SCLib.SearchByName("S^4");[128X[104X
     [4X[28X [ [ 36, "S^4 (VT)" ], [ 37, "S^4 (VT)" ], [ 38, "S^4 (VT)" ], [128X[104X
     [4X[28X   [ 130, "S^4 (VT)" ], [ 463, "S^4~S^1 (VT)" ], [ 713, "S^4xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 1472, "S^4xS^1 (VT)" ], [ 1473, "S^4~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 1474, "S^4~S^1 (VT)" ], [ 1475, "S^4xS^1 (VT)" ], [128X[104X
+    [4X[28X   [ 1472, "S^4xS^1 (VT)" ], [ 1473, "S^4xS^1 (VT)" ], [128X[104X
+    [4X[28X   [ 1474, "S^4~S^1 (VT)" ], [ 1475, "S^4~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 2477, "S^4~S^1 (VT)" ], [ 2478, "S^4 (VT)" ], [ 3435, "S^4 (VT)" ], [128X[104X
     [4X[28X   [ 4395, "S^4~S^1 (VT)" ], [ 4396, "S^4~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 4397, "S^4~S^1 (VT)" ], [ 4398, "S^4~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 4399, "S^4~S^1 (VT)" ], [ 4402, "S^4~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 4403, "S^4~S^1 (VT)" ], [ 4404, "S^4~S^1 (VT)" ], [ 7479, "S^4xS^2" ], [128X[104X
-    [4X[28X   [ 7539, "S^4xS^3" ], [ 7573, "S^4xS^4" ] ][128X[104X
+    [4X[28X   [ 4403, "S^4~S^1 (VT)" ], [ 4404, "S^4~S^1 (VT)" ], [ 7478, "S^4xS^2" ], [128X[104X
+    [4X[28X   [ 7541, "S^4xS^3" ], [ 7575, "S^4xS^4" ] ][128X[104X
     [4X[28X gap> s:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> filled:=SCFillSphere(s);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
@@ -3761,7 +3764,7 @@
   
   [1X6.10-7 SCHandleAddition[101X
   
-  [29X[2XSCHandleAddition[102X( [3Xcomplex[103X, [3Xf1[103X, [3Xf2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCHandleAddition[102X( [3Xcomplex[103X, [3Xf1[103X, [3Xf2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial complex of type [10XSCSimplicialComplex[110X, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  a  simplicial complex obtained by identifying the vertices of facet
@@ -3793,7 +3796,7 @@
   
   [1X6.10-8 SCIntersection[101X
   
-  [29X[2XSCIntersection[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIntersection[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -3820,7 +3823,7 @@
   
   [1X6.10-9 SCIsIsomorphic[101X
   
-  [29X[2XSCIsIsomorphic[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsIsomorphic[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YThe function returns [9Xtrue[109X, if the simplicial complexes [3Xcomplex1[103X and [3Xcomplex2[103X
@@ -3839,7 +3842,7 @@
   
   [1X6.10-10 SCIsSubcomplex[101X
   
-  [29X[2XSCIsSubcomplex[102X( [3Xsc1[103X, [3Xsc2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsSubcomplex[102X( [3Xsc1[103X, [3Xsc2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  [9Xtrue[109X  if  the simplicial complex [3Xsc2[103X is a sub-complex of simplicial
@@ -3851,9 +3854,9 @@
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByAttribute("F[1]=10"){[1..10]};[128X[104X
     [4X[28X [ [ 17, "K^2 (VT)" ], [ 18, "T^2 (VT)" ], [ 19, "S^3 (VT)" ], [128X[104X
-    [4X[28X   [ 20, "(T^2)#2" ], [ 21, "S^3 (VT)" ], [ 22, "S^2xS^1 (VT)" ], [128X[104X
+    [4X[28X   [ 20, "(T^2)#2" ], [ 21, "S^2xS^1 (VT)" ], [ 22, "S^3 (VT)" ], [128X[104X
     [4X[28X   [ 23, "S^3 (VT)" ], [ 24, "(T^2)#3" ], [ 25, "(P^2)#7 (VT)" ], [128X[104X
-    [4X[28X   [ 26, "S^3 (VT)" ] ][128X[104X
+    [4X[28X   [ 26, "S^2~S^1 (VT)" ] ][128X[104X
     [4X[28X gap> k:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> c:=SCBdSimplex(9);;[128X[104X
     [4X[28X gap> k.F;[128X[104X
@@ -3869,7 +3872,7 @@
   
   [1X6.10-11 SCIsomorphism[101X
   
-  [29X[2XSCIsomorphism[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsomorphism[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  pairs  of  vertex  labels or [9Xfalse[109X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -3889,7 +3892,7 @@
   
   [1X6.10-12 SCIsomorphismEx[101X
   
-  [29X[2XSCIsomorphismEx[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsomorphismEx[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  pairs  of  vertex  labels or [9Xfalse[109X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -3911,7 +3914,7 @@
   
   [1X6.10-13 SCJoin[101X
   
-  [29X[2XSCJoin[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCJoin[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -3968,7 +3971,7 @@
   
   [1X6.10-14 SCNeighbors[101X
   
-  [29X[2XSCNeighbors[102X( [3Xcomplex[103X, [3Xface[103X ) [32X method
+  [33X[1;0Y[29X[2XSCNeighbors[102X( [3Xcomplex[103X, [3Xface[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of faces upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YIn  a simplicial complex [3Xcomplex[103X all neighbors of the [10Xk[110X-face [3Xface[103X, i. e. all
@@ -3992,7 +3995,7 @@
   
   [1X6.10-15 SCNeighborsEx[101X
   
-  [29X[2XSCNeighborsEx[102X( [3Xcomplex[103X, [3Xface[103X ) [32X method
+  [33X[1;0Y[29X[2XSCNeighborsEx[102X( [3Xcomplex[103X, [3Xface[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of faces upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YIn  a simplicial complex [3Xcomplex[103X all neighbors of the [10Xk[110X-face [3Xface[103X, i. e. all
@@ -4018,7 +4021,7 @@
   
   [1X6.10-16 SCShelling[101X
   
-  [29X[2XSCShelling[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCShelling[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya facet list or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YThe  simplicial  complex  [3Xcomplex[103X  must be pure, strongly connected and must
@@ -4045,7 +4048,7 @@
   
   [1X6.10-17 SCShellingExt[101X
   
-  [29X[2XSCShellingExt[102X( [3Xcomplex[103X, [3Xall[103X, [3Xcheckvector[103X ) [32X method
+  [33X[1;0Y[29X[2XSCShellingExt[102X( [3Xcomplex[103X, [3Xall[103X, [3Xcheckvector[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of facet lists (if [3Xcheckvector = [][103X) or [9Xtrue[109X or [9Xfalse[109X (if
             [3Xcheckvector[103X is not empty), [9Xfail[109X otherwise.[133X
   
@@ -4084,7 +4087,7 @@
   
   [1X6.10-18 SCShellings[101X
   
-  [29X[2XSCShellings[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCShellings[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of facet lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YThe  simplicial  complex  [3Xcomplex[103X  must be pure, strongly connected and must
@@ -4116,7 +4119,7 @@
   
   [1X6.10-19 SCSpan[101X
   
-  [29X[2XSCSpan[102X( [3Xcomplex[103X, [3Xsubset[103X ) [32X method
+  [33X[1;0Y[29X[2XSCSpan[102X( [3Xcomplex[103X, [3Xsubset[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -4127,7 +4130,7 @@
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SCBdCrossPolytope(4);;[128X[104X
     [4X[28X gap> SCVertices(c);[128X[104X
-    [4X[28X [ 1, 2, 3, 4, 5, 6, 7, 8 ][128X[104X
+    [4X[28X [ 1 .. 8 ][128X[104X
     [4X[28X gap> span:=SCSpan(c,[1,2,3,4]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
@@ -4160,7 +4163,7 @@
   
   [1X6.10-20 SCSuspension[101X
   
-  [29X[2XSCSuspension[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCSuspension[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -4171,7 +4174,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("Poincare");[128X[104X
-    [4X[28X [ [ 7469, "Poincare_sphere" ] ][128X[104X
+    [4X[28X [ [ 7468, "Poincare_sphere" ] ][128X[104X
     [4X[28X gap> phs:=SCLib.Load(last[1][1]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
@@ -4225,7 +4228,7 @@
   
   [1X6.10-21 SCUnion[101X
   
-  [29X[2XSCUnion[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCUnion[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -4251,7 +4254,7 @@
   
   [1X6.10-22 SCVertexIdentification[101X
   
-  [29X[2XSCVertexIdentification[102X( [3Xcomplex[103X, [3Xv1[103X, [3Xv2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCVertexIdentification[102X( [3Xcomplex[103X, [3Xv1[103X, [3Xv2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -4271,7 +4274,7 @@
   
   [1X6.10-23 SCWedge[101X
   
-  [29X[2XSCWedge[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCWedge[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   

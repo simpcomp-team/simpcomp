@@ -15,7 +15,7 @@
   
   [1X7.1-1 SCNSEmpty[101X
   
-  [29X[2XSCNSEmpty[102X(  ) [32X function
+  [33X[1;0Y[29X[2XSCNSEmpty[102X(  ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ydiscrete normal surface of type [10XSCNormalSurface[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -37,7 +37,7 @@
   
   [1X7.1-2 SCNSFromFacets[101X
   
-  [29X[2XSCNSFromFacets[102X( [3Xfacets[103X ) [32X method
+  [33X[1;0Y[29X[2XSCNSFromFacets[102X( [3Xfacets[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ydiscrete normal surface of type [10XSCNormalSurface[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -59,7 +59,7 @@
   
   [1X7.1-3 SCNS[101X
   
-  [29X[2XSCNS[102X( [3Xfacets[103X ) [32X method
+  [33X[1;0Y[29X[2XSCNS[102X( [3Xfacets[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ydiscrete normal surface of type [10XSCNormalSurface[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -80,7 +80,7 @@
   
   [1X7.1-4 SCNSSlicing[101X
   
-  [29X[2XSCNSSlicing[102X( [3Xcomplex[103X, [3Xslicing[103X ) [32X function
+  [33X[1;0Y[29X[2XSCNSSlicing[102X( [3Xcomplex[103X, [3Xslicing[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ydiscrete normal surface of type [10XSCNormalSurface[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -177,7 +177,7 @@
   
   [1X7.2-1 SCCopy[101X
   
-  [29X[2XSCCopy[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCCopy[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ydiscrete normal surface of type [10XSCNormalSurface[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -221,7 +221,7 @@
   
   [1X7.2-2 SCNSTriangulation[101X
   
-  [29X[2XSCNSTriangulation[102X( [3Xsl[103X ) [32X method
+  [33X[1;0Y[29X[2XSCNSTriangulation[102X( [3Xsl[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -252,7 +252,7 @@
   
   [1X7.3-1 SCConnectedComponents[101X
   
-  [29X[2XSCConnectedComponents[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCConnectedComponents[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  simplicial  complexes  of  type  [10XSCNormalSurface[110X upon
             success, [9Xfail[109X otherwise.[133X
   
@@ -305,7 +305,7 @@
   
   [1X7.3-2 SCDim[101X
   
-  [29X[2XSCDim[102X( [3Xsl[103X ) [32X method
+  [33X[1;0Y[29X[2XSCDim[102X( [3Xsl[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Yan integer upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  dimension  of a discrete normal surface (which is always [22X2[122X if
@@ -323,7 +323,7 @@
   
   [1X7.3-3 SCEulerCharacteristic[101X
   
-  [29X[2XSCEulerCharacteristic[102X( [3Xsl[103X ) [32X method
+  [33X[1;0Y[29X[2XSCEulerCharacteristic[102X( [3Xsl[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Yan integer upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  Euler  characteristic  of  a  discrete normal surface [3Xsl[103X, cf.
@@ -340,7 +340,7 @@
   
   [1X7.3-4 SCFVector[101X
   
-  [29X[2XSCFVector[102X( [3Xsl[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFVector[102X( [3Xsl[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  [22X1[122X,  [22X3[122X or [22X4[122X tuple of (non-negative) integer values upon success,
             [9Xfail[109X otherwise.[133X
   
@@ -358,7 +358,7 @@
   
   [1X7.3-5 SCFaceLattice[101X
   
-  [29X[2XSCFaceLattice[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFaceLattice[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of facet lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  face  lattice of a discrete normal surface [3Xsl[103X in the original
@@ -385,7 +385,7 @@
   
   [1X7.3-6 SCFaceLatticeEx[101X
   
-  [29X[2XSCFaceLatticeEx[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFaceLatticeEx[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of face lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  face  lattice of a discrete normal surface [3Xsl[103X in the standard
@@ -407,7 +407,7 @@
   
   [1X7.3-7 SCFpBettiNumbers[101X
   
-  [29X[2XSCFpBettiNumbers[102X( [3Xsl[103X, [3Xp[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFpBettiNumbers[102X( [3Xsl[103X, [3Xp[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of non-negative integers upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  Betti  numbers  modulo  [3Xp[103X  of a slicing [3Xsl[103X. Internally, [3Xsl[103X is
@@ -416,7 +416,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("(S^2xS^1)#20");       [128X[104X
-    [4X[28X [ [ 7617, "(S^2xS^1)#20" ] ][128X[104X
+    [4X[28X [ [ 7619, "(S^2xS^1)#20" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> c.F;[128X[104X
     [4X[28X [ 27, 298, 542, 271 ][128X[104X
@@ -428,14 +428,14 @@
   
   [1X7.3-8 SCGenus[101X
   
-  [29X[2XSCGenus[102X( [3Xsl[103X ) [32X method
+  [33X[1;0Y[29X[2XSCGenus[102X( [3Xsl[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya non-negative integer upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes the genus of a discrete normal surface [3Xsl[103X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("(S^2xS^1)#20");[128X[104X
-    [4X[28X [ [ 7617, "(S^2xS^1)#20" ] ][128X[104X
+    [4X[28X [ [ 7619, "(S^2xS^1)#20" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;               [128X[104X
     [4X[28X gap> c.F;                               [128X[104X
     [4X[28X [ 27, 298, 542, 271 ][128X[104X
@@ -449,7 +449,7 @@
   
   [1X7.3-9 SCHomology[101X
   
-  [29X[2XSCHomology[102X( [3Xsl[103X ) [32X method
+  [33X[1;0Y[29X[2XSCHomology[102X( [3Xsl[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of homology groups upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  homology of a slicing [3Xsl[103X. Internally, [3Xsl[103X is triangulated (cf.
@@ -458,7 +458,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("(S^2xS^1)#20");       [128X[104X
-    [4X[28X [ [ 7617, "(S^2xS^1)#20" ] ][128X[104X
+    [4X[28X [ [ 7619, "(S^2xS^1)#20" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> c.F;[128X[104X
     [4X[28X [ 27, 298, 542, 271 ][128X[104X
@@ -473,7 +473,7 @@
   
   [1X7.3-10 SCIsConnected[101X
   
-  [29X[2XSCIsConnected[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsConnected[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks if a normal surface [3Xcomplex[103X is connected.[133X
@@ -541,7 +541,7 @@
   
   [1X7.3-11 SCIsEmpty[101X
   
-  [29X[2XSCIsEmpty[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsEmpty[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks  if  a  normal  surface  [3Xcomplex[103X  is  the  empty  complex,  i.  e.  a
@@ -556,7 +556,7 @@
   
   [1X7.3-12 SCIsOrientable[101X
   
-  [29X[2XSCIsOrientable[102X( [3Xsl[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsOrientable[102X( [3Xsl[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks if a discrete normal surface [3Xsl[103X is orientable.[133X
@@ -585,7 +585,7 @@
   
   [1X7.3-13 SCSkel[101X
   
-  [29X[2XSCSkel[102X( [3Xsl[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCSkel[102X( [3Xsl[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  face  list (of [3Xk+1[103Xtuples) or a list of face lists upon success,
             [9Xfail[109X otherwise.[133X
   
@@ -618,7 +618,7 @@
   
   [1X7.3-14 SCSkelEx[101X
   
-  [29X[2XSCSkelEx[102X( [3Xsl[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCSkelEx[102X( [3Xsl[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  face  list (of [3Xk+1[103Xtuples) or a list of face lists upon success,
             [9Xfail[109X otherwise.[133X
   
@@ -650,7 +650,7 @@
   
   [1X7.3-15 SCTopologicalType[101X
   
-  [29X[2XSCTopologicalType[102X( [3Xsl[103X ) [32X method
+  [33X[1;0Y[29X[2XSCTopologicalType[102X( [3Xsl[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya string upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YDetermines  the  topological  type  of [3Xsl[103X via the classification theorem for
@@ -659,7 +659,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("(S^2xS^1)#20");      [128X[104X
-    [4X[28X [ [ 7617, "(S^2xS^1)#20" ] ][128X[104X
+    [4X[28X [ [ 7619, "(S^2xS^1)#20" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> c.F;[128X[104X
     [4X[28X [ 27, 298, 542, 271 ][128X[104X
@@ -695,7 +695,7 @@
   
   [1X7.3-16 SCUnion[101X
   
-  [29X[2XSCUnion[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCUnion[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ynormal   surface   of  type  [10XSCNormalSurface[110X  upon  success,  [9Xfail[109X
             otherwise.[133X
   

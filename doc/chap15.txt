@@ -13,7 +13,7 @@
   
   [1X15.1-1 SCInfoLevel[101X
   
-  [29X[2XSCInfoLevel[102X( [3Xlevel[103X ) [32X function
+  [33X[1;0Y[29X[2XSCInfoLevel[102X( [3Xlevel[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X[133X
   
   [33X[0;0YSets  the logging verbosity of [5Xsimpcomp[105X. A level of [22X0[122X suppresses all output,
@@ -26,13 +26,13 @@
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xc:=SCBdCrossPolytope(3);;[127X[104X
     [4X[25Xgap>[125X [27XSCReduceComplex(c); [127X[104X
-    [4X[28X#I  round 0, move: [ [ 4, 6 ], [ 1, 2 ] ][128X[104X
+    [4X[28X#I  round 0, move: [ [ 4, 5 ], [ 1, 2 ] ][128X[104X
     [4X[28XF: [ 6, 12, 8 ][128X[104X
-    [4X[28X#I  round 1, move: [ [ 6 ], [ 1, 2, 3 ] ][128X[104X
+    [4X[28X#I  round 1, move: [ [ 5 ], [ 1, 2, 3 ] ][128X[104X
     [4X[28XF: [ 5, 9, 6 ][128X[104X
     [4X[28X#I  round 1[128X[104X
     [4X[28XReduced complex, F: [ 5, 9, 6 ][128X[104X
-    [4X[28X#I  round 2, move: [ [ 4 ], [ 1, 2, 5 ] ][128X[104X
+    [4X[28X#I  round 2, move: [ [ 3 ], [ 1, 2, 6 ] ][128X[104X
     [4X[28XF: [ 4, 6, 4 ][128X[104X
     [4X[28X#I  round 2[128X[104X
     [4X[28XReduced complex, F: [ 4, 6, 4 ][128X[104X
@@ -60,7 +60,7 @@
   
   [1X15.2-1 SCMailClearPending[101X
   
-  [29X[2XSCMailClearPending[102X(  ) [32X function
+  [33X[1;0Y[29X[2XSCMailClearPending[102X(  ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ynothing.[133X
   
   [33X[0;0YClears a pending mail message.[133X
@@ -73,7 +73,7 @@
   
   [1X15.2-2 SCMailIsEnabled[101X
   
-  [29X[2XSCMailIsEnabled[102X(  ) [32X function
+  [33X[1;0Y[29X[2XSCMailIsEnabled[102X(  ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns [9Xtrue[109X when the mail notification system of [5Xsimpcomp[105X is enabled, [9Xfalse[109X
@@ -89,7 +89,7 @@
   
   [1X15.2-3 SCMailIsPending[101X
   
-  [29X[2XSCMailIsPending[102X(  ) [32X function
+  [33X[1;0Y[29X[2XSCMailIsPending[102X(  ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  [9Xtrue[109X  when  an  email  of the [5Xsimpcomp[105X email notification system is
@@ -103,7 +103,7 @@
   
   [1X15.2-4 SCMailSend[101X
   
-  [29X[2XSCMailSend[102X( [3Xmessage[103X[, [3Xstarttime[103X][, [3Xforcesend[103X] ) [32X function
+  [33X[1;0Y[29X[2XSCMailSend[102X( [3Xmessage[103X[, [3Xstarttime[103X][, [3Xforcesend[103X] ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X  when  the  message  was sent, [9Xfalse[109X if it was not send, [9Xfail[109X
             upon an error.[133X
   
@@ -127,7 +127,7 @@
   
   [1X15.2-5 SCMailSendPending[101X
   
-  [29X[2XSCMailSendPending[102X(  ) [32X function
+  [33X[1;0Y[29X[2XSCMailSendPending[102X(  ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YTries  to  send  a  pending email of the [5Xsimpcomp[105X email notification system.
@@ -141,7 +141,7 @@
   
   [1X15.2-6 SCMailSetAddress[101X
   
-  [29X[2XSCMailSetAddress[102X( [3Xaddress[103X ) [32X function
+  [33X[1;0Y[29X[2XSCMailSetAddress[102X( [3Xaddress[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YSets the email address that should be used to send notification messages and
@@ -156,7 +156,7 @@
   
   [1X15.2-7 SCMailSetEnabled[101X
   
-  [29X[2XSCMailSetEnabled[102X( [3Xflag[103X ) [32X function
+  [33X[1;0Y[29X[2XSCMailSetEnabled[102X( [3Xflag[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YEnables  or disables the mail notification system of [5Xsimpcomp[105X. By default it
@@ -173,7 +173,7 @@
   
   [1X15.2-8 SCMailSetMinInterval[101X
   
-  [29X[2XSCMailSetMinInterval[102X( [3Xinterval[103X ) [32X function
+  [33X[1;0Y[29X[2XSCMailSetMinInterval[102X( [3Xinterval[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YSets  the minimal time interval in seconds that mail messages can be sent by
@@ -194,7 +194,7 @@
   
   [1X15.3-1 SCRunTest[101X
   
-  [29X[2XSCRunTest[102X(  ) [32X function
+  [33X[1;0Y[29X[2XSCRunTest[102X(  ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YTest    whether    the   package   [5Xsimpcomp[105X   is   functional   by   calling
@@ -205,7 +205,7 @@
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCRunTest();[128X[104X
     [4X[28X simpcomp package test[128X[104X
-    [4X[28X GAP4stones: 113019[128X[104X
+    [4X[28X msecs: 9588[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X

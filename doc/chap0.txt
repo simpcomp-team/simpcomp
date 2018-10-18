@@ -6,10 +6,10 @@
                      [1XA [5XGAP[105X toolbox for simplicial complexes[101X
   
   
-                                 Version 2.1.8
+                                 Version 2.1.9
   
   
-                                 February 2018
+                                  October 2018
   
   
                                Felix Effenberger
@@ -19,17 +19,14 @@
   
   
   Felix Effenberger
-      Email:    [7Xmailto:felix.effenberger@mis.mpg.de[107X
-      Address:  [33X[0;14YMax Planck Institute for Mathematics in the Sciences[133X
-                [33X[0;14YInselstr. 22[133X
-                [33X[0;14YD-04103 Leipzig, Germany[133X
-  
-  
+      Email:    [7Xmailto:exilef@gmail.com[107X
   Jonathan Spreer
-      Email:    [7Xmailto:j.spreer@uq.edu.au[107X
-      Address:  [33X[0;14YUniversity of Queensland[133X
+      Email:    [7Xmailto:jonathan.spreer@fu-berlin.de[107X
+      Address:  [33X[0;14YDiscrete Geometry Group[133X
+                [33X[0;14YMathematical Institute[133X
+                [33X[0;14YFreie Universitaet Berlin[133X
                 [33X[0;14YSchool of Mathematics and Physics[133X
-                [33X[0;14YBrisbane QLD 4072 Australia[133X
+                [33X[0;14YArnimallee 2, 14195 Berlin, Germany[133X
   
   
   
@@ -85,13 +82,13 @@
   bistellar flips implementation, the algorithm to collapse bounded simplicial
   complexes   as   well   as   the  classification  algorithm  for  transitive
   triangulations  is  based  upon  work of Frank Lutz (see [Lut03] and the [5XGAP[105X
-  programs BISTELLAR and MANIFOLD_VT from [ManifoldPage]). Some functions were
-  carried  over  from  the  [5Xhomology[105X package by Dumas et al. [DHSW11] -- these
-  functions  are marked in the documentation and the source code. The internal
+  programs  BISTELLAR and MANIFOLD_VT from [Lut]). Some functions were carried
+  over  from  the [5Xhomology[105X package by Dumas et al. [DHSW11] -- these functions
+  are   marked  in  the  documentation  and  the  source  code.  The  internal
   (co-)homology algorithms were implemented by Armin Weiss.[133X
   
   [33X[0;0YMost  of  the complexes in the simplicial complex library are taken from the
-  "Manifold Page" by Frank Lutz [ManifoldPage].[133X
+  "Manifold Page" by Frank Lutz [Lut].[133X
   
   [33X[0;0YThe  authors  acknowledge  support  by  the  Deutsche Forschungsgemeinschaft
   (DFG):  [5Xsimpcomp[105X  has been developed within the DFG projects Ku 1203/5-2 and

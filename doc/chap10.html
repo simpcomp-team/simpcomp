@@ -19,6 +19,7 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap9.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap11.html">[Next Chapter]</a>&nbsp;  </div>
 
+<p id="mathjaxlink" class="pcenter"></p>
 <p><a id="X7E1BE673859191F0" name="X7E1BE673859191F0"></a></p>
 <div class="ChapSects"><a href="chap10.html#X7E1BE673859191F0">10 <span class="Heading">Simplicial blowups</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap10.html#X8729B87B848E3F89">10.1 <span class="Heading">Theory</span></a>
@@ -50,7 +51,7 @@
 
 <h5>10.2-1 SCBlowup</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCBlowup</code>( <var class="Arg">pseudomanifold</var>, <var class="Arg">singularity</var>[, <var class="Arg">mappingCyl</var>] )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCBlowup</code>( <var class="Arg">pseudomanifold</var>, <var class="Arg">singularity</var>[, <var class="Arg">mappingCyl</var>] )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>If <code class="code">singularity</code> is an ordinary double point of a combinatorial <span class="SimpleMath">4</span>-pseudomanifold <var class="Arg">pseudomanifold</var> (lk(<code class="code">singularity</code><span class="SimpleMath">) = RP^3</span>) the blowup of <code class="code">pseudomanifold</code> at <code class="code">singularity</code> is computed. If it is a singularity of type <span class="SimpleMath">S^2 × S^1</span>, <span class="SimpleMath">S^2 dtimes S^1</span> or <span class="SimpleMath">L(k,1)</span>, <span class="SimpleMath">k ≤ 4</span>, the canonical resolution of <code class="code">singularity</code> is computed using the bounded complexes provided in the source code below.</p>
@@ -75,12 +76,13 @@
  #I  SCBlowup: boundaries not isomorphic, initializing bistellar moves...
  #I  SCBlowup: found complex with smaller boundary: f = [ 15, 74, 118, 59 ].
  #I  SCBlowup: found complex with smaller boundary: f = [ 14, 70, 112, 56 ].
- #I  SCBlowup: found complex with smaller boundary: f = [ 14, 67, 106, 53 ].
+ #I  SCBlowup: found complex with smaller boundary: f = [ 14, 69, 110, 55 ].
+ #I  SCBlowup: found complex with smaller boundary: f = [ 14, 68, 108, 54 ].
  #I  SCBlowup: found complex with smaller boundary: f = [ 13, 65, 104, 52 ].
  #I  SCBlowup: found complex with smaller boundary: f = [ 13, 64, 102, 51 ].
  #I  SCBlowup: found complex with smaller boundary: f = [ 13, 63, 100, 50 ].
  #I  SCBlowup: found complex with smaller boundary: f = [ 13, 62, 98, 49 ].
- #I  SCBlowup: found complex with smaller boundary: f = [ 12, 58, 92, 46 ].
+ #I  SCBlowup: found complex with smaller boundary: f = [ 13, 61, 96, 48 ].
  #I  SCBlowup: found complex with smaller boundary: f = [ 12, 57, 90, 45 ].
  #I  SCBlowup: found complex with smaller boundary: f = [ 12, 56, 88, 44 ].
  #I  SCBlowup: found complex with smaller boundary: f = [ 12, 55, 86, 43 ].
@@ -95,8 +97,8 @@
  
   Properties known: Dim, FacetsEx, Name, Vertices.
  
-  Name="unnamed complex 4084 \ star([ 1 ]) in unnamed complex 4084 cup unnamed \
- complex 4088 cup unnamed complex 4086"
+  Name="unnamed complex 2735 \ star([ 1 ]) in unnamed complex 2735 cup unnamed \
+ complex 2739 cup unnamed complex 2737"
   Dim=4
  
  /SimplicialComplex]
@@ -126,7 +128,7 @@
 
 <h5>10.2-2 SCMappingCylinder</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMappingCylinder</code>( <var class="Arg">k</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMappingCylinder</code>( <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates a bounded version of <span class="SimpleMath">CP^2</span> (a so-called mapping cylinder for a simplicial blowup, compare <a href="chapBib.html#biBSpreer09CombPorpsOfK3">[SK11]</a>) with boundary <span class="SimpleMath">L(</span><code class="code">k</code><span class="SimpleMath">,1)</span>.</p>

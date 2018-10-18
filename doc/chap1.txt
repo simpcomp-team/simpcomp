@@ -67,7 +67,7 @@
   [33X[0;0Y[5Xsimpcomp[105X  provides  the  user with functions to save and load the simplicial
   complexes  to  and  from files and to import and export a complex in various
   formats  (e.g. from and to [5Xpolymake/TOPAZ[105X [GJ00], [5XSnapPea[105X [Wee99] and [5XRegina[105X
-  [BBPo14] (via the [5XSnapPea[105X file format), [5XMacaulay2[105X [GS], LaTeX, etc.).[133X
+  [BBP+14] (via the [5XSnapPea[105X file format), [5XMacaulay2[105X [GS], LaTeX, etc.).[133X
   
   [33X[0;0YIn  contrast  to  the  software  package  [5Xpolymake[105X [GJ00] providing the most
   efficient algorithms for each task in form of a heterogeneous package (where
@@ -168,7 +168,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XSCRunTest();[127X[104X
-    [4X[28X+ test simpcomp package, Version 2.1.8[128X[104X
+    [4X[28X+ test simpcomp package, Version 2.1.9[128X[104X
     [4X[28X+ GAP4stones: 69988[128X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27X[127X[104X
@@ -194,7 +194,7 @@
   @manual{simpcomp,
   	author = "Felix Effenberger and Jonathan Spreer",
   	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
-  	          {V}ersion 2.1.8",
+  	          {V}ersion 2.1.9",
   	year   = "2018",
   	url    = "\url{https://github.com/simpcomp-team/simpcomp}",
   }
@@ -205,7 +205,7 @@
   \bibitem{simpcomp}
   F.~Effenberger and J.~Spreer,
   \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
-  Version 2.1.8, 
+  Version 2.1.9, 
   2018,
   \url{https://github.com/simpcomp-team/simpcomp}.
   

@@ -21,21 +21,21 @@
   
   [1X18.1-1 SCProperties[101X
   
-  [29X[2XSCProperties[102X( [3Xpo[103X ) [32X method
+  [33X[1;0Y[29X[2XSCProperties[102X( [3Xpo[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya record upon success.[133X
   
   [33X[0;0YReturns the record of all stored properties of the [10XSCPropertyObject[110X [3Xpo[103X.[133X
   
   [1X18.1-2 SCPropertiesFlush[101X
   
-  [29X[2XSCPropertiesFlush[102X( [3Xpo[103X ) [32X method
+  [33X[1;0Y[29X[2XSCPropertiesFlush[102X( [3Xpo[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success.[133X
   
   [33X[0;0YDrops all properties and temporary properties of the [10XSCPropertyObject[110X [3Xpo[103X.[133X
   
   [1X18.1-3 SCPropertiesManaged[101X
   
-  [29X[2XSCPropertiesManaged[102X( [3Xpo[103X ) [32X method
+  [33X[1;0Y[29X[2XSCPropertiesManaged[102X( [3Xpo[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of managed properties upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  a  list of all properties that are managed for the [10XSCPropertyObject[110X
@@ -43,7 +43,7 @@
   
   [1X18.1-4 SCPropertiesNames[101X
   
-  [29X[2XSCPropertiesNames[102X( [3Xpo[103X ) [32X method
+  [33X[1;0Y[29X[2XSCPropertiesNames[102X( [3Xpo[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list upon success.[133X
   
   [33X[0;0YReturns   a  list  of  all  the  names  of  the  stored  properties  of  the
@@ -52,7 +52,7 @@
   
   [1X18.1-5 SCPropertiesTmp[101X
   
-  [29X[2XSCPropertiesTmp[102X( [3Xpo[103X ) [32X method
+  [33X[1;0Y[29X[2XSCPropertiesTmp[102X( [3Xpo[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya record upon success.[133X
   
   [33X[0;0YReturns  the record of all stored temporary properties (these are mutable in
@@ -61,7 +61,7 @@
   
   [1X18.1-6 SCPropertiesTmpNames[101X
   
-  [29X[2XSCPropertiesTmpNames[102X( [3Xpo[103X ) [32X method
+  [33X[1;0Y[29X[2XSCPropertiesTmpNames[102X( [3Xpo[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list upon success.[133X
   
   [33X[0;0YReturns  a  list  of all the names of the stored temporary properties of the
@@ -70,7 +70,7 @@
   
   [1X18.1-7 SCPropertyByName[101X
   
-  [29X[2XSCPropertyByName[102X( [3Xpo[103X, [3Xname[103X ) [32X method
+  [33X[1;0Y[29X[2XSCPropertyByName[102X( [3Xpo[103X, [3Xname[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Yany value upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  the value of the property with name [3Xname[103X of the [10XSCPropertyObject[110X [3Xpo[103X
@@ -79,7 +79,7 @@
   
   [1X18.1-8 SCPropertyDrop[101X
   
-  [29X[2XSCPropertyDrop[102X( [3Xpo[103X, [3Xname[103X ) [32X method
+  [33X[1;0Y[29X[2XSCPropertyDrop[102X( [3Xpo[103X, [3Xname[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upopn success, [9Xfail[109X otherwise[133X
   
   [33X[0;0YDrops  the  property with name [3Xname[103X of the [10XSCPropertyObject[110X [3Xpo[103X. Returns [9Xtrue[109X
@@ -88,7 +88,7 @@
   
   [1X18.1-9 SCPropertyHandlersSet[101X
   
-  [29X[2XSCPropertyHandlersSet[102X( [3Xpo[103X, [3Xhandlers[103X ) [32X method
+  [33X[1;0Y[29X[2XSCPropertyHandlersSet[102X( [3Xpo[103X, [3Xhandlers[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X[133X
   
   [33X[0;0YSets  the  property  handling  functions  for  a  SCPropertyObject [3Xpo[103X to the
@@ -100,7 +100,7 @@
   
   [1X18.1-10 SCPropertySet[101X
   
-  [29X[2XSCPropertySet[102X( [3Xpo[103X, [3Xname[103X, [3Xdata[103X ) [32X method
+  [33X[1;0Y[29X[2XSCPropertySet[102X( [3Xpo[103X, [3Xname[103X, [3Xdata[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success.[133X
   
   [33X[0;0YSets  the value of the property with name [3Xname[103X of the [10XSCPropertyObject[110X [3Xpo[103X to
@@ -109,7 +109,7 @@
   
   [1X18.1-11 SCPropertySetMutable[101X
   
-  [29X[2XSCPropertySetMutable[102X( [3Xpo[103X, [3Xname[103X, [3Xdata[103X ) [32X method
+  [33X[1;0Y[29X[2XSCPropertySetMutable[102X( [3Xpo[103X, [3Xname[103X, [3Xdata[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success.[133X
   
   [33X[0;0YSets  the value of the property with name [3Xname[103X of the [10XSCPropertyObject[110X [3Xpo[103X to
@@ -118,7 +118,7 @@
   
   [1X18.1-12 SCPropertyTmpByName[101X
   
-  [29X[2XSCPropertyTmpByName[102X( [3Xpo[103X, [3Xname[103X ) [32X method
+  [33X[1;0Y[29X[2XSCPropertyTmpByName[102X( [3Xpo[103X, [3Xname[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Yany value upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  the  value  of  the  temporary  property  with the name [3Xname[103X of the
@@ -128,7 +128,7 @@
   
   [1X18.1-13 SCPropertyTmpDrop[101X
   
-  [29X[2XSCPropertyTmpDrop[102X( [3Xpo[103X, [3Xname[103X ) [32X method
+  [33X[1;0Y[29X[2XSCPropertyTmpDrop[102X( [3Xpo[103X, [3Xname[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise[133X
   
   [33X[0;0YDrops  the  temporary  property  with  name [3Xname[103X of the [10XSCPropertyObject[110X [3Xpo[103X.
@@ -137,7 +137,7 @@
   
   [1X18.1-14 SCPropertyTmpSet[101X
   
-  [29X[2XSCPropertyTmpSet[102X( [3Xpo[103X, [3Xname[103X, [3Xdata[103X ) [32X method
+  [33X[1;0Y[29X[2XSCPropertyTmpSet[102X( [3Xpo[103X, [3Xname[103X, [3Xdata[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success.[133X
   
   [33X[0;0YSets   the   value   of  the  temporary  property  with  name  [3Xname[103X  of  the

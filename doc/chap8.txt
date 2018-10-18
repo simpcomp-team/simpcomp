@@ -21,7 +21,7 @@
   
   [1X8.1-1 SCBoundaryOperatorMatrix[101X
   
-  [29X[2XSCBoundaryOperatorMatrix[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCBoundaryOperatorMatrix[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya rectangular matrix upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YCalculates the matrix of the boundary operator [22X∂_[3Xk+1[103X[122X of a simplicial complex
@@ -44,7 +44,7 @@
   
   [1X8.1-2 SCBoundarySimplex[101X
   
-  [29X[2XSCBoundarySimplex[102X( [3Xsimplex[103X, [3Xorientation[103X ) [32X function
+  [33X[1;0Y[29X[2XSCBoundarySimplex[102X( [3Xsimplex[103X, [3Xorientation[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya list upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YCalculates  the  boundary of a given [3Xsimplex[103X. If the flag [3Xorientation[103X is set
@@ -66,7 +66,7 @@
   
   [1X8.1-3 SCHomologyBasis[101X
   
-  [29X[2XSCHomologyBasis[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCHomologyBasis[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of pairs of the form [10X[ integer, list of linear combinations
             of simplices ][110X upon success, [9Xfail[109X otherwise.[133X
   
@@ -94,7 +94,7 @@
   
   [1X8.1-4 SCHomologyBasisAsSimplices[101X
   
-  [29X[2XSCHomologyBasisAsSimplices[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCHomologyBasisAsSimplices[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of pairs of the form [10X[ integer, list of linear combinations
             of simplices ][110X upon success, [9Xfail[109X otherwise.[133X
   
@@ -122,7 +122,7 @@
   
   [1X8.1-5 SCHomologyInternal[101X
   
-  [29X[2XSCHomologyInternal[102X( [3Xcomplex[103X ) [32X function
+  [33X[1;0Y[29X[2XSCHomologyInternal[102X( [3Xcomplex[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of pairs of the form [10X[ integer, list ][110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -154,7 +154,7 @@
   
   [1X8.2-1 SCCoboundaryOperatorMatrix[101X
   
-  [29X[2XSCCoboundaryOperatorMatrix[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCCoboundaryOperatorMatrix[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya rectangular matrix upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YCalculates  the  matrix  of  the  coboundary operator [22Xd^[3Xk+1[103X[122X as a list of row
@@ -187,7 +187,7 @@
   
   [1X8.2-2 SCCohomology[101X
   
-  [29X[2XSCCohomology[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCCohomology[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of pairs of the form [10X[ integer, list ][110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -220,7 +220,7 @@
   
   [1X8.2-3 SCCohomologyBasis[101X
   
-  [29X[2XSCCohomologyBasis[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCCohomologyBasis[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of pairs of the form [10X[ integer, list of linear combinations
             of simplices ][110X upon success, [9Xfail[109X otherwise.[133X
   
@@ -239,8 +239,8 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("SU(3)/SO(3)");   [128X[104X
-    [4X[28X [ [ 563, "SU(3)/SO(3) (VT)" ], [ 7276, "SU(3)/SO(3) (VT)" ], [128X[104X
-    [4X[28X   [ 7418, "SU(3)/SO(3) (VT)" ], [ 7419, "SU(3)/SO(3) (VT)" ] ][128X[104X
+    [4X[28X [ [ 564, "SU(3)/SO(3) (VT)" ], [ 7277, "SU(3)/SO(3) (VT)" ], [128X[104X
+    [4X[28X   [ 7417, "SU(3)/SO(3) (VT)" ], [ 7418, "SU(3)/SO(3) (VT)" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCCohomologyBasis(c,3); [128X[104X
     [4X[28X [ [ 2, [ [ -9, 259 ], [ 9, 262 ], [ 9, 263 ], [ -9, 270 ], [ 9, 271 ], [128X[104X
@@ -268,7 +268,7 @@
   
   [1X8.2-4 SCCohomologyBasisAsSimplices[101X
   
-  [29X[2XSCCohomologyBasisAsSimplices[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCCohomologyBasisAsSimplices[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  pars  of  the  form  [10X[ integer, linear combination of
             simplices ][110X upon success, [9Xfail[109X otherwise.[133X
   
@@ -286,8 +286,8 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("SU(3)/SO(3)");   [128X[104X
-    [4X[28X [ [ 563, "SU(3)/SO(3) (VT)" ], [ 7276, "SU(3)/SO(3) (VT)" ], [128X[104X
-    [4X[28X   [ 7418, "SU(3)/SO(3) (VT)" ], [ 7419, "SU(3)/SO(3) (VT)" ] ][128X[104X
+    [4X[28X [ [ 564, "SU(3)/SO(3) (VT)" ], [ 7277, "SU(3)/SO(3) (VT)" ], [128X[104X
+    [4X[28X   [ 7417, "SU(3)/SO(3) (VT)" ], [ 7418, "SU(3)/SO(3) (VT)" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCCohomologyBasisAsSimplices(c,3);[128X[104X
     [4X[28X [ [ 2, [128X[104X
@@ -346,7 +346,7 @@
   
   [1X8.2-5 SCCupProduct[101X
   
-  [29X[2XSCCupProduct[102X( [3Xcomplex[103X, [3Xcocycle1[103X, [3Xcocycle2[103X ) [32X function
+  [33X[1;0Y[29X[2XSCCupProduct[102X( [3Xcomplex[103X, [3Xcocycle1[103X, [3Xcocycle2[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya list of pairs of the form [10X[ ORIENTATION, SIMPLEX ][110X upon success,
             [9Xfail[109X otherwise.[133X
   
@@ -376,7 +376,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
+    [4X[28X [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;                                     [128X[104X
     [4X[28X gap> basis:=SCCohomologyBasisAsSimplices(c,2);;[128X[104X
     [4X[28X gap> SCCupProduct(c,basis[1][2],basis[1][2]);[128X[104X
@@ -389,7 +389,7 @@
   
   [1X8.2-6 SCIntersectionForm[101X
   
-  [29X[2XSCIntersectionForm[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIntersectionForm[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya square matrix of integer values upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YFor  [22X2k[122X-dimensional orientable manifolds [22XM[122X the cup product (see [2XSCCupProduct[102X
@@ -406,7 +406,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("CP^2");       [128X[104X
-    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#-CP^2" ], [ 100, "CP^2#CP^2" ], [128X[104X
+    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#CP^2" ], [ 100, "CP^2#-CP^2" ], [128X[104X
     [4X[28X   [ 400, "CP^2#(S^2xS^2)" ], [ 2486, "Gaifullin CP^2" ], [128X[104X
     [4X[28X   [ 4401, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);; [128X[104X
@@ -425,7 +425,7 @@
   
   [1X8.2-7 SCIntersectionFormParity[101X
   
-  [29X[2XSCIntersectionFormParity[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIntersectionFormParity[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[10X0[110X or [10X1[110X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  parity  of  the intersection form of a combinatorial manifold
@@ -443,7 +443,7 @@
     [4X[28X gap> SCIntersectionFormParity(c);[128X[104X
     [4X[28X 0[128X[104X
     [4X[28X gap> SCLib.SearchByName("CP^2");       [128X[104X
-    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#-CP^2" ], [ 100, "CP^2#CP^2" ], [128X[104X
+    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#CP^2" ], [ 100, "CP^2#-CP^2" ], [128X[104X
     [4X[28X   [ 400, "CP^2#(S^2xS^2)" ], [ 2486, "Gaifullin CP^2" ], [128X[104X
     [4X[28X   [ 4401, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);; [128X[104X
@@ -454,7 +454,7 @@
   
   [1X8.2-8 SCIntersectionFormDimensionality[101X
   
-  [29X[2XSCIntersectionFormDimensionality[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIntersectionFormDimensionality[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Yan integer upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  the  dimensionality  of  the  intersection  form of a combinatorial
@@ -464,7 +464,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("CP^2");       [128X[104X
-    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#-CP^2" ], [ 100, "CP^2#CP^2" ], [128X[104X
+    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#CP^2" ], [ 100, "CP^2#-CP^2" ], [128X[104X
     [4X[28X   [ 400, "CP^2#(S^2xS^2)" ], [ 2486, "Gaifullin CP^2" ], [128X[104X
     [4X[28X   [ 4401, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);; [128X[104X
@@ -482,7 +482,7 @@
   
   [1X8.2-9 SCIntersectionFormSignature[101X
   
-  [29X[2XSCIntersectionFormSignature[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIntersectionFormSignature[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya triple of integers upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes  the  dimensionality (see [2XSCIntersectionFormDimensionality[102X ([14X8.2-8[114X))
@@ -497,7 +497,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("CP^2");       [128X[104X
-    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#-CP^2" ], [ 100, "CP^2#CP^2" ], [128X[104X
+    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#CP^2" ], [ 100, "CP^2#-CP^2" ], [128X[104X
     [4X[28X   [ 400, "CP^2#(S^2xS^2)" ], [ 2486, "Gaifullin CP^2" ], [128X[104X
     [4X[28X   [ 4401, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X

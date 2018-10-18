@@ -19,9 +19,10 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap17.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
 
-<p><a id="X7DC2620E7DCC6C94" name="X7DC2620E7DCC6C94"></a></p>
-<div class="ChapSects"><a href="chap18.html#X7DC2620E7DCC6C94">18 <span class="Heading"><strong class="pkg">simpcomp</strong> internals</span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap18.html#X7E3D5BFF7AA5D5EE">18.1 <span class="Heading">The <strong class="pkg">GAP</strong> object type <code class="code">SCPropertyObject</code></span></a>
+<p id="mathjaxlink" class="pcenter"></p>
+<p><a id="X8478539A7A292D1A" name="X8478539A7A292D1A"></a></p>
+<div class="ChapSects"><a href="chap18.html#X8478539A7A292D1A">18 <span class="Heading"><strong class="pkg">simpcomp</strong> internals</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap18.html#X8724C47486F7CC1E">18.1 <span class="Heading">The <strong class="pkg">GAP</strong> object type <code class="code">SCPropertyObject</code></span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap18.html#X7AFC8525796297C9">18.1-1 SCProperties</a></span>
@@ -53,7 +54,7 @@
 
 <p>If you extended <strong class="pkg">simpcomp</strong> and want to share your extension with other users please send your extension to one of the authors and we will consider including it (of course with giving credit) in a future release of <strong class="pkg">simpcomp</strong>.</p>
 
-<p><a id="X7E3D5BFF7AA5D5EE" name="X7E3D5BFF7AA5D5EE"></a></p>
+<p><a id="X8724C47486F7CC1E" name="X8724C47486F7CC1E"></a></p>
 
 <h4>18.1 <span class="Heading">The <strong class="pkg">GAP</strong> object type <code class="code">SCPropertyObject</code></span></h4>
 
@@ -63,7 +64,7 @@
 
 <h5>18.1-1 SCProperties</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCProperties</code>( <var class="Arg">po</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCProperties</code>( <var class="Arg">po</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a record upon success.</p>
 
 <p>Returns the record of all stored properties of the <code class="code">SCPropertyObject</code> <var class="Arg">po</var>.</p>
@@ -72,7 +73,7 @@
 
 <h5>18.1-2 SCPropertiesFlush</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertiesFlush</code>( <var class="Arg">po</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertiesFlush</code>( <var class="Arg">po</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success.</p>
 
 <p>Drops all properties and temporary properties of the <code class="code">SCPropertyObject</code> <var class="Arg">po</var>.</p>
@@ -81,7 +82,7 @@
 
 <h5>18.1-3 SCPropertiesManaged</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertiesManaged</code>( <var class="Arg">po</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertiesManaged</code>( <var class="Arg">po</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of managed properties upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns a list of all properties that are managed for the <code class="code">SCPropertyObject</code> <var class="Arg">po</var> via property handler functions. See <code class="func">SCPropertyHandlersSet</code> (<a href="chap18.html#X7FC306B28335BFDC"><span class="RefLink">18.1-9</span></a>).</p>
@@ -90,7 +91,7 @@
 
 <h5>18.1-4 SCPropertiesNames</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertiesNames</code>( <var class="Arg">po</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertiesNames</code>( <var class="Arg">po</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list upon success.</p>
 
 <p>Returns a list of all the names of the stored properties of the <code class="code">SCPropertyObject</code> <var class="Arg">po</var>. These can be accessed via <code class="func">SCPropertySet</code> (<a href="chap18.html#X86FEBD517B7963C6"><span class="RefLink">18.1-10</span></a>) and <code class="func">SCPropertyDrop</code> (<a href="chap18.html#X8304C9BC7E8CF4F8"><span class="RefLink">18.1-8</span></a>).</p>
@@ -99,7 +100,7 @@
 
 <h5>18.1-5 SCPropertiesTmp</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertiesTmp</code>( <var class="Arg">po</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertiesTmp</code>( <var class="Arg">po</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a record upon success.</p>
 
 <p>Returns the record of all stored temporary properties (these are mutable in contrast to regular properties and not serialized when the object is serialized to XML) of the <code class="code">SCPropertyObject</code> <var class="Arg">po</var>.</p>
@@ -108,7 +109,7 @@
 
 <h5>18.1-6 SCPropertiesTmpNames</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertiesTmpNames</code>( <var class="Arg">po</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertiesTmpNames</code>( <var class="Arg">po</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list upon success.</p>
 
 <p>Returns a list of all the names of the stored temporary properties of the <code class="code">SCPropertyObject</code> <var class="Arg">po</var>. These can be accessed via <code class="func">SCPropertyTmpSet</code> (<a href="chap18.html#X86CF3B9585A965A0"><span class="RefLink">18.1-14</span></a>) and <code class="func">SCPropertyTmpDrop</code> (<a href="chap18.html#X836F936B7E09E5F1"><span class="RefLink">18.1-13</span></a>).</p>
@@ -117,7 +118,7 @@
 
 <h5>18.1-7 SCPropertyByName</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertyByName</code>( <var class="Arg">po</var>, <var class="Arg">name</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertyByName</code>( <var class="Arg">po</var>, <var class="Arg">name</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: any value upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns the value of the property with name <var class="Arg">name</var> of the <code class="code">SCPropertyObject</code> <var class="Arg">po</var> if this property is known for <var class="Arg">po</var> and <code class="keyw">fail</code> otherwise. The names of known properties can be accessed via the function <code class="func">SCPropertiesNames</code> (<a href="chap18.html#X82EA577A830E0826"><span class="RefLink">18.1-4</span></a>)</p>
@@ -126,7 +127,7 @@
 
 <h5>18.1-8 SCPropertyDrop</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertyDrop</code>( <var class="Arg">po</var>, <var class="Arg">name</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertyDrop</code>( <var class="Arg">po</var>, <var class="Arg">name</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upopn success, <code class="keyw">fail</code> otherwise</p>
 
 <p>Drops the property with name <var class="Arg">name</var> of the <code class="code">SCPropertyObject</code> <var class="Arg">po</var>. Returns <code class="keyw">true</code> if the property is successfully dropped and <code class="keyw">fail</code> if a property with that name did not exist.</p>
@@ -135,7 +136,7 @@
 
 <h5>18.1-9 SCPropertyHandlersSet</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertyHandlersSet</code>( <var class="Arg">po</var>, <var class="Arg">handlers</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertyHandlersSet</code>( <var class="Arg">po</var>, <var class="Arg">handlers</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code></p>
 
 <p>Sets the property handling functions for a SCPropertyObject <var class="Arg">po</var> to the functions described in the record <var class="Arg">handlers</var>. The record <var class="Arg">handlers</var> has to contain entries of the following structure: <code class="code">[Property Name]:=[Function name computing and returning the property]</code>. For <code class="code">SCSimplicialComplex</code> for example <strong class="pkg">simpcomp</strong> defines (among many others): <code class="code">F:=SCFVector</code>. See the file <code class="code">lib/prophandler.gd</code>.</p>
@@ -144,7 +145,7 @@
 
 <h5>18.1-10 SCPropertySet</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertySet</code>( <var class="Arg">po</var>, <var class="Arg">name</var>, <var class="Arg">data</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertySet</code>( <var class="Arg">po</var>, <var class="Arg">name</var>, <var class="Arg">data</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success.</p>
 
 <p>Sets the value of the property with name <var class="Arg">name</var> of the <code class="code">SCPropertyObject</code> <var class="Arg">po</var> to <var class="Arg">data</var>. Note that the argument becomes immutable. If this behaviour is not desired, use <code class="func">SCPropertySetMutable</code> (<a href="chap18.html#X798E9C9C7895C9F0"><span class="RefLink">18.1-11</span></a>) instead.</p>
@@ -153,7 +154,7 @@
 
 <h5>18.1-11 SCPropertySetMutable</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertySetMutable</code>( <var class="Arg">po</var>, <var class="Arg">name</var>, <var class="Arg">data</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertySetMutable</code>( <var class="Arg">po</var>, <var class="Arg">name</var>, <var class="Arg">data</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success.</p>
 
 <p>Sets the value of the property with name <var class="Arg">name</var> of the <code class="code">SCPropertyObject</code> <var class="Arg">po</var> to <var class="Arg">data</var>. Note that the argument does not become immutable. If this behaviour is not desired, use <code class="func">SCPropertySet</code> (<a href="chap18.html#X86FEBD517B7963C6"><span class="RefLink">18.1-10</span></a>) instead.</p>
@@ -162,7 +163,7 @@
 
 <h5>18.1-12 SCPropertyTmpByName</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertyTmpByName</code>( <var class="Arg">po</var>, <var class="Arg">name</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertyTmpByName</code>( <var class="Arg">po</var>, <var class="Arg">name</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: any value upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns the value of the temporary property with the name <var class="Arg">name</var> of the <code class="code">SCPropertyObject</code> <var class="Arg">po</var> if this temporary property is known for <var class="Arg">po</var> and <code class="keyw">fail</code> otherwise. The names of known temporary properties can be accessed via the function <code class="func">SCPropertiesTmpNames</code> (<a href="chap18.html#X797A290E8665E6D0"><span class="RefLink">18.1-6</span></a>)</p>
@@ -171,7 +172,7 @@
 
 <h5>18.1-13 SCPropertyTmpDrop</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertyTmpDrop</code>( <var class="Arg">po</var>, <var class="Arg">name</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertyTmpDrop</code>( <var class="Arg">po</var>, <var class="Arg">name</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise</p>
 
 <p>Drops the temporary property with name <var class="Arg">name</var> of the <code class="code">SCPropertyObject</code> <var class="Arg">po</var>. Returns <code class="keyw">true</code> if the property is successfully dropped and <code class="keyw">fail</code> if a temporary property with that name did not exist.</p>
@@ -180,7 +181,7 @@
 
 <h5>18.1-14 SCPropertyTmpSet</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertyTmpSet</code>( <var class="Arg">po</var>, <var class="Arg">name</var>, <var class="Arg">data</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertyTmpSet</code>( <var class="Arg">po</var>, <var class="Arg">name</var>, <var class="Arg">data</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success.</p>
 
 <p>Sets the value of the temporary property with name <var class="Arg">name</var> of the <code class="code">SCPropertyObject</code> <var class="Arg">po</var> to <var class="Arg">data</var>. Note that the argument does not become immutable. This is the standard behaviour for temporary properties.</p>

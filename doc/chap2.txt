@@ -7,7 +7,7 @@
   in these fields may well skip to the next chapter.[133X
   
   [33X[0;0YFor  a more detailed look the authors recommend the books [Hud69], [RS72] on
-  PL-topology and [Zie95], [Gr{03] on the theory of polytopes.[133X
+  PL-topology and [Zie95], [Gr\03] on the theory of polytopes.[133X
   
   [33X[0;0YAn  overview  of  the more recent developments in the field of combinatorial
   topology can be found in [Lut05] and [Dat07].[133X
@@ -19,8 +19,9 @@
   [22Xd[122X-dimensional euclidean space:[133X
   
   
-        [33X[1;6Y[24X[33X[0;0YP= conv \{v_1,\dots,v_n\}\subset E^d,[133X [124X[133X
+  [24X[33X[0;6YP= conv \{v_1,\dots,v_n\}\subset E^d,[133X
   
+  [124X
   
   [33X[0;0Ywhere the [22Xv_1,dots,v_n[122X do not lie in a hyperplane of [22XE^d[122X.[133X
   
@@ -175,7 +176,7 @@
   [1X2.5 [33X[0;0YPolyhedral Morse theory and slicings[133X[101X
   
   [33X[0;0YIn  the  field  of  PL-topology  Kühnel  developed  what  one  might  call a
-  polyhedral  Morse  theory (compare [K{\95], not to be confused with Forman's
+  polyhedral  Morse  theory (compare [K\t95], not to be confused with Forman's
   discrete Morse theory for cell complexes which is decribed in Section [14X2.6[114X):[133X
   [33X[0;0YLet  [22XM[122X  be a combinatorial [22Xd[122X-manifold. A function [22Xf:M -> R[122X is called [13Xregular
   simplexwise  linear (rsl)[113X if [22Xf(v) ≠ f(w)[122X for any two vertices [22Xw ≠ v[122X and if [22Xf[122X
@@ -233,19 +234,20 @@
   the  lower  bound  [13Xsum  of  the  Betti numbers[113X [Kui84], [BK97]. It was first
   studied  by  Alexandrov,  Milnor,  Chern  and  Lashof  and  Kuiper and later
   extended  to  the  polyhedral  case  by Banchoff [Ban65], Kuiper [Kui84] and
-  Kühnel  [K{\95].  From  a  geometrical  point  of  view,  tightness  can  be
+  Kühnel  [K\t95].  From  a  geometrical  point  of  view,  tightness  can  be
   understood  as  a generalization of the concept of convexity that applies to
   objects  other  than topological balls and their boundary manifolds since it
   roughly  means  that  an  embedding  of  a  submanifold  is  ``as  convex as
   possible'' according to its topology. The usual definition is the following:[133X
-  [33X[0;0Y[12XDefinition[112X (Tightness, [K{\95])[133X
+  [33X[0;0Y[12XDefinition[112X (Tightness, [K\t95])[133X
   [33X[0;0YLet  [22XF[122X  be  a  field.  An  embedding [22XM → E^N[122X of a compact manifold is called
   [13X[22Xk[122X-tight  with  respect  to  [22XF[122X[113X if for any open or closed halfspace [22Xh⊂ E^N[122X the
   induced homomorphism[133X
   
   
-        [33X[1;6Y[24X[33X[0;0YH_i(M\cap h;\mathbb{F})\longrightarrow H_i(M;\mathbb{F})[133X [124X[133X
+  [24X[33X[0;6YH_i(M\cap h;\mathbb{F})\longrightarrow H_i(M;\mathbb{F})[133X
   
+  [124X
   
   [33X[0;0Yis  injective  for all [22Xi≤ k[122X. [22XM[122X is called [22XF[122X[13X-tight[113X if it is [22Xk[122X-tight for all [22Xk[122X.
   The  standard  choice  for the field of coefficients is [22XF_2[122X and an [22XF_2[122X-tight
@@ -253,19 +255,19 @@
   [33X[0;0YWith  regard  to  PL  embeddings  of PL manifolds tightness of [13Xcombinatorial
   manifolds[113X  can  also  be  defined  via  a  purely combinatorial condition as
   follows. For an introduction to PL topology see [RS72].[133X
-  [33X[0;0Y[12XDefinition[112X (Tight triangulation [K{\95])[133X
+  [33X[0;0Y[12XDefinition[112X (Tight triangulation [K\t95])[133X
   [33X[0;0YLet  [22XF[122X  be  a field. A combinatorial manifold [22XK[122X on [22Xn[122X vertices is called [13X([22Xk[122X-)
   tight  w.r.t.  [22XF[122X[113X  if  its  canonical  embedding [22XK⊂ ∆^n-1⊂ E^n-1[122X is ([22Xk[122X-)tight
   w.r.t. [22XF[122X, where [22X∆^n-1[122X denotes the [22X(n-1)[122X-dimensional simplex.[133X
   [33X[0;0YIn  dimension  [22Xd=2[122X the following are equivalent for a triangulated surface [22XS[122X
   on  [22Xn[122X  vertices: (i) [22XS[122X has a complete edge graph [22XK_n[122X, (ii) [22XS[122X appears as a so
-  called  [13Xregular case[113X in Heawood's Map Color Theorem [Rin74], compare [K{\95]
+  called  [13Xregular case[113X in Heawood's Map Color Theorem [Rin74], compare [K\t95]
   and  (iii)  the  induced  piecewise  linear  embedding  of  [22XS[122X into Euclidean
-  [22X(n-1)[122X-space has the two-piece property [Ban74], and it is tight [K{\95].[133X
+  [22X(n-1)[122X-space has the two-piece property [Ban74], and it is tight [K\t95].[133X
   [33X[0;0YKühnel   investigated  the  tightness  of  combinatorial  triangulations  of
-  manifolds also in higher dimensions and codimensions, see [K{\94]. It turned
+  manifolds also in higher dimensions and codimensions, see [K\t94]. It turned
   out  that  the tightness of a combinatorial triangulation is closely related
-  to  the  concept of [13XHamiltonicity[113X of a polyhedral complexes (see [K{\95]): A
+  to  the  concept of [13XHamiltonicity[113X of a polyhedral complexes (see [K\t95]): A
   subcomplex [22XA[122X of a polyhedral complex [22XK[122X is called [13X[22Xk[122X-Hamiltonian[113X if [22XA[122X contains
   the  full [22Xk[122X-dimensional skeleton of [22XK[122X (not to be confused with the notion of
   a  [22Xk[122X-Hamiltonian  graph). This generalization of the notion of a Hamiltonian
@@ -274,7 +276,7 @@
   [22X1[122X-dimensional graph or of a higher-dimensional complex.[133X
   [33X[0;0YA  triangulated  [22X2k[122X-manifold  that  is  a  [22Xk[122X-Hamiltonian  subcomplex  of the
   boundary complex of some higher dimensional simplex is a tight triangulation
-  as   Kühnel   [K{\95]   showed.   Such   a   triangulation  is  also  called
+  as   Kühnel   [K\t95]   showed.   Such   a   triangulation  is  also  called
   [13X[22X(k+1)[122X-neighborly  triangulation[113X  since  any  [22Xk+1[122X vertices in a [22Xk[122X-dimensional
   simplex  are  common neighbors. Moreover, [22X(k+1)[122X-neighborly triangulations of
   [22X2k[122X-manifolds  are  also referred to as [13Xsuper-neighborly[113X triangulations -- in
@@ -287,7 +289,7 @@
   exist  only  a  finite number of known examples of tight triangulations (see
   [KL99]  for  a  census)  apart  from  the  trivial case of the boundary of a
   simplex  and an infinite series of triangulations of sphere bundles over the
-  circle due to Kühnel [K{\95], [K{\86].[133X
+  circle due to Kühnel [K\t95], [K\t86].[133X
   
   
   [1X2.8 [33X[0;0YSimplicial blowups[133X[101X

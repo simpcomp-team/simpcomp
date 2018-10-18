@@ -68,7 +68,7 @@
   
   [1X9.2-1 SCBistellarOptions[101X
   
-  [29X[2XSCBistellarOptions[102X[32X global variable
+  [33X[1;0Y[29X[2XSCBistellarOptions[102X[32X global variable[133X
   
   [33X[0;0YRecord  of  global variables to adjust output an behavior of bistellar moves
   in    [2XSCIntFunc.SCChooseMove[102X    ([14X9.2-4[114X)   and   [2XSCReduceComplexEx[102X   ([14X9.2-14[114X)
@@ -134,7 +134,7 @@
   
   [1X9.2-2 SCEquivalent[101X
   
-  [29X[2XSCEquivalent[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCEquivalent[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X  or  [9Xfalse[109X  upon  success,  [9Xfail[109X  or  a  list of type [10X[ fail,
             SCSimplicialComplex, Integer, facet list][110X otherwise.[133X
   
@@ -162,7 +162,7 @@
   
   [1X9.2-3 SCExamineComplexBistellar[101X
   
-  [29X[2XSCExamineComplexBistellar[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCExamineComplexBistellar[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex  passed as argument with additional properties
             upon success, [9Xfail[109X otherwise.[133X
   
@@ -200,7 +200,7 @@
   
   [1X9.2-4 SCIntFunc.SCChooseMove[101X
   
-  [29X[2XSCIntFunc.SCChooseMove[102X( [3Xdim[103X, [3Xmoves[103X ) [32X function
+  [33X[1;0Y[29X[2XSCIntFunc.SCChooseMove[102X( [3Xdim[103X, [3Xmoves[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya  bistellar  move,  i.  e.  a  pair  of  lists upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -222,7 +222,7 @@
   
   [1X9.2-5 SCIsKStackedSphere[101X
   
-  [29X[2XSCIsKStackedSphere[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsKStackedSphere[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks,  whether  the  given  simplicial  complex  [3Xcomplex[103X that must be a PL
@@ -241,7 +241,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("S^4~S^1");[128X[104X
-    [4X[28X [ [ 463, "S^4~S^1 (VT)" ], [ 1473, "S^4~S^1 (VT)" ], [ 1474, "S^4~S^1 (VT)" ],[128X[104X
+    [4X[28X [ [ 463, "S^4~S^1 (VT)" ], [ 1474, "S^4~S^1 (VT)" ], [ 1475, "S^4~S^1 (VT)" ],[128X[104X
     [4X[28X   [ 2477, "S^4~S^1 (VT)" ], [ 4395, "S^4~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 4396, "S^4~S^1 (VT)" ], [ 4397, "S^4~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 4398, "S^4~S^1 (VT)" ], [ 4399, "S^4~S^1 (VT)" ], [128X[104X
@@ -274,7 +274,7 @@
   
   [1X9.2-6 SCBistellarIsManifold[101X
   
-  [29X[2XSCBistellarIsManifold[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCBistellarIsManifold[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YTries  to prove that a closed simplicial [22Xd[122X-pseudomanifold is a combinatorial
@@ -302,7 +302,7 @@
   
   [1X9.2-7 SCIsMovableComplex[101X
   
-  [29X[2XSCIsMovableComplex[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCIsMovableComplex[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YChecks  if  a simplicial complex [3Xcomplex[103X can be modified by bistellar moves,
@@ -327,7 +327,7 @@
   
   [1X9.2-8 SCMove[101X
   
-  [29X[2XSCMove[102X( [3Xc[103X, [3Xmove[103X ) [32X method
+  [33X[1;0Y[29X[2XSCMove[102X( [3Xc[103X, [3Xmove[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -369,7 +369,7 @@
   
   [1X9.2-9 SCMoves[101X
   
-  [29X[2XSCMoves[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCMoves[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of list of pairs of lists upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YSee [2XSCRMoves[102X ([14X9.2-10[114X) for further information.[133X
@@ -390,7 +390,7 @@
   
   [1X9.2-10 SCRMoves[101X
   
-  [29X[2XSCRMoves[102X( [3Xcomplex[103X, [3Xr[103X ) [32X method
+  [33X[1;0Y[29X[2XSCRMoves[102X( [3Xcomplex[103X, [3Xr[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of pairs of the form [10X[ list, list ][110X, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YA  bistellar  [22Xr[122X-move  of a [22Xd[122X-dimensional combinatorial manifold [3Xcomplex[103X is a
@@ -414,7 +414,7 @@
   
   [1X9.2-11 SCRandomize[101X
   
-  [29X[2XSCRandomize[102X( [3Xcomplex[103X[[, [3Xrounds[103X][, [3Xallowedmoves[103X]] ) [32X function
+  [33X[1;0Y[29X[2XSCRandomize[102X( [3Xcomplex[103X[[, [3Xrounds[103X][, [3Xallowedmoves[103X]] ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya simplicial complex upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YRandomizes  the  given simplicial complex [3Xcomplex[103X via bistellar moves chosen
@@ -442,13 +442,13 @@
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> c.F;[128X[104X
-    [4X[28X [ 17, 74, 114, 57 ][128X[104X
+    [4X[28X [ 16, 65, 98, 49 ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [1X9.2-12 SCReduceAsSubcomplex[101X
   
-  [29X[2XSCReduceAsSubcomplex[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method
+  [33X[1;0Y[29X[2XSCReduceAsSubcomplex[102X( [3Xcomplex1[103X, [3Xcomplex2[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[10XSCBistellarOptions.WriteLevel=0[110X:  a  triple of the form [10X[ boolean,
             simplicial  complex,  rounds  performed  ][110X upon termination of the
             algorithm.[133X
@@ -492,7 +492,7 @@
   
   [1X9.2-13 SCReduceComplex[101X
   
-  [29X[2XSCReduceComplex[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCReduceComplex[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[10XSCBistellarOptions.WriteLevel=0[110X:  a  triple of the form [10X[ boolean,
             simplicial  complex,  rounds  performed  ][110X upon termination of the
             algorithm.[133X
@@ -531,7 +531,7 @@
   
   [1X9.2-14 SCReduceComplexEx[101X
   
-  [29X[2XSCReduceComplexEx[102X( [3Xcomplex[103X, [3XrefComplex[103X, [3Xmode[103X, [3Xchoosemove[103X ) [32X function
+  [33X[1;0Y[29X[2XSCReduceComplexEx[102X( [3Xcomplex[103X, [3XrefComplex[103X, [3Xmode[103X, [3Xchoosemove[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[10XSCBistellarOptions.WriteLevel=0[110X:  a  triple of the form [10X[ boolean,
             simplicial complex, rounds ][110X upon termination of the algorithm.[133X
   
@@ -598,7 +598,7 @@
     [4X[28X      Name="unnamed complex 18"[128X[104X
     [4X[28X      Dim=3[128X[104X
     [4X[28X     [128X[104X
-    [4X[28X     /SimplicialComplex], 7 ][128X[104X
+    [4X[28X     /SimplicialComplex], 9 ][128X[104X
     [4X[28X gap> SCMailSetAddress("johndoe@somehost");   [128X[104X
     [4X[28X true[128X[104X
     [4X[28X gap> SCMailIsEnabled();                     [128X[104X
@@ -620,7 +620,7 @@
   [4X[32X  Example  [32X[104X
     [4X[28X Greetings master,[128X[104X
     [4X[28X [128X[104X
-    [4X[28X this is simpcomp 2.1.8 running on igt215.mathematik.uni-stuttgart.de[128X[104X
+    [4X[28X this is simpcomp 2.1.9 running on igt215.mathematik.uni-stuttgart.de[128X[104X
     [4X[28X (Linux igt215 2.6.26-2-amd64 #1 SMP Thu Nov 5 02:23:12 UTC 2009 x86_64[128X[104X
     [4X[28X GNU/Linux), GAP 4.4.12.[128X[104X
     [4X[28X [128X[104X
@@ -659,7 +659,7 @@
   
   [1X9.2-15 SCReduceComplexFast[101X
   
-  [29X[2XSCReduceComplexFast[102X( [3Xcomplex[103X ) [32X function
+  [33X[1;0Y[29X[2XSCReduceComplexFast[102X( [3Xcomplex[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ya simplicial complex upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YSame as [2XSCReduceComplex[102X ([14X9.2-13[114X), but calls an external binary provided with

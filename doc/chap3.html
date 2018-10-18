@@ -19,9 +19,10 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap4.html">[Next Chapter]</a>&nbsp;  </div>
 
-<p><a id="X87A7DD0F8138F0DC" name="X87A7DD0F8138F0DC"></a></p>
-<div class="ChapSects"><a href="chap3.html#X87A7DD0F8138F0DC">3 <span class="Heading">The new GAP object types of <strong class="pkg">simpcomp</strong></span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X79C7AD47824F17C8">3.1 <span class="Heading">Accessing properties of a <code class="code">SCPolyhedralComplex</code> 
+<p id="mathjaxlink" class="pcenter"></p>
+<p><a id="X83DEEDF8835622AD" name="X83DEEDF8835622AD"></a></p>
+<div class="ChapSects"><a href="chap3.html#X83DEEDF8835622AD">3 <span class="Heading">The new GAP object types of <strong class="pkg">simpcomp</strong></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X82FAB51B7C625240">3.1 <span class="Heading">Accessing properties of a <code class="code">SCPolyhedralComplex</code> 
 object</span></a>
 </span>
 </div>
@@ -41,9 +42,9 @@ object</span></a>
 
 <p>Geometric objects are represented by the <strong class="pkg">GAP</strong> object type <code class="code">SCPolyhedralComplex</code>, which as well is a subtype of <code class="code">SCPropertyObject</code>. <code class="code">SCPolyhedralComplex</code> is designed to represent any kind of piecewise linear geometric object given by a certain cell decomposition. Here, as already mentioned, the GAP4 type system <a href="chapBib.html#biBBreuer98GAP4TypeSystem">[BL98]</a> is used to cache properties of the object. In this way, a property is not calculated multiple times in case the object is not altered (see <code class="func">SCPropertiesDropped</code> (<a href="chap5.html#X8155B18D7EEF06DE"><span class="RefLink">5.1-4</span></a>) for a way of dropping previously calculated properties).</p>
 
-<p>As of Version 1.4, <strong class="pkg">simpcomp</strong> makes use of two different subtypes of <code class="code">SCPolyhedralComplex</code>: <code class="code">SCSimplicialComplex</code> to handle simplicial complexes and <code class="code">SCNormalSurface</code> to deal with discrete normal surfaces (slicings of dimension 2). Whenever possible, only one method per operations is implemented to deal with all subtypes of <code class="code">SCPolyhedralComplex</code>, these functions are described in Chapter <a href="chap4.html#X8518F9E57E38598E"><span class="RefLink">4</span></a>. For all other operations, the different methods for <code class="code">SCSimplicialComplex</code> and <code class="code">SCNormalSurface</code> are documented separately.</p>
+<p>As of Version 1.4, <strong class="pkg">simpcomp</strong> makes use of two different subtypes of <code class="code">SCPolyhedralComplex</code>: <code class="code">SCSimplicialComplex</code> to handle simplicial complexes and <code class="code">SCNormalSurface</code> to deal with discrete normal surfaces (slicings of dimension 2). Whenever possible, only one method per operations is implemented to deal with all subtypes of <code class="code">SCPolyhedralComplex</code>, these functions are described in Chapter <a href="chap4.html#X840691C285AB3AAD"><span class="RefLink">4</span></a>. For all other operations, the different methods for <code class="code">SCSimplicialComplex</code> and <code class="code">SCNormalSurface</code> are documented separately.</p>
 
-<p><a id="X79C7AD47824F17C8" name="X79C7AD47824F17C8"></a></p>
+<p><a id="X82FAB51B7C625240" name="X82FAB51B7C625240"></a></p>
 
 <h4>3.1 <span class="Heading">Accessing properties of a <code class="code">SCPolyhedralComplex</code> 
 object</span></h4>

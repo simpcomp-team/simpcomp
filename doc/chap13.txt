@@ -28,7 +28,7 @@
   
   [1X13.1-1 SCIsLibRepository[101X
   
-  [29X[2XSCIsLibRepository[102X( [3Xobject[103X ) [32X filter
+  [33X[1;0Y[29X[2XSCIsLibRepository[102X( [3Xobject[103X ) [32X filter[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YFilter  for  the  category of a library repository [10XSCIsLibRepository[110X used by
@@ -43,7 +43,7 @@
   
   [1X13.1-2 SCLib[101X
   
-  [29X[2XSCLib[102X[32X global variable
+  [33X[1;0Y[29X[2XSCLib[102X[32X global variable[133X
   
   [33X[0;0YThe  global variable [10XSCLib[110X contains the library object of the global library
   of  [5Xsimpcomp[105X  through which the user can access the library. The path to the
@@ -62,12 +62,12 @@
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
-    [4X[28X Path="/home/jspreer/apps/gap4r8/pkg/simpcomp/complexes/"[128X[104X
+    [4X[28X Path="/home/jspreer/GAP/gap-4.9.1-simpcomp-repository/pkg/simpcomp/complexes/"[128X[104X
     [4X[28X ][128X[104X
     [4X[28X gap> SCLib.Size;[128X[104X
     [4X[28X 7649[128X[104X
     [4X[28X gap> SCLib.SearchByName("S^4~");[128X[104X
-    [4X[28X [ [ 463, "S^4~S^1 (VT)" ], [ 1473, "S^4~S^1 (VT)" ], [ 1474, "S^4~S^1 (VT)" ],[128X[104X
+    [4X[28X [ [ 463, "S^4~S^1 (VT)" ], [ 1474, "S^4~S^1 (VT)" ], [ 1475, "S^4~S^1 (VT)" ],[128X[104X
     [4X[28X   [ 2477, "S^4~S^1 (VT)" ], [ 4395, "S^4~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 4396, "S^4~S^1 (VT)" ], [ 4397, "S^4~S^1 (VT)" ], [128X[104X
     [4X[28X   [ 4398, "S^4~S^1 (VT)" ], [ 4399, "S^4~S^1 (VT)" ], [128X[104X
@@ -111,7 +111,7 @@
   
   [1X13.1-3 SCLibAdd[101X
   
-  [29X[2XSCLibAdd[102X( [3Xrepository[103X, [3Xcomplex[103X[, [3Xname[103X] ) [32X function
+  [33X[1;0Y[29X[2XSCLibAdd[102X( [3Xrepository[103X, [3Xcomplex[103X[, [3Xname[103X] ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YAdds  a given simplicial complex [3Xcomplex[103X to a given repository [3Xrepository[103X of
@@ -143,7 +143,7 @@
   
   [1X13.1-4 SCLibAllComplexes[101X
   
-  [29X[2XSCLibAllComplexes[102X( [3Xrepository[103X ) [32X function
+  [33X[1;0Y[29X[2XSCLibAllComplexes[102X( [3Xrepository[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ylist of entries of the form [10X[ integer, string ][110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -161,7 +161,7 @@
   
   [1X13.1-5 SCLibDelete[101X
   
-  [29X[2XSCLibDelete[102X( [3Xrepository[103X, [3Xid[103X ) [32X function
+  [33X[1;0Y[29X[2XSCLibDelete[102X( [3Xrepository[103X, [3Xid[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YDeletes  the  simplicial  complex  with  the  given  id  [3Xid[103X  from  the given
@@ -186,7 +186,7 @@
   
   [1X13.1-6 SCLibDetermineTopologicalType[101X
   
-  [29X[2XSCLibDetermineTopologicalType[102X( [[3Xrepository[103X, ][3Xcomplex[103X ) [32X function
+  [33X[1;0Y[29X[2XSCLibDetermineTopologicalType[102X( [[3Xrepository[103X, ][3Xcomplex[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex  of  type  [10XSCSimplicialComplex[110X  or  a  list of
             integers upon success, [9Xfail[109X otherwise.[133X
   
@@ -229,7 +229,7 @@
   
   [1X13.1-7 SCLibFlush[101X
   
-  [29X[2XSCLibFlush[102X( [3Xrepository[103X, [3Xconfirm[103X ) [32X function
+  [33X[1;0Y[29X[2XSCLibFlush[102X( [3Xrepository[103X, [3Xconfirm[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YCompletely  empties  a  given  repository  [3Xrepository[103X.  The  index  and  all
@@ -246,7 +246,7 @@
   
   [1X13.1-8 SCLibInit[101X
   
-  [29X[2XSCLibInit[102X( [3Xdir[103X ) [32X function
+  [33X[1;0Y[29X[2XSCLibInit[102X( [3Xdir[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ylibrary  repository  of  type  [10XSCLibRepository[110X  upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -287,7 +287,7 @@
   
   [1X13.1-9 SCLibIsLoaded[101X
   
-  [29X[2XSCLibIsLoaded[102X( [3Xrepository[103X ) [32X function
+  [33X[1;0Y[29X[2XSCLibIsLoaded[102X( [3Xrepository[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X upon succes, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  [9Xtrue[109X when a given library repository [3Xrepository[103X is in loaded state.
@@ -305,7 +305,7 @@
   
   [1X13.1-10 SCLibSearchByAttribute[101X
   
-  [29X[2XSCLibSearchByAttribute[102X( [3Xrepository[103X, [3Xexpr[103X ) [32X function
+  [33X[1;0Y[29X[2XSCLibSearchByAttribute[102X( [3Xrepository[103X, [3Xexpr[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA list of items of the form [10X[ integer, string ][110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -321,15 +321,15 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLibSearchByAttribute(SCLib,"Dim=4 and F[3]=Binomial(F[1],3)");[128X[104X
-    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 7648, "K3_16" ] ][128X[104X
+    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 7494, "K3_16" ] ][128X[104X
     [4X[28X gap> SCLib.SearchByAttribute("Dim=4 and F[3]=Binomial(F[1],3)");[128X[104X
-    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 7648, "K3_16" ] ][128X[104X
+    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 7494, "K3_16" ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [1X13.1-11 SCLibSearchByName[101X
   
-  [29X[2XSCLibSearchByName[102X( [3Xrepository[103X, [3Xname[103X ) [32X function
+  [33X[1;0Y[29X[2XSCLibSearchByName[102X( [3Xrepository[103X, [3Xname[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA list of items of the form [10X[ integer, string ][110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -340,18 +340,18 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLibSearchByName(SCLib,"K3");[128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
+    [4X[28X [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ][128X[104X
     [4X[28X gap> SCLib.SearchByName("K3"); #alternative syntax[128X[104X
-    [4X[28X [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ][128X[104X
+    [4X[28X [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ][128X[104X
     [4X[28X gap> SCLib.SearchByName("S^4x"); #search for products with S^4[128X[104X
-    [4X[28X [ [ 713, "S^4xS^1 (VT)" ], [ 1472, "S^4xS^1 (VT)" ], [ 1475, "S^4xS^1 (VT)" ],[128X[104X
-    [4X[28X   [ 7479, "S^4xS^2" ], [ 7539, "S^4xS^3" ], [ 7573, "S^4xS^4" ] ][128X[104X
+    [4X[28X [ [ 713, "S^4xS^1 (VT)" ], [ 1472, "S^4xS^1 (VT)" ], [ 1473, "S^4xS^1 (VT)" ],[128X[104X
+    [4X[28X   [ 7478, "S^4xS^2" ], [ 7541, "S^4xS^3" ], [ 7575, "S^4xS^4" ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [1X13.1-12 SCLibSize[101X
   
-  [29X[2XSCLibSize[102X( [3Xrepository[103X ) [32X function
+  [33X[1;0Y[29X[2XSCLibSize[102X( [3Xrepository[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Yinteger upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns   the   number  of  complexes  contained  in  the  given  repository
@@ -366,7 +366,7 @@
   
   [1X13.1-13 SCLibUpdate[101X
   
-  [29X[2XSCLibUpdate[102X( [3Xrepository[103X[, [3Xrecalc[103X] ) [32X function
+  [33X[1;0Y[29X[2XSCLibUpdate[102X( [3Xrepository[103X[, [3Xrecalc[103X] ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ylibrary  repository  of  type  [10XSCLibRepository[110X  upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -396,7 +396,7 @@
   
   [1X13.1-14 SCLibStatus[101X
   
-  [29X[2XSCLibStatus[102X( [3Xrepository[103X ) [32X function
+  [33X[1;0Y[29X[2XSCLibStatus[102X( [3Xrepository[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ylibrary  repository  of  type  [10XSCLibRepository[110X  upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -415,7 +415,7 @@
     [4X[28X IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", [128X[104X
     [4X[28X   "IsManifold" ][128X[104X
     [4X[28X Loaded=true[128X[104X
-    [4X[28X Path="/home/jspreer/apps/gap4r8/pkg/simpcomp/complexes/"[128X[104X
+    [4X[28X Path="/home/jspreer/GAP/gap-4.9.1-simpcomp-repository/pkg/simpcomp/complexes/"[128X[104X
     [4X[28X ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
@@ -430,11 +430,11 @@
   export simplicial complexes into polymake format (for this format there also
   exists rudimentary import functionality), as JavaView geometry or in form of
   a  LaTeX  table.  For  importing  more  complex  polymake  data  the package
-  polymaking [R\"13] can be used.[133X
+  polymaking [R\t13] can be used.[133X
   
   [1X13.2-1 SCLoad[101X
   
-  [29X[2XSCLoad[102X( [3Xfilename[103X ) [32X function
+  [33X[1;0Y[29X[2XSCLoad[102X( [3Xfilename[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -477,7 +477,7 @@
   
   [1X13.2-2 SCLoadXML[101X
   
-  [29X[2XSCLoadXML[102X( [3Xfilename[103X ) [32X function
+  [33X[1;0Y[29X[2XSCLoadXML[102X( [3Xfilename[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -520,7 +520,7 @@
   
   [1X13.2-3 SCSave[101X
   
-  [29X[2XSCSave[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSave[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YSaves  a  simplicial  complex in a binary format (using [10XIO_Pickle[110X) to a file
@@ -536,7 +536,7 @@
   
   [1X13.2-4 SCSaveXML[101X
   
-  [29X[2XSCSaveXML[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function
+  [33X[1;0Y[29X[2XSCSaveXML[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YSaves  a  simplicial  complex  [3Xcomplex[103X  to  a file specified by [3Xfilename[103X (as
@@ -552,7 +552,7 @@
   
   [1X13.2-5 SCExportMacaulay2[101X
   
-  [29X[2XSCExportMacaulay2[102X( [3Xcomplex[103X, [3Xring[103X, [3Xfilename[103X[, [3Xalphalabels[103X] ) [32X function
+  [33X[1;0Y[29X[2XSCExportMacaulay2[102X( [3Xcomplex[103X, [3Xring[103X, [3Xfilename[103X[, [3Xalphalabels[103X] ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YExports  the  facet  list of a given simplicial complex [3Xcomplex[103X in [10XMacaulay2[110X
@@ -573,7 +573,7 @@
   
   [1X13.2-6 SCExportPolymake[101X
   
-  [29X[2XSCExportPolymake[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function
+  [33X[1;0Y[29X[2XSCExportPolymake[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YExports  the  facet  list  with  vertex labels of a given simplicial complex
@@ -589,7 +589,7 @@
   
   [1X13.2-7 SCImportPolymake[101X
   
-  [29X[2XSCImportPolymake[102X( [3Xfilename[103X ) [32X function
+  [33X[1;0Y[29X[2XSCImportPolymake[102X( [3Xfilename[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -617,7 +617,7 @@
   
   [1X13.2-8 SCExportLatexTable[101X
   
-  [29X[2XSCExportLatexTable[102X( [3Xcomplex[103X, [3Xfilename[103X, [3Xitemsperline[103X ) [32X function
+  [33X[1;0Y[29X[2XSCExportLatexTable[102X( [3Xcomplex[103X, [3Xfilename[103X, [3Xitemsperline[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X on success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YExports  the  facet  list of a given simplicial complex [3Xcomplex[103X (or any list
@@ -634,7 +634,7 @@
   
   [1X13.2-9 SCExportJavaView[101X
   
-  [29X[2XSCExportJavaView[102X( [3Xcomplex[103X, [3Xfile[103X, [3Xcoords[103X ) [32X function
+  [33X[1;0Y[29X[2XSCExportJavaView[102X( [3Xcomplex[103X, [3Xfile[103X, [3Xcoords[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X on success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YExports  the  2-skeleton  of  the  given  simplicial complex [3Xcomplex[103X (or the
@@ -657,7 +657,7 @@
   
   [1X13.2-10 SCExportPolymake[101X
   
-  [29X[2XSCExportPolymake[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function
+  [33X[1;0Y[29X[2XSCExportPolymake[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YExports  the  gluings  of the tetrahedra of a given combinatorial [22X3[122X-manifold
@@ -673,7 +673,7 @@
   
   [1X13.2-11 SCExportSnapPy[101X
   
-  [29X[2XSCExportSnapPy[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function
+  [33X[1;0Y[29X[2XSCExportSnapPy[102X( [3Xcomplex[103X, [3Xfilename[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YExports   the   facet  list  and  orientability  of  a  given  combinatorial

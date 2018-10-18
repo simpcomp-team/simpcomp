@@ -19,9 +19,10 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap13.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap15.html">[Next Chapter]</a>&nbsp;  </div>
 
+<p id="mathjaxlink" class="pcenter"></p>
 <p><a id="X7D09DEB478A09E55" name="X7D09DEB478A09E55"></a></p>
 <div class="ChapSects"><a href="chap14.html#X7D09DEB478A09E55">14 <span class="Heading">Interfaces to other software packages</span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap14.html#X7C18A4A67C1076E9">14.1 <span class="Heading">Interface to the <strong class="pkg">GAP</strong>-package <strong class="pkg">homalg</strong></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap14.html#X79FC20A5832313F5">14.1 <span class="Heading">Interface to the <strong class="pkg">GAP</strong>-package <strong class="pkg">homalg</strong></span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap14.html#X817196DF78B17B12">14.1-1 SCHomalgBoundaryMatrices</a></span>
@@ -39,7 +40,7 @@
 
 <p>Note that this chapter is subject to change and extension as it is planned to expand <strong class="pkg">simpcomp</strong>'s functionality in this area in the course of the next versions.</p>
 
-<p><a id="X7C18A4A67C1076E9" name="X7C18A4A67C1076E9"></a></p>
+<p><a id="X79FC20A5832313F5" name="X79FC20A5832313F5"></a></p>
 
 <h4>14.1 <span class="Heading">Interface to the <strong class="pkg">GAP</strong>-package <strong class="pkg">homalg</strong></span></h4>
 
@@ -51,7 +52,7 @@
 
 <h5>14.1-1 SCHomalgBoundaryMatrices</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomalgBoundaryMatrices</code>( <var class="Arg">complex</var>, <var class="Arg">modulus</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomalgBoundaryMatrices</code>( <var class="Arg">complex</var>, <var class="Arg">modulus</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of <strong class="pkg">homalg</strong> objects upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>This function computes the boundary operator matrices for the simplicial complex <var class="Arg">complex</var> with a ring of coefficients as specified by <var class="Arg">modulus</var>: a value of <code class="code">0</code> yields <span class="SimpleMath">Q</span>-matrices, a value of <code class="code">1</code> yields <span class="SimpleMath">Z</span>-matrices and a value of <code class="code">q</code>, q a prime or a prime power, computes the <span class="SimpleMath">F_q</span>-matrices.</p>
@@ -62,10 +63,10 @@
  [ [ 16, "CP^2 (VT)" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; SCHomalgBoundaryMatrices(c,0);
- [ &lt;A 36 x 9 mutable matrix over an internal ring&gt;, 
-   &lt;A 84 x 36 mutable matrix over an internal ring&gt;, 
-   &lt;A 90 x 84 mutable matrix over an internal ring&gt;, 
-   &lt;A 36 x 90 mutable matrix over an internal ring&gt;, 
+ [ &lt;A 36 x 9 matrix over an internal ring&gt;, 
+   &lt;A 84 x 36 matrix over an internal ring&gt;, 
+   &lt;A 90 x 84 matrix over an internal ring&gt;, 
+   &lt;A 36 x 90 matrix over an internal ring&gt;, 
    &lt;An unevaluated 0 x 36 zero matrix over an internal ring&gt; ]
  </pre></div>
 
@@ -73,7 +74,7 @@
 
 <h5>14.1-2 SCHomalgCoboundaryMatrices</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomalgCoboundaryMatrices</code>( <var class="Arg">complex</var>, <var class="Arg">modulus</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomalgCoboundaryMatrices</code>( <var class="Arg">complex</var>, <var class="Arg">modulus</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of <strong class="pkg">homalg</strong> objects upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>This function computes the coboundary operator matrices for the simplicial complex <var class="Arg">complex</var> with a ring of coefficients as specified by <var class="Arg">modulus</var>: a value of <code class="code">0</code> yields <span class="SimpleMath">Q</span>-matrices, a value of <code class="code">1</code> yields <span class="SimpleMath">Z</span>-matrices and a value of <code class="code">q</code>, q a prime or a prime power, computes the <span class="SimpleMath">F_q</span>-matrices.</p>
@@ -84,10 +85,10 @@
  [ [ 16, "CP^2 (VT)" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; SCHomalgCoboundaryMatrices(c,0);
- [ &lt;A 9 x 36 mutable matrix over an internal ring&gt;, 
-   &lt;A 36 x 84 mutable matrix over an internal ring&gt;, 
-   &lt;A 84 x 90 mutable matrix over an internal ring&gt;, 
-   &lt;A 90 x 36 mutable matrix over an internal ring&gt;, 
+ [ &lt;A 9 x 36 matrix over an internal ring&gt;, 
+   &lt;A 36 x 84 matrix over an internal ring&gt;, 
+   &lt;A 84 x 90 matrix over an internal ring&gt;, 
+   &lt;A 90 x 36 matrix over an internal ring&gt;, 
    &lt;An unevaluated 36 x 0 zero matrix over an internal ring&gt; ]
  </pre></div>
 
@@ -95,7 +96,7 @@
 
 <h5>14.1-3 SCHomalgHomology</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomalgHomology</code>( <var class="Arg">complex</var>, <var class="Arg">modulus</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomalgHomology</code>( <var class="Arg">complex</var>, <var class="Arg">modulus</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of integers upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>This function computes the ranks of the homology groups of <var class="Arg">complex</var> with a ring of coefficients as specified by <var class="Arg">modulus</var>: a value of <code class="code">0</code> computes the <span class="SimpleMath">Q</span>-homology, a value of <code class="code">1</code> computes the <span class="SimpleMath">Z</span>-homology and a value of <code class="code">q</code>, q a prime or a prime power, computes the <span class="SimpleMath">F_q</span>-homology ranks.</p>
@@ -105,7 +106,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; SCHomalgHomology(c,0);
  #I  SCHomalgHomologyOp: Q-homology ranks: [ 1, 0, 22, 0, 1 ]
@@ -116,7 +117,7 @@
 
 <h5>14.1-4 SCHomalgHomologyBasis</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomalgHomologyBasis</code>( <var class="Arg">complex</var>, <var class="Arg">modulus</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomalgHomologyBasis</code>( <var class="Arg">complex</var>, <var class="Arg">modulus</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a <strong class="pkg">homalg</strong> object upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>This function computes the homology groups (including explicit bases of the modules involved) of <var class="Arg">complex</var> with a ring of coefficients as specified by <var class="Arg">modulus</var>: a value of <code class="code">0</code> computes the <span class="SimpleMath">Q</span>-homology, a value of <code class="code">1</code> computes the <span class="SimpleMath">Z</span>-homology and a value of <code class="code">q</code>, q a prime or a prime power, computes the <span class="SimpleMath">F_q</span>-homology groups.</p>
@@ -128,18 +129,19 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; SCHomalgHomologyBasis(c,0);
  #I  SCHomalgHomologyBasisOp: constructed Q-homology groups.
- &lt;A graded homology object consisting of 5 left modules at degrees [ 0 .. 4 ]&gt;
+ &lt;A graded homology object consisting of 5 left vector spaces at degrees 
+ [ 0 .. 4 ]&gt;
  </pre></div>
 
 <p><a id="X840BBA3B7D881955" name="X840BBA3B7D881955"></a></p>
 
 <h5>14.1-5 SCHomalgCohomology</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomalgCohomology</code>( <var class="Arg">complex</var>, <var class="Arg">modulus</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomalgCohomology</code>( <var class="Arg">complex</var>, <var class="Arg">modulus</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of integers upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>This function computes the ranks of the cohomology groups of <var class="Arg">complex</var> with a ring of coefficients as specified by <var class="Arg">modulus</var>: a value of <code class="code">0</code> computes the <span class="SimpleMath">Q</span>-cohomology, a value of <code class="code">1</code> computes the <span class="SimpleMath">Z</span>-cohomology and a value of <code class="code">q</code>, q a prime or a prime power, computes the <span class="SimpleMath">F_q</span>-cohomology ranks.</p>
@@ -149,7 +151,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; SCHomalgCohomology(c,0);
  #I  SCHomalgCohomologyOp: Q-cohomology ranks: [ 1, 0, 22, 0, 1 ]
@@ -160,7 +162,7 @@
 
 <h5>14.1-6 SCHomalgCohomologyBasis</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomalgCohomologyBasis</code>( <var class="Arg">complex</var>, <var class="Arg">modulus</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomalgCohomologyBasis</code>( <var class="Arg">complex</var>, <var class="Arg">modulus</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a <strong class="pkg">homalg</strong> object upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>This function computes the cohomology groups (including explicit bases of the modules involved) of <var class="Arg">complex</var> with a ring of coefficients as specified by <var class="Arg">modulus</var>: a value of <code class="code">0</code> computes the <span class="SimpleMath">Q</span>-cohomology, a value of <code class="code">1</code> computes the <span class="SimpleMath">Z</span>-cohomology and a value of <code class="code">q</code>, q a prime or a prime power, computes the <span class="SimpleMath">F_q</span>-homology groups.</p>
@@ -172,11 +174,11 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; SCHomalgCohomologyBasis(c,0);
  #I  SCHomalgCohomologyBasisOp: constructed Q-cohomology groups.
- &lt;A graded cohomology object consisting of 5 left modules at degrees 
+ &lt;A graded cohomology object consisting of 5 left vector spaces at degrees 
  [ 1 .. 5 ]&gt;
  </pre></div>
 

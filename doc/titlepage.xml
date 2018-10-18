@@ -3,32 +3,29 @@
   
   <Subtitle>A &GAP; toolbox for simplicial complexes</Subtitle>
   
-  <Version>Version %%%VERSION%%%</Version>
+  <Version>Version 2.1.9</Version>
 
   <Author>
   	Felix Effenberger
-    <Email>felix.effenberger@mis.mpg.de</Email>
-    <Address>
-  	Max Planck Institute for Mathematics in the Sciences<Br/>
-	Inselstr. 22<Br/>
-	D-04103 Leipzig, Germany
-    </Address>
+    <Email>exilef@gmail.com</Email>
 
   </Author>
 
   <Author>
   	Jonathan Spreer
-    <Email>j.spreer@uq.edu.au</Email>
+    <Email>jonathan.spreer@fu-berlin.de</Email>
     <Address>
-  	University of Queensland<Br/>
+        Discrete Geometry Group<Br/>
+        Mathematical Institute<Br/>
+  	Freie Universitaet Berlin<Br/>
 	School of Mathematics and Physics<Br/>
-	Brisbane QLD 4072 Australia
+	Arnimallee 2, 14195 Berlin, Germany
     </Address>
 
   </Author>
 
   
-  <Date>%%%DATESHORT%%%
+  <Date>October 2018
 	<Alt Only="LaTeX"><![CDATA[
 	\begin{center}
 	\vspace*{1cm}
@@ -50,7 +47,7 @@
 	The authors acknowledge support by the Deutsche Forschungsgemeinschaft (DFG): <Package>simpcomp</Package> has been developed within the DFG projects Ku 1203/5-2 and Ku 1203/5-3. 
   </Acknowledgements>
 
-  <Copyright>&copyright; %%%YEAR%%% Felix Effenberger and Jonathan Spreer. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation, see <URL>http://www.fsf.org/licensing/licenses/fdl.html</URL> for a copy.<P/>
+  <Copyright>&copyright; 2018 Felix Effenberger and Jonathan Spreer. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation, see <URL>http://www.fsf.org/licensing/licenses/fdl.html</URL> for a copy.<P/>
 	 	 
 	 <Package>simpcomp</Package> is free software. The code of <Package>simpcomp</Package> is released under the GPL version 2 or later (at your preference). For the text of the GPL see the file <C>COPYING</C> in the <Package>simpcomp</Package> directory or <URL>http://www.gnu.org/licenses/</URL>.
 	 

@@ -26,7 +26,7 @@
   
   [1X4.1-1 SCFacets[101X
   
-  [29X[2XSCFacets[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFacets[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya facet list upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns the facets of a simplicial complex in the original vertex labeling.[133X
@@ -40,7 +40,7 @@
   
   [1X4.1-2 SCFacetsEx[101X
   
-  [29X[2XSCFacetsEx[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCFacetsEx[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya facet list upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  the  facets  of a simplicial complex as they are stored, i. e. with
@@ -55,7 +55,7 @@
   
   [1X4.1-3 SCVertices[101X
   
-  [29X[2XSCVertices[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCVertices[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list of vertex labels of [3Xcomplex[103X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns the vertex labels of a simplicial complex [3Xcomplex[103X.[133X
@@ -72,7 +72,7 @@
   
   [1X4.1-4 SCVerticesEx[101X
   
-  [29X[2XSCVerticesEx[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCVerticesEx[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[22X[ 1, ... , n ][122X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns  [22X[1,  ...  ,  n ][122X, where [22Xn[122X is the number of vertices of a simplicial
@@ -97,7 +97,7 @@
   
   [1X4.2-1 SCLabelMax[101X
   
-  [29X[2XSCLabelMax[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCLabelMax[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Yvertex  label of [3Xcomplex[103X (an integer, a short list, a character, a
             short string) upon success, [9Xfail[109X otherwise.[133X
   
@@ -122,7 +122,7 @@
   
   [1X4.2-2 SCLabelMin[101X
   
-  [29X[2XSCLabelMin[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCLabelMin[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Yvertex  label of [3Xcomplex[103X (an integer, a short list, a character, a
             short string) upon success, [9Xfail[109X otherwise.[133X
   
@@ -147,7 +147,7 @@
   
   [1X4.2-3 SCLabels[101X
   
-  [29X[2XSCLabels[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCLabels[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  vertex  labels  of [3Xcomplex[103X (a list of integers, short
             lists,   characters,   short  strings,  ...)  upon  success,  [9Xfail[109X
             otherwise.[133X
@@ -164,7 +164,7 @@
   
   [1X4.2-4 SCName[101X
   
-  [29X[2XSCName[102X( [3Xcomplex[103X ) [32X operation
+  [33X[1;0Y[29X[2XSCName[102X( [3Xcomplex[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Ya string upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns the name of a simplicial complex [3Xcomplex[103X.[133X
@@ -185,7 +185,7 @@
   
   [1X4.2-5 SCReference[101X
   
-  [29X[2XSCReference[102X( [3Xcomplex[103X ) [32X operation
+  [33X[1;0Y[29X[2XSCReference[102X( [3Xcomplex[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Ya string upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YReturns a literature reference of a polyhedral complex [3Xcomplex[103X.[133X
@@ -204,7 +204,7 @@
   
   [1X4.2-6 SCRelabel[101X
   
-  [29X[2XSCRelabel[102X( [3Xcomplex[103X, [3Xmaptable[103X ) [32X method
+  [33X[1;0Y[29X[2XSCRelabel[102X( [3Xcomplex[103X, [3Xmaptable[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0Y[3Xmaptable[103X  has  to be a list of length [22Xn[122X where [22Xn[122X is the number of vertices of
@@ -234,7 +234,7 @@
   
   [1X4.2-7 SCRelabelStandard[101X
   
-  [29X[2XSCRelabelStandard[102X( [3Xcomplex[103X ) [32X method
+  [33X[1;0Y[29X[2XSCRelabelStandard[102X( [3Xcomplex[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YMaps  vertex  labels [22Xv_1 , ... , v_n[122X of [3Xcomplex[103X to [22X[1 , ... , n][122X. Internally
@@ -256,7 +256,7 @@
   
   [1X4.2-8 SCRelabelTransposition[101X
   
-  [29X[2XSCRelabelTransposition[102X( [3Xcomplex[103X, [3Xpair[103X ) [32X method
+  [33X[1;0Y[29X[2XSCRelabelTransposition[102X( [3Xcomplex[103X, [3Xpair[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YPermutes  vertex  labels of a single pair of vertices. [3Xpair[103X has to be a list
@@ -269,7 +269,7 @@
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SCBdSimplex(3);;[128X[104X
     [4X[28X gap> SCVertices(c);[128X[104X
-    [4X[28X [ 1, 2, 3, 4 ][128X[104X
+    [4X[28X [ 1 .. 4 ][128X[104X
     [4X[28X gap> SCRelabelTransposition(c,[1,2]);;[128X[104X
     [4X[28X gap> SCLabels(c);[128X[104X
     [4X[28X [ 2, 1, 3, 4 ][128X[104X
@@ -278,7 +278,7 @@
   
   [1X4.2-9 SCRename[101X
   
-  [29X[2XSCRename[102X( [3Xcomplex[103X, [3Xname[103X ) [32X method
+  [33X[1;0Y[29X[2XSCRename[102X( [3Xcomplex[103X, [3Xname[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YRenames a polyhedral complex. The argument [3Xname[103X has to be given in form of a
@@ -297,7 +297,7 @@
   
   [1X4.2-10 SCSetReference[101X
   
-  [29X[2XSCSetReference[102X( [3Xcomplex[103X, [3Xref[103X ) [32X method
+  [33X[1;0Y[29X[2XSCSetReference[102X( [3Xcomplex[103X, [3Xref[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YSets  the literature reference of a polyhedral complex. The argument [3Xref[103X has
@@ -317,7 +317,7 @@
   
   [1X4.2-11 SCUnlabelFace[101X
   
-  [29X[2XSCUnlabelFace[102X( [3Xcomplex[103X, [3Xface[103X ) [32X method
+  [33X[1;0Y[29X[2XSCUnlabelFace[102X( [3Xcomplex[103X, [3Xface[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya list upon success, [9Xfail[109X otherwise.[133X
   
   [33X[0;0YComputes the standard labeling of [3Xface[103X in [3Xcomplex[103X.[133X
@@ -342,7 +342,7 @@
   
   [1X4.3-1 SCAntiStar[101X
   
-  [29X[2XSCAntiStar[102X( [3Xcomplex[103X, [3Xface[103X ) [32X method
+  [33X[1;0Y[29X[2XSCAntiStar[102X( [3Xcomplex[103X, [3Xface[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise .[133X
   
@@ -352,7 +352,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("RP^2");     [128X[104X
-    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ][128X[104X
+    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ][128X[104X
     [4X[28X gap> rp2:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCVertices(rp2);[128X[104X
     [4X[28X [ 1, 2, 3, 4, 5, 6 ][128X[104X
@@ -372,7 +372,7 @@
   
   [1X4.3-2 SCLink[101X
   
-  [29X[2XSCLink[102X( [3Xcomplex[103X, [3Xface[103X ) [32X method
+  [33X[1;0Y[29X[2XSCLink[102X( [3Xcomplex[103X, [3Xface[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise.[133X
   
@@ -384,7 +384,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("RP^2");     [128X[104X
-    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ][128X[104X
+    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ][128X[104X
     [4X[28X gap> rp2:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCVertices(rp2);[128X[104X
     [4X[28X [ 1, 2, 3, 4, 5, 6 ][128X[104X
@@ -404,7 +404,7 @@
   
   [1X4.3-3 SCLinks[101X
   
-  [29X[2XSCLinks[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCLinks[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  simplicial complexes of type [10XSCSimplicialComplex[110X upon
             success, [9Xfail[109X otherwise.[133X
   
@@ -528,7 +528,7 @@
   
   [1X4.3-4 SCStar[101X
   
-  [29X[2XSCStar[102X( [3Xcomplex[103X, [3Xface[103X ) [32X method
+  [33X[1;0Y[29X[2XSCStar[102X( [3Xcomplex[103X, [3Xface[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ysimplicial  complex of type [10XSCSimplicialComplex[110X upon success, [9Xfail[109X
             otherwise .[133X
   
@@ -538,7 +538,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("RP^2");     [128X[104X
-    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ][128X[104X
+    [4X[28X [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ][128X[104X
     [4X[28X gap> rp2:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCVertices(rp2);[128X[104X
     [4X[28X [ 1, 2, 3, 4, 5, 6 ][128X[104X
@@ -558,7 +558,7 @@
   
   [1X4.3-5 SCStars[101X
   
-  [29X[2XSCStars[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method
+  [33X[1;0Y[29X[2XSCStars[102X( [3Xcomplex[103X, [3Xk[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  simplicial complexes of type [10XSCSimplicialComplex[110X upon
             success, [9Xfail[109X otherwise.[133X
   

@@ -19,6 +19,7 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap12.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap14.html">[Next Chapter]</a>&nbsp;  </div>
 
+<p id="mathjaxlink" class="pcenter"></p>
 <p><a id="X82F59668851B5E80" name="X82F59668851B5E80"></a></p>
 <div class="ChapSects"><a href="chap13.html#X82F59668851B5E80">13 <span class="Heading">Library and I/O</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap13.html#X7F84F1AD7AFB97CF">13.1 <span class="Heading">Simplicial complex library</span></a>
@@ -39,7 +40,7 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap13.html#X7A0856987A87A3C5">13.1-13 SCLibUpdate</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap13.html#X843A039E78D5A97B">13.1-14 SCLibStatus</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap13.html#X78F1E8C48285DF57">13.2 <span class="Heading"><strong class="pkg">simpcomp</strong> input / output functions</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap13.html#X8599D6D37F402950">13.2 <span class="Heading"><strong class="pkg">simpcomp</strong> input / output functions</span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap13.html#X867AFE4D7A2AA736">13.2-1 SCLoad</a></span>
@@ -72,7 +73,7 @@
 
 <h5>13.1-1 SCIsLibRepository</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsLibRepository</code>( <var class="Arg">object</var> )</td><td class="tdright">( filter )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsLibRepository</code>( <var class="Arg">object</var> )</td><td class="tdright">(&nbsp;filter&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Filter for the category of a library repository <code class="code">SCIsLibRepository</code> used by the <strong class="pkg">simpcomp</strong> library. The category <code class="code">SCLibRepository</code> is derived from the category <code class="code">SCPropertyObject</code>.</p>
@@ -87,7 +88,7 @@
 
 <h5>13.1-2 SCLib</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLib</code></td><td class="tdright">( global variable )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLib</code></td><td class="tdright">(&nbsp;global variable&nbsp;)</td></tr></table></div>
 <p>The global variable <code class="code">SCLib</code> contains the library object of the global library of <strong class="pkg">simpcomp</strong> through which the user can access the library. The path to the global library is <code class="code">GAPROOT/pkg/simpcomp/complexes</code>.</p>
 
 <p>The naming convention in the global library is the following: complexes are usually named by their topological type. As usual, `S^d' denotes a <span class="SimpleMath">d</span>-sphere, `T' a torus, `x' the cartesian product, `~' the twisted product and `#' the connected sum. The Klein Bottle is denoted by `K' or `K^2'.</p>
@@ -101,12 +102,12 @@
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/jspreer/apps/gap4r8/pkg/simpcomp/complexes/"
+ Path="/home/jspreer/GAP/gap-4.9.1-simpcomp-repository/pkg/simpcomp/complexes/"
  ]
  gap&gt; SCLib.Size;
  7649
  gap&gt; SCLib.SearchByName("S^4~");
- [ [ 463, "S^4~S^1 (VT)" ], [ 1473, "S^4~S^1 (VT)" ], [ 1474, "S^4~S^1 (VT)" ],
+ [ [ 463, "S^4~S^1 (VT)" ], [ 1474, "S^4~S^1 (VT)" ], [ 1475, "S^4~S^1 (VT)" ],
    [ 2477, "S^4~S^1 (VT)" ], [ 4395, "S^4~S^1 (VT)" ], 
    [ 4396, "S^4~S^1 (VT)" ], [ 4397, "S^4~S^1 (VT)" ], 
    [ 4398, "S^4~S^1 (VT)" ], [ 4399, "S^4~S^1 (VT)" ], 
@@ -151,7 +152,7 @@
 
 <h5>13.1-3 SCLibAdd</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibAdd</code>( <var class="Arg">repository</var>, <var class="Arg">complex</var>[, <var class="Arg">name</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibAdd</code>( <var class="Arg">repository</var>, <var class="Arg">complex</var>[, <var class="Arg">name</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Adds a given simplicial complex <var class="Arg">complex</var> to a given repository <var class="Arg">repository</var> of type <code class="code">SCIsLibRepository</code>. <var class="Arg">complex</var> is saved to a file with suffix <code class="code">.sc</code> in the repositories base path, where the file name is either formed from the optional argument <var class="Arg">name</var> and the current time or taken from the name of the complex, if it is named.</p>
@@ -181,7 +182,7 @@
 
 <h5>13.1-4 SCLibAllComplexes</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibAllComplexes</code>( <var class="Arg">repository</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibAllComplexes</code>( <var class="Arg">repository</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: list of entries of the form <code class="code">[ integer, string ]</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns a list with entries of the form <code class="code">[ ID, NAME ]</code> of all the complexes in the given repository <var class="Arg">repository</var> of type <code class="code">SCIsLibRepository</code>.</p>
@@ -199,7 +200,7 @@
 
 <h5>13.1-5 SCLibDelete</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibDelete</code>( <var class="Arg">repository</var>, <var class="Arg">id</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibDelete</code>( <var class="Arg">repository</var>, <var class="Arg">id</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Deletes the simplicial complex with the given id <var class="Arg">id</var> from the given repository <var class="Arg">repository</var>. Apart from deleting the complexes' index entry, the associated <code class="code">.sc</code> file is also deleted.</p>
@@ -224,7 +225,7 @@
 
 <h5>13.1-6 SCLibDetermineTopologicalType</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibDetermineTopologicalType</code>( [<var class="Arg">repository</var>, ]<var class="Arg">complex</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibDetermineTopologicalType</code>( [<var class="Arg">repository</var>, ]<var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> or a list of integers upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Tries to determine the topological type of a given complex <var class="Arg">complex</var> by first looking for complexes with matching homology in the library repository <var class="Arg">repository</var> (if no repository is passed, the global repository <code class="code">SCLib</code> is used) and either returns a simplicial complex object (that is combinatorially isomorphic to the complex given) or a list of library ids of complexes in the library with the same homology as the complex provided.</p>
@@ -259,7 +260,7 @@
 
 <h5>13.1-7 SCLibFlush</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibFlush</code>( <var class="Arg">repository</var>, <var class="Arg">confirm</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibFlush</code>( <var class="Arg">repository</var>, <var class="Arg">confirm</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Completely empties a given repository <var class="Arg">repository</var>. The index and all simplicial complexes in this repository are deleted. The second argument, <var class="Arg">confirm</var>, must be the string <code class="code">"yes"</code> in order to confirm the deletion.</p>
@@ -276,7 +277,7 @@
 
 <h5>13.1-8 SCLibInit</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibInit</code>( <var class="Arg">dir</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibInit</code>( <var class="Arg">dir</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: library repository of type <code class="code">SCLibRepository</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>This function initializes a library repository object for the given directory <var class="Arg">dir</var> (which has to be provided in form of a <strong class="pkg">GAP</strong> object of type <code class="code">String</code> or <code class="code">Directory</code>) and returns that library repository object in case of success. The returned object then provides a mean to access the library repository via the <code class="code">SCLib</code>-functions of <strong class="pkg">simpcomp</strong>.</p>
@@ -306,7 +307,7 @@
 
 <h5>13.1-9 SCLibIsLoaded</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibIsLoaded</code>( <var class="Arg">repository</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibIsLoaded</code>( <var class="Arg">repository</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon succes, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns <code class="keyw">true</code> when a given library repository <var class="Arg">repository</var> is in loaded state. This means that the directory of this repository is accessible and a repository index file for this repository exists in the repositories' path. If this is not the case <code class="keyw">false</code> is returned.</p>
@@ -323,7 +324,7 @@
 
 <h5>13.1-10 SCLibSearchByAttribute</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibSearchByAttribute</code>( <var class="Arg">repository</var>, <var class="Arg">expr</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibSearchByAttribute</code>( <var class="Arg">repository</var>, <var class="Arg">expr</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: A list of items of the form <code class="code">[ integer, string ]</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Searches a given repository <var class="Arg">repository</var> for complexes for which the boolean expression <var class="Arg">expr</var>, passed as string, evaluates to <code class="keyw">true</code> and returns a list of complexes with entries of the form <code class="code">[ID, NAME]</code> or <code class="keyw">fail</code> upon error. The expression may use all <strong class="pkg">GAP</strong> functions and can access all the indexed attributes of the complexes in the given repository for the query. The standard attributes are: Dim (Dimension), F (f-vector), G (g-vector), H (h-vector), Chi (Euler characteristic), Homology, Name, IsPM, IsManifold. See <code class="code">SCLib</code> for the set of indexed attributes of the global library of <strong class="pkg">simpcomp</strong>.</p>
@@ -331,16 +332,16 @@
 
 <div class="example"><pre>
  gap&gt; SCLibSearchByAttribute(SCLib,"Dim=4 and F[3]=Binomial(F[1],3)");
- [ [ 16, "CP^2 (VT)" ], [ 7648, "K3_16" ] ]
+ [ [ 16, "CP^2 (VT)" ], [ 7494, "K3_16" ] ]
  gap&gt; SCLib.SearchByAttribute("Dim=4 and F[3]=Binomial(F[1],3)");
- [ [ 16, "CP^2 (VT)" ], [ 7648, "K3_16" ] ]
+ [ [ 16, "CP^2 (VT)" ], [ 7494, "K3_16" ] ]
  </pre></div>
 
 <p><a id="X80EA086A80F86814" name="X80EA086A80F86814"></a></p>
 
 <h5>13.1-11 SCLibSearchByName</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibSearchByName</code>( <var class="Arg">repository</var>, <var class="Arg">name</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibSearchByName</code>( <var class="Arg">repository</var>, <var class="Arg">name</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: A list of items of the form <code class="code">[ integer, string ]</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Searches a given repository <var class="Arg">repository</var> for complexes that contain the string <var class="Arg">name</var> as a substring of their name attribute and returns a list of the complexes found with entries of the form <code class="code">[ID, NAME]</code>. See <code class="func">SCLib</code> (<a href="chap13.html#X7BDFDE6C81F9F70E"><span class="RefLink">13.1-2</span></a>) for a naming convention used for the global library of <strong class="pkg">simpcomp</strong>.</p>
@@ -348,19 +349,19 @@
 
 <div class="example"><pre>
  gap&gt; SCLibSearchByName(SCLib,"K3");
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; SCLib.SearchByName("K3"); #alternative syntax
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; SCLib.SearchByName("S^4x"); #search for products with S^4
- [ [ 713, "S^4xS^1 (VT)" ], [ 1472, "S^4xS^1 (VT)" ], [ 1475, "S^4xS^1 (VT)" ],
-   [ 7479, "S^4xS^2" ], [ 7539, "S^4xS^3" ], [ 7573, "S^4xS^4" ] ]
+ [ [ 713, "S^4xS^1 (VT)" ], [ 1472, "S^4xS^1 (VT)" ], [ 1473, "S^4xS^1 (VT)" ],
+   [ 7478, "S^4xS^2" ], [ 7541, "S^4xS^3" ], [ 7575, "S^4xS^4" ] ]
  </pre></div>
 
 <p><a id="X80BD14648113130B" name="X80BD14648113130B"></a></p>
 
 <h5>13.1-12 SCLibSize</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibSize</code>( <var class="Arg">repository</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibSize</code>( <var class="Arg">repository</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: integer upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns the number of complexes contained in the given repository <var class="Arg">repository</var>. Fails if the library repository was not previously loaded with <code class="code">SCLibInit</code>.</p>
@@ -375,7 +376,7 @@
 
 <h5>13.1-13 SCLibUpdate</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibUpdate</code>( <var class="Arg">repository</var>[, <var class="Arg">recalc</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibUpdate</code>( <var class="Arg">repository</var>[, <var class="Arg">recalc</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: library repository of type <code class="code">SCLibRepository</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Recreates the index of a given repository (either via a repository object or a base path of a repository <var class="Arg">repository</var>) by scanning the base path for all <code class="code">.sc</code> files containing simplicial complexes of the repository. Returns a repository object with the newly created index on success or <code class="keyw">fail</code> in case of an error. The optional boolean argument <var class="Arg">recalc</var> forces <strong class="pkg">simpcomp</strong> to recompute all the indexed properties (such as f-vector, homology, etc.) of the simplicial complexes in the repository if set to <code class="keyw">true</code>.</p>
@@ -400,7 +401,7 @@
 
 <h5>13.1-14 SCLibStatus</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibStatus</code>( <var class="Arg">repository</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLibStatus</code>( <var class="Arg">repository</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: library repository of type <code class="code">SCLibRepository</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Lets <strong class="pkg">GAP</strong> print the status of a given library repository <var class="Arg">repository</var>. <code class="code">IndexAttributes</code> is the list of attributes indexed for this repository. If <code class="code">CalculateIndexAttributes</code> is true, the index attributes for a complex added to the library are calculated automatically upon addition of the complex, otherwise this is left to the user and only pre-calculated attributes are indexed.</p>
@@ -414,21 +415,21 @@
  IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
    "IsManifold" ]
  Loaded=true
- Path="/home/jspreer/apps/gap4r8/pkg/simpcomp/complexes/"
+ Path="/home/jspreer/GAP/gap-4.9.1-simpcomp-repository/pkg/simpcomp/complexes/"
  ]
  </pre></div>
 
-<p><a id="X78F1E8C48285DF57" name="X78F1E8C48285DF57"></a></p>
+<p><a id="X8599D6D37F402950" name="X8599D6D37F402950"></a></p>
 
 <h4>13.2 <span class="Heading"><strong class="pkg">simpcomp</strong> input / output functions</span></h4>
 
-<p>This section contains a description of the input/output-functionality provided by <strong class="pkg">simpcomp</strong>. The package provides the functionality to save and load simplicial complexes (and their known properties) to, respectively from files in XML format. Furthermore, it provides the user with functions to export simplicial complexes into polymake format (for this format there also exists rudimentary import functionality), as JavaView geometry or in form of a LaTeX table. For importing more complex polymake data the package polymaking <a href="chapBib.html#biBRoeder07Polymaking">[R\"13]</a> can be used.</p>
+<p>This section contains a description of the input/output-functionality provided by <strong class="pkg">simpcomp</strong>. The package provides the functionality to save and load simplicial complexes (and their known properties) to, respectively from files in XML format. Furthermore, it provides the user with functions to export simplicial complexes into polymake format (for this format there also exists rudimentary import functionality), as JavaView geometry or in form of a LaTeX table. For importing more complex polymake data the package polymaking <a href="chapBib.html#biBRoeder07Polymaking">[R\t13]</a> can be used.</p>
 
 <p><a id="X867AFE4D7A2AA736" name="X867AFE4D7A2AA736"></a></p>
 
 <h5>13.2-1 SCLoad</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLoad</code>( <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLoad</code>( <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Loads a simplicial complex stored in a binary format (using <code class="code">IO_Pickle</code>) from a file specified in <var class="Arg">filename</var> (as string). If <var class="Arg">filename</var> does not end in <code class="code">.scb</code>, this suffix is appended to the file name.</p>
@@ -470,7 +471,7 @@
 
 <h5>13.2-2 SCLoadXML</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLoadXML</code>( <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCLoadXML</code>( <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Loads a simplicial complex stored in XML format from a file specified in <var class="Arg">filename</var> (as string). If <var class="Arg">filename</var> does not end in <code class="code">.sc</code>, this suffix is appended to the file name.</p>
@@ -512,7 +513,7 @@
 
 <h5>13.2-3 SCSave</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSave</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSave</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Saves a simplicial complex in a binary format (using <code class="code">IO_Pickle</code>) to a file specified in <var class="Arg">filename</var> (as string). If <var class="Arg">filename</var> does not end in <code class="code">.scb</code>, this suffix is appended to the file name.</p>
@@ -528,7 +529,7 @@
 
 <h5>13.2-4 SCSaveXML</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSaveXML</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSaveXML</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Saves a simplicial complex <var class="Arg">complex</var> to a file specified by <var class="Arg">filename</var> (as string) in XML format. If <var class="Arg">filename</var> does not end in <code class="code">.sc</code>, this suffix is appended to the file name.</p>
@@ -544,7 +545,7 @@
 
 <h5>13.2-5 SCExportMacaulay2</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportMacaulay2</code>( <var class="Arg">complex</var>, <var class="Arg">ring</var>, <var class="Arg">filename</var>[, <var class="Arg">alphalabels</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportMacaulay2</code>( <var class="Arg">complex</var>, <var class="Arg">ring</var>, <var class="Arg">filename</var>[, <var class="Arg">alphalabels</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Exports the facet list of a given simplicial complex <var class="Arg">complex</var> in <code class="code">Macaulay2</code> format to a file specified by <var class="Arg">filename</var>. The argument <var class="Arg">ring</var> can either be the ring of integers (specified by <code class="code">Integers</code>) or the ring of rationals (sepcified by <code class="code">Rationals</code>). The optional boolean argument <var class="Arg">alphalabels</var> labels the complex with characters from <span class="SimpleMath">a, dots ,z</span> in the exported file if a value of <code class="keyw">true</code> is supplied, while the standard labeling of the vertices is <span class="SimpleMath">v_1, dots ,v_n</span> where <span class="SimpleMath">n</span> is the number of vertices of <var class="Arg">complex</var>. If <var class="Arg">complex</var> has more than <span class="SimpleMath">26</span> vertices, the argument <var class="Arg">alphalabels</var> is ignored.</p>
@@ -560,7 +561,7 @@
 
 <h5>13.2-6 SCExportPolymake</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportPolymake</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportPolymake</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Exports the facet list with vertex labels of a given simplicial complex <var class="Arg">complex</var> in <code class="code">polymake</code> format to a file specified by <var class="Arg">filename</var>. Currently, only the export in the format of <code class="code">polymake</code> version 2.3 is supported.</p>
@@ -576,7 +577,7 @@
 
 <h5>13.2-7 SCImportPolymake</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCImportPolymake</code>( <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCImportPolymake</code>( <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Imports the facet list of a <code class="code">topaz</code> <code class="code">polymake</code> file specified by <var class="Arg">filename</var> (discarding any vertex labels) and creates a simplicial complex object from these facets.</p>
@@ -603,7 +604,7 @@
 
 <h5>13.2-8 SCExportLatexTable</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportLatexTable</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var>, <var class="Arg">itemsperline</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportLatexTable</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var>, <var class="Arg">itemsperline</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> on success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Exports the facet list of a given simplicial complex <var class="Arg">complex</var> (or any list given as first argument) in form of a LaTeX table to a file specified by <var class="Arg">filename</var>. The argument <var class="Arg">itemsperline</var> specifies how many columns the exported table should have. The faces are exported in the format <span class="SimpleMath">⟨ v_1,dots,v_k ⟩</span>.</p>
@@ -619,7 +620,7 @@
 
 <h5>13.2-9 SCExportJavaView</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportJavaView</code>( <var class="Arg">complex</var>, <var class="Arg">file</var>, <var class="Arg">coords</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportJavaView</code>( <var class="Arg">complex</var>, <var class="Arg">file</var>, <var class="Arg">coords</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> on success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Exports the 2-skeleton of the given simplicial complex <var class="Arg">complex</var> (or the facets if the complex is of dimension 2 or less) in <code class="code">JavaView</code> format (file name suffix <code class="code">.jvx</code>) to a file specified by <var class="Arg">filename</var> (as string). The list <var class="Arg">coords</var> must contain a <span class="SimpleMath">3</span>-tuple of real coordinates for each vertex of <var class="Arg">complex</var>, either as tuple of length three containing the coordinates (Warning: as <strong class="pkg">GAP</strong> only has rudimentary support for floating point values, currently only integer numbers can be used as coordinates when providing <var class="Arg">coords</var> as list of <span class="SimpleMath">3</span>-tuples) or as string of the form <code class="code">"x.x y.y z.z"</code> with decimal numbers <code class="code">x.x</code>, <code class="code">y.y</code>, <code class="code">z.z</code> for the three coordinates (i.e. <code class="code">"1.0 0.0 0.0"</code>).</p>
@@ -635,7 +636,7 @@
 
 <h5>13.2-10 SCExportPolymake</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportPolymake</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportPolymake</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Exports the gluings of the tetrahedra of a given combinatorial <span class="SimpleMath">3</span>-manifold <var class="Arg">complex</var> in a format compatible with Matveev's <span class="SimpleMath">3</span>-manifold software <code class="code">Recognizer</code>.</p>
@@ -651,7 +652,7 @@
 
 <h5>13.2-11 SCExportSnapPy</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportSnapPy</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportSnapPy</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Exports the facet list and orientability of a given combinatorial <span class="SimpleMath">3</span>-pseudomanifold <var class="Arg">complex</var> in <code class="code">SnapPy</code> format to a file specified by <var class="Arg">filename</var>.</p>

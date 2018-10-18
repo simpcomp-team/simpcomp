@@ -19,6 +19,7 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Next Chapter]</a>&nbsp;  </div>
 
+<p id="mathjaxlink" class="pcenter"></p>
 <p><a id="X7D2C85EC87DD46E5" name="X7D2C85EC87DD46E5"></a></p>
 <div class="pcenter">
 
@@ -27,9 +28,9 @@
 
 <h2>A <strong class="pkg">GAP</strong> toolbox for simplicial complexes</h2>
 
-<p>Version 2.1.8</p>
+<p>Version 2.1.9</p>
 
-<p>February 2018
+<p>October 2018
 	
   </p>
 
@@ -37,19 +38,17 @@
 <p><b>
   	Felix Effenberger
     
-    
 
   </b>
-<br />Email: <span class="URL"><a href="mailto:felix.effenberger@mis.mpg.de">felix.effenberger@mis.mpg.de</a></span>
-<br />Address: <br />Max Planck Institute for Mathematics in the Sciences<br /> Inselstr. 22<br /> D-04103 Leipzig, Germany
+<br />Email: <span class="URL"><a href="mailto:exilef@gmail.com">exilef@gmail.com</a></span>
 </p><p><b>
   	Jonathan Spreer
     
     
 
   </b>
-<br />Email: <span class="URL"><a href="mailto:j.spreer@uq.edu.au">j.spreer@uq.edu.au</a></span>
-<br />Address: <br />University of Queensland<br /> School of Mathematics and Physics<br /> Brisbane QLD 4072 Australia
+<br />Email: <span class="URL"><a href="mailto:jonathan.spreer@fu-berlin.de">jonathan.spreer@fu-berlin.de</a></span>
+<br />Address: <br />Discrete Geometry Group<br /> Mathematical Institute<br /> Freie Universitaet Berlin<br /> School of Mathematics and Physics<br /> Arnimallee 2, 14195 Berlin, Germany
 </p>
 
 <p><a id="X7AA6C5737B711C89" name="X7AA6C5737B711C89"></a></p>
@@ -64,9 +63,9 @@
 
 <p><a id="X82A988D47DFAFCFA" name="X82A988D47DFAFCFA"></a></p>
 <h3>Acknowledgements</h3>
-<p>A few functions of <strong class="pkg">simpcomp</strong> are based on code from other authors. The bistellar flips implementation, the algorithm to collapse bounded simplicial complexes as well as the classification algorithm for transitive triangulations is based upon work of Frank Lutz (see <a href="chapBib.html#biBLutz03TrigMnfFewVertVertTrans">[Lut03]</a> and the <strong class="pkg">GAP</strong> programs BISTELLAR and MANIFOLD_VT from <a href="chapBib.html#biBLutz08ManifoldPage">[ManifoldPage]</a>). Some functions were carried over from the <strong class="pkg">homology</strong> package by Dumas et al. <a href="chapBib.html#biBDumas04Homology">[DHSW11]</a> -- these functions are marked in the documentation and the source code. The internal (co-)homology algorithms were implemented by Armin Weiss.</p>
+<p>A few functions of <strong class="pkg">simpcomp</strong> are based on code from other authors. The bistellar flips implementation, the algorithm to collapse bounded simplicial complexes as well as the classification algorithm for transitive triangulations is based upon work of Frank Lutz (see <a href="chapBib.html#biBLutz03TrigMnfFewVertVertTrans">[Lut03]</a> and the <strong class="pkg">GAP</strong> programs BISTELLAR and MANIFOLD_VT from <a href="chapBib.html#biBLutz08ManifoldPage">[Lut]</a>). Some functions were carried over from the <strong class="pkg">homology</strong> package by Dumas et al. <a href="chapBib.html#biBDumas04Homology">[DHSW11]</a> -- these functions are marked in the documentation and the source code. The internal (co-)homology algorithms were implemented by Armin Weiss.</p>
 
-<p>Most of the complexes in the simplicial complex library are taken from the "Manifold Page" by Frank Lutz <a href="chapBib.html#biBLutz08ManifoldPage">[ManifoldPage]</a>.</p>
+<p>Most of the complexes in the simplicial complex library are taken from the "Manifold Page" by Frank Lutz <a href="chapBib.html#biBLutz08ManifoldPage">[Lut]</a>.</p>
 
 <p>The authors acknowledge support by the Deutsche Forschungsgemeinschaft (DFG): <strong class="pkg">simpcomp</strong> has been developed within the DFG projects Ku 1203/5-2 and Ku 1203/5-3.</p>
 
@@ -79,7 +78,7 @@
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X7A1272437CD1F7AD">1.1 <span class="Heading">What is new</span></a>
 </span>
 </div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X86D847BA7FC9C6C5">1.2 <span class="Heading"><strong class="pkg">simpcomp</strong> benefits</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X7AA5F8168379C5E8">1.2 <span class="Heading"><strong class="pkg">simpcomp</strong> benefits</span></a>
 </span>
 </div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X78BBA61C83276770">1.3 <span class="Heading">How to save time reading this document</span></a>
@@ -88,13 +87,13 @@
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X8336AF737AFAA468">1.4 <span class="Heading">Organization of this document</span></a>
 </span>
 </div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X78B3F75A863612F4">1.5 <span class="Heading">How to assure <strong class="pkg">simpcomp</strong> works correctly</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X86F613867AA3A382">1.5 <span class="Heading">How to assure <strong class="pkg">simpcomp</strong> works correctly</span></a>
 </span>
 </div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X7EB5782C7A70BE2D">1.6 <span class="Heading">Controlling <strong class="pkg">simpcomp</strong> log messages</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X85A6577886459361">1.6 <span class="Heading">Controlling <strong class="pkg">simpcomp</strong> log messages</span></a>
 </span>
 </div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X78D7767F7C26546C">1.7 <span class="Heading">How to cite <strong class="pkg">simpcomp</strong></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X80002B357CE9B674">1.7 <span class="Heading">How to cite <strong class="pkg">simpcomp</strong></span></a>
 </span>
 </div>
 </div>
@@ -124,14 +123,14 @@
 </span>
 </div>
 </div>
-<div class="ContChap"><a href="chap3.html#X87A7DD0F8138F0DC">3 <span class="Heading">The new GAP object types of <strong class="pkg">simpcomp</strong></span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X79C7AD47824F17C8">3.1 <span class="Heading">Accessing properties of a <code class="code">SCPolyhedralComplex</code> 
+<div class="ContChap"><a href="chap3.html#X83DEEDF8835622AD">3 <span class="Heading">The new GAP object types of <strong class="pkg">simpcomp</strong></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X82FAB51B7C625240">3.1 <span class="Heading">Accessing properties of a <code class="code">SCPolyhedralComplex</code> 
 object</span></a>
 </span>
 </div>
 </div>
-<div class="ContChap"><a href="chap4.html#X8518F9E57E38598E">4 <span class="Heading">Functions and operations for the GAP object type <code class="code">SCPolyhedralComplex</code></span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X82F92CD2813A23C9">4.1 <span class="Heading">Computing properties of objects of type 
+<div class="ContChap"><a href="chap4.html#X840691C285AB3AAD">4 <span class="Heading">Functions and operations for the GAP object type <code class="code">SCPolyhedralComplex</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X7D35F510803714A8">4.1 <span class="Heading">Computing properties of objects of type 
 <code class="code">SCPolyhedralComplex</code></span></a>
 </span>
 <div class="ContSSBlock">
@@ -155,7 +154,7 @@ object</span></a>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X87184048876229F3">4.2-10 SCSetReference</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X80A64720826EA264">4.2-11 SCUnlabelFace</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X7FC0D9B48426427F">4.3 <span class="Heading">Operations on objects of type <code class="code">SCPolyhedralComplex</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X8188E7BE7E9BEF7E">4.3 <span class="Heading">Operations on objects of type <code class="code">SCPolyhedralComplex</code></span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X84646E6786FB7993">4.3-1 SCAntiStar</a></span>
@@ -165,8 +164,8 @@ object</span></a>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X83F3E7487A1EF355">4.3-5 SCStars</a></span>
 </div></div>
 </div>
-<div class="ContChap"><a href="chap5.html#X7FA09B88800777E9">5 <span class="Heading">The GAP object types <code class="code">SCSimplicialComplex</code> and <code class="code">SCNormalSurface</code></span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X8483DB4D81545135">5.1 <span class="Heading">The object type <code class="code">SCSimplicialComplex</code></span></a>
+<div class="ContChap"><a href="chap5.html#X78B454D3799549A9">5 <span class="Heading">The GAP object types <code class="code">SCSimplicialComplex</code> and <code class="code">SCNormalSurface</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X7E7034FC82152AE6">5.1 <span class="Heading">The object type <code class="code">SCSimplicialComplex</code></span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X82E3D6D97951997D">5.1-1 SCIsSimplicialComplex</a></span>
@@ -174,7 +173,7 @@ object</span></a>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7AAEB857865D9B4A">5.1-3 ShallowCopy (SCSimplicialComplex)</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X8155B18D7EEF06DE">5.1-4 SCPropertiesDropped</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X7918944F814850E8">5.2 <span class="Heading">Overloaded operators of <code class="code">SCSimplicialComplex</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X790E779979A985FF">5.2 <span class="Heading">Overloaded operators of <code class="code">SCSimplicialComplex</code></span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7D932F3C7F853443">5.2-1 Operation + (SCSimplicialComplex, Integer)</a></span>
@@ -186,7 +185,7 @@ object</span></a>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X80C8CB3983D4356C">5.2-7 Operation * (SCSimplicialComplex, SCSimplicialComplex)</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7A3887227BA8E878">5.2-8 Operation = (SCSimplicialComplex, SCSimplicialComplex)</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X863B588286F3CDF0">5.3 <span class="Heading"><code class="code">SCSimplicialComplex</code> as a subtype of <code class="code">Set</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X7CB571C97C426BE2">5.3 <span class="Heading"><code class="code">SCSimplicialComplex</code> as a subtype of <code class="code">Set</code></span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X82C94EE47E339DD8">5.3-1 Operation Union (SCSimplicialComplex, SCSimplicialComplex)</a></span>
@@ -197,24 +196,24 @@ object</span></a>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X85B5C18F7EFB94A4">5.3-6 Operation [] (SCSimplicialComplex)</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7F8511457D591474">5.3-7 Iterator (SCSimplicialComplex)</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X7A64FE107A3386CB">5.4 <span class="Heading">The object type <code class="code">SCNormalSurface</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X80F19FA07C71EDDC">5.4 <span class="Heading">The object type <code class="code">SCNormalSurface</code></span></a>
 </span>
 </div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X7C38EF287A54E688">5.5 <span class="Heading">Overloaded operators of <code class="code">SCNormalSurface</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X874D22B47BCD48D4">5.5 <span class="Heading">Overloaded operators of <code class="code">SCNormalSurface</code></span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X8295612F7BF5B611">5.5-1 Operation + (SCNormalSurface, Integer)</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X8428D7E5857EEAB5">5.5-2 Operation - (SCNormalSurface, Integer)</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X8596775A7EBAAD7D">5.5-3 Operation mod (SCNormalSurface, Integer)</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X7975769C7F7CBF93">5.6 <span class="Heading"><code class="code">SCNormalSurface</code> as a subtype of <code class="code">Set</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X84C01E097C009E76">5.6 <span class="Heading"><code class="code">SCNormalSurface</code> as a subtype of <code class="code">Set</code></span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X8462E960847F8B83">5.6-1 Operation Union (SCNormalSurface, SCNormalSurface)</a></span>
 </div></div>
 </div>
-<div class="ContChap"><a href="chap6.html#X836F2B5C816E54B3">6 <span class="Heading">Functions and operations for <code class="code">SCSimplicialComplex</code></span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X879195657E1B257E">6.1 <span class="Heading">Creating an <code class="code">SCSimplicialComplex</code> object from a facet list</span></a>
+<div class="ContChap"><a href="chap6.html#X82BDBFFC81D080D1">6 <span class="Heading">Functions and operations for <code class="code">SCSimplicialComplex</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X7A93E4B08536E2C8">6.1 <span class="Heading">Creating an <code class="code">SCSimplicialComplex</code> object from a facet list</span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7B5A874584FF34A7">6.1-1 SCFromFacets</a></span>
@@ -393,8 +392,8 @@ object</span></a>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7E7B17317D1B618D">6.10-23 SCWedge</a></span>
 </div></div>
 </div>
-<div class="ContChap"><a href="chap7.html#X7DAE7B76858FC4E7">7 <span class="Heading">Functions and operations for <code class="code">SCNormalSurface</code></span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap7.html#X80DCE31681345AF0">7.1 <span class="Heading">Creating an <code class="code">SCNormalSurface</code> object</span></a>
+<div class="ContChap"><a href="chap7.html#X8071FAE8806ACAA2">7 <span class="Heading">Functions and operations for <code class="code">SCNormalSurface</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap7.html#X7C63CE8578FBB0C7">7.1 <span class="Heading">Creating an <code class="code">SCNormalSurface</code> object</span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7.html#X7A59063180BD5969">7.1-1 SCNSEmpty</a></span>
@@ -408,7 +407,7 @@ object</span></a>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7.html#X80F13BB484B3E9B2">7.2-1 SCCopy</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7.html#X7A180D487B8941C5">7.2-2 SCNSTriangulation</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap7.html#X812F06717EB05E44">7.3 <span class="Heading">Properties of <code class="code">SCNormalSurface</code> objects</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap7.html#X83A1885E876D7483">7.3 <span class="Heading">Properties of <code class="code">SCNormalSurface</code> objects</span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7.html#X82C9F57780C0B7F8">7.3-1 SCConnectedComponents</a></span>
@@ -542,7 +541,7 @@ object</span></a>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap13.html#X7A0856987A87A3C5">13.1-13 SCLibUpdate</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap13.html#X843A039E78D5A97B">13.1-14 SCLibStatus</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap13.html#X78F1E8C48285DF57">13.2 <span class="Heading"><strong class="pkg">simpcomp</strong> input / output functions</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap13.html#X8599D6D37F402950">13.2 <span class="Heading"><strong class="pkg">simpcomp</strong> input / output functions</span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap13.html#X867AFE4D7A2AA736">13.2-1 SCLoad</a></span>
@@ -559,7 +558,7 @@ object</span></a>
 </div></div>
 </div>
 <div class="ContChap"><a href="chap14.html#X7D09DEB478A09E55">14 <span class="Heading">Interfaces to other software packages</span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap14.html#X7C18A4A67C1076E9">14.1 <span class="Heading">Interface to the <strong class="pkg">GAP</strong>-package <strong class="pkg">homalg</strong></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap14.html#X79FC20A5832313F5">14.1 <span class="Heading">Interface to the <strong class="pkg">GAP</strong>-package <strong class="pkg">homalg</strong></span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap14.html#X817196DF78B17B12">14.1-1 SCHomalgBoundaryMatrices</a></span>
@@ -571,7 +570,7 @@ object</span></a>
 </div></div>
 </div>
 <div class="ContChap"><a href="chap15.html#X8308D685809A4E2F">15 <span class="Heading">Miscellaneous functions</span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap15.html#X7CF812987A270C7A">15.1 <span class="Heading"><strong class="pkg">simpcomp</strong> logging</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap15.html#X7C3D35DF7BD07C5A">15.1 <span class="Heading"><strong class="pkg">simpcomp</strong> logging</span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X79815139873FF4CF">15.1-1 SCInfoLevel</a></span>
@@ -588,37 +587,37 @@ object</span></a>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X82AA843F7F37B21E">15.2-7 SCMailSetEnabled</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X87DA54EA7950D4BB">15.2-8 SCMailSetMinInterval</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap15.html#X7F0DE92A795A6420">15.3 <span class="Heading">Testing the functionality of <strong class="pkg">simpcomp</strong></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap15.html#X7BA8676B7FF308FD">15.3 <span class="Heading">Testing the functionality of <strong class="pkg">simpcomp</strong></span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X7A26BD457A6E7AC3">15.3-1 SCRunTest</a></span>
 </div></div>
 </div>
 <div class="ContChap"><a href="chap16.html#X79E5133F86718164">16 <span class="Heading">Property handlers</span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap16.html#X7FACCB748281BD67">16.1 <span class="Heading">Property handlers of <code class="code">SCPolyhedralComplex</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap16.html#X786A3A8E7C461BEB">16.1 <span class="Heading">Property handlers of <code class="code">SCPolyhedralComplex</code></span></a>
 </span>
 </div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap16.html#X7AD4BF31790E3707">16.2 <span class="Heading">Property handlers of <code class="code">SCSimplicialComplex</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap16.html#X7A2C3F6A87C9918B">16.2 <span class="Heading">Property handlers of <code class="code">SCSimplicialComplex</code></span></a>
 </span>
 </div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap16.html#X799DBA2D865DDF55">16.3 <span class="Heading">Property handlers of <code class="code">SCNormalSurface</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap16.html#X7FEE3E9384330D24">16.3 <span class="Heading">Property handlers of <code class="code">SCNormalSurface</code></span></a>
 </span>
 </div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap16.html#X86BAA99885B6FF66">16.4 <span class="Heading">Property handlers of <code class="code">SCLibRepository</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap16.html#X7A968EC287D82D17">16.4 <span class="Heading">Property handlers of <code class="code">SCLibRepository</code></span></a>
 </span>
 </div>
 </div>
-<div class="ContChap"><a href="chap17.html#X781BB9A580A99EBC">17 <span class="Heading">A demo session with <strong class="pkg">simpcomp</strong></span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X80FB9BC2808EC8D6">17.1 <span class="Heading">Creating a <code class="code">SCSimplicialComplex</code> object</span></a>
+<div class="ContChap"><a href="chap17.html#X78CC1D0D809E5D2E">17 <span class="Heading">A demo session with <strong class="pkg">simpcomp</strong></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X802AC56478332D59">17.1 <span class="Heading">Creating a <code class="code">SCSimplicialComplex</code> object</span></a>
 </span>
 </div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X875127787F2C1222">17.2 <span class="Heading">Working with a <code class="code">SCSimplicialComplex</code> object</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X7F2BA767781B3216">17.2 <span class="Heading">Working with a <code class="code">SCSimplicialComplex</code> object</span></a>
 </span>
 </div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X7EF4929483450FFC">17.3 <span class="Heading">Calculating properties of a <code class="code">SCSimplicialComplex</code> object</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X81109FCF7A2BAD69">17.3 <span class="Heading">Calculating properties of a <code class="code">SCSimplicialComplex</code> object</span></a>
 </span>
 </div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X8455A2BE8064B789">17.4 <span class="Heading">Creating new complexes from a <code class="code">SCSimplicialComplex</code> object</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X833CFE367E7591A0">17.4 <span class="Heading">Creating new complexes from a <code class="code">SCSimplicialComplex</code> object</span></a>
 </span>
 </div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X7F91D2307D7CE8C8">17.5 <span class="Heading">Homology related calculations</span></a>
@@ -634,8 +633,8 @@ object</span></a>
 </span>
 </div>
 </div>
-<div class="ContChap"><a href="chap18.html#X7DC2620E7DCC6C94">18 <span class="Heading"><strong class="pkg">simpcomp</strong> internals</span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap18.html#X7E3D5BFF7AA5D5EE">18.1 <span class="Heading">The <strong class="pkg">GAP</strong> object type <code class="code">SCPropertyObject</code></span></a>
+<div class="ContChap"><a href="chap18.html#X8478539A7A292D1A">18 <span class="Heading"><strong class="pkg">simpcomp</strong> internals</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap18.html#X8724C47486F7CC1E">18.1 <span class="Heading">The <strong class="pkg">GAP</strong> object type <code class="code">SCPropertyObject</code></span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap18.html#X7AFC8525796297C9">18.1-1 SCProperties</a></span>
