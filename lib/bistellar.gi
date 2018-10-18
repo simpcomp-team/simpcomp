@@ -1265,7 +1265,7 @@ end);
 ## <Example> NOEXECUTE
 ## Greetings master,
 ## 
-## this is simpcomp %%%VERSION%%% running on igt215.mathematik.uni-stuttgart.de
+## this is simpcomp 2.1.9 running on igt215.mathematik.uni-stuttgart.de
 ## (Linux igt215 2.6.26-2-amd64 #1 SMP Thu Nov 5 02:23:12 UTC 2009 x86_64
 ## GNU/Linux), GAP 4.4.12.
 ## 
