@@ -110,8 +110,8 @@
 {\Huge \textbf{A \textsf{GAP} toolbox for simplicial complexes\mbox{}}}\\
 \vfill
 
-{\Huge Version 2.1.9\mbox{}}\\[1cm]
-{October 2018 
+{\Huge Version %%%VERSION%%%\mbox{}}\\[1cm]
+{%%%SDATESHORT%%% 
 	\begin{center}
 	\vspace*{1cm}
 	\includegraphics[width=.4\textwidth]{figures/shrimpmanual}\\
@@ -165,7 +165,7 @@ the \textsf{GRAPE} package is not available. \mbox{}}\\[1cm]
 {\small 
 \section*{Copyright}
 \logpage{[ 0, 0, 3 ]}
-{\copyright} 2018 Felix Effenberger and Jonathan Spreer. Permission is granted
+{\copyright} %%%SYEAR%%% Felix Effenberger and Jonathan Spreer. Permission is granted
 to copy, distribute and/or modify this document under the terms of the GNU
 Free Documentation License, Version 1.2 or any later version published by the
 Free Software Foundation, see \href{http://www.fsf.org/licensing/licenses/fdl.html} {\texttt{http://www.fsf.org/licensing/licenses/fdl.html}} for a copy.
@@ -314,7 +314,7 @@ verifies that the results are correct.
  To test the functionality of \textsf{simpcomp} you can run the function \texttt{SCRunTest} (\ref{SCRunTest}) from the \textsf{GAP} console: 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, Version 2.1.9
+  + test simpcomp package, Version %%%VERSION%%%
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@|
@@ -339,8 +339,8 @@ calls to functions of the package \textsf{simpcomp} can be controlled by setting
   @manual{simpcomp,
   	author = "Felix Effenberger and Jonathan Spreer",
   	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
-  	          {V}ersion 2.1.9",
-  	year   = "2018",
+  	          {V}ersion %%%VERSION%%%",
+  	year   = "%%%SYEAR%%%",
   	url    = "\url{https://github.com/simpcomp-team/simpcomp}",
   }
 \end{verbatim}
@@ -350,8 +350,8 @@ bibliography environment of LaTeX.
   \bibitem{simpcomp}
   F.~Effenberger and J.~Spreer,
   \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
-  Version 2.1.9, 
-  2018,
+  Version %%%VERSION%%%, 
+  %%%SYEAR%%%,
   \url{https://github.com/simpcomp-team/simpcomp}.
 \end{verbatim}
  }
@@ -9410,7 +9410,7 @@ returned by this function.
 \begin{Verbatim}[commandchars=@|J,fontsize=\small,frame=single,label=Example]
    Greetings master,
    
-   this is simpcomp 2.1.9 running on comp01.maths.fancytown.edu
+   this is simpcomp %%%VERSION%%% running on comp01.maths.fancytown.edu
   
    I have been working hard for 0 seconds and have a message for you, see below.
    
@@ -12332,7 +12332,7 @@ Section \ref{sec:generateFromOld}, which will be described in the next sections.
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@#first run functionality test on simpcomp|
   !gapprompt@gap>| !gapinput@SCRunTest();|
-  + test simpcomp package, version 2.1.9
+  + test simpcomp package, version %%%VERSION%%%
   + GAP4stones: 69988
   true
   !gapprompt@gap>| !gapinput@#all ok|

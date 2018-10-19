@@ -1265,7 +1265,7 @@ end);
 ## <Example> NOEXECUTE
 ## Greetings master,
 ## 
-## this is simpcomp 2.1.9 running on comp01.maths.fancytown.edu
+## this is simpcomp %%%VERSION%%% running on comp01.maths.fancytown.edu
 ##
 ## I have been working hard for 0 seconds and have a message for you, see below.
 ## 
