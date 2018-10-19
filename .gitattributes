@@ -12,6 +12,7 @@
 *.scb binary
 
 *~ export-ignore
+.* export-ignore
 doc/gapdoc/**/* export-ignore
 doc/gapdoc export-ignore
 doc/simpcomp.aux export-ignore
@@ -25,7 +26,6 @@ doc/simpcomp.log export-ignore
 doc/simpcomp.out export-ignore
 doc/simpcomp.pnr export-ignore
 doc/simpcomp.toc export-ignore
- export-ignore
 /aclocal.m4 export-ignore
 /autom4te.cache/ export-ignore
 /bin/ export-ignore
