@@ -19,6 +19,7 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap8.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap10.html">[Next Chapter]</a>&nbsp;  </div>
 
+<p id="mathjaxlink" class="pcenter"></p>
 <p><a id="X82F1CE7A79A3CA47" name="X82F1CE7A79A3CA47"></a></p>
 <div class="ChapSects"><a href="chap9.html#X82F1CE7A79A3CA47">9 <span class="Heading">Bistellar flips</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap9.html#X8729B87B848E3F89">9.1 <span class="Heading">Theory</span></a>
@@ -67,7 +68,7 @@
 
 <h5>9.2-1 SCBistellarOptions</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCBistellarOptions</code></td><td class="tdright">( global variable )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCBistellarOptions</code></td><td class="tdright">(&nbsp;global variable&nbsp;)</td></tr></table></div>
 <p>Record of global variables to adjust output an behavior of bistellar moves in <code class="func">SCIntFunc.SCChooseMove</code> (<a href="chap9.html#X7AEB9242837CCE5D"><span class="RefLink">9.2-4</span></a>) and <code class="func">SCReduceComplexEx</code> (<a href="chap9.html#X814D9AE287F64F74"><span class="RefLink">9.2-14</span></a>) respectively.</p>
 
 <ol>
@@ -135,7 +136,7 @@
 
 <h5>9.2-2 SCEquivalent</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCEquivalent</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCEquivalent</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> or a list of type <code class="code">[ fail, SCSimplicialComplex, Integer, facet list]</code> otherwise.</p>
 
 <p>Checks if the simplicial complex <var class="Arg">complex1</var> (which has to fulfill the weak pseudomanifold property with empty boundary) can be reduced to the simplicial complex <var class="Arg">complex2</var> via bistellar moves, i. e. if <var class="Arg">complex1</var> and <var class="Arg">complex2</var> are <span class="SimpleMath">PL</span>-homeomorphic. Note that in general the problem is undecidable. In this case <code class="keyw">fail</code> is returned.</p>
@@ -158,7 +159,7 @@
 
 <h5>9.2-3 SCExamineComplexBistellar</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExamineComplexBistellar</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExamineComplexBistellar</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex passed as argument with additional properties upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the face lattice, the <span class="SimpleMath">f</span>-vector, the AS-determinant, the dimension and the maximal vertex label of <var class="Arg">complex</var>.</p>
@@ -196,7 +197,7 @@
 
 <h5>9.2-4 SCIntFunc.SCChooseMove</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIntFunc.SCChooseMove</code>( <var class="Arg">dim</var>, <var class="Arg">moves</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIntFunc.SCChooseMove</code>( <var class="Arg">dim</var>, <var class="Arg">moves</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a bistellar move, i. e. a pair of lists upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Since the problem of finding a bistellar flip sequence that reduces a simplicial complex is undecidable, we have to use an heuristic approach to choose the next move.</p>
@@ -211,7 +212,7 @@
 
 <h5>9.2-5 SCIsKStackedSphere</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsKStackedSphere</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsKStackedSphere</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks, whether the given simplicial complex <var class="Arg">complex</var> that must be a PL <span class="SimpleMath">d</span>-sphere is a <var class="Arg">k</var>-stacked sphere with <span class="SimpleMath">1≤ k≤ ⌊fracd+22⌋</span> using a randomized algorithm based on bistellar moves (see <a href="chapBib.html#biBEffenberger09StackPolyTightTrigMnf">[Eff11b]</a>, <a href="chapBib.html#biBEffenberger10Diss">[Eff11a]</a>). Note that it is not checked whether <var class="Arg">complex</var> is a PL sphere -- if not, the algorithm will not succeed. Returns a list upon success: the first entry is a boolean, where <code class="keyw">true</code> means that the complex is <code class="code">k</code>-stacked and <code class="keyw">false</code> means that the complex cannot be <var class="Arg">k</var>-stacked. A value of -1 means that the question could not be decided. The second argument contains a simplicial complex that, in case of success, contains the trigangulated <span class="SimpleMath">(d+1)</span>-ball <span class="SimpleMath">B</span> with <span class="SimpleMath">∂ B=S</span> and <span class="SimpleMath">operatornameskel_d-k(B)=operatornameskel_d-k(S)</span>, where <span class="SimpleMath">S</span> denotes the simplicial complex passed in <var class="Arg">complex</var>.</p>
@@ -221,7 +222,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("S^4~S^1");
- [ [ 463, "S^4~S^1 (VT)" ], [ 1473, "S^4~S^1 (VT)" ], [ 1474, "S^4~S^1 (VT)" ],
+ [ [ 463, "S^4~S^1 (VT)" ], [ 1474, "S^4~S^1 (VT)" ], [ 1475, "S^4~S^1 (VT)" ],
    [ 2477, "S^4~S^1 (VT)" ], [ 4395, "S^4~S^1 (VT)" ], 
    [ 4396, "S^4~S^1 (VT)" ], [ 4397, "S^4~S^1 (VT)" ], 
    [ 4398, "S^4~S^1 (VT)" ], [ 4399, "S^4~S^1 (VT)" ], 
@@ -255,7 +256,7 @@
 
 <h5>9.2-6 SCBistellarIsManifold</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCBistellarIsManifold</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCBistellarIsManifold</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Tries to prove that a closed simplicial <span class="SimpleMath">d</span>-pseudomanifold is a combinatorial manifold by reducing its vertex links to the boundary of the d-simplex.</p>
@@ -277,7 +278,7 @@
 
 <h5>9.2-7 SCIsMovableComplex</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsMovableComplex</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsMovableComplex</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks if a simplicial complex <var class="Arg">complex</var> can be modified by bistellar moves, i. e. if it is a pure simplicial complex which fulfills the weak pseudomanifold property with empty boundary.</p>
@@ -302,7 +303,7 @@
 
 <h5>9.2-8 SCMove</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMove</code>( <var class="Arg">c</var>, <var class="Arg">move</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMove</code>( <var class="Arg">c</var>, <var class="Arg">move</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Applies the bistellar move <var class="Arg">move</var> to a simplicial complex <var class="Arg">c</var>. <var class="Arg">move</var> is given as a <span class="SimpleMath">(r+1)</span>-tuple together with a <span class="SimpleMath">(d+1-r)</span>-tuple if <span class="SimpleMath">d</span> is the dimension of <var class="Arg">c</var> and if <var class="Arg">move</var> is a <span class="SimpleMath">r</span>-move. See <code class="func">SCRMoves</code> (<a href="chap9.html#X7E70D44179ED6A78"><span class="RefLink">9.2-10</span></a>) for detailed information about bistellar <span class="SimpleMath">r</span>-moves.</p>
@@ -341,7 +342,7 @@
 
 <h5>9.2-9 SCMoves</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMoves</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMoves</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of list of pairs of lists upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>See <code class="func">SCRMoves</code> (<a href="chap9.html#X7E70D44179ED6A78"><span class="RefLink">9.2-10</span></a>) for further information.</p>
@@ -364,7 +365,7 @@
 
 <h5>9.2-10 SCRMoves</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCRMoves</code>( <var class="Arg">complex</var>, <var class="Arg">r</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCRMoves</code>( <var class="Arg">complex</var>, <var class="Arg">r</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of pairs of the form <code class="code">[ list, list ]</code>, <code class="keyw">fail</code> otherwise.</p>
 
 <p>A bistellar <span class="SimpleMath">r</span>-move of a <span class="SimpleMath">d</span>-dimensional combinatorial manifold <var class="Arg">complex</var> is a <span class="SimpleMath">r</span>-face <span class="SimpleMath">m_1</span> together with a <span class="SimpleMath">d-r</span>-tuple <span class="SimpleMath">m_2</span> where <span class="SimpleMath">m_1</span> is a common face of exactly <span class="SimpleMath">(d+1-r)</span> facets and <span class="SimpleMath">m_2</span> is not a face of <var class="Arg">complex</var>.</p>
@@ -387,7 +388,7 @@
 
 <h5>9.2-11 SCRandomize</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCRandomize</code>( <var class="Arg">complex</var>[[, <var class="Arg">rounds</var>][, <var class="Arg">allowedmoves</var>]] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCRandomize</code>( <var class="Arg">complex</var>[[, <var class="Arg">rounds</var>][, <var class="Arg">allowedmoves</var>]] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a simplicial complex upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Randomizes the given simplicial complex <var class="Arg">complex</var> via bistellar moves chosen at random. By passing the optional array <var class="Arg">allowedmoves</var>, which has to be a dense array of integer values of length <code class="code">SCDim(complex)</code>, certain moves can be allowed or forbidden in the proccess. An entry <code class="code">allowedmoves[i]=1</code> allows <span class="SimpleMath">(i-1)</span>-moves and an entry <code class="code">allowedmoves[i]=0</code> forbids <span class="SimpleMath">(i-1)</span>-moves in the randomization process.</p>
@@ -406,14 +407,14 @@
  
  /SimplicialComplex]
  gap&gt; c.F;
- [ 17, 74, 114, 57 ]
+ [ 16, 65, 98, 49 ]
  </pre></div>
 
 <p><a id="X85D69E4F84E8E7D9" name="X85D69E4F84E8E7D9"></a></p>
 
 <h5>9.2-12 SCReduceAsSubcomplex</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCReduceAsSubcomplex</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCReduceAsSubcomplex</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="code">SCBistellarOptions.WriteLevel=0</code>: a triple of the form <code class="code">[ boolean, simplicial complex, rounds performed ]</code> upon termination of the algorithm.</p>
 
 <p><code class="code">SCBistellarOptions.WriteLevel=1</code>: A library of simplicial complexes with a number of complexes from the reducing process and (upon termination) a triple of the form <code class="code">[ boolean, simplicial complex, rounds performed ]</code>.</p>
@@ -447,7 +448,7 @@
 
 <h5>9.2-13 SCReduceComplex</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCReduceComplex</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCReduceComplex</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="code">SCBistellarOptions.WriteLevel=0</code>: a triple of the form <code class="code">[ boolean, simplicial complex, rounds performed ]</code> upon termination of the algorithm.</p>
 
 <p><code class="code">SCBistellarOptions.WriteLevel=1</code>: A library of simplicial complexes with a number of complexes from the reducing process and (upon termination) a triple of the form <code class="code">[ boolean, simplicial complex, rounds performed ]</code>.</p>
@@ -477,7 +478,7 @@
 
 <h5>9.2-14 SCReduceComplexEx</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCReduceComplexEx</code>( <var class="Arg">complex</var>, <var class="Arg">refComplex</var>, <var class="Arg">mode</var>, <var class="Arg">choosemove</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCReduceComplexEx</code>( <var class="Arg">complex</var>, <var class="Arg">refComplex</var>, <var class="Arg">mode</var>, <var class="Arg">choosemove</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="code">SCBistellarOptions.WriteLevel=0</code>: a triple of the form <code class="code">[ boolean, simplicial complex, rounds ]</code> upon termination of the algorithm.</p>
 
 <p><code class="code">SCBistellarOptions.WriteLevel=1</code>: A library of simplicial complexes with a number of complexes from the reducing process and (upon termination) a triple of the form <code class="code">[ boolean, simplicial complex, rounds ]</code>.</p>
@@ -534,7 +535,7 @@
       Name="unnamed complex 18"
       Dim=3
      
-     /SimplicialComplex], 7 ]
+     /SimplicialComplex], 9 ]
  gap&gt; SCMailSetAddress("johndoe@somehost");   
  true
  gap&gt; SCMailIsEnabled();                     
@@ -556,10 +557,8 @@
 <div class="example"><pre> 
  Greetings master,
  
- this is simpcomp 2.1.8 running on igt215.mathematik.uni-stuttgart.de
- (Linux igt215 2.6.26-2-amd64 #1 SMP Thu Nov 5 02:23:12 UTC 2009 x86_64
- GNU/Linux), GAP 4.4.12.
- 
+ this is simpcomp 2.1.9 running on comp01.maths.fancytown.edu
+
  I have been working hard for 0 seconds and have a message for you, see below.
  
  #### START MESSAGE ####
@@ -596,7 +595,7 @@
 
 <h5>9.2-15 SCReduceComplexFast</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCReduceComplexFast</code>( <var class="Arg">complex</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCReduceComplexFast</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a simplicial complex upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Same as <code class="func">SCReduceComplex</code> (<a href="chap9.html#X7FF4BBEC8574C58F"><span class="RefLink">9.2-13</span></a>), but calls an external binary provided with the simpcomp package.</p>

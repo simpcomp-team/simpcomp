@@ -19,18 +19,19 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap16.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap18.html">[Next Chapter]</a>&nbsp;  </div>
 
-<p><a id="X781BB9A580A99EBC" name="X781BB9A580A99EBC"></a></p>
-<div class="ChapSects"><a href="chap17.html#X781BB9A580A99EBC">17 <span class="Heading">A demo session with <strong class="pkg">simpcomp</strong></span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X80FB9BC2808EC8D6">17.1 <span class="Heading">Creating a <code class="code">SCSimplicialComplex</code> object</span></a>
+<p id="mathjaxlink" class="pcenter"></p>
+<p><a id="X78CC1D0D809E5D2E" name="X78CC1D0D809E5D2E"></a></p>
+<div class="ChapSects"><a href="chap17.html#X78CC1D0D809E5D2E">17 <span class="Heading">A demo session with <strong class="pkg">simpcomp</strong></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X802AC56478332D59">17.1 <span class="Heading">Creating a <code class="code">SCSimplicialComplex</code> object</span></a>
 </span>
 </div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X875127787F2C1222">17.2 <span class="Heading">Working with a <code class="code">SCSimplicialComplex</code> object</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X7F2BA767781B3216">17.2 <span class="Heading">Working with a <code class="code">SCSimplicialComplex</code> object</span></a>
 </span>
 </div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X7EF4929483450FFC">17.3 <span class="Heading">Calculating properties of a <code class="code">SCSimplicialComplex</code> object</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X81109FCF7A2BAD69">17.3 <span class="Heading">Calculating properties of a <code class="code">SCSimplicialComplex</code> object</span></a>
 </span>
 </div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X8455A2BE8064B789">17.4 <span class="Heading">Creating new complexes from a <code class="code">SCSimplicialComplex</code> object</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X833CFE367E7591A0">17.4 <span class="Heading">Creating new complexes from a <code class="code">SCSimplicialComplex</code> object</span></a>
 </span>
 </div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap17.html#X7F91D2307D7CE8C8">17.5 <span class="Heading">Homology related calculations</span></a>
@@ -51,19 +52,19 @@
 
 <p>This chapter contains the transcript of a demo session with <strong class="pkg">simpcomp</strong> that is intended to give an insight into what things can be done with this package.</p>
 
-<p>Of course this only scratches the surface of the functions provided by <strong class="pkg">simpcomp</strong>. See Chapters <a href="chap4.html#X8518F9E57E38598E"><span class="RefLink">4</span></a> through <a href="chap15.html#X8308D685809A4E2F"><span class="RefLink">15</span></a> for further functions provided by <strong class="pkg">simpcomp</strong>.</p>
+<p>Of course this only scratches the surface of the functions provided by <strong class="pkg">simpcomp</strong>. See Chapters <a href="chap4.html#X840691C285AB3AAD"><span class="RefLink">4</span></a> through <a href="chap15.html#X8308D685809A4E2F"><span class="RefLink">15</span></a> for further functions provided by <strong class="pkg">simpcomp</strong>.</p>
 
-<p><a id="X80FB9BC2808EC8D6" name="X80FB9BC2808EC8D6"></a></p>
+<p><a id="X802AC56478332D59" name="X802AC56478332D59"></a></p>
 
 <h4>17.1 <span class="Heading">Creating a <code class="code">SCSimplicialComplex</code> object</span></h4>
 
-<p>Simplicial complex objects can either be created from a facet list (complex <code class="code">c1</code> below), orbit representatives together with a permutation group (complex <code class="code">c2</code>) or difference cycles (complex <code class="code">c3</code>, see Section <a href="chap6.html#X879195657E1B257E"><span class="RefLink">6.1</span></a>), from a function generating triangulations of standard complexes (complex <code class="code">c4</code>, see Section <a href="chap6.html#X79072405786FEA0B"><span class="RefLink">6.3</span></a>) or from a function constructing infinite series for combinatorial (pseudo)manifolds (complexes <code class="code">c5</code>, <code class="code">c6</code>, <code class="code">c7</code>, see Section <a href="chap6.html#X814FE0267D7C54A9"><span class="RefLink">6.4</span></a> and the function prefix <code class="code">SCSeries...</code>). There are also functions creating new simplicial complexes from old, see Section <a href="chap6.html#X7F4308DB7C3699D1"><span class="RefLink">6.6</span></a>, which will be described in the next sections.</p>
+<p>Simplicial complex objects can either be created from a facet list (complex <code class="code">c1</code> below), orbit representatives together with a permutation group (complex <code class="code">c2</code>) or difference cycles (complex <code class="code">c3</code>, see Section <a href="chap6.html#X7A93E4B08536E2C8"><span class="RefLink">6.1</span></a>), from a function generating triangulations of standard complexes (complex <code class="code">c4</code>, see Section <a href="chap6.html#X79072405786FEA0B"><span class="RefLink">6.3</span></a>) or from a function constructing infinite series for combinatorial (pseudo)manifolds (complexes <code class="code">c5</code>, <code class="code">c6</code>, <code class="code">c7</code>, see Section <a href="chap6.html#X814FE0267D7C54A9"><span class="RefLink">6.4</span></a> and the function prefix <code class="code">SCSeries...</code>). There are also functions creating new simplicial complexes from old, see Section <a href="chap6.html#X7F4308DB7C3699D1"><span class="RefLink">6.6</span></a>, which will be described in the next sections.</p>
 
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">#first run functionality test on simpcomp</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCRunTest();</span>
-+ test simpcomp package, version 2.1.8
++ test simpcomp package, version 2.1.9
 + GAP4stones: 69988
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">#all ok</span>
@@ -161,11 +162,11 @@ true
 2
 </pre></div>
 
-<p><a id="X875127787F2C1222" name="X875127787F2C1222"></a></p>
+<p><a id="X7F2BA767781B3216" name="X7F2BA767781B3216"></a></p>
 
 <h4>17.2 <span class="Heading">Working with a <code class="code">SCSimplicialComplex</code> object</span></h4>
 
-<p>As described in Section <a href="chap3.html#X79C7AD47824F17C8"><span class="RefLink">3.1</span></a> there are two several ways of accessing an object of type <code class="code">SCSimplicialComplex</code>. An example for the two equivalent ways is given below. The preference will be given to the object oriented notation in this demo session. The code listed below</p>
+<p>As described in Section <a href="chap3.html#X82FAB51B7C625240"><span class="RefLink">3.1</span></a> there are two several ways of accessing an object of type <code class="code">SCSimplicialComplex</code>. An example for the two equivalent ways is given below. The preference will be given to the object oriented notation in this demo session. The code listed below</p>
 
 
 <div class="example"><pre>
@@ -187,7 +188,7 @@ true
 [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ]
 </pre></div>
 
-<p><a id="X7EF4929483450FFC" name="X7EF4929483450FFC"></a></p>
+<p><a id="X81109FCF7A2BAD69" name="X81109FCF7A2BAD69"></a></p>
 
 <h4>17.3 <span class="Heading">Calculating properties of a <code class="code">SCSimplicialComplex</code> object</span></h4>
 
@@ -272,7 +273,7 @@ true
 fail
 </pre></div>
 
-<p><a id="X8455A2BE8064B789" name="X8455A2BE8064B789"></a></p>
+<p><a id="X833CFE367E7591A0" name="X833CFE367E7591A0"></a></p>
 
 <h4>17.4 <span class="Heading">Creating new complexes from a <code class="code">SCSimplicialComplex</code> object</span></h4>
 

@@ -19,9 +19,10 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap5.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap7.html">[Next Chapter]</a>&nbsp;  </div>
 
-<p><a id="X836F2B5C816E54B3" name="X836F2B5C816E54B3"></a></p>
-<div class="ChapSects"><a href="chap6.html#X836F2B5C816E54B3">6 <span class="Heading">Functions and operations for <code class="code">SCSimplicialComplex</code></span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X879195657E1B257E">6.1 <span class="Heading">Creating an <code class="code">SCSimplicialComplex</code> object from a facet list</span></a>
+<p id="mathjaxlink" class="pcenter"></p>
+<p><a id="X82BDBFFC81D080D1" name="X82BDBFFC81D080D1"></a></p>
+<div class="ChapSects"><a href="chap6.html#X82BDBFFC81D080D1">6 <span class="Heading">Functions and operations for <code class="code">SCSimplicialComplex</code></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X7A93E4B08536E2C8">6.1 <span class="Heading">Creating an <code class="code">SCSimplicialComplex</code> object from a facet list</span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7B5A874584FF34A7">6.1-1 SCFromFacets</a></span>
@@ -203,7 +204,7 @@
 
 <h3>6 <span class="Heading">Functions and operations for <code class="code">SCSimplicialComplex</code></span></h3>
 
-<p><a id="X879195657E1B257E" name="X879195657E1B257E"></a></p>
+<p><a id="X7A93E4B08536E2C8" name="X7A93E4B08536E2C8"></a></p>
 
 <h4>6.1 <span class="Heading">Creating an <code class="code">SCSimplicialComplex</code> object from a facet list</span></h4>
 
@@ -213,7 +214,7 @@
 
 <h5>6.1-1 SCFromFacets</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFromFacets</code>( <var class="Arg">facets</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFromFacets</code>( <var class="Arg">facets</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Constructs a simplicial complex object from the given facet list. The facet list <var class="Arg">facets</var> has to be a duplicate free list (or set) which consists of duplicate free entries, which are in turn lists or sets. For the vertex labels (i. e. the entries of the list items of <var class="Arg">facets</var>) an ordering via the less-operator has to be defined. Following Section 4.11 of the <strong class="pkg">GAP</strong> manual this is the case for objects of the following families: rationals <code class="code">IsRat</code>, cyclotomics <code class="code">IsCyclotomic</code>, finite field elements <code class="code">IsFFE</code>, permutations <code class="code">IsPerm</code>, booleans <code class="code">IsBool</code>, characters <code class="code">IsChar</code> and lists (strings) <code class="code">IsList</code>.</p>
@@ -246,7 +247,7 @@
 
 <h5>6.1-2 SC</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SC</code>( <var class="Arg">facets</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SC</code>( <var class="Arg">facets</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>A shorter function to create a simplicial complex from a facet list, just calls <code class="func">SCFromFacets</code> (<a href="chap6.html#X7B5A874584FF34A7"><span class="RefLink">6.1-1</span></a>)(<var class="Arg">facets</var>).</p>
@@ -268,7 +269,7 @@
 
 <h5>6.1-3 SCFromDifferenceCycles</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFromDifferenceCycles</code>( <var class="Arg">diffcycles</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFromDifferenceCycles</code>( <var class="Arg">diffcycles</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Creates a simplicial complex object from the list of difference cycles provided. If <var class="Arg">diffcycles</var> is of length <span class="SimpleMath">1</span> the computation is equivalent to the one in <code class="func">SCDifferenceCycleExpand</code> (<a href="chap6.html#X8510B6CF85070A28"><span class="RefLink">6.6-8</span></a>). Otherwise the induced modulus (the sum of all entries of a difference cycle) of all cycles has to be equal and the union of all expanded difference cycles is returned.</p>
@@ -298,7 +299,7 @@
 
 <h5>6.1-4 SCFromGenerators</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFromGenerators</code>( <var class="Arg">group</var>, <var class="Arg">generators</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFromGenerators</code>( <var class="Arg">group</var>, <var class="Arg">generators</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Constructs a simplicial complex object from the set of <var class="Arg">generators</var> on which the group <var class="Arg">group</var> acts, i.e. a complex which has <var class="Arg">group</var> as a subgroup of the automorphism group and a facet list that consists of the <var class="Arg">group</var>-orbits specified by the list of representatives passed in <var class="Arg">generators</var>. Note that <var class="Arg">group</var> is not stored as an attribute of the resulting complex as it might just be a subgroup of the actual automorphism group. Internally calls <code class="code">Orbits</code> and <code class="func">SCFromFacets</code> (<a href="chap6.html#X7B5A874584FF34A7"><span class="RefLink">6.1-1</span></a>).</p>
@@ -352,7 +353,7 @@
 
 <h5>6.2-1 SCExportToString</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportToString</code>( <var class="Arg">c</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportToString</code>( <var class="Arg">c</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: string upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes one string representation of a closed and strongly connected weak pseudomanifold. Compare <code class="func">SCExportIsoSig</code> (<a href="chap6.html#X80098C5F7B80A621"><span class="RefLink">6.2-2</span></a>), which returns the lexicographically minimal string representation.</p>
@@ -365,14 +366,14 @@
  0
  gap&gt; s:=SCExportIsoSig(c); time;
  "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
- 12
+ 16
  </pre></div>
 
 <p><a id="X80098C5F7B80A621" name="X80098C5F7B80A621"></a></p>
 
 <h5>6.2-2 SCExportIsoSig</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportIsoSig</code>( <var class="Arg">c</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportIsoSig</code>( <var class="Arg">c</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: string upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the isomorphism signature of a closed, strongly connected weak pseudomanifold. The isomorphism signature is stored as an attribute of the complex.</p>
@@ -388,7 +389,7 @@
 
 <h5>6.2-3 SCFromIsoSig</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFromIsoSig</code>( <var class="Arg">str</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFromIsoSig</code>( <var class="Arg">str</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a SCSimplicialComplex object upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes a simplicial complex from its isomorphism signature. If a file with isomorphism signatures is provided a list of all complexes is returned.</p>
@@ -410,7 +411,7 @@
      
       Properties known: Dim, ExportIsoSig, FacetsEx, Name, Vertices.
      
-      Name="unnamed complex 7"
+      Name="unnamed complex 9"
       Dim=3
      
      /SimplicialComplex] ]
@@ -426,7 +427,7 @@
 
 <h5>6.3-1 SCBdCyclicPolytope</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCBdCyclicPolytope</code>( <var class="Arg">d</var>, <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCBdCyclicPolytope</code>( <var class="Arg">d</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates the boundary complex of the <var class="Arg">d</var>-dimensional cyclic polytope (a combinatorial <span class="SimpleMath">d-1</span>-sphere) on <var class="Arg">n</var> vertices, where <span class="SimpleMath">n≥ d+2</span>.</p>
@@ -456,7 +457,7 @@
 
 <h5>6.3-2 SCBdSimplex</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCBdSimplex</code>( <var class="Arg">d</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCBdSimplex</code>( <var class="Arg">d</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates the boundary of the <span class="SimpleMath">d</span>-simplex <span class="SimpleMath">∆^d</span>, a combinatorial <span class="SimpleMath">d-1</span>-sphere.</p>
@@ -493,7 +494,7 @@
 
 <h5>6.3-3 SCEmpty</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCEmpty</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCEmpty</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates an empty complex (of dimension <span class="SimpleMath">-1</span>), i. e. a <code class="code">SCSimplicialComplex</code> object with empty facet list.</p>
@@ -515,7 +516,7 @@
 
 <h5>6.3-4 SCSimplex</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSimplex</code>( <var class="Arg">d</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSimplex</code>( <var class="Arg">d</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates the <var class="Arg">d</var>-simplex.</p>
@@ -540,10 +541,10 @@
 
 <h5>6.3-5 SCSeriesTorus</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesTorus</code>( <var class="Arg">d</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesTorus</code>( <var class="Arg">d</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
-<p>Generates the <span class="SimpleMath">d</span>-torus described in <a href="chapBib.html#biBKuehnel86HigherDimCsaszar">[K{\86]</a>.</p>
+<p>Generates the <span class="SimpleMath">d</span>-torus described in <a href="chapBib.html#biBKuehnel86HigherDimCsaszar">[K\t86]</a>.</p>
 
 
 <div class="example"><pre>
@@ -566,7 +567,7 @@
 
 <h5>6.3-6 SCSurface</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSurface</code>( <var class="Arg">g</var>, <var class="Arg">orient</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSurface</code>( <var class="Arg">g</var>, <var class="Arg">orient</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates the surface of genus <var class="Arg">g</var> where the boolean argument <var class="Arg">orient</var> specifies whether the surface is orientable or not. The surfaces have transitive cyclic group actions and can be described using the minimum amount of <span class="SimpleMath">O(operatornamelog (g))</span> memory. If <var class="Arg">orient</var> is <code class="code">true</code> and <var class="Arg">g</var><span class="SimpleMath">≥ 50</span> or if <var class="Arg">orient</var> is <code class="code">false</code> and <var class="Arg">g</var><span class="SimpleMath">≥ 100</span> only the difference cycles of the surface are returned</p>
@@ -631,7 +632,7 @@
 
 <h5>6.3-7 SCFVectorBdCrossPolytope</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFVectorBdCrossPolytope</code>( <var class="Arg">d</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFVectorBdCrossPolytope</code>( <var class="Arg">d</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a list of integers of size <code class="code">d + 1</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the <span class="SimpleMath">f</span>-vector of the <span class="SimpleMath">d</span>-dimensional cross polytope without generating the underlying complex.</p>
@@ -660,7 +661,7 @@
 
 <h5>6.3-8 SCFVectorBdCyclicPolytope</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFVectorBdCyclicPolytope</code>( <var class="Arg">d</var>, <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFVectorBdCyclicPolytope</code>( <var class="Arg">d</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a list of integers of size <code class="code">d+1</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the <span class="SimpleMath">f</span>-vector of the <var class="Arg">d</var>-dimensional cyclic polytope on <var class="Arg">n</var> vertices, <span class="SimpleMath">n≥ d+2</span>, without generating the underlying complex.</p>
@@ -681,7 +682,7 @@
 
 <h5>6.3-9 SCFVectorBdSimplex</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFVectorBdSimplex</code>( <var class="Arg">d</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFVectorBdSimplex</code>( <var class="Arg">d</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a list of integers of size <code class="code">d + 1</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the <span class="SimpleMath">f</span>-vector of the <span class="SimpleMath">d</span>-simplex without generating the underlying complex.</p>
@@ -737,7 +738,7 @@
 
 <h5>6.4-1 SCSeriesAGL</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesAGL</code>( <var class="Arg">p</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesAGL</code>( <var class="Arg">p</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a permutation group and a list of <span class="SimpleMath">5</span>-tuples of integers upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>For a given prime <var class="Arg">p</var> the automorphism group (AGL<span class="SimpleMath">(1,p)</span>) and the generators of all members of the series of <span class="SimpleMath">2</span>-transitive combinatorial <span class="SimpleMath">4</span>-pseudomanifolds with <var class="Arg">p</var> vertices from <a href="chapBib.html#biBSpreer10Diss">[Spr11a]</a>, Section 5.2, is computed. The affine linear group AGL<span class="SimpleMath">(1,p)</span> is returned as the first argument. If no member of the series with <var class="Arg">p</var> vertices exists only the group is returned.</p>
@@ -781,7 +782,7 @@
 
 <h5>6.4-2 SCSeriesBrehmKuehnelTorus</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesBrehmKuehnelTorus</code>( <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesBrehmKuehnelTorus</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates a neighborly 3-torus with <var class="Arg">n</var> vertices if <var class="Arg">n</var> is odd and a centrally symmetric 3-torus if <var class="Arg">n</var> is even (<var class="Arg">n</var><span class="SimpleMath">≥ 15</span> . The triangulations are taken from <a href="chapBib.html#biBBrehm09LatticeTrigE33Torus">[BK12]</a></p>
@@ -824,7 +825,7 @@
 
 <h5>6.4-3 SCSeriesBdHandleBody</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesBdHandleBody</code>( <var class="Arg">d</var>, <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesBdHandleBody</code>( <var class="Arg">d</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p><code class="code">SCSeriesBdHandleBody(d,n)</code> generates a transitive <span class="SimpleMath">d</span>-dimensional sphere bundle (<span class="SimpleMath">d ≥ 2</span>) with <span class="SimpleMath">n</span> vertices (<span class="SimpleMath">n ≥ 2d + 3</span>) which coincides with the boundary of <code class="func">SCSeriesHandleBody</code> (<a href="chap6.html#X7CCBF8F487036415"><span class="RefLink">6.4-9</span></a>)<code class="code">(d,n)</code>. The sphere bundle is orientable if <span class="SimpleMath">d</span> is even or if <span class="SimpleMath">d</span> is odd and <span class="SimpleMath">n</span> is even, otherwise it is not orientable. Internally calls <code class="func">SCFromDifferenceCycles</code> (<a href="chap6.html#X827D29DD79A82CFA"><span class="RefLink">6.1-3</span></a>).</p>
@@ -867,7 +868,7 @@
 
 <h5>6.4-4 SCSeriesBid</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesBid</code>( <var class="Arg">i</var>, <var class="Arg">d</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesBid</code>( <var class="Arg">i</var>, <var class="Arg">d</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a simplicial complex upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Constructs the complex <span class="SimpleMath">B(i,d)</span> as described in <a href="chapBib.html#biBKlee11CentSymmMnfFewVert">[KN12]</a>, cf. <a href="chapBib.html#biBEffenberger10Diss">[Eff11a]</a>, <a href="chapBib.html#biBSparla99LBTComb2kMnf">[Spa99]</a>. The complex <span class="SimpleMath">B(i,d)</span> is a <span class="SimpleMath">i</span>-Hamiltonian subcomplex of the <span class="SimpleMath">d</span>-cross polytope and its boundary topologically is a sphere product <span class="SimpleMath">S^i× S^d-i-2</span> with vertex transitive automorphism group.</p>
@@ -895,7 +896,8 @@
  gap&gt; SCFVector(s2s2);
  [ 12, 60, 160, 180, 72 ]
  gap&gt; SCAutomorphismGroup(s2s2); 
- TransitiveGroup(12,28) = D(4)[x]S(3)
+ Group([ (1,3)(4,6)(7,9)(10,12), (1,5)(2,10)(4,8)(6,12)(7,11), (1,10,7,4)
+ (2,3,8,9)(5,12,11,6) ])
  gap&gt; SCIsManifold(s2s2); 
  true
  gap&gt; SCHomology(s2s2);
@@ -906,7 +908,7 @@
 
 <h5>6.4-5 SCSeriesC2n</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesC2n</code>( <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesC2n</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates the combinatorial <span class="SimpleMath">3</span>-manifold <span class="SimpleMath">C_2n</span>, <span class="SimpleMath">n ≥ 8</span>, with <span class="SimpleMath">2n</span> vertices from <a href="chapBib.html#biBSpreer10Diss">[Spr11a]</a>, Section 4.5.3 and Section 5.2. The complex is homeomorphic to <span class="SimpleMath">S^2 × S^1</span> for <span class="SimpleMath">n</span> odd and homeomorphic to <span class="SimpleMath">S^2 dtimes S^1</span> in case <span class="SimpleMath">n</span> is an even number. In the latter case <span class="SimpleMath">C_2n</span> is isomorphic to <span class="SimpleMath">D_2n</span> from <code class="func">SCSeriesD2n</code> (<a href="chap6.html#X7C56D2B7858A80C7"><span class="RefLink">6.4-8</span></a>). The complexes are believed to appear as the vertex links of some of the members of the series of <span class="SimpleMath">2</span>-transitive <span class="SimpleMath">4</span>-pseudomanifolds from <code class="func">SCSeriesAGL</code> (<a href="chap6.html#X7EA6421A8156EBDF"><span class="RefLink">6.4-1</span></a>). Internally calls <code class="func">SCFromDifferenceCycles</code> (<a href="chap6.html#X827D29DD79A82CFA"><span class="RefLink">6.1-3</span></a>).</p>
@@ -957,7 +959,7 @@
 
 <h5>6.4-6 SCSeriesConnectedSum</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesConnectedSum</code>( <var class="Arg">k</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesConnectedSum</code>( <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates a combinatorial manifold of type <span class="SimpleMath">(S^2 x S^1)^#k</span> for <span class="SimpleMath">k</span> even. The complex is a combinatorial <span class="SimpleMath">3</span>-manifold with transitive cyclic symmetry as described in <a href="chapBib.html#biBSpreer12VarCyclPolytope">[BS14]</a>.</p>
@@ -989,7 +991,7 @@
 
 <h5>6.4-7 SCSeriesCSTSurface</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesCSTSurface</code>( <var class="Arg">l</var>[, <var class="Arg">j</var>], <var class="Arg">2k</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesCSTSurface</code>( <var class="Arg">l</var>[, <var class="Arg">j</var>], <var class="Arg">2k</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p><code class="code">SCSeriesCSTSurface(l,j,2k)</code> generates the centrally symmetric transitive (cst) surface <span class="SimpleMath">S_(l,j,2k)</span>, <code class="code">SCSeriesCSTSurface(l,2k)</code> generates the cst surface <span class="SimpleMath">S_(l,2k)</span> from <a href="chapBib.html#biBSpreer10PartBetaK">[Spr12]</a>, Section 4.4.</p>
@@ -1024,7 +1026,7 @@
 
 <h5>6.4-8 SCSeriesD2n</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesD2n</code>( <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesD2n</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates the combinatorial <span class="SimpleMath">3</span>-manifold <span class="SimpleMath">D_2n</span>, <span class="SimpleMath">n ≥ 8</span>, <span class="SimpleMath">n ≠ 9</span>, with <span class="SimpleMath">2n</span> vertices from <a href="chapBib.html#biBSpreer10Diss">[Spr11a]</a>, Section 4.5.3 and Section 5.2. The complex is homeomorphic to <span class="SimpleMath">S^2 dtimes S^1</span>. In the case that <span class="SimpleMath">n</span> is even <span class="SimpleMath">D_2n</span> is isomorphic to <span class="SimpleMath">C_2n</span> from <code class="func">SCSeriesC2n</code> (<a href="chap6.html#X7C0223DF83CC961B"><span class="RefLink">6.4-5</span></a>). The complexes are believed to appear as the vertex links of some of the members of the series of <span class="SimpleMath">2</span>-transitive <span class="SimpleMath">4</span>-pseudomanifolds from <code class="func">SCSeriesAGL</code> (<a href="chap6.html#X7EA6421A8156EBDF"><span class="RefLink">6.4-1</span></a>). Internally calls <code class="func">SCFromDifferenceCycles</code> (<a href="chap6.html#X827D29DD79A82CFA"><span class="RefLink">6.1-3</span></a>).</p>
@@ -1043,7 +1045,9 @@
  
  /SimplicialComplex]
  gap&gt; SCAutomorphismGroup(d);  
- TransitiveGroup(30,14) = t30n14
+ Group([ (1,3)(4,30)(5,29)(6,28)(7,27)(8,26)(9,25)(10,24)(11,23)(12,22)(13,21)
+ (14,20)(15,19)(16,18), (1,4)(2,3)(5,30)(6,29)(7,28)(8,27)(9,26)(10,25)(11,24)
+ (12,23)(13,22)(14,21)(15,20)(16,19)(17,18) ])
  gap&gt; StructureDescription(last);
  "D60"
  </pre></div>
@@ -1076,7 +1080,7 @@
 
 <h5>6.4-9 SCSeriesHandleBody</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesHandleBody</code>( <var class="Arg">d</var>, <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesHandleBody</code>( <var class="Arg">d</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p><code class="code">SCSeriesHandleBody(d,n)</code> generates a transitive <span class="SimpleMath">d</span>-dimensional handle body (<span class="SimpleMath">d ≥ 3</span>) with <span class="SimpleMath">n</span> vertices (<span class="SimpleMath">n ≥ 2d + 1</span>). The handle body is orientable if <span class="SimpleMath">d</span> is odd or if <span class="SimpleMath">d</span> and <span class="SimpleMath">n</span> are even, otherwise it is not orientable. The complex equals the difference cycle <span class="SimpleMath">(1 : ... : 1 : n-d)</span> To obtain the boundary complexes of <code class="code">SCSeriesHandleBody(d,n)</code> use the function <code class="func">SCSeriesBdHandleBody</code> (<a href="chap6.html#X786AD599875BD006"><span class="RefLink">6.4-3</span></a>). Internally calls <code class="func">SCFromDifferenceCycles</code> (<a href="chap6.html#X827D29DD79A82CFA"><span class="RefLink">6.1-3</span></a>).</p>
@@ -1096,10 +1100,10 @@
  
  /SimplicialComplex]
  gap&gt; SCAutomorphismGroup(c);    
- PrimitiveGroup(7,2) = D(2*7)
+ Group([ (1,3)(4,7)(5,6), (1,4)(2,3)(5,7) ])
  gap&gt; bd:=SCBoundary(c);;
  gap&gt; SCAutomorphismGroup(bd);
- PrimitiveGroup(7,4) = AGL(1, 7)
+ Group([ (1,2)(3,7)(4,6), (1,4,2)(3,5,6) ])
  gap&gt; SCIsIsomorphic(bd,SCSeriesBdHandleBody(2,7));
  true
  </pre></div>
@@ -1108,7 +1112,7 @@
 
 <h5>6.4-10 SCSeriesHomologySphere</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesHomologySphere</code>( <var class="Arg">p</var>, <var class="Arg">q</var>, <var class="Arg">r</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesHomologySphere</code>( <var class="Arg">p</var>, <var class="Arg">q</var>, <var class="Arg">r</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates a combinatorial Brieskorn homology sphere of type <span class="SimpleMath">Σ (p,q,r)</span>, <span class="SimpleMath">p</span>, <span class="SimpleMath">q</span> and <span class="SimpleMath">r</span> pairwise co-prime. The complex is a combinatorial <span class="SimpleMath">3</span>-manifold with transitive cyclic symmetry as described in <a href="chapBib.html#biBSpreer12VarCyclPolytope">[BS14]</a>.</p>
@@ -1147,7 +1151,7 @@
 
 <h5>6.4-11 SCSeriesK</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesK</code>( <var class="Arg">i</var>, <var class="Arg">k</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesK</code>( <var class="Arg">i</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates the <var class="Arg">k</var>-th member (<span class="SimpleMath">k ≥ 0</span>) of the series <var class="Arg">K^i</var> (<span class="SimpleMath">1 ≤ i ≤ 396</span>) from <a href="chapBib.html#biBSpreer10Diss">[Spr11a]</a>. The <span class="SimpleMath">396</span> series describe a complete classification of all dense series (i. e. there is a member of the series for every integer, <span class="SimpleMath">f_0 (K^i (k+1) ) = f_0 (K^i (k)) +1</span>) of cyclic <span class="SimpleMath">3</span>-manifolds with a fixed number of difference cycles and at least one member with less than <span class="SimpleMath">23</span> vertices. See <code class="func">SCSeriesL</code> (<a href="chap6.html#X813C5B0E7FA7C1A3"><span class="RefLink">6.4-13</span></a>) for a list of series of order <span class="SimpleMath">2</span>.</p>
@@ -1170,7 +1174,7 @@
 
 <h5>6.4-12 SCSeriesKu</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesKu</code>( <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesKu</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the symmetric orientable sphere bundle Ku<span class="SimpleMath">(n)</span> with <span class="SimpleMath">4n</span> vertices from <a href="chapBib.html#biBSpreer10Diss">[Spr11a]</a>, Section 4.5.2. The series is defined as a generalization of the slicings from <a href="chapBib.html#biBSpreer10Diss">[Spr11a]</a>, Section 3.3.</p>
@@ -1205,17 +1209,16 @@
  gap&gt; Mminus:=SCSpan(c,[1,2,3,4,9,10,11,12]);;                  
  gap&gt; Mplus:=SCSpan(c,[5,6,7,8,13,14,15,16]);;                  
  gap&gt; SCCollapseGreedy(Mminus).Facets;
- [ [ 1, 9 ], [ 1, 10 ], [ 3, 10 ], [ 3, 11 ], [ 4, 9 ], [ 4, 12 ], [ 11, 12 ] ]
+ [ [ 3, 4 ], [ 3, 10 ], [ 4, 12 ], [ 9, 10 ], [ 9, 12 ] ]
  gap&gt; SCCollapseGreedy(Mplus).Facets; 
- [ [ 5, 8 ], [ 5, 16 ], [ 6, 14 ], [ 6, 15 ], [ 8, 15 ], [ 13, 14 ], 
-   [ 13, 16 ] ]
+ [ [ 5, 6 ], [ 5, 8 ], [ 6, 14 ], [ 7, 8 ], [ 7, 15 ], [ 14, 15 ] ]
  </pre></div>
 
 <p><a id="X813C5B0E7FA7C1A3" name="X813C5B0E7FA7C1A3"></a></p>
 
 <h5>6.4-13 SCSeriesL</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesL</code>( <var class="Arg">i</var>, <var class="Arg">k</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesL</code>( <var class="Arg">i</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates the <var class="Arg">k</var>-th member (<span class="SimpleMath">k ≥ 0</span>) of the series <var class="Arg">L^i</var>, <span class="SimpleMath">1 ≤ i ≤ 18</span> from <a href="chapBib.html#biBSpreer10Diss">[Spr11a]</a>. The <span class="SimpleMath">18</span> series describe a complete classification of all series of cyclic <span class="SimpleMath">3</span>-manifolds with a fixed number of difference cycles of order <span class="SimpleMath">2</span> (i. e. there is a member of the series for every second integer, <span class="SimpleMath">f_0 (L^i (k+1) ) = f_0 (L^i (k)) +2</span>) and at least one member with less than <span class="SimpleMath">15</span> vertices where each series does not appear as a sub series of one of the series <span class="SimpleMath">K^i</span> from <code class="func">SCSeriesK</code> (<a href="chap6.html#X78DA125479E1D77F"><span class="RefLink">6.4-11</span></a>).</p>
@@ -1235,7 +1238,7 @@
 
 <h5>6.4-14 SCSeriesLe</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesLe</code>( <var class="Arg">k</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesLe</code>( <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates the <var class="Arg">k</var>-th member (<span class="SimpleMath">k ≥ 7</span>) of the series <code class="code">Le</code> from <a href="chapBib.html#biBSpreer10Diss">[Spr11a]</a>, Section 4.5.1. The series can be constructed as the generalization of the boundary of a genus <span class="SimpleMath">1</span> handlebody decomposition of the manifold <code class="code">manifold_3_14_1_5</code> from the classification in <a href="chapBib.html#biBLutz03TrigMnfFewVertVertTrans">[Lut03]</a>.</p>
@@ -1264,7 +1267,7 @@
 
 <h5>6.4-15 SCSeriesLensSpace</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesLensSpace</code>( <var class="Arg">p</var>, <var class="Arg">q</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesLensSpace</code>( <var class="Arg">p</var>, <var class="Arg">q</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates the lens space <span class="SimpleMath">L(p,q)</span> whenever <span class="SimpleMath">p = (k+2)^2-1</span> and <span class="SimpleMath">q = k+2</span> or <span class="SimpleMath">p = 2k+3</span> and <span class="SimpleMath">q = 1</span> for a <span class="SimpleMath">k ≥ 0</span> and <code class="keyw">fail</code> otherwise. All complexes have a transitive cyclic automorphism group.</p>
@@ -1315,7 +1318,7 @@
 
 <h5>6.4-16 SCSeriesPrimeTorus</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesPrimeTorus</code>( <var class="Arg">l</var>, <var class="Arg">j</var>, <var class="Arg">p</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesPrimeTorus</code>( <var class="Arg">l</var>, <var class="Arg">j</var>, <var class="Arg">p</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates the well known triangulated torus <span class="SimpleMath">{ (l:j:p-l-j),(l:p-l-j:j) }</span> with <span class="SimpleMath">p</span> vertices, <span class="SimpleMath">3p</span> edges and <span class="SimpleMath">2p</span> triangles where <span class="SimpleMath">j</span> has to be greater than <span class="SimpleMath">l</span> and <span class="SimpleMath">p</span> must be any prime number greater than <span class="SimpleMath">6</span>.</p>
@@ -1331,7 +1334,7 @@
 
 <h5>6.4-17 SCSeriesSeifertFibredSpace</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesSeifertFibredSpace</code>( <var class="Arg">p</var>, <var class="Arg">q</var>, <var class="Arg">r</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesSeifertFibredSpace</code>( <var class="Arg">p</var>, <var class="Arg">q</var>, <var class="Arg">r</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates a combinatorial Seifert fibred space of type</p>
@@ -1365,7 +1368,7 @@
 
 <h5>6.4-18 SCSeriesS2xS2</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesS2xS2</code>( <var class="Arg">k</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesS2xS2</code>( <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Generates a combinatorial version of <span class="SimpleMath">(S^2 × S^2)^# k</span>.</p>
@@ -1395,7 +1398,7 @@
 
 <h5>6.5-1 SCChiralMap</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCChiralMap</code>( <var class="Arg">m</var>, <var class="Arg">g</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCChiralMap</code>( <var class="Arg">m</var>, <var class="Arg">g</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a <code class="keyw">SCSimplicialComplex</code> object upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns the (hyperbolic) chiral map of vertex valence <var class="Arg">m</var> and genus <var class="Arg">g</var> if existent and <code class="keyw">fail</code> otherwise. The list was generated with the help of the classification of regular maps by Marston Conder <a href="chapBib.html#biBConder09RegMapsOfBdChi">[Con09]</a>. Use <code class="func">SCChiralMaps</code> (<a href="chap6.html#X85BB97CB8240E59B"><span class="RefLink">6.5-2</span></a>) to get a list of all chiral maps available.</p>
@@ -1424,7 +1427,7 @@
 
 <h5>6.5-2 SCChiralMaps</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCChiralMaps</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCChiralMaps</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a list of lists upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns a list of all simplicial (hyperbolic) chiral maps of orientable genus up to <span class="SimpleMath">100</span>. The list was generated with the help of the classification of regular maps by Marston Conder <a href="chapBib.html#biBConder09RegMapsOfBdChi">[Con09]</a>. Every chiral map is given by a <span class="SimpleMath">2</span>-tuple <span class="SimpleMath">(m,g)</span> where <span class="SimpleMath">m</span> is the vertex valence and <span class="SimpleMath">g</span> is the genus of the map. Use the <span class="SimpleMath">2</span>-tuples of the list together with <code class="func">SCChiralMap</code> (<a href="chap6.html#X867D2AFC79B11405"><span class="RefLink">6.5-1</span></a>) to get the corresponding triangulations.</p>
@@ -1453,7 +1456,7 @@
 
 <h5>6.5-3 SCChiralTori</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCChiralTori</code>( <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCChiralTori</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a <code class="keyw">SCSimplicialComplex</code> object upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns a list of chiral triangulations of the torus with <span class="SimpleMath">n</span> vertices. See <a href="chapBib.html#biBBrehm08EquivMapsTorus">[BK08]</a> for details.</p>
@@ -1488,7 +1491,7 @@
 
 <h5>6.5-4 SCNrChiralTori</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCNrChiralTori</code>( <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCNrChiralTori</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: an integer upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns the number of simplicial chiral maps on the torus with <span class="SimpleMath">n</span> vertices, cf. <a href="chapBib.html#biBBrehm08EquivMapsTorus">[BK08]</a> for details.</p>
@@ -1505,7 +1508,7 @@
 
 <h5>6.5-5 SCNrRegularTorus</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCNrRegularTorus</code>( <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCNrRegularTorus</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: an integer upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns the number of simplicial regular maps on the torus with <span class="SimpleMath">n</span> vertices, cf. <a href="chapBib.html#biBBrehm08EquivMapsTorus">[BK08]</a> for details.</p>
@@ -1522,7 +1525,7 @@
 
 <h5>6.5-6 SCRegularMap</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCRegularMap</code>( <var class="Arg">m</var>, <var class="Arg">g</var>, <var class="Arg">orient</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCRegularMap</code>( <var class="Arg">m</var>, <var class="Arg">g</var>, <var class="Arg">orient</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a <code class="keyw">SCSimplicialComplex</code> object upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns the (hyperbolic) regular map of vertex valence <var class="Arg">m</var>, genus <var class="Arg">g</var> and orientability <var class="Arg">orient</var> if existent and <code class="keyw">fail</code> otherwise. The triangulations were generated with the help of the classification of regular maps by Marston Conder <a href="chapBib.html#biBConder09RegMapsOfBdChi">[Con09]</a>. Use <code class="func">SCRegularMaps</code> (<a href="chap6.html#X7F75F5E183CC097E"><span class="RefLink">6.5-7</span></a>) to get a list of all regular maps available.</p>
@@ -1554,7 +1557,7 @@
 
 <h5>6.5-7 SCRegularMaps</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCRegularMaps</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCRegularMaps</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a list of lists upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns a list of all simplicial (hyperbolic) regular maps of orientable genus up to <span class="SimpleMath">100</span> or non-orientable genus up to <span class="SimpleMath">200</span>. The list was generated with the help of the classification of regular maps by Marston Conder <a href="chapBib.html#biBConder09RegMapsOfBdChi">[Con09]</a>. Every regular map is given by a <span class="SimpleMath">3</span>-tuple <span class="SimpleMath">(m,g,or)</span> where <span class="SimpleMath">m</span> is the vertex valence, <span class="SimpleMath">g</span> is the genus and <span class="SimpleMath">or</span> is a boolean stating if the map is orientable or not. Use the <span class="SimpleMath">3</span>-tuples of the list together with <code class="func">SCRegularMap</code> (<a href="chap6.html#X83D0946E7E2C4163"><span class="RefLink">6.5-6</span></a>) to get the corresponding triangulations. <span class="SimpleMath">g</span></p>
@@ -1585,7 +1588,7 @@
 
 <h5>6.5-8 SCRegularTorus</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCRegularTorus</code>( <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCRegularTorus</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a <code class="keyw">SCSimplicialComplex</code> object upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns a list of regular triangulations of the torus with <span class="SimpleMath">n</span> vertices (the length of the list will be at most <span class="SimpleMath">1</span>). See <a href="chapBib.html#biBBrehm08EquivMapsTorus">[BK08]</a> for details.</p>
@@ -1613,7 +1616,7 @@
 
 <h5>6.5-9 SCSeriesSymmetricTorus</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesSymmetricTorus</code>( <var class="Arg">p</var>, <var class="Arg">q</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSeriesSymmetricTorus</code>( <var class="Arg">p</var>, <var class="Arg">q</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a <code class="keyw">SCSimplicialComplex</code> object upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns the equivarient triangulation of the torus <span class="SimpleMath">{ 3,6 }_(p,q)</span> with fundamental domain <span class="SimpleMath">(p,q)</span> on the <span class="SimpleMath">2</span>-dimensional integer lattice. See <a href="chapBib.html#biBBrehm08EquivMapsTorus">[BK08]</a> for details.</p>
@@ -1645,7 +1648,7 @@
 
 <h5>6.6-1 SCCartesianPower</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCartesianPower</code>( <var class="Arg">complex</var>, <var class="Arg">n</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCartesianPower</code>( <var class="Arg">complex</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>The new complex is <span class="SimpleMath">PL</span>-homeomorphic to <span class="SimpleMath">n</span> times the cartesian product of <var class="Arg">complex</var>, of dimensions <span class="SimpleMath">n ⋅ d</span> and has <span class="SimpleMath">f_d^n ⋅ n ⋅ frac2n-12^n-1}!</span> facets where <span class="SimpleMath">d</span> denotes the dimension and <span class="SimpleMath">f_d</span> denotes the number of facets of <var class="Arg">complex</var>. Note that the complex returned by the function is not the <span class="SimpleMath">n</span>-fold cartesian product <var class="Arg">complex</var><span class="SimpleMath">^n</span> of <var class="Arg">complex</var> (which, in general, is not simplicial) but a simplicial subdivision of <var class="Arg">complex</var><span class="SimpleMath">^n</span>.</p>
@@ -1675,7 +1678,7 @@
 
 <h5>6.6-2 SCCartesianProduct</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCartesianProduct</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCartesianProduct</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the simplicial cartesian product of <var class="Arg">complex1</var> and <var class="Arg">complex2</var> where <var class="Arg">complex1</var> and <var class="Arg">complex2</var> are pure, simplicial complexes. The original vertex labeling of <var class="Arg">complex1</var> and <var class="Arg">complex2</var> is changed into the standard one. The new complex has vertex labels of type <span class="SimpleMath">[v_i, v_j]</span> where <span class="SimpleMath">v_i</span> is a vertex of <var class="Arg">complex1</var> and <span class="SimpleMath">v_j</span> is a vertex of <var class="Arg">complex2</var>.</p>
@@ -1706,7 +1709,7 @@
 
 <h5>6.6-3 SCConnectedComponents</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCConnectedComponents</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCConnectedComponents</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of simplicial complexes of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes all connected components of an arbitrary simplicial complex.</p>
@@ -1755,7 +1758,7 @@
 
 <h5>6.6-4 SCConnectedProduct</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCConnectedProduct</code>( <var class="Arg">complex</var>, <var class="Arg">n</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCConnectedProduct</code>( <var class="Arg">complex</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>If <span class="SimpleMath">n ≥ 2</span>, the function internally calls <span class="SimpleMath">1 ×</span> <code class="func">SCConnectedSum</code> (<a href="chap6.html#X81338CE18195607C"><span class="RefLink">6.6-5</span></a>) and <span class="SimpleMath">(n-2) ×</span> <code class="func">SCConnectedSumMinus</code> (<a href="chap6.html#X78B843417D63B408"><span class="RefLink">6.6-6</span></a>).</p>
@@ -1786,7 +1789,7 @@
 
 <h5>6.6-5 SCConnectedSum</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCConnectedSum</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCConnectedSum</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>In a lexicographic ordering the smallest facet of both <var class="Arg">complex1</var> and <var class="Arg">complex2</var> is removed and the complexes are glued together along the resulting boundaries. The bijection used to identify the vertices of the boundaries differs from the one chosen in <code class="func">SCConnectedSumMinus</code> (<a href="chap6.html#X78B843417D63B408"><span class="RefLink">6.6-6</span></a>) by a transposition. Thus, the topological type of <code class="code">SCConnectedSum</code> is different from the one of <code class="func">SCConnectedSumMinus</code> (<a href="chap6.html#X78B843417D63B408"><span class="RefLink">6.6-6</span></a>) whenever <var class="Arg">complex1</var> and <var class="Arg">complex2</var> do not allow an orientation reversing homeomorphism.</p>
@@ -1815,7 +1818,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("CP^2");
- [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#-CP^2" ], [ 100, "CP^2#CP^2" ], 
+ [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#CP^2" ], [ 100, "CP^2#-CP^2" ], 
    [ 400, "CP^2#(S^2xS^2)" ], [ 2486, "Gaifullin CP^2" ], 
    [ 4401, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
  gap&gt; cp2:=SCLib.Load(last[1][1]);;
@@ -1839,7 +1842,7 @@
 
 <h5>6.6-6 SCConnectedSumMinus</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCConnectedSumMinus</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCConnectedSumMinus</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>In a lexicographic ordering the smallest facet of both <var class="Arg">complex1</var> and <var class="Arg">complex2</var> is removed and the complexes are glued together along the resulting boundaries. The bijection used to identify the vertices of the boundaries differs from the one chosen in <code class="func">SCConnectedSum</code> (<a href="chap6.html#X81338CE18195607C"><span class="RefLink">6.6-5</span></a>) by a transposition. Thus, the topological type of <code class="code">SCConnectedSumMinus</code> is different from the one of <code class="func">SCConnectedSum</code> (<a href="chap6.html#X81338CE18195607C"><span class="RefLink">6.6-5</span></a>) whenever <var class="Arg">complex1</var> and <var class="Arg">complex2</var> do not allow an orientation reversing homeomorphism.</p>
@@ -1868,7 +1871,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("CP^2");
- [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#-CP^2" ], [ 100, "CP^2#CP^2" ], 
+ [ [ 16, "CP^2 (VT)" ], [ 99, "CP^2#CP^2" ], [ 100, "CP^2#-CP^2" ], 
    [ 400, "CP^2#(S^2xS^2)" ], [ 2486, "Gaifullin CP^2" ], 
    [ 4401, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
  gap&gt; cp2:=SCLib.Load(last[1][1]);;
@@ -1892,7 +1895,7 @@
 
 <h5>6.6-7 SCDifferenceCycleCompress</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDifferenceCycleCompress</code>( <var class="Arg">simplex</var>, <var class="Arg">modulus</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDifferenceCycleCompress</code>( <var class="Arg">simplex</var>, <var class="Arg">modulus</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: list with possibly duplicate entries upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>A difference cycle is returned, i. e. a list of integer values of length <span class="SimpleMath">(d+1)</span>, if <span class="SimpleMath">d</span> is the dimension of <var class="Arg">simplex</var>, and a sum equal to <var class="Arg">modulus</var>. In some sense this is the inverse operation of <code class="func">SCDifferenceCycleExpand</code> (<a href="chap6.html#X8510B6CF85070A28"><span class="RefLink">6.6-8</span></a>).</p>
@@ -1914,7 +1917,7 @@
 
 <h5>6.6-8 SCDifferenceCycleExpand</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDifferenceCycleExpand</code>( <var class="Arg">diffcycle</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDifferenceCycleExpand</code>( <var class="Arg">diffcycle</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p><var class="Arg">diffcycle</var> induces a simplex <span class="SimpleMath">∆ = ( v_1 , ... , v_n+1 )</span> by <span class="SimpleMath">v_1 =</span><var class="Arg">diffcycle[1]</var>, <span class="SimpleMath">v_i = v_i-1 +</span> <var class="Arg">diffcycle[i]</var> and a cyclic group action by <span class="SimpleMath">Z_σ</span> where <span class="SimpleMath">σ = ∑</span> <var class="Arg">diffcycle[i]</var> is the modulus of <code class="code">diffcycle</code>. The function returns the <span class="SimpleMath">Z_σ</span>-orbit of <span class="SimpleMath">∆</span>.</p>
@@ -1932,7 +1935,7 @@
 
 <h5>6.6-9 SCStronglyConnectedComponents</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCStronglyConnectedComponents</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCStronglyConnectedComponents</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of simplicial complexes of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes all strongly connected components of a pure simplicial complex.</p>
@@ -1966,13 +1969,13 @@
 
 <h4>6.7 <span class="Heading">Simplicial complexes from transitive permutation groups</span></h4>
 
-<p>Beginning from Version 1.3.0, <strong class="pkg">simpcomp</strong> is able to generate triangulations from a prescribed transitive group action on its set of vertices. Note that the corresponding group is a subgroup of the full automorphism group, but not necessarily the full automorphism group of the triangulations obtained in this way. The methods and algorithms are based on the works of Frank H. Lutz <a href="chapBib.html#biBLutz03TrigMnfFewVertVertTrans">[Lut03]</a>, <a href="chapBib.html#biBLutz08ManifoldPage">[ManifoldPage]</a> and in particular his program <code class="code">MANIFOLD_VT</code>.</p>
+<p>Beginning from Version 1.3.0, <strong class="pkg">simpcomp</strong> is able to generate triangulations from a prescribed transitive group action on its set of vertices. Note that the corresponding group is a subgroup of the full automorphism group, but not necessarily the full automorphism group of the triangulations obtained in this way. The methods and algorithms are based on the works of Frank H. Lutz <a href="chapBib.html#biBLutz03TrigMnfFewVertVertTrans">[Lut03]</a>, <a href="chapBib.html#biBLutz08ManifoldPage">[Lut]</a> and in particular his program <code class="code">MANIFOLD_VT</code>.</p>
 
 <p><a id="X7C1592677A76A3E5" name="X7C1592677A76A3E5"></a></p>
 
 <h5>6.7-1 SCsFromGroupExt</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCsFromGroupExt</code>( <var class="Arg">G</var>, <var class="Arg">n</var>, <var class="Arg">d</var>, <var class="Arg">objectType</var>, <var class="Arg">cache</var>, <var class="Arg">removeDoubleEntries</var>, <var class="Arg">outfile</var>, <var class="Arg">maxLinkSize</var>, <var class="Arg">subset</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCsFromGroupExt</code>( <var class="Arg">G</var>, <var class="Arg">n</var>, <var class="Arg">d</var>, <var class="Arg">objectType</var>, <var class="Arg">cache</var>, <var class="Arg">removeDoubleEntries</var>, <var class="Arg">outfile</var>, <var class="Arg">maxLinkSize</var>, <var class="Arg">subset</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a list of simplicial complexes of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes all combinatorial <var class="Arg">d</var>-pseudomanifolds, <span class="SimpleMath">d=2</span> / all strongly connected combinatorial <var class="Arg">d</var>-pseudomanifolds, <span class="SimpleMath">d ≥ 3</span>, as a union of orbits of the group action of <var class="Arg">G</var> on <code class="code">(d+1)</code>-tuples on the set of <var class="Arg">n</var> vertices, see <a href="chapBib.html#biBLutz03TrigMnfFewVertVertTrans">[Lut03]</a>. The integer argument <var class="Arg">objectType</var> specifies, whether complexes exceeding the maximal size of each vertex link for combinatorial manifolds are sorted out (<code class="code">objectType = 0</code>) or not (<code class="code">objectType = 1</code>, in this case some combinatorial pseudomanifolds won't be found, but no combinatorial manifold will be sorted out). The integer argument <var class="Arg">cache</var> specifies if the orbits are held in memory during the computation, a value of <code class="code">0</code> means that the orbits are discarded, trading speed for memory, any other value means that they are kept, trading memory for speed. The boolean argument <var class="Arg">removeDoubleEntries</var> specifies whether the results are checked for combinatorial isomorphism, preventing isomorphic entries. The argument <var class="Arg">outfile</var> specifies an output file containing all complexes found by the algorithm, if <var class="Arg">outfile</var> is anything else than a string, not output file is generated. The argument <var class="Arg">maxLinkSize</var> determines a maximal link size of any output complex. If <var class="Arg">maxLinkSize</var><span class="SimpleMath">=0</span> or if <var class="Arg">maxLinkSize</var> is anything else than an integer the argument is ignored. The argument <var class="Arg">subset</var> specifies a set of orbits (given by a list of indices of <code class="code">repHigh</code>) which have to be contained in any output complex. If <var class="Arg">subset</var> is anything else than a subset of <code class="code">matrixAllowedRows</code> the argument is ignored.</p>
@@ -2025,7 +2028,7 @@
 
 <h5>6.7-2 SCsFromGroupByTransitivity</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCsFromGroupByTransitivity</code>( <var class="Arg">n</var>, <var class="Arg">d</var>, <var class="Arg">k</var>, <var class="Arg">maniflag</var>, <var class="Arg">computeAutGroup</var>, <var class="Arg">removeDoubleEntries</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCsFromGroupByTransitivity</code>( <var class="Arg">n</var>, <var class="Arg">d</var>, <var class="Arg">k</var>, <var class="Arg">maniflag</var>, <var class="Arg">computeAutGroup</var>, <var class="Arg">removeDoubleEntries</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a list of simplicial complexes of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes all combinatorial <var class="Arg">d</var>-pseudomanifolds, <span class="SimpleMath">d = 2</span> / all strongly connected combinatorial <var class="Arg">d</var>-pseudomanifolds, <span class="SimpleMath">d ≥ 3</span>, as union of orbits of group actions for all <var class="Arg">k</var>-transitive groups on <code class="code">(d+1)</code>-tuples on the set of <var class="Arg">n</var> vertices, see <a href="chapBib.html#biBLutz03TrigMnfFewVertVertTrans">[Lut03]</a>. The boolean argument <var class="Arg">maniflag</var> specifies, whether the resulting complexes should be listed separately by combinatorial manifolds, combinatorial pseudomanifolds and complexes where the verification that the object is at least a combinatorial pseudomanifold failed. The boolean argument <var class="Arg">computeAutGroup</var> specifies whether or not the real automorphism group should be computed (note that a priori the generating group is just a subgroup of the automorphism group). The boolean argument <var class="Arg">removeDoubleEntries</var> specifies whether the results are checked for combinatorial isomorphism, preventing isomorphic entries. Internally calls <code class="func">SCsFromGroupExt</code> (<a href="chap6.html#X7C1592677A76A3E5"><span class="RefLink">6.7-1</span></a>) for every group.</p>
@@ -2061,7 +2064,7 @@
 
 <h5>6.8-1 SCNrCyclic3Mflds</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCNrCyclic3Mflds</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCNrCyclic3Mflds</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: integer upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns the number of combinatorial 3-manifolds with transitive cyclic symmetry with <var class="Arg">i</var> vertices. See <a href="chapBib.html#biBSpreer11CyclicCombMflds">[Spr14]</a> for more about the classification of combinatorial 3-manifolds with transitive cyclic symmetry up to <span class="SimpleMath">22</span> vertices.</p>
@@ -2076,7 +2079,7 @@
 
 <h5>6.8-2 SCCyclic3MfldTopTypes</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCyclic3MfldTopTypes</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCyclic3MfldTopTypes</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a list of strings upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns a list of all topological types that occur in the classification combinatorial 3-manifolds with transitive cyclic symmetry with <var class="Arg">i</var> vertices. See <a href="chapBib.html#biBSpreer11CyclicCombMflds">[Spr14]</a> for more about the classification of combinatorial 3-manifolds with transitive cyclic symmetry up to <span class="SimpleMath">22</span> vertices.</p>
@@ -2092,7 +2095,7 @@
 
 <h5>6.8-3 SCCyclic3Mfld</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCyclic3Mfld</code>( <var class="Arg">i</var>, <var class="Arg">j</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCyclic3Mfld</code>( <var class="Arg">i</var>, <var class="Arg">j</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns the <var class="Arg">j</var>th combinatorial 3-manifold with <var class="Arg">i</var> vertices in the classification of combinatorial 3-manifolds with transitive cyclic symmetry. See <a href="chapBib.html#biBSpreer11CyclicCombMflds">[Spr14]</a> for more about the classification of combinatorial 3-manifolds with transitive cyclic symmetry up to <span class="SimpleMath">22</span> vertices.</p>
@@ -2118,7 +2121,7 @@
 
 <h5>6.8-4 SCCyclic3MfldByType</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCyclic3MfldByType</code>( <var class="Arg">type</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCyclic3MfldByType</code>( <var class="Arg">type</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns the smallest combinatorial 3-manifolds in the classification of combinatorial 3-manifolds with transitive cyclic symmetry of topological type <var class="Arg">type</var>. See <a href="chapBib.html#biBSpreer11CyclicCombMflds">[Spr14]</a> for more about the classification of combinatorial 3-manifolds with transitive cyclic symmetry up to <span class="SimpleMath">22</span> vertices.</p>
@@ -2144,7 +2147,7 @@
 
 <h5>6.8-5 SCCyclic3MfldListOfGivenType</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCyclic3MfldListOfGivenType</code>( <var class="Arg">type</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCyclic3MfldListOfGivenType</code>( <var class="Arg">type</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns a list of indices <span class="SimpleMath">{ (i_1, j_1) , (i_1, j_1) , ... (i_n, j_n) }</span> of all combinatorial 3-manifolds in the classification of combinatorial 3-manifolds with transitive cyclic symmetry of topological type <var class="Arg">type</var>. Complexes can be obtained by calling <code class="func">SCCyclic3Mfld</code> (<a href="chap6.html#X781256E37DA1B69F"><span class="RefLink">6.8-3</span></a>) using these indices. See <a href="chapBib.html#biBSpreer11CyclicCombMflds">[Spr14]</a> for more about the classification of combinatorial 3-manifolds with transitive cyclic symmetry up to <span class="SimpleMath">22</span> vertices.</p>
@@ -2167,7 +2170,7 @@
 
 <h5>6.9-1 SCAltshulerSteinberg</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCAltshulerSteinberg</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCAltshulerSteinberg</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a non-negative integer upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the Altshuler-Steinberg determinant.</p>
@@ -2197,7 +2200,7 @@
 
 <h5>6.9-2 SCAutomorphismGroup</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCAutomorphismGroup</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCAutomorphismGroup</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a <strong class="pkg">GAP</strong> permutation group upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the automorphism group of a strongly connected pseudomanifold <var class="Arg">complex</var>, i. e. the group of all automorphisms on the set of vertices of <var class="Arg">complex</var> that do not change the complex as a whole. Necessarily the group is a subgroup of the symmetric group <span class="SimpleMath">S_n</span> where <span class="SimpleMath">n</span> is the number of vertices of the simplicial complex.</p>
@@ -2209,7 +2212,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");            
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; k3surf:=SCLib.Load(last[1][1]);; 
  gap&gt; SCAutomorphismGroup(k3surf);               
  Group([ (1,3,8,4,9,16,15,2,14,12,6,7,13,5,10), (1,13)(2,14)(3,15)(4,16)(5,9)
@@ -2220,7 +2223,7 @@
 
 <h5>6.9-3 SCAutomorphismGroupInternal</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCAutomorphismGroupInternal</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCAutomorphismGroupInternal</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a <strong class="pkg">GAP</strong> permutation group upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the automorphism group of a strongly connected pseudomanifold <var class="Arg">complex</var>, i. e. the group of all automorphisms on the set of vertices of <var class="Arg">complex</var> that do not change the complex as a whole. Necessarily the group is a subgroup of the symmetric group <span class="SimpleMath">S_n</span> where <span class="SimpleMath">n</span> is the number of vertices of the simplicial complex.</p>
@@ -2238,7 +2241,7 @@
 <div class="example"><pre>
  gap&gt; c:=SC([[1,2],[2,3],[1,3]]);;
  gap&gt; g:=SCAutomorphismGroupInternal(c);
- PrimitiveGroup(3,2) = S(3)
+ Group([ (1,2), (1,3) ])
  gap&gt; List(g);
  [ (), (1,2,3), (1,3,2), (2,3), (1,2), (1,3) ]
  gap&gt; StructureDescription(g);
@@ -2249,7 +2252,7 @@
 
 <h5>6.9-4 SCAutomorphismGroupSize</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCAutomorphismGroupSize</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCAutomorphismGroupSize</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a positive integer group upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the size of the automorphism group of a strongly connected pseudomanifold <var class="Arg">complex</var>, see <code class="func">SCAutomorphismGroup</code> (<a href="chap6.html#X7B88925386E197AC"><span class="RefLink">6.9-2</span></a>).</p>
@@ -2257,7 +2260,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");            
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; k3surf:=SCLib.Load(last[1][1]);;           
  gap&gt; SCAutomorphismGroupSize(k3surf);               
  240
@@ -2267,7 +2270,7 @@
 
 <h5>6.9-5 SCAutomorphismGroupStructure</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCAutomorphismGroupStructure</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCAutomorphismGroupStructure</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: the <strong class="pkg">GAP</strong> structure description upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the <strong class="pkg">GAP</strong> structure description of the automorphism group of a strongly connected pseudomanifold <var class="Arg">complex</var>, see <code class="func">SCAutomorphismGroup</code> (<a href="chap6.html#X7B88925386E197AC"><span class="RefLink">6.9-2</span></a>).</p>
@@ -2275,7 +2278,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");     
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; k3surf:=SCLib.Load(last[1][1]);;      
  gap&gt; SCAutomorphismGroupStructure(k3surf);
  "((C2 x C2 x C2 x C2) : C5) : C3"
@@ -2285,7 +2288,7 @@
 
 <h5>6.9-6 SCAutomorphismGroupTransitivity</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCAutomorphismGroupTransitivity</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCAutomorphismGroupTransitivity</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a positive integer upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the transitivity of the automorphism group of a strongly connected pseudomanifold <var class="Arg">complex</var>, i. e. the maximal integer <span class="SimpleMath">t</span> such that for any two ordered <span class="SimpleMath">t</span>-tuples <span class="SimpleMath">T_1</span> and <span class="SimpleMath">T_2</span> of vertices of <var class="Arg">complex</var>, there exists an element <span class="SimpleMath">g</span> in the automorphism group of <var class="Arg">complex</var> for which <span class="SimpleMath">gT_1=T_2</span>, see <a href="chapBib.html#biBHuppert67EndlGruppen">[Hup67]</a>.</p>
@@ -2293,7 +2296,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");            
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; k3surf:=SCLib.Load(last[1][1]);;           
  gap&gt; SCAutomorphismGroupTransitivity(k3surf);               
  2
@@ -2303,7 +2306,7 @@
 
 <h5>6.9-7 SCBoundary</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCBoundary</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCBoundary</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>The function computes the boundary of a simplicial complex <var class="Arg">complex</var> satisfying the weak pseudomanifold property and returns it as a simplicial complex. In addition, it is stored as a property of <var class="Arg">complex</var>.</p>
@@ -2352,7 +2355,7 @@
 
 <h5>6.9-8 SCDehnSommervilleCheck</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDehnSommervilleCheck</code>( <var class="Arg">c</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDehnSommervilleCheck</code>( <var class="Arg">c</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks if the simplicial complex <var class="Arg">c</var> fulfills the Dehn Sommerville equations: <span class="SimpleMath">h_j - h_d+1-j = (-1)^d+1-j d+1 choose j (χ (M) - 2)</span> for <span class="SimpleMath">0 ≤ j ≤ fracd2</span> and <span class="SimpleMath">d</span> even, and <span class="SimpleMath">h_j - h_d+1-j = 0</span> for <span class="SimpleMath">0 ≤ j ≤ fracd-12</span> and <span class="SimpleMath">d</span> odd. Where <span class="SimpleMath">h_j</span> is the <span class="SimpleMath">j</span>th component of the <span class="SimpleMath">h</span>-vector, see <code class="func">SCHVector</code> (<a href="chap6.html#X84FBF0A685547ECD"><span class="RefLink">6.9-26</span></a>).</p>
@@ -2371,7 +2374,7 @@
 
 <h5>6.9-9 SCDehnSommervilleMatrix</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDehnSommervilleMatrix</code>( <var class="Arg">d</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDehnSommervilleMatrix</code>( <var class="Arg">d</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a <code class="code">(d+1)</code><span class="SimpleMath">×</span><code class="code">Int(d+1/2)</code> matrix with integer entries upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the coefficients of the Dehn Sommerville equations for dimension <code class="code">d</code>: <span class="SimpleMath">h_j - h_d+1-j = (-1)^d+1-j d+1 choose j (χ (M) - 2)</span> for <span class="SimpleMath">0 ≤ j ≤ fracd2</span> and <span class="SimpleMath">d</span> even, and <span class="SimpleMath">h_j - h_d+1-j = 0</span> for <span class="SimpleMath">0 ≤ j ≤ fracd-12</span> and <span class="SimpleMath">d</span> odd. Where <span class="SimpleMath">h_j</span> is the <span class="SimpleMath">j</span>th component of the <span class="SimpleMath">h</span>-vector, see <code class="func">SCHVector</code> (<a href="chap6.html#X84FBF0A685547ECD"><span class="RefLink">6.9-26</span></a>).</p>
@@ -2390,7 +2393,7 @@
 
 <h5>6.9-10 SCDifferenceCycles</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDifferenceCycles</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDifferenceCycles</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of lists upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the difference cycles of <var class="Arg">complex</var> in standard labeling if <var class="Arg">complex</var> is invariant under a shift of the vertices of type <span class="SimpleMath">v ↦ v+1 mod n</span>. The function returns the difference cycles as lists where the sum of the entries equals the number of vertices <span class="SimpleMath">n</span> of <var class="Arg">complex</var>.</p>
@@ -2416,7 +2419,7 @@
 
 <h5>6.9-11 SCDim</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDim</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDim</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: an integer <span class="SimpleMath">≥ -1</span> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the dimension of a simplicial complex. If the complex is not pure, the dimension of the highest dimensional simplex is returned.</p>
@@ -2435,7 +2438,7 @@
 
 <h5>6.9-12 SCDualGraph</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDualGraph</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDualGraph</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: 1-dimensional simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the dual graph of the pure simplicial complex <var class="Arg">complex</var>.</p>
@@ -2465,7 +2468,7 @@
 
 <h5>6.9-13 SCEulerCharacteristic</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCEulerCharacteristic</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCEulerCharacteristic</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: integer upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the Euler characteristic <span class="Math"> \chi(C)=\sum \limits_{i=0}^{d} (-1)^{i} f_i </span> of a simplicial complex <span class="SimpleMath">C</span>, where <span class="SimpleMath">f_i</span> denotes the <span class="SimpleMath">i</span>-th component of the <span class="SimpleMath">f</span>-vector.</p>
@@ -2484,7 +2487,7 @@
 
 <h5>6.9-14 SCFVector</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFVector</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFVector</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of non-negative integers upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the <span class="SimpleMath">f</span>-vector of the simplicial complex <var class="Arg">complex</var>, i. e. the number of <span class="SimpleMath">i</span>-dimensional faces for <span class="SimpleMath">0 ≤ i ≤ d</span>, where <span class="SimpleMath">d</span> is the dimension of <var class="Arg">complex</var>. A memory-saving implicit algorithm is used that avoids calculating the face lattice of the complex. Internally calls <code class="func">SCNumFaces</code> (<a href="chap6.html#X7AC2427184B44C65"><span class="RefLink">6.9-52</span></a>).</p>
@@ -2500,7 +2503,7 @@
 
 <h5>6.9-15 SCFaceLattice</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFaceLattice</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFaceLattice</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of face lists upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the entire face lattice of a <span class="SimpleMath">d</span>-dimensional simplicial complex, i. e. all of its <span class="SimpleMath">i</span>-skeletons for <span class="SimpleMath">0 ≤ i ≤ d</span>. The faces are returned in the original labeling.</p>
@@ -2520,7 +2523,7 @@
 
 <h5>6.9-16 SCFaceLatticeEx</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFaceLatticeEx</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFaceLatticeEx</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of face lists upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the entire face lattice of a <span class="SimpleMath">d</span>-dimensional simplicial complex, i. e. all of its <span class="SimpleMath">i</span>-skeletons for <span class="SimpleMath">0 ≤ i ≤ d</span>. The faces are returned in the standard labeling.</p>
@@ -2538,7 +2541,7 @@
 
 <h5>6.9-17 SCFaces</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFaces</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFaces</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a face list upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>This is a synonym of the function <code class="func">SCSkel</code> (<a href="chap7.html#X8026B46F8236124D"><span class="RefLink">7.3-13</span></a>).</p>
@@ -2547,7 +2550,7 @@
 
 <h5>6.9-18 SCFacesEx</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFacesEx</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFacesEx</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a face list upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>This is a synonym of the function <code class="func">SCSkelEx</code> (<a href="chap7.html#X84ACF7D580FE8B76"><span class="RefLink">7.3-14</span></a>).</p>
@@ -2556,7 +2559,7 @@
 
 <h5>6.9-19 SCFacets</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFacets</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFacets</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a facet list upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns the facets of a simplicial complex in the original vertex labeling.</p>
@@ -2572,7 +2575,7 @@
 
 <h5>6.9-20 SCFacetsEx</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFacetsEx</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFacetsEx</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a facet list upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns the facets of a simplicial complex as they are stored, i. e. with standard vertex labeling from 1 to n.</p>
@@ -2588,7 +2591,7 @@
 
 <h5>6.9-21 SCFpBettiNumbers</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFpBettiNumbers</code>( <var class="Arg">complex</var>, <var class="Arg">p</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFpBettiNumbers</code>( <var class="Arg">complex</var>, <var class="Arg">p</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of non-negative integers upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the Betti numbers of a simplicial complex with respect to the field <span class="SimpleMath">F_p</span> for any prime number <code class="code">p</code>.</p>
@@ -2610,7 +2613,7 @@
 
 <h5>6.9-22 SCFundamentalGroup</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFundamentalGroup</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFundamentalGroup</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a <strong class="pkg">GAP</strong> fp group upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the first fundamental group of <var class="Arg">complex</var>, which must be a connected simplicial complex, and returns it in form of a finitely presented group. The generators of the group are given as 2-tuples that correspond to the edges of <var class="Arg">complex</var> in standard labeling. You can use GAP's <code class="code">SimplifiedFpGroup</code> to simplify the group presenation.</p>
@@ -2618,7 +2621,7 @@
 
 <div class="example"><pre>
  gap&gt; list:=SCLib.SearchByName("RP^2");
- [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ]
+ [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ]
  gap&gt; c:=SCLib.Load(list[1][1]);
  [SimplicialComplex
  
@@ -2667,7 +2670,7 @@
 
 <h5>6.9-23 SCGVector</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCGVector</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCGVector</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of integers upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the g-vector of a simplicial complex. The <span class="SimpleMath">g</span>-vector is defined as follows:</p>
@@ -2677,7 +2680,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("RP^2");
- [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ]
+ [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ]
  gap&gt; rp2_6:=SCLib.Load(last[1][1]);;
  gap&gt; SCFVector(rp2_6);
  [ 6, 15, 10 ]
@@ -2691,7 +2694,7 @@
 
 <h5>6.9-24 SCGenerators</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCGenerators</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCGenerators</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of pairs of the form <code class="code">[ list, integer ]</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the generators of a simplicial complex in the original vertex labeling.</p>
@@ -2711,7 +2714,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; SCLib.Load(last[1][1]);
  [SimplicialComplex
  
@@ -2758,7 +2761,7 @@
 
 <h5>6.9-25 SCGeneratorsEx</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCGeneratorsEx</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCGeneratorsEx</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of pairs of the form <code class="code">[ list, integer ]</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the generators of a simplicial complex in the standard vertex labeling.</p>
@@ -2778,7 +2781,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; SCLib.Load(last[1][1]);
  [SimplicialComplex
  
@@ -2825,7 +2828,7 @@
 
 <h5>6.9-26 SCHVector</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHVector</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHVector</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of integers upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the <span class="SimpleMath">h</span>-vector of a simplicial complex. The <span class="SimpleMath">h</span>-vector is defined as <span class="Math"> h_{k}:= \sum \limits_{i=-1}^{k-1} (-1)^{k-i-1}{d-i-1 \choose k-i-1} f_i</span> for <span class="SimpleMath">0 ≤ k ≤ d</span>, where <span class="SimpleMath">f_-1 := 1</span>. For all simplicial complexes we have <span class="SimpleMath">h_0 = 1</span>, hence the returned list starts with the second entry of the <span class="SimpleMath">h</span>-vector.</p>
@@ -2833,7 +2836,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("RP^2");
- [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ]
+ [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ]
  gap&gt; rp2_6:=SCLib.Load(last[1][1]);;
  gap&gt; SCFVector(rp2_6);
  [ 6, 15, 10 ]
@@ -2845,7 +2848,7 @@
 
 <h5>6.9-27 SCHasBoundary</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHasBoundary</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHasBoundary</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks if a simplicial complex <var class="Arg">complex</var> that fulfills the weak pseudo manifold property has a boundary, i. e. <span class="SimpleMath">d-1</span>-faces of valence <span class="SimpleMath">1</span>. If <var class="Arg">complex</var> is closed <code class="keyw">false</code> is returned, if <var class="Arg">complex</var> does not fulfill the weak pseudomanifold property, <code class="keyw">fail</code> is returned, otherwise <code class="keyw">true</code> is returned.</p>
@@ -2870,7 +2873,7 @@
 
 <h5>6.9-28 SCHasInterior</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHasInterior</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHasInterior</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns <code class="keyw">true</code> if a simplicial complex <var class="Arg">complex</var> that fulfills the weak pseudomanifold property has at least one <span class="SimpleMath">d-1</span>-face of valence <span class="SimpleMath">2</span>, i. e. if there exist at least one <span class="SimpleMath">d-1</span>-face that is not in the boundary of <var class="Arg">complex</var>, if no such face can be found <code class="keyw">false</code> is returned. It <var class="Arg">complex</var> does not fulfill the weak pseudomanifold property <code class="keyw">fail</code> is returned.</p>
@@ -2889,7 +2892,7 @@
 
 <h5>6.9-29 SCHeegaardSplittingSmallGenus</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHeegaardSplittingSmallGenus</code>( <var class="Arg">M</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHeegaardSplittingSmallGenus</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of an integer, a list of two sublists and a string upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes a Heegaard splitting of the combinatorial <span class="SimpleMath">3</span>-manifold <var class="Arg">M</var> of small genus. The function returns the genus of the Heegaard splitting, the vertex partition of the Heegaard splitting and information whether the splitting is minimal or just small (i. e. the Heegaard genus could not be determined). See also <code class="func">SCHeegaardSplitting</code> (<a href="chap6.html#X7C7335667C162AFA"><span class="RefLink">6.9-30</span></a>) for a faster computation of a Heegaard splitting of arbitrary genus and <code class="func">SCIsHeegaardSplitting</code> (<a href="chap6.html#X83F0246384A766F2"><span class="RefLink">6.9-40</span></a>) for a test whether or not a given splitting defines a Heegaard splitting.</p>
@@ -2906,7 +2909,7 @@
 
 <h5>6.9-30 SCHeegaardSplitting</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHeegaardSplitting</code>( <var class="Arg">M</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHeegaardSplitting</code>( <var class="Arg">M</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of an integer, a list of two sublists and a string upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes a Heegaard splitting of the combinatorial <span class="SimpleMath">3</span>-manifold <var class="Arg">M</var>. The function returns the genus of the Heegaard splitting, the vertex partition of the Heegaard splitting and a note, that splitting is arbitrary and in particular possibly not minimal. See also <code class="func">SCHeegaardSplittingSmallGenus</code> (<a href="chap6.html#X7A0547F67BBB6546"><span class="RefLink">6.9-29</span></a>) for the calculation of a Heegaard splitting of small genus and <code class="func">SCIsHeegaardSplitting</code> (<a href="chap6.html#X83F0246384A766F2"><span class="RefLink">6.9-40</span></a>) for a test whether or not a given splitting defines a Heegaard splitting.</p>
@@ -2938,7 +2941,7 @@
 
 <h5>6.9-31 SCHomologyClassic</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomologyClassic</code>( <var class="Arg">complex</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHomologyClassic</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a list of pairs of the form <code class="code">[ integer, list ]</code>.</p>
 
 <p>Computes the integral simplicial homology groups of a simplicial complex <var class="Arg">complex</var> (internally calls the function <code class="code">SimplicialHomology(complex.FacetsEx)</code> from the <strong class="pkg">homology</strong> package, see <a href="chapBib.html#biBDumas04Homology">[DHSW11]</a>).</p>
@@ -2953,10 +2956,10 @@
  gap&gt; kleinBottle.Homology;          
  [ [ 0, [  ] ], [ 1, [ 2 ] ], [ 0, [  ] ] ]
  gap&gt; SCLib.SearchByName("L_"){[1..10]};
- [ [ 139, "L_3_1" ], [ 634, "L_4_1" ], [ 754, "L_5_2" ], 
+ [ [ 161, "L_3_1" ], [ 643, "L_4_1" ], [ 752, "L_5_2" ], 
    [ 2416, "(S^2~S^1)#L_3_1" ], [ 2417, "(S^2xS^1)#L_3_1" ], [ 2490, "L_5_1" ],
-   [ 2492, "(S^2~S^1)#2#L_3_1" ], [ 2494, "(S^2xS^1)#2#L_3_1" ], 
-   [ 7467, "L_7_2" ], [ 7468, "L_8_3" ] ]
+   [ 2492, "(S^2xS^1)#2#L_3_1" ], [ 2493, "(S^2~S^1)#2#L_3_1" ], 
+   [ 7467, "L_7_2" ], [ 7469, "L_8_3" ] ]
  gap&gt; c:=SCConnectedSum(SCLib.Load(last[9][1]),
                         SCConnectedProduct(SCLib.Load(last[10][1]),2));
  &gt; [SimplicialComplex
@@ -2979,7 +2982,7 @@
 
 <h5>6.9-32 SCIncidences</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIncidences</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIncidences</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of face lists upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns a list of all <var class="Arg">k</var>-faces of the simplicial complex <var class="Arg">complex</var>. The list is sorted by the valence of the faces in the <var class="Arg">k</var>+1-skeleton of the complex, i. e. the <span class="SimpleMath">i</span>-th entry of the list contains all <var class="Arg">k</var>-faces of valence <span class="SimpleMath">i</span>. The faces are returned in the original labeling.</p>
@@ -2997,7 +3000,7 @@
 
 <h5>6.9-33 SCIncidencesEx</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIncidencesEx</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIncidencesEx</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of face lists upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns a list of all <var class="Arg">k</var>-faces of the simplicial complex <var class="Arg">complex</var>. The list is sorted by the valence of the faces in the <var class="Arg">k</var>+1-skeleton of the complex, i. e. the <span class="SimpleMath">i</span>-th entry of the list contains all <var class="Arg">k</var>-faces of valence <span class="SimpleMath">i</span>. The faces are returned in the standard labeling.</p>
@@ -3015,7 +3018,7 @@
 
 <h5>6.9-34 SCInterior</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCInterior</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCInterior</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes all <span class="SimpleMath">d-1</span>-faces of valence <span class="SimpleMath">2</span> of a simplicial complex <var class="Arg">complex</var> that fulfills the weak pseudomanifold property, i. e. the function returns the part of the <span class="SimpleMath">d-1</span>-skeleton of <span class="SimpleMath">C</span> that is not part of the boundary.</p>
@@ -3035,7 +3038,7 @@
 
 <h5>6.9-35 SCIsCentrallySymmetric</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsCentrallySymmetric</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsCentrallySymmetric</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks if a simplicial complex <var class="Arg">complex</var> is centrally symmetric, i. e. if its automorphism group contains a fixed point free involution.</p>
@@ -3058,7 +3061,7 @@
 
 <h5>6.9-36 SCIsConnected</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsConnected</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsConnected</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks if a simplicial complex <var class="Arg">complex</var> is connected.</p>
@@ -3077,7 +3080,7 @@
 
 <h5>6.9-37 SCIsEmpty</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsEmpty</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsEmpty</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks if a simplicial complex <var class="Arg">complex</var> is the empty complex, i. e. a <code class="code">SCSimplicialComplex</code> object with empty facet list.</p>
@@ -3099,7 +3102,7 @@
 
 <h5>6.9-38 SCIsEulerianManifold</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsEulerianManifold</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsEulerianManifold</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks whether a given simplicial complex <var class="Arg">complex</var> is a Eulerian manifold or not, i. e. checks if all vertex links of <var class="Arg">complex</var> have the Euler characteristic of a sphere. In particular the function returns <code class="keyw">false</code> in case <var class="Arg">complex</var> has a non-empty boundary.</p>
@@ -3140,7 +3143,7 @@
 
 <h5>6.9-39 SCIsFlag</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsFlag</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsFlag</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks if <var class="Arg">complex</var> is flag. A connected simplicial complex of dimension at least one is a flag complex if all cliques in its 1-skeleton span a face of the complex (cf. <a href="chapBib.html#biBFrohmader08FaceVecFlagCompl">[Fro08]</a>).</p>
@@ -3148,7 +3151,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("RP^2");   
- [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ]
+ [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ]
  gap&gt; rp2_6:=SCLib.Load(last[1][1]);;
  gap&gt; SCIsFlag(rp2_6);
  false
@@ -3158,7 +3161,7 @@
 
 <h5>6.9-40 SCIsHeegaardSplitting</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsHeegaardSplitting</code>( <var class="Arg">c</var>, <var class="Arg">list</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsHeegaardSplitting</code>( <var class="Arg">c</var>, <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks whether <var class="Arg">list</var> defines a Heegaard splitting of <var class="Arg">c</var> or not. See also <code class="func">SCHeegaardSplitting</code> (<a href="chap6.html#X7C7335667C162AFA"><span class="RefLink">6.9-30</span></a>) and <code class="func">SCHeegaardSplittingSmallGenus</code> (<a href="chap6.html#X7A0547F67BBB6546"><span class="RefLink">6.9-29</span></a>) for functions to compute Heegaard splittings.</p>
@@ -3180,7 +3183,7 @@
 
 <h5>6.9-41 SCIsHomologySphere</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsHomologySphere</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsHomologySphere</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks whether a simplicial complex <var class="Arg">complex</var> is a homology sphere, i. e. has the homology of a sphere, or not.</p>
@@ -3196,7 +3199,7 @@
 
 <h5>6.9-42 SCIsInKd</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsInKd</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsInKd</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> / <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks whether the simplicial complex <var class="Arg">complex</var> that must be a combinatorial <span class="SimpleMath">d</span>-manifold is in the class <span class="SimpleMath">mathcalK^k(d)</span>, <span class="SimpleMath">1≤ k≤ ⌊fracd+12⌋</span>, of simplicial complexes that only have <span class="SimpleMath">k</span>-stacked spheres as vertex links, see <a href="chapBib.html#biBEffenberger09StackPolyTightTrigMnf">[Eff11b]</a>. Note that it is not checked whether <var class="Arg">complex</var> is a combinatorial manifold -- if not, the algorithm will not succeed. Returns <code class="keyw">true</code> / <code class="keyw">false</code> upon success. If <code class="keyw">true</code> is returned this means that <var class="Arg">complex</var> is at least <var class="Arg">k</var>-stacked and thus that the complex is in the class <span class="SimpleMath">mathcalK^k(d)</span>, i.e. all vertex links are <code class="code">i</code>-stacked spheres. If <code class="keyw">false</code> is returnd the complex cannot be <var class="Arg">k</var>-stacked. In some cases the question can not be decided. In this case <code class="keyw">fail</code> is returned.</p>
@@ -3220,13 +3223,13 @@
 
 <h5>6.9-43 SCIsKNeighborly</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsKNeighborly</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsKNeighborly</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("RP^2");   
- [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ]
+ [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ]
  gap&gt; rp2_6:=SCLib.Load(last[1][1]);;
  gap&gt; SCFVector(rp2_6);
  [ 6, 15, 10 ]
@@ -3240,7 +3243,7 @@
 
 <h5>6.9-44 SCIsOrientable</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsOrientable</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsOrientable</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks if a simplicial complex <var class="Arg">complex</var>, satisfying the weak pseudomanifold property, is orientable.</p>
@@ -3256,7 +3259,7 @@
 
 <h5>6.9-45 SCIsPseudoManifold</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsPseudoManifold</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsPseudoManifold</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks if a simplicial complex <var class="Arg">complex</var> fulfills the weak pseudomanifold property, i. e. if every <span class="SimpleMath">d-1</span>-face of <var class="Arg">complex</var> is contained in at most <span class="SimpleMath">2</span> facets.</p>
@@ -3275,7 +3278,7 @@
 
 <h5>6.9-46 SCIsPure</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsPure</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsPure</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a boolean upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks if a simplicial complex <var class="Arg">complex</var> is pure.</p>
@@ -3294,7 +3297,7 @@
 
 <h5>6.9-47 SCIsShellable</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsShellable</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsShellable</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>The simplicial complex <var class="Arg">complex</var> must be pure, strongly connected and must fulfill the weak pseudomanifold property with non-empty boundary (cf. <code class="func">SCBoundary</code> (<a href="chap6.html#X836DC73380EA7414"><span class="RefLink">6.9-7</span></a>)).</p>
@@ -3315,7 +3318,7 @@
 
 <h5>6.9-48 SCIsStronglyConnected</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsStronglyConnected</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsStronglyConnected</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks if a simplicial complex <var class="Arg">complex</var> is strongly connected, i. e. if for any pair of facets <span class="SimpleMath">(hat∆,tilde∆)</span> there exists a sequence of facets <span class="SimpleMath">( ∆_1 , ... , ∆_k )</span> with <span class="SimpleMath">∆_1 = hat∆</span> and <span class="SimpleMath">∆_k = tilde∆</span> and dim<span class="SimpleMath">(∆_i , ∆_i+1 ) = d - 1</span> for all <span class="SimpleMath">1 ≤ i ≤ k - 1</span>.</p>
@@ -3341,7 +3344,7 @@
 
 <h5>6.9-49 SCMinimalNonFaces</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMinimalNonFaces</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMinimalNonFaces</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of face lists upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes all missing proper faces of a simplicial complex <var class="Arg">complex</var> by calling <code class="func">SCMinimalNonFacesEx</code> (<a href="chap6.html#X7DE069A0823BD56E"><span class="RefLink">6.9-50</span></a>). The simplices are returned in the original labeling of <var class="Arg">complex</var>.</p>
@@ -3357,7 +3360,7 @@
 
 <h5>6.9-50 SCMinimalNonFacesEx</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMinimalNonFacesEx</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMinimalNonFacesEx</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of face lists upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes all missing proper faces of a simplicial complex <var class="Arg">complex</var>, i.e. the missing <span class="SimpleMath">(i+1)</span>-tuples in the <span class="SimpleMath">i</span>-dimensional skeleton of a <var class="Arg">complex</var>. A missing <span class="SimpleMath">i+1</span>-tuple is not listed if it only consists of missing <span class="SimpleMath">i</span>-tuples. Note that whenever <var class="Arg">complex</var> is <span class="SimpleMath">k</span>-neighborly the first <span class="SimpleMath">k+1</span> entries are empty. The simplices are returned in the standard labeling <span class="SimpleMath">1,dots,n</span>, where <span class="SimpleMath">n</span> is the number of vertices of <var class="Arg">complex</var>.</p>
@@ -3381,7 +3384,7 @@
 
 <h5>6.9-51 SCNeighborliness</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCNeighborliness</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCNeighborliness</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a positive integer upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns <span class="SimpleMath">k</span> if a simplicial complex <var class="Arg">complex</var> is <span class="SimpleMath">k</span>-neighborly but not <span class="SimpleMath">(k+1)</span>-neighborly. See also <code class="func">SCIsKNeighborly</code> (<a href="chap6.html#X7F4BECCA7E67B1B2"><span class="RefLink">6.9-43</span></a>).</p>
@@ -3397,7 +3400,7 @@
  gap&gt; SCNeighborliness(c);
  1
  gap&gt; SCLib.SearchByAttribute("F[3]=Binomial(F[1],3) and Dim=4");
- [ [ 16, "CP^2 (VT)" ], [ 7648, "K3_16" ] ]
+ [ [ 16, "CP^2 (VT)" ], [ 7494, "K3_16" ] ]
  gap&gt; cp2:=SCLib.Load(last[2][1]);;
  gap&gt; SCNeighborliness(cp2);
  3
@@ -3407,7 +3410,7 @@
 
 <h5>6.9-52 SCNumFaces</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCNumFaces</code>( <var class="Arg">complex</var>[, <var class="Arg">i</var>] )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCNumFaces</code>( <var class="Arg">complex</var>[, <var class="Arg">i</var>] )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: an integer or a list of integers upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>If <var class="Arg">i</var> is not specified the function computes the <span class="SimpleMath">f</span>-vector of the simplicial complex <var class="Arg">complex</var> (cf. <code class="func">SCFVector</code> (<a href="chap6.html#X81F8071385FD9C1D"><span class="RefLink">6.9-14</span></a>)). If the optional integer parameter <var class="Arg">i</var> is passed, only the <var class="Arg">i</var>-th position of the <span class="SimpleMath">f</span>-vector of <var class="Arg">complex</var> is calculated. In any case a memory-saving implicit algorithm is used that avoids calculating the face lattice of the complex.</p>
@@ -3423,7 +3426,7 @@
 
 <h5>6.9-53 SCOrientation</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCOrientation</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCOrientation</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of the type <span class="SimpleMath">{ ± 1 }^f_d</span> or <code class="code">[ ]</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>This function tries to compute an orientation of a pure simplicial complex <var class="Arg">complex</var> that fulfills the weak pseudomanifold property. If <var class="Arg">complex</var> is orientable, an orientation in form of a list of orientations for the facets of <var class="Arg">complex</var> is returned, otherwise an empty set.</p>
@@ -3439,7 +3442,7 @@
 
 <h5>6.9-54 SCSkel</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSkel</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSkel</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a face list or a list of face lists upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>If <var class="Arg">k</var> is an integer, the <var class="Arg">k</var>-skeleton of a simplicial complex <var class="Arg">complex</var>, i. e. all <var class="Arg">k</var>-faces of <var class="Arg">complex</var>, is computed. If <var class="Arg">k</var> is a list, a list of all <var class="Arg">k</var><code class="code">[i]</code>-faces of <var class="Arg">complex</var> for each entry <var class="Arg">k</var><code class="code">[i]</code> (which has to be an integer) is returned. The faces are returned in the original labeling.</p>
@@ -3447,7 +3450,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("RP^2"); 
- [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ]
+ [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ]
  gap&gt; rp2_6:=SCLib.Load(last[1][1]);;      
  gap&gt; rp2_6:=SC(rp2_6.Facets+10);;
  gap&gt; SCSkelEx(rp2_6,1);
@@ -3464,7 +3467,7 @@
 
 <h5>6.9-55 SCSkelEx</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSkelEx</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSkelEx</code>( <var class="Arg">complex</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a face list or a list of face lists upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>If <var class="Arg">k</var> is an integer, the <var class="Arg">k</var>-skeleton of a simplicial complex <var class="Arg">complex</var>, i. e. all <var class="Arg">k</var>-faces of <var class="Arg">complex</var>, is computed. If <var class="Arg">k</var> is a list, a list of all <var class="Arg">k</var><code class="code">[i]</code>-faces of <var class="Arg">complex</var> for each entry <var class="Arg">k</var><code class="code">[i]</code> (which has to be an integer) is returned. The faces are returned in the standard labeling.</p>
@@ -3472,7 +3475,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("RP^2"); 
- [ [ 3, "RP^2 (VT)" ], [ 635, "RP^2xS^1" ] ]
+ [ [ 3, "RP^2 (VT)" ], [ 645, "RP^2xS^1" ] ]
  gap&gt; rp2_6:=SCLib.Load(last[1][1]);;      
  gap&gt; rp2_6:=SC(rp2_6.Facets+10);;
  gap&gt; SCSkelEx(rp2_6,1);
@@ -3489,7 +3492,7 @@
 
 <h5>6.9-56 SCSpanningTree</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSpanningTree</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSpanningTree</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes a spanning tree of a connected simplicial complex <var class="Arg">complex</var> using a greedy algorithm.</p>
@@ -3520,7 +3523,7 @@
 
 <h5>6.10-1 SCAlexanderDual</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCAlexanderDual</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCAlexanderDual</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>The Alexander dual of a simplicial complex <var class="Arg">complex</var> with set of vertices <span class="SimpleMath">V</span> is the simplicial complex where any subset of <span class="SimpleMath">V</span> spans a face if and only if its complement in <span class="SimpleMath">V</span> is a non-face of <var class="Arg">complex</var>.</p>
@@ -3541,7 +3544,7 @@
 
 <h5>6.10-2 SCClose</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCClose</code>( <var class="Arg">complex</var>[, <var class="Arg">apex</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCClose</code>( <var class="Arg">complex</var>[, <var class="Arg">apex</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Closes a simplicial complex <var class="Arg">complex</var> by building a cone over its boundary. If <var class="Arg">apex</var> is specified it is assigned to the apex of the cone and the original vertex labeling of <var class="Arg">complex</var> is preserved, otherwise an arbitrary vertex label is chosen and <var class="Arg">complex</var> is returned in the standard labeling.</p>
@@ -3559,7 +3562,7 @@
 
 <h5>6.10-3 SCCone</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCone</code>( <var class="Arg">complex</var>, <var class="Arg">apex</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCone</code>( <var class="Arg">complex</var>, <var class="Arg">apex</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>If the second argument is passed every facet of the simplicial complex <var class="Arg">complex</var> is united with <var class="Arg">apex</var>. If not, an arbitrary vertex label <span class="SimpleMath">v</span> is used (which is not a vertex of <var class="Arg">complex</var>). In the first case the vertex labeling remains unchanged. In the second case the function returns the new complex in the standard vertex labeling from <span class="SimpleMath">1</span> to <span class="SimpleMath">n+1</span> and the apex of the cone is <span class="SimpleMath">n+1</span>.</p>
@@ -3569,13 +3572,13 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("RP^3");
- [ [ 45, "RP^3" ], [ 113, "RP^3=L(2,1) (VT)" ], [ 589, "(S^2~S^1)#RP^3" ], 
-   [ 590, "(S^2xS^1)#RP^3" ], [ 632, "(S^2~S^1)#2#RP^3" ], 
-   [ 633, "(S^2xS^1)#2#RP^3" ], [ 2414, "RP^3#RP^3" ], 
-   [ 2426, "RP^3=L(2,1) (VT)" ], [ 2488, "(S^2~S^1)#3#RP^3" ], 
-   [ 2489, "(S^2xS^1)#3#RP^3" ], [ 2502, "RP^3=L(2,1) (VT)" ], 
-   [ 7473, "(S^2~S^1)#4#RP^3" ], [ 7474, "(S^2xS^1)#4#RP^3" ], 
-   [ 7504, "(S^2~S^1)#5#RP^3" ], [ 7505, "(S^2xS^1)#5#RP^3" ] ]
+ [ [ 45, "RP^3" ], [ 111, "RP^3=L(2,1) (VT)" ], [ 589, "(S^2~S^1)#RP^3" ], 
+   [ 590, "(S^2xS^1)#RP^3" ], [ 644, "(S^2~S^1)#2#RP^3" ], 
+   [ 646, "(S^2xS^1)#2#RP^3" ], [ 2414, "RP^3#RP^3" ], 
+   [ 2428, "RP^3=L(2,1) (VT)" ], [ 2488, "(S^2~S^1)#3#RP^3" ], 
+   [ 2489, "(S^2xS^1)#3#RP^3" ], [ 2503, "RP^3=L(2,1) (VT)" ], 
+   [ 7473, "(S^2xS^1)#4#RP^3" ], [ 7474, "(S^2~S^1)#4#RP^3" ], 
+   [ 7505, "(S^2xS^1)#5#RP^3" ], [ 7507, "(S^2~S^1)#5#RP^3" ] ]
  gap&gt; rp3:=SCLib.Load(last[1][1]);;
  gap&gt; rp3.F;
  [ 11, 51, 80, 40 ]
@@ -3601,7 +3604,7 @@
 
 <h5>6.10-4 SCDeletedJoin</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDeletedJoin</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDeletedJoin</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Calculates the simplicial deleted join of the simplicial complexes <var class="Arg">complex1</var> and <var class="Arg">complex2</var>. If called with a facet list instead of a <code class="code">SCSimplicialComplex</code> object, the function internally falls back to the <strong class="pkg">homology</strong> package <a href="chapBib.html#biBDumas04Homology">[DHSW11]</a>, if available.</p>
@@ -3641,7 +3644,7 @@
 
 <h5>6.10-5 SCDifference</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDifference</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDifference</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Forms the ``difference'' of two simplicial complexes <var class="Arg">complex1</var> and <var class="Arg">complex2</var> as the simplicial complex formed by the difference of the face lattices of <var class="Arg">complex1</var> minus <var class="Arg">complex2</var>. The two arguments are not altered. Note: for the difference process the vertex labelings of the complexes are taken into account, see also <code class="func">Operation Difference (SCSimplicialComplex, SCSimplicialComplex)</code> (<a href="chap5.html#X80CFABE083100541"><span class="RefLink">5.3-2</span></a>).</p>
@@ -3662,7 +3665,7 @@
 
 <h5>6.10-6 SCFillSphere</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFillSphere</code>( <var class="Arg">complex</var>[, <var class="Arg">vertex</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCFillSphere</code>( <var class="Arg">complex</var>[, <var class="Arg">vertex</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise .</p>
 
 <p>Fills the given simplicial sphere <var class="Arg">complex</var> by forming the suspension of the anti star of <var class="Arg">vertex</var> over <var class="Arg">vertex</var>. This is a triangulated <span class="SimpleMath">(d+1)</span>-ball with the boundary <var class="Arg">complex</var>, see <a href="chapBib.html#biBBagchi08LBTNormPseudoMnf">[BD08]</a>. If the optional argument <var class="Arg">vertex</var> is not supplied, the first vertex of <var class="Arg">complex</var> is chosen.</p>
@@ -3674,14 +3677,14 @@
  gap&gt; SCLib.SearchByName("S^4");
  [ [ 36, "S^4 (VT)" ], [ 37, "S^4 (VT)" ], [ 38, "S^4 (VT)" ], 
    [ 130, "S^4 (VT)" ], [ 463, "S^4~S^1 (VT)" ], [ 713, "S^4xS^1 (VT)" ], 
-   [ 1472, "S^4xS^1 (VT)" ], [ 1473, "S^4~S^1 (VT)" ], 
-   [ 1474, "S^4~S^1 (VT)" ], [ 1475, "S^4xS^1 (VT)" ], 
+   [ 1472, "S^4xS^1 (VT)" ], [ 1473, "S^4xS^1 (VT)" ], 
+   [ 1474, "S^4~S^1 (VT)" ], [ 1475, "S^4~S^1 (VT)" ], 
    [ 2477, "S^4~S^1 (VT)" ], [ 2478, "S^4 (VT)" ], [ 3435, "S^4 (VT)" ], 
    [ 4395, "S^4~S^1 (VT)" ], [ 4396, "S^4~S^1 (VT)" ], 
    [ 4397, "S^4~S^1 (VT)" ], [ 4398, "S^4~S^1 (VT)" ], 
    [ 4399, "S^4~S^1 (VT)" ], [ 4402, "S^4~S^1 (VT)" ], 
-   [ 4403, "S^4~S^1 (VT)" ], [ 4404, "S^4~S^1 (VT)" ], [ 7479, "S^4xS^2" ], 
-   [ 7539, "S^4xS^3" ], [ 7573, "S^4xS^4" ] ]
+   [ 4403, "S^4~S^1 (VT)" ], [ 4404, "S^4~S^1 (VT)" ], [ 7478, "S^4xS^2" ], 
+   [ 7541, "S^4xS^3" ], [ 7575, "S^4xS^4" ] ]
  gap&gt; s:=SCLib.Load(last[1][1]);;
  gap&gt; filled:=SCFillSphere(s);
  [SimplicialComplex
@@ -3716,7 +3719,7 @@
 
 <h5>6.10-7 SCHandleAddition</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHandleAddition</code>( <var class="Arg">complex</var>, <var class="Arg">f1</var>, <var class="Arg">f2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCHandleAddition</code>( <var class="Arg">complex</var>, <var class="Arg">f1</var>, <var class="Arg">f2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code>, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns a simplicial complex obtained by identifying the vertices of facet <var class="Arg">f1</var> with the ones from facet <var class="Arg">f2</var> in <var class="Arg">complex</var>. A combinatorial handle addition is possible, whenever we have d<span class="SimpleMath">(v,w) ≥ 3</span> for any two vertices <span class="SimpleMath">v ∈</span><var class="Arg">f1</var> and <span class="SimpleMath">w ∈</span><var class="Arg">f2</var>, where d<span class="SimpleMath">(⋅,⋅)</span> is the length of the shortest path from <span class="SimpleMath">v</span> to <span class="SimpleMath">w</span>. This condition is not checked by this algorithm. See <a href="chapBib.html#biBBagchi08OnWalkupKd">[BD11]</a> for further information.</p>
@@ -3745,7 +3748,7 @@
 
 <h5>6.10-8 SCIntersection</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIntersection</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIntersection</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Forms the ``intersection'' of two simplicial complexes <var class="Arg">complex1</var> and <var class="Arg">complex2</var> as the simplicial complex formed by the intersection of the face lattices of <var class="Arg">complex1</var> and <var class="Arg">complex2</var>. The two arguments are not altered. Note: for the intersection process the vertex labelings of the complexes are taken into account. See also <code class="func">Operation Intersection (SCSimplicialComplex, SCSimplicialComplex)</code> (<a href="chap5.html#X851CE49F7F7437C3"><span class="RefLink">5.3-3</span></a>).</p>
@@ -3768,7 +3771,7 @@
 
 <h5>6.10-9 SCIsIsomorphic</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsIsomorphic</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsIsomorphic</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>The function returns <code class="keyw">true</code>, if the simplicial complexes <var class="Arg">complex1</var> and <var class="Arg">complex2</var> are combinatorially isomorphic, <code class="keyw">false</code> if not.</p>
@@ -3788,7 +3791,7 @@
 
 <h5>6.10-10 SCIsSubcomplex</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsSubcomplex</code>( <var class="Arg">sc1</var>, <var class="Arg">sc2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsSubcomplex</code>( <var class="Arg">sc1</var>, <var class="Arg">sc2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns <code class="keyw">true</code> if the simplicial complex <var class="Arg">sc2</var> is a sub-complex of simplicial complex <var class="Arg">sc1</var>, <code class="keyw">false</code> otherwise. If dim(<var class="Arg">sc2</var>) <span class="SimpleMath">≤</span> dim(<var class="Arg">sc1</var>) the facets of <var class="Arg">sc2</var> are compared with the dim(<var class="Arg">sc2</var>)-skeleton of <var class="Arg">sc1</var>. Only works for pure simplicial complexes. Note: for the intersection process the vertex labelings of the complexes are taken into account.</p>
@@ -3797,9 +3800,9 @@
 <div class="example"><pre>
  gap&gt; SCLib.SearchByAttribute("F[1]=10"){[1..10]};
  [ [ 17, "K^2 (VT)" ], [ 18, "T^2 (VT)" ], [ 19, "S^3 (VT)" ], 
-   [ 20, "(T^2)#2" ], [ 21, "S^3 (VT)" ], [ 22, "S^2xS^1 (VT)" ], 
+   [ 20, "(T^2)#2" ], [ 21, "S^2xS^1 (VT)" ], [ 22, "S^3 (VT)" ], 
    [ 23, "S^3 (VT)" ], [ 24, "(T^2)#3" ], [ 25, "(P^2)#7 (VT)" ], 
-   [ 26, "S^3 (VT)" ] ]
+   [ 26, "S^2~S^1 (VT)" ] ]
  gap&gt; k:=SCLib.Load(last[1][1]);;
  gap&gt; c:=SCBdSimplex(9);;
  gap&gt; k.F;
@@ -3816,7 +3819,7 @@
 
 <h5>6.10-11 SCIsomorphism</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsomorphism</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsomorphism</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of pairs of vertex labels or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns an isomorphism of simplicial complex <var class="Arg">complex1</var> to simplicial complex <var class="Arg">complex2</var> in the standard labeling if they are combinatorially isomorphic, <code class="keyw">false</code> otherwise. Internally calls <code class="func">SCIsomorphismEx</code> (<a href="chap6.html#X86576B7287686E2B"><span class="RefLink">6.10-12</span></a>).</p>
@@ -3835,7 +3838,7 @@
 
 <h5>6.10-12 SCIsomorphismEx</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsomorphismEx</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsomorphismEx</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of pairs of vertex labels or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns an isomorphism of simplicial complex <var class="Arg">complex1</var> to simplicial complex <var class="Arg">complex2</var> in the standard labeling if they are combinatorially isomorphic, <code class="keyw">false</code> otherwise. If the <span class="SimpleMath">f</span>-vector and the Altshuler-Steinberg determinant of <var class="Arg">complex1</var> and <var class="Arg">complex2</var> are equal, the internal function <code class="code">SCIntFunc.SCComputeIsomorphismsEx(complex1,complex2,true)</code> is called.</p>
@@ -3854,7 +3857,7 @@
 
 <h5>6.10-13 SCJoin</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCJoin</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCJoin</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Calculates the simplicial join of the simplicial complexes <var class="Arg">complex1</var> and <var class="Arg">complex2</var>. If facet lists instead of <code class="code">SCSimplicialComplex</code> objects are passed as arguments, the function internally falls back to the homology package <a href="chapBib.html#biBDumas04Homology">[DHSW11]</a>, if available. Note that the vertex labelings of the complexes passed as arguments are not propagated to the new complex.</p>
@@ -3908,7 +3911,7 @@
 
 <h5>6.10-14 SCNeighbors</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCNeighbors</code>( <var class="Arg">complex</var>, <var class="Arg">face</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCNeighbors</code>( <var class="Arg">complex</var>, <var class="Arg">face</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of faces upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>In a simplicial complex <var class="Arg">complex</var> all neighbors of the <code class="code">k</code>-face <var class="Arg">face</var>, i. e. all <code class="code">k</code>-faces distinct from <var class="Arg">face</var> intersecting with <var class="Arg">face</var> in a common <span class="SimpleMath">(k-1)</span>-face, are returned in the original labeling.</p>
@@ -3932,7 +3935,7 @@
 
 <h5>6.10-15 SCNeighborsEx</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCNeighborsEx</code>( <var class="Arg">complex</var>, <var class="Arg">face</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCNeighborsEx</code>( <var class="Arg">complex</var>, <var class="Arg">face</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of faces upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>In a simplicial complex <var class="Arg">complex</var> all neighbors of the <code class="code">k</code>-face <var class="Arg">face</var>, i. e. all <code class="code">k</code>-faces distinct from <var class="Arg">face</var> intersecting with <var class="Arg">face</var> in a common <span class="SimpleMath">(k-1)</span>-face, are returned in the standard labeling.</p>
@@ -3958,7 +3961,7 @@
 
 <h5>6.10-16 SCShelling</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCShelling</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCShelling</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a facet list or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>The simplicial complex <var class="Arg">complex</var> must be pure, strongly connected and must fulfill the weak pseudomanifold property with non-empty boundary (cf. <code class="func">SCBoundary</code> (<a href="chap6.html#X836DC73380EA7414"><span class="RefLink">6.9-7</span></a>)).</p>
@@ -3980,7 +3983,7 @@
 
 <h5>6.10-17 SCShellingExt</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCShellingExt</code>( <var class="Arg">complex</var>, <var class="Arg">all</var>, <var class="Arg">checkvector</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCShellingExt</code>( <var class="Arg">complex</var>, <var class="Arg">all</var>, <var class="Arg">checkvector</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of facet lists (if <var class="Arg">checkvector = []</var>) or <code class="keyw">true</code> or <code class="keyw">false</code> (if <var class="Arg">checkvector</var> is not empty), <code class="keyw">fail</code> otherwise.</p>
 
 <p>The simplicial complex <var class="Arg">complex</var> must be pure of dimension <span class="SimpleMath">d</span>, strongly connected and must fulfill the weak pseudomanifold property with non-empty boundary (cf. <code class="func">SCBoundary</code> (<a href="chap6.html#X836DC73380EA7414"><span class="RefLink">6.9-7</span></a>)).</p>
@@ -4012,7 +4015,7 @@
 
 <h5>6.10-18 SCShellings</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCShellings</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCShellings</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of facet lists upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>The simplicial complex <var class="Arg">complex</var> must be pure, strongly connected and must fulfill the weak pseudomanifold property with non-empty boundary (cf. <code class="func">SCBoundary</code> (<a href="chap6.html#X836DC73380EA7414"><span class="RefLink">6.9-7</span></a>)).</p>
@@ -4039,7 +4042,7 @@
 
 <h5>6.10-19 SCSpan</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSpan</code>( <var class="Arg">complex</var>, <var class="Arg">subset</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSpan</code>( <var class="Arg">complex</var>, <var class="Arg">subset</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the reduced face lattice of all faces of a simplicial complex <var class="Arg">complex</var> that are spanned by <var class="Arg">subset</var>, a subset of the set of vertices of <var class="Arg">complex</var>.</p>
@@ -4048,7 +4051,7 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdCrossPolytope(4);;
  gap&gt; SCVertices(c);
- [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+ [ 1 .. 8 ]
  gap&gt; span:=SCSpan(c,[1,2,3,4]);
  [SimplicialComplex
  
@@ -4082,7 +4085,7 @@
 
 <h5>6.10-20 SCSuspension</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSuspension</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSuspension</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Calculates the simplicial suspension of the simplicial complex <var class="Arg">complex</var>. Internally falls back to the homology package <a href="chapBib.html#biBDumas04Homology">[DHSW11]</a> (if available) if a facet list is passed as argument. Note that the vertex labelings of the complexes passed as arguments are not propagated to the new complex.</p>
@@ -4090,7 +4093,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("Poincare");
- [ [ 7469, "Poincare_sphere" ] ]
+ [ [ 7468, "Poincare_sphere" ] ]
  gap&gt; phs:=SCLib.Load(last[1][1]);
  [SimplicialComplex
  
@@ -4145,7 +4148,7 @@
 
 <h5>6.10-21 SCUnion</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCUnion</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCUnion</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Forms the union of two simplicial complexes <var class="Arg">complex1</var> and <var class="Arg">complex2</var> as the simplicial complex formed by the union of their facets sets. The two arguments are not altered. Note: for the union process the vertex labelings of the complexes are taken into account, see also <code class="func">Operation Union (SCSimplicialComplex, SCSimplicialComplex)</code> (<a href="chap5.html#X82C94EE47E339DD8"><span class="RefLink">5.3-1</span></a>). Facets occurring in both arguments are treated as one facet in the new complex.</p>
@@ -4167,7 +4170,7 @@
 
 <h5>6.10-22 SCVertexIdentification</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCVertexIdentification</code>( <var class="Arg">complex</var>, <var class="Arg">v1</var>, <var class="Arg">v2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCVertexIdentification</code>( <var class="Arg">complex</var>, <var class="Arg">v1</var>, <var class="Arg">v2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Identifies vertex <var class="Arg">v1</var> with vertex <var class="Arg">v2</var> in a simplicial complex <var class="Arg">complex</var> and returns the result as a new object. A vertex identification of <var class="Arg">v1</var> and <var class="Arg">v2</var> is possible whenever d(<var class="Arg">v1</var>,<var class="Arg">v2</var>) <span class="SimpleMath">≥ 3</span>. This is not checked by this algorithm.</p>
@@ -4186,7 +4189,7 @@
 
 <h5>6.10-23 SCWedge</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCWedge</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCWedge</code>( <var class="Arg">complex1</var>, <var class="Arg">complex2</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: simplicial complex of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Calculates the wedge product of the complexes supplied as arguments. Note that the vertex labelings of the complexes passed as arguments are not propagated to the new complex.</p>

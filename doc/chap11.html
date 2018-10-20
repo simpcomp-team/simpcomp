@@ -19,6 +19,7 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap10.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap12.html">[Next Chapter]</a>&nbsp;  </div>
 
+<p id="mathjaxlink" class="pcenter"></p>
 <p><a id="X78438FF584D18B8A" name="X78438FF584D18B8A"></a></p>
 <div class="ChapSects"><a href="chap11.html#X78438FF584D18B8A">11 <span class="Heading">Polyhedral Morse theory</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap11.html#X7B2E2B3C846500E4">11.1 <span class="Heading">Polyhedral Morse theory related functions</span></a>
@@ -34,7 +35,7 @@
 
 <h3>11 <span class="Heading">Polyhedral Morse theory</span></h3>
 
-<p>In this chapter we present some useful functions dealing with polyhedral Morse theory. See Section <a href="chap2.html#X86275D5979B4B531"><span class="RefLink">2.5</span></a> for a very short introduction to the field, see <a href="chapBib.html#biBKuehnel95TightPolySubm">[K{\95]</a> for more information. Note: this is not to be confused with Robin Forman's discrete Morse theory for cell complexes which is described in Chapter <a href="chap12.html#X7E9FD84F822A58D6"><span class="RefLink">12</span></a>.</p>
+<p>In this chapter we present some useful functions dealing with polyhedral Morse theory. See Section <a href="chap2.html#X86275D5979B4B531"><span class="RefLink">2.5</span></a> for a very short introduction to the field, see <a href="chapBib.html#biBKuehnel95TightPolySubm">[K\t95]</a> for more information. Note: this is not to be confused with Robin Forman's discrete Morse theory for cell complexes which is described in Chapter <a href="chap12.html#X7E9FD84F822A58D6"><span class="RefLink">12</span></a>.</p>
 
 <p>If <span class="SimpleMath">M</span> is a combinatorial <span class="SimpleMath">d</span>-manifold with <span class="SimpleMath">n</span>-vertices a rsl-function will be represented as an ordering on the set of vertices, i. e. a list of length <span class="SimpleMath">n</span> containing all vertex labels of the corresponding simplicial complex.</p>
 
@@ -46,12 +47,12 @@
 
 <h5>11.1-1 SCIsTight</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsTight</code>( <var class="Arg">complex</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCIsTight</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks whether a simplicial complex <code class="code">complex</code> (<code class="code">complex</code> must satisfy the weak pseudomanifold property and must be closed) is a tight triangulation (with respect to the field with two elements) or not. A simplicial complex with <span class="SimpleMath">n</span> vertices is said to be a tight triangulation if it can be tightly embedded into the <span class="SimpleMath">(n-1)</span>-simplex. See Section <a href="chap2.html#X842354467CE73393"><span class="RefLink">2.7</span></a> for a short introduction to the field of tightness.</p>
 
-<p>First, if <code class="code">complex</code> is a <span class="SimpleMath">(k+1)</span>-neighborly <span class="SimpleMath">2k</span>-manifold (cf. <a href="chapBib.html#biBKuehnel95TightPolySubm">[K{\95]</a>, Corollary 4.7), or <code class="code">complex</code> is of dimension <span class="SimpleMath">d≥ 4</span>, <span class="SimpleMath">2</span>-neighborly and all its vertex links are stacked spheres (i.e. the complex is in Walkup's class <span class="SimpleMath">K(d)</span>, see <a href="chapBib.html#biBEffenberger09StackPolyTightTrigMnf">[Eff11b]</a>) <code class="keyw">true</code> is returned as the complex is a tight triangulation in these cases. If <code class="code">complex</code> is of dimension <span class="SimpleMath">d = 3</span>, <code class="keyw">true</code> is returned if and only if <code class="code">complex</code> is <span class="SimpleMath">2</span>-neighborly and stacked (i.e. tight-neighbourly, see <a href="chapBib.html#biBBDSSSepIndex">[BDSS15]</a>), otherwise <code class="keyw">false</code> is returned, see <a href="chapBib.html#biBBagchi16Tight3Mflds">[BDS16]</a>.</p>
+<p>First, if <code class="code">complex</code> is a <span class="SimpleMath">(k+1)</span>-neighborly <span class="SimpleMath">2k</span>-manifold (cf. <a href="chapBib.html#biBKuehnel95TightPolySubm">[K\t95]</a>, Corollary 4.7), or <code class="code">complex</code> is of dimension <span class="SimpleMath">d≥ 4</span>, <span class="SimpleMath">2</span>-neighborly and all its vertex links are stacked spheres (i.e. the complex is in Walkup's class <span class="SimpleMath">K(d)</span>, see <a href="chapBib.html#biBEffenberger09StackPolyTightTrigMnf">[Eff11b]</a>) <code class="keyw">true</code> is returned as the complex is a tight triangulation in these cases. If <code class="code">complex</code> is of dimension <span class="SimpleMath">d = 3</span>, <code class="keyw">true</code> is returned if and only if <code class="code">complex</code> is <span class="SimpleMath">2</span>-neighborly and stacked (i.e. tight-neighbourly, see <a href="chapBib.html#biBBDSSSepIndex">[BDSS15]</a>), otherwise <code class="keyw">false</code> is returned, see <a href="chapBib.html#biBBagchi16Tight3Mflds">[BDS16]</a>.</p>
 
 <p>Note that, for dimension <span class="SimpleMath">d ≥ 4</span>, it is not computed whether or not <code class="code">complex</code> is a combinatorial manifold as this computation might take a long time. Hence, only if the manifold flag of the complex is set (this can be achieved by calling <code class="func">SCIsManifold</code> (<a href="chap12.html#X831FFF748201B589"><span class="RefLink">12.1-17</span></a>) and the complex indeed is a combinatorial manifold) these checks are performed.</p>
 
@@ -64,9 +65,9 @@
 
 <div class="example"><pre>
  gap&gt; list:=SCLib.SearchByName("S^2~S^1 (VT)"){[1..9]};
- [ [ 12, "S^2~S^1 (VT)" ], [ 27, "S^2~S^1 (VT)" ], [ 28, "S^2~S^1 (VT)" ], 
-   [ 43, "S^2~S^1 (VT)" ], [ 47, "S^2~S^1 (VT)" ], [ 49, "S^2~S^1 (VT)" ], 
-   [ 89, "S^2~S^1 (VT)" ], [ 90, "S^2~S^1 (VT)" ], [ 111, "S^2~S^1 (VT)" ] ]
+ [ [ 12, "S^2~S^1 (VT)" ], [ 26, "S^2~S^1 (VT)" ], [ 30, "S^2~S^1 (VT)" ], 
+   [ 43, "S^2~S^1 (VT)" ], [ 47, "S^2~S^1 (VT)" ], [ 48, "S^2~S^1 (VT)" ], 
+   [ 89, "S^2~S^1 (VT)" ], [ 93, "S^2~S^1 (VT)" ], [ 113, "S^2~S^1 (VT)" ] ]
  gap&gt; s2s1:=SCLib.Load(list[1][1]);
  [SimplicialComplex
  
@@ -111,19 +112,19 @@
  gap&gt; SCIsTight(s2s1); time;
  #I  SCIsTight: complex is 3-dimensional and tight neighbourly, and thus tight.
  true
- 4
+ 0
  </pre></div>
 
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByAttribute("F[1] = 120");
- [ [ 7647, "Bd(600-cell)" ] ]
+ [ [ 7649, "Bd(600-cell)" ] ]
  gap&gt; id:=last[1][1];;
  gap&gt; c:=SCLib.Load(id);;
  gap&gt; SCIsTight(c); time;
  #I  SCIsTight: complex is connected but not 2-neighbourly, and thus not tight.
  false
- 8
+ 4
  </pre></div>
 
 
@@ -131,7 +132,7 @@
  gap&gt; SCInfoLevel(0);
  true
  gap&gt; SCLib.SearchByName("K3");  
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; SCIsManifold(c);
  true
@@ -158,16 +159,16 @@
 
 <div class="example"><pre>
  gap&gt; list:=SCLib.SearchByName("S^3xS^1");
- [ [ 55, "S^3xS^1 (VT)" ], [ 128, "S^3xS^1 (VT)" ], [ 399, "S^3xS^1 (VT)" ], 
+ [ [ 55, "S^3xS^1 (VT)" ], [ 127, "S^3xS^1 (VT)" ], [ 399, "S^3xS^1 (VT)" ], 
    [ 459, "S^3xS^1 (VT)" ], [ 460, "S^3xS^1 (VT)" ], [ 461, "S^3xS^1 (VT)" ], 
-   [ 462, "S^3xS^1 (VT)" ], [ 588, "S^3xS^1 (VT)" ], [ 612, "S^3xS^1 (VT)" ], 
-   [ 699, "S^3xS^1 (VT)" ], [ 700, "S^3xS^1 (VT)" ], [ 701, "S^3xS^1 (VT)" ], 
-   [ 703, "S^3xS^1 (VT)" ], [ 1078, "S^3xS^1 (VT)" ], [ 1080, "S^3xS^1 (VT)" ],
-   [ 1081, "S^3xS^1 (VT)" ], [ 1082, "S^3xS^1 (VT)" ], 
+   [ 462, "S^3xS^1 (VT)" ], [ 588, "S^3xS^1 (VT)" ], [ 613, "S^3xS^1 (VT)" ], 
+   [ 700, "S^3xS^1 (VT)" ], [ 701, "S^3xS^1 (VT)" ], [ 702, "S^3xS^1 (VT)" ], 
+   [ 703, "S^3xS^1 (VT)" ], [ 1078, "S^3xS^1 (VT)" ], [ 1079, "S^3xS^1 (VT)" ],
+   [ 1080, "S^3xS^1 (VT)" ], [ 1081, "S^3xS^1 (VT)" ], 
    [ 1083, "S^3xS^1 (VT)" ], [ 1084, "S^3xS^1 (VT)" ], 
-   [ 1085, "S^3xS^1 (VT)" ], [ 1086, "S^3xS^1 (VT)" ], 
-   [ 1087, "S^3xS^1 (VT)" ], [ 1088, "S^3xS^1 (VT)" ], 
-   [ 1089, "S^3xS^1 (VT)" ], [ 1091, "S^3xS^1 (VT)" ], 
+   [ 1086, "S^3xS^1 (VT)" ], [ 1087, "S^3xS^1 (VT)" ], 
+   [ 1088, "S^3xS^1 (VT)" ], [ 1089, "S^3xS^1 (VT)" ], 
+   [ 1090, "S^3xS^1 (VT)" ], [ 1092, "S^3xS^1 (VT)" ], 
    [ 2413, "S^3xS^1 (VT)" ], [ 2470, "S^3xS^1 (VT)" ], 
    [ 2471, "S^3xS^1 (VT)" ], [ 2472, "S^3xS^1 (VT)" ], 
    [ 2473, "S^3xS^1 (VT)" ], [ 2474, "S^3xS^1 (VT)" ], 
@@ -254,7 +255,7 @@
 
 <h5>11.1-2 SCMorseIsPerfect</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMorseIsPerfect</code>( <var class="Arg">c</var>, <var class="Arg">f</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMorseIsPerfect</code>( <var class="Arg">c</var>, <var class="Arg">f</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Checks whether the rsl-function <code class="code">f</code> is perfect on the simplicial complex <code class="code">c</code> or not. A rsl-function is said to be perfect, if it has the minimum number of critical points, i. e. if the sum of its critical points equals the sum of the Betti numbers of <code class="code">c</code>.</p>
@@ -274,7 +275,7 @@
 
 <h5>11.1-3 SCSlicing</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSlicing</code>( <var class="Arg">complex</var>, <var class="Arg">slicing</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCSlicing</code>( <var class="Arg">complex</var>, <var class="Arg">slicing</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a facet list of a polyhedral complex or a <code class="code">SCNormalSurface</code> object upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns the pre-image <span class="SimpleMath">f^-1 (α )</span> of a rsl-function <span class="SimpleMath">f</span> on the simplicial complex <var class="Arg">complex</var> where <span class="SimpleMath">f</span> is given in the second argument <var class="Arg">slicing</var> by a partition of the set of vertices <var class="Arg">slicing</var><span class="SimpleMath">=[ V_1 , V_2 ]</span> such that <span class="SimpleMath">f(v_1)</span> (<span class="SimpleMath">f(v_2)</span>) is smaller (greater) than <span class="SimpleMath">α</span> for all <span class="SimpleMath">v_1 ∈ V_1</span> (<span class="SimpleMath">v_2 ∈ V_2</span>).</p>
@@ -287,7 +288,7 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdCyclicPolytope(4,6);;
  gap&gt; v:=SCVertices(c);
- [ 1, 2, 3, 4, 5, 6 ]
+ [ 1 .. 6 ]
  gap&gt; SCMinimalNonFaces(c);
  [ [  ], [  ], [ [ 1, 3, 5 ], [ 2, 4, 6 ] ] ]
  gap&gt; ns:=SCSlicing(c,[v{[1,3,5]},v{[2,4,6]}]);     
@@ -311,7 +312,7 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdSimplex(5);;
  gap&gt; v:=SCVertices(c);
- [ 1, 2, 3, 4, 5, 6 ]
+ [ 1 .. 6 ]
  gap&gt; slicing:=SCSlicing(c,[v{[1,3,5]},v{[2,4,6]}]);
  [ [ [ 1, 2 ], [ 1, 4 ], [ 3, 2 ], [ 3, 4 ], [ 5, 2 ], [ 5, 4 ] ], 
    [ [ 1, 2 ], [ 1, 4 ], [ 1, 6 ], [ 3, 2 ], [ 3, 4 ], [ 3, 6 ] ], 
@@ -325,7 +326,7 @@
 
 <h5>11.1-4 SCMorseMultiplicityVector</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMorseMultiplicityVector</code>( <var class="Arg">c</var>, <var class="Arg">f</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMorseMultiplicityVector</code>( <var class="Arg">c</var>, <var class="Arg">f</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a list of <span class="SimpleMath">(d+1)</span>-tuples if <code class="code">c</code> is a <span class="SimpleMath">d</span>-dimensional simplicial complex upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes all multiplicity vectors of a rsl-function <code class="code">f</code> on a simplicial complex <code class="code">c</code>. <code class="code">f</code> is given as an ordered list <span class="SimpleMath">(v_1 , ... v_n)</span> of all vertices of <code class="code">c</code> where <code class="code">f</code> is defined by <code class="code">f</code><span class="SimpleMath">(v_i) = fraci-1n-1</span>. The <span class="SimpleMath">i</span>-th entry of the returned list denotes the multiplicity vector of vertex <span class="SimpleMath">v_i</span>.</p>
@@ -333,7 +334,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");      
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;    
  gap&gt; f:=SCVertices(c);              
  [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ]
@@ -348,7 +349,7 @@
 
 <h5>11.1-5 SCMorseNumberOfCriticalPoints</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMorseNumberOfCriticalPoints</code>( <var class="Arg">c</var>, <var class="Arg">f</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMorseNumberOfCriticalPoints</code>( <var class="Arg">c</var>, <var class="Arg">f</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: an integer and a list upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Computes the number of critical points of each index of a rsl-function <code class="code">f</code> on a simplicial complex <code class="code">c</code> as well as the total number of critical points.</p>
@@ -356,7 +357,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");      
- [ [ 7648, "K3_16" ], [ 7649, "K3_17" ] ]
+ [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;    
  gap&gt; f:=SCVertices(c);              
  [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ]

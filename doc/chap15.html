@@ -19,9 +19,10 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap14.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap16.html">[Next Chapter]</a>&nbsp;  </div>
 
+<p id="mathjaxlink" class="pcenter"></p>
 <p><a id="X8308D685809A4E2F" name="X8308D685809A4E2F"></a></p>
 <div class="ChapSects"><a href="chap15.html#X8308D685809A4E2F">15 <span class="Heading">Miscellaneous functions</span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap15.html#X7CF812987A270C7A">15.1 <span class="Heading"><strong class="pkg">simpcomp</strong> logging</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap15.html#X7C3D35DF7BD07C5A">15.1 <span class="Heading"><strong class="pkg">simpcomp</strong> logging</span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X79815139873FF4CF">15.1-1 SCInfoLevel</a></span>
@@ -38,7 +39,7 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X82AA843F7F37B21E">15.2-7 SCMailSetEnabled</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X87DA54EA7950D4BB">15.2-8 SCMailSetMinInterval</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap15.html#X7F0DE92A795A6420">15.3 <span class="Heading">Testing the functionality of <strong class="pkg">simpcomp</strong></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap15.html#X7BA8676B7FF308FD">15.3 <span class="Heading">Testing the functionality of <strong class="pkg">simpcomp</strong></span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X7A26BD457A6E7AC3">15.3-1 SCRunTest</a></span>
@@ -49,7 +50,7 @@
 
 <p>The behaviour of <strong class="pkg">simpcomp</strong> can be changed by setting cetain global options. This can be achieved by the functions described in the following.</p>
 
-<p><a id="X7CF812987A270C7A" name="X7CF812987A270C7A"></a></p>
+<p><a id="X7C3D35DF7BD07C5A" name="X7C3D35DF7BD07C5A"></a></p>
 
 <h4>15.1 <span class="Heading"><strong class="pkg">simpcomp</strong> logging</span></h4>
 
@@ -59,7 +60,7 @@
 
 <h5>15.1-1 SCInfoLevel</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCInfoLevel</code>( <var class="Arg">level</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCInfoLevel</code>( <var class="Arg">level</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code></p>
 
 <p>Sets the logging verbosity of <strong class="pkg">simpcomp</strong>. A level of <span class="SimpleMath">0</span> suppresses all output, a level of <span class="SimpleMath">1</span> lets <strong class="pkg">simpcomp</strong> output normal running information, whereas levels of <span class="SimpleMath">2</span> and higher display verbose running information. Examples of functions using more verbose logging are bistellar flip-related functions.</p>
@@ -70,13 +71,13 @@
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=SCBdCrossPolytope(3);;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SCReduceComplex(c); </span>
-#I  round 0, move: [ [ 4, 6 ], [ 1, 2 ] ]
+#I  round 0, move: [ [ 4, 5 ], [ 1, 2 ] ]
 F: [ 6, 12, 8 ]
-#I  round 1, move: [ [ 6 ], [ 1, 2, 3 ] ]
+#I  round 1, move: [ [ 5 ], [ 1, 2, 3 ] ]
 F: [ 5, 9, 6 ]
 #I  round 1
 Reduced complex, F: [ 5, 9, 6 ]
-#I  round 2, move: [ [ 4 ], [ 1, 2, 5 ] ]
+#I  round 2, move: [ [ 3 ], [ 1, 2, 6 ] ]
 F: [ 4, 6, 4 ]
 #I  round 2
 Reduced complex, F: [ 4, 6, 4 ]
@@ -103,7 +104,7 @@ Reduced complex, F: [ 4, 6, 4 ]
 
 <h5>15.2-1 SCMailClearPending</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailClearPending</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailClearPending</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: nothing.</p>
 
 <p>Clears a pending mail message.</p>
@@ -118,7 +119,7 @@ Reduced complex, F: [ 4, 6, 4 ]
 
 <h5>15.2-2 SCMailIsEnabled</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailIsEnabled</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailIsEnabled</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns <code class="keyw">true</code> when the mail notification system of <strong class="pkg">simpcomp</strong> is enabled, <code class="keyw">false</code> otherwise. Default setting is <code class="keyw">false</code>.</p>
@@ -135,7 +136,7 @@ Reduced complex, F: [ 4, 6, 4 ]
 
 <h5>15.2-3 SCMailIsPending</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailIsPending</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailIsPending</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Returns <code class="keyw">true</code> when an email of the <strong class="pkg">simpcomp</strong> email notification system is pending, <code class="keyw">false</code> otherwise.</p>
@@ -150,7 +151,7 @@ Reduced complex, F: [ 4, 6, 4 ]
 
 <h5>15.2-4 SCMailSend</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailSend</code>( <var class="Arg">message</var>[, <var class="Arg">starttime</var>][, <var class="Arg">forcesend</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailSend</code>( <var class="Arg">message</var>[, <var class="Arg">starttime</var>][, <var class="Arg">forcesend</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> when the message was sent, <code class="keyw">false</code> if it was not send, <code class="keyw">fail</code> upon an error.</p>
 
 <p>Tries to send an email to the address specified by <code class="func">SCMailSetAddress</code> (<a href="chap15.html#X8771F97F7E78B7AC"><span class="RefLink">15.2-6</span></a>) using the Unix program <code class="code">mail</code>. The optional parameter <var class="Arg">starttime</var> specifies the starting time (as the integer Unix timestamp) a calculation was started (then the duration of the calculation is included in the email), the optional boolean parameter <var class="Arg">forcesend</var> can be used to force the sending of an email, even if this violates the minimal email sending interval, see <code class="func">SCMailSetMinInterval</code> (<a href="chap15.html#X87DA54EA7950D4BB"><span class="RefLink">15.2-8</span></a>).</p>
@@ -169,7 +170,7 @@ Reduced complex, F: [ 4, 6, 4 ]
 
 <h5>15.2-5 SCMailSendPending</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailSendPending</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailSendPending</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Tries to send a pending email of the <strong class="pkg">simpcomp</strong> email notification system. Returns <code class="keyw">true</code> on success or if there was no mail pending.</p>
@@ -184,7 +185,7 @@ Reduced complex, F: [ 4, 6, 4 ]
 
 <h5>15.2-6 SCMailSetAddress</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailSetAddress</code>( <var class="Arg">address</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailSetAddress</code>( <var class="Arg">address</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Sets the email address that should be used to send notification messages and enables the mail notification system by calling <code class="func">SCMailSetEnabled</code> (<a href="chap15.html#X82AA843F7F37B21E"><span class="RefLink">15.2-7</span></a>)(<code class="keyw">true</code>).</p>
@@ -199,7 +200,7 @@ Reduced complex, F: [ 4, 6, 4 ]
 
 <h5>15.2-7 SCMailSetEnabled</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailSetEnabled</code>( <var class="Arg">flag</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailSetEnabled</code>( <var class="Arg">flag</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Enables or disables the mail notification system of <strong class="pkg">simpcomp</strong>. By default it is disabled. Returns <code class="keyw">fail</code> if no email message was previously set with <code class="func">SCMailSetAddress</code> (<a href="chap15.html#X8771F97F7E78B7AC"><span class="RefLink">15.2-6</span></a>).</p>
@@ -216,7 +217,7 @@ Reduced complex, F: [ 4, 6, 4 ]
 
 <h5>15.2-8 SCMailSetMinInterval</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailSetMinInterval</code>( <var class="Arg">interval</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCMailSetMinInterval</code>( <var class="Arg">interval</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Sets the minimal time interval in seconds that mail messages can be sent by <strong class="pkg">simpcomp</strong>. This prevents a flooding of the specified email address with messages sent by <strong class="pkg">simpcomp</strong>. Default is 3600, i.e. one hour.</p>
@@ -227,7 +228,7 @@ Reduced complex, F: [ 4, 6, 4 ]
  true
  </pre></div>
 
-<p><a id="X7F0DE92A795A6420" name="X7F0DE92A795A6420"></a></p>
+<p><a id="X7BA8676B7FF308FD" name="X7BA8676B7FF308FD"></a></p>
 
 <h4>15.3 <span class="Heading">Testing the functionality of <strong class="pkg">simpcomp</strong></span></h4>
 
@@ -237,7 +238,7 @@ Reduced complex, F: [ 4, 6, 4 ]
 
 <h5>15.3-1 SCRunTest</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCRunTest</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCRunTest</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Test whether the package <strong class="pkg">simpcomp</strong> is functional by calling <code class="code">Test("GAPROOT/pkg/simpcomp/tst/simpcomp.tst",rec(compareFunction := "uptowhitespace"));</code>. The returned value of GAP4stones is a measure of your system performance and differs from system to system.</p>
@@ -246,7 +247,7 @@ Reduced complex, F: [ 4, 6, 4 ]
 <div class="example"><pre>
  gap&gt; SCRunTest();
  simpcomp package test
- GAP4stones: 113019
+ msecs: 10068
  true
  </pre></div>
 
