@@ -172,7 +172,7 @@ If you would like to cite <Package>simpcomp</Package> using BibTeX, you can use 
 	author = "Felix Effenberger and Jonathan Spreer",
 	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
 	          {V}ersion %%%VERSION%%%",
-	year   = "%%%SYEAR%%%",
+	year   = "%%%YEAR%%%",
 	url    = "\url{https://github.com/simpcomp-team/simpcomp}",
 }
 </Verb>
@@ -184,7 +184,7 @@ If you are not using BibTeX, you can use the following entry inside the bibliogr
 F.~Effenberger and J.~Spreer,
 \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
 Version %%%VERSION%%%, 
-%%%SYEAR%%%,
+%%%YEAR%%%,
 \url{https://github.com/simpcomp-team/simpcomp}.
 </Verb>
 </Section>
