@@ -46,7 +46,7 @@ DeclareOperation("SCAntiStar",[SCIsPolyhedralComplex,IsObject]);
 DeclareGlobalFunction("SCClose");
 #DeclareGlobalFunction("SCCone");
 #DeclareOperation("SCDeletedJoin",[IsObject,IsObject]);
-DeclareGlobalFunction("SCFillSphere",[SCIsSimplicialComplex]);
+DeclareGlobalFunction("SCFillSphere");
 DeclareOperation("SCHandleAddition",[SCIsSimplicialComplex,IsList,IsList]);
 DeclareOperation("SCIsIsomorphic",[SCIsSimplicialComplex,SCIsSimplicialComplex]);
 DeclareOperation("SCIsSubcomplex",[SCIsSimplicialComplex,SCIsSimplicialComplex]);
