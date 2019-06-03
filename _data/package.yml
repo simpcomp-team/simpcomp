@@ -76,12 +76,17 @@ citeas: |
 bibtex: |
     @misc{ simpcomp2.1.10,
       author =           {Effenberger, F. and Spreer, J.},
-      title =            {{simpcomp}, A GAP toolbox for simplicial complexes, {V}ersion 2.1.10},
+      title =            {{simpcomp},  A  GAP  toolbox for simplicial complexes,
+                          {V}ersion 2.1.10},
       month =            {Jun},
       year =             {2019},
       note =             {Refereed GAP package},
-      howpublished =     {\href {https://simpcomp-team.github.io/simpcomp/} {\texttt{https://simpcomp-team.github.io/}\discretionary {}{}{}\texttt{simpcomp/}}},
-      keywords =         {simplicial complexes; combinatorial topology; combinatorial manifolds; PL equivalence; triangulating manifolds},
+      howpublished =     {\href      {https://simpcomp-team.github.io/simpcomp/}
+                          {\texttt{https://simpcomp-team.github.io/}\discretionary
+                          {}{}{}\texttt{simpcomp/}}},
+      keywords =         {simplicial    complexes;    combinatorial    topology;
+                          combinatorial manifolds; PL equivalence; triangulating
+                          manifolds},
       printedkey =       {ES19}
     }
 
