@@ -14,6 +14,7 @@ PackageName := "simpcomp",
 Subtitle := "A GAP toolbox for simplicial complexes",
 Version := "%%%VERSION%%%",
 Date := "%%%DATE%%%",
+License := "GPL-2.0-or-later",
 
 PackageWWWHome := "https://simpcomp-team.github.io/simpcomp/",
 README_URL := Concatenation( ~.PackageWWWHome, "README.md" ),
