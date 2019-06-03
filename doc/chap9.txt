@@ -620,7 +620,7 @@
   [4X[32X  Example  [32X[104X
     [4X[28X Greetings master,[128X[104X
     [4X[28X [128X[104X
-    [4X[28X this is simpcomp 2.1.9 running on comp01.maths.fancytown.edu[128X[104X
+    [4X[28X this is simpcomp 2.1.10 running on comp01.maths.fancytown.edu[128X[104X
     [4X[28X[128X[104X
     [4X[28X I have been working hard for 0 seconds and have a message for you, see below.[128X[104X
     [4X[28X [128X[104X

@@ -114,11 +114,21 @@ BannerString :=Concatenation("Loading simpcomp ",String(~.Version),"\nby F. Effe
 
 AvailabilityTest := 
 function()
-	if not ARCH_IS_UNIX() then
-	  Info(InfoWarning, 1, "simpcomp: non-Unix architecture, some functionality will not be available.");
-	fi;
-	
-	return true;
+  local path, file;
+  if not ARCH_IS_UNIX() then
+    Info(InfoWarning, 1, "simpcomp: non-Unix architecture, some functionality will not be available.");
+  fi;
+
+  # test for existence of the compiled binary
+  path:= DirectoriesPackagePrograms( "bin" );
+  file:= Filename( path, "bistellar" );
+  if file = fail then
+    LogPackageLoadingMessage( PACKAGE_WARNING,
+        [ "The program `bistellar' is not compiled,",
+          "`SCReduceComplexFast()' is thus unavailable." ] );
+  fi;
+
+  return true;
 end,
 
 ##  *Optional*, but recommended: path relative to package root to a file which

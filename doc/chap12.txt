@@ -364,23 +364,23 @@
     [4X[28X gap> c := SCSeriesHomologySphere(2,3,5);;[128X[104X
     [4X[28X gap> SCHomologyEx(c,SCMorseRandom,SmithNormalFormIntegerMat); time;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X 36[128X[104X
+    [4X[28X 30[128X[104X
     [4X[28X gap> c := SCSeriesHomologySphere(2,3,5);;[128X[104X
     [4X[28X gap> SCHomologyEx(c,SCMorseRandomLex,SmithNormalFormIntegerMat); time;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X 32[128X[104X
+    [4X[28X 29[128X[104X
     [4X[28X gap> c := SCSeriesHomologySphere(2,3,5);;[128X[104X
     [4X[28X gap> SCHomologyEx(c,SCMorseRandomRevLex,SmithNormalFormIntegerMat); time;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X 32[128X[104X
+    [4X[28X 28[128X[104X
     [4X[28X gap> c := SCSeriesHomologySphere(2,3,5);;[128X[104X
     [4X[28X gap> SCHomologyEx(c,SCMorseEngstroem,SmithNormalFormIntegerMat); time;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X 76[128X[104X
+    [4X[28X 69[128X[104X
     [4X[28X gap> c := SCSeriesHomologySphere(2,3,5);;[128X[104X
     [4X[28X gap> SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;[128X[104X
     [4X[28X [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ][128X[104X
-    [4X[28X 72[128X[104X
+    [4X[28X 77[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   

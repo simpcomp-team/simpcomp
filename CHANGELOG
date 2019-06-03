@@ -1,3 +1,10 @@
+21/10/2018 - Version 2.1.9: MINOR UPDATE
+- Minor changes in documentation/manual
+- Adjusted output of test file for GAP 4.10
+- Installed gh-pages via GitHubPagesForGAP
+- Repaired complex library, removed double entry
+- Fixed bug in SCIsLibRepository
+- Streamlined building process of binary "bistellar" to comply with BuildPackages.sh
 
 05/02/2018 - Version 2.1.8: MINOR UPDATE
 - Minor changes in documentation/manual
