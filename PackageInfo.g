@@ -46,14 +46,12 @@ Persons := [
       FirstNames    := "Jonathan",
       IsAuthor      := true,
       IsMaintainer  := true,
-      Email         := "jonathan.spreer@fu-berlin.de",
+      Email         := "jonathan.spreer@sydney.edu.au",
       WWWHome       := "http://www.tacet.de/Jonathan",
       PostalAddress := Concatenation( [
-            "Discrete Geometry Group\n",
-            "Mathematical Institute\n",
-            "Freie Universität Berlin" ] ),
-      Place         := "Arnimallee 2, 14195 Berlin",
-      Institution   := "Freie Universität Berlin")
+            "School of Mathematics and Statistics F07" ] ),
+      Place         := "NSW 2006 Australia",
+      Institution   := "The University of Sydney")
     ],
 
 ##  Status information. Currently the following cases are recognized:

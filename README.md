@@ -364,11 +364,9 @@ Felix Effenberger, exilef@gmail.com
 
 and
 
-Jonathan Spreer, jonathan.spreer@fu-berlin.de
+Jonathan Spreer, jonathan.spreer@sydney.edu.au
 
-Address:  
-Discrete Geometry Group  
-Mathematical Institute  
-Freie Universität Berlin  
-Arnimallee 2, 14195 Berlin  
-GERMANY  
+Address:
+School of Mathematics and Statistics F07
+The University of Sydney
+NSW 2006 Australia 
