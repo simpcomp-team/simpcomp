@@ -209,7 +209,7 @@
     [4X[28X gap> c:=SCSeriesBdHandleBody(3,9);;[128X[104X
     [4X[28X gap> s:=SCExportToString(c); time;[128X[104X
     [4X[28X "deffg.h.f.fahaiciai.i.hai.fbgeiagihbhceceba.g.gag"[128X[104X
-    [4X[28X 2[128X[104X
+    [4X[28X 0[128X[104X
     [4X[28X gap> s:=SCExportIsoSig(c); time;[128X[104X
     [4X[28X "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"[128X[104X
     [4X[28X 9[128X[104X

@@ -128,13 +128,11 @@
 {\mbox{}\\
 \small \noindent \textbf{ Felix Effenberger  }  Email: \href{mailto://exilef@gmail.com} {\texttt{exilef@gmail.com}}}\\
 {\mbox{}\\
-\small \noindent \textbf{ Jonathan Spreer   }  Email: \href{mailto://jonathan.spreer@fu-berlin.de} {\texttt{jonathan.spreer@fu-berlin.de}}\\
+\small \noindent \textbf{ Jonathan Spreer   }  Email: \href{mailto://jonathan.spreer@sydney.edu.au} {\texttt{jonathan.spreer@sydney.edu.au}}\\
   Address: \begin{minipage}[t]{8cm}\noindent
- Discrete Geometry Group\\
- Mathematical Institute\\
- Freie Universitaet Berlin\\
- School of Mathematics and Physics\\
- Arnimallee 2, 14195 Berlin, Germany \end{minipage}
+ School of Mathematics and Statistics F07\\
+", The University of Sydney\\
+ NSW 2006 Australia \end{minipage}
 }\\
 \end{titlepage}
 
@@ -1661,7 +1659,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   23
+   27
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
    0
@@ -1676,7 +1674,7 @@ previously computed properties. See also \texttt{SCPropertyDrop} (\ref{SCPropert
    /SimplicialComplex]
    gap> c.F; time;                                 
    [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
-   29
+   30
    
 \end{Verbatim}
  }
@@ -2478,7 +2476,7 @@ pseudomanifold. Compare \texttt{SCExportIsoSig} (\ref{SCExportIsoSig}), which re
    gap> c:=SCSeriesBdHandleBody(3,9);;
    gap> s:=SCExportToString(c); time;
    "deffg.h.f.fahaiciai.i.hai.fbgeiagihbhceceba.g.gag"
-   2
+   0
    gap> s:=SCExportIsoSig(c); time;
    "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
    9
@@ -9707,7 +9705,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
    gap> SCIsTight(s2s1); time;
    #I  SCIsTight: complex is 3-dimensional and tight neighbourly, and thus tight.
    true
-   0
+   1
    
 \end{Verbatim}
  
@@ -9719,7 +9717,7 @@ automorphism group of \texttt{complex} is computed first using \texttt{SCAutomor
    gap> SCIsTight(c); time;
    #I  SCIsTight: complex is connected but not 2-neighbourly, and thus not tight.
    false
-   8
+   9
    
 \end{Verbatim}
  
@@ -10431,7 +10429,7 @@ a list of pairs of the form \texttt{[ integer, list ]} upon success, fail otherw
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandom,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   30
+   28
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
@@ -10439,15 +10437,15 @@ a list of pairs of the form \texttt{[ integer, list ]} upon success, fail otherw
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseRandomRevLex,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   28
+   29
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseEngstroem,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   69
+   65
    gap> c := SCSeriesHomologySphere(2,3,5);;
    gap> SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;
    [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-   77
+   72
    
 \end{Verbatim}
  }
@@ -11862,7 +11860,7 @@ differs from system to system.
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
    gap> SCRunTest();
    simpcomp package test
-   msecs: 6071
+   msecs: 6519
    true
    
 \end{Verbatim}

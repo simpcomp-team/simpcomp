@@ -1,3 +1,9 @@
+
+03/06/2019 - Version 2.1.10: MINOR UPDATE
+- Added generated files to archive
+- Added check for executable bistellar
+- Deleted README and duplicate GPL file
+
 21/10/2018 - Version 2.1.9: MINOR UPDATE
 - Minor changes in documentation/manual
 - Adjusted output of test file for GAP 4.10

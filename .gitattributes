@@ -26,20 +26,23 @@ doc/simpcomp.log export-ignore
 doc/simpcomp.out export-ignore
 doc/simpcomp.pnr export-ignore
 doc/simpcomp.toc export-ignore
-/aclocal.m4 export-ignore
 /autom4te.cache/ export-ignore
 /bin/ export-ignore
 /bistellar export-ignore
 /config.log export-ignore
 /config.status export-ignore
-/configure export-ignore
-/depcomp export-ignore
-/install-sh export-ignore
 /Makefile export-ignore
-/Makefile.in export-ignore
-/missing export-ignore
 /src/.deps/ export-ignore
 /src/*.o export-ignore
 /gh-pages/ export-ignore
 /tmp/ export-ignore
 /internal/ export-ignore
+
+# as requested by gap people
+#/aclocal.m4 export-ignore
+#/configure export-ignore
+#/depcomp export-ignore
+#/install-sh export-ignore
+#/Makefile.in export-ignore
+#/missing export-ignore
+

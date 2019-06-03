@@ -21,12 +21,10 @@
   Felix Effenberger
       Email:    [7Xmailto:exilef@gmail.com[107X
   Jonathan Spreer
-      Email:    [7Xmailto:jonathan.spreer@fu-berlin.de[107X
-      Address:  [33X[0;14YDiscrete Geometry Group[133X
-                [33X[0;14YMathematical Institute[133X
-                [33X[0;14YFreie Universitaet Berlin[133X
-                [33X[0;14YSchool of Mathematics and Physics[133X
-                [33X[0;14YArnimallee 2, 14195 Berlin, Germany[133X
+      Email:    [7Xmailto:jonathan.spreer@sydney.edu.au[107X
+      Address:  [33X[0;14YSchool of Mathematics and Statistics F07[133X
+                [33X[0;14Y", The University of Sydney[133X
+                [33X[0;14YNSW 2006 Australia[133X
   
   
   

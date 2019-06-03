@@ -4,11 +4,11 @@ encoding := "UTF-8",
 bookname := "<Package>simpcomp</Package>",
 entries :=
 [ [ "Title page", ".", [ 0, 0, 0 ], 1, 1, "title page", "X7D2C85EC87DD46E5" ],
-  [ "Abstract", ".-1", [ 0, 0, 1 ], 34, 2, "abstract", "X7AA6C5737B711C89" ], 
-  [ "Copyright", ".-3", [ 0, 0, 3 ], 67, 2, "copyright", "X81488B807F2A1CF1" ]
-    , [ "Acknowledgements", ".-2", [ 0, 0, 2 ], 80, 2, "acknowledgements", 
+  [ "Abstract", ".-1", [ 0, 0, 1 ], 32, 2, "abstract", "X7AA6C5737B711C89" ], 
+  [ "Copyright", ".-3", [ 0, 0, 3 ], 65, 2, "copyright", "X81488B807F2A1CF1" ]
+    , [ "Acknowledgements", ".-2", [ 0, 0, 2 ], 78, 2, "acknowledgements", 
       "X82A988D47DFAFCFA" ], 
-  [ "Table of Contents", ".-4", [ 0, 0, 4 ], 99, 4, "table of contents", 
+  [ "Table of Contents", ".-4", [ 0, 0, 4 ], 97, 4, "table of contents", 
       "X8537FEB07AF2BEC8" ], 
   [ "\033[1X\033[33X\033[0;-2YIntroduction\033[133X\033[101X", "1", 
       [ 1, 0, 0 ], 1, 7, "introduction", "X7DFB63A97E67C0A1" ], 
