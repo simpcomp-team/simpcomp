@@ -244,7 +244,7 @@ function(complex,modulus)
   
   L := [];
   for i in [ 1 .. Length( M ) ] do
-    L[i] :=[ NrRows(  M[i] ), NrColumns( M[i] ) ];
+    L[i] := DimensionsMat( M[i] );
     L[i][3] := RowRankOfMatrix( M[i] );
     L[i][4] := L[i][2] - L[i][3];
   od;
@@ -365,7 +365,7 @@ function(complex,modulus)
   
   L := [];
   for i in [ 1 .. Length( M ) ] do
-    L[i] :=[ NrRows(  M[i] ), NrColumns( M[i] ) ];
+    L[i] := DimensionsMat( M[i] );
     L[i][3] := RowRankOfMatrix( M[i] );
     L[i][4] := L[i][1] - L[i][3];
   od;
