@@ -60,7 +60,7 @@ see the file COPYING in the `simpcomp` directory or
   will see something like the following:
 
 <pre>
-  gap> SCLoadPackage("simpcomp");
+  gap> LoadPackage("simpcomp");
   ─────────────────────────────────────────────────────────────────────────
   Loading  AutoDoc 2014.08.21 (Generate documentation from GAP source code)
   by Sebastian Gutsche (http://wwwb.math.rwth-aachen.de/~gutsche/) and
