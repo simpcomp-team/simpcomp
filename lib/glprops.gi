@@ -3572,19 +3572,19 @@ function(complex,k)
 	
 	if HasComputedSCIsInKds(complex) then
 		l:=ComputedSCIsInKds(complex);
-	fi;
-	for i in [1..Size(l)] do
-		if not IsBound(l[i]) then
-			continue;
-		fi;
-		if l[i] = true then
-			if IsBound(l[i-1]) and l[i-1] <= k then
-				Info(InfoSimpcomp,1,"SCIsInKd: complex is even (at least) in K^",l[i-1],".");
-							return true;
+		for i in [1..Size(l)] do
+			if not IsBound(l[i]) then
+				continue;
 			fi;
-			break;
-		fi;
-	od;
+			if l[i] = true then
+				if IsBound(l[i-1]) and l[i-1] <= k then
+					Info(InfoSimpcomp,1,"SCIsInKd: complex is even (at least) in K^",l[i-1],".");
+						return true;
+				fi;
+				break;
+			fi;
+		od;
+	fi;
 	
 		
 	dim:=SCDim(complex);

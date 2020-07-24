@@ -1265,7 +1265,7 @@ end);
 ## <Example> NOEXECUTE
 ## Greetings master,
 ## 
-## this is simpcomp %%%VERSION%%% running on comp01.maths.fancytown.edu
+## this is simpcomp 2.1.10 running on comp01.maths.fancytown.edu
 ##
 ## I have been working hard for 0 seconds and have a message for you, see below.
 ## 
@@ -2054,20 +2054,20 @@ function(complex,k)
 
   if HasComputedSCIsKStackedSpheres(complex) then
     l:=ComputedSCIsKStackedSpheres(complex);
-  fi;
-  for i in [1..Size(l)] do
-    if not IsBound(l[i]) then
-      continue;
-    fi;
-    if IsList(l[i]) and l[i][1] = true then
-      if IsBound(l[i-1]) and l[i-1] <= k then
-        Info(InfoSimpcomp,1,"SCIsKStackedSphere: complex is even (at least) a ",
-          l[i-1],"-stacked sphere.");
-        return l[i];
+    for i in [1..Size(l)] do
+      if not IsBound(l[i]) then
+        continue;
       fi;
-      break;
-    fi;
-  od;
+      if IsList(l[i]) and l[i][1] = true then
+        if IsBound(l[i-1]) and l[i-1] <= k then
+          Info(InfoSimpcomp,1,"SCIsKStackedSphere: complex is even (at least) a ",
+            l[i-1],"-stacked sphere.");
+          return l[i];
+        fi;
+        break;
+      fi;
+    od;
+  fi;
   
   
   d:=SCDim(complex);
