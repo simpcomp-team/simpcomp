@@ -59,35 +59,28 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> list:=SCLib.SearchByName("S^2~S^1 (VT)"){[1..9]};[128X[104X
-    [4X[28X [ [ 12, "S^2~S^1 (VT)" ], [ 26, "S^2~S^1 (VT)" ], [ 30, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 43, "S^2~S^1 (VT)" ], [ 47, "S^2~S^1 (VT)" ], [ 48, "S^2~S^1 (VT)" ], [128X[104X
-    [4X[28X   [ 89, "S^2~S^1 (VT)" ], [ 93, "S^2~S^1 (VT)" ], [ 113, "S^2~S^1 (VT)" ] ][128X[104X
     [4X[28X gap> s2s1:=SCLib.Load(list[1][1]);[128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: AltshulerSteinberg, AutomorphismGroup, [128X[104X
     [4X[28X                    AutomorphismGroupSize, AutomorphismGroupStructure, [128X[104X
-    [4X[28X                    AutomorphismGroupTransitivity, ConnectedComponents, [128X[104X
-    [4X[28X                    Dim, DualGraph, EulerCharacteristic, FVector, [128X[104X
-    [4X[28X                    FacetsEx, GVector, GeneratorsEx, HVector, [128X[104X
-    [4X[28X                    HasBoundary, HasInterior, Homology, Interior, [128X[104X
-    [4X[28X                    IsCentrallySymmetric, IsConnected, [128X[104X
-    [4X[28X                    IsEulerianManifold, IsManifold, IsOrientable, [128X[104X
-    [4X[28X                    IsPseudoManifold, IsPure, IsStronglyConnected, [128X[104X
-    [4X[28X                    MinimalNonFacesEx, Name, Neighborliness, [128X[104X
-    [4X[28X                    NumFaces[], Orientation, Reference, SkelExs[], [128X[104X
-    [4X[28X                    Vertices.[128X[104X
+    [4X[28X                    AutomorphismGroupTransitivity, Boundary, Chi, [128X[104X
+    [4X[28X                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, [128X[104X
+    [4X[28X                    Generators, H, HasBoundary, HasInterior, Homology, [128X[104X
+    [4X[28X                    Interior, IsCentrallySymmetric, IsConnected, [128X[104X
+    [4X[28X                    IsEulerianManifold, IsOrientable, IsPM, IsPure, [128X[104X
+    [4X[28X                    MinimalNonFaces, Name, Neighborliness, Orientation, [128X[104X
+    [4X[28X                    Reference, StronglyConnected, SCVertices, Vertices.[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Name="S^2~S^1 (VT)"[128X[104X
     [4X[28X  Dim=3[128X[104X
-    [4X[28X  AltshulerSteinberg=250838208[128X[104X
     [4X[28X  AutomorphismGroupSize=18[128X[104X
     [4X[28X  AutomorphismGroupStructure="D18"[128X[104X
     [4X[28X  AutomorphismGroupTransitivity=1[128X[104X
-    [4X[28X  EulerCharacteristic=0[128X[104X
-    [4X[28X  FVector=[ 9, 36, 54, 27 ][128X[104X
-    [4X[28X  GVector=[ 4, 10 ][128X[104X
-    [4X[28X  HVector=[ 5, 15, 5, 1 ][128X[104X
+    [4X[28X  Chi=0[128X[104X
+    [4X[28X  F=[ 9, 36, 54, 27 ][128X[104X
+    [4X[28X  G=[ 4, 10 ][128X[104X
+    [4X[28X  H=[ 5, 15, 5, 1 ][128X[104X
     [4X[28X  HasBoundary=false[128X[104X
     [4X[28X  HasInterior=true[128X[104X
     [4X[28X  Homology=[ [ 0, [ ] ], [ 1, [ ] ], [ 0, [ 2 ] ], [ 0, [ ] ] ][128X[104X
@@ -95,43 +88,57 @@
     [4X[28X  IsConnected=true[128X[104X
     [4X[28X  IsEulerianManifold=true[128X[104X
     [4X[28X  IsOrientable=false[128X[104X
-    [4X[28X  IsPseudoManifold=true[128X[104X
+    [4X[28X  IsPM=true[128X[104X
     [4X[28X  IsPure=true[128X[104X
-    [4X[28X  IsStronglyConnected=true[128X[104X
     [4X[28X  Neighborliness=2[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> SCInfoLevel(2); # print information while running[128X[104X
-    [4X[28X true[128X[104X
     [4X[28X gap> SCIsTight(s2s1); time;[128X[104X
-    [4X[28X #I  SCIsTight: complex is 3-dimensional and tight neighbourly, and thus tight.[128X[104X
+    [4X[28X #I  SCIsTight: checking non faces...[128X[104X
+    [4X[28X #I  SCIsTight: found no contradiction so far.[128X[104X
+    [4X[28X #I  SCIsTight: generating lookup table...[128X[104X
+    [4X[28X #I  SCIsTight: lookup table done, size = 2304.[128X[104X
+    [4X[28X #I  SCIsTight: computing automorphism group...[128X[104X
+    [4X[28X #I  SCIsTight: automorphism group done, transitivity = 1.[128X[104X
+    [4X[28X #I  SCIsTight: checking rsl-functions...[128X[104X
+    [4X[28X #I  SCIsTight: processed 10000 of 40320 rsl-functions so far, all perfect.[128X[104X
+    [4X[28X #I  SCIsTight: processed 20000 of 40320 rsl-functions so far, all perfect.[128X[104X
+    [4X[28X #I  SCIsTight: processed 30000 of 40320 rsl-functions so far, all perfect.[128X[104X
+    [4X[28X #I  SCIsTight: processed 40000 of 40320 rsl-functions so far, all perfect.[128X[104X
     [4X[28X true[128X[104X
-    [4X[28X 1[128X[104X
+    [4X[28X 11217[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByAttribute("F[1] = 120");[128X[104X
-    [4X[28X [ [ 7649, "Bd(600-cell)" ] ][128X[104X
+    [4X[28X [ [ 656, "Bd(600-cell)" ] ][128X[104X
     [4X[28X gap> id:=last[1][1];;[128X[104X
     [4X[28X gap> c:=SCLib.Load(id);;[128X[104X
     [4X[28X gap> SCIsTight(c); time;[128X[104X
-    [4X[28X #I  SCIsTight: complex is connected but not 2-neighbourly, and thus not tight.[128X[104X
+    [4X[28X #I  SCIsTight: checking non faces...[128X[104X
+    [4X[28X #I  SCIsTight: found non perfect rsl-function: [128X[104X
+    [4X[28X [ 1, 3, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, [128X[104X
+    [4X[28X   22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, [128X[104X
+    [4X[28X   41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, [128X[104X
+    [4X[28X   60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, [128X[104X
+    [4X[28X   79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, [128X[104X
+    [4X[28X   98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, [128X[104X
+    [4X[28X   113, 114, 115, 116, 117, 118, 119, 120 ], complex not tight.[128X[104X
     [4X[28X false[128X[104X
-    [4X[28X 9[128X[104X
+    [4X[28X 28[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCInfoLevel(0);[128X[104X
-    [4X[28X true[128X[104X
     [4X[28X gap> SCLib.SearchByName("K3");  [128X[104X
-    [4X[28X [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ][128X[104X
+    [4X[28X [ [ 551, "K3 surface" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCIsManifold(c);[128X[104X
     [4X[28X true[128X[104X
     [4X[28X gap> SCInfoLevel(1);[128X[104X
-    [4X[28X true[128X[104X
     [4X[28X gap> c.IsTight;                 [128X[104X
     [4X[28X #I  SCIsTight: complex is (k+1)-neighborly 2k-manifold and thus tight.[128X[104X
     [4X[28X true[128X[104X
@@ -140,70 +147,44 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCInfoLevel(1);[128X[104X
-    [4X[28X true[128X[104X
     [4X[28X gap> dc:=[ [ 1, 1, 1, 1, 45 ], [ 1, 2, 1, 27, 18 ], [ 1, 27, 9, 9, 3 ], [128X[104X
     [4X[28X > [ 4, 7, 20, 9, 9 ], [ 9, 9, 11, 9, 11 ], [ 6, 9, 9, 17, 8 ], [128X[104X
     [4X[28X > [ 6, 10, 8, 17, 8 ], [ 8, 8, 8, 8, 17 ], [ 5, 6, 9, 9, 20 ] ];;[128X[104X
     [4X[28X gap> c:=SCBoundary(SCFromDifferenceCycles(dc));;[128X[104X
     [4X[28X gap> SCAutomorphismGroup(c);;[128X[104X
     [4X[28X gap> SCIsTight(c);[128X[104X
+    [4X[28X #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...[128X[104X
+    [4X[28X #I  SCIsKStackedSphere: try 1/50[128X[104X
+    [4X[28X #I  SCIsKStackedSphere: complex is a 1-stacked sphere.[128X[104X
+    [4X[28X #I  SCIsTight: complex is 3-dimensional, 2-neighbourly, and stacked, and thus tight.[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> list:=SCLib.SearchByName("S^3xS^1");[128X[104X
-    [4X[28X [ [ 55, "S^3xS^1 (VT)" ], [ 127, "S^3xS^1 (VT)" ], [ 399, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 459, "S^3xS^1 (VT)" ], [ 460, "S^3xS^1 (VT)" ], [ 461, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 462, "S^3xS^1 (VT)" ], [ 588, "S^3xS^1 (VT)" ], [ 613, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 700, "S^3xS^1 (VT)" ], [ 701, "S^3xS^1 (VT)" ], [ 702, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 703, "S^3xS^1 (VT)" ], [ 1078, "S^3xS^1 (VT)" ], [ 1079, "S^3xS^1 (VT)" ],[128X[104X
-    [4X[28X   [ 1080, "S^3xS^1 (VT)" ], [ 1081, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 1083, "S^3xS^1 (VT)" ], [ 1084, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 1086, "S^3xS^1 (VT)" ], [ 1087, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 1088, "S^3xS^1 (VT)" ], [ 1089, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 1090, "S^3xS^1 (VT)" ], [ 1092, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2413, "S^3xS^1 (VT)" ], [ 2470, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2471, "S^3xS^1 (VT)" ], [ 2472, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2473, "S^3xS^1 (VT)" ], [ 2474, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 2475, "S^3xS^1 (VT)" ], [ 2476, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 3413, "S^3xS^1 (VT)" ], [ 3414, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 3415, "S^3xS^1 (VT)" ], [ 3416, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 3417, "S^3xS^1 (VT)" ], [ 3418, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 3419, "S^3xS^1 (VT)" ], [ 3420, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 3421, "S^3xS^1 (VT)" ], [ 3422, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 3423, "S^3xS^1 (VT)" ], [ 3424, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 3425, "S^3xS^1 (VT)" ], [ 3426, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 3427, "S^3xS^1 (VT)" ], [ 3428, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 3429, "S^3xS^1 (VT)" ], [ 3430, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 3431, "S^3xS^1 (VT)" ], [ 3432, "S^3xS^1 (VT)" ], [128X[104X
-    [4X[28X   [ 3433, "S^3xS^1 (VT)" ], [ 3434, "S^3xS^1 (VT)" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(list[1][1]);           [128X[104X
     [4X[28X [SimplicialComplex[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Properties known: AltshulerSteinberg, AutomorphismGroup, [128X[104X
     [4X[28X                    AutomorphismGroupSize, AutomorphismGroupStructure, [128X[104X
-    [4X[28X                    AutomorphismGroupTransitivity, ConnectedComponents, [128X[104X
-    [4X[28X                    Dim, DualGraph, EulerCharacteristic, FVector, [128X[104X
-    [4X[28X                    FacetsEx, GVector, GeneratorsEx, HVector, [128X[104X
-    [4X[28X                    HasBoundary, HasInterior, Homology, Interior, [128X[104X
-    [4X[28X                    IsCentrallySymmetric, IsConnected, [128X[104X
-    [4X[28X                    IsEulerianManifold, IsManifold, IsOrientable, [128X[104X
-    [4X[28X                    IsPseudoManifold, IsPure, IsStronglyConnected, [128X[104X
-    [4X[28X                    MinimalNonFacesEx, Name, Neighborliness, [128X[104X
-    [4X[28X                    NumFaces[], Orientation, Reference, SkelExs[], [128X[104X
-    [4X[28X                    Vertices.[128X[104X
+    [4X[28X                    AutomorphismGroupTransitivity, Boundary, Chi, [128X[104X
+    [4X[28X                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, [128X[104X
+    [4X[28X                    Generators, H, HasBoundary, HasInterior, Homology, [128X[104X
+    [4X[28X                    Interior, IsCentrallySymmetric, IsConnected, [128X[104X
+    [4X[28X                    IsEulerianManifold, IsOrientable, IsPM, IsPure, [128X[104X
+    [4X[28X                    MinimalNonFaces, Name, Neighborliness, Orientation, [128X[104X
+    [4X[28X                    Reference, StronglyConnected, SCVertices, Vertices.[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Name="S^3xS^1 (VT)"[128X[104X
     [4X[28X  Dim=4[128X[104X
-    [4X[28X  AltshulerSteinberg=737125273600[128X[104X
     [4X[28X  AutomorphismGroupSize=22[128X[104X
     [4X[28X  AutomorphismGroupStructure="D22"[128X[104X
     [4X[28X  AutomorphismGroupTransitivity=1[128X[104X
-    [4X[28X  EulerCharacteristic=0[128X[104X
-    [4X[28X  FVector=[ 11, 55, 110, 110, 44 ][128X[104X
-    [4X[28X  GVector=[ 5, 15, -20 ][128X[104X
-    [4X[28X  HVector=[ 6, 21, 1, 16, -1 ][128X[104X
+    [4X[28X  Chi=0[128X[104X
+    [4X[28X  F=[ 11, 55, 110, 110, 44 ][128X[104X
+    [4X[28X  G=[ 5, 15, -20 ][128X[104X
+    [4X[28X  H=[ 6, 21, 1, 16, -1 ][128X[104X
     [4X[28X  HasBoundary=false[128X[104X
     [4X[28X  HasInterior=true[128X[104X
     [4X[28X  Homology=[ [ 0, [ ] ], [ 1, [ ] ], [ 0, [ ] ], [ 1, [ ] ], [ 1, [ ] ] ][128X[104X
@@ -211,36 +192,26 @@
     [4X[28X  IsConnected=true[128X[104X
     [4X[28X  IsEulerianManifold=true[128X[104X
     [4X[28X  IsOrientable=true[128X[104X
-    [4X[28X  IsPseudoManifold=true[128X[104X
+    [4X[28X  IsPM=true[128X[104X
     [4X[28X  IsPure=true[128X[104X
-    [4X[28X  IsStronglyConnected=true[128X[104X
     [4X[28X  Neighborliness=2[128X[104X
     [4X[28X [128X[104X
     [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> SCInfoLevel(0);[128X[104X
-    [4X[28X true[128X[104X
     [4X[28X gap> SCIsManifold(c);[128X[104X
     [4X[28X true[128X[104X
     [4X[28X gap> SCInfoLevel(2); [128X[104X
-    [4X[28X true[128X[104X
     [4X[28X gap> c.IsTight;                [128X[104X
-    [4X[28X #I  SCIsInKd: complex has transitive automorphism group, only checking one link.[128X[104X
-    [4X[28X #I  SCIsInKd: checking link 1/1[128X[104X
-    [4X[28X #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...[128X[104X
-    [4X[28X #I  SCIsKStackedSphere: try 1/1[128X[104X
-    [4X[28X #I  round 0[128X[104X
-    [4X[28X Reduced complex, F: [ 9, 26, 34, 17 ][128X[104X
-    [4X[28X #I  round 1[128X[104X
-    [4X[28X Reduced complex, F: [ 8, 22, 28, 14 ][128X[104X
-    [4X[28X #I  round 2[128X[104X
-    [4X[28X Reduced complex, F: [ 7, 18, 22, 11 ][128X[104X
-    [4X[28X #I  round 3[128X[104X
-    [4X[28X Reduced complex, F: [ 6, 14, 16, 8 ][128X[104X
-    [4X[28X #I  round 4[128X[104X
-    [4X[28X Reduced complex, F: [ 5, 10, 10, 5 ][128X[104X
+    [4X[28X #I  SCIsInKd: checking link 1/11[128X[104X
+    [4X[28X #I  SCIsKStackedSphere: try 1/50[128X[104X
+    [4X[28X #I  round 0: [ 9, 26, 34, 17 ][128X[104X
+    [4X[28X #I  round 1: [ 8, 22, 28, 14 ][128X[104X
+    [4X[28X #I  round 2: [ 7, 18, 22, 11 ][128X[104X
+    [4X[28X #I  round 3: [ 6, 14, 16, 8 ][128X[104X
+    [4X[28X #I  round 4: [ 5, 10, 10, 5 ][128X[104X
     [4X[28X #I  SCReduceComplexEx: computed locally minimal complex after 5 rounds.[128X[104X
-    [4X[28X #I  SCIsKStackedSphere: complex is a 1-stacked sphere.[128X[104X
-    [4X[28X #I  SCIsInKd: complex has transitive automorphism group, all links are 1-stacked.[128X[104X
+    [4X[28X #I  SCIsInKd: complex has transitive automorphism group, all links are [128X[104X
+    [4X[28X 1-stacked.[128X[104X
     [4X[28X #I  SCIsTight: complex is in class K(1) and 2-neighborly, thus tight.[128X[104X
     [4X[28X true[128X[104X
     [4X[28X [128X[104X
@@ -289,21 +260,20 @@
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SCBdCyclicPolytope(4,6);;[128X[104X
     [4X[28X gap> v:=SCVertices(c);[128X[104X
-    [4X[28X [ 1 .. 6 ][128X[104X
+    [4X[28X [ 1, 2, 3, 4, 5, 6 ][128X[104X
     [4X[28X gap> SCMinimalNonFaces(c);[128X[104X
     [4X[28X [ [  ], [  ], [ [ 1, 3, 5 ], [ 2, 4, 6 ] ] ][128X[104X
     [4X[28X gap> ns:=SCSlicing(c,[v{[1,3,5]},v{[2,4,6]}]);     [128X[104X
     [4X[28X [NormalSurface[128X[104X
     [4X[28X [128X[104X
-    [4X[28X  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\[128X[104X
-    [4X[28X etsEx, Genus, IsConnected, IsOrientable, NSTriangulation, Name, TopologicalTyp\[128X[104X
-    [4X[28X e, Vertices.[128X[104X
+    [4X[28X  Properties known: Chi, ConnectedComponents, Dim, F, Facets, Genus, IsConnecte\[128X[104X
+    [4X[28X d, Name, Oriented, Subdivision, TopologicalType, SCVertices, Vertices.[128X[104X
     [4X[28X [128X[104X
     [4X[28X  Name="slicing [ [ 1, 3, 5 ], [ 2, 4, 6 ] ] of Bd(C_4(6))"[128X[104X
     [4X[28X  Dim=2[128X[104X
-    [4X[28X  FVector=[ 9, 18, 0, 9 ][128X[104X
-    [4X[28X  EulerCharacteristic=0[128X[104X
-    [4X[28X  IsOrientable=true[128X[104X
+    [4X[28X  Chi=0[128X[104X
+    [4X[28X  F=[ 9, 18, 0, 9 ][128X[104X
+    [4X[28X  IsConnected=true[128X[104X
     [4X[28X  TopologicalType="T^2"[128X[104X
     [4X[28X [128X[104X
     [4X[28X /NormalSurface][128X[104X
@@ -313,7 +283,7 @@
   [4X[32X  Example  [32X[104X
     [4X[28X gap> c:=SCBdSimplex(5);;[128X[104X
     [4X[28X gap> v:=SCVertices(c);[128X[104X
-    [4X[28X [ 1 .. 6 ][128X[104X
+    [4X[28X [ 1, 2, 3, 4, 5, 6 ][128X[104X
     [4X[28X gap> slicing:=SCSlicing(c,[v{[1,3,5]},v{[2,4,6]}]);[128X[104X
     [4X[28X [ [ [ 1, 2 ], [ 1, 4 ], [ 3, 2 ], [ 3, 4 ], [ 5, 2 ], [ 5, 4 ] ], [128X[104X
     [4X[28X   [ [ 1, 2 ], [ 1, 4 ], [ 1, 6 ], [ 3, 2 ], [ 3, 4 ], [ 3, 6 ] ], [128X[104X
@@ -337,15 +307,17 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("K3");      [128X[104X
-    [4X[28X [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ][128X[104X
+    [4X[28X [ [ 550, "K3 surface" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;    [128X[104X
     [4X[28X gap> f:=SCVertices(c);              [128X[104X
     [4X[28X [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ][128X[104X
     [4X[28X gap> SCMorseMultiplicityVector(c,f);[128X[104X
-    [4X[28X [ [ 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0 ], [128X[104X
-    [4X[28X   [ 0, 0, 2, 0, 0 ], [ 0, 0, 1, 0, 0 ], [ 0, 0, 4, 0, 0 ], [ 0, 0, 3, 0, 0 ], [128X[104X
-    [4X[28X   [ 0, 0, 3, 0, 0 ], [ 0, 0, 4, 0, 0 ], [ 0, 0, 1, 0, 0 ], [ 0, 0, 2, 0, 0 ], [128X[104X
-    [4X[28X   [ 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1 ] ][128X[104X
+    [4X[28X [ [ 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [128X[104X
+    [4X[28X   [ 0, 0, 1, 0, 0 ], [ 0, 0, 2, 0, 0 ], [ 0, 0, 1, 0, 0 ], [128X[104X
+    [4X[28X   [ 0, 0, 4, 0, 0 ], [ 0, 0, 3, 0, 0 ], [ 0, 0, 3, 0, 0 ], [128X[104X
+    [4X[28X   [ 0, 0, 4, 0, 0 ], [ 0, 0, 1, 0, 0 ], [ 0, 0, 2, 0, 0 ], [128X[104X
+    [4X[28X   [ 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [128X[104X
+    [4X[28X   [ 0, 0, 0, 0, 1 ] ][128X[104X
     [4X[28X [128X[104X
   [4X[32X[104X
   
@@ -359,7 +331,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("K3");      [128X[104X
-    [4X[28X [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ][128X[104X
+    [4X[28X [ [ 550, "K3 surface" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;    [128X[104X
     [4X[28X gap> f:=SCVertices(c);              [128X[104X
     [4X[28X [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ][128X[104X

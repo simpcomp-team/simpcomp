@@ -12,21 +12,23 @@ SetPackageInfo( rec(
 
 PackageName := "simpcomp",
 Subtitle := "A GAP toolbox for simplicial complexes",
-Version := "%%%VERSION%%%",
-Date := "%%%DATE%%%",
+Version := "2.1.11",
+Date := "31/078/2020",
 License := "GPL-2.0-or-later",
-
 PackageWWWHome := "https://simpcomp-team.github.io/simpcomp/",
-README_URL := Concatenation( ~.PackageWWWHome, "README.md" ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+
+README_URL := Concatenation( ~.PackageWWWHome, "/README.md" ),
+PackageInfoURL := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
 
 
-SourceRepository := rec( 
-  Type := "git", 
-  URL := "https://github.com/simpcomp-team/simpcomp"
+SourceRepository := rec(
+    Type := "git",
+    URL := "https://github.com/simpcomp-team/simpcomp",
 ),
 IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
-ArchiveURL :=Concatenation( [ "http://github.com/simpcomp-team/simpcomp/releases/download/v", String(~.Version), "/simpcomp-", String(~.Version) ]),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/simpcomp-", "-", ~.Version ),
 ArchiveFormats := ".tar.gz",
 
 Persons := [

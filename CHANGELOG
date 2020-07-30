@@ -1,3 +1,7 @@
+31/07/2020 - Version 2.1.11: MINOR UPDATE
+- First use of gap release tools 
+- Changed test file output to accommodate changes in other packages
+- Fixed bug in SCIsStackedSphere
 
 03/06/2019 - Version 2.1.10: MINOR UPDATE
 - Added generated files to archive

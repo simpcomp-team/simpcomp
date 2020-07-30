@@ -11,8 +11,7 @@ Simplicial complex objects can either be created from a facet list (complex <C>c
 <Log>
 gap> #first run functionality test on simpcomp
 gap> SCRunTest();
-+ test simpcomp package, version %%%VERSION%%%
-+ GAP4stones: 69988
++ test simpcomp package, version 0.0.0
 true
 gap> #all ok
 gap> c1:=SCFromFacets([[1,2],[2,3],[3,1]]);
