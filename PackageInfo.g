@@ -13,7 +13,7 @@ SetPackageInfo( rec(
 PackageName := "simpcomp",
 Subtitle := "A GAP toolbox for simplicial complexes",
 Version := "2.1.11",
-Date := "31/078/2020",
+Date := "28/05/2021",
 License := "GPL-2.0-or-later",
 PackageWWWHome := "https://simpcomp-team.github.io/simpcomp/",
 
