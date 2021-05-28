@@ -11,13 +11,9 @@
 DeclareInfoClass("InfoSimpcomp");
 SetInfoLevel(InfoSimpcomp,1);
 
-DeclareGlobalVariable("SCIntFunc");
-InstallValue(SCIntFunc,rec());
-MakeReadWriteGlobal("SCIntFunc");
-
-DeclareGlobalVariable("SCSettings");
 DeclareGlobalFunction("SCInfoLevel");
 
+BindGlobal("SCIntFunc",rec());
 
 ReadPackage("simpcomp","lib/propobject.gd");
 ReadPackage("simpcomp","lib/tools.gd");
