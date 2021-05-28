@@ -19,7 +19,7 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap10.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap12.html">[Next Chapter]</a>&nbsp;  </div>
 
-<p id="mathjaxlink" class="pcenter"></p>
+<p id="mathjaxlink" class="pcenter"><a href="chap11_mj.html">[MathJax on]</a></p>
 <p><a id="X78438FF584D18B8A" name="X78438FF584D18B8A"></a></p>
 <div class="ChapSects"><a href="chap11.html#X78438FF584D18B8A">11 <span class="Heading">Polyhedral Morse theory</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap11.html#X7B2E2B3C846500E4">11.1 <span class="Heading">Polyhedral Morse theory related functions</span></a>
@@ -65,35 +65,28 @@
 
 <div class="example"><pre>
  gap&gt; list:=SCLib.SearchByName("S^2~S^1 (VT)"){[1..9]};
- [ [ 12, "S^2~S^1 (VT)" ], [ 26, "S^2~S^1 (VT)" ], [ 30, "S^2~S^1 (VT)" ], 
-   [ 43, "S^2~S^1 (VT)" ], [ 47, "S^2~S^1 (VT)" ], [ 48, "S^2~S^1 (VT)" ], 
-   [ 89, "S^2~S^1 (VT)" ], [ 93, "S^2~S^1 (VT)" ], [ 113, "S^2~S^1 (VT)" ] ]
  gap&gt; s2s1:=SCLib.Load(list[1][1]);
  [SimplicialComplex
  
   Properties known: AltshulerSteinberg, AutomorphismGroup, 
                     AutomorphismGroupSize, AutomorphismGroupStructure, 
-                    AutomorphismGroupTransitivity, ConnectedComponents, 
-                    Dim, DualGraph, EulerCharacteristic, FVector, 
-                    FacetsEx, GVector, GeneratorsEx, HVector, 
-                    HasBoundary, HasInterior, Homology, Interior, 
-                    IsCentrallySymmetric, IsConnected, 
-                    IsEulerianManifold, IsManifold, IsOrientable, 
-                    IsPseudoManifold, IsPure, IsStronglyConnected, 
-                    MinimalNonFacesEx, Name, Neighborliness, 
-                    NumFaces[], Orientation, Reference, SkelExs[], 
-                    Vertices.
+                    AutomorphismGroupTransitivity, Boundary, Chi, 
+                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
+                    Generators, H, HasBoundary, HasInterior, Homology, 
+                    Interior, IsCentrallySymmetric, IsConnected, 
+                    IsEulerianManifold, IsOrientable, IsPM, IsPure, 
+                    MinimalNonFaces, Name, Neighborliness, Orientation, 
+                    Reference, StronglyConnected, SCVertices, Vertices.
  
   Name="S^2~S^1 (VT)"
   Dim=3
-  AltshulerSteinberg=250838208
   AutomorphismGroupSize=18
   AutomorphismGroupStructure="D18"
   AutomorphismGroupTransitivity=1
-  EulerCharacteristic=0
-  FVector=[ 9, 36, 54, 27 ]
-  GVector=[ 4, 10 ]
-  HVector=[ 5, 15, 5, 1 ]
+  Chi=0
+  F=[ 9, 36, 54, 27 ]
+  G=[ 4, 10 ]
+  H=[ 5, 15, 5, 1 ]
   HasBoundary=false
   HasInterior=true
   Homology=[ [ 0, [ ] ], [ 1, [ ] ], [ 0, [ 2 ] ], [ 0, [ ] ] ]
@@ -101,43 +94,57 @@
   IsConnected=true
   IsEulerianManifold=true
   IsOrientable=false
-  IsPseudoManifold=true
+  IsPM=true
   IsPure=true
-  IsStronglyConnected=true
   Neighborliness=2
  
  /SimplicialComplex]
  gap&gt; SCInfoLevel(2); # print information while running
- true
  gap&gt; SCIsTight(s2s1); time;
- #I  SCIsTight: complex is 3-dimensional and tight neighbourly, and thus tight.
+ #I  SCIsTight: checking non faces...
+ #I  SCIsTight: found no contradiction so far.
+ #I  SCIsTight: generating lookup table...
+ #I  SCIsTight: lookup table done, size = 2304.
+ #I  SCIsTight: computing automorphism group...
+ #I  SCIsTight: automorphism group done, transitivity = 1.
+ #I  SCIsTight: checking rsl-functions...
+ #I  SCIsTight: processed 10000 of 40320 rsl-functions so far, all perfect.
+ #I  SCIsTight: processed 20000 of 40320 rsl-functions so far, all perfect.
+ #I  SCIsTight: processed 30000 of 40320 rsl-functions so far, all perfect.
+ #I  SCIsTight: processed 40000 of 40320 rsl-functions so far, all perfect.
  true
- 1
+ 11217
  </pre></div>
 
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByAttribute("F[1] = 120");
- [ [ 7649, "Bd(600-cell)" ] ]
+ [ [ 656, "Bd(600-cell)" ] ]
  gap&gt; id:=last[1][1];;
  gap&gt; c:=SCLib.Load(id);;
  gap&gt; SCIsTight(c); time;
- #I  SCIsTight: complex is connected but not 2-neighbourly, and thus not tight.
+ #I  SCIsTight: checking non faces...
+ #I  SCIsTight: found non perfect rsl-function: 
+ [ 1, 3, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 
+   22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 
+   41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 
+   60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 
+   79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 
+   98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 
+   113, 114, 115, 116, 117, 118, 119, 120 ], complex not tight.
  false
- 9
+ 28
  </pre></div>
 
 
 <div class="example"><pre>
  gap&gt; SCInfoLevel(0);
- true
  gap&gt; SCLib.SearchByName("K3");  
- [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
+ [ [ 551, "K3 surface" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; SCIsManifold(c);
  true
  gap&gt; SCInfoLevel(1);
- true
  gap&gt; c.IsTight;                 
  #I  SCIsTight: complex is (k+1)-neighborly 2k-manifold and thus tight.
  true
@@ -146,70 +153,44 @@
 
 <div class="example"><pre>
  gap&gt; SCInfoLevel(1);
- true
  gap&gt; dc:=[ [ 1, 1, 1, 1, 45 ], [ 1, 2, 1, 27, 18 ], [ 1, 27, 9, 9, 3 ], 
  &gt; [ 4, 7, 20, 9, 9 ], [ 9, 9, 11, 9, 11 ], [ 6, 9, 9, 17, 8 ], 
  &gt; [ 6, 10, 8, 17, 8 ], [ 8, 8, 8, 8, 17 ], [ 5, 6, 9, 9, 20 ] ];;
  gap&gt; c:=SCBoundary(SCFromDifferenceCycles(dc));;
  gap&gt; SCAutomorphismGroup(c);;
  gap&gt; SCIsTight(c);
+ #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
+ #I  SCIsKStackedSphere: try 1/50
+ #I  SCIsKStackedSphere: complex is a 1-stacked sphere.
+ #I  SCIsTight: complex is 3-dimensional, 2-neighbourly, and stacked, and thus tight.
  true
  </pre></div>
 
 
 <div class="example"><pre>
  gap&gt; list:=SCLib.SearchByName("S^3xS^1");
- [ [ 55, "S^3xS^1 (VT)" ], [ 127, "S^3xS^1 (VT)" ], [ 399, "S^3xS^1 (VT)" ], 
-   [ 459, "S^3xS^1 (VT)" ], [ 460, "S^3xS^1 (VT)" ], [ 461, "S^3xS^1 (VT)" ], 
-   [ 462, "S^3xS^1 (VT)" ], [ 588, "S^3xS^1 (VT)" ], [ 613, "S^3xS^1 (VT)" ], 
-   [ 700, "S^3xS^1 (VT)" ], [ 701, "S^3xS^1 (VT)" ], [ 702, "S^3xS^1 (VT)" ], 
-   [ 703, "S^3xS^1 (VT)" ], [ 1078, "S^3xS^1 (VT)" ], [ 1079, "S^3xS^1 (VT)" ],
-   [ 1080, "S^3xS^1 (VT)" ], [ 1081, "S^3xS^1 (VT)" ], 
-   [ 1083, "S^3xS^1 (VT)" ], [ 1084, "S^3xS^1 (VT)" ], 
-   [ 1086, "S^3xS^1 (VT)" ], [ 1087, "S^3xS^1 (VT)" ], 
-   [ 1088, "S^3xS^1 (VT)" ], [ 1089, "S^3xS^1 (VT)" ], 
-   [ 1090, "S^3xS^1 (VT)" ], [ 1092, "S^3xS^1 (VT)" ], 
-   [ 2413, "S^3xS^1 (VT)" ], [ 2470, "S^3xS^1 (VT)" ], 
-   [ 2471, "S^3xS^1 (VT)" ], [ 2472, "S^3xS^1 (VT)" ], 
-   [ 2473, "S^3xS^1 (VT)" ], [ 2474, "S^3xS^1 (VT)" ], 
-   [ 2475, "S^3xS^1 (VT)" ], [ 2476, "S^3xS^1 (VT)" ], 
-   [ 3413, "S^3xS^1 (VT)" ], [ 3414, "S^3xS^1 (VT)" ], 
-   [ 3415, "S^3xS^1 (VT)" ], [ 3416, "S^3xS^1 (VT)" ], 
-   [ 3417, "S^3xS^1 (VT)" ], [ 3418, "S^3xS^1 (VT)" ], 
-   [ 3419, "S^3xS^1 (VT)" ], [ 3420, "S^3xS^1 (VT)" ], 
-   [ 3421, "S^3xS^1 (VT)" ], [ 3422, "S^3xS^1 (VT)" ], 
-   [ 3423, "S^3xS^1 (VT)" ], [ 3424, "S^3xS^1 (VT)" ], 
-   [ 3425, "S^3xS^1 (VT)" ], [ 3426, "S^3xS^1 (VT)" ], 
-   [ 3427, "S^3xS^1 (VT)" ], [ 3428, "S^3xS^1 (VT)" ], 
-   [ 3429, "S^3xS^1 (VT)" ], [ 3430, "S^3xS^1 (VT)" ], 
-   [ 3431, "S^3xS^1 (VT)" ], [ 3432, "S^3xS^1 (VT)" ], 
-   [ 3433, "S^3xS^1 (VT)" ], [ 3434, "S^3xS^1 (VT)" ] ]
  gap&gt; c:=SCLib.Load(list[1][1]);           
  [SimplicialComplex
  
   Properties known: AltshulerSteinberg, AutomorphismGroup, 
                     AutomorphismGroupSize, AutomorphismGroupStructure, 
-                    AutomorphismGroupTransitivity, ConnectedComponents, 
-                    Dim, DualGraph, EulerCharacteristic, FVector, 
-                    FacetsEx, GVector, GeneratorsEx, HVector, 
-                    HasBoundary, HasInterior, Homology, Interior, 
-                    IsCentrallySymmetric, IsConnected, 
-                    IsEulerianManifold, IsManifold, IsOrientable, 
-                    IsPseudoManifold, IsPure, IsStronglyConnected, 
-                    MinimalNonFacesEx, Name, Neighborliness, 
-                    NumFaces[], Orientation, Reference, SkelExs[], 
-                    Vertices.
+                    AutomorphismGroupTransitivity, Boundary, Chi, 
+                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
+                    Generators, H, HasBoundary, HasInterior, Homology, 
+                    Interior, IsCentrallySymmetric, IsConnected, 
+                    IsEulerianManifold, IsOrientable, IsPM, IsPure, 
+                    MinimalNonFaces, Name, Neighborliness, Orientation, 
+                    Reference, StronglyConnected, SCVertices, Vertices.
  
   Name="S^3xS^1 (VT)"
   Dim=4
-  AltshulerSteinberg=737125273600
   AutomorphismGroupSize=22
   AutomorphismGroupStructure="D22"
   AutomorphismGroupTransitivity=1
-  EulerCharacteristic=0
-  FVector=[ 11, 55, 110, 110, 44 ]
-  GVector=[ 5, 15, -20 ]
-  HVector=[ 6, 21, 1, 16, -1 ]
+  Chi=0
+  F=[ 11, 55, 110, 110, 44 ]
+  G=[ 5, 15, -20 ]
+  H=[ 6, 21, 1, 16, -1 ]
   HasBoundary=false
   HasInterior=true
   Homology=[ [ 0, [ ] ], [ 1, [ ] ], [ 0, [ ] ], [ 1, [ ] ], [ 1, [ ] ] ]
@@ -217,36 +198,26 @@
   IsConnected=true
   IsEulerianManifold=true
   IsOrientable=true
-  IsPseudoManifold=true
+  IsPM=true
   IsPure=true
-  IsStronglyConnected=true
   Neighborliness=2
  
  /SimplicialComplex]
  gap&gt; SCInfoLevel(0);
- true
  gap&gt; SCIsManifold(c);
  true
  gap&gt; SCInfoLevel(2); 
- true
  gap&gt; c.IsTight;                
- #I  SCIsInKd: complex has transitive automorphism group, only checking one link.
- #I  SCIsInKd: checking link 1/1
- #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
- #I  SCIsKStackedSphere: try 1/1
- #I  round 0
- Reduced complex, F: [ 9, 26, 34, 17 ]
- #I  round 1
- Reduced complex, F: [ 8, 22, 28, 14 ]
- #I  round 2
- Reduced complex, F: [ 7, 18, 22, 11 ]
- #I  round 3
- Reduced complex, F: [ 6, 14, 16, 8 ]
- #I  round 4
- Reduced complex, F: [ 5, 10, 10, 5 ]
+ #I  SCIsInKd: checking link 1/11
+ #I  SCIsKStackedSphere: try 1/50
+ #I  round 0: [ 9, 26, 34, 17 ]
+ #I  round 1: [ 8, 22, 28, 14 ]
+ #I  round 2: [ 7, 18, 22, 11 ]
+ #I  round 3: [ 6, 14, 16, 8 ]
+ #I  round 4: [ 5, 10, 10, 5 ]
  #I  SCReduceComplexEx: computed locally minimal complex after 5 rounds.
- #I  SCIsKStackedSphere: complex is a 1-stacked sphere.
- #I  SCIsInKd: complex has transitive automorphism group, all links are 1-stacked.
+ #I  SCIsInKd: complex has transitive automorphism group, all links are 
+ 1-stacked.
  #I  SCIsTight: complex is in class K(1) and 2-neighborly, thus tight.
  true
  </pre></div>
@@ -288,21 +259,20 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdCyclicPolytope(4,6);;
  gap&gt; v:=SCVertices(c);
- [ 1 .. 6 ]
+ [ 1, 2, 3, 4, 5, 6 ]
  gap&gt; SCMinimalNonFaces(c);
  [ [  ], [  ], [ [ 1, 3, 5 ], [ 2, 4, 6 ] ] ]
  gap&gt; ns:=SCSlicing(c,[v{[1,3,5]},v{[2,4,6]}]);     
  [NormalSurface
  
-  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\
- etsEx, Genus, IsConnected, IsOrientable, NSTriangulation, Name, TopologicalTyp\
- e, Vertices.
+  Properties known: Chi, ConnectedComponents, Dim, F, Facets, Genus, IsConnecte\
+ d, Name, Oriented, Subdivision, TopologicalType, SCVertices, Vertices.
  
   Name="slicing [ [ 1, 3, 5 ], [ 2, 4, 6 ] ] of Bd(C_4(6))"
   Dim=2
-  FVector=[ 9, 18, 0, 9 ]
-  EulerCharacteristic=0
-  IsOrientable=true
+  Chi=0
+  F=[ 9, 18, 0, 9 ]
+  IsConnected=true
   TopologicalType="T^2"
  
  /NormalSurface]
@@ -312,7 +282,7 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdSimplex(5);;
  gap&gt; v:=SCVertices(c);
- [ 1 .. 6 ]
+ [ 1, 2, 3, 4, 5, 6 ]
  gap&gt; slicing:=SCSlicing(c,[v{[1,3,5]},v{[2,4,6]}]);
  [ [ [ 1, 2 ], [ 1, 4 ], [ 3, 2 ], [ 3, 4 ], [ 5, 2 ], [ 5, 4 ] ], 
    [ [ 1, 2 ], [ 1, 4 ], [ 1, 6 ], [ 3, 2 ], [ 3, 4 ], [ 3, 6 ] ], 
@@ -334,15 +304,17 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");      
- [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
+ [ [ 550, "K3 surface" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;    
  gap&gt; f:=SCVertices(c);              
  [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ]
  gap&gt; SCMorseMultiplicityVector(c,f);
- [ [ 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0 ], 
-   [ 0, 0, 2, 0, 0 ], [ 0, 0, 1, 0, 0 ], [ 0, 0, 4, 0, 0 ], [ 0, 0, 3, 0, 0 ], 
-   [ 0, 0, 3, 0, 0 ], [ 0, 0, 4, 0, 0 ], [ 0, 0, 1, 0, 0 ], [ 0, 0, 2, 0, 0 ], 
-   [ 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1 ] ]
+ [ [ 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], 
+   [ 0, 0, 1, 0, 0 ], [ 0, 0, 2, 0, 0 ], [ 0, 0, 1, 0, 0 ], 
+   [ 0, 0, 4, 0, 0 ], [ 0, 0, 3, 0, 0 ], [ 0, 0, 3, 0, 0 ], 
+   [ 0, 0, 4, 0, 0 ], [ 0, 0, 1, 0, 0 ], [ 0, 0, 2, 0, 0 ], 
+   [ 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], 
+   [ 0, 0, 0, 0, 1 ] ]
  </pre></div>
 
 <p><a id="X8396E28E79618B05" name="X8396E28E79618B05"></a></p>
@@ -357,7 +329,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");      
- [ [ 7494, "K3_16" ], [ 7513, "K3_17" ] ]
+ [ [ 550, "K3 surface" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;    
  gap&gt; f:=SCVertices(c);              
  [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ]

@@ -5,6 +5,7 @@
    If javascript is switched off in a browser or this file in not available
    in a manual directory, this is no problem. Users just cannot switch
    between several styles and don't see the corresponding button.
+
    A style with name mystyle can be added by providing two files (or only
    one of them).
      mystyle.js:   Additional javascript code for the style, it is 
@@ -17,12 +18,14 @@
                    javascript.
      mystyle.css:  CSS configuration, read after manual.css (so it can 
                    just reconfigure a few details, or overwrite everything).
+
   Then adjust chooser.html such that users can switch on and off mystyle.
  
   A user can change the preferred style permanently by using the [Style]
   link and choosing one. Or one can append '?GAPDocStyle=mystyle' to the URL
   when loading any file of the manual (so the style can be configured in
   the GAP user preferences). 
+
 */
 
 /* generic helper function */

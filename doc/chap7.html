@@ -19,7 +19,7 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap6.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap8.html">[Next Chapter]</a>&nbsp;  </div>
 
-<p id="mathjaxlink" class="pcenter"></p>
+<p id="mathjaxlink" class="pcenter"><a href="chap7_mj.html">[MathJax on]</a></p>
 <p><a id="X8071FAE8806ACAA2" name="X8071FAE8806ACAA2"></a></p>
 <div class="ChapSects"><a href="chap7.html#X8071FAE8806ACAA2">7 <span class="Heading">Functions and operations for <code class="code">SCNormalSurface</code></span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap7.html#X7C63CE8578FBB0C7">7.1 <span class="Heading">Creating an <code class="code">SCNormalSurface</code> object</span></a>
@@ -82,9 +82,9 @@
  gap&gt; SCNSEmpty();
  [NormalSurface
  
-  Properties known: Dim, FacetsEx, Name, Vertices.
+  Properties known: Dim, Faces, Facets, Name, SCVertices.
  
-  Name="empty normal surface"
+  Name="empty discrete normal surface"
   Dim=-1
  
  /NormalSurface]
@@ -104,9 +104,9 @@
  gap&gt; sl:=SCNSFromFacets([[1,2,3],[1,2,4,5],[1,3,4,6],[2,3,5,6],[4,5,6]]);
  [NormalSurface
  
-  Properties known: Dim, FacetsEx, Name, Vertices.
+  Properties known: Dim, Facets, Name, SCVertices.
  
-  Name="unnamed complex 86"
+  Name="unnamed discrete normal surface m"
   Dim=2
  
  /NormalSurface]
@@ -126,9 +126,9 @@
  gap&gt; sl:=SCNS([[1,2,3],[1,2,4,5],[1,3,4,6],[2,3,5,6],[4,5,6]]);
  [NormalSurface
  
-  Properties known: Dim, FacetsEx, Name, Vertices.
+  Properties known: Dim, Facets, Name, SCVertices.
  
-  Name="unnamed complex 87"
+  Name="unnamed discrete normal surface n"
   Dim=2
  
  /NormalSurface]
@@ -146,79 +146,56 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByAttribute("F=[ 10, 35, 50, 25 ]");
- [ [ 19, "S^3 (VT)" ] ]
+ [ [ 4, "S^3 (VT)" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;                       
  gap&gt; sl:=SCNSSlicing(c,[[1..5],[6..10]]);    
  [NormalSurface
  
-  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\
- etsEx, Genus, IsConnected, IsOrientable, NSTriangulation, Name, TopologicalTyp\
- e, Vertices.
+  Properties known: Chi, ConnectedComponents, Dim, F, Facets, Genus, IsConnect\
+ ed, Name, Oriented, Subdivision, TopologicalType, SCVertices, Vertices.
  
-  Name="slicing [ [ 1, 2, 3, 4, 5 ], [ 6, 7, 8, 9, 10 ] ] of S^3 (VT)"
+  Name="slicing [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] of S^3 (VT)"
   Dim=2
-  FVector=[ 17, 36, 12, 9 ]
-  EulerCharacteristic=2
-  IsOrientable=true
+  Chi=2
+  F=[ 9, 16, 4, 5 ]
+  IsConnected=true
   TopologicalType="S^2"
  
  /NormalSurface]
  gap&gt; sl.Facets;
- [ [ [ 1, 6 ], [ 1, 8 ], [ 1, 9 ] ], [ [ 1, 6 ], [ 1, 8 ], [ 3, 6 ], [ 3, 8 ] ]
-     , [ [ 1, 6 ], [ 1, 9 ], [ 4, 6 ], [ 4, 9 ] ], 
-   [ [ 1, 6 ], [ 3, 6 ], [ 4, 6 ] ], [ [ 1, 8 ], [ 1, 9 ], [ 1, 10 ] ], 
-   [ [ 1, 8 ], [ 1, 10 ], [ 3, 8 ], [ 3, 10 ] ], 
-   [ [ 1, 9 ], [ 1, 10 ], [ 2, 9 ], [ 2, 10 ] ], 
-   [ [ 1, 9 ], [ 2, 9 ], [ 4, 9 ] ], [ [ 1, 10 ], [ 2, 10 ], [ 3, 10 ] ], 
-   [ [ 2, 7 ], [ 2, 9 ], [ 2, 10 ] ], 
-   [ [ 2, 7 ], [ 2, 9 ], [ 4, 7 ], [ 4, 9 ] ], 
-   [ [ 2, 7 ], [ 2, 10 ], [ 5, 7 ], [ 5, 10 ] ], 
-   [ [ 2, 7 ], [ 4, 7 ], [ 5, 7 ] ], [ [ 2, 10 ], [ 3, 10 ], [ 5, 10 ] ], 
-   [ [ 3, 6 ], [ 3, 8 ], [ 5, 6 ], [ 5, 8 ] ], [ [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]
-     , [ [ 3, 8 ], [ 3, 10 ], [ 5, 8 ], [ 5, 10 ] ], 
-   [ [ 4, 6 ], [ 4, 7 ], [ 4, 9 ] ], [ [ 4, 6 ], [ 4, 7 ], [ 5, 6 ], [ 5, 7 ] ]
-     , [ [ 5, 6 ], [ 5, 7 ], [ 5, 8 ] ], [ [ 5, 7 ], [ 5, 8 ], [ 5, 10 ] ] ]
+ [ [ [ 1, 4 ], [ 2, 4 ], [ 3, 4 ] ], 
+   [ [ 1, 6 ], [ 2, 6 ], [ 3, 6 ] ], 
+   [ [ 1, 4 ], [ 1, 5 ], [ 2, 4 ], [ 2, 5 ] ], 
+   [ [ 1, 5 ], [ 1, 6 ], [ 2, 5 ], [ 2, 6 ] ], 
+   [ [ 1, 4 ], [ 1, 6 ], [ 3, 4 ], [ 3, 6 ] ], 
+   [ [ 1, 4 ], [ 1, 5 ], [ 1, 6 ] ], 
+   [ [ 2, 4 ], [ 2, 5 ], [ 3, 4 ], [ 3, 5 ] ], 
+   [ [ 2, 5 ], [ 2, 6 ], [ 3, 5 ], [ 3, 6 ] ], 
+   [ [ 3, 4 ], [ 3, 5 ], [ 3, 6 ] ] ]
  gap&gt; sl:=SCNSSlicing(c,[[1,3,5,7,9],[2,4,6,8,10]]);    
  [NormalSurface
  
-  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\
- etsEx, Genus, IsConnected, IsOrientable, NSTriangulation, Name, TopologicalTyp\
- e, Vertices.
+  Properties known: Chi, ConnectedComponents, Dim, F, Facets, Genus, IsConnect\
+ ed, Name, Oriented, Subdivision, TopologicalType, SCVertices, Vertices.
  
-  Name="slicing [ [ 1, 3, 5, 7, 9 ], [ 2, 4, 6, 8, 10 ] ] of S^3 (VT)"
+  Name="slicing [ [ 1, 3, 5 ], [ 2, 4, 6 ] ] of S^3 (VT)"
   Dim=2
-  FVector=[ 25, 50, 0, 25 ]
-  EulerCharacteristic=0
-  IsOrientable=true
+  Chi=0
+  F=[ 9, 18, 0, 9 ]
+  IsConnected=true
   TopologicalType="T^2"
  
  /NormalSurface]
  gap&gt; sl.Facets;                           
  [ [ [ 1, 2 ], [ 1, 4 ], [ 3, 2 ], [ 3, 4 ] ], 
-   [ [ 1, 2 ], [ 1, 4 ], [ 9, 2 ], [ 9, 4 ] ], 
-   [ [ 1, 2 ], [ 1, 10 ], [ 3, 2 ], [ 3, 10 ] ], 
-   [ [ 1, 2 ], [ 1, 10 ], [ 9, 2 ], [ 9, 10 ] ], 
+   [ [ 1, 2 ], [ 1, 6 ], [ 3, 2 ], [ 3, 6 ] ], 
+   [ [ 1, 2 ], [ 1, 4 ], [ 5, 2 ], [ 5, 4 ] ], 
+   [ [ 1, 2 ], [ 1, 6 ], [ 5, 2 ], [ 5, 6 ] ], 
    [ [ 1, 4 ], [ 1, 6 ], [ 3, 4 ], [ 3, 6 ] ], 
-   [ [ 1, 4 ], [ 1, 6 ], [ 9, 4 ], [ 9, 6 ] ], 
-   [ [ 1, 6 ], [ 1, 8 ], [ 3, 6 ], [ 3, 8 ] ], 
-   [ [ 1, 6 ], [ 1, 8 ], [ 9, 6 ], [ 9, 8 ] ], 
-   [ [ 1, 8 ], [ 1, 10 ], [ 3, 8 ], [ 3, 10 ] ], 
-   [ [ 1, 8 ], [ 1, 10 ], [ 9, 8 ], [ 9, 10 ] ], 
+   [ [ 1, 4 ], [ 1, 6 ], [ 5, 4 ], [ 5, 6 ] ], 
    [ [ 3, 2 ], [ 3, 4 ], [ 5, 2 ], [ 5, 4 ] ], 
-   [ [ 3, 2 ], [ 3, 10 ], [ 5, 2 ], [ 5, 10 ] ], 
-   [ [ 3, 4 ], [ 3, 6 ], [ 5, 4 ], [ 5, 6 ] ], 
-   [ [ 3, 6 ], [ 3, 8 ], [ 5, 6 ], [ 5, 8 ] ], 
-   [ [ 3, 8 ], [ 3, 10 ], [ 5, 8 ], [ 5, 10 ] ], 
-   [ [ 5, 2 ], [ 5, 4 ], [ 7, 2 ], [ 7, 4 ] ], 
-   [ [ 5, 2 ], [ 5, 10 ], [ 7, 2 ], [ 7, 10 ] ], 
-   [ [ 5, 4 ], [ 5, 6 ], [ 7, 4 ], [ 7, 6 ] ], 
-   [ [ 5, 6 ], [ 5, 8 ], [ 7, 6 ], [ 7, 8 ] ], 
-   [ [ 5, 8 ], [ 5, 10 ], [ 7, 8 ], [ 7, 10 ] ], 
-   [ [ 7, 2 ], [ 7, 4 ], [ 9, 2 ], [ 9, 4 ] ], 
-   [ [ 7, 2 ], [ 7, 10 ], [ 9, 2 ], [ 9, 10 ] ], 
-   [ [ 7, 4 ], [ 7, 6 ], [ 9, 4 ], [ 9, 6 ] ], 
-   [ [ 7, 6 ], [ 7, 8 ], [ 9, 6 ], [ 9, 8 ] ], 
-   [ [ 7, 8 ], [ 7, 10 ], [ 9, 8 ], [ 9, 10 ] ] ]
+   [ [ 3, 2 ], [ 3, 6 ], [ 5, 2 ], [ 5, 6 ] ], 
+   [ [ 3, 4 ], [ 3, 6 ], [ 5, 4 ], [ 5, 6 ] ] ]
  </pre></div>
 
 <p><a id="X7E853EF97A3D0220" name="X7E853EF97A3D0220"></a></p>
@@ -241,30 +218,28 @@
  gap&gt; sl:=SCNSSlicing(SCBdSimplex(4),[[1],[2..5]]);
  [NormalSurface
  
-  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\
- etsEx, Genus, IsConnected, IsOrientable, NSTriangulation, Name, TopologicalTyp\
- e, Vertices.
+  Properties known: Chi, ConnectedComponents, Dim, F, Facets, Genus, IsConnect\
+ ed, Name, Oriented, Subdivision, TopologicalType, SCVertices, Vertices.
  
   Name="slicing [ [ 1 ], [ 2, 3, 4, 5 ] ] of S^3_5"
   Dim=2
-  FVector=[ 4, 6, 4 ]
-  EulerCharacteristic=2
-  IsOrientable=true
+  Chi=2
+  F=[ 4, 6, 4 ]
+  IsConnected=true
   TopologicalType="S^2"
  
  /NormalSurface]
  gap&gt; sl_2:=SCCopy(sl);                          
  [NormalSurface
  
-  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\
- etsEx, Genus, IsConnected, IsOrientable, NSTriangulation, Name, TopologicalTyp\
- e, Vertices.
+  Properties known: Chi, ConnectedComponents, Dim, F, Facets, Genus, IsConnect\
+ ed, Name, Oriented, Subdivision, TopologicalType, SCVertices, Vertices.
  
   Name="slicing [ [ 1 ], [ 2, 3, 4, 5 ] ] of S^3_5"
   Dim=2
-  FVector=[ 4, 6, 4 ]
-  EulerCharacteristic=2
-  IsOrientable=true
+  Chi=2
+  F=[ 4, 6, 4 ]
+  IsConnected=true
   TopologicalType="S^2"
  
  /NormalSurface]
@@ -284,14 +259,14 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByAttribute("F=[ 10, 35, 50, 25 ]");
- [ [ 19, "S^3 (VT)" ] ]
+ [ [ 4, "S^3 (VT)" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; sl:=SCNSSlicing(c,[[1,3,5,7,9],[2,4,6,8,10]]);;
  gap&gt; sl.F; 
- [ 25, 50, 0, 25 ]
+ [ 9, 18, 0, 9 ]
  gap&gt; sc:=SCNSTriangulation(sl);;
  gap&gt; sc.F;
- [ 25, 75, 50 ]
+ [ 9, 27, 18 ]
  </pre></div>
 
 <p><a id="X83A1885E876D7483" name="X83A1885E876D7483"></a></p>
@@ -312,46 +287,7 @@
 
 <div class="example"><pre>
  gap&gt; sl:=SCNSSlicing(SCBdCrossPolytope(4),[[1,2],[3..8]]);
- [NormalSurface
- 
-  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\
- etsEx, IsConnected, IsOrientable, NSTriangulation, Name, TopologicalType, Vert\
- ices.
- 
-  Name="slicing [ [ 1, 2 ], [ 3, 4, 5, 6, 7, 8 ] ] of Bd(\beta^4)"
-  Dim=2
-  FVector=[ 12, 24, 16 ]
-  EulerCharacteristic=4
-  IsOrientable=true
-  TopologicalType="S^2 U S^2"
- 
- /NormalSurface]
  gap&gt; cc:=SCConnectedComponents(sl);
- [ [NormalSurface
-     
-      Properties known: Dim, EulerCharacteristic, FVector, FacetsEx, Genus, IsC\
- onnected, IsOrientable, NSTriangulation, Name, TopologicalType, Vertices.
-     
-      Name="unnamed complex 302_cc_#1"
-      Dim=2
-      FVector=[ 6, 12, 8 ]
-      EulerCharacteristic=2
-      IsOrientable=true
-      TopologicalType="S^2"
-     
-     /NormalSurface], [NormalSurface
-     
-      Properties known: Dim, EulerCharacteristic, FVector, FacetsEx, Genus, IsC\
- onnected, IsOrientable, NSTriangulation, Name, TopologicalType, Vertices.
-     
-      Name="unnamed complex 302_cc_#2"
-      Dim=2
-      FVector=[ 6, 12, 8 ]
-      EulerCharacteristic=2
-      IsOrientable=true
-      TopologicalType="S^2"
-     
-     /NormalSurface] ]
  </pre></div>
 
 <p><a id="X82351AAE793DCB68" name="X82351AAE793DCB68"></a></p>
@@ -426,12 +362,12 @@
  [ [ [ [ 1, 3 ] ], [ [ 1, 4 ] ], [ [ 1, 5 ] ], [ [ 2, 3 ] ], [ [ 2, 4 ] ], 
        [ [ 2, 5 ] ] ], 
    [ [ [ 1, 3 ], [ 1, 4 ] ], [ [ 1, 3 ], [ 1, 5 ] ], [ [ 1, 3 ], [ 2, 3 ] ], 
-       [ [ 1, 4 ], [ 1, 5 ] ], [ [ 1, 4 ], [ 2, 4 ] ], [ [ 1, 5 ], [ 2, 5 ] ], 
-       [ [ 2, 3 ], [ 2, 4 ] ], [ [ 2, 3 ], [ 2, 5 ] ], [ [ 2, 4 ], [ 2, 5 ] ] ]
-     , [ [ [ 1, 3 ], [ 1, 4 ], [ 1, 5 ] ], [ [ 2, 3 ], [ 2, 4 ], [ 2, 5 ] ] ], 
+     [ [ 1, 4 ], [ 1, 5 ] ], [ [ 1, 4 ], [ 2, 4 ] ], [ [ 1, 5 ], [ 2, 5 ] ],
+     [ [ 2, 3 ], [ 2, 4 ] ], [ [ 2, 3 ], [ 2, 5 ] ], [ [ 2, 4 ], [ 2, 5 ] ] ], 
+   [ [ [ 1, 3 ], [ 1, 4 ], [ 1, 5 ] ], [ [ 2, 3 ], [ 2, 4 ], [ 2, 5 ] ] ], 
    [ [ [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 4 ] ], 
-       [ [ 1, 3 ], [ 1, 5 ], [ 2, 3 ], [ 2, 5 ] ], 
-       [ [ 1, 4 ], [ 1, 5 ], [ 2, 4 ], [ 2, 5 ] ] ] ]
+     [ [ 1, 3 ], [ 1, 5 ], [ 2, 3 ], [ 2, 5 ] ], 
+     [ [ 1, 4 ], [ 1, 5 ], [ 2, 4 ], [ 2, 5 ] ] ] ]
  gap&gt; sl.F;
  [ 6, 9, 2, 3 ]
  </pre></div>
@@ -451,8 +387,9 @@
  gap&gt; sl:=SCNSSlicing(c,[[1,2],[3..5]]);;
  gap&gt; SCFaceLatticeEx(sl);                            
  [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
-   [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 5 ], [ 3, 6 ], [ 4, 5 ], 
-       [ 4, 6 ], [ 5, 6 ] ], [ [ 1, 2, 3 ], [ 4, 5, 6 ] ], 
+   [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 5 ], 
+     [ 3, 6 ], [ 4, 5 ], [ 4, 6 ], [ 5, 6 ] ], 
+   [ [ 1, 2, 3 ], [ 4, 5, 6 ] ], 
    [ [ 1, 2, 4, 5 ], [ 1, 3, 4, 6 ], [ 2, 3, 5, 6 ] ] ]
  gap&gt; sl.F;
  [ 6, 9, 2, 3 ]
@@ -470,7 +407,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("(S^2xS^1)#20");       
- [ [ 7619, "(S^2xS^1)#20" ] ]
+ [ [ 688, "(S^2xS^1)#20" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; c.F;
  [ 27, 298, 542, 271 ]
@@ -491,7 +428,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("(S^2xS^1)#20");
- [ [ 7619, "(S^2xS^1)#20" ] ]
+ [ [ 688, "(S^2xS^1)#20" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;               
  gap&gt; c.F;                               
  [ 27, 298, 542, 271 ]
@@ -514,7 +451,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("(S^2xS^1)#20");       
- [ [ 7619, "(S^2xS^1)#20" ] ]
+ [ [ 688, "(S^2xS^1)#20" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; c.F;
  [ 27, 298, 542, 271 ]
@@ -539,61 +476,8 @@
 <div class="example"><pre>
  gap&gt; list:=SCLib.SearchByAttribute("Dim=3 and F[1]=10");;
  gap&gt; c:=SCLib.Load(list[1][1]);
- [SimplicialComplex
- 
-  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-                    AutomorphismGroupTransitivity, ConnectedComponents, 
-                    Dim, DualGraph, EulerCharacteristic, FVector, 
-                    FacetsEx, GVector, GeneratorsEx, HVector, 
-                    HasBoundary, HasInterior, Homology, Interior, 
-                    IsCentrallySymmetric, IsConnected, 
-                    IsEulerianManifold, IsManifold, IsOrientable, 
-                    IsPseudoManifold, IsPure, IsStronglyConnected, 
-                    MinimalNonFacesEx, Name, Neighborliness, 
-                    NumFaces[], Orientation, Reference, SkelExs[], 
-                    Vertices.
- 
-  Name="S^3 (VT)"
-  Dim=3
-  AltshulerSteinberg=0
-  AutomorphismGroupSize=200
-  AutomorphismGroupStructure="(D10 x D10) : C2"
-  AutomorphismGroupTransitivity=1
-  EulerCharacteristic=0
-  FVector=[ 10, 35, 50, 25 ]
-  GVector=[ 5, 5 ]
-  HVector=[ 6, 11, 6, 1 ]
-  HasBoundary=false
-  HasInterior=true
-  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-  IsCentrallySymmetric=false
-  IsConnected=true
-  IsEulerianManifold=true
-  IsOrientable=true
-  IsPseudoManifold=true
-  IsPure=true
-  IsStronglyConnected=true
-  Neighborliness=1
- 
- /SimplicialComplex]
  gap&gt; sl:=SCNSSlicing(c,[[1..5],[6..10]]);
- [NormalSurface
- 
-  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\
- etsEx, Genus, IsConnected, IsOrientable, NSTriangulation, Name, TopologicalTyp\
- e, Vertices.
- 
-  Name="slicing [ [ 1, 2, 3, 4, 5 ], [ 6, 7, 8, 9, 10 ] ] of S^3 (VT)"
-  Dim=2
-  FVector=[ 17, 36, 12, 9 ]
-  EulerCharacteristic=2
-  IsOrientable=true
-  TopologicalType="S^2"
- 
- /NormalSurface]
  gap&gt; SCIsConnected(sl);
- true
  </pre></div>
 
 <p><a id="X860375D980E9A801" name="X860375D980E9A801"></a></p>
@@ -609,7 +493,6 @@
 <div class="example"><pre>
  gap&gt; sl:=SCNS([]);;
  gap&gt; SCIsEmpty(sl);
- true
  </pre></div>
 
 <p><a id="X78C860DC851167F7" name="X78C860DC851167F7"></a></p>
@@ -625,20 +508,6 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdSimplex(4);;
  gap&gt; sl:=SCNSSlicing(c,[[1,2],[3,4,5]]);
- [NormalSurface
- 
-  Properties known: ConnectedComponents, Dim, EulerCharacteristic, FVector, Fac\
- etsEx, Genus, IsConnected, IsOrientable, NSTriangulation, Name, TopologicalTyp\
- e, Vertices.
- 
-  Name="slicing [ [ 1, 2 ], [ 3, 4, 5 ] ] of S^3_5"
-  Dim=2
-  FVector=[ 6, 9, 2, 3 ]
-  EulerCharacteristic=2
-  IsOrientable=true
-  TopologicalType="S^2"
- 
- /NormalSurface]
  gap&gt; SCIsOrientable(sl);
  true
  </pre></div>
@@ -668,10 +537,12 @@
  gap&gt; c:=SCBdSimplex(4);;              
  gap&gt; sl:=SCNSSlicing(c,[[1],[2..5]]);;
  gap&gt; SCSkel(sl,3);                            
- [  ]
+ [ ]
  gap&gt; sl:=SCNSSlicing(c,[[1,2],[3..5]]);;
  gap&gt; SCSkelEx(sl,3);                            
- [ [ 1, 2, 4, 5 ], [ 1, 3, 4, 6 ], [ 2, 3, 5, 6 ] ]
+ [ [ [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 4 ] ], 
+   [ [ 1, 3 ], [ 1, 5 ], [ 2, 3 ], [ 2, 5 ] ], 
+   [ [ 1, 4 ], [ 1, 5 ], [ 2, 4 ], [ 2, 5 ] ] ]
  </pre></div>
 
 <p><a id="X84ACF7D580FE8B76" name="X84ACF7D580FE8B76"></a></p>
@@ -698,7 +569,7 @@
  gap&gt; c:=SCBdSimplex(4);;              
  gap&gt; sl:=SCNSSlicing(c,[[1],[2..5]]);;
  gap&gt; SCSkelEx(sl,3);                            
- [  ]
+ [ ]
  gap&gt; sl:=SCNSSlicing(c,[[1,2],[3..5]]);;
  gap&gt; SCSkelEx(sl,3);                            
  [ [ 1, 2, 4, 5 ], [ 1, 3, 4, 6 ], [ 2, 3, 5, 6 ] ]
@@ -716,7 +587,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("(S^2xS^1)#20");      
- [ [ 7619, "(S^2xS^1)#20" ] ]
+ [ [ 688, "(S^2xS^1)#20" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; c.F;
  [ 27, 298, 542, 271 ]
@@ -762,49 +633,10 @@
 <div class="example"><pre>
  gap&gt; list:=SCLib.SearchByAttribute("Dim=3 and F[1]=10");;
  gap&gt; c:=SCLib.Load(list[1][1]);
- [SimplicialComplex
- 
-  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-                    AutomorphismGroupTransitivity, ConnectedComponents, 
-                    Dim, DualGraph, EulerCharacteristic, FVector, 
-                    FacetsEx, GVector, GeneratorsEx, HVector, 
-                    HasBoundary, HasInterior, Homology, Interior, 
-                    IsCentrallySymmetric, IsConnected, 
-                    IsEulerianManifold, IsManifold, IsOrientable, 
-                    IsPseudoManifold, IsPure, IsStronglyConnected, 
-                    MinimalNonFacesEx, Name, Neighborliness, 
-                    NumFaces[], Orientation, Reference, SkelExs[], 
-                    Vertices.
- 
-  Name="S^3 (VT)"
-  Dim=3
-  AltshulerSteinberg=0
-  AutomorphismGroupSize=200
-  AutomorphismGroupStructure="(D10 x D10) : C2"
-  AutomorphismGroupTransitivity=1
-  EulerCharacteristic=0
-  FVector=[ 10, 35, 50, 25 ]
-  GVector=[ 5, 5 ]
-  HVector=[ 6, 11, 6, 1 ]
-  HasBoundary=false
-  HasInterior=true
-  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-  IsCentrallySymmetric=false
-  IsConnected=true
-  IsEulerianManifold=true
-  IsOrientable=true
-  IsPseudoManifold=true
-  IsPure=true
-  IsStronglyConnected=true
-  Neighborliness=1
- 
- /SimplicialComplex]
  gap&gt; sl1:=SCNSSlicing(c,[[1..5],[6..10]]);;
  gap&gt; sl2:=sl1+10;;
  gap&gt; sl3:=SCUnion(sl1,sl2);;
  gap&gt; SCTopologicalType(sl3);
- "S^2 U S^2"
  </pre></div>
 
 

@@ -60,7 +60,7 @@ see the file COPYING in the `simpcomp` directory or
   will see something like the following:
 
 <pre>
-  gap> SCLoadPackage("simpcomp");
+  gap> LoadPackage("simpcomp");
   ─────────────────────────────────────────────────────────────────────────
   Loading  AutoDoc 2014.08.21 (Generate documentation from GAP source code)
   by Sebastian Gutsche (http://wwwb.math.rwth-aachen.de/~gutsche/) and
@@ -73,7 +73,7 @@ see the file COPYING in the `simpcomp` directory or
   by Leonard H. Soicher (http://www.maths.qmul.ac.uk/~leonard/).
   Homepage: http://www.maths.qmul.ac.uk/~leonard/grape/
   ─────────────────────────────────────────────────────────────────────────
-  Loading simpcomp 2.1.10
+  Loading simpcomp 0.0.0
   by F.Effenberger and J.Spreer
   https://github.com/simpcomp-team/simpcomp/
   true
@@ -97,6 +97,12 @@ see the file COPYING in the `simpcomp` directory or
 
 ## Changes
 
+28/05/2021 - Version 2.1.12: TEST RELEASE
+
+31/07/2020 - Version 2.1.11: MINOR UPDATE
+- First use of gap release tools 
+- Changed test file output to accommodate changes in other packages
+- Fixed bug in SCIsStackedSphere
 
 03/06/2019 - Version 2.1.10: MINOR UPDATE
 - Added generated files to archive

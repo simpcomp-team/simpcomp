@@ -19,7 +19,7 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap8.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap10.html">[Next Chapter]</a>&nbsp;  </div>
 
-<p id="mathjaxlink" class="pcenter"></p>
+<p id="mathjaxlink" class="pcenter"><a href="chap9_mj.html">[MathJax on]</a></p>
 <p><a id="X82F1CE7A79A3CA47" name="X82F1CE7A79A3CA47"></a></p>
 <div class="ChapSects"><a href="chap9.html#X82F1CE7A79A3CA47">9 <span class="Heading">Bistellar flips</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap9.html#X8729B87B848E3F89">9.1 <span class="Heading">Theory</span></a>
@@ -123,7 +123,7 @@
  gap&gt; SCBistellarOptions.Mode;
  0
  gap&gt; SCBistellarOptions.WriteLevel;
- 0
+ 1
  gap&gt; SCBistellarOptions.MailNotifyInterval;
  86400
  gap&gt; SCBistellarOptions.MaxIntervalIsManifold;
@@ -151,6 +151,9 @@
  gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
  gap&gt; refObj:=SCBdSimplex(2);; # triangle as a (minimal) reference object
  gap&gt; SCEquivalent(obj,refObj);
+ #I  round 0: [ 5, 5 ]
+ #I  round 1: [ 4, 4 ]
+ #I  round 2: [ 3, 3 ]
  #I  SCReduceComplexEx: complexes are bistellarly equivalent.
  true
  </pre></div>
@@ -169,25 +172,24 @@
  gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);
  [SimplicialComplex
  
-  Properties known: Dim, FacetsEx, Name, Vertices.
+  Properties known: Dim, Facets, Name, SCVertices.
  
-  Name="unnamed complex 7"
+  Name="unnamed complex m"
   Dim=1
  
  /SimplicialComplex]
  gap&gt; SCExamineComplexBistellar(obj);
  [SimplicialComplex
  
-  Properties known: AltshulerSteinberg, BoundaryEx, Dim, FVector, 
-                    FacetsEx, HasBoundary, IsPseudoManifold, IsPure, 
-                    Name, NumFaces[], SkelExs[], Vertices.
+  Properties known: AltshulerSteinberg, Boundary, Chi, Dim, F, Faces, Facets, 
+                    HasBoundary, IsPM, IsPure, Name, SCVertices.
  
-  Name="unnamed complex 7"
+  Name="unnamed complex 21"
   Dim=1
-  AltshulerSteinberg=0
-  FVector=[ 6, 6 ]
+  Chi=0
+  F=[ 6, 6 ]
   HasBoundary=false
-  IsPseudoManifold=true
+  IsPM=true
   IsPure=true
  
  /SimplicialComplex]
@@ -222,34 +224,30 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("S^4~S^1");
- [ [ 463, "S^4~S^1 (VT)" ], [ 1474, "S^4~S^1 (VT)" ], [ 1475, "S^4~S^1 (VT)" ],
-   [ 2477, "S^4~S^1 (VT)" ], [ 4395, "S^4~S^1 (VT)" ], 
-   [ 4396, "S^4~S^1 (VT)" ], [ 4397, "S^4~S^1 (VT)" ], 
-   [ 4398, "S^4~S^1 (VT)" ], [ 4399, "S^4~S^1 (VT)" ], 
-   [ 4402, "S^4~S^1 (VT)" ], [ 4403, "S^4~S^1 (VT)" ], 
-   [ 4404, "S^4~S^1 (VT)" ] ]
+ [ [ 204, "S^4~S^1 (VT)" ], [ 339, "S^4~S^1 (VT)" ], [ 341, "S^4~S^1 (VT)" ], 
+   [ 438, "S^4~S^1 (VT)" ], [ 493, "S^4~S^1 (VT)" ], [ 494, "S^4~S^1 (VT)" ], 
+   [ 495, "S^4~S^1 (VT)" ], [ 496, "S^4~S^1 (VT)" ], [ 497, "S^4~S^1 (VT)" ], 
+   [ 500, "S^4~S^1 (VT)" ], [ 501, "S^4~S^1 (VT)" ], [ 502, "S^4~S^1 (VT)" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; l:=SCLink(c,1);
  [SimplicialComplex
  
-  Properties known: Dim, FacetsEx, Name, Vertices.
+  Properties known: Dim, Facets, Name, SCVertices.
  
-  Name="lk([ 1 ]) in S^4~S^1 (VT)"
+  Name="lk(1) in S^4~S^1 (VT)"
   Dim=4
  
  /SimplicialComplex]
  gap&gt; SCIsKStackedSphere(l,1);
- #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
- #I  SCIsKStackedSphere: try 1/1
- #I  SCIsKStackedSphere: complex is a 1-stacked sphere.
- [ true, [SimplicialComplex
-     
-      Properties known: Dim, FacetsEx, Name, Vertices.
-     
-      Name="Filled 1-stacked sphere (lk([ 1 ]) in S^4~S^1 (VT))"
-      Dim=5
-     
-     /SimplicialComplex] ]
+ #I  SCIsKStackedSphere: try 1/50
+ #I  round 0: [ 11, 40, 70, 65, 26 ]
+ #I  round 1: [ 10, 35, 60, 55, 22 ]
+ #I  round 2: [ 9, 30, 50, 45, 18 ]
+ #I  round 3: [ 8, 25, 40, 35, 14 ]
+ #I  round 4: [ 7, 20, 30, 25, 10 ]
+ #I  round 5: [ 6, 15, 20, 15, 6 ]
+ #I  SCReduceComplexEx: computed locally minimal complex after 6 rounds.
+ 1
  </pre></div>
 
 <p><a id="X7E81340E8469C8EB" name="X7E81340E8469C8EB"></a></p>
@@ -271,6 +269,15 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdCrossPolytope(3);;
  gap&gt; SCBistellarIsManifold(c);
+ #I  SCBistellarIsManifold: processing vertex link 1/6
+ #I  round 0: [ 3, 3 ]
+ #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
+ #I  SCBistellarIsManifold: link is sphere.
+ ...
+ #I  SCBistellarIsManifold: processing vertex link 6/6
+ #I  round 0: [ 3, 3 ]
+ #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
+ #I  SCBistellarIsManifold: link is sphere.
  true
  </pre></div>
 
@@ -314,26 +321,27 @@
 <div class="example"><pre>
  gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,1]]);
  [SimplicialComplex
- 
-  Properties known: Dim, FacetsEx, Name, Vertices.
- 
-  Name="unnamed complex 5"
-  Dim=1
- 
+
+ Properties known: Dim, Facets, Name, SCVertices.
+
+ Name="unnamed complex m"
+ Dim=1
+
  /SimplicialComplex]
  gap&gt; moves:=SCMoves(obj);
- [ [ [ [ 1, 2 ], [  ] ], [ [ 1, 4 ], [  ] ], [ [ 2, 3 ], [  ] ], 
-       [ [ 3, 4 ], [  ] ] ], 
-   [ [ [ 1 ], [ 2, 4 ] ], [ [ 2 ], [ 1, 3 ] ], [ [ 3 ], [ 2, 4 ] ], 
-       [ [ 4 ], [ 1, 3 ] ] ] ]
+ [[[[1, 2], []], [[1, 4], []], 
+     [[2, 3], []], [[3, 4], []]], 
+   [[[1], [2, 4]], [[2], [1, 3]], 
+     [[3], [2, 4]], [[4], [1, 3]]]]
  gap&gt; obj:=SCMove(obj,last[2][1]);
  [SimplicialComplex
  
-  Properties known: Dim, FacetsEx, Name, NumFaces[], SkelExs[], 
-                    Vertices.
- 
-  Name="unnamed complex 6"
+  Properties known: Chi, Dim, F, Faces, Facets, SCVertices.
+
+  Name="unnamed complex m"
   Dim=1
+  Chi=0
+  F=[3, 3]
  
  /SimplicialComplex]
  </pre></div>
@@ -351,14 +359,19 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdCrossPolytope(3);;
  gap&gt; moves:=SCMoves(c);
- [ [ [ [ 1, 3, 5 ], [  ] ], [ [ 1, 3, 6 ], [  ] ], [ [ 1, 4, 5 ], [  ] ], 
-       [ [ 1, 4, 6 ], [  ] ], [ [ 2, 3, 5 ], [  ] ], [ [ 2, 3, 6 ], [  ] ], 
-       [ [ 2, 4, 5 ], [  ] ], [ [ 2, 4, 6 ], [  ] ] ], 
-   [ [ [ 1, 3 ], [ 5, 6 ] ], [ [ 1, 4 ], [ 5, 6 ] ], [ [ 1, 5 ], [ 3, 4 ] ], 
-       [ [ 1, 6 ], [ 3, 4 ] ], [ [ 2, 3 ], [ 5, 6 ] ], [ [ 2, 4 ], [ 5, 6 ] ], 
-       [ [ 2, 5 ], [ 3, 4 ] ], [ [ 2, 6 ], [ 3, 4 ] ], [ [ 3, 5 ], [ 1, 2 ] ], 
-       [ [ 3, 6 ], [ 1, 2 ] ], [ [ 4, 5 ], [ 1, 2 ] ], [ [ 4, 6 ], [ 1, 2 ] ] ]
-     , [  ] ]
+ [
+ # 0-moves
+   [[[1, 3, 5], []], [[1, 3, 6], []], [[1, 4, 5], []], 
+     [[1, 4, 6], []], [[2, 3, 5], []], [[2, 3, 6], []],
+     [[2, 4, 5], []], [[2, 4, 6], []]], 
+ # 1-moves
+   [[[1, 3], [5, 6]], [[1, 4], [5, 6]], [[1, 5], [3, 4]], 
+     [[1, 6], [3, 4]], [[2, 3], [5, 6]], [[2, 4], [5, 6]], 
+     [[2, 5], [3, 4]], [[2, 6], [3, 4]], [[3, 5], [1, 2]], 
+     [[3, 6], [1, 2]], [[4, 5], [1, 2]], [[4, 6], [1, 2]]],
+ # 2-moves
+   [] 
+]
  </pre></div>
 
 <p><a id="X7E70D44179ED6A78" name="X7E70D44179ED6A78"></a></p>
@@ -398,16 +411,17 @@
 
 <div class="example"><pre>
  gap&gt; c:=SCRandomize(SCBdSimplex(4));
+ #I  SCRandomize: randomizing complex S^3_5 with allowed moves [ -1, 1, 1, 1 ]
  [SimplicialComplex
  
-  Properties known: Dim, FacetsEx, Name, Vertices.
+  Properties known: Dim, Facets, Name, SCVertices.
  
   Name="Randomized S^3_5"
-  Dim=3
+ Dim=3
  
  /SimplicialComplex]
  gap&gt; c.F;
- [ 16, 65, 98, 49 ]
+ [ 20, 85, 130, 65 ]
  </pre></div>
 
 <p><a id="X85D69E4F84E8E7D9" name="X85D69E4F84E8E7D9"></a></p>
@@ -434,11 +448,14 @@
  gap&gt; c:=SCFromFacets([[1,3],[3,5],[4,5],[4,1]]);;
  gap&gt; SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
  gap&gt; SCReduceAsSubcomplex(c,SCBdCrossPolytope(3));
+ #I  round 0, move: [ [ 2 ], [ 1, 4 ] ]
+ [ 3, 3 ]
+ #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
  [ true, [SimplicialComplex
      
-      Properties known: Dim, FacetsEx, Name, Vertices.
+      Properties known: Dim, Facets, Name, SCVertices.
      
-      Name="unnamed complex 36"
+      Name="unnamed complex 9"
       Dim=1
      
      /SimplicialComplex], 1 ]
@@ -464,11 +481,18 @@
  gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
  gap&gt; SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
  gap&gt; tmp := SCReduceComplex(obj);
+ #I  round 0, move: [ [ 6 ], [ 1, 5 ] ]
+ [ 5, 5 ]
+ #I  round 1, move: [ [ 4 ], [ 3, 5 ] ]
+ [ 4, 4 ]
+ #I  round 2, move: [ [ 3 ], [ 2, 5 ] ]
+ [ 3, 3 ]
+ #I  SCReduceComplexEx: computed locally minimal complex after 3 rounds.
  [ true, [SimplicialComplex
      
-      Properties known: Dim, FacetsEx, Name, Vertices.
+      Properties known: Dim, Facets, Name, SCVertices.
      
-      Name="unnamed complex 27"
+      Name="unnamed complex 6"
       Dim=1
      
      /SimplicialComplex], 3 ]
@@ -521,21 +545,13 @@
  gap&gt; SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
  [ true, [SimplicialComplex
      
-      Properties known: Dim, FacetsEx, Name, Vertices.
+      Properties known: Dim, Facets, Name, SCVertices.
      
-      Name="unnamed complex 13"
-      Dim=3
-     
-     /SimplicialComplex], 7 ]
- gap&gt; SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
- [ true, [SimplicialComplex
-     
-      Properties known: Dim, FacetsEx, Name, Vertices.
-     
-      Name="unnamed complex 18"
+      Name="unnamed complex 14425"
       Dim=3
      
      /SimplicialComplex], 9 ]
+ gap&gt; SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
  gap&gt; SCMailSetAddress("johndoe@somehost");   
  true
  gap&gt; SCMailIsEnabled();                     
@@ -543,21 +559,31 @@
  gap&gt; SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
  [ true, [SimplicialComplex
      
-      Properties known: Dim, FacetsEx, Name, Vertices.
+      Properties known: Boundary, Chi, Date, Dim, F, Faces, Facets, G, H, 
+                        HasBoundary, Homology, IsConnected, IsManifold, IsPM, 
+                        Name, SCVertices, Vertices.
      
-      Name="unnamed complex 23"
+      Name="ReducedComplex_5_vertices_9"
       Dim=3
+      Chi=0
+      F=[ 5, 10, 10, 5 ]
+      G=[ 0, 0 ]
+      H=[ 1, 1, 1, 1 ]
+      HasBoundary=false
+      Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
+      IsConnected=true
+      IsPM=true
      
-     /SimplicialComplex], 7 ]
+     /SimplicialComplex], 9 ]
  </pre></div>
 
 <p>Content of sent mail:</p>
 
 
-<div class="example"><pre> 
+<div class="example"><pre> NOEXECUTE
  Greetings master,
  
- this is simpcomp 2.1.10 running on comp01.maths.fancytown.edu
+ this is simpcomp 0.0.0 running on comp01.maths.fancytown.edu
 
  I have been working hard for 0 seconds and have a message for you, see below.
  
