@@ -97,6 +97,8 @@ see the file COPYING in the `simpcomp` directory or
 
 ## Changes
 
+28/05/2021 - Version 2.1.12: TEST RELEASE
+
 31/07/2020 - Version 2.1.11: MINOR UPDATE
 - First use of gap release tools 
 - Changed test file output to accommodate changes in other packages

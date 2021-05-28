@@ -3,7 +3,7 @@
   
   <Subtitle>A &GAP; toolbox for simplicial complexes</Subtitle>
   
-  <Version>Version 2.1.11</Version>
+  <Version>Version 2.1.12</Version>
 
   <Author>
   	Felix Effenberger
@@ -23,7 +23,6 @@
   </Author>
 
   
-  <Date>31/07/2020
 	<Alt Only="LaTeX"><![CDATA[
 	\begin{center}
 	\vspace*{1cm}
@@ -45,7 +44,7 @@
 	The authors acknowledge support by the Deutsche Forschungsgemeinschaft (DFG): <Package>simpcomp</Package> has been developed within the DFG projects Ku 1203/5-2 and Ku 1203/5-3. 
   </Acknowledgements>
 
-  <Copyright>&copyright; 2020 Felix Effenberger and Jonathan Spreer. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation, see <URL>http://www.fsf.org/licensing/licenses/fdl.html</URL> for a copy.<P/>
+  <Copyright>&copyright; 2021 Felix Effenberger and Jonathan Spreer. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation, see <URL>http://www.fsf.org/licensing/licenses/fdl.html</URL> for a copy.<P/>
 	 	 
 	 <Package>simpcomp</Package> is free software. The code of <Package>simpcomp</Package> is released under the GPL version 2 or later (at your preference). For the text of the GPL see the file <C>COPYING</C> in the <Package>simpcomp</Package> directory or <URL>http://www.gnu.org/licenses/</URL>.
 	 
