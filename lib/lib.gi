@@ -340,7 +340,7 @@ end;
 #generate index entry for a library repository
 SCIntFunc.LibGenIndexEntry:=
 function(rep,relpath,file,calc,force,s)
-	local entry,key,sc,p,f,changed,tmp;
+	local entry,key,sc,p,f,changed,tmp,dim,n;
 
 	Info(InfoSimpcomp,2,"SCIntFunc.LibGenIndexEntry: processing complex \"",file,"\"...");
 	
@@ -381,23 +381,54 @@ function(rep,relpath,file,calc,force,s)
 	
 	changed:=false;
 	f:=[];
-	for key in SCPropertyByName(rep,"IndexAttributes") do
+
+        dim := SCDim(sc);
+        if dim = fail then
+	  Info(InfoSimpcomp,1,"SCIntFunc.LibGenIndexEntry: computing dimension failed!");
+	  return fail;
+	fi;
+
+
+        n := SCNumFaces(sc,0);
+        if n = fail then
+	  Info(InfoSimpcomp,1,"SCIntFunc.LibGenIndexEntry: computing number of vertices failed!");
+	  return fail;
+	fi;
+
+        # only compute properties of small complexes
+        if dim <= 4 and n < 20 then
+	  for key in SCPropertyByName(rep,"IndexAttributes") do
 		Info(InfoSimpcomp,3,"SCIntFunc.LibGenIndexEntry: calculating property \"",key,"\" for current complex...");
 		p:=SCIntFunc.SCPropertyHandlers.(key)(sc);
 		if(p=fail) then
 			Info(InfoSimpcomp,1,"SCIntFunc.LibGenIndexEntry: failed to compute property ",key," for simplicial complex \"",file,"\".");
 		fi;
-		
 		if(not p=fail) then
 			entry.(key):=p;
-			changed:=true;
-			
+			changed:=true;	
 			if(key="F") then
 				f:=p;
 			fi;
 		fi;
-		
-	od;
+	  od;
+        else
+          for key in ["Dim", "F", "G", "H", "Chi", "Homology", "Name", "IsPM", "IsManifold"] do
+		Info(InfoSimpcomp,3,"SCIntFunc.LibGenIndexEntry: calculating property \"",key,"\" for current complex...");
+		p:=SCIntFunc.SCPropertyHandlers.(key)(sc);
+		if(p=fail) then
+			Info(InfoSimpcomp,1,"SCIntFunc.LibGenIndexEntry: failed to compute property ",key," for simplicial complex \"",file,"\".");
+		fi;
+		if(not p=fail) then
+			entry.(key):=p;
+			changed:=true;
+			if(key="F") then
+				f:=p;
+			fi;
+		fi;
+	  od;
+        fi;
+
+        changed:=true;
 
 	if(changed) then
 		Info(InfoSimpcomp,2,"SCIntFunc.LibGenIndexEntry: complex changed, saving.");
