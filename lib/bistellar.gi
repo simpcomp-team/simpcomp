@@ -1986,11 +1986,7 @@ end);
 ## <Arg>complex</Arg>.<P/>   
 ## Internally calls <Ref Func="SCReduceComplexEx" Style="Text" />.
 ## <Example>
-## gap> SCLib.SearchByName("S^4~S^1");
-## [ [ 204, "S^4~S^1 (VT)" ], [ 339, "S^4~S^1 (VT)" ], [ 341, "S^4~S^1 (VT)" ], 
-##   [ 438, "S^4~S^1 (VT)" ], [ 493, "S^4~S^1 (VT)" ], [ 494, "S^4~S^1 (VT)" ], 
-##   [ 495, "S^4~S^1 (VT)" ], [ 496, "S^4~S^1 (VT)" ], [ 497, "S^4~S^1 (VT)" ], 
-##   [ 500, "S^4~S^1 (VT)" ], [ 501, "S^4~S^1 (VT)" ], [ 502, "S^4~S^1 (VT)" ] ]
+## gap> SCLib.SearchByName("S^4~S^1");;
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> l:=SCLink(c,1);
 ## [SimplicialComplex

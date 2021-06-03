@@ -65,7 +65,7 @@ end;
 ## of the returned list denotes the multiplicity vector of vertex <M>v_i</M>.
 ## <Example>
 ## gap> SCLib.SearchByName("K3");      
-## [ [ 550, "K3 surface" ] ]
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;    
 ## gap> f:=SCVertices(c);              
 ## [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ]
@@ -138,7 +138,7 @@ end);
 ## critical points.
 ## <Example>
 ## gap> SCLib.SearchByName("K3");      
-## [ [ 550, "K3 surface" ] ]
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;    
 ## gap> f:=SCVertices(c);              
 ## [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ]
@@ -411,7 +411,7 @@ end);
 ## complexity is reduced by the factor of <M>n \cdot (n-1) \cdot \dots \cdot 
 ## (n-k+1)</M>.
 ## <Example>
-## gap> list:=SCLib.SearchByName("S^2~S^1 (VT)"){[1..9]};
+## gap> list:=SCLib.SearchByName("S^2~S^1 (VT)"){[1..9]};;
 ## gap> s2s1:=SCLib.Load(list[1][1]);
 ## [SimplicialComplex
 ## 
@@ -464,7 +464,7 @@ end);
 ## </Example> 
 ## <Example>
 ## gap> SCLib.SearchByAttribute("F[1] = 120");
-## [ [ 656, "Bd(600-cell)" ] ]
+## [ [ 648, "Bd(600-cell)" ] ]
 ## gap> id:=last[1][1];;
 ## gap> c:=SCLib.Load(id);;
 ## gap> SCIsTight(c); time;
@@ -483,7 +483,7 @@ end);
 ## <Example>
 ## gap> SCInfoLevel(0);
 ## gap> SCLib.SearchByName("K3");  
-## [ [ 551, "K3 surface" ] ]
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCIsManifold(c);
 ## true
@@ -507,7 +507,7 @@ end);
 ## true
 ## </Example>
 ## <Example>
-## gap> list:=SCLib.SearchByName("S^3xS^1");
+## gap> list:=SCLib.SearchByName("S^3xS^1");;
 ## gap> c:=SCLib.Load(list[1][1]);           
 ## [SimplicialComplex
 ## 

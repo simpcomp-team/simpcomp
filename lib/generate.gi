@@ -1066,9 +1066,8 @@ end);
 ## In a lexicographic ordering the smallest facet of both <Arg>complex1</Arg> and  <Arg>complex2</Arg> is removed and the complexes are glued together along the resulting boundaries. The bijection used to identify the vertices of the boundaries differs from the one chosen in <Ref Func="SCConnectedSum"/> by a transposition. Thus, the topological type of <C>SCConnectedSumMinus</C> is different from the one of <Ref Func="SCConnectedSum"/> whenever <Arg>complex1</Arg> and <Arg>complex2</Arg> do not allow an orientation reversing homeomorphism. 
 ## <Example>
 ## gap> SCLib.SearchByName("T^2"){[1..6]};
-## [ [ 5, "T^2 (VT)" ], [ 7, "T^2 (VT)" ], [ 11, "T^2 (VT)" ], 
-##   [ 12, "T^2 (VT)" ], [ 20, "T^2 (VT)" ], [ 22, "(T^2)#2" ], 
-##   [ 27, "(T^2)#3" ], [ 41, "T^2 (VT)" ], [ 44, "(T^2)#4" ], ...
+## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], 
+##   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
 ## gap> torus:=SCLib.Load(last[1][1]);;
 ## gap> genus2:=SCConnectedSumMinus(torus,torus);
 ## [SimplicialComplex
@@ -1086,8 +1085,10 @@ end);
 ## </Example>
 ## <Example>
 ## gap> SCLib.SearchByName("CP^2");
-## [ [ 17, "CP^2 (VT)" ], [ 88, "CP^2#CP^2" ], [ 89, "CP^2#-CP^2" ], 
-##   [ 186, "CP^2#(S^2xS^2)" ], [ 499, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
+## [ [ 16, "CP^2 (VT)" ], [ 96, "CP^2#-CP^2" ], 
+##   [ 97, "CP^2#CP^2" ], [ 185, "CP^2#(S^2xS^2)" ], 
+##   [ 397, "Gaifullin CP^2" ], 
+##   [ 457, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
 ## gap> cp2:=SCLib.Load(last[1][1]);;
 ## # CP^2 # CP^2 (signature of intersection form is 2)  
 ## gap> c1:=SCConnectedSum(cp2,cp2);;
@@ -1241,9 +1242,8 @@ end;
 ## In a lexicographic ordering the smallest facet of both <Arg>complex1</Arg> and <Arg>complex2</Arg> is removed and the complexes are glued together along the resulting boundaries. The bijection used to identify the vertices of the boundaries differs from the one chosen in <Ref Func="SCConnectedSumMinus"/> by a transposition. Thus, the topological type of <C>SCConnectedSum</C> is different from the one of <Ref Func="SCConnectedSumMinus"/> whenever <Arg>complex1</Arg> and <Arg>complex2</Arg> do not allow an orientation reversing homeomorphism. 
 ## <Example>
 ## gap> SCLib.SearchByName("T^2"){[1..6]};
-## [ [ 5, "T^2 (VT)" ], [ 7, "T^2 (VT)" ], [ 11, "T^2 (VT)" ], 
-##   [ 12, "T^2 (VT)" ], [ 20, "T^2 (VT)" ], [ 22, "(T^2)#2" ], 
-##   [ 27, "(T^2)#3" ], [ 41, "T^2 (VT)" ], [ 44, "(T^2)#4" ], ...
+## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], 
+##   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
 ## gap> torus:=SCLib.Load(last[1][1]);;
 ## gap> genus2:=SCConnectedSum(torus,torus);
 ## [SimplicialComplex
@@ -1261,8 +1261,10 @@ end;
 ## </Example>
 ## <Example>
 ## gap> SCLib.SearchByName("CP^2");
-## [ [ 17, "CP^2 (VT)" ], [ 88, "CP^2#CP^2" ], [ 89, "CP^2#-CP^2" ], 
-##   [ 186, "CP^2#(S^2xS^2)" ], [ 499, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
+## [ [ 16, "CP^2 (VT)" ], [ 96, "CP^2#-CP^2" ], 
+##   [ 97, "CP^2#CP^2" ], [ 185, "CP^2#(S^2xS^2)" ], 
+##   [ 397, "Gaifullin CP^2" ], 
+##   [ 457, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
 ## gap> cp2:=SCLib.Load(last[1][1]);;
 ## # CP^2 # CP^2 (signature of intersection form is 2)  
 ## gap> c1:=SCConnectedSum(cp2,cp2);;
@@ -1379,9 +1381,8 @@ end);
 ## If <M>n \geq 2</M>, the function internally calls <M>1 \times</M> <Ref Func="SCConnectedSum"/> and <M>(n-2) \times</M> <Ref Func="SCConnectedSumMinus"/>.
 ## <Example>
 ## gap> SCLib.SearchByName("T^2"){[1..6]};
-## [ [ 5, "T^2 (VT)" ], [ 7, "T^2 (VT)" ], [ 11, "T^2 (VT)" ], 
-##   [ 12, "T^2 (VT)" ], [ 20, "T^2 (VT)" ], [ 22, "(T^2)#2" ], 
-##   [ 27, "(T^2)#3" ], [ 41, "T^2 (VT)" ], [ 44, "(T^2)#4" ], ... 
+## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], 
+##   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
 ## gap> torus:=SCLib.Load(last[1][1]);;
 ## gap> genus10:=SCConnectedProduct(torus,10);
 ## [SimplicialComplex

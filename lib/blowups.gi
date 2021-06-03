@@ -507,7 +507,7 @@ end;
 ## in both versions.
 ## <Example>
 ## gap> SCLib.SearchByName("Kummer variety");
-## [ [ 7488, "4-dimensional Kummer variety (VT)" ] ]
+## [ [ 519, "4-dimensional Kummer variety (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;                
 ## gap> d:= SCBlowup(c,1);
 ## #I  SCBlowup: checking if singularity is a combinatorial manifold...
@@ -546,7 +546,7 @@ end;
 ## <Example> NOEXECUTE
 ## gap> # resolving the singularities of a 4 dimensional Kummer variety
 ## gap> SCLib.SearchByName("Kummer variety");
-## [ [ 7488, "4-dimensional Kummer variety (VT)" ] ]
+## [ [ 519, "4-dimensional Kummer variety (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> for i in [1..16] do
 ##        for j in SCLabels(c) do 

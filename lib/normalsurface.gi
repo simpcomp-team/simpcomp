@@ -171,7 +171,7 @@ end);
 ## Computes the union of two discrete normal surfaces by calling <Ref Meth="SCUnion"/>.
 ## <Example>
 ## gap> SCLib.SearchByAttribute("F = [ 10, 35, 50, 25 ]");
-## [ [ 4, "S^3 (VT)" ] ]
+## [ [ 19, "S^3 (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> sl1:=SCNSSlicing(c,[[1,3,5,7,9],[2,4,6,8,10]]);;
 ## gap> sl2:=sl1+10;;
@@ -660,7 +660,7 @@ end);
 ## Computes the genus of a discrete normal surface <Arg>sl</Arg>.
 ## <Example>
 ## gap> SCLib.SearchByName("(S^2xS^1)#20");
-## [ [ 688, "(S^2xS^1)#20" ] ]
+## [ [ 633, "(S^2xS^1)#20" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;               
 ## gap> c.F;                               
 ## [ 27, 298, 542, 271 ]
@@ -1146,7 +1146,7 @@ end);
 ## Computes a simplicial subdivision of a slicing <Arg>sl</Arg> without introducing new vertices. The subdivision is stored as a property of <Arg>sl</Arg> and thus is returned as an immutable object. Note that symmetry may be lost during the computation. 
 ## <Example>
 ## gap> SCLib.SearchByAttribute("F=[ 10, 35, 50, 25 ]");
-## [ [ 4, "S^3 (VT)" ] ]
+## [ [ 19, "S^3 (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> sl:=SCNSSlicing(c,[[1,3,5,7,9],[2,4,6,8,10]]);;
 ## gap> sl.F; 
@@ -1200,7 +1200,7 @@ end);
 ## Computes the homology of a slicing <Arg>sl</Arg>. Internally, <Arg>sl</Arg> is triangulated (cf. <Ref Meth="SCNSTriangulation"/>) and simplicial homology is computed via <Ref Meth="SCHomology"/> using the triangulation.
 ## <Example>
 ## gap> SCLib.SearchByName("(S^2xS^1)#20");       
-## [ [ 688, "(S^2xS^1)#20" ] ]
+## [ [ 633, "(S^2xS^1)#20" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> c.F;
 ## [ 27, 298, 542, 271 ]
@@ -1240,7 +1240,7 @@ end);
 ## Computes the Betti numbers modulo <Arg>p</Arg> of a slicing <Arg>sl</Arg>. Internally, <Arg>sl</Arg> is triangulated (using <Ref Meth="SCNSTriangulation"/>) and the Betti numbers are computed via <Ref Meth="SCFpBettiNumbers"/> using the triangulation.
 ## <Example>
 ## gap> SCLib.SearchByName("(S^2xS^1)#20");       
-## [ [ 688, "(S^2xS^1)#20" ] ]
+## [ [ 633, "(S^2xS^1)#20" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> c.F;
 ## [ 27, 298, 542, 271 ]
@@ -1301,7 +1301,7 @@ end);
 ## Determines the topological type of <Arg>sl</Arg> via the classification theorem for closed compact surfaces. If <Arg>sl</Arg> is not connected, the topological type of each connected component is computed.<P/>
 ## <Example>
 ## gap> SCLib.SearchByName("(S^2xS^1)#20");      
-## [ [ 688, "(S^2xS^1)#20" ] ]
+## [ [ 633, "(S^2xS^1)#20" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> c.F;
 ## [ 27, 298, 542, 271 ]
@@ -1493,7 +1493,7 @@ end);
 ## Computes a slicing defined by a partition <Arg>slicing</Arg> of the set of vertices of the <M>3</M>-dimensional combinatorial pseudomanifold  <Arg>complex</Arg>. In particular, <Arg>slicing</Arg> has to be a pair of lists of vertex labels and has to contain all vertex labels of <Arg>complex</Arg>.
 ## <Example>
 ## gap> SCLib.SearchByAttribute("F=[ 10, 35, 50, 25 ]");
-## [ [ 4, "S^3 (VT)" ] ]
+## [ [ 19, "S^3 (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;                       
 ## gap> sl:=SCNSSlicing(c,[[1..5],[6..10]]);    
 ## [NormalSurface

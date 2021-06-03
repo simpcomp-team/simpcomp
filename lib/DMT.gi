@@ -479,9 +479,8 @@ end;
 ## See also <Ref Meth="SCCollapseLex" /> and <Ref Meth="SCCollapseRevLex" />.
 ## <Example>
 ## gap> SCLib.SearchByName("T^2"){[1..6]}; 
-## [ [ 5, "T^2 (VT)" ], [ 7, "T^2 (VT)" ], [ 11, "T^2 (VT)" ], 
-##   [ 12, "T^2 (VT)" ], [ 20, "T^2 (VT)" ], [ 22, "(T^2)#2" ], 
-##   [ 27, "(T^2)#3" ], [ 41, "T^2 (VT)" ], [ 44, "(T^2)#4" ], ... 
+## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], 
+##   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
 ## gap> torus:=SCLib.Load(last[1][1]);;
 ## gap> bdtorus:=SCDifference(torus,SC([torus.Facets[1]]));;
 ## gap> coll:=SCCollapseGreedy(bdtorus);

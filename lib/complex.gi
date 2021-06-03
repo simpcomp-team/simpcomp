@@ -65,7 +65,7 @@ function(sc,view,vprops)
 		type:="OtherComplex";
 	fi;
 	
-	buf:=Concatenation("[",type,"\n\n");
+	buf:=Concatenation("[",type,"\n");
 	Append(buf," Properties known: ");
 	pos:=19;
 	
@@ -112,7 +112,7 @@ function(sc,view,vprops)
 		Append(buf,pprops[p]);
 		pos:=pos+Length(pprops[p]);
 		if(p=Length(pprops)) then
-			Append(buf,".\n\n");
+			Append(buf,".\n");
 		else
 			Append(buf,", ");
 			pos:=pos+2;
@@ -133,7 +133,7 @@ function(sc,view,vprops)
 		fi;
 	od;
 
-	Append(buf,Concatenation("\n/",type,"]"));
+	Append(buf,Concatenation("/",type,"]"));
 	return buf;
 end;
 
@@ -328,15 +328,11 @@ end);
 ## The complexes passed as arguments are not altered. Internally calls 
 ## <Ref Func="SCConnectedSum"/>.
 ## <Example>
-## gap> SCLib.SearchByName("RP^3");
-## [ [ 45, "RP^3" ], [ 103, "RP^3=L(2,1) (VT)" ], [ 246, "(S^2~S^1)#RP^3" ], 
-##   [ 247, "(S^2xS^1)#RP^3" ], [ 283, "(S^2~S^1)#2#RP^3" ], 
-##   [ 285, "(S^2xS^1)#2#RP^3" ], [ 409, "RP^3#RP^3" ], ...
+## gap> SCLib.SearchByName("RP^3");;
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCLib.SearchByName("S^2~S^1"){[1..3]};
-## [ [ 14, "S^2~S^1 (VT)" ], [ 29, "S^2~S^1 (VT)" ], [ 34, "S^2~S^1 (VT)" ], 
-##   [ 42, "S^2~S^1 (VT)" ], [ 48, "S^2~S^1 (VT)" ], [ 49, "S^2~S^1 (VT)" ], 
-##   [ 84, "S^2~S^1 (VT)" ], [ 87, "S^2~S^1 (VT)" ], ...
+## [ [ 12, "S^2~S^1 (VT)" ], [ 26, "S^2~S^1 (VT)" ], 
+##   [ 27, "S^2~S^1 (VT)" ] ]
 ## gap> d:=SCLib.Load(last[1][1]);;
 ## gap> c:=c+d; #form RP^3#(S^2~S^1)
 ## [SimplicialComplex
@@ -391,7 +387,7 @@ end);
 ## <Arg>complex2</Arg>. Internally calls <Ref Func="SCCartesianProduct"/>.
 ## <Example>
 ## gap> SCLib.SearchByName("RP^2");
-## [ [ 3, "RP^2 (VT)" ], [ 284, "RP^2xS^1" ] ]
+## [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
 ## gap> c:=SCLib.Load(last[1][1])*SCBdSimplex(3); #form RP^2 x S^2
 ## [SimplicialComplex
 ## 
@@ -634,11 +630,7 @@ end);
 ## of <M>d</M>, as all lists in &GAP; are indexed beginning with 1 -- thus 
 ## this also holds for all the face lattice related properties of the complex.   
 ## <Example>
-## gap> SCLib.SearchByAttribute("F=[12,66,108,54]");
-## [ [ 116, "S^2xS^1 (VT)" ], [ 117, "S^2xS^1 (VT)" ], 
-##   [ 118, "(S^2xS^1)#(S^2xS^1) (VT)" ], [ 119, "S^2~S^1 (VT)" ], 
-##   [ 120, "(S^2xS^1)#(S^2xS^1) (VT)" ], [ 121, "(S^2xS^1)#(S^2xS^1) (VT)" ], 
-##   [ 122, "S^2xS^1 (VT)" ], [ 123, "(S^2xS^1)#(S^2xS^1) (VT)" ], ...
+## gap> SCLib.SearchByAttribute("F=[12,66,108,54]");;
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> for i in [1..Size(c)] do Print(c.F[i],"\n"); od;
 ## 12
@@ -674,11 +666,7 @@ end);
 ## Returns the ``size'' of a simplicial complex by calling 
 ## <C>Size(</C><Arg>complex</Arg><C>)</C>.   
 ## <Example>
-## gap> SCLib.SearchByAttribute("F=[12,66,108,54]");
-## [ [ 116, "Sˆ2xSˆ1 (VT)" ], [ 117, "Sˆ2xSˆ1 (VT)" ],
-## [ 118, "(Sˆ2xSˆ1)#(Sˆ2xSˆ1) (VT)" ], [ 119, "Sˆ2˜Sˆ1 (VT)" ],
-## [ 120, "(Sˆ2xSˆ1)#(Sˆ2xSˆ1) (VT)" ], [ 121, "(Sˆ2xSˆ1)#(Sˆ2xSˆ1) (VT)" ],
-## [ 122, "Sˆ2xSˆ1 (VT)" ], [ 123, "(Sˆ2xSˆ1)#(Sˆ2xSˆ1) (VT)" ], ...
+## gap> SCLib.SearchByAttribute("F=[12,66,108,54]");;
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> for i in [1..Length(c)] do Print(c.F[i],"\n"); od;
 ## 12
@@ -711,7 +699,7 @@ end);
 ## must be <M>\geq 1</M>.
 ## <Example>
 ## gap> SCLib.SearchByName("K^2");
-## [ [ 19, "K^2 (VT)" ], [ 230, "K^2 (VT)" ] ]
+## [ [ 18, "K^2 (VT)" ], [ 221, "K^2 (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> c[2];
 ## [ [ 1, 2 ], [ 1, 3 ], [ 1, 7 ], [ 1, 9 ], [ 1, 13 ], [ 1, 14 ], [ 2, 3 ], 

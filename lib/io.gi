@@ -1529,8 +1529,7 @@ SCIntFunc.SCPrintSCToString:=
 function(sc)
 	local buf,props,prop,p;
 
-	buf:="[SimplicialComplex\n\n";
-	
+	buf:="[SimplicialComplex\n";
 	Append(buf," Properties known: ");
 	props:=List(SCPropertiesNames(sc));
 	Sort(props);
@@ -1564,7 +1563,7 @@ function(sc)
 		fi;
 	od;
 
-	Append(buf,"\n/SimplicialComplex]\n");
+	Append(buf,"/SimplicialComplex]\n");
 	return buf;
 end;
 

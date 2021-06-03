@@ -170,7 +170,6 @@ end);
 ## Calculates the simplicial suspension of the simplicial complex <Arg>complex</Arg>. Internally falls back to the homology package <Cite Key="Dumas04Homology" /> (if available) if a facet list is passed as argument. Note that the vertex labelings of the complexes passed as arguments are not propagated to the new complex.
 ## <Example>
 ## gap> SCLib.SearchByName("Poincare");
-## [ [ 563, "Poincare_sphere" ] ]
 ## gap> phs:=SCLib.Load(last[1][1]);
 ## [SimplicialComplex
 ## 
@@ -772,9 +771,11 @@ end);
 ## Returns <K>true</K> if the simplicial complex <Arg>sc2</Arg> is a sub-complex of simplicial complex <Arg>sc1</Arg>, <K>false</K> otherwise. If dim(<Arg>sc2</Arg>) <M>\leq</M> dim(<Arg>sc1</Arg>) the facets of <Arg>sc2</Arg> are compared with the dim(<Arg>sc2</Arg>)-skeleton of <Arg>sc1</Arg>. Only works for pure simplicial complexes. Note: for the intersection process the vertex labelings of the complexes are taken into account. 
 ## <Example>
 ## gap> SCLib.SearchByAttribute("F[1]=10"){[1..10]};
-## [ [ 19, "K^2 (VT)" ], [ 20, "T^2 (VT)" ], [ 21, "S^3 (VT)" ], 
-##   [ 22, "(T^2)#2" ], [ 23, "S^3 (VT)" ], [ 24, "S^2xS^1 (VT)" ], 
-##   [ 25, "S^3 (VT)" ], [ 26, "S^4 (VT)" ], [ 27, "(T^2)#3" ], ...
+## [ [ 17, "T^2 (VT)" ], [ 18, "K^2 (VT)" ], 
+##   [ 19, "S^3 (VT)" ], [ 20, "(T^2)#2" ], [ 21, "S^3 (VT)" ],
+##   [ 22, "S^3 (VT)" ], [ 23, "S^2xS^1 (VT)" ], 
+##   [ 24, "(T^2)#3" ], [ 25, "(P^2)#7 (VT)" ], 
+##   [ 26, "S^2~S^1 (VT)" ] ]
 ## gap> k:=SCLib.Load(last[1][1]);;
 ## gap> c:=SCBdSimplex(9);;
 ## gap> k.F;
@@ -1106,9 +1107,8 @@ end);
 ## Computes the star of all <Arg>k</Arg>-faces of the polyhedral complex <Arg>complex</Arg> and returns them as a list of simplicial complexes. Internally calls <Ref Meth="SCStar"/> for every <Arg>k</Arg>-face of <Arg>complex</Arg>.
 ## <Example>
 ## gap> SCLib.SearchByName("T^2"){[1..6]};
-## [ [ 5, "T^2 (VT)" ], [ 7, "T^2 (VT)" ], [ 11, "T^2 (VT)" ], 
-##   [ 12, "T^2 (VT)" ], [ 20, "T^2 (VT)" ], [ 22, "(T^2)#2" ], 
-##   [ 27, "(T^2)#3" ], [ 41, "T^2 (VT)" ], [ 44, "(T^2)#4" ], ...
+## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], 
+##   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
 ## gap> torus:=SCLib.Load(last[1][1]);; # the minimal 7-vertex torus
 ## gap> SCStars(torus,0); # 7 2-discs as vertex stars
 ## [ [SimplicialComplex
@@ -1161,7 +1161,7 @@ end);
 ## Computes the link of <Arg>face</Arg> (a face given as a list of vertices or a scalar interpreted as vertex) in a polyhedral complex <Arg>complex</Arg>, i. e. all facets containing <Arg>face</Arg>, reduced by <Arg>face</Arg>. if <Arg>complex</Arg> is pure, the resulting complex is of dimension dim(<Arg>complex</Arg>) - dim(<Arg>face</Arg>) <M>-1</M>. If <Arg>face</Arg> is not a face of <Arg>complex</Arg> the empty complex is returned.
 ## <Example>
 ## gap> SCLib.SearchByName("RP^2");     
-## [ [ 3, "RP^2 (VT)" ], [ 284, "RP^2xS^1" ] ]
+## [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
 ## gap> rp2:=SCLib.Load(last[1][1]);;
 ## gap> SCVertices(rp2);
 ## [1, 2, 3, 4, 5, 6]
@@ -1279,7 +1279,7 @@ end);
 ## Computes the star of <Arg>face</Arg> (a face given as a list of vertices or a scalar interpreted as vertex) in a polyhedral complex <Arg>complex</Arg>, i. e. the set of facets of <Arg>complex</Arg> that contain <Arg>face</Arg>.
 ## <Example>
 ## gap> SCLib.SearchByName("RP^2");     
-## [ [ 3, "RP^2 (VT)" ], [ 284, "RP^2xS^1" ] ]
+## [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
 ## gap> rp2:=SCLib.Load(last[1][1]);;
 ## gap> SCVertices(rp2);
 ## [1, 2, 3, 4, 5, 6]
@@ -1382,7 +1382,7 @@ end);
 ## Computes the anti star of <Arg>face</Arg> (a face given as a list of vertices or a scalar interpreted as vertex) in <Arg>complex</Arg>, i. e. the complement of <Arg>face</Arg> in <Arg>complex</Arg>.
 ## <Example>
 ## gap> SCLib.SearchByName("RP^2");     
-## [ [ 3, "RP^2 (VT)" ], [ 284, "RP^2xS^1" ] ]
+## [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
 ## gap> rp2:=SCLib.Load(last[1][1]);;
 ## gap> SCVertices(rp2);
 ## [1, 2, 3, 4, 5, 6]
@@ -1899,9 +1899,14 @@ end);
 ## If called with a facet list instead of a <C>SCSimplicialComplex</C> object and <Arg>apex</Arg> is not specified, internally falls back to the homology package <Cite Key="Dumas04Homology" />, if available. 
 ## <Example>
 ## gap> SCLib.SearchByName("RP^3");
-## [ [ 45, "RP^3" ], [ 103, "RP^3=L(2,1) (VT)" ], [ 246, "(S^2~S^1)#RP^3" ], 
-##   [ 247, "(S^2xS^1)#RP^3" ], [ 283, "(S^2~S^1)#2#RP^3" ], 
-##   [ 285, "(S^2xS^1)#2#RP^3" ], [ 409, "RP^3#RP^3" ], ...
+## [ [ 45, "RP^3" ], [ 114, "RP^3=L(2,1) (VT)" ], 
+##   [ 237, "(S^2xS^1)#RP^3" ], [ 238, "(S^2~S^1)#RP^3" ], 
+##   [ 263, "(S^2xS^1)#2#RP^3" ], [ 264, "(S^2~S^1)#2#RP^3" ], 
+##   [ 366, "RP^3#RP^3" ], [ 382, "RP^3=L(2,1) (VT)" ], 
+##   [ 399, "(S^2~S^1)#3#RP^3" ], [ 402, "(S^2xS^1)#3#RP^3" ], 
+##   [ 417, "RP^3=L(2,1) (VT)" ], [ 502, "(S^2~S^1)#4#RP^3" ], 
+##   [ 503, "(S^2xS^1)#4#RP^3" ], [ 531, "(S^2xS^1)#5#RP^3" ], 
+##   [ 532, "(S^2~S^1)#5#RP^3" ] ]
 ## gap> rp3:=SCLib.Load(last[1][1]);;
 ## gap> rp3.F;
 ## [11, 51, 80, 40]

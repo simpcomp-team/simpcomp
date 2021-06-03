@@ -2214,7 +2214,7 @@ end);
 ## </Example>
 ## <Example>
 ## gap> SCLib.SearchByName("K3");
-## [ [ 584, "K3 surface" ] ]
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> SCLib.Load(last[1][1]);
 ## [SimplicialComplex
 ## 
@@ -2299,7 +2299,7 @@ end);
 ## </Example>
 ## <Example>
 ## gap> SCLib.SearchByName("K3");
-## [ [ 584, "K3 surface" ] ]
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> SCLib.Load(last[1][1]);
 ## [SimplicialComplex
 ## 
@@ -2555,10 +2555,8 @@ end);
 ## gap> SCNeighborliness(c);
 ## 1
 ## gap> SCLib.SearchByAttribute("F[3]=Binomial(F[1],3) and Dim=4");
-## [ [ 10, "S^5 (VT)" ], [ 17, "CP^2 (VT)" ], [ 18, "S^5 (VT)" ], 
-##   [ 38, "S^5 (VT)" ], [ 39, "S^6 (VT)" ], [ 40, "S^7 (VT)" ], 
-##   [ 53, "S^5 (VT)" ], [ 54, "S^5 (VT)" ], [ 55, "S^7 (VT)" ], ... 
-## gap> cp2:=SCLib.Load(last[2][1]);;
+## [ [ 16, "CP^2 (VT)" ], [ 520, "K3_16" ] ]
+## gap> cp2:=SCLib.Load(last[1][1]);;
 ## gap> SCNeighborliness(cp2);
 ## 3
 ## </Example>
@@ -2801,7 +2799,7 @@ end);
 ## Checks if a simplicial complex <Arg>complex</Arg> that fulfills the weak pseudo manifold property has a boundary, i. e. <M>d-1</M>-faces of valence <M>1</M>. If <Arg>complex</Arg> is closed <K>false</K> is returned, if <Arg>complex</Arg> does not fulfill the weak pseudomanifold property, <K>fail</K> is returned, otherwise <K>true</K> is returned.
 ## <Example>
 ## gap> SCLib.SearchByName("K^2"); 
-## [ [ 19, "K^2 (VT)" ], [ 230, "K^2 (VT)" ] ]
+## [ [ 18, "K^2 (VT)" ], [ 221, "K^2 (VT)" ] ]
 ## gap> kleinBottle:=SCLib.Load(last[1][1]);;
 ## gap> SCHasBoundary(kleinBottle);
 ## false
@@ -3069,7 +3067,7 @@ end);
 ## If <Arg>k</Arg> is an integer, the <Arg>k</Arg>-skeleton of a simplicial complex <Arg>complex</Arg>, i. e. all <Arg>k</Arg>-faces of <Arg>complex</Arg>, is computed. If <Arg>k</Arg> is a list, a list of all <Arg>k</Arg><C>[i]</C>-faces of <Arg>complex</Arg> for each entry <Arg>k</Arg><C>[i]</C> (which has to be an integer) is returned. The faces are returned in the standard labeling.
 ## <Example>
 ## gap> SCLib.SearchByName("RP^2"); 
-## [ [ 3, "RP^2 (VT)" ], [ 284, "RP^2xS^1" ] ]
+## [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
 ## gap> rp2_6:=SCLib.Load(last[1][1]);;      
 ## gap> rp2_6:=SC(rp2_6.Facets+10);;
 ## gap> SCSkelEx(rp2_6,1);
@@ -3161,7 +3159,7 @@ end);
 ## If <Arg>k</Arg> is an integer, the <Arg>k</Arg>-skeleton of a simplicial complex <Arg>complex</Arg>, i. e. all <Arg>k</Arg>-faces of <Arg>complex</Arg>, is computed. If <Arg>k</Arg> is a list, a list of all <Arg>k</Arg><C>[i]</C>-faces of <Arg>complex</Arg> for each entry <Arg>k</Arg><C>[i]</C> (which has to be an integer) is returned. The faces are returned in the original labeling.
 ## <Example>
 ## gap> SCLib.SearchByName("RP^2"); 
-## [ [ 3, "RP^2 (VT)" ], [ 284, "RP^2xS^1" ] ]
+## [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
 ## gap> rp2_6:=SCLib.Load(last[1][1]);;      
 ## gap> rp2_6:=SC(rp2_6.Facets+10);;
 ## gap> SCSkelEx(rp2_6,1);
@@ -3526,7 +3524,7 @@ end);
 ## Returns <K>true</K> / <K>false</K> upon success. If <K>true</K> is returned this means that <Arg>complex</Arg> is at least <Arg>k</Arg>-stacked and thus that the complex is in the class <M>\mathcal{K}^k(d)</M>, i.e. all vertex links are <C>i</C>-stacked spheres. If <K>false</K> is returnd the complex cannot be <Arg>k</Arg>-stacked. In some cases the question can not be decided. In this case <K>fail</K> is returned.<P/>
 ## Internally calls <Ref Meth="SCIsKStackedSphere"/> for all links. Please note that this is a radomized algorithm that may give an indefinite answer to the membership problem.
 ## <Example>
-## gap> list:=SCLib.SearchByName("S^2~S^1");;{[1..3]};
+## gap> list:=SCLib.SearchByName("S^2~S^1"){[1..3]};;
 ## gap> c:=SCLib.Load(list[1][1]);;
 ## gap> c.AutomorphismGroup;
 ## D18

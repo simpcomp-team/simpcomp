@@ -746,7 +746,7 @@ end);
 ## Calculates a set of basis elements for the <Arg>k</Arg>-dimensional homology group (with integer coefficients) of a simplicial complex <Arg>complex</Arg>. The entries of the returned list are of the form [ MODULUS, [ BASEELM1, BASEELM2, ...] ], where the value MODULUS is 1 for the basis elements of the free part of the <Arg>k</Arg>-th homology group and <M>q\geq 2</M> for the basis elements of the <M>q</M>-torsion part. In contrast to the function <Ref Meth="SCHomologyBasisAsSimplices" /> the basis elements are stored as lists of coefficient-index pairs referring to the simplices of the complex, i.e. a basis element of the form <M>[ [ \lambda_1, i], [\lambda_2, j], \dots ] \dots</M> encodes the linear combination of simplices of the form <M>\lambda_1*\Delta_1+\lambda_2*\Delta_2</M> with <M>\Delta_1</M>=<C>SCSkel(complex,k)[i]</C>, <M>\Delta_2</M>=<C>SCSkel(complex,k)[j]</C> and so on.
 ## <Example>
 ## gap> SCLib.SearchByName("(S^2xS^1)#RP^3");
-## [ [ 247, "(S^2xS^1)#RP^3" ] ]
+## [ [ 237, "(S^2xS^1)#RP^3" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomologyBasis(c,1);
 ## [ [ 1, [ [ 1, 12 ], [ -1, 7 ], [ 1, 1 ] ] ], 
@@ -793,8 +793,8 @@ end);
 ## Calculates a set of basis elements for the <Arg>k</Arg>-dimensional cohomology group (with integer coefficients) of a simplicial complex <Arg>complex</Arg>. The entries of the returned list are of the form [ MODULUS, [ BASEELM1, BASEELM2, ...] ], where the value MODULUS is 1 for the basis elements of the free part of the <Arg>k</Arg>-th homology group and <M>q\geq 2</M> for the basis elements of the <M>q</M>-torsion part. In contrast to the function <Ref Meth="SCCohomologyBasisAsSimplices" /> the basis elements are stored as lists of coefficient-index pairs referring to the linear forms dual to the simplices in the <M>k</M>-th cochain complex of <Arg>complex</Arg>, i.e. a basis element of the form <M>[ [ \lambda_1, i], [\lambda_2, j], \dots ] \dots</M> encodes the linear combination of simplices (or their dual linear forms in the corresponding cochain complex) of the form <M>\lambda_1*\Delta_1+\lambda_2*\Delta_2</M> with <M>\Delta_1</M>=<C>SCSkel(complex,k)[i]</C>, <M>\Delta_2</M>=<C>SCSkel(complex,k)[j]</C> and so on.
 ## <Example>
 ## gap> SCLib.SearchByName("SU(3)/SO(3)");   
-## [ [ 222, "SU(3)/SO(3) (VT)" ], [ 520, "SU(3)/SO(3) (VT)" ], 
-##   [ 526, "SU(3)/SO(3) (VT)" ], [ 528, "SU(3)/SO(3) (VT)" ] ]
+## [ [ 219, "SU(3)/SO(3) (VT)" ], [ 477, "SU(3)/SO(3) (VT)" ], 
+##   [ 484, "SU(3)/SO(3) (VT)" ], [ 486, "SU(3)/SO(3) (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCCohomologyBasis(c,3); 
 ## [ [ 2, [ [ -9, 259 ], [ 9, 262 ], [ 9, 263 ], [ -9, 270 ], [ 9, 271 ], 
@@ -874,7 +874,7 @@ end;
 ## Calculates a set of basis elements for the <Arg>k</Arg>-dimensional homology group (with integer coefficients) of a simplicial complex <Arg>complex</Arg>. The entries of the returned list are of the form [ MODULUS, [ BASEELM1, BASEELM2, ...] ], where the value MODULUS is 1 for the basis elements of the free part of the <Arg>k</Arg>-th homology group and <M>q\geq 2</M> for the basis elements of the <M>q</M>-torsion part. In contrast to the function <Ref Meth="SCHomologyBasis" /> the basis elements are stored as lists of coefficient-simplex pairs, i.e. a basis element of the form <M>[ [ \lambda_1, \Delta_1], [\lambda_2, \Delta_2], \dots ]</M> encodes the linear combination of simplices of the form <M>\lambda_1*\Delta_1+\lambda_2*\Delta_2 + \dots</M>.
 ## <Example>
 ## gap> SCLib.SearchByName("(S^2xS^1)#RP^3");
-## [ [ 247, "(S^2xS^1)#RP^3" ] ]
+## [ [ 237, "(S^2xS^1)#RP^3" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomologyBasisAsSimplices(c,1);
 ## [ [ 1, [ [ 1, [ 2, 8 ] ], [ -1, [ 1, 8 ] ], [ 1, [ 1, 2 ] ] ] ], 
@@ -918,8 +918,8 @@ end);
 ## Calculates a set of basis elements for the <Arg>k</Arg>-dimensional cohomology group (with integer coefficients) of a simplicial complex <Arg>complex</Arg>. The entries of the returned list are of the form [ MODULUS, [ BASEELM1, BASEELM2, ...] ], where the value MODULUS is 1 for the basis elements of the free part of the <Arg>k</Arg>-th homology group and <M>q\geq 2</M> for the basis elements of the <M>q</M>-torsion part. In contrast to the function <Ref Meth="SCCohomologyBasis" /> the basis elements are stored as lists of coefficient-simplex pairs referring to the linear forms dual to the simplices in the <M>k</M>-th cochain complex of <Arg>complex</Arg>, i.e. a basis element of the form <M>[ [ \lambda_1, \Delta_i], [\lambda_2, \Delta_j], \dots ] \dots</M> encodes the linear combination of simplices (or their dual linear forms in the corresponding cochain complex) of the form <M>\lambda_1*\Delta_1+\lambda_2*\Delta_2 + \dots</M>.
 ## <Example>
 ## gap> SCLib.SearchByName("SU(3)/SO(3)");   
-## [ [ 222, "SU(3)/SO(3) (VT)" ], [ 520, "SU(3)/SO(3) (VT)" ], 
-##   [ 526, "SU(3)/SO(3) (VT)" ], [ 528, "SU(3)/SO(3) (VT)" ] ]
+## [ [ 219, "SU(3)/SO(3) (VT)" ], [ 477, "SU(3)/SO(3) (VT)" ], 
+##   [ 484, "SU(3)/SO(3) (VT)" ], [ 486, "SU(3)/SO(3) (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCCohomologyBasisAsSimplices(c,3);
 ## [ [ 2, [ [ -9, [ 2, 7, 8, 9 ] ], [ 9, [ 2, 7, 8, 12 ] ], [ 9, [ 2, 7, 8, 13 ] ], 
@@ -1082,7 +1082,7 @@ end);
 ## Note that this function only computes the cup product in the case that <Arg>complex</Arg> is an orientable weak pseudomanifold of dimension <M>2k</M> and <M>p = q = k</M>. Furthermore, <Arg>complex</Arg> must be given in standard labeling, with sorted facet list and <Arg>cocylce1</Arg> and <Arg>cocylce2</Arg> must be given in simplex notation and labeled accordingly. Note that the latter condition is usually fulfilled in case the cocycles were computed using <Ref Meth="SCCohomologyBasisAsSimplices"/>.  
 ## <Example>
 ## gap> SCLib.SearchByName("K3");
-## [ [ 584, "K3 surface" ] ]
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;                                     
 ## gap> basis:=SCCohomologyBasisAsSimplices(c,2);;
 ## gap> SCCupProduct(c,basis[1][2],basis[1][2]);
@@ -1167,8 +1167,10 @@ end);
 ## called the intersection form of <M>M</M>. This function returns the intersection form of an orientable combinatorial <M>2k</M>-manifold <Arg>complex</Arg> in form of a matrix <C>mat</C> with respect to the basis of  H<M>^k ( </M><Arg>complex</Arg>M<M>)</M> computed by <Ref Meth="SCCohomologyBasisAsSimplices"/>. The matrix entry <C>mat[i][j]</C> equals the intersection number of the <C>i</C>-th base element with the <C>j</C>-th base element of H<M>^k ( </M><Arg>complex</Arg>M<M>)</M>. 
 ## <Example>
 ## gap> SCLib.SearchByName("CP^2");       
-## [ [ 17, "CP^2 (VT)" ], [ 88, "CP^2#CP^2" ], [ 89, "CP^2#-CP^2" ], 
-##   [ 186, "CP^2#(S^2xS^2)" ], [ 499, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
+## [ [ 16, "CP^2 (VT)" ], [ 96, "CP^2#-CP^2" ], 
+##   [ 97, "CP^2#CP^2" ], [ 185, "CP^2#(S^2xS^2)" ], 
+##   [ 397, "Gaifullin CP^2" ], 
+##   [ 457, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);; 
 ## gap> c1:=SCConnectedSum(c,c);;
 ## gap> c2:=SCConnectedSumMinus(c,c);;
@@ -1252,17 +1254,11 @@ end);
 ## <Description>
 ## Computes the parity of the intersection form of a combinatorial manifold <Arg>complex</Arg> (see <Ref Meth="SCIntersectionForm"/>). If the intersection for is even (i. e. all diagonal entries are even numbers) <C>0</C> is returned, otherwise <C>1</C> is returned.
 ## <Example>
-## gap> SCLib.SearchByName("S^2xS^2");
-## [ [ 51, "S^2xS^2" ], [ 110, "S^2xS^2 (VT)" ], [ 111, "S^2xS^2 (VT)" ], 
-##   [ 112, "S^2xS^2 (VT)" ], [ 114, "(S^2xS^2)#(S^2xS^2)" ], 
-##   [ 144, "(S^2xS^2)#(S^2xS^2) (VT)" ], [ 145, "(S^2xS^2)#(S^2xS^2) (VT)" ], 
-##   [ 186, "CP^2#(S^2xS^2)" ] ]
+## gap> SCLib.SearchByName("S^2xS^2");;
 ## gap> c:=SCLib.Load(last[1][1]);;    
 ## gap> SCIntersectionFormParity(c);
 ## 0
-## gap> SCLib.SearchByName("CP^2");       
-## [ [ 17, "CP^2 (VT)" ], [ 88, "CP^2#CP^2" ], [ 89, "CP^2#-CP^2" ], 
-##   [ 186, "CP^2#(S^2xS^2)" ], [ 499, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
+## gap> SCLib.SearchByName("CP^2");;     
 ## gap> c:=SCLib.Load(last[1][1]);; 
 ## gap> SCIntersectionFormParity(c);
 ## 1
@@ -1312,9 +1308,7 @@ end);
 ## <Description>
 ## Returns the dimensionality of the intersection form of a combinatorial manifold <Arg>complex</Arg>, i. e. the length of a minimal generating set of H<M>^k (M)</M> (where <M>2k</M> is the dimension of <Arg>complex</Arg>). See <Ref Meth="SCIntersectionForm"/> for further details.
 ## <Example>
-## gap> SCLib.SearchByName("CP^2");       
-## [ [ 17, "CP^2 (VT)" ], [ 88, "CP^2#CP^2" ], [ 89, "CP^2#-CP^2" ], 
-##   [ 186, "CP^2#(S^2xS^2)" ], [ 499, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
+## gap> SCLib.SearchByName("CP^2");;
 ## gap> c:=SCLib.Load(last[1][1]);; 
 ## gap> SCIntersectionFormParity(c);
 ## 1
@@ -1364,9 +1358,7 @@ end);
 ## Computes the dimensionality (see <Ref Meth="SCIntersectionFormDimensionality"/>) and the signature of the intersection form of a combinatorial manifold <Arg>complex</Arg> as a <M>3</M>-tuple that contains the dimensionality in the first entry and the number of positive / negative eigenvalues in the second and third entry. See <Ref Meth="SCIntersectionForm"/> for further details.<P/>
 ## Internally calls the &GAP;-functions <C>Matrix_CharacteristicPolynomialSameField</C> and <C>CoefficientsOfLaurentPolynomial</C> to compute the number of positive / negative eigenvalues of the intersection form. 
 ## <Example>
-## gap> SCLib.SearchByName("CP^2");       
-## [ [ 17, "CP^2 (VT)" ], [ 88, "CP^2#CP^2" ], [ 89, "CP^2#-CP^2" ], 
-##   [ 186, "CP^2#(S^2xS^2)" ], [ 499, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
+## gap> SCLib.SearchByName("CP^2");;
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCIntersectionFormParity(c);
 ## 1
