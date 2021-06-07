@@ -1367,14 +1367,6 @@ end);
 ## gap> SCIntersectionFormSignature(c);
 ## [ 1, 0, 1 ]
 ## gap> d:=SCConnectedSum(c,c);                           
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices, Vertices.
-## 
-##  Name="CP^2 (VT)#+-CP^2 (VT)"
-##  Dim=4
-## 
-## /SimplicialComplex]
 ## gap> SCIntersectionFormSignature(d);
 ## [ 2, 1, 1 ]
 ## gap> d:=SCConnectedSumMinus(c,c);;

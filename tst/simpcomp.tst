@@ -159,25 +159,11 @@ true
 gap> 
 gap> c:=complexes[3];;
 gap> SCAlexanderDual(c);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="Alexander dual of Bd(\beta^4)"
- Dim=5
-
-/SimplicialComplex]
+<SimplicialComplex: Alexander dual of Bd(\beta^4) | dim = 5 | n = 8>
 gap> SCAltshulerSteinberg(c);
 0
 gap> SCAntiStar(c,1);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="ast([ 1 ]) in Bd(\beta^4)"
- Dim=3
-
-/SimplicialComplex]
+<SimplicialComplex: ast([ 1 ]) in Bd(\beta^4) | dim = 3 | n = 7>
 gap> SCAutomorphismGroup(c);
 Group([ (7,8), (5,7)(6,8), (3,5)(4,6), (1,3)(2,4) ])
 gap> SCAutomorphismGroupInternal(c);
@@ -189,14 +175,7 @@ gap> SCAutomorphismGroupStructure(c);
 gap> SCAutomorphismGroupTransitivity(c);
 1
 gap> SCBoundary(c);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="Bd(Bd(\beta^4))"
- Dim=-1
-
-/SimplicialComplex]
+<SimplicialComplex: Bd(Bd(\beta^4)) | dim = -1 | n = 0>
 gap> SCCentrallySymmetricElement(c);
 (1,2)(3,4)(5,6)(7,8)
 gap> SCCohomology(c);
@@ -210,70 +189,21 @@ gap> SCCohomologyBasisAsSimplices(c,0);
       [ [ 1, [ 8 ] ], [ 1, [ 7 ] ], [ 1, [ 6 ] ], [ 1, [ 5 ] ], [ 1, [ 4 ] ], 
           [ 1, [ 3 ] ], [ 1, [ 2 ] ], [ 1, [ 1 ] ] ] ] ]
 gap> SCCollapseGreedy(c);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="collapsed version of Bd(\beta^4)"
- Dim=3
-
-/SimplicialComplex]
+<SimplicialComplex: collapsed version of Bd(\beta^4) | dim = 3 | n = 8>
 gap> SCCone(c);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="cone over Bd(\beta^4)"
- Dim=4
-
-/SimplicialComplex]
+<SimplicialComplex: cone over Bd(\beta^4) | dim = 4 | n = 9>
 gap> SCConnectedComponents(c);
-[ [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="Connected component #1 of Bd(\beta^4)"
-     Dim=3
-    
-    /SimplicialComplex] ]
+[ <SimplicialComplex: Connected component #1 of Bd(\beta^4) | dim = 3 | n = 8> ]
 gap> SCConnectedProduct(c,2);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="Bd(\beta^4)#+-Bd(\beta^4)"
- Dim=3
-
-/SimplicialComplex]
+<SimplicialComplex: Bd(\beta^4)#+-Bd(\beta^4) | dim = 3 | n = 12>
 gap> SCConnectedSum(c,c);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="Bd(\beta^4)#+-Bd(\beta^4)"
- Dim=3
-
-/SimplicialComplex]
+<SimplicialComplex: Bd(\beta^4)#+-Bd(\beta^4) | dim = 3 | n = 12>
 gap> SCConnectedSumMinus(c,c);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="Bd(\beta^4)#+-Bd(\beta^4)"
- Dim=3
-
-/SimplicialComplex]
+<SimplicialComplex: Bd(\beta^4)#+-Bd(\beta^4) | dim = 3 | n = 12>
 gap> IsIdenticalObj(c,SCCopy(c));
 false
 gap> SCDifference(c,c);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="Bd(\beta^4) \ Bd(\beta^4)"
- Dim=-1
-
-/SimplicialComplex]
+<SimplicialComplex: Bd(\beta^4) \ Bd(\beta^4) | dim = -1 | n = 0>
 gap> SCDim(c);
 3
 gap> SCFVector(SCDualGraph(c));
@@ -314,14 +244,7 @@ gap> SCFacets(c);
   [ 2, 3, 5, 7 ], [ 2, 3, 5, 8 ], [ 2, 3, 6, 7 ], [ 2, 3, 6, 8 ], 
   [ 2, 4, 5, 7 ], [ 2, 4, 5, 8 ], [ 2, 4, 6, 7 ], [ 2, 4, 6, 8 ] ]
 gap> SCFillSphere(c);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="FilledSphere(Bd(\beta^4)) at vertex [ 1 ]"
- Dim=4
-
-/SimplicialComplex]
+<SimplicialComplex: FilledSphere(Bd(\beta^4)) at vertex [ 1 ] | dim = 4 | n = 8>
 gap> SCFpBettiNumbers(c,2);
 [ 1, 0, 0, 1 ]
 gap> Size(SCFundamentalGroup(c));
@@ -345,23 +268,9 @@ gap> SCHomologyBasisAsSimplices(c,0);
 gap> SCHomologyInternal(c);
 [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
 gap> SCInterior(c);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, IsEmpty, Name, Vertices.
-
- Name="Int(Bd(\beta^4))"
- Dim=2
-
-/SimplicialComplex]
+<SimplicialComplex: Int(Bd(\beta^4)) | dim = 2 | n = 8>
 gap> SCIntersection(c,c);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="Bd(\beta^4) cap Bd(\beta^4)"
- Dim=3
-
-/SimplicialComplex]
+<SimplicialComplex: Bd(\beta^4) cap Bd(\beta^4) | dim = 3 | n = 8>
 gap> SCIsCentrallySymmetric(c);
 true
 gap> SCIsConnected(c);
@@ -381,14 +290,7 @@ true
 gap> SCIsKNeighborly(c,2);
 false
 gap> SCIsKStackedSphere(c,1);
-[ false, [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="empty complex"
-     Dim=-1
-    
-    /SimplicialComplex] ]
+[ false, <SimplicialComplex: empty complex | dim = -1 | n = 0> ]
 gap> SCIsManifold(c);
 true
 gap> SCIsMovableComplex(c);
@@ -416,72 +318,16 @@ gap> SCLabelMin(c);
 gap> SCLabels(c);
 [ 1, 2, 3, 4, 5, 6, 7, 8 ]
 gap> SCLink(c,1);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="lk([ 1 ]) in Bd(\beta^4)"
- Dim=2
-
-/SimplicialComplex]
+<SimplicialComplex: lk([ 1 ]) in Bd(\beta^4) | dim = 2 | n = 6>
 gap> SCLinks(c,0);
-[ [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="lk([ 1 ]) in Bd(\beta^4)"
-     Dim=2
-    
-    /SimplicialComplex], [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="lk([ 2 ]) in Bd(\beta^4)"
-     Dim=2
-    
-    /SimplicialComplex], [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="lk([ 3 ]) in Bd(\beta^4)"
-     Dim=2
-    
-    /SimplicialComplex], [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="lk([ 4 ]) in Bd(\beta^4)"
-     Dim=2
-    
-    /SimplicialComplex], [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="lk([ 5 ]) in Bd(\beta^4)"
-     Dim=2
-    
-    /SimplicialComplex], [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="lk([ 6 ]) in Bd(\beta^4)"
-     Dim=2
-    
-    /SimplicialComplex], [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="lk([ 7 ]) in Bd(\beta^4)"
-     Dim=2
-    
-    /SimplicialComplex], [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="lk([ 8 ]) in Bd(\beta^4)"
-     Dim=2
-    
-    /SimplicialComplex] ]
+[ <SimplicialComplex: lk([ 1 ]) in Bd(\beta^4) | dim = 2 | n = 6>,
+ <SimplicialComplex: lk([ 2 ]) in Bd(\beta^4) | dim = 2 | n = 6>,
+ <SimplicialComplex: lk([ 3 ]) in Bd(\beta^4) | dim = 2 | n = 6>, 
+ <SimplicialComplex: lk([ 4 ]) in Bd(\beta^4) | dim = 2 | n = 6>,
+ <SimplicialComplex: lk([ 5 ]) in Bd(\beta^4) | dim = 2 | n = 6>,
+ <SimplicialComplex: lk([ 6 ]) in Bd(\beta^4) | dim = 2 | n = 6>,
+ <SimplicialComplex: lk([ 7 ]) in Bd(\beta^4) | dim = 2 | n = 6>,
+ <SimplicialComplex: lk([ 8 ]) in Bd(\beta^4) | dim = 2 | n = 6> ]
 gap> SCMinimalNonFaces(c);
 [ [  ], [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ] ], [  ] ]
 gap> SCMorseIsPerfect(c,SCVertices(c));
@@ -527,119 +373,28 @@ gap> SCName(c);
 gap> SCSkel(c,0);
 [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ] ]
 gap> SCSpan(c,[1..4]);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="span([ 1, 2, 3, 4 ]) in test"
- Dim=1
-
-/SimplicialComplex]
+<SimplicialComplex: span([ 1, 2, 3, 4 ]) in test | dim = 1 | n = 4>
 gap> SCSpanningTree(c);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="spanning tree of Bd(\beta^4)"
- Dim=1
-
-/SimplicialComplex]
+<SimplicialComplex: spanning tree of test | dim = 1 | n = 8>
 gap> SCStar(c,1);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="star([ 1 ]) in test"
- Dim=3
-
-/SimplicialComplex]
+<SimplicialComplex: star([ 1 ]) in test | dim = 3 | n = 7>
 gap> SCStars(c,0);
-[ [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="star([ 1 ]) in test"
-     Dim=3
-    
-    /SimplicialComplex], [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="star([ 2 ]) in test"
-     Dim=3
-    
-    /SimplicialComplex], [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="star([ 3 ]) in test"
-     Dim=3
-    
-    /SimplicialComplex], [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="star([ 4 ]) in test"
-     Dim=3
-    
-    /SimplicialComplex], [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="star([ 5 ]) in test"
-     Dim=3
-    
-    /SimplicialComplex], [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="star([ 6 ]) in test"
-     Dim=3
-    
-    /SimplicialComplex], [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="star([ 7 ]) in test"
-     Dim=3
-    
-    /SimplicialComplex], [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="star([ 8 ]) in test"
-     Dim=3
-    
-    /SimplicialComplex] ]
+[ <SimplicialComplex: star([ 1 ]) in test | dim = 3 | n = 7>,
+ <SimplicialComplex: star([ 2 ]) in test | dim = 3 | n = 7>,
+ <SimplicialComplex: star([ 3 ]) in test | dim = 3 | n = 7>,
+ <SimplicialComplex: star([ 4 ]) in test | dim = 3 | n = 7>,
+ <SimplicialComplex: star([ 5 ]) in test | dim = 3 | n = 7>,
+ <SimplicialComplex: star([ 6 ]) in test | dim = 3 | n = 7>,
+ <SimplicialComplex: star([ 7 ]) in test | dim = 3 | n = 7>,
+ <SimplicialComplex: star([ 8 ]) in test | dim = 3 | n = 7> ]
 gap> SCStronglyConnectedComponents(c);
-[ [SimplicialComplex
-    
-     Properties known: Dim, FacetsEx, Name, Vertices.
-    
-     Name="Strongly connected component #1 of test"
-     Dim=3
-    
-    /SimplicialComplex] ]
+[ <SimplicialComplex: Strongly connected component #1 of test | dim = 3 | n = 8> ]
 gap> SCSuspension(c);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="susp of test"
- Dim=4
-
-/SimplicialComplex]
+<SimplicialComplex: susp of test | dim = 4 | n = 10>
 gap> SCTopologicalType(c);
 "S^3"
 gap> SCVertexIdentification(c,[1],[2]);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="test vertex identified ([ 1 ]=[ 2 ])"
- Dim=3
-
-/SimplicialComplex]
+<SimplicialComplex: test vertex identified ([ 1 ]=[ 2 ]) | dim = 3 | n = 7>
 gap> SCVertices(c);
 [ 1, 2, 3, 4, 5, 6, 7, 8 ]
 gap> SCVerticesEx(c);
@@ -1013,14 +768,7 @@ gap> c:=SCBdCrossPolytope(4);;
 gap> SCIsNormalSurface(SCNS([[1,2,3],[2,3,4],[1,3,4],[1,2,4]]));
 true
 gap> SCNSEmpty();
-[NormalSurface
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="empty normal surface"
- Dim=-1
-
-/NormalSurface]
+<NormalSurface: empty normal surface | dim = -1>
 gap> sl:=SCNSSlicing(c,[[1,2,3,4],[5,6,7,8]]);;
 gap> sl<>fail;
 true
@@ -1028,137 +776,36 @@ gap> SCIsSimplicialComplex(SCNSTriangulation(sl));
 true
 gap> 
 gap> SCMappingCylinder(2);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="Mapping cylinder Bd(CP^2) = L(2,1)"
- Dim=4
-
-/SimplicialComplex]
+<SimplicialComplex: Mapping cylinder Bd(CP^2) = L(2,1) | dim = 4 | n = 32>
 gap> 
 gap> SCSeriesAGL(17);
 [ AGL(1,17), [ [ 1, 2, 4, 8, 16 ] ] ]
 gap> SCSeriesBdHandleBody(3,9);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, IsOrientable, Name, TopologicalType, 
-                   Vertices.
-
- Name="Sphere bundle S^2 ~ S^1"
- Dim=3
- IsOrientable=false
- TopologicalType="S^2 ~ S^1"
-
-/SimplicialComplex]
+<SimplicialComplex: Sphere bundle S^2 ~ S^1 | dim = 3 | n = 9>
 gap> SCSeriesC2n(16);
-[SimplicialComplex
-
- Properties known: DifferenceCycles, Dim, FacetsEx, Name, 
-                   TopologicalType, Vertices.
-
- Name="C_32 = { (1:1:11:19),(1:1:19:11),(1:11:1:19),(2:11:2:17),(2:13:2:15) }"
- Dim=3
- TopologicalType="S^2 ~ S^1"
-
-/SimplicialComplex]
+<SimplicialComplex: C_32 = { (1:1:11:19),(1:1:19:11),(1:11:1:19),(2:11:2:17),(2:13:2:15) } | dim = 3 | n = 32>
 gap> SCSeriesCSTSurface(1,2,8);
-[SimplicialComplex
-
- Properties known: DifferenceCycles, Dim, FacetsEx, Name, Vertices.
-
- Name="cst surface S_{(1,2,8)} = { (1:2:5),(1:5:2) }"
- Dim=2
-
-/SimplicialComplex]
+<SimplicialComplex: cst surface S_{(1,2,8)} = { (1:2:5),(1:5:2) } | dim = 2 | n = 8>
 gap> SCSeriesD2n(20);
-[SimplicialComplex
-
- Properties known: DifferenceCycles, Dim, FacetsEx, Name, 
-                   TopologicalType, Vertices.
-
- Name="D_40 = { (1:1:1:37),(1:2:35:2),(3:16:5:16),(2:3:16:19),(2:19:16:3) }"
- Dim=3
- TopologicalType="S^2 ~ S^1"
-
-/SimplicialComplex]
+<SimplicialComplex: D_40 = { (1:1:1:37),(1:2:35:2),(3:16:5:16),(2:3:16:19),(2:19:16:3) } | dim = 3 | n = 40>
 gap> SCSeriesHandleBody(3,9);
-[SimplicialComplex
-
- Properties known: DifferenceCycles, Dim, FacetsEx, IsOrientable, 
-                   Name, TopologicalType, Vertices.
-
- Name="Handle body B^2 x S^1"
- Dim=3
- IsOrientable=true
- TopologicalType="B^2 x S^1"
-
-/SimplicialComplex]
+<SimplicialComplex: Handle body B^2 x S^1 | dim = 3 | n = 9>
 gap> SCSeriesK(1,0);
-[SimplicialComplex
-
- Properties known: DifferenceCycles, Dim, FacetsEx, Name, Vertices.
-
- Name="K^1_0"
- Dim=3
-
-/SimplicialComplex]
+<SimplicialComplex: K^1_0 | dim = 3 | n = 9>
 gap> SCSeriesKu(3);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="Sl_12 = G{ [1,2,4,7],[1,2,7,8],[1,4,7,12] }"
- Dim=3
-
-/SimplicialComplex]
+<SimplicialComplex: Sl_12 = G{ [1,2,4,7],[1,2,7,8],[1,4,7,12] } | dim = 3 | n = 12>
 gap> SCSeriesL(1,0);
-[SimplicialComplex
-
- Properties known: DifferenceCycles, Dim, FacetsEx, Name, Vertices.
-
- Name="L^1_0"
- Dim=3
-
-/SimplicialComplex]
+<SimplicialComplex: L^1_0 | dim = 3 | n = 10>
 gap> SCSeriesLe(7)<>fail;
 true
 gap> SCSeriesNSB1(11);
-[SimplicialComplex
-
- Properties known: DifferenceCycles, Dim, FacetsEx, Name, Vertices.
-
- Name="Neighborly sphere bundle NSB_1"
- Dim=3
-
-/SimplicialComplex]
+<SimplicialComplex: Neighborly sphere bundle NSB_1 | dim = 3 | n = 23>
 gap> SCSeriesNSB2(11);
-[SimplicialComplex
-
- Properties known: DifferenceCycles, Dim, FacetsEx, Name, Vertices.
-
- Name="Neighborly sphere bundle NSB_2"
- Dim=3
-
-/SimplicialComplex]
+<SimplicialComplex: Neighborly sphere bundle NSB_2 | dim = 3 | n = 22>
 gap> SCSeriesNSB3(11);
-[SimplicialComplex
-
- Properties known: DifferenceCycles, Dim, FacetsEx, Name, Vertices.
-
- Name="Neighborly sphere bundle NSB_3"
- Dim=3
-
-/SimplicialComplex]
+<SimplicialComplex: Neighborly sphere bundle NSB_3 | dim = 3 | n = 11>
 gap> SCSeriesPrimeTorus(1,2,7);
-[SimplicialComplex
-
- Properties known: DifferenceCycles, Dim, FacetsEx, Name, Vertices.
-
- Name="prime torus S_{(1,2,7)} = { (1:2:4),(1:4:2) }"
- Dim=2
-
-/SimplicialComplex]
+<SimplicialComplex: prime torus S_{(1,2,7)} = { (1:2:4),(1:4:2) } | dim = 2 | n = 7>
 gap> 
 gap> SCFVectorBdCrossPolytope(4);
 [ 8, 24, 32, 16 ]
@@ -1173,14 +820,7 @@ gap> G:=Group((1,2)(3,4)(5,6)(7,8)(9,10)(11,12)(13,14)(15,16),
 > (1,9)(2,10)(3,11)(4,12)(5,13)(6,14)(7,15)(8,16),
 > (2,13,15,11,14,3,5,8,16,7,4,9,10,6,12));;
 gap> K3:=SCFromGenerators(G,[[2,3,4,5,9],[2,5,7,10,11]]);
-[SimplicialComplex
-
- Properties known: Dim, FacetsEx, Name, Vertices.
-
- Name="complex from generators under unknown group"
- Dim=4
-
-/SimplicialComplex]
+<SimplicialComplex: complex from generators under unknown group | dim = 4 | n = 16>
 gap> ll:=SCsFromGroupExt(G,16,4,0,0,false,false,0,[]);;
 gap> Size(ll);
 4

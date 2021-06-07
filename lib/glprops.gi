@@ -1590,14 +1590,6 @@ end);
 ##   [ 5, 6 ] ]
 ## gap> graph:=SC(graph);;              
 ## gap> dualGraph:=SCDualGraph(sphere); 
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="dual graph of S^4_6"
-##  Dim=1
-## 
-## /SimplicialComplex]
 ## gap> graph.Facets = dualGraph.Facets;
 ## true
 ## </Example>
@@ -2216,39 +2208,6 @@ end);
 ## gap> SCLib.SearchByName("K3");
 ## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> SCLib.Load(last[1][1]);
-## [SimplicialComplex
-## 
-##  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-##                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-##                    AutomorphismGroupTransitivity, Boundary, Chi, 
-##                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
-##                    Generators, H, HasBoundary, HasInterior, Homology, 
-##                    Interior, IsCentrallySymmetric, IsConnected, 
-##                    IsEulerianManifold, IsOrientable, IsPM, IsPure, 
-##                    MinimalNonFaces, Name, Neighborliness, Orientation, 
-##                    StronglyConnected, VertexLabels, Vertices.
-## 
-##  Name="K3 surface"
-##  Dim=4
-##  AutomorphismGroupSize=240
-##  AutomorphismGroupStructure="((C2 x C2 x C2 x C2) : C5) : C3"
-##  AutomorphismGroupTransitivity=2
-##  Chi=24
-##  F=[ 16, 120, 560, 720, 288 ]
-##  G=[ 10, 55 ]
-##  H=[ 11, 66, 286, -99, 23 ]
-##  HasBoundary=false
-##  HasInterior=true
-##  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 22, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-##  IsCentrallySymmetric=false
-##  IsConnected=true
-##  IsEulerianManifold=true
-##  IsOrientable=true
-##  IsPM=true
-##  IsPure=true
-##  Neighborliness=3
-## 
-## /SimplicialComplex]
 ## gap> SCGeneratorsEx(last);
 ## [ [ [ 1, 2, 3, 8, 12 ], 240 ], [ [ 1, 2, 5, 8, 14 ], 48 ] ]
 ## </Example>
@@ -2301,39 +2260,6 @@ end);
 ## gap> SCLib.SearchByName("K3");
 ## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> SCLib.Load(last[1][1]);
-## [SimplicialComplex
-## 
-##  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-##                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-##                    AutomorphismGroupTransitivity, Boundary, Chi, 
-##                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
-##                    Generators, H, HasBoundary, HasInterior, Homology, 
-##                    Interior, IsCentrallySymmetric, IsConnected, 
-##                    IsEulerianManifold, IsOrientable, IsPM, IsPure, 
-##                    MinimalNonFaces, Name, Neighborliness, Orientation, 
-##                    StronglyConnected, VertexLabels, Vertices.
-## 
-##  Name="K3 surface"
-##  Dim=4
-##  AutomorphismGroupSize=240
-##  AutomorphismGroupStructure="((C2 x C2 x C2 x C2) : C5) : C3"
-##  AutomorphismGroupTransitivity=2
-##  Chi=24
-##  F=[ 16, 120, 560, 720, 288 ]
-##  G=[ 10, 55 ]
-##  H=[ 11, 66, 286, -99, 23 ]
-##  HasBoundary=false
-##  HasInterior=true
-##  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 22, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-##  IsCentrallySymmetric=false
-##  IsConnected=true
-##  IsEulerianManifold=true
-##  IsOrientable=true
-##  IsPM=true
-##  IsPure=true
-##  Neighborliness=3
-## 
-## /SimplicialComplex]
 ## gap> SCGenerators(last);
 ## [ [ [ 1, 2, 3, 8, 12 ], 240 ], [ [ 1, 2, 5, 8, 14 ], 48 ] ]
 ## </Example>
@@ -2700,34 +2626,8 @@ end);
 ## If <Arg>complex</Arg> does not fulfill the weak pseudomanifold property (i. e. if the valence of any <M>d-1</M>-face exceeds <M>2</M>) the function returns <K>fail</K>.
 ## <Example>
 ## gap> c:=SC([[1,2,3,4],[1,2,3,5],[1,2,4,5],[1,3,4,5]]);
-## [SimplicialComplex
-##
-## Properties known: Dim, Facets, Name, VertexLabels.
-##
-## Name="unnamed complex m"
-## Dim=3
-##
-## /SimplicialComplex]
 ## gap> SCBoundary(c);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="Bd(unnamed complex 5)"
-##  Dim=2
-## 
-## /SimplicialComplex]
 ## gap> c;  
-## [SimplicialComplex
-## 
-##  Properties known: Boundary, Dim, Faces, Facets, HasBoundary, Name, 
-##                    VertexLabels.
-## 
-##  Name="unnamed complex 5"
-##  Dim=3
-##  HasBoundary=true
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>

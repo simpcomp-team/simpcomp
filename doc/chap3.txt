@@ -37,7 +37,7 @@
   geometric  object  given  by  a certain cell decomposition. Here, as already
   mentioned,  the  GAP4  type system [BL98] is used to cache properties of the
   object. In this way, a property is not calculated multiple times in case the
-  object is not altered (see [2XSCPropertiesDropped[102X ([14X5.1-4[114X) for a way of dropping
+  object is not altered (see [2XSCPropertiesDropped[102X ([14X5.1-5[114X) for a way of dropping
   previously calculated properties).[133X
   
   [33X[0;0YAs  of  Version  1.4,  [5Xsimpcomp[105X  makes  use  of  two  different  subtypes of

@@ -19,16 +19,17 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap4.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap6.html">[Next Chapter]</a>&nbsp;  </div>
 
-<p id="mathjaxlink" class="pcenter"><a href="chap5_mj.html">[MathJax on]</a></p>
+<p id="mathjaxlink" class="pcenter"></p>
 <p><a id="X78B454D3799549A9" name="X78B454D3799549A9"></a></p>
 <div class="ChapSects"><a href="chap5.html#X78B454D3799549A9">5 <span class="Heading">The GAP object types <code class="code">SCSimplicialComplex</code> and <code class="code">SCNormalSurface</code></span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X7E7034FC82152AE6">5.1 <span class="Heading">The object type <code class="code">SCSimplicialComplex</code></span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X82E3D6D97951997D">5.1-1 SCIsSimplicialComplex</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X80F13BB484B3E9B2">5.1-2 SCCopy</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7AAEB857865D9B4A">5.1-3 ShallowCopy (SCSimplicialComplex)</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X8155B18D7EEF06DE">5.1-4 SCPropertiesDropped</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7B20035E791441C5">5.1-2 SCDetails</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X80F13BB484B3E9B2">5.1-3 SCCopy</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7AAEB857865D9B4A">5.1-4 ShallowCopy (SCSimplicialComplex)</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X8155B18D7EEF06DE">5.1-5 SCPropertiesDropped</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X790E779979A985FF">5.2 <span class="Heading">Overloaded operators of <code class="code">SCSimplicialComplex</code></span></a>
 </span>
@@ -96,9 +97,45 @@
  true
  </pre></div>
 
+<p><a id="X7B20035E791441C5" name="X7B20035E791441C5"></a></p>
+
+<h5>5.1-2 SCDetails</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCDetails</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: a string of type <code class="code">IsString</code> upon success, <code class="keyw">fail</code> otherwise.</p>
+
+<p>The function returns a list of known properties of <var class="Arg">complex</var> an lists some of these properties explicitly.</p>
+
+
+<div class="example"><pre>
+ gap&gt; c:=SC([[1,2,3],[1,2,4],[1,3,4],[2,3,4]]);
+ &lt;SimplicialComplex: unnamed complex 1 | dim = 2 | n = 4&gt;
+ gap&gt; Print(SCDetails(c));
+ [SimplicialComplex
+ 
+  Properties known: Dim, FacetsEx, Name, Vertices.
+  Name="unnamed complex 1"
+  Dim=2
+ 
+ /SimplicialComplex]
+ gap&gt; c.F;
+ [ 4, 6, 4 ]
+ gap&gt; c.Homology;
+ [ [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
+ gap&gt; Print(SCDetails(c));
+ [SimplicialComplex
+ 
+  Properties known: Dim, FacetsEx, Homology, Name, Vertices.
+  Name="unnamed complex 1"
+  Dim=2
+  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
+ 
+ /SimplicialComplex]
+ </pre></div>
+
 <p><a id="X80F13BB484B3E9B2" name="X80F13BB484B3E9B2"></a></p>
 
-<h5>5.1-2 SCCopy</h5>
+<h5>5.1-3 SCCopy</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCCopy</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a copy of <var class="Arg">complex</var> upon success, <code class="keyw">fail</code> otherwise.</p>
@@ -123,12 +160,12 @@
 
 <p><a id="X7AAEB857865D9B4A" name="X7AAEB857865D9B4A"></a></p>
 
-<h5>5.1-3 ShallowCopy (SCSimplicialComplex)</h5>
+<h5>5.1-4 ShallowCopy (SCSimplicialComplex)</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ShallowCopy (SCSimplicialComplex)</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Returns: a copy of <var class="Arg">complex</var> upon success, <code class="keyw">fail</code> otherwise.</p>
 
-<p>Makes a copy of <var class="Arg">complex</var>. This is actually a ``deep copy'' such that all properties of the copy can be altered without changing the original complex. Internally calls <code class="func">SCCopy</code> (<a href="chap5.html#X80F13BB484B3E9B2"><span class="RefLink">5.1-2</span></a>).</p>
+<p>Makes a copy of <var class="Arg">complex</var>. This is actually a ``deep copy'' such that all properties of the copy can be altered without changing the original complex. Internally calls <code class="func">SCCopy</code> (<a href="chap5.html#X80F13BB484B3E9B2"><span class="RefLink">5.1-3</span></a>).</p>
 
 
 <div class="example"><pre>
@@ -140,7 +177,7 @@
 
 <p><a id="X8155B18D7EEF06DE" name="X8155B18D7EEF06DE"></a></p>
 
-<h5>5.1-4 SCPropertiesDropped</h5>
+<h5>5.1-5 SCPropertiesDropped</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCPropertiesDropped</code>( <var class="Arg">complex</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a object of type <code class="code">SCSimplicialComplex</code> upon success, <code class="keyw">fail</code> otherwise.</p>
@@ -150,10 +187,18 @@
 
 <div class="example"><pre>
  gap&gt; c:=SC(SCFacets(SCBdCyclicPolytope(10,12)));
+ &lt;SimplicialComplex: unnamed complex 27 | dim = 9 | n = 12&gt;
  gap&gt; c.F; time;                                 
+ [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
+ 38
  gap&gt; c.F; time;                                 
+ [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
+ 49
  gap&gt; c:=SCPropertiesDropped(c);                 
+ &lt;SimplicialComplex: unnamed complex 27 | dim = 9 | n = 12&gt;
  gap&gt; c.F; time;                                 
+ [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
+ 41
  </pre></div>
 
 <p><a id="X790E779979A985FF" name="X790E779979A985FF"></a></p>
@@ -175,7 +220,7 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdSimplex(3)+10;;
  gap&gt; c.Facets;
- [[11, 12, 13], [11, 12, 14], [11, 13, 14], [12, 13, 14]]
+ [ [ 11, 12, 13 ], [ 11, 12, 14 ], [ 11, 13, 14 ], [ 12, 13, 14 ] ]
  </pre></div>
 
 <p><a id="X84853235810E68E7" name="X84853235810E68E7"></a></p>
@@ -191,7 +236,7 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdSimplex(3)-1;;
  gap&gt; c.Facets;
- [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+ [ [ 0, 1, 2 ], [ 0, 1, 3 ], [ 0, 2, 3 ], [ 1, 2, 3 ] ]
  </pre></div>
 
 <p><a id="X78329E8F7999F2F3" name="X78329E8F7999F2F3"></a></p>
@@ -207,7 +252,7 @@
 <div class="example"><pre>
  gap&gt; c:=(SCBdSimplex(3)*10) mod 7;;
  gap&gt; c.Facets;
- [[3, 6, 2], [3, 6, 5], [3, 2, 5], [6, 2, 5]]
+ [ [ 2, 3, 5 ], [ 2, 3, 6 ], [ 2, 5, 6 ], [ 3, 5, 6 ] ]
  </pre></div>
 
 <p><a id="X7CBC2E7A87726BA8" name="X7CBC2E7A87726BA8"></a></p>
@@ -222,15 +267,7 @@
 
 <div class="example"><pre>
  gap&gt; c:=SCBdSimplex(2)^2; #a torus
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, TopologicalType, SCVertices.
- 
-  Name="(S^1_3)^2"
-  Dim=2
-  TopologicalType="(S^1)^2"
- 
- /SimplicialComplex]
+ &lt;SimplicialComplex: (S^1_3)^2 | dim = 2 | n = 9&gt;
  </pre></div>
 
 <p><a id="X7E49B2337FCCD890" name="X7E49B2337FCCD890"></a></p>
@@ -244,25 +281,13 @@
 
 
 <div class="example"><pre>
- gap&gt; SCLib.SearchByName("RP^3");
- [ [ 45, "RP^3" ], [ 103, "RP^3=L(2,1) (VT)" ], [ 246, "(S^2~S^1)#RP^3" ], 
-   [ 247, "(S^2xS^1)#RP^3" ], [ 283, "(S^2~S^1)#2#RP^3" ], 
-   [ 285, "(S^2xS^1)#2#RP^3" ], [ 409, "RP^3#RP^3" ], ...
+ gap&gt; SCLib.SearchByName("RP^3");;
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; SCLib.SearchByName("S^2~S^1"){[1..3]};
- [ [ 14, "S^2~S^1 (VT)" ], [ 29, "S^2~S^1 (VT)" ], [ 34, "S^2~S^1 (VT)" ], 
-   [ 42, "S^2~S^1 (VT)" ], [ 48, "S^2~S^1 (VT)" ], [ 49, "S^2~S^1 (VT)" ], 
-   [ 84, "S^2~S^1 (VT)" ], [ 87, "S^2~S^1 (VT)" ], ...
+ [ [ 12, "S^2~S^1 (VT)" ], [ 26, "S^2~S^1 (VT)" ], [ 27, "S^2~S^1 (VT)" ] ]
  gap&gt; d:=SCLib.Load(last[1][1]);;
  gap&gt; c:=c+d; #form RP^3#(S^2~S^1)
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, SCVertices, Vertices.
- 
-  Name="RP^3#+-S^2~S^1 (VT)"
-  Dim=3
- 
- /SimplicialComplex]
+ &lt;SimplicialComplex: RP^3#+-S^2~S^1 (VT) | dim = 3 | n = 16&gt;
  </pre></div>
 
 <p><a id="X7F9794A381478434" name="X7F9794A381478434"></a></p>
@@ -286,16 +311,9 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("RP^2");
- [ [ 3, "RP^2 (VT)" ], [ 284, "RP^2xS^1" ] ]
+ [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
  gap&gt; c:=SCLib.Load(last[1][1])*SCBdSimplex(3); #form RP^2 x S^2
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, SCVertices.
- 
-  Name="RP^2 (VT)xS^2_4"
-  Dim=4
- 
- /SimplicialComplex]
+ &lt;SimplicialComplex: RP^2 (VT)xS^2_4 | dim = 4 | n = 24&gt;
  </pre></div>
 
 <p><a id="X7A3887227BA8E878" name="X7A3887227BA8E878"></a></p>
@@ -334,14 +352,7 @@
 
 <div class="example"><pre>
  gap&gt; c:=Union(SCBdSimplex(3),SCBdSimplex(3)+3); #a wedge of two 2-spheres
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, SCVertices.
- 
-  Name="S^2_4 cup S^2_4"
-  Dim=2
- 
- /SimplicialComplex]
+ &lt;SimplicialComplex: S^2_4 cup S^2_4 | dim = 2 | n = 7&gt;
  </pre></div>
 
 <p><a id="X80CFABE083100541" name="X80CFABE083100541"></a></p>
@@ -380,17 +391,9 @@
  gap&gt; d:=SCBdSimplex(3);;        
  gap&gt; d:=SCMove(d,[[1,2,3],[]]);;
  gap&gt; d:=d+1;;                   
- gap&gt; s1:=SCIntersection(c,d);   
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, SCVertices.
- 
-  Name="S^2_4 cap unnamed complex m"
-  Dim=1
- 
- /SimplicialComplex]
  gap&gt; s1.Facets;                 
- [ [ 2, 3 ], [ 2, 4 ], [ 3, 4 ] ]
+ Error, Variable: 's1' must have a value
+ not in any function at *stdin*:77
  </pre></div>
 
 <p><a id="X7B3E2F12853D4303" name="X7B3E2F12853D4303"></a></p>
@@ -404,11 +407,7 @@
 
 
 <div class="example"><pre>
- gap&gt; SCLib.SearchByAttribute("F=[12,66,108,54]");
- [ [ 116, "S^2xS^1 (VT)" ], [ 117, "S^2xS^1 (VT)" ], 
-   [ 118, "(S^2xS^1)#(S^2xS^1) (VT)" ], [ 119, "S^2~S^1 (VT)" ], 
-   [ 120, "(S^2xS^1)#(S^2xS^1) (VT)" ], [ 121, "(S^2xS^1)#(S^2xS^1) (VT)" ], 
-   [ 122, "S^2xS^1 (VT)" ], [ 123, "(S^2xS^1)#(S^2xS^1) (VT)" ], ...
+ gap&gt; SCLib.SearchByAttribute("F=[12,66,108,54]");;
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; for i in [1..Size(c)] do Print(c.F[i],"\n"); od;
  12
@@ -428,11 +427,7 @@
 
 
 <div class="example"><pre>
- gap&gt; SCLib.SearchByAttribute("F=[12,66,108,54]");
- [ [ 116, "Sˆ2xSˆ1 (VT)" ], [ 117, "Sˆ2xSˆ1 (VT)" ],
- [ 118, "(Sˆ2xSˆ1)#(Sˆ2xSˆ1) (VT)" ], [ 119, "Sˆ2˜Sˆ1 (VT)" ],
- [ 120, "(Sˆ2xSˆ1)#(Sˆ2xSˆ1) (VT)" ], [ 121, "(Sˆ2xSˆ1)#(Sˆ2xSˆ1) (VT)" ],
- [ 122, "Sˆ2xSˆ1 (VT)" ], [ 123, "(Sˆ2xSˆ1)#(Sˆ2xSˆ1) (VT)" ], ...
+ gap&gt; SCLib.SearchByAttribute("F=[12,66,108,54]");;
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; for i in [1..Length(c)] do Print(c.F[i],"\n"); od;
  12
@@ -453,16 +448,14 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K^2");
- [ [ 19, "K^2 (VT)" ], [ 230, "K^2 (VT)" ] ]
+ [ [ 18, "K^2 (VT)" ], [ 221, "K^2 (VT)" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; c[2];
- [ [ 1, 2 ], [ 1, 3 ], [ 1, 7 ], [ 1, 9 ], [ 1, 13 ], [ 1, 14 ], [ 2, 3 ], 
-   [ 2, 4 ], [ 2, 8 ], [ 2, 10 ], [ 2, 14 ], [ 3, 4 ], [ 3, 5 ], [ 3, 9 ], 
-   [ 3, 11 ], [ 4, 5 ], [ 4, 6 ], [ 4, 10 ], [ 4, 12 ], [ 5, 6 ], [ 5, 7 ], 
-   [ 5, 11 ], [ 5, 13 ], [ 6, 7 ], [ 6, 8 ], [ 6, 12 ], [ 6, 14 ], [ 7, 8 ], 
-   [ 7, 9 ], [ 7, 13 ], [ 8, 9 ], [ 8, 10 ], [ 8, 14 ], [ 9, 10 ], [ 9, 11 ], 
-   [ 10, 11 ], [ 10, 12 ], [ 11, 12 ], [ 11, 13 ], [ 12, 13 ], [ 12, 14 ], 
-   [ 13, 14 ] ]
+ [ [ 1, 2 ], [ 1, 3 ], [ 1, 5 ], [ 1, 7 ], [ 1, 9 ], [ 1, 10 ], [ 2, 3 ], 
+   [ 2, 4 ], [ 2, 6 ], [ 2, 8 ], [ 2, 10 ], [ 3, 4 ], [ 3, 5 ], [ 3, 7 ], 
+   [ 3, 9 ], [ 4, 5 ], [ 4, 6 ], [ 4, 8 ], [ 4, 10 ], [ 5, 6 ], [ 5, 7 ], 
+   [ 5, 9 ], [ 6, 7 ], [ 6, 8 ], [ 6, 10 ], [ 7, 8 ], [ 7, 9 ], [ 8, 9 ], 
+   [ 8, 10 ], [ 9, 10 ] ]
  gap&gt; c[4];
  [  ]
  </pre></div>
@@ -557,8 +550,8 @@
    [ [ 1, 2 ], [ 1, 4 ], [ 1, 5 ] ], [ [ 1, 3 ], [ 1, 4 ], [ 1, 5 ] ] ]
  gap&gt; sl:=sl mod 2;;
  gap&gt; sl.Facets;    
- [ [ [ 1, 0 ], [ 1, 1 ], [ 1, 0 ] ], [ [ 1, 0 ], [ 1, 1 ], [ 1, 1 ] ], 
-   [ [ 1, 0 ], [ 1, 0 ], [ 1, 1 ] ], [ [ 1, 1 ], [ 1, 0 ], [ 1, 1 ] ] ]
+ [ [ [ 1, 0 ], [ 1, 0 ], [ 1, 1 ] ], [ [ 1, 0 ], [ 1, 0 ], [ 1, 1 ] ], 
+   [ [ 1, 0 ], [ 1, 1 ], [ 1, 1 ] ], [ [ 1, 0 ], [ 1, 1 ], [ 1, 1 ] ] ]
  </pre></div>
 
 <p><a id="X84C01E097C009E76" name="X84C01E097C009E76"></a></p>
@@ -579,7 +572,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByAttribute("F = [ 10, 35, 50, 25 ]");
- [ [ 4, "S^3 (VT)" ] ]
+ [ [ 19, "S^3 (VT)" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; sl1:=SCNSSlicing(c,[[1,3,5,7,9],[2,4,6,8,10]]);;
  gap&gt; sl2:=sl1+10;;

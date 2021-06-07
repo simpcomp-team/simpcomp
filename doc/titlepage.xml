@@ -3,7 +3,7 @@
   
   <Subtitle>A &GAP; toolbox for simplicial complexes</Subtitle>
   
-  <Version>Version 2.1.12</Version>
+  <Version>Version 2.1.13</Version>
 
   <Author>
   	Felix Effenberger
@@ -23,7 +23,7 @@
   </Author>
 
   
-  <Date>28/05/2021
+  <Date>07/06/2021
 	<Alt Only="LaTeX"><![CDATA[
 	\begin{center}
 	\vspace*{1cm}

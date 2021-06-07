@@ -27,25 +27,6 @@
 ## gap> SCInfoLevel(3);
 ## gap> c:=SCBdCrossPolytope(3);;
 ## gap> SCReduceComplex(c); 
-## #I  round 0, move: [ [ 4, 6 ], [ 1, 2 ] ]
-## F: [ 6, 12, 8 ]
-## #I  round 1, move: [ [ 6 ], [ 1, 2, 3 ] ]
-## F: [ 5, 9, 6 ]
-## #I  round 1
-## Reduced complex, F: [ 5, 9, 6 ]
-## #I  round 2, move: [ [ 4 ], [ 1, 2, 5 ] ]
-## F: [ 4, 6, 4 ]
-## #I  round 2
-## Reduced complex, F: [ 4, 6, 4 ]
-## #I  SCReduceComplexEx: computed locally minimal complex after 3 rounds.
-## [ true, [SimplicialComplex
-##     
-##      Properties known: Dim, Facets, Name, SCVertices.
-##     
-##      Name="unnamed complex 3"
-##      Dim=2
-##     
-##     /SimplicialComplex], 3 ]
 ## </Example>
 ## </Description>
 ## </ManSection>

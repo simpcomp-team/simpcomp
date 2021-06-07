@@ -725,23 +725,6 @@ end;
 ## gap> SCSave(c,"/tmp/bddelta3");
 ## true
 ## gap> d:=SCLoad("/tmp/bddelta3");
-## [SimplicialComplex
-## 
-##  Properties known: AutomorphismGroup, AutomorphismGroupOrder, 
-##                    AutomorphismGroupStructure, AutomorphismGroupTransitivity, 
-##                    Chi, Dim, F, Facets, Generators, HasBoundary, Homology, 
-##                    IsConnected, IsStronglyConnected, Name, TopologicalType, 
-##                    SCVertices.
-## 
-##  Name="S^2_4"
-##  Dim=2
-##  TopologicalType="S^2"
-##  Chi=2
-##  F=[4, 6, 4]
-##  Homology=[[0, []], [0, []], [1, []]]
-##  AutomorphismGroupStructure="S4"
-## 
-## /SimplicialComplex]
 ## gap> c=d;
 ## </Example>
 ## </Description>
@@ -810,23 +793,6 @@ end);
 ## gap> SCSaveXML(c,"/tmp/bddelta3");
 ## true
 ## gap> d:=SCLoadXML("/tmp/bddelta3");
-## [SimplicialComplex
-## 
-##  Properties known: AutomorphismGroup, AutomorphismGroupOrder, 
-##                    AutomorphismGroupStructure, AutomorphismGroupTransitivity, 
-##                    Chi, Dim, F, Facets, Generators, HasBoundary, Homology, 
-##                    IsConnected, IsStronglyConnected, Name, TopologicalType, 
-##                    SCVertices.
-## 
-##  Name="S^2_4"
-##  Dim=2
-##  TopologicalType="S^2"
-##  Chi=2
-##  F=[4, 6, 4]
-##  Homology=[[0, []], [0, []], [1, []]]
-##  AutomorphismGroupStructure="S4"
-## 
-## /SimplicialComplex]
 ## gap> c=d;
 ## </Example>
 ## </Description>
@@ -1525,48 +1491,6 @@ function(complex,filename,itemsperline)
 end);
 
 
-SCIntFunc.SCPrintSCToString:=
-function(sc)
-	local buf,props,prop,p;
-
-	buf:="[SimplicialComplex\n";
-	Append(buf," Properties known: ");
-	props:=List(SCPropertiesNames(sc));
-	Sort(props);
-
-	for p in [1..Length(props)] do
-		Append(buf,props[p]);
-		if(p=Length(props)) then
-			Append(buf,".\n");
-		else
-			Append(buf,", ");
-		fi;
-	od;
-
-	for p in ["Facets","Faces","Incidences"] do
-		if(p in props) then
-			prop:=SCPropertyByName(sc,p);
-			if(IsStringRep(prop)) then
-				Append(buf,Concatenation([" ",p,"=\"",prop,"\"\n"]));
-			else
-				Append(buf,Concatenation([" ",p,"=",String(prop),"\n"]));
-			fi;
-		fi;
-	od;
-
-	for p in SortedList(Difference(props,["Facets","Faces","Incidences"])) do
-		prop:=SCPropertyByName(sc,p);
-		if(IsStringRep(prop)) then
-			Append(buf,Concatenation([" ",p,"=\"",prop,"\"\n"]));
-		else
-			Append(buf,Concatenation([" ",p,"=",String(prop),"\n"]));
-		fi;
-	od;
-
-	Append(buf,"/SimplicialComplex]\n");
-	return buf;
-end;
-
 
 ################################################################################
 ##<#GAPDoc Label="SCImportPolymake">
@@ -1582,14 +1506,6 @@ end;
 ## gap> c:=SCBdCrossPolytope(4);;
 ## gap> SCExportPolymake(c,"/tmp/bdbeta4.poly");
 ## gap> d:=SCImportPolymake("/tmp/bdbeta4.poly");
-## [SimplicialComplex
-## 
-## Properties known: Chi, Dim, Facets, SCVertices.
-##
-##  Name="unnamed complex m"
-##  Dim=3
-## 
-## /SimplicialComplex]
 ## gap> c=d;
 ## </Example>
 ## </Description>

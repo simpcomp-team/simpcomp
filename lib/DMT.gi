@@ -484,27 +484,11 @@ end;
 ## gap> torus:=SCLib.Load(last[1][1]);;
 ## gap> bdtorus:=SCDifference(torus,SC([torus.Facets[1]]));;
 ## gap> coll:=SCCollapseGreedy(bdtorus);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="collapsed version of T^2 (VT) \ unnamed complex m"
-##  Dim=1
-## 
-## /SimplicialComplex]
 ## gap> coll.Facets;
 ## [ [ 3, 6 ], [ 3, 7 ], [ 5, 6 ], [ 5, 7 ], [ 6, 7 ] ]
 ## gap> sphere:=SCBdSimplex(4);;                              
 ## gap> bdsphere:=SCDifference(sphere,SC([sphere.Facets[1]]));;
 ## gap> coll:=SCCollapseGreedy(bdsphere);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="collapsed version of S^3_5 \ unnamed complex m"
-##  Dim=0
-## 
-## /SimplicialComplex]
 ## gap> coll.Facets;                     
 ## [ [ 5 ] ]
 ## </Example>
@@ -546,14 +530,6 @@ end);
 ## gap> sphere:=SCBdSimplex(4);;                              
 ## gap> ball:=SCDifference(sphere,SC([sphere.Facets[1]]));;
 ## gap> coll:=SCCollapseLex(ball);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="collapsed version of S^3_5 \ unnamed complex m"
-##  Dim=0
-## 
-## /SimplicialComplex]
 ## gap> coll.Facets;                     
 ## [ [ 5 ] ]
 ## </Example>
@@ -595,14 +571,6 @@ end);
 ## gap> sphere:=SCBdSimplex(4);;                              
 ## gap> ball:=SCDifference(sphere,SC([sphere.Facets[1]]));;
 ## gap> coll:=SCCollapseRevLex(ball);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="collapsed version of S^3_5 \ unnamed complex m"
-##  Dim=0
-## 
-## /SimplicialComplex]
 ## gap> coll.Facets;                     
 ## [ [ 5 ] ]
 ## </Example>

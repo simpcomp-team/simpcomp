@@ -219,6 +219,7 @@
 ## see below. 
 ##
 ## <#Include Label="SCIsSimplicialComplex"/>
+## <#Include Label="SCDetails"/>
 ## <#Include Label="SCCopy"/>
 ## <#Include Label="SCShallowCopy"/>
 ## <#Include Label="SCPropertiesDropped"/>
@@ -270,6 +271,9 @@ DeclareCategory("SCIsSimplicialComplex",SCIsPolyhedralComplex);
 
 DeclareOperation("SCFromFacets",[IsList]);
 DeclareOperation("SC",[IsList]);
+
+DeclareGlobalFunction("SCDetails");
+
 
 DeclareOperation("SCCopy",[SCIsPropertyObject]);
 DeclareGlobalFunction("SCPropertiesDropped");

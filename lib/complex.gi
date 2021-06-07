@@ -48,14 +48,13 @@ SCIntFunc.SCViewProperties:=[ "Name", "Dim", "AltshulerSteinberg",
 InstallMethod(ViewObj,"for SCSimplicialComplex",
 [SCIsSimplicialComplex],
 function(sc)
-	Print(SCIntFunc.StringEx(sc,true,SCIntFunc.SCViewProperties));
+	Print(SCIntFunc.StringEx(sc));
 end);
 
 
-#serialize simplicial complex to string, only use attributes given in list view
 SCIntFunc.StringEx:=
-function(sc,view,vprops)
-	local buf,props,pprops,prop,p,pp,size,pos,sort,type;
+function(sc)
+	local type,buf,props,name,dim,n;
 
 	if(SCIsSimplicialComplex(sc)) then
 		type:="SimplicialComplex";
@@ -65,7 +64,123 @@ function(sc,view,vprops)
 		type:="OtherComplex";
 	fi;
 	
-	buf:=Concatenation("[",type,"\n");
+	buf:=Concatenation("<",type,": ");
+	
+        name := SCName(sc);
+        if name = fail then
+          Append(buf,"unnamed complex");
+        else
+          Append(buf,name);
+        fi;
+
+	Append(buf," | dim = ");
+
+        if type = "NormalSurface" or type = "SimplicialComplex" then
+          dim := SCDim(sc);
+          if dim = fail then
+            Info(InfoSimpcomp,1,"SCIntFunc.StringEx: could not compute dimension of complex.");
+            Append(buf,"unknown");
+          else
+            Append(buf,String(dim));
+          fi;
+	else
+          Append(buf,"unknown");
+        fi;
+        if type = "SimplicialComplex" then
+          n := SCNumFaces(sc,0);
+          if n = fail then
+            Info(InfoSimpcomp,1,"SCIntFunc.StringEx: could not compute number of vertices of complex.");
+          else
+            Append(buf," | n = ");
+            Append(buf,String(n));
+          fi;
+        fi;
+
+	Append(buf,">");
+
+	return buf;
+end;
+
+
+################################################################################
+##<#GAPDoc Label="SCDetails">
+## <ManSection>
+## <Func Name="SCDetails" Arg="complex"/>
+## <Returns>a string of type <C>IsString</C> upon success, 
+## <K>fail</K> otherwise.</Returns>
+## <Description>
+## The function returns a list of known properties of <Arg>complex</Arg>
+## an lists some of these properties explicitly.
+## <Example>
+## gap> c:=SC([[1,2,3],[1,2,4],[1,3,4],[2,3,4]]);
+## gap> Print(SCDetails(c));
+## gap> c.F;
+## gap> c.Homology;
+## gap> Print(SCDetails(c));
+## </Example>
+## </Description>
+## </ManSection>
+##<#/GAPDoc>
+################################################################################
+InstallGlobalFunction(SCDetails,
+function(arg)
+	local buf,props,pprops,prop,p,pp,size,pos,sort,type,sc,view,vprops;
+
+        if Length(arg) < 1 or Length(arg) > 3 then
+          Info(InfoSimpcomp,1,"SCDetails: function takes between one and three arguments.");
+	  return fail;
+	fi;
+
+        if Length(arg) >= 1 then
+          sc := arg[1];
+        fi;
+
+        if Length(arg) >= 2 then
+          view := arg[2];
+          if not IsBool(view) then
+            Info(InfoSimpcomp,1,"SCDetails: second argument must be of type IsBoolean.");
+	    return fail;
+	  fi;
+        fi;
+
+        if Length(arg) >= 3 then
+          vprops := arg[3];
+          if not IsList(vprops) then
+            Info(InfoSimpcomp,1,"SCDetails: third argument must be a list of strings.");
+	    return fail;
+	  fi;
+        fi;
+
+	if(SCIsSimplicialComplex(sc)) then
+		type:="SimplicialComplex";
+	elif(SCIsNormalSurface(sc)) then
+		type:="NormalSurface";
+	else
+		type:="OtherComplex";
+	fi;
+
+        if Length(arg) = 1 then
+          if type = "SimplicialComplex" then
+            vprops := SCIntFunc.SCViewProperties;
+          elif type = "NormalSurface" then
+            vprops := SCIntFunc.SCNSViewProperties;
+          else
+            vprops := [];
+          fi;
+          view := true;
+        fi;
+
+        if Length(arg) = 2 then
+          if type = "SimplicialComplex" then
+            vprops := SCIntFunc.SCViewProperties;
+          elif type = "NormalSurface" then
+            vprops := SCIntFunc.SCNSViewProperties;
+          else
+            vprops := [];
+          fi;
+        fi;
+        
+	buf:=Concatenation("[",type,"\n\n");
 	Append(buf," Properties known: ");
 	pos:=19;
 	
@@ -133,15 +248,16 @@ function(sc,view,vprops)
 		fi;
 	od;
 
-	Append(buf,Concatenation("/",type,"]"));
+	Append(buf,Concatenation("\n/",type,"]"));
 	return buf;
-end;
+end);
+
 
 #simplicial complex -> string method
 InstallMethod(String,"for SCSimplicialComplex",
 [SCIsSimplicialComplex],
 function(sc)
-	return SCIntFunc.StringEx(sc,false,SCIntFunc.SCViewProperties);
+	return SCIntFunc.StringEx(sc);
 end);
 
 
@@ -150,7 +266,7 @@ InstallMethod(PrintObj,
 "for SCSimplicialComplex",
 [SCIsSimplicialComplex],
 function(sc)
-	Print(SCIntFunc.StringEx(sc,true,SCIntFunc.SCViewProperties));
+	Print(SCIntFunc.StringEx(sc));
 end);
 
 
@@ -294,15 +410,6 @@ end);
 ## Internally calls <Ref Func="SCCartesianPower"/>.
 ## <Example>
 ## gap> c:=SCBdSimplex(2)^2; #a torus
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, TopologicalType, SCVertices.
-## 
-##  Name="(S^1_3)^2"
-##  Dim=2
-##  TopologicalType="(S^1)^2"
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -335,14 +442,6 @@ end);
 ##   [ 27, "S^2~S^1 (VT)" ] ]
 ## gap> d:=SCLib.Load(last[1][1]);;
 ## gap> c:=c+d; #form RP^3#(S^2~S^1)
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices, Vertices.
-## 
-##  Name="RP^3#+-S^2~S^1 (VT)"
-##  Dim=3
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -389,14 +488,6 @@ end);
 ## gap> SCLib.SearchByName("RP^2");
 ## [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
 ## gap> c:=SCLib.Load(last[1][1])*SCBdSimplex(3); #form RP^2 x S^2
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="RP^2 (VT)xS^2_4"
-##  Dim=4
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -450,14 +541,6 @@ end);
 ## <Ref Func="SCUnion"/>.
 ## <Example>
 ## gap> c:=Union(SCBdSimplex(3),SCBdSimplex(3)+3); #a wedge of two 2-spheres
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="S^2_4 cup S^2_4"
-##  Dim=2
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -518,15 +601,6 @@ end);
 ## gap> d:=SCBdSimplex(3);;        
 ## gap> d:=SCMove(d,[[1,2,3],[]]);;
 ## gap> d:=d+1;;                   
-## gap> s1:=SCIntersection(c,d);   
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="S^2_4 cap unnamed complex m"
-##  Dim=1
-## 
-## /SimplicialComplex]
 ## gap> s1.Facets;                 
 ## [ [ 2, 3 ], [ 2, 4 ], [ 3, 4 ] ]
 ## </Example>

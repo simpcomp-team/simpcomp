@@ -19,14 +19,14 @@ SCIntFunc.SCNSViewProperties:=[ "Name", "Dim", "FVector", "EulerCharacteristic",
 InstallMethod(ViewObj,"for SCNormalSurface",
 [SCIsNormalSurface],
 function(sc)
-	Print(SCIntFunc.StringEx(sc,true,SCIntFunc.SCNSViewProperties));
+	Print(SCIntFunc.StringEx(sc));
 end);
 
 #simplicial complex -> string method
 InstallMethod(String,"for SCNormalSurface",
 [SCIsNormalSurface],
 function(sc)
-	return SCIntFunc.StringEx(sc,false,SCIntFunc.SCNSViewProperties);
+	return SCIntFunc.StringEx(sc);
 end);
 
 
@@ -35,7 +35,7 @@ InstallMethod(PrintObj,
 "for SCNormalSurface",
 [SCIsNormalSurface],
 function(sc)
-	Print(SCIntFunc.StringEx(sc,true,SCIntFunc.SCNSViewProperties));
+	Print(SCIntFunc.StringEx(sc));
 end);
 
 # create new complex as SCNormalSurface and empty attributes

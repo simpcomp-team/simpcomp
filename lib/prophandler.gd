@@ -172,6 +172,7 @@
 ## <Row><Item>ReduceAsSubcomplex</Item><Item><Ref Meth="SCReduceAsSubcomplex"/></Item></Row>
 ## <Row><Item>ReduceEx</Item><Item><Ref Meth="SCReduceComplexEx"/></Item></Row>
 ## <Row><Item>Save</Item><Item><Ref Meth="SCSave"/></Item></Row>
+## <Row><Item>Details</Item><Item><Ref Meth="SCDetails"/></Item></Row>
 ## <Row><Item>Shelling</Item><Item><Ref Meth="SCShelling"/></Item></Row>
 ## <Row><Item>ShellingExt</Item><Item><Ref Meth="SCShellingExt"/></Item></Row>
 ## <Row><Item>Shellings</Item><Item><Ref Meth="SCShellings"/></Item></Row>
@@ -291,6 +292,7 @@ SCMorseNumberOfCriticalPoints:=SCMorseNumberOfCriticalPoints,
 
 #complex.gd
 Copy:=SCCopy,
+Details:=SCDetails,
 SCCopy:=SCCopy,
 PropertiesDropped:=SCPropertiesDropped,
 SCPropertiesDropped:=SCPropertiesDropped,
@@ -682,6 +684,7 @@ IsTight:=1,
 
 #complex.gd
 Copy:=1,
+Details:=1,
 PropertiesDropped:=1,
 
 #glprops.gd

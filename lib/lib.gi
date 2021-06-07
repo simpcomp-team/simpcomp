@@ -204,20 +204,6 @@ end);
 ## gap> SCLib.SearchByName("S^2~S^1"){[1..3]};
 ## gap> id:=last[1][1];;
 ## gap> SCLibLoad(SCLib,id);
-## [SimplicialComplex
-## 
-##  Properties known: Chi, Dim, F, Faces, Facets, G, H, Homology, IsConnected, 
-##                    Name, Reference, SCVertices.
-## 
-##  Name="S^2~S^1 (VT)"
-##  Dim=3
-##  Chi=0
-##  F=[9, 36, 54, 27]
-##  G=[4, 10]
-##  H=[5, 15, 5, 1]
-##  Homology=[[0, []], [1, []], [0, [2]], [0, []]]
-## 
-## /SimplicialComplex]
 ## gap> SCLib.Load(id);; #the same operation in alternative syntax
 ## </Example>
 ## </Description>
@@ -1071,39 +1057,6 @@ end);
 ## gap> c:=SCFromFacets([[1,2,3],[1,2,6],[1,3,5],[1,4,5],[1,4,6],
 ##                       [2,3,4],[2,4,5],[2,5,6],[3,4,6],[3,5,6]]);;
 ## gap> SCLibDetermineTopologicalType(c);
-## [SimplicialComplex
-## 
-##  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-##                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-##                    AutomorphismGroupTransitivity, Boundary, Chi, 
-##                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
-##                    Generators, H, HasBoundary, HasInterior, Homology, 
-##                    Interior, IsCentrallySymmetric, IsConnected, 
-##                    IsEulerianManifold, IsOrientable, IsPM, IsPure, 
-##                    MinimalNonFaces, Name, Neighborliness, Orientation, 
-##                    Reference, StronglyConnected, SCVertices, Vertices.
-## 
-##  Name="RP^2 (VT)"
-##  Dim=2
-##  AutomorphismGroupSize=60
-##  AutomorphismGroupStructure="A5"
-##  AutomorphismGroupTransitivity=2
-##  Chi=1
-##  F=[ 6, 15, 10 ]
-##  G=[ 2 ]
-##  H=[ 3, 6, 0 ]
-##  HasBoundary=false
-##  HasInterior=true
-##  Homology=[ [ 0, [ ] ], [ 0, [ 2 ] ], [ 0, [ ] ] ]
-##  IsCentrallySymmetric=false
-##  IsConnected=true
-##  IsEulerianManifold=true
-##  IsOrientable=false
-##  IsPM=true
-##  IsPure=true
-##  Neighborliness=2
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -1350,33 +1303,6 @@ end;
 ##   [ 455, "S^4~S^1 (VT)" ], [ 458, "S^4~S^1 (VT)" ], 
 ##   [ 459, "S^4~S^1 (VT)" ], [ 460, "S^4~S^1 (VT)" ] ]
 ## gap> SCLib.Load(last[1][1]);          
-## [SimplicialComplex
-## 
-##  Properties known: AltshulerSteinberg, Boundary, Chi, ConnectedComponents, 
-##                    Dim, DualGraph, F, Faces, Facets, G, H, HasBoundary, 
-##                    HasInterior, Homology, Interior, IsConnected, 
-##                    IsEulerianManifold, IsOrientable, IsPM, IsPure, 
-##                    MinimalNonFaces, Name, Neighborliness, Orientation, 
-##                    Reference, StronglyConnected, SCVertices, Vertices.
-## 
-##  Name="S^4~S^1 (VT)"
-##  Dim=5
-##  Chi=0
-##  F=[ 13, 78, 195, 260, 195, 65 ]
-##  G=[ 6, 21, -35 ]
-##  H=[ 7, 28, -7, 28, 7, 1 ]
-##  HasBoundary=false
-##  HasInterior=true
-##  Homology=[ [ 0, [ ] ], [ 1, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 0, [ 2 ] ], [ 0,\
-##  [ ] ] ]
-##  IsConnected=true
-##  IsEulerianManifold=true
-##  IsOrientable=false
-##  IsPM=true
-##  IsPure=true
-##  Neighborliness=2
-## 
-## /SimplicialComplex]
 ## 
 ## </Example>
 ## </Description>

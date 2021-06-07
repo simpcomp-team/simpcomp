@@ -144,9 +144,10 @@
   5 [33X[0;0YThe GAP object types [10XSCSimplicialComplex[110X and [10XSCNormalSurface[110X[133X
     5.1 [33X[0;0YThe object type [10XSCSimplicialComplex[110X[133X
       5.1-1 SCIsSimplicialComplex
-      5.1-2 SCCopy
-      5.1-3 ShallowCopy (SCSimplicialComplex)
-      5.1-4 SCPropertiesDropped
+      5.1-2 SCDetails
+      5.1-3 SCCopy
+      5.1-4 ShallowCopy (SCSimplicialComplex)
+      5.1-5 SCPropertiesDropped
     5.2 [33X[0;0YOverloaded operators of [10XSCSimplicialComplex[110X[133X
       5.2-1 Operation + (SCSimplicialComplex, Integer)
       5.2-2 Operation - (SCSimplicialComplex, Integer)

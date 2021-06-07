@@ -84,14 +84,6 @@ end;
 ## Calculates the simplicial join of the simplicial complexes <Arg>complex1</Arg> and <Arg>complex2</Arg>. If facet lists instead of <C>SCSimplicialComplex</C> objects are passed as arguments, the function internally falls back to the homology package <Cite Key="Dumas04Homology" />, if available. Note that the vertex labelings of the complexes passed as arguments are not propagated to the new complex.
 ## <Example>
 ## gap> sphere:=SCJoin(SCBdSimplex(2),SCBdSimplex(2));
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="S^1_3 join S^1_3"
-##  Dim=3
-## 
-## /SimplicialComplex]
 ## gap> SCHasBoundary(sphere);
 ## false
 ## gap> sphere.Facets;
@@ -109,14 +101,6 @@ end;
 ## </Example>
 ## <Example>
 ## gap> ball:=SCJoin(SC([[1]]),SCBdSimplex(2));
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="unnamed complex m join S^1_3"
-##  Dim=2
-## 
-## /SimplicialComplex]
 ## gap> ball.Homology;
 ## [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ] ]
 ## gap> ball.Facets;
@@ -171,39 +155,6 @@ end);
 ## <Example>
 ## gap> SCLib.SearchByName("Poincare");
 ## gap> phs:=SCLib.Load(last[1][1]);
-## [SimplicialComplex
-## 
-##  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-##                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-##                    AutomorphismGroupTransitivity, Boundary, Chi, 
-##                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
-##                    Generators, H, HasBoundary, HasInterior, Homology, 
-##                    Interior, IsCentrallySymmetric, IsConnected, 
-##                    IsEulerianManifold, IsOrientable, IsPM, IsPure, 
-##                    MinimalNonFaces, Name, Neighborliness, Orientation, 
-##                    StronglyConnected, SCVertices, Vertices.
-## 
-##  Name="B4"
-##  Dim=3
-##  AutomorphismGroupSize=1
-##  AutomorphismGroupStructure="1"
-##  AutomorphismGroupTransitivity=0
-##  Chi=0
-##  F=[ 17, 117, 200, 100 ]
-##  G=[ 12, 59 ]
-##  H=[ 13, 72, 13, 1 ]
-##  HasBoundary=false
-##  HasInterior=true
-##  Homology=[ [ 0, [ ] ], [ 1, [ 4 ] ], [ 0, [ 2 ] ], [ 0, [ ] ] ]
-##  IsCentrallySymmetric=false
-##  IsConnected=true
-##  IsEulerianManifold=true
-##  IsOrientable=false
-##  IsPM=true
-##  IsPure=true
-##  Neighborliness=1
-## 
-## /SimplicialComplex]
 ## gap> susp:=SCSuspension(phs);;
 ## gap> edwardsSphere:=SCSuspension(susp);
 ## </Example>
@@ -257,14 +208,6 @@ end);
 ## Calculates the simplicial deleted join of the simplicial complexes <Arg>complex1</Arg> and <Arg>complex2</Arg>. If called with a facet list instead of a <C>SCSimplicialComplex</C> object, the function internally falls back to the <Package>homology</Package> package <Cite Key="Dumas04Homology" />, if available.
 ## <Example>
 ## gap> deljoin:=SCDeletedJoin(SCBdSimplex(3),SCBdSimplex(3));
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="S^2_4 deljoin S^2_4"
-##  Dim=3
-## 
-## /SimplicialComplex]
 ## gap> bddeljoin:=SCBoundary(deljoin);;
 ## gap> bddeljoin.Homology;
 ## [ [ 1, [  ] ], [ 0, [  ] ], [ 2, [  ] ] ]
@@ -363,14 +306,6 @@ end);
 ## Calculates the wedge product of the complexes supplied as arguments. Note that the vertex labelings of the complexes passed as arguments are not propagated to the new complex.
 ## <Example>
 ## gap> wedge:=SCWedge(SCBdSimplex(2),SCBdSimplex(2));
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="S^1_3 wedge S^1_3"
-##  Dim=1
-## 
-## /SimplicialComplex]
 ## gap> wedge.Facets;
 ## [ [ [ 1, 2 ], [ 1, 3 ] ], [ [ 2, 2 ], [ 2, 3 ] ], [ [ 1, 2 ], "a" ], 
 ##   [ [ 1, 3 ], "a" ], [ [ 2, 2 ], "a" ], [ [ 2, 3 ], "a" ] ]
@@ -534,14 +469,6 @@ end);
 ## In a simplicial complex <Arg>complex</Arg> all neighbors of the <C>k</C>-face  <Arg>face</Arg>, i. e. all <C>k</C>-faces distinct from <Arg>face</Arg> intersecting with <Arg>face</Arg> in a common <M>(k-1)</M>-face, are returned in the standard labeling.
 ## <Example>
 ## gap> c:=SCFromFacets(Combinations(["a","b","c"],2));
-## [SimplicialComplex
-## 
-##  Properties known: Chi, Dim, Facets, Name, SCVertices.
-## 
-##  Name="unnamed complex m"
-##  Dim=1
-## 
-## /SimplicialComplex]
 ## gap> SCLabels(c);
 ## [ "a", "b", "c" ]
 ## gap> SCNeighborsEx(c,[1,2]);
@@ -599,14 +526,6 @@ end);
 ## In a simplicial complex <Arg>complex</Arg> all neighbors of the <C>k</C>-face  <Arg>face</Arg>, i. e. all <C>k</C>-faces distinct from <Arg>face</Arg> intersecting with <Arg>face</Arg> in a common <M>(k-1)</M>-face, are returned in the original labeling.
 ## <Example>
 ## gap> c:=SCFromFacets(Combinations(["a","b","c"],2));
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="unnamed complex m"
-##  Dim=1
-## 
-## /SimplicialComplex]
 ## gap> SCNeighbors(c,["a","d"]);
 ## [ [ "a", "b" ], [ "a", "c" ] ]
 ## </Example>
@@ -714,14 +633,6 @@ end);
 ## Forms the union of two simplicial complexes <Arg>complex1</Arg> and <Arg>complex2</Arg> as the simplicial complex formed by the union of their facets sets. The two arguments are not altered. Note: for the union process the vertex labelings of the complexes are taken into account, see also <Ref Meth="Operation Union (SCSimplicialComplex, SCSimplicialComplex)" />. Facets occurring in both arguments are treated as one facet in the new complex.
 ## <Example>
 ## gap> c:=SCUnion(SCBdSimplex(3),SCBdSimplex(3)+3); #a wedge of two 2-spheres
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, SCVertices.
-##
-##  Name="S^2_4 cup S^2_4"
-##  Dim=2
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -1046,26 +957,8 @@ end);
 ## gap> c:=SCBdSimplex(4);;
 ## # all vertex links -> 2 spheres
 ## gap> SCLinks(c,0);
-## [ [SimplicialComplex
-##     
-##      Properties known: Dim, Facets, Name, SCVertices.
-##     
-##      Name="lk([ 1 ]) in S^3_5"
-##      Dim=2
-##     
-##     /SimplicialComplex], # ... etc 
-##]
 ## # all edge links -> circles
 ## gap> SCLinks(c,1);
-## [ [SimplicialComplex
-##     
-##      Properties known: Dim, Facets, Name, SCVertices.
-##     
-##      Name="lk([ 1, 2 ]) in S^3_5"
-##      Dim=1
-##     
-##     /SimplicialComplex], # ... etc
-## ]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -1111,15 +1004,6 @@ end);
 ##   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
 ## gap> torus:=SCLib.Load(last[1][1]);; # the minimal 7-vertex torus
 ## gap> SCStars(torus,0); # 7 2-discs as vertex stars
-## [ [SimplicialComplex
-##     
-##      Properties known: Dim, Facets, Name, SCVertices.
-##     
-##      Name="star([ 1 ]) in T^2 (VT)"
-##      Dim=2
-##     
-##     /SimplicialComplex], # ... etc
-## ]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -1166,14 +1050,6 @@ end);
 ## gap> SCVertices(rp2);
 ## [1, 2, 3, 4, 5, 6]
 ## gap> SCLink(rp2,[1]);
-## [SimplicialComplex
-##
-## Properties known: Dim, Facets, Name, SCVertices.
-##
-## Name="unnamed complex m"
-## Dim=1
-##
-## /SimplicialComplex]
 ## gap> last.Facets;
 ## [[2, 3], [2, 6], [3, 5], [4, 5], [4, 6]]
 ## </Example>
@@ -1284,14 +1160,6 @@ end);
 ## gap> SCVertices(rp2);
 ## [1, 2, 3, 4, 5, 6]
 ## gap> SCStar(rp2,1);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, SCVertices.
-##
-##  Name="star(1) in RP^2 (VT)"
-##  Dim=2
-## 
-## /SimplicialComplex]
 ## gap> last.Facets;
 ## [ [1, 2, 3], [1, 2, 6], [1, 3, 5], [1, 4, 5], [1, 4, 6] ]
 ## </Example>
@@ -1387,14 +1255,6 @@ end);
 ## gap> SCVertices(rp2);
 ## [1, 2, 3, 4, 5, 6]
 ## gap> SCAntiStar(rp2,1);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, SCVertices.
-##
-##  Name="ast(1) in RP^2 (VT)"
-##  Dim=2
-## 
-## /SimplicialComplex]
 ## gap> last.Facets;
 ## [ [ 2, 3, 4 ], [ 2, 4, 5 ], [ 2, 5, 6 ], [ 3, 4, 6 ], [ 3, 5, 6 ] ]
 ## </Example>
@@ -1584,28 +1444,12 @@ end;
 ## gap> SCVertices(c);
 ## [1, 2, 3, 4, 5, 6, 7, 8]
 ## gap> span:=SCSpan(c,[1,2,3,4]);
-## [SimplicialComplex
-##
-## Properties known: Dim, Facets, Name, SCVertices.
-##
-## Name="span([ 1, 2, 3, 4 ]) in Bd(\beta^4)"
-## Dim=1
-##
-## /SimplicialComplex]
 ## gap> span.Facets;
 ## [[1, 3], [1, 4], [2, 3], [2, 4]]
 ## </Example>
 ## <Example>
 ## gap> c:=SC([[1,2],[1,4,5],[2,3,4]]);;
 ## gap> span:=SCSpan(c,[2,3,5]);
-## [SimplicialComplex
-##
-## Properties known: Dim, Facets, Name, SCVertices.
-##
-## Name="span([ 2, 3, 5 ]) in unnamed complex m"
-## Dim=1
-##
-## /SimplicialComplex]
 ## gap> SCFacets(span);
 ## [[2, 3], [5]]
 ## </Example>

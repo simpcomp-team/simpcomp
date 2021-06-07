@@ -510,38 +510,6 @@ end;
 ## [ [ 519, "4-dimensional Kummer variety (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;                
 ## gap> d:= SCBlowup(c,1);
-## #I  SCBlowup: checking if singularity is a combinatorial manifold...
-## #I  SCBlowup: ...true
-## #I  SCBlowup: checking type of singularity...
-## #I  SCBlowup: ...ordinary double point (supported type).
-## #I  SCBlowup: starting blowup...
-## #I  SCBlowup: map boundaries...
-## #I  SCBlowup: boundaries not isomorphic, initializing bistellar moves...
-## #I  SCBlowup: found complex with smaller boundary: f = [ 15, 74, 118, 59 ].
-## #I  SCBlowup: found complex with smaller boundary: f = [ 14, 70, 112, 56 ].
-## #I  SCBlowup: found complex with smaller boundary: f = [ 14, 69, 110, 55 ].
-## #I  SCBlowup: found complex with smaller boundary: f = [ 14, 68, 108, 54 ].
-## #I  SCBlowup: found complex with smaller boundary: f = [ 13, 64, 102, 51 ].
-## #I  SCBlowup: found complex with smaller boundary: f = [ 13, 63, 100, 50 ].
-## #I  SCBlowup: found complex with smaller boundary: f = [ 13, 62, 98, 49 ].
-## #I  SCBlowup: found complex with smaller boundary: f = [ 13, 61, 96, 48 ].
-## #I  SCBlowup: found complex with smaller boundary: f = [ 13, 60, 94, 47 ].
-## #I  SCBlowup: found complex with smaller boundary: f = [ 12, 56, 88, 44 ].
-## #I  SCBlowup: found complex with smaller boundary: f = [ 11, 52, 82, 41 ].
-## #I  SCBlowup: found complex with smaller boundary: f = [ 11, 51, 80, 40 ].
-## #I  SCBlowup: found complex with isomorphic boundaries.
-## #I  SCBlowup: ...boundaries mapped succesfully
-## #I  SCBlowup: build complex...
-## #I  SCBlowup: ...done.
-## #I  SCBlowup: ...blowup completed.
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="unnamed complex 5862"
-##  Dim=4
-## 
-## /SimplicialComplex]
 ## </Example>
 ## <Example> NOEXECUTE
 ## gap> # resolving the singularities of a 4 dimensional Kummer variety

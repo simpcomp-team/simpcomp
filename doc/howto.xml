@@ -144,7 +144,7 @@ To test the functionality of <Package>simpcomp</Package> you can run the functio
 
 <Log>
 gap> SCRunTest();
-+ test simpcomp package, Version 2.1.12
++ test simpcomp package, Version 2.1.13
 + GAP4stones: 69988
 true
 gap> 
@@ -171,7 +171,7 @@ If you would like to cite <Package>simpcomp</Package> using BibTeX, you can use 
 @manual{simpcomp,
 	author = "Felix Effenberger and Jonathan Spreer",
 	title  = "{\tt simpcomp} - a {\tt GAP} toolkit for simplicial complexes,
-	          {V}ersion 2.1.12",
+	          {V}ersion 2.1.13",
 	year   = "2021",
 	url    = "\url{https://github.com/simpcomp-team/simpcomp}",
 }
@@ -183,7 +183,7 @@ If you are not using BibTeX, you can use the following entry inside the bibliogr
 \bibitem{simpcomp}
 F.~Effenberger and J.~Spreer,
 \emph{{\tt simpcomp} -- a {\tt GAP} toolkit for simplicial complexes},
-Version 2.1.12, 
+Version 2.1.13, 
 2021,
 \url{https://github.com/simpcomp-team/simpcomp}.
 </Verb>

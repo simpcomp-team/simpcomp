@@ -413,39 +413,6 @@ end);
 ## <Example>
 ## gap> list:=SCLib.SearchByName("S^2~S^1 (VT)"){[1..9]};;
 ## gap> s2s1:=SCLib.Load(list[1][1]);
-## [SimplicialComplex
-## 
-##  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-##                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-##                    AutomorphismGroupTransitivity, Boundary, Chi, 
-##                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
-##                    Generators, H, HasBoundary, HasInterior, Homology, 
-##                    Interior, IsCentrallySymmetric, IsConnected, 
-##                    IsEulerianManifold, IsOrientable, IsPM, IsPure, 
-##                    MinimalNonFaces, Name, Neighborliness, Orientation, 
-##                    Reference, StronglyConnected, SCVertices, Vertices.
-## 
-##  Name="S^2~S^1 (VT)"
-##  Dim=3
-##  AutomorphismGroupSize=18
-##  AutomorphismGroupStructure="D18"
-##  AutomorphismGroupTransitivity=1
-##  Chi=0
-##  F=[ 9, 36, 54, 27 ]
-##  G=[ 4, 10 ]
-##  H=[ 5, 15, 5, 1 ]
-##  HasBoundary=false
-##  HasInterior=true
-##  Homology=[ [ 0, [ ] ], [ 1, [ ] ], [ 0, [ 2 ] ], [ 0, [ ] ] ]
-##  IsCentrallySymmetric=false
-##  IsConnected=true
-##  IsEulerianManifold=true
-##  IsOrientable=false
-##  IsPM=true
-##  IsPure=true
-##  Neighborliness=2
-## 
-## /SimplicialComplex]
 ## gap> SCInfoLevel(2); # print information while running
 ## gap> SCIsTight(s2s1); time;
 ## #I  SCIsTight: checking non faces...
@@ -509,39 +476,6 @@ end);
 ## <Example>
 ## gap> list:=SCLib.SearchByName("S^3xS^1");;
 ## gap> c:=SCLib.Load(list[1][1]);           
-## [SimplicialComplex
-## 
-##  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-##                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-##                    AutomorphismGroupTransitivity, Boundary, Chi, 
-##                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
-##                    Generators, H, HasBoundary, HasInterior, Homology, 
-##                    Interior, IsCentrallySymmetric, IsConnected, 
-##                    IsEulerianManifold, IsOrientable, IsPM, IsPure, 
-##                    MinimalNonFaces, Name, Neighborliness, Orientation, 
-##                    Reference, StronglyConnected, SCVertices, Vertices.
-## 
-##  Name="S^3xS^1 (VT)"
-##  Dim=4
-##  AutomorphismGroupSize=22
-##  AutomorphismGroupStructure="D22"
-##  AutomorphismGroupTransitivity=1
-##  Chi=0
-##  F=[ 11, 55, 110, 110, 44 ]
-##  G=[ 5, 15, -20 ]
-##  H=[ 6, 21, 1, 16, -1 ]
-##  HasBoundary=false
-##  HasInterior=true
-##  Homology=[ [ 0, [ ] ], [ 1, [ ] ], [ 0, [ ] ], [ 1, [ ] ], [ 1, [ ] ] ]
-##  IsCentrallySymmetric=false
-##  IsConnected=true
-##  IsEulerianManifold=true
-##  IsOrientable=true
-##  IsPM=true
-##  IsPure=true
-##  Neighborliness=2
-## 
-## /SimplicialComplex]
 ## gap> SCInfoLevel(0);
 ## gap> SCIsManifold(c);
 ## true

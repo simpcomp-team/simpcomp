@@ -117,14 +117,6 @@ end;
 ## gap> #group: AGL(1,7) of order 42
 ## gap> G:=Group([(2,6,5,7,3,4),(1,3,5,7,2,4,6)]);;
 ## gap> c:=SCFromGenerators(G,[[ 1, 2, 4 ]]);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="unnamed complex m"
-##  Dim=2
-## 
-## /SimplicialComplex]
 ## gap> SCLib.DetermineTopologicalType(c);
 ## [ [ true, 5 ] ] # the 7-vertex torus
 ## </Example>
@@ -262,14 +254,6 @@ end);
 ## A shorter function to create a simplicial complex from a facet list, just calls <Ref Func="SCFromFacets" Style="Text"/>(<Arg>facets</Arg>).
 ## <Example>
 ## gap> c:=SC(Combinations([1..6],5));
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, VertexLabels.
-##
-##  Name="unnamed complex m"
-##  Dim=4
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -292,14 +276,6 @@ end);
 ## Generates an empty complex (of dimension <M>-1</M>), i. e. a <C>SCSimplicialComplex</C> object with empty facet list.
 ## <Example>
 ## gap> SCEmpty();
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Faces, Facets, Name, VertexLabels.
-## 
-##  Name="empty complex"
-##  Dim=-1
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -504,21 +480,6 @@ end);
 ## Generates the boundary of the <M>d</M>-dimensional cross polytope <M>\beta^{d}</M>, a centrally symmetric combinatorial <M>d-1</M>-sphere.
 ## <Example>
 ## gap> SCBdCrossPolytope(3); # the octahedron
-## [SimplicialComplex
-## 
-##  Properties known: Chi, Dim, F, Facets, HasBoundary, Homology, IsConnected, 
-##                    IsStronglyConnected, Name, TopologicalType, VertexLabels.
-## 
-##  Name="Bd(\beta^3)"
-##  Dim=2
-##  Chi=2
-##  F=[ 6, 12, 8 ]
-##  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-##  IsConnected=true
-##  IsStronglyConnected=true
-##  TopologicalType="S^2"
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -575,22 +536,6 @@ end);
 ## Generates the boundary complex of the <Arg>d</Arg>-dimensional cyclic polytope (a combinatorial <M>d-1</M>-sphere) on <Arg>n</Arg> vertices, where <M>n\geq d+2</M>.
 ## <Example>
 ## gap> SCBdCyclicPolytope(3,8); 
-## [SimplicialComplex
-## 
-##  Properties known: Chi, Dim, F, Facets, HasBoundary, Homology, IsConnected, 
-##                    IsStronglyConnected, Name, TopologicalType, VertexLabels.
-## 
-##  Name="Bd(C_3(8))"
-##  Dim=2
-##  Chi=2
-##  F=[ 8, 18, 12 ]
-##  HasBoundary=false
-##  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-##  IsConnected=true
-##  IsStronglyConnected=true
-##  TopologicalType="S^2"
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -676,26 +621,6 @@ end);
 ## Generates the boundary of the <M>d</M>-simplex <M>\Delta^d</M>, a combinatorial <M>d-1</M>-sphere.
 ## <Example>
 ## gap> SCBdSimplex(5);
-## [SimplicialComplex
-## 
-##  Properties known: AutomorphismGroup, AutomorphismGroupOrder, 
-##                    AutomorphismGroupStructure, AutomorphismGroupTransitivity, 
-##                    Chi, Dim, F, Facets, Generators, HasBoundary, Homology, 
-##                    IsConnected, IsStronglyConnected, Name, TopologicalType, 
-##                    VertexLabels.
-## 
-##  Name="S^4_6"
-##  Dim=4
-##  AutomorphismGroupStructure="S6"
-##  AutomorphismGroupTransitivity=6
-##  Chi=2
-##  F=[ 6, 15, 20, 15, 6 ]
-##  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-##  IsConnected=true
-##  IsStronglyConnected=true
-##  TopologicalType="S^4"
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -754,16 +679,6 @@ end);
 ## Generates the <Arg>d</Arg>-simplex.
 ## <Example>
 ## gap> SCSimplex(3);
-## [SimplicialComplex
-## 
-##  Properties known: Chi, Dim, Facets, Name, TopologicalType, VertexLabels.
-## 
-##  Name="B^3_4"
-##  Dim=3
-##  Chi=1
-##  TopologicalType="B^3"
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -807,15 +722,6 @@ end);
 ## gap> c1:=SCBdSimplex(2);;
 ## gap> c2:=SCBdSimplex(3);;
 ## gap> c3:=SCCartesianProduct(c1,c2);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, TopologicalType, VertexLabels.
-## 
-##  Name="S^1_3xS^2_4"
-##  Dim=3
-##  TopologicalType="S^1xS^2"
-## 
-## /SimplicialComplex]
 ## gap> c3.Homology;
 ## [ [ 0, [  ] ], [ 1, [  ] ], [ 1, [  ] ], [ 1, [  ] ] ]
 ## gap> c3.F;
@@ -936,15 +842,6 @@ end);
 ## <Example>
 ## gap> c:=SCBdSimplex(2);;
 ## gap> 4torus:=SCCartesianPower(c,4);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, TopologicalType, VertexLabels.
-## 
-##  Name="(S^1_3)^4"
-##  Dim=4
-##  TopologicalType="(S^1)^4"
-## 
-## /SimplicialComplex]
 ## gap> 4torus.Homology;
 ## [ [ 0, [  ] ], [ 4, [  ] ], [ 6, [  ] ], [ 4, [  ] ], [ 1, [  ] ] ]
 ## gap> 4torus.Chi;
@@ -1070,14 +967,6 @@ end);
 ##   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
 ## gap> torus:=SCLib.Load(last[1][1]);;
 ## gap> genus2:=SCConnectedSumMinus(torus,torus);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="T^2 (VT)#+-T^2 (VT)"
-##  Dim=2
-## 
-## /SimplicialComplex]
 ## gap> genus2.Homology;
 ## [ [ 0, [  ] ], [ 4, [  ] ], [ 1, [  ] ] ]
 ## gap> genus2.Chi;
@@ -1246,14 +1135,6 @@ end;
 ##   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
 ## gap> torus:=SCLib.Load(last[1][1]);;
 ## gap> genus2:=SCConnectedSum(torus,torus);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="T^2 (VT)#+-T^2 (VT)"
-##  Dim=2
-## 
-## /SimplicialComplex]
 ## gap> genus2.Homology;
 ## [ [ 0, [  ] ], [ 4, [  ] ], [ 1, [  ] ] ]
 ## gap> genus2.Chi;
@@ -1385,15 +1266,6 @@ end);
 ##   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
 ## gap> torus:=SCLib.Load(last[1][1]);;
 ## gap> genus10:=SCConnectedProduct(torus,10);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="T^2 (VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2 (\
-## VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2 (VT)"
-##  Dim=2
-## 
-## /SimplicialComplex]
 ## gap> genus10.Chi;
 ## -18
 ## gap> genus10.F;
@@ -1633,21 +1505,6 @@ end);
 ## <Example>
 ## gap> c:=SC([[1,2,3],[2,3,4],[4,5,6],[5,6,7]]);;
 ## gap> comps:=SCStronglyConnectedComponents(c);
-## [ [SimplicialComplex
-##     
-##      Properties known: Dim, Facets, Name, VertexLabels.
-##     
-##      Name="Strongly connected component #1 of unnamed complex m"
-##      Dim=2
-##     
-##     /SimplicialComplex], [SimplicialComplex
-##     
-##      Properties known: Dim, Facets, Name, VertexLabels.
-##     
-##      Name="Strongly connected component #3 of unnamed complex m"
-##      Dim=2
-##     
-##     /SimplicialComplex] ]
 ## gap> comps[1].Facets;
 ## [ [ 1, 2, 3 ], [ 2, 3, 4 ] ]
 ## gap> comps[2].Facets;
@@ -1763,40 +1620,9 @@ end);
 ## gap> c:=SC([[1,2,3],[3,4,5],[4,5,6,7,8]]);;
 ## gap> SCRename(c,"connected complex");;
 ## gap> SCConnectedComponents(c);
-## [ [SimplicialComplex
-## 
-##      Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##      Name="Connected component #1 of connected complex"
-##      Dim=4
-## 
-##     /SimplicialComplex] ]
 ## gap> c:=SC([[1,2,3],[4,5],[6,7,8]]);;
 ## gap> SCRename(c,"non-connected complex");;
 ## gap> SCConnectedComponents(c);
-## [ [SimplicialComplex
-## 
-##      Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##      Name="Connected component #1 of non-connected complex"
-##      Dim=2
-## 
-##     /SimplicialComplex], [SimplicialComplex
-## 
-##      Properties known: Chi, Dim, Facets, Name, VertexLabels.
-## 
-##      Name="Connected component #2 of non-connected complex"
-##      Dim=1
-##      Chi=0
-## 
-##     /SimplicialComplex], [SimplicialComplex
-## 
-##      Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##      Name="Connected component #3 of non-connected complex"
-##      Dim=2
-## 
-##     /SimplicialComplex] ]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -2098,14 +1924,6 @@ end);
 ## Generates the combinatorial <M>3</M>-manifold <M>C_{2n}</M>, <M>n \geq 8</M>, with <M>2n</M> vertices from <Cite Key="Spreer10Diss"/>, Section 4.5.3 and Section 5.2. The complex is homeomorphic to <M>S^2 \times S^1</M> for <M>n</M> odd and homeomorphic to <M>S^2 \dtimes S^1</M> in case <M>n</M> is an even number. In the latter case <M>C_{2n}</M> is isomorphic to <M>D_{2n}</M> from <Ref Func="SCSeriesD2n"/>. The complexes are believed to appear as the vertex links of some of the members of the series of <M>2</M>-transitive <M>4</M>-pseudomanifolds from <Ref Func="SCSeriesAGL"/>. Internally calls <Ref Func="SCFromDifferenceCycles"/>.
 ## <Example>
 ## gap> c:=SCSeriesC2n(8);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="C_16 = { (1:1:3:11),(1:1:11:3),(1:3:1:11),(2:3:2:9),(2:5:2:7) }"
-##  Dim=3
-## 
-## /SimplicialComplex]
 ## gap> SCGenerators(c);  
 ## [ [ [ 1, 2, 3, 6 ], 32 ], [ [ 1, 2, 5, 6 ], 16 ], [ [ 1, 3, 6, 8 ], 16 ], 
 ##   [ [ 1, 3, 8, 10 ], 16 ] ]
@@ -2113,14 +1931,6 @@ end);
 ## <Example>
 ## gap> c:=SCSeriesC2n(8);;
 ## gap> d:=SCSeriesD2n(8); 
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="D_16 = { (1:1:1:13),(1:2:11:2),(3:4:5:4),(2:3:4:7),(2:7:4:3) }"
-##  Dim=3
-## 
-## /SimplicialComplex]
 ## gap> SCIsIsomorphic(c,d);
 ## true
 ## gap> c:=SCSeriesC2n(11);;
@@ -2165,14 +1975,6 @@ end);
 ## Generates the combinatorial <M>3</M>-manifold <M>D_{2n}</M>, <M>n \geq 8</M>, <M>n \neq 9</M>, with <M>2n</M> vertices from <Cite Key="Spreer10Diss"/>, Section 4.5.3 and Section 5.2. The complex is homeomorphic to <M>S^2 \dtimes S^1</M>. In the case that <M>n</M> is even <M>D_{2n}</M> is isomorphic to <M>C_{2n}</M> from <Ref Func="SCSeriesC2n"/>. The complexes are believed to appear as the vertex links of some of the members of the series of <M>2</M>-transitive <M>4</M>-pseudomanifolds from <Ref Func="SCSeriesAGL"/>. Internally calls <Ref Func="SCFromDifferenceCycles"/>.
 ## <Example>
 ## gap> d:=SCSeriesD2n(15);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="D_30 = { (1:1:1:27),(1:2:25:2),(3:11:5:11),(2:3:11:14),(2:14:11:3) }"
-##  Dim=3
-## 
-## /SimplicialComplex]
 ## gap> SCAutomorphismGroup(d);  
 ## TransitiveGroup(30,14) = t30n14
 ## gap> StructureDescription(last);
@@ -2181,14 +1983,6 @@ end);
 ## <Example>
 ## gap> c:=SCSeriesC2n(8);;
 ## gap> d:=SCSeriesD2n(8); 
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="D_16 = { (1:1:1:13),(1:2:11:2),(3:4:5:4),(2:3:4:7),(2:7:4:3) }"
-##  Dim=3
-## 
-## /SimplicialComplex]
 ## gap> SCIsIsomorphic(c,d);
 ## true
 ## gap> c:=SCSeriesC2n(11);;
@@ -2301,25 +2095,9 @@ end);
 ## <C>SCSeriesCSTSurface(l,j,2k)</C> generates the centrally symmetric transitive (cst) surface <M>S_{(l,j,2k)}</M>, <C>SCSeriesCSTSurface(l,2k)</C> generates the cst surface <M>S_{(l,2k)}</M> from <Cite Key="Spreer10PartBetaK"/>, Section 4.4.
 ## <Example>
 ## gap> SCSeriesCSTSurface(2,4,14);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="cst surface S_{(2,4,14)} = { (2:4:8),(2:8:4) }""
-##  Dim=2
-## 
-## /SimplicialComplex]
 ## gap> last.Homology;
 ## [ [ 1, [  ] ], [ 4, [  ] ], [ 2, [  ] ] ]
 ## gap> SCSeriesCSTSurface(2,10);  
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="cst surface S_{(2,10)} = { (2:2:6),(3:3:4) }"
-##  Dim=2
-## 
-## /SimplicialComplex]
 ## gap> last.Homology;                    
 ## [ [ 0, [  ] ], [ 1, [ 2 ] ], [ 0, [  ] ] ]
 ## </Example>
@@ -2371,14 +2149,6 @@ end);
 ## <C>SCSeriesHandleBody(d,n)</C> generates a transitive <M>d</M>-dimensional handle body (<M>d \geq 3</M>) with <M>n</M> vertices (<M>n \geq 2d + 1</M>). The handle body is orientable if <M>d</M> is odd or if <M>d</M> and <M>n</M> are even, otherwise it is not orientable. The complex equals the difference cycle <M>(1 : \ldots : 1 : n-d)</M> To obtain the boundary complexes of <C>SCSeriesHandleBody(d,n)</C> use the function <Ref Func="SCSeriesBdHandleBody"/>. Internally calls <Ref Func="SCFromDifferenceCycles"/>.
 ## <Example>
 ## gap> c:=SCSeriesHandleBody(3,7);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="Handle body B^2 x S^1"
-##  Dim=3
-## 
-## /SimplicialComplex]
 ## gap> SCAutomorphismGroup(c);    
 ## PrimitiveGroup(7,2) = D(2*7)
 ## gap> bd:=SCBoundary(c);;
@@ -2424,49 +2194,7 @@ end);
 ## <C>SCSeriesBdHandleBody(d,n)</C> generates a transitive <M>d</M>-dimensional sphere bundle (<M>d \geq 2</M>) with <M>n</M> vertices (<M>n \geq 2d + 3</M>) which coincides with the boundary of <Ref Func="SCSeriesHandleBody"/><C>(d,n)</C>. The sphere bundle is orientable if <M>d</M> is even or if <M>d</M> is odd and <M>n</M> is even, otherwise it is not orientable. Internally calls <Ref Func="SCFromDifferenceCycles"/>.
 ## <Example>
 ## gap> c:=SCSeriesBdHandleBody(2,7);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="Sphere bundle S^1 x S^1"
-##  Dim=2
-## 
-## /SimplicialComplex]
 ## gap> SCLib.DetermineTopologicalType(c);
-## [SimplicialComplex
-## 
-##  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-##                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-##                    AutomorphismGroupTransitivity, Boundary, Chi, 
-##                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
-##                    Generators, H, HasBoundary, HasInterior, Homology, 
-##                    Interior, IsCentrallySymmetric, IsConnected, 
-##                    IsEulerianManifold, IsManifold, IsOrientable, IsPM, IsPure,\
-##  
-##                    MinimalNonFaces, Name, Neighborliness, Orientation, 
-##                    Reference, StronglyConnected, VertexLabels, Vertices.
-## 
-##  Name="T^2 (VT)"
-##  Dim=2
-##  AutomorphismGroupSize=42
-##  AutomorphismGroupStructure="(C7 : C3) : C2"
-##  AutomorphismGroupTransitivity=2
-##  Chi=0
-##  F=[ 7, 21, 14 ]
-##  G=[ 3, 6 ]
-##  H=[ 4, 10, -1 ]
-##  HasBoundary=false
-##  HasInterior=true
-##  Homology=[ [ 0, [ ] ], [ 2, [ ] ], [ 1, [ ] ] ]
-##  IsCentrallySymmetric=false
-##  IsConnected=true
-##  IsEulerianManifold=true
-##  IsOrientable=true
-##  IsPM=true
-##  IsPure=true
-##  Neighborliness=2
-## 
-## /SimplicialComplex]
 ## gap> SCIsIsomorphic(c,SCSeriesHandleBody(3,7).Boundary);
 ## true
 ## </Example>
@@ -2508,14 +2236,6 @@ end);
 ## Generates the <Arg>k</Arg>-th member (<M>k \geq 7</M>) of the series <C>Le</C> from <Cite Key="Spreer10Diss"/>, Section 4.5.1. The series can be constructed as the generalization of the boundary of a genus <M>1</M> handlebody decomposition of the manifold <C>manifold_3_14_1_5</C> from the classification in <Cite Key="Lutz03TrigMnfFewVertVertTrans"/>.
 ## <Example>
 ## gap> c:=SCSeriesLe(7);                     
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, VertexLabels.
-## 
-##  Name="Le_14 = { (1:1:1:11),(1:2:4:7),(1:4:2:7),(2:5:2:5),(2:4:2:6) }"
-##  Dim=3
-## 
-## /SimplicialComplex]
 ## gap> d:=SCLib.DetermineTopologicalType(c);;
 ## gap> SCReference(d);
 ## "manifold_3_14_1_5 in F.H.Lutz: 'The Manifold Page', http://www.math.tu-berlin\

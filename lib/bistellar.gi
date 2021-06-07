@@ -774,30 +774,12 @@ end);
 ## labeling to ensure a correct result.
 ## <Example>
 ## gap> obj:=SC([[1,2],[2,3],[3,4],[4,1]]);
-## [SimplicialComplex
-##
-## Properties known: Dim, Facets, Name, SCVertices.
-##
-## Name="unnamed complex m"
-## Dim=1
-##
-## /SimplicialComplex]
 ## gap> moves:=SCMoves(obj);
 ## [[[[1, 2], []], [[1, 4], []], 
 ##     [[2, 3], []], [[3, 4], []]], 
 ##   [[[1], [2, 4]], [[2], [1, 3]], 
 ##     [[3], [2, 4]], [[4], [1, 3]]]]
 ## gap> obj:=SCMove(obj,last[2][1]);
-## [SimplicialComplex
-## 
-##  Properties known: Chi, Dim, F, Faces, Facets, SCVertices.
-##
-##  Name="unnamed complex m"
-##  Dim=1
-##  Chi=0
-##  F=[3, 3]
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -1115,29 +1097,7 @@ end;
 ## dimension and the maximal vertex label of <Arg>complex</Arg>.
 ## <Example>
 ## gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="unnamed complex m"
-##  Dim=1
-## 
-## /SimplicialComplex]
 ## gap> SCExamineComplexBistellar(obj);
-## [SimplicialComplex
-## 
-##  Properties known: AltshulerSteinberg, Boundary, Chi, Dim, F, Faces, Facets, 
-##                    HasBoundary, IsPM, IsPure, Name, SCVertices.
-## 
-##  Name="unnamed complex 21"
-##  Dim=1
-##  Chi=0
-##  F=[ 6, 6 ]
-##  HasBoundary=false
-##  IsPM=true
-##  IsPure=true
-## 
-## /SimplicialComplex]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -1228,38 +1188,14 @@ end);
 ## gap> c:=SCBdCrossPolytope(4);;
 ## gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
 ## gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
-## [ true, [SimplicialComplex
-##     
-##      Properties known: Dim, Facets, Name, SCVertices.
-##     
-##      Name="unnamed complex 14425"
-##      Dim=3
-##     
-##     /SimplicialComplex], 9 ]
+## [ true, <SimplicialComplex: unnamed complex 14425 | dim = 3 | n = 5>, 9 ]
 ## gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
 ## gap> SCMailSetAddress("johndoe@somehost");   
 ## true
 ## gap> SCMailIsEnabled();                     
 ## true
 ## gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
-## [ true, [SimplicialComplex
-##     
-##      Properties known: Boundary, Chi, Date, Dim, F, Faces, Facets, G, H, 
-##                        HasBoundary, Homology, IsConnected, IsManifold, IsPM, 
-##                        Name, SCVertices, Vertices.
-##     
-##      Name="ReducedComplex_5_vertices_9"
-##      Dim=3
-##      Chi=0
-##      F=[ 5, 10, 10, 5 ]
-##      G=[ 0, 0 ]
-##      H=[ 1, 1, 1, 1 ]
-##      HasBoundary=false
-##      Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-##      IsConnected=true
-##      IsPM=true
-##     
-##     /SimplicialComplex], 9 ]
+## [ true, <SimplicialComplex: ReducedComplex_5_vertices_9" | dim = 3 | n = 5>, 9 ]
 ## </Example>
 ## Content of sent mail:
 ## <Example> NOEXECUTE
@@ -1628,14 +1564,7 @@ end);
 ## #I  round 2, move: [ [ 3 ], [ 2, 5 ] ]
 ## [ 3, 3 ]
 ## #I  SCReduceComplexEx: computed locally minimal complex after 3 rounds.
-## [ true, [SimplicialComplex
-##     
-##      Properties known: Dim, Facets, Name, SCVertices.
-##     
-##      Name="unnamed complex 6"
-##      Dim=1
-##     
-##     /SimplicialComplex], 3 ]
+## [ true, <SimplicialComplex: unnamed complex 6 | dim = 1 | n = 3>, 3 ]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -1771,14 +1700,7 @@ end);
 ## #I  round 0, move: [ [ 2 ], [ 1, 4 ] ]
 ## [ 3, 3 ]
 ## #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
-## [ true, [SimplicialComplex
-##     
-##      Properties known: Dim, Facets, Name, SCVertices.
-##     
-##      Name="unnamed complex 9"
-##      Dim=1
-##     
-##     /SimplicialComplex], 1 ]
+## [ true, [ true, <SimplicialComplex: unnamed complex 6 | dim = 1 | n = 3>, 1 ]
 ##</Example>
 ##</Description>
 ## </ManSection>
@@ -1989,14 +1911,6 @@ end);
 ## gap> SCLib.SearchByName("S^4~S^1");;
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> l:=SCLink(c,1);
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="lk(1) in S^4~S^1 (VT)"
-##  Dim=4
-## 
-## /SimplicialComplex]
 ## gap> SCIsKStackedSphere(l,1);
 ## #I  SCIsKStackedSphere: try 1/50
 ## #I  round 0: [ 11, 40, 70, 65, 26 ]
@@ -2199,15 +2113,6 @@ end);
 ## Internally calls <Ref Func="SCReduceComplexEx" Style="Text" />.
 ## <Example>
 ## gap> c:=SCRandomize(SCBdSimplex(4));
-## #I  SCRandomize: randomizing complex S^3_5 with allowed moves [ -1, 1, 1, 1 ]
-## [SimplicialComplex
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="Randomized S^3_5"
-## Dim=3
-## 
-## /SimplicialComplex]
 ## gap> c.F;
 ## [ 20, 85, 130, 65 ]
 ## </Example>
