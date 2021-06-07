@@ -1700,7 +1700,7 @@ end);
 ## #I  round 0, move: [ [ 2 ], [ 1, 4 ] ]
 ## [ 3, 3 ]
 ## #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
-## [ true, [ true, <SimplicialComplex: unnamed complex 6 | dim = 1 | n = 3>, 1 ]
+## [ true, <SimplicialComplex: unnamed complex 6 | dim = 1 | n = 3>, 1 ]
 ##</Example>
 ##</Description>
 ## </ManSection>
