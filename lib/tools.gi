@@ -553,7 +553,7 @@ SCIntFunc.MakeDoc:=function(arg)
 
 	bookname:="<Package>simpcomp</Package>";;
 
-Print(path[1],"\n");
+Print(String(path[1]),"\n");
 
 	MakeGAPDocDoc(path[1], "simpcomp", files, bookname);
 
