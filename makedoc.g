@@ -5,4 +5,4 @@ if fail = LoadPackage("simpcomp") then
     Error("Cannot load simpcomp.");
 fi;
 
-SCIntFunc.MakeDoc();
+AutoDoc("simpcomp",rec(gapdoc:=rec(scan_dirs:=["doc/gapdoc"])));
