@@ -1692,7 +1692,7 @@ end);
 ## <C>(complex1,complex2,2,SCIntFunc.SCChooseMove);</C>
 ## <Example>
 ## gap> c:=SCFromFacets([[1,3],[3,5],[4,5],[4,1]]);;
-## gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
+## gap> SCBistellarOptions.WriteLevel:=0;; # do not save any complexes                      
 ## gap> SCReduceAsSubcomplex(c,SCBdCrossPolytope(3));
 ## #I  round 0, move: [ [ 2 ], [ 1, 4 ] ]
 ## [ 3, 3 ]
