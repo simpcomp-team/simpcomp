@@ -544,8 +544,6 @@ SCIntFunc.MakeDoc:=function(arg)
 	Print(path,"\n");
 
 	for b in basenames do
-		Print(Concatenation(cp,b,ext),"\n");
-
 		for ext in [".gd",".gi"] do
 			f:=Concatenation(cp,b,ext);
 			if(Filename(path[1],f)<>fail) then
@@ -553,6 +551,8 @@ SCIntFunc.MakeDoc:=function(arg)
 			fi;
 		od;
 	od;
+
+	Print(files,"\n");
 	
 	bookname:="<Package>simpcomp</Package>";;
 	MakeGAPDocDoc(path[1], "simpcomp", files, bookname);
