@@ -550,6 +550,7 @@ SCIntFunc.MakeDoc:=function(arg)
 		od;
 	od;
 
+Print(files,"\n");
 
 	bookname:="<Package>simpcomp</Package>";;
 
