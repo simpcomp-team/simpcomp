@@ -529,17 +529,17 @@ SCIntFunc.MakeDoc:=function(arg)
     "pkghomalg", "highlySymmetricSurfaces", "isosig", "DMT"
 	];
 	
-	cp:="";
+	cp:="gapdoc/";
 		
 	if Length(arg) = 1 and IsBool(arg[1]) and arg[1]=true then
 		cp:="../lib/";
 	elif Length(arg) >= 1 then
 		basenames:=arg;
-		cp:="";
+		cp:="gapdoc/";
 	fi;
 	
 	files:=[];
-	path:=DirectoriesPackageLibrary("simpcomp","doc/gapdoc");
+	path:=DirectoriesPackageLibrary("simpcomp","doc");
 
 	for b in basenames do
 		for ext in [".gd",".gi"] do
@@ -550,8 +550,6 @@ SCIntFunc.MakeDoc:=function(arg)
 		od;
 	od;
 
-Print(files,"\n");
-Print(path[1],"\n");
 
 	bookname:="<Package>simpcomp</Package>";;
 
