@@ -541,7 +541,6 @@ SCIntFunc.MakeDoc:=function(arg)
 	files:=[];
 	path:=DirectoriesPackageLibrary("simpcomp", "doc");
 
-	Print(path,"\n");
 
 	for b in basenames do
 		for ext in [".gd",".gi"] do
@@ -552,8 +551,7 @@ SCIntFunc.MakeDoc:=function(arg)
 		od;
 	od;
 
-	Print(files,"\n");
-	
+
 	bookname:="<Package>simpcomp</Package>";;
 	MakeGAPDocDoc(path[1], "simpcomp", files, bookname);
 
