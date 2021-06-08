@@ -1188,14 +1188,12 @@ end);
 ## gap> c:=SCBdCrossPolytope(4);;
 ## gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
 ## gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
-## [ true, <SimplicialComplex: unnamed complex 14425 | dim = 3 | n = 5>, 9 ]
 ## gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
 ## gap> SCMailSetAddress("johndoe@somehost");   
 ## true
 ## gap> SCMailIsEnabled();                     
 ## true
 ## gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
-## [ true, <SimplicialComplex: ReducedComplex_5_vertices_9" | dim = 3 | n = 5>, 9 ]
 ## </Example>
 ## Content of sent mail:
 ## <Example> NOEXECUTE
@@ -1564,7 +1562,6 @@ end);
 ## #I  round 2, move: [ [ 3 ], [ 2, 5 ] ]
 ## [ 3, 3 ]
 ## #I  SCReduceComplexEx: computed locally minimal complex after 3 rounds.
-## [ true, <SimplicialComplex: unnamed complex 6 | dim = 1 | n = 3>, 3 ]
 ## </Example>
 ## </Description>
 ## </ManSection>
@@ -1700,7 +1697,6 @@ end);
 ## #I  round 0, move: [ [ 2 ], [ 1, 4 ] ]
 ## [ 3, 3 ]
 ## #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
-## [ true, <SimplicialComplex: unnamed complex 6 | dim = 1 | n = 3>, 1 ]
 ##</Example>
 ##</Description>
 ## </ManSection>
