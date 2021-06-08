@@ -541,6 +541,8 @@ SCIntFunc.MakeDoc:=function(arg)
 	files:=[];
 	path:=DirectoriesPackageLibrary("simpcomp");
 
+	path:=Concatenation(path,"doc/");
+
 	Print(path,"\n");
 
 
