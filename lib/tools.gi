@@ -529,7 +529,7 @@ SCIntFunc.MakeDoc:=function(arg)
     "pkghomalg", "highlySymmetricSurfaces", "isosig", "DMT"
 	];
 	
-	cp:="gapdoc/";
+	cp:="";
 		
 	if Length(arg) = 1 and IsBool(arg[1]) and arg[1]=true then
 		cp:="../lib/";
