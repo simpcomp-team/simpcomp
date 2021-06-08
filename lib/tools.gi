@@ -539,7 +539,9 @@ SCIntFunc.MakeDoc:=function(arg)
 	fi;
 	
 	files:=[];
-	path:=DirectoriesPackageLibrary("simpcomp", "doc");
+	path:=DirectoriesPackageLibrary("simpcomp");
+
+	Print(path,"\n");
 
 
 	for b in basenames do
