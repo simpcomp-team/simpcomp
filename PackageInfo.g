@@ -19,10 +19,10 @@ License := "GPL-2.0-or-later",
 
 SourceRepository := rec(
     Type := "git",
-    URL := Concatenation( "https://github.com/gap-packages/", ~.PackageName ),
+    URL := Concatenation( "https://github.com/simpcomp-team/", ~.PackageName ),
 ),
 IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
-PackageWWWHome  := Concatenation( "https://gap-packages.github.io/", ~.PackageName ),
+PackageWWWHome  := Concatenation( "https://github.com/simpcomp-team/", ~.PackageName ),
 README_URL      := Concatenation( ~.PackageWWWHome, "/README.md" ),
 PackageInfoURL  := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
 ArchiveURL      := Concatenation( ~.SourceRepository.URL,
