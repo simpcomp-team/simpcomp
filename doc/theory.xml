@@ -18,16 +18,11 @@
 	A convex <E><M>d</M>-polytope</E> is the convex hull of <M>n</M> points <M>p_i \in E^d</M> in the <M>d</M>-dimensional euclidean space:
 	
 	<Display>P=
-	
 	<Alt Only="LaTeX"><![CDATA[
-		\operatorname{conv}
-	]]>
-	</Alt>
-	
+		\operatorname{conv}]]></Alt>
 	<Alt Not="LaTeX">
 		conv
 	</Alt>
-	
 	\{v_1,\dots,v_n\}\subset E^d,
 	</Display>
 	

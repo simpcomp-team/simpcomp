@@ -3217,7 +3217,7 @@ end);
 ## <Func Name="SCSeriesConnectedSum" Arg="k"/>
 ## <Returns> simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>	
-## Generates a combinatorial manifold of type <M>(S^2 x S^1)^#k</M> for <M>k</M> even. 
+## Generates a combinatorial manifold of type <M>(S^2 x S^1)^{\#k}</M> for <M>k</M> even. 
 ## The complex is a combinatorial <M>3</M>-manifold with transitive cyclic symmetry
 ## as described in <Cite Key="Spreer12VarCyclPolytope"/>.
 ## <Example>
