@@ -31,7 +31,7 @@
 29/09/2017 - Version 2.1.7: Minor update
 - Adjusted SCRunTest (simpcomp testing facility)
 - Minor changes in documentation/manual
-- Added characterisation of tight 3-manifolds to SCIsTight (see http://arxiv.org/abs/1601.00065)
+- Added characterisation of tight 3-manifolds to SCIsTight (see https://arxiv.org/abs/1601.00065)
 - Fixed bug in SCIsFlag
 
 01/02/2016 - Version 2.1.6: Minor update
@@ -40,7 +40,7 @@
 22/01/2016 - Version 2.1.5: Minor update
 - Minor changes in documentation/manual
 - Added characterisation of tight 3-manifolds
-  to SCIsTight (see http://arxiv.org/abs/1601.00065)
+  to SCIsTight (see https://arxiv.org/abs/1601.00065)
 
 23/12/2015 - Version 2.1.4: Minor update
 - Fixed minor bug in SCsFromGroupByTransitivity();

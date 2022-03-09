@@ -29,7 +29,7 @@ available.
 `simpcomp` is free software. The code is released under the GPL
 version 2 or later (at your preference). For the text of the GPL
 see the file COPYING in the `simpcomp` directory or
-[http://www.gnu.org/licenses/](http://www.gnu.org/licenses/).
+[https://www.gnu.org/licenses/](https://www.gnu.org/licenses/).
 
 ## Dependencies
 
@@ -42,7 +42,7 @@ see the file COPYING in the `simpcomp` directory or
 
 ## Download and installation
 
-- Install the [GAP](http://www.gap-system.org) system, 
+- Install the [GAP](https://www.gap-system.org) system, 
   version 4.5 or higher.
 
 - (Optional) Download the current [simpcomp](https://github.com/simpcomp-team/simpcomp)
@@ -64,7 +64,7 @@ see the file COPYING in the `simpcomp` directory or
   ─────────────────────────────────────────────────────────────────────────
   Loading  AutoDoc 2014.08.21 (Generate documentation from GAP source code)
   by Sebastian Gutsche (http://wwwb.math.rwth-aachen.de/~gutsche/) and
-     Max Horn (http://www.quendi.de/math).
+     Max Horn (https://www.quendi.de/math).
   Homepage: http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/AutoDoc
   ─────────────────────────────────────────────────────────────────────────
   ...
@@ -130,7 +130,7 @@ see the file COPYING in the `simpcomp` directory or
 29/09/2017 - Version 2.1.7: Minor update
 - Adjusted SCRunTest (simpcomp testing facility)
 - Minor changes in documentation/manual
-- Added characterisation of tight 3-manifolds to SCIsTight (see http://arxiv.org/abs/1601.00065)
+- Added characterisation of tight 3-manifolds to SCIsTight (see https://arxiv.org/abs/1601.00065)
 - Fixed bug in SCIsFlag
 
 01/02/2016 - Version 2.1.6: Minor update
@@ -139,7 +139,7 @@ see the file COPYING in the `simpcomp` directory or
 22/01/2016 - Version 2.1.5: Minor update
 - Minor changes in documentation/manual
 - Added characterisation of tight 3-manifolds
-  to SCIsTight (see http://arxiv.org/abs/1601.00065)
+  to SCIsTight (see https://arxiv.org/abs/1601.00065)
 
 23/12/2015 - Version 2.1.4: Minor update
 - Fixed minor bug in SCsFromGroupByTransitivity();
