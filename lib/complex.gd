@@ -9,6 +9,7 @@
 ################################################################################
 
 ## <#GAPDoc Label="objecttypes">
+##
 ## In order to meet the particular requirements of piecewise linear geometric 
 ## objects and their invariants, <Package>simpcomp</Package> defines a number 
 ## of new &GAP; object types.<P/>
