@@ -20,6 +20,8 @@
 /doc/*.toc
 /doc/*.txt
 
+/doc/simpcomp.xml
+
 /aclocal.m4
 /autom4te.cache/
 /bin/

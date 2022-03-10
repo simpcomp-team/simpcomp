@@ -134,7 +134,17 @@ end,
 
 ##  *Optional*, but recommended: path relative to package root to a file which
 ##  contains as many tests of the package functionality as sensible.
-TestFile := "tst/simpcomp.tst"
+TestFile := "tst/simpcomp.tst",
+
+AutoDoc := rec(
+    # provide some entities to be used on the title page
+    entities := rec(
+        VERSION := ~.Version,
+        DATE := ~.Date,
+        YEAR := SplitString(~.Date,"/")[3],
+        ),
+    TitlePage := rec( ), # Empty TitlePage here is a workaround for an AutoDoc bug
+),
 
 ));
 
