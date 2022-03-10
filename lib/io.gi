@@ -1148,7 +1148,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCExportRecognizer">
 ## <ManSection>
-## <Func Name="SCExportPolymake" Arg="complex, filename"/>
+## <Func Name="SCExportRecognizer" Arg="complex, filename"/>
 ## <Returns><K>true</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Exports the gluings of the tetrahedra of a given combinatorial 

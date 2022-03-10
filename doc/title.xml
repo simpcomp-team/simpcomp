@@ -3,7 +3,7 @@
   
   <Subtitle>A &GAP; toolbox for simplicial complexes</Subtitle>
   
-  <Version>Version 2.1.14</Version>
+  <Version>Version &VERSION;</Version>
 
   <Author>
   	Felix Effenberger
@@ -15,7 +15,7 @@
   	Jonathan Spreer
     <Email>jonathan.spreer@sydney.edu.au</Email>
     <Address>
-        School of Mathematics and Statistics F07<Br/>",
+        School of Mathematics and Statistics F07<Br/>
         The University of Sydney<Br/>
 	NSW 2006 Australia
     </Address>
@@ -23,7 +23,7 @@
   </Author>
 
   
-  <Date>10/03/2022
+  <Date>&DATE;
 	<Alt Only="LaTeX"><![CDATA[
 	\begin{center}
 	\vspace*{1cm}
