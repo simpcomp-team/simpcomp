@@ -8,7 +8,7 @@
 ##
 ################################################################################
 
-## <#GAPDoc Label="objecttypes">
+## <#GAPDoc Label="SCObjects">
 ##
 ## In order to meet the particular requirements of piecewise linear geometric 
 ## objects and their invariants, <Package>simpcomp</Package> defines a number 
