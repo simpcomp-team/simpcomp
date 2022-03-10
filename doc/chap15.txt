@@ -25,25 +25,6 @@
     [4X[25Xgap>[125X [27XSCInfoLevel(3);[127X[104X
     [4X[25Xgap>[125X [27Xc:=SCBdCrossPolytope(3);;[127X[104X
     [4X[25Xgap>[125X [27XSCReduceComplex(c); [127X[104X
-    [4X[28X#I  round 0, move: [ [ 4, 6 ], [ 1, 2 ] ][128X[104X
-    [4X[28XF: [ 6, 12, 8 ][128X[104X
-    [4X[28X#I  round 1, move: [ [ 6 ], [ 1, 2, 3 ] ][128X[104X
-    [4X[28XF: [ 5, 9, 6 ][128X[104X
-    [4X[28X#I  round 1[128X[104X
-    [4X[28XReduced complex, F: [ 5, 9, 6 ][128X[104X
-    [4X[28X#I  round 2, move: [ [ 4 ], [ 1, 2, 5 ] ][128X[104X
-    [4X[28XF: [ 4, 6, 4 ][128X[104X
-    [4X[28X#I  round 2[128X[104X
-    [4X[28XReduced complex, F: [ 4, 6, 4 ][128X[104X
-    [4X[28X#I  SCReduceComplexEx: computed locally minimal complex after 3 rounds.[128X[104X
-    [4X[28X[ true, [SimplicialComplex[128X[104X
-    [4X[28X    [128X[104X
-    [4X[28X     Properties known: Dim, Facets, Name, SCVertices.[128X[104X
-    [4X[28X    [128X[104X
-    [4X[28X     Name="unnamed complex 3"[128X[104X
-    [4X[28X     Dim=2[128X[104X
-    [4X[28X    [128X[104X
-    [4X[28X    /SimplicialComplex], 3 ][128X[104X
   [4X[32X[104X
   
   

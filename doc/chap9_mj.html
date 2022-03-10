@@ -173,29 +173,7 @@
 
 <div class="example"><pre>
  gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, SCVertices.
- 
-  Name="unnamed complex m"
-  Dim=1
- 
- /SimplicialComplex]
  gap&gt; SCExamineComplexBistellar(obj);
- [SimplicialComplex
- 
-  Properties known: AltshulerSteinberg, Boundary, Chi, Dim, F, Faces, Facets, 
-                    HasBoundary, IsPM, IsPure, Name, SCVertices.
- 
-  Name="unnamed complex 21"
-  Dim=1
-  Chi=0
-  F=[ 6, 6 ]
-  HasBoundary=false
-  IsPM=true
-  IsPure=true
- 
- /SimplicialComplex]
  </pre></div>
 
 <p><a id="X7AEB9242837CCE5D" name="X7AEB9242837CCE5D"></a></p>
@@ -226,21 +204,9 @@
 
 
 <div class="example"><pre>
- gap&gt; SCLib.SearchByName("S^4~S^1");
- [ [ 204, "S^4~S^1 (VT)" ], [ 339, "S^4~S^1 (VT)" ], [ 341, "S^4~S^1 (VT)" ], 
-   [ 438, "S^4~S^1 (VT)" ], [ 493, "S^4~S^1 (VT)" ], [ 494, "S^4~S^1 (VT)" ], 
-   [ 495, "S^4~S^1 (VT)" ], [ 496, "S^4~S^1 (VT)" ], [ 497, "S^4~S^1 (VT)" ], 
-   [ 500, "S^4~S^1 (VT)" ], [ 501, "S^4~S^1 (VT)" ], [ 502, "S^4~S^1 (VT)" ] ]
+ gap&gt; SCLib.SearchByName("S^4~S^1");;
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; l:=SCLink(c,1);
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, SCVertices.
- 
-  Name="lk(1) in S^4~S^1 (VT)"
-  Dim=4
- 
- /SimplicialComplex]
  gap&gt; SCIsKStackedSphere(l,1);
  #I  SCIsKStackedSphere: try 1/50
  #I  round 0: [ 11, 40, 70, 65, 26 ]
@@ -323,30 +289,12 @@
 
 <div class="example"><pre>
  gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,1]]);
- [SimplicialComplex
-
- Properties known: Dim, Facets, Name, SCVertices.
-
- Name="unnamed complex m"
- Dim=1
-
- /SimplicialComplex]
  gap&gt; moves:=SCMoves(obj);
  [[[[1, 2], []], [[1, 4], []], 
      [[2, 3], []], [[3, 4], []]], 
    [[[1], [2, 4]], [[2], [1, 3]], 
      [[3], [2, 4]], [[4], [1, 3]]]]
  gap&gt; obj:=SCMove(obj,last[2][1]);
- [SimplicialComplex
- 
-  Properties known: Chi, Dim, F, Faces, Facets, SCVertices.
-
-  Name="unnamed complex m"
-  Dim=1
-  Chi=0
-  F=[3, 3]
- 
- /SimplicialComplex]
  </pre></div>
 
 <p><a id="X87B1CBC97FC5C120" name="X87B1CBC97FC5C120"></a></p>
@@ -414,15 +362,6 @@
 
 <div class="example"><pre>
  gap&gt; c:=SCRandomize(SCBdSimplex(4));
- #I  SCRandomize: randomizing complex S^3_5 with allowed moves [ -1, 1, 1, 1 ]
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, SCVertices.
- 
-  Name="Randomized S^3_5"
- Dim=3
- 
- /SimplicialComplex]
  gap&gt; c.F;
  [ 20, 85, 130, 65 ]
  </pre></div>
@@ -449,19 +388,11 @@
 
 <div class="example"><pre>
  gap&gt; c:=SCFromFacets([[1,3],[3,5],[4,5],[4,1]]);;
- gap&gt; SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
+ gap&gt; SCBistellarOptions.WriteLevel:=0;; # do not save any complexes                      
  gap&gt; SCReduceAsSubcomplex(c,SCBdCrossPolytope(3));
  #I  round 0, move: [ [ 2 ], [ 1, 4 ] ]
  [ 3, 3 ]
  #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
- [ true, [SimplicialComplex
-     
-      Properties known: Dim, Facets, Name, SCVertices.
-     
-      Name="unnamed complex 9"
-      Dim=1
-     
-     /SimplicialComplex], 1 ]
 </pre></div>
 
 <p><a id="X7FF4BBEC8574C58F" name="X7FF4BBEC8574C58F"></a></p>
@@ -491,14 +422,6 @@
  #I  round 2, move: [ [ 3 ], [ 2, 5 ] ]
  [ 3, 3 ]
  #I  SCReduceComplexEx: computed locally minimal complex after 3 rounds.
- [ true, [SimplicialComplex
-     
-      Properties known: Dim, Facets, Name, SCVertices.
-     
-      Name="unnamed complex 6"
-      Dim=1
-     
-     /SimplicialComplex], 3 ]
  </pre></div>
 
 <p><a id="X814D9AE287F64F74" name="X814D9AE287F64F74"></a></p>
@@ -546,38 +469,12 @@
  gap&gt; c:=SCBdCrossPolytope(4);;
  gap&gt; SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
  gap&gt; SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
- [ true, [SimplicialComplex
-     
-      Properties known: Dim, Facets, Name, SCVertices.
-     
-      Name="unnamed complex 14425"
-      Dim=3
-     
-     /SimplicialComplex], 9 ]
  gap&gt; SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
  gap&gt; SCMailSetAddress("johndoe@somehost");   
  true
  gap&gt; SCMailIsEnabled();                     
  true
  gap&gt; SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
- [ true, [SimplicialComplex
-     
-      Properties known: Boundary, Chi, Date, Dim, F, Faces, Facets, G, H, 
-                        HasBoundary, Homology, IsConnected, IsManifold, IsPM, 
-                        Name, SCVertices, Vertices.
-     
-      Name="ReducedComplex_5_vertices_9"
-      Dim=3
-      Chi=0
-      F=[ 5, 10, 10, 5 ]
-      G=[ 0, 0 ]
-      H=[ 1, 1, 1, 1 ]
-      HasBoundary=false
-      Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-      IsConnected=true
-      IsPM=true
-     
-     /SimplicialComplex], 9 ]
  </pre></div>
 
 <p>Content of sent mail:</p>

@@ -64,41 +64,8 @@
 
 
 <div class="example"><pre>
- gap&gt; list:=SCLib.SearchByName("S^2~S^1 (VT)"){[1..9]};
+ gap&gt; list:=SCLib.SearchByName("S^2~S^1 (VT)"){[1..9]};;
  gap&gt; s2s1:=SCLib.Load(list[1][1]);
- [SimplicialComplex
- 
-  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-                    AutomorphismGroupTransitivity, Boundary, Chi, 
-                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
-                    Generators, H, HasBoundary, HasInterior, Homology, 
-                    Interior, IsCentrallySymmetric, IsConnected, 
-                    IsEulerianManifold, IsOrientable, IsPM, IsPure, 
-                    MinimalNonFaces, Name, Neighborliness, Orientation, 
-                    Reference, StronglyConnected, SCVertices, Vertices.
- 
-  Name="S^2~S^1 (VT)"
-  Dim=3
-  AutomorphismGroupSize=18
-  AutomorphismGroupStructure="D18"
-  AutomorphismGroupTransitivity=1
-  Chi=0
-  F=[ 9, 36, 54, 27 ]
-  G=[ 4, 10 ]
-  H=[ 5, 15, 5, 1 ]
-  HasBoundary=false
-  HasInterior=true
-  Homology=[ [ 0, [ ] ], [ 1, [ ] ], [ 0, [ 2 ] ], [ 0, [ ] ] ]
-  IsCentrallySymmetric=false
-  IsConnected=true
-  IsEulerianManifold=true
-  IsOrientable=false
-  IsPM=true
-  IsPure=true
-  Neighborliness=2
- 
- /SimplicialComplex]
  gap&gt; SCInfoLevel(2); # print information while running
  gap&gt; SCIsTight(s2s1); time;
  #I  SCIsTight: checking non faces...
@@ -119,7 +86,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByAttribute("F[1] = 120");
- [ [ 656, "Bd(600-cell)" ] ]
+ [ [ 648, "Bd(600-cell)" ] ]
  gap&gt; id:=last[1][1];;
  gap&gt; c:=SCLib.Load(id);;
  gap&gt; SCIsTight(c); time;
@@ -140,7 +107,7 @@
 <div class="example"><pre>
  gap&gt; SCInfoLevel(0);
  gap&gt; SCLib.SearchByName("K3");  
- [ [ 551, "K3 surface" ] ]
+ [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; SCIsManifold(c);
  true
@@ -168,41 +135,8 @@
 
 
 <div class="example"><pre>
- gap&gt; list:=SCLib.SearchByName("S^3xS^1");
+ gap&gt; list:=SCLib.SearchByName("S^3xS^1");;
  gap&gt; c:=SCLib.Load(list[1][1]);           
- [SimplicialComplex
- 
-  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-                    AutomorphismGroupTransitivity, Boundary, Chi, 
-                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
-                    Generators, H, HasBoundary, HasInterior, Homology, 
-                    Interior, IsCentrallySymmetric, IsConnected, 
-                    IsEulerianManifold, IsOrientable, IsPM, IsPure, 
-                    MinimalNonFaces, Name, Neighborliness, Orientation, 
-                    Reference, StronglyConnected, SCVertices, Vertices.
- 
-  Name="S^3xS^1 (VT)"
-  Dim=4
-  AutomorphismGroupSize=22
-  AutomorphismGroupStructure="D22"
-  AutomorphismGroupTransitivity=1
-  Chi=0
-  F=[ 11, 55, 110, 110, 44 ]
-  G=[ 5, 15, -20 ]
-  H=[ 6, 21, 1, 16, -1 ]
-  HasBoundary=false
-  HasInterior=true
-  Homology=[ [ 0, [ ] ], [ 1, [ ] ], [ 0, [ ] ], [ 1, [ ] ], [ 1, [ ] ] ]
-  IsCentrallySymmetric=false
-  IsConnected=true
-  IsEulerianManifold=true
-  IsOrientable=true
-  IsPM=true
-  IsPure=true
-  Neighborliness=2
- 
- /SimplicialComplex]
  gap&gt; SCInfoLevel(0);
  gap&gt; SCIsManifold(c);
  true
@@ -304,7 +238,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");      
- [ [ 550, "K3 surface" ] ]
+ [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;    
  gap&gt; f:=SCVertices(c);              
  [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ]
@@ -329,7 +263,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");      
- [ [ 550, "K3 surface" ] ]
+ [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;    
  gap&gt; f:=SCVertices(c);              
  [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ]

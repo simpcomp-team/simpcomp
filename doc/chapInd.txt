@@ -55,7 +55,7 @@
   [2XSCConnectedProduct[102X 6.6-4 
   [2XSCConnectedSum[102X 6.6-5 
   [2XSCConnectedSumMinus[102X 6.6-6 
-  [2XSCCopy[102X 5.1-2  7.2-1 
+  [2XSCCopy[102X 5.1-3  7.2-1 
   [2XSCCupProduct[102X 8.2-5 
   [2XSCCyclic3Mfld[102X 6.8-3 
   [2XSCCyclic3MfldByType[102X 6.8-4 
@@ -64,6 +64,7 @@
   [2XSCDehnSommervilleCheck[102X 6.9-8 
   [2XSCDehnSommervilleMatrix[102X 6.9-9 
   [2XSCDeletedJoin[102X 6.10-4 
+  [2XSCDetails[102X 5.1-2 
   [2XSCDifference[102X 6.10-5 
   [2XSCDifferenceCycleCompress[102X 6.6-7 
   [2XSCDifferenceCycleExpand[102X 6.6-8 
@@ -218,7 +219,7 @@
   [2XSCNumFaces[102X 6.9-52 
   [2XSCOrientation[102X 6.9-53 
   [2XSCProperties[102X 18.1-1 
-  [2XSCPropertiesDropped[102X 5.1-4 
+  [2XSCPropertiesDropped[102X 5.1-5 
   [2XSCPropertiesFlush[102X 18.1-2 
   [2XSCPropertiesManaged[102X 18.1-3 
   [2XSCPropertiesNames[102X 18.1-4 
@@ -294,7 +295,7 @@
   [2XSCVertices[102X 4.1-3 
   [2XSCVerticesEx[102X 4.1-4 
   [2XSCWedge[102X 6.10-23 
-  [2XShallowCopy (SCSimplicialComplex)[102X 5.1-3 
+  [2XShallowCopy (SCSimplicialComplex)[102X 5.1-4 
   [2XSize (SCSimplicialComplex)[102X 5.3-4 
   
   

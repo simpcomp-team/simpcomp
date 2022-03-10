@@ -23,22 +23,29 @@ needed-pkgs:
       url: "http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc"
     - name: "io"
       version: ">=3.0"
+      url: "https://gap-packages.github.io/io"
 
 suggested-pkgs:
     - name: "Homology"
       version: ">=1.4.4"
     - name: "GRAPE"
       version: ">=4.4"
+      url: "https://gap-packages.github.io/grape"
     - name: "Gauss"
       version: ">=2011.08.22"
+      url: "https://homalg-project.github.io/homalg_project/Gauss"
     - name: "MatricesForHomalg"
       version: ">=2011.10.08"
+      url: "https://homalg-project.github.io/homalg_project/MatricesForHomalg"
     - name: "homalg"
       version: ">=2011.10.05"
+      url: "https://homalg-project.github.io/homalg_project/homalg"
     - name: "GaussForHomalg"
       version: ">=2011.08.10"
+      url: "https://homalg-project.github.io/homalg_project/GaussForHomalg"
     - name: "Modules"
       version: ">=2011.10.05"
+      url: "https://homalg-project.github.io/homalg_project/Modules"
 
 www: https://github.com/simpcomp-team/simpcomp
 readme: README.md
@@ -70,12 +77,18 @@ citeas: |
 bibtex: |
     @misc{ simpcomp2.1.13,
       author =           {Effenberger, F. and Spreer, J.},
-      title =            {{simpcomp}, A GAP toolbox for simplicial complexes, {V}ersion 2.1.13},
+      title =            {{simpcomp},  A  GAP  toolbox for simplicial complexes,
+                          {V}ersion 2.1.13},
       month =            {Jun},
       year =             {2021},
       note =             {Refereed GAP package},
-      howpublished =     {\href {https://github.com/simpcomp-team/simpcomp} {\texttt{https://github.com/}\discretionary {}{}{}\texttt{simpcomp-team/}\discretionary {}{}{}\texttt{simpcomp}}},
-      keywords =         {simplicial complexes; combinatorial topology; combinatorial manifolds; PL equivalence; triangulating manifolds},
+      howpublished =     {\href      {https://github.com/simpcomp-team/simpcomp}
+                          {\texttt{https://github.com/}\discretionary
+                          {}{}{}\texttt{simpcomp-team/}\discretionary
+                          {}{}{}\texttt{simpcomp}}},
+      keywords =         {simplicial    complexes;    combinatorial    topology;
+                          combinatorial manifolds; PL equivalence; triangulating
+                          manifolds},
       printedkey =       {ES21}
     }
 

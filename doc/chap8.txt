@@ -84,7 +84,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("(S^2xS^1)#RP^3");[128X[104X
-    [4X[28X [ [ 247, "(S^2xS^1)#RP^3" ] ][128X[104X
+    [4X[28X [ [ 237, "(S^2xS^1)#RP^3" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCHomologyBasis(c,1);[128X[104X
     [4X[28X [ [ 1, [ [ 1, 12 ], [ -1, 7 ], [ 1, 1 ] ] ], [128X[104X
@@ -110,7 +110,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("(S^2xS^1)#RP^3");[128X[104X
-    [4X[28X [ [ 247, "(S^2xS^1)#RP^3" ] ][128X[104X
+    [4X[28X [ [ 237, "(S^2xS^1)#RP^3" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCHomologyBasisAsSimplices(c,1);[128X[104X
     [4X[28X [ [ 1, [ [ 1, [ 2, 8 ] ], [ -1, [ 1, 8 ] ], [ 1, [ 1, 2 ] ] ] ], [128X[104X
@@ -222,8 +222,8 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("SU(3)/SO(3)");   [128X[104X
-    [4X[28X [ [ 222, "SU(3)/SO(3) (VT)" ], [ 520, "SU(3)/SO(3) (VT)" ], [128X[104X
-    [4X[28X   [ 526, "SU(3)/SO(3) (VT)" ], [ 528, "SU(3)/SO(3) (VT)" ] ][128X[104X
+    [4X[28X [ [ 219, "SU(3)/SO(3) (VT)" ], [ 477, "SU(3)/SO(3) (VT)" ], [128X[104X
+    [4X[28X   [ 484, "SU(3)/SO(3) (VT)" ], [ 486, "SU(3)/SO(3) (VT)" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCCohomologyBasis(c,3); [128X[104X
     [4X[28X [ [ 2, [ [ -9, 259 ], [ 9, 262 ], [ 9, 263 ], [ -9, 270 ], [ 9, 271 ], [128X[104X
@@ -269,8 +269,8 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("SU(3)/SO(3)");   [128X[104X
-    [4X[28X [ [ 222, "SU(3)/SO(3) (VT)" ], [ 520, "SU(3)/SO(3) (VT)" ], [128X[104X
-    [4X[28X   [ 526, "SU(3)/SO(3) (VT)" ], [ 528, "SU(3)/SO(3) (VT)" ] ][128X[104X
+    [4X[28X [ [ 219, "SU(3)/SO(3) (VT)" ], [ 477, "SU(3)/SO(3) (VT)" ], [128X[104X
+    [4X[28X   [ 484, "SU(3)/SO(3) (VT)" ], [ 486, "SU(3)/SO(3) (VT)" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCCohomologyBasisAsSimplices(c,3);[128X[104X
     [4X[28X [ [ 2, [ [ -9, [ 2, 7, 8, 9 ] ], [ 9, [ 2, 7, 8, 12 ] ], [ 9, [ 2, 7, 8, 13 ] ], [128X[104X
@@ -345,7 +345,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("K3");[128X[104X
-    [4X[28X [ [ 584, "K3 surface" ] ][128X[104X
+    [4X[28X [ [ 520, "K3_16" ], [ 539, "K3_17" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;                                     [128X[104X
     [4X[28X gap> basis:=SCCohomologyBasisAsSimplices(c,2);;[128X[104X
     [4X[28X gap> SCCupProduct(c,basis[1][2],basis[1][2]);[128X[104X
@@ -375,8 +375,10 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("CP^2");       [128X[104X
-    [4X[28X [ [ 17, "CP^2 (VT)" ], [ 88, "CP^2#CP^2" ], [ 89, "CP^2#-CP^2" ], [128X[104X
-    [4X[28X   [ 186, "CP^2#(S^2xS^2)" ], [ 499, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ][128X[104X
+    [4X[28X [ [ 16, "CP^2 (VT)" ], [ 96, "CP^2#-CP^2" ], [128X[104X
+    [4X[28X   [ 97, "CP^2#CP^2" ], [ 185, "CP^2#(S^2xS^2)" ], [128X[104X
+    [4X[28X   [ 397, "Gaifullin CP^2" ], [128X[104X
+    [4X[28X   [ 457, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ][128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);; [128X[104X
     [4X[28X gap> c1:=SCConnectedSum(c,c);;[128X[104X
     [4X[28X gap> c2:=SCConnectedSumMinus(c,c);;[128X[104X
@@ -402,17 +404,11 @@
   returned.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("S^2xS^2");[128X[104X
-    [4X[28X [ [ 51, "S^2xS^2" ], [ 110, "S^2xS^2 (VT)" ], [ 111, "S^2xS^2 (VT)" ], [128X[104X
-    [4X[28X   [ 112, "S^2xS^2 (VT)" ], [ 114, "(S^2xS^2)#(S^2xS^2)" ], [128X[104X
-    [4X[28X   [ 144, "(S^2xS^2)#(S^2xS^2) (VT)" ], [ 145, "(S^2xS^2)#(S^2xS^2) (VT)" ], [128X[104X
-    [4X[28X   [ 186, "CP^2#(S^2xS^2)" ] ][128X[104X
+    [4X[28X gap> SCLib.SearchByName("S^2xS^2");;[128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;    [128X[104X
     [4X[28X gap> SCIntersectionFormParity(c);[128X[104X
     [4X[28X 0[128X[104X
-    [4X[28X gap> SCLib.SearchByName("CP^2");       [128X[104X
-    [4X[28X [ [ 17, "CP^2 (VT)" ], [ 88, "CP^2#CP^2" ], [ 89, "CP^2#-CP^2" ], [128X[104X
-    [4X[28X   [ 186, "CP^2#(S^2xS^2)" ], [ 499, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ][128X[104X
+    [4X[28X gap> SCLib.SearchByName("CP^2");;     [128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);; [128X[104X
     [4X[28X gap> SCIntersectionFormParity(c);[128X[104X
     [4X[28X 1[128X[104X
@@ -430,9 +426,7 @@
   further details.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("CP^2");       [128X[104X
-    [4X[28X [ [ 17, "CP^2 (VT)" ], [ 88, "CP^2#CP^2" ], [ 89, "CP^2#-CP^2" ], [128X[104X
-    [4X[28X   [ 186, "CP^2#(S^2xS^2)" ], [ 499, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ][128X[104X
+    [4X[28X gap> SCLib.SearchByName("CP^2");;[128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);; [128X[104X
     [4X[28X gap> SCIntersectionFormParity(c);[128X[104X
     [4X[28X 1[128X[104X
@@ -462,9 +456,7 @@
   negative eigenvalues of the intersection form.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X gap> SCLib.SearchByName("CP^2");       [128X[104X
-    [4X[28X [ [ 17, "CP^2 (VT)" ], [ 88, "CP^2#CP^2" ], [ 89, "CP^2#-CP^2" ], [128X[104X
-    [4X[28X   [ 186, "CP^2#(S^2xS^2)" ], [ 499, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ][128X[104X
+    [4X[28X gap> SCLib.SearchByName("CP^2");;[128X[104X
     [4X[28X gap> c:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> SCIntersectionFormParity(c);[128X[104X
     [4X[28X 1[128X[104X
@@ -473,14 +465,6 @@
     [4X[28X gap> SCIntersectionFormSignature(c);[128X[104X
     [4X[28X [ 1, 0, 1 ][128X[104X
     [4X[28X gap> d:=SCConnectedSum(c,c);                           [128X[104X
-    [4X[28X [SimplicialComplex[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Properties known: Dim, Facets, Name, SCVertices, Vertices.[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Name="CP^2 (VT)#+-CP^2 (VT)"[128X[104X
-    [4X[28X  Dim=4[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> SCIntersectionFormSignature(d);[128X[104X
     [4X[28X [ 2, 1, 1 ][128X[104X
     [4X[28X gap> d:=SCConnectedSumMinus(c,c);;[128X[104X

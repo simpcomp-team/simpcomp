@@ -239,14 +239,6 @@
 
 <div class="example"><pre>
  gap&gt; c:=SC(Combinations([1..6],5));
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, VertexLabels.
-
-  Name="unnamed complex m"
-  Dim=4
- 
- /SimplicialComplex]
  </pre></div>
 
 <p><a id="X827D29DD79A82CFA" name="X827D29DD79A82CFA"></a></p>
@@ -295,14 +287,6 @@
  gap&gt; #group: AGL(1,7) of order 42
  gap&gt; G:=Group([(2,6,5,7,3,4),(1,3,5,7,2,4,6)]);;
  gap&gt; c:=SCFromGenerators(G,[[ 1, 2, 4 ]]);
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="unnamed complex m"
-  Dim=2
- 
- /SimplicialComplex]
  gap&gt; SCLib.DetermineTopologicalType(c);
  [ [ true, 5 ] ] # the 7-vertex torus
  </pre></div>
@@ -394,22 +378,6 @@
 
 <div class="example"><pre>
  gap&gt; SCBdCyclicPolytope(3,8); 
- [SimplicialComplex
- 
-  Properties known: Chi, Dim, F, Facets, HasBoundary, Homology, IsConnected, 
-                    IsStronglyConnected, Name, TopologicalType, VertexLabels.
- 
-  Name="Bd(C_3(8))"
-  Dim=2
-  Chi=2
-  F=[ 8, 18, 12 ]
-  HasBoundary=false
-  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-  IsConnected=true
-  IsStronglyConnected=true
-  TopologicalType="S^2"
- 
- /SimplicialComplex]
  </pre></div>
 
 <p><a id="X839F3BD37DBA3F3C" name="X839F3BD37DBA3F3C"></a></p>
@@ -424,26 +392,6 @@
 
 <div class="example"><pre>
  gap&gt; SCBdSimplex(5);
- [SimplicialComplex
- 
-  Properties known: AutomorphismGroup, AutomorphismGroupOrder, 
-                    AutomorphismGroupStructure, AutomorphismGroupTransitivity, 
-                    Chi, Dim, F, Facets, Generators, HasBoundary, Homology, 
-                    IsConnected, IsStronglyConnected, Name, TopologicalType, 
-                    VertexLabels.
- 
-  Name="S^4_6"
-  Dim=4
-  AutomorphismGroupStructure="S6"
-  AutomorphismGroupTransitivity=6
-  Chi=2
-  F=[ 6, 15, 20, 15, 6 ]
-  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-  IsConnected=true
-  IsStronglyConnected=true
-  TopologicalType="S^4"
- 
- /SimplicialComplex]
  </pre></div>
 
 <p><a id="X856E48967BBFCF0E" name="X856E48967BBFCF0E"></a></p>
@@ -458,14 +406,6 @@
 
 <div class="example"><pre>
  gap&gt; SCEmpty();
- [SimplicialComplex
- 
-  Properties known: Dim, Faces, Facets, Name, VertexLabels.
- 
-  Name="empty complex"
-  Dim=-1
- 
- /SimplicialComplex]
  </pre></div>
 
 <p><a id="X7A23532F7A8A3988" name="X7A23532F7A8A3988"></a></p>
@@ -480,16 +420,6 @@
 
 <div class="example"><pre>
  gap&gt; SCSimplex(3);
- [SimplicialComplex
- 
-  Properties known: Chi, Dim, Facets, Name, TopologicalType, VertexLabels.
- 
-  Name="B^3_4"
-  Dim=3
-  Chi=1
-  TopologicalType="B^3"
- 
- /SimplicialComplex]
  </pre></div>
 
 <p><a id="X8664A90879248282" name="X8664A90879248282"></a></p>
@@ -715,49 +645,7 @@
 
 <div class="example"><pre>
  gap&gt; c:=SCSeriesBdHandleBody(2,7);
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="Sphere bundle S^1 x S^1"
-  Dim=2
- 
- /SimplicialComplex]
  gap&gt; SCLib.DetermineTopologicalType(c);
- [SimplicialComplex
- 
-  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-                    AutomorphismGroupTransitivity, Boundary, Chi, 
-                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
-                    Generators, H, HasBoundary, HasInterior, Homology, 
-                    Interior, IsCentrallySymmetric, IsConnected, 
-                    IsEulerianManifold, IsManifold, IsOrientable, IsPM, IsPure,\
-  
-                    MinimalNonFaces, Name, Neighborliness, Orientation, 
-                    Reference, StronglyConnected, VertexLabels, Vertices.
- 
-  Name="T^2 (VT)"
-  Dim=2
-  AutomorphismGroupSize=42
-  AutomorphismGroupStructure="(C7 : C3) : C2"
-  AutomorphismGroupTransitivity=2
-  Chi=0
-  F=[ 7, 21, 14 ]
-  G=[ 3, 6 ]
-  H=[ 4, 10, -1 ]
-  HasBoundary=false
-  HasInterior=true
-  Homology=[ [ 0, [ ] ], [ 2, [ ] ], [ 1, [ ] ] ]
-  IsCentrallySymmetric=false
-  IsConnected=true
-  IsEulerianManifold=true
-  IsOrientable=true
-  IsPM=true
-  IsPure=true
-  Neighborliness=2
- 
- /SimplicialComplex]
  gap&gt; SCIsIsomorphic(c,SCSeriesHandleBody(3,7).Boundary);
  true
  </pre></div>
@@ -793,14 +681,6 @@
 
 <div class="example"><pre>
  gap&gt; c:=SCSeriesC2n(8);
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="C_16 = { (1:1:3:11),(1:1:11:3),(1:3:1:11),(2:3:2:9),(2:5:2:7) }"
-  Dim=3
- 
- /SimplicialComplex]
  gap&gt; SCGenerators(c);  
  [ [ [ 1, 2, 3, 6 ], 32 ], [ [ 1, 2, 5, 6 ], 16 ], [ [ 1, 3, 6, 8 ], 16 ], 
    [ [ 1, 3, 8, 10 ], 16 ] ]
@@ -810,14 +690,6 @@
 <div class="example"><pre>
  gap&gt; c:=SCSeriesC2n(8);;
  gap&gt; d:=SCSeriesD2n(8); 
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="D_16 = { (1:1:1:13),(1:2:11:2),(3:4:5:4),(2:3:4:7),(2:7:4:3) }"
-  Dim=3
- 
- /SimplicialComplex]
  gap&gt; SCIsIsomorphic(c,d);
  true
  gap&gt; c:=SCSeriesC2n(11);;
@@ -857,25 +729,9 @@
 
 <div class="example"><pre>
  gap&gt; SCSeriesCSTSurface(2,4,14);
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="cst surface S_{(2,4,14)} = { (2:4:8),(2:8:4) }""
-  Dim=2
- 
- /SimplicialComplex]
  gap&gt; last.Homology;
  [ [ 1, [  ] ], [ 4, [  ] ], [ 2, [  ] ] ]
  gap&gt; SCSeriesCSTSurface(2,10);  
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="cst surface S_{(2,10)} = { (2:2:6),(3:3:4) }"
-  Dim=2
- 
- /SimplicialComplex]
  gap&gt; last.Homology;                    
  [ [ 0, [  ] ], [ 1, [ 2 ] ], [ 0, [  ] ] ]
  </pre></div>
@@ -892,14 +748,6 @@
 
 <div class="example"><pre>
  gap&gt; d:=SCSeriesD2n(15);
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="D_30 = { (1:1:1:27),(1:2:25:2),(3:11:5:11),(2:3:11:14),(2:14:11:3) }"
-  Dim=3
- 
- /SimplicialComplex]
  gap&gt; SCAutomorphismGroup(d);  
  TransitiveGroup(30,14) = t30n14
  gap&gt; StructureDescription(last);
@@ -910,14 +758,6 @@
 <div class="example"><pre>
  gap&gt; c:=SCSeriesC2n(8);;
  gap&gt; d:=SCSeriesD2n(8); 
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="D_16 = { (1:1:1:13),(1:2:11:2),(3:4:5:4),(2:3:4:7),(2:7:4:3) }"
-  Dim=3
- 
- /SimplicialComplex]
  gap&gt; SCIsIsomorphic(c,d);
  true
  gap&gt; c:=SCSeriesC2n(11);;
@@ -940,14 +780,6 @@
 
 <div class="example"><pre>
  gap&gt; c:=SCSeriesHandleBody(3,7);
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="Handle body B^2 x S^1"
-  Dim=3
- 
- /SimplicialComplex]
  gap&gt; SCAutomorphismGroup(c);    
  PrimitiveGroup(7,2) = D(2*7)
  gap&gt; bd:=SCBoundary(c);;
@@ -1045,14 +877,6 @@
 
 <div class="example"><pre>
  gap&gt; c:=SCSeriesLe(7);                     
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="Le_14 = { (1:1:1:11),(1:2:4:7),(1:4:2:7),(2:5:2:5),(2:4:2:6) }"
-  Dim=3
- 
- /SimplicialComplex]
  gap&gt; d:=SCLib.DetermineTopologicalType(c);;
  gap&gt; SCReference(d);
  "manifold_3_14_1_5 in F.H.Lutz: 'The Manifold Page', http://www.math.tu-berlin\
@@ -1306,15 +1130,6 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdSimplex(2);;
  gap&gt; 4torus:=SCCartesianPower(c,4);
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, TopologicalType, VertexLabels.
- 
-  Name="(S^1_3)^4"
-  Dim=4
-  TopologicalType="(S^1)^4"
- 
- /SimplicialComplex]
  gap&gt; 4torus.Homology;
  [ [ 0, [  ] ], [ 4, [  ] ], [ 6, [  ] ], [ 4, [  ] ], [ 1, [  ] ] ]
  gap&gt; 4torus.Chi;
@@ -1339,15 +1154,6 @@
  gap&gt; c1:=SCBdSimplex(2);;
  gap&gt; c2:=SCBdSimplex(3);;
  gap&gt; c3:=SCCartesianProduct(c1,c2);
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, TopologicalType, VertexLabels.
- 
-  Name="S^1_3xS^2_4"
-  Dim=3
-  TopologicalType="S^1xS^2"
- 
- /SimplicialComplex]
  gap&gt; c3.Homology;
  [ [ 0, [  ] ], [ 1, [  ] ], [ 1, [  ] ], [ 1, [  ] ] ]
  gap&gt; c3.F;
@@ -1368,40 +1174,9 @@
  gap&gt; c:=SC([[1,2,3],[3,4,5],[4,5,6,7,8]]);;
  gap&gt; SCRename(c,"connected complex");;
  gap&gt; SCConnectedComponents(c);
- [ [SimplicialComplex
- 
-      Properties known: Dim, Facets, Name, VertexLabels.
- 
-      Name="Connected component #1 of connected complex"
-      Dim=4
- 
-     /SimplicialComplex] ]
  gap&gt; c:=SC([[1,2,3],[4,5],[6,7,8]]);;
  gap&gt; SCRename(c,"non-connected complex");;
  gap&gt; SCConnectedComponents(c);
- [ [SimplicialComplex
- 
-      Properties known: Dim, Facets, Name, VertexLabels.
- 
-      Name="Connected component #1 of non-connected complex"
-      Dim=2
- 
-     /SimplicialComplex], [SimplicialComplex
- 
-      Properties known: Chi, Dim, Facets, Name, VertexLabels.
- 
-      Name="Connected component #2 of non-connected complex"
-      Dim=1
-      Chi=0
- 
-     /SimplicialComplex], [SimplicialComplex
- 
-      Properties known: Dim, Facets, Name, VertexLabels.
- 
-      Name="Connected component #3 of non-connected complex"
-      Dim=2
- 
-     /SimplicialComplex] ]
  </pre></div>
 
 <p><a id="X7C63CDF28162C755" name="X7C63CDF28162C755"></a></p>
@@ -1416,20 +1191,10 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("T^2"){[1..6]};
- [ [ 5, "T^2 (VT)" ], [ 7, "T^2 (VT)" ], [ 11, "T^2 (VT)" ], 
-   [ 12, "T^2 (VT)" ], [ 20, "T^2 (VT)" ], [ 22, "(T^2)#2" ], 
-   [ 27, "(T^2)#3" ], [ 41, "T^2 (VT)" ], [ 44, "(T^2)#4" ], ... 
+ [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], 
+   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
  gap&gt; torus:=SCLib.Load(last[1][1]);;
  gap&gt; genus10:=SCConnectedProduct(torus,10);
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="T^2 (VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2 (\
- VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2 (VT)"
-  Dim=2
- 
- /SimplicialComplex]
  gap&gt; genus10.Chi;
  -18
  gap&gt; genus10.F;
@@ -1448,19 +1213,10 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("T^2"){[1..6]};
- [ [ 5, "T^2 (VT)" ], [ 7, "T^2 (VT)" ], [ 11, "T^2 (VT)" ], 
-   [ 12, "T^2 (VT)" ], [ 20, "T^2 (VT)" ], [ 22, "(T^2)#2" ], 
-   [ 27, "(T^2)#3" ], [ 41, "T^2 (VT)" ], [ 44, "(T^2)#4" ], ...
+ [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], 
+   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
  gap&gt; torus:=SCLib.Load(last[1][1]);;
  gap&gt; genus2:=SCConnectedSum(torus,torus);
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="T^2 (VT)#+-T^2 (VT)"
-  Dim=2
- 
- /SimplicialComplex]
  gap&gt; genus2.Homology;
  [ [ 0, [  ] ], [ 4, [  ] ], [ 1, [  ] ] ]
  gap&gt; genus2.Chi;
@@ -1470,8 +1226,10 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("CP^2");
- [ [ 17, "CP^2 (VT)" ], [ 88, "CP^2#CP^2" ], [ 89, "CP^2#-CP^2" ], 
-   [ 186, "CP^2#(S^2xS^2)" ], [ 499, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
+ [ [ 16, "CP^2 (VT)" ], [ 96, "CP^2#-CP^2" ], 
+   [ 97, "CP^2#CP^2" ], [ 185, "CP^2#(S^2xS^2)" ], 
+   [ 397, "Gaifullin CP^2" ], 
+   [ 457, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
  gap&gt; cp2:=SCLib.Load(last[1][1]);;
  # CP^2 # CP^2 (signature of intersection form is 2)  
  gap&gt; c1:=SCConnectedSum(cp2,cp2);;
@@ -1503,19 +1261,10 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("T^2"){[1..6]};
- [ [ 5, "T^2 (VT)" ], [ 7, "T^2 (VT)" ], [ 11, "T^2 (VT)" ], 
-   [ 12, "T^2 (VT)" ], [ 20, "T^2 (VT)" ], [ 22, "(T^2)#2" ], 
-   [ 27, "(T^2)#3" ], [ 41, "T^2 (VT)" ], [ 44, "(T^2)#4" ], ...
+ [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], 
+   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
  gap&gt; torus:=SCLib.Load(last[1][1]);;
  gap&gt; genus2:=SCConnectedSumMinus(torus,torus);
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="T^2 (VT)#+-T^2 (VT)"
-  Dim=2
- 
- /SimplicialComplex]
  gap&gt; genus2.Homology;
  [ [ 0, [  ] ], [ 4, [  ] ], [ 1, [  ] ] ]
  gap&gt; genus2.Chi;
@@ -1525,8 +1274,10 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("CP^2");
- [ [ 17, "CP^2 (VT)" ], [ 88, "CP^2#CP^2" ], [ 89, "CP^2#-CP^2" ], 
-   [ 186, "CP^2#(S^2xS^2)" ], [ 499, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
+ [ [ 16, "CP^2 (VT)" ], [ 96, "CP^2#-CP^2" ], 
+   [ 97, "CP^2#CP^2" ], [ 185, "CP^2#(S^2xS^2)" ], 
+   [ 397, "Gaifullin CP^2" ], 
+   [ 457, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
  gap&gt; cp2:=SCLib.Load(last[1][1]);;
  # CP^2 # CP^2 (signature of intersection form is 2)  
  gap&gt; c1:=SCConnectedSum(cp2,cp2);;
@@ -1599,21 +1350,6 @@
 <div class="example"><pre>
  gap&gt; c:=SC([[1,2,3],[2,3,4],[4,5,6],[5,6,7]]);;
  gap&gt; comps:=SCStronglyConnectedComponents(c);
- [ [SimplicialComplex
-     
-      Properties known: Dim, Facets, Name, VertexLabels.
-     
-      Name="Strongly connected component #1 of unnamed complex m"
-      Dim=2
-     
-     /SimplicialComplex], [SimplicialComplex
-     
-      Properties known: Dim, Facets, Name, VertexLabels.
-     
-      Name="Strongly connected component #3 of unnamed complex m"
-      Dim=2
-     
-     /SimplicialComplex] ]
  gap&gt; comps[1].Facets;
  [ [ 1, 2, 3 ], [ 2, 3, 4 ] ]
  gap&gt; comps[2].Facets;
@@ -1887,34 +1623,8 @@
 
 <div class="example"><pre>
  gap&gt; c:=SC([[1,2,3,4],[1,2,3,5],[1,2,4,5],[1,3,4,5]]);
- [SimplicialComplex
-
- Properties known: Dim, Facets, Name, VertexLabels.
-
- Name="unnamed complex m"
- Dim=3
-
- /SimplicialComplex]
  gap&gt; SCBoundary(c);
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="Bd(unnamed complex 5)"
-  Dim=2
- 
- /SimplicialComplex]
  gap&gt; c;  
- [SimplicialComplex
- 
-  Properties known: Boundary, Dim, Faces, Facets, HasBoundary, Name, 
-                    VertexLabels.
- 
-  Name="unnamed complex 5"
-  Dim=3
-  HasBoundary=true
- 
- /SimplicialComplex]
  </pre></div>
 
 <p><a id="X812AE7397B4FC88E" name="X812AE7397B4FC88E"></a></p>
@@ -2006,14 +1716,6 @@
    [ 5, 6 ] ]
  gap&gt; graph:=SC(graph);;              
  gap&gt; dualGraph:=SCDualGraph(sphere); 
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, VertexLabels.
- 
-  Name="dual graph of S^4_6"
-  Dim=1
- 
- /SimplicialComplex]
  gap&gt; graph.Facets = dualGraph.Facets;
  true
  </pre></div>
@@ -2216,41 +1918,8 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");
- [ [ 584, "K3 surface" ] ]
+ [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
  gap&gt; SCLib.Load(last[1][1]);
- [SimplicialComplex
- 
-  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-                    AutomorphismGroupTransitivity, Boundary, Chi, 
-                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
-                    Generators, H, HasBoundary, HasInterior, Homology, 
-                    Interior, IsCentrallySymmetric, IsConnected, 
-                    IsEulerianManifold, IsOrientable, IsPM, IsPure, 
-                    MinimalNonFaces, Name, Neighborliness, Orientation, 
-                    StronglyConnected, VertexLabels, Vertices.
- 
-  Name="K3 surface"
-  Dim=4
-  AutomorphismGroupSize=240
-  AutomorphismGroupStructure="((C2 x C2 x C2 x C2) : C5) : C3"
-  AutomorphismGroupTransitivity=2
-  Chi=24
-  F=[ 16, 120, 560, 720, 288 ]
-  G=[ 10, 55 ]
-  H=[ 11, 66, 286, -99, 23 ]
-  HasBoundary=false
-  HasInterior=true
-  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 22, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-  IsCentrallySymmetric=false
-  IsConnected=true
-  IsEulerianManifold=true
-  IsOrientable=true
-  IsPM=true
-  IsPure=true
-  Neighborliness=3
- 
- /SimplicialComplex]
  gap&gt; SCGenerators(last);
  [ [ [ 1, 2, 3, 8, 12 ], 240 ], [ [ 1, 2, 5, 8, 14 ], 48 ] ]
  </pre></div>
@@ -2279,41 +1948,8 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K3");
- [ [ 584, "K3 surface" ] ]
+ [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
  gap&gt; SCLib.Load(last[1][1]);
- [SimplicialComplex
- 
-  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-                    AutomorphismGroupTransitivity, Boundary, Chi, 
-                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
-                    Generators, H, HasBoundary, HasInterior, Homology, 
-                    Interior, IsCentrallySymmetric, IsConnected, 
-                    IsEulerianManifold, IsOrientable, IsPM, IsPure, 
-                    MinimalNonFaces, Name, Neighborliness, Orientation, 
-                    StronglyConnected, VertexLabels, Vertices.
- 
-  Name="K3 surface"
-  Dim=4
-  AutomorphismGroupSize=240
-  AutomorphismGroupStructure="((C2 x C2 x C2 x C2) : C5) : C3"
-  AutomorphismGroupTransitivity=2
-  Chi=24
-  F=[ 16, 120, 560, 720, 288 ]
-  G=[ 10, 55 ]
-  H=[ 11, 66, 286, -99, 23 ]
-  HasBoundary=false
-  HasInterior=true
-  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 22, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-  IsCentrallySymmetric=false
-  IsConnected=true
-  IsEulerianManifold=true
-  IsOrientable=true
-  IsPM=true
-  IsPure=true
-  Neighborliness=3
- 
- /SimplicialComplex]
  gap&gt; SCGeneratorsEx(last);
  [ [ [ 1, 2, 3, 8, 12 ], 240 ], [ [ 1, 2, 5, 8, 14 ], 48 ] ]
  </pre></div>
@@ -2347,7 +1983,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("K^2"); 
- [ [ 19, "K^2 (VT)" ], [ 230, "K^2 (VT)" ] ]
+ [ [ 18, "K^2 (VT)" ], [ 221, "K^2 (VT)" ] ]
  gap&gt; kleinBottle:=SCLib.Load(last[1][1]);;
  gap&gt; SCHasBoundary(kleinBottle);
  false
@@ -2636,7 +2272,7 @@
 
 
 <div class="example"><pre>
- gap&gt; list:=SCLib.SearchByName("S^2~S^1");;{[1..3]};
+ gap&gt; list:=SCLib.SearchByName("S^2~S^1"){[1..3]};;
  gap&gt; c:=SCLib.Load(list[1][1]);;
  gap&gt; c.AutomorphismGroup;
  D18
@@ -2812,10 +2448,8 @@
  gap&gt; SCNeighborliness(c);
  1
  gap&gt; SCLib.SearchByAttribute("F[3]=Binomial(F[1],3) and Dim=4");
- [ [ 10, "S^5 (VT)" ], [ 17, "CP^2 (VT)" ], [ 18, "S^5 (VT)" ], 
-   [ 38, "S^5 (VT)" ], [ 39, "S^6 (VT)" ], [ 40, "S^7 (VT)" ], 
-   [ 53, "S^5 (VT)" ], [ 54, "S^5 (VT)" ], [ 55, "S^7 (VT)" ], ... 
- gap&gt; cp2:=SCLib.Load(last[2][1]);;
+ [ [ 16, "CP^2 (VT)" ], [ 520, "K3_16" ] ]
+ gap&gt; cp2:=SCLib.Load(last[1][1]);;
  gap&gt; SCNeighborliness(cp2);
  3
  </pre></div>
@@ -2863,7 +2497,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("RP^2"); 
- [ [ 3, "RP^2 (VT)" ], [ 284, "RP^2xS^1" ] ]
+ [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
  gap&gt; rp2_6:=SCLib.Load(last[1][1]);;      
  gap&gt; rp2_6:=SC(rp2_6.Facets+10);;
  gap&gt; SCSkelEx(rp2_6,1);
@@ -2888,7 +2522,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("RP^2"); 
- [ [ 3, "RP^2 (VT)" ], [ 284, "RP^2xS^1" ] ]
+ [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
  gap&gt; rp2_6:=SCLib.Load(last[1][1]);;      
  gap&gt; rp2_6:=SC(rp2_6.Facets+10);;
  gap&gt; SCSkelEx(rp2_6,1);
@@ -2977,9 +2611,14 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("RP^3");
- [ [ 45, "RP^3" ], [ 103, "RP^3=L(2,1) (VT)" ], [ 246, "(S^2~S^1)#RP^3" ], 
-   [ 247, "(S^2xS^1)#RP^3" ], [ 283, "(S^2~S^1)#2#RP^3" ], 
-   [ 285, "(S^2xS^1)#2#RP^3" ], [ 409, "RP^3#RP^3" ], ...
+ [ [ 45, "RP^3" ], [ 114, "RP^3=L(2,1) (VT)" ], 
+   [ 237, "(S^2xS^1)#RP^3" ], [ 238, "(S^2~S^1)#RP^3" ], 
+   [ 263, "(S^2xS^1)#2#RP^3" ], [ 264, "(S^2~S^1)#2#RP^3" ], 
+   [ 366, "RP^3#RP^3" ], [ 382, "RP^3=L(2,1) (VT)" ], 
+   [ 399, "(S^2~S^1)#3#RP^3" ], [ 402, "(S^2xS^1)#3#RP^3" ], 
+   [ 417, "RP^3=L(2,1) (VT)" ], [ 502, "(S^2~S^1)#4#RP^3" ], 
+   [ 503, "(S^2xS^1)#4#RP^3" ], [ 531, "(S^2xS^1)#5#RP^3" ], 
+   [ 532, "(S^2~S^1)#5#RP^3" ] ]
  gap&gt; rp3:=SCLib.Load(last[1][1]);;
  gap&gt; rp3.F;
  [11, 51, 80, 40]
@@ -3014,14 +2653,6 @@
 
 <div class="example"><pre>
  gap&gt; deljoin:=SCDeletedJoin(SCBdSimplex(3),SCBdSimplex(3));
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, SCVertices.
- 
-  Name="S^2_4 deljoin S^2_4"
-  Dim=3
- 
- /SimplicialComplex]
  gap&gt; bddeljoin:=SCBoundary(deljoin);;
  gap&gt; bddeljoin.Homology;
  [ [ 1, [  ] ], [ 0, [  ] ], [ 2, [  ] ] ]
@@ -3169,9 +2800,11 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByAttribute("F[1]=10"){[1..10]};
- [ [ 19, "K^2 (VT)" ], [ 20, "T^2 (VT)" ], [ 21, "S^3 (VT)" ], 
-   [ 22, "(T^2)#2" ], [ 23, "S^3 (VT)" ], [ 24, "S^2xS^1 (VT)" ], 
-   [ 25, "S^3 (VT)" ], [ 26, "S^4 (VT)" ], [ 27, "(T^2)#3" ], ...
+ [ [ 17, "T^2 (VT)" ], [ 18, "K^2 (VT)" ], 
+   [ 19, "S^3 (VT)" ], [ 20, "(T^2)#2" ], [ 21, "S^3 (VT)" ],
+   [ 22, "S^3 (VT)" ], [ 23, "S^2xS^1 (VT)" ], 
+   [ 24, "(T^2)#3" ], [ 25, "(P^2)#7 (VT)" ], 
+   [ 26, "S^2~S^1 (VT)" ] ]
  gap&gt; k:=SCLib.Load(last[1][1]);;
  gap&gt; c:=SCBdSimplex(9);;
  gap&gt; k.F;
@@ -3234,14 +2867,6 @@
 
 <div class="example"><pre>
  gap&gt; sphere:=SCJoin(SCBdSimplex(2),SCBdSimplex(2));
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, SCVertices.
- 
-  Name="S^1_3 join S^1_3"
-  Dim=3
- 
- /SimplicialComplex]
  gap&gt; SCHasBoundary(sphere);
  false
  gap&gt; sphere.Facets;
@@ -3261,14 +2886,6 @@
 
 <div class="example"><pre>
  gap&gt; ball:=SCJoin(SC([[1]]),SCBdSimplex(2));
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, SCVertices.
- 
-  Name="unnamed complex m join S^1_3"
-  Dim=2
- 
- /SimplicialComplex]
  gap&gt; ball.Homology;
  [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ] ]
  gap&gt; ball.Facets;
@@ -3288,14 +2905,6 @@
 
 <div class="example"><pre>
  gap&gt; c:=SCFromFacets(Combinations(["a","b","c"],2));
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, SCVertices.
- 
-  Name="unnamed complex m"
-  Dim=1
- 
- /SimplicialComplex]
  gap&gt; SCNeighbors(c,["a","d"]);
  [ [ "a", "b" ], [ "a", "c" ] ]
  </pre></div>
@@ -3312,14 +2921,6 @@
 
 <div class="example"><pre>
  gap&gt; c:=SCFromFacets(Combinations(["a","b","c"],2));
- [SimplicialComplex
- 
-  Properties known: Chi, Dim, Facets, Name, SCVertices.
- 
-  Name="unnamed complex m"
-  Dim=1
- 
- /SimplicialComplex]
  gap&gt; SCLabels(c);
  [ "a", "b", "c" ]
  gap&gt; SCNeighborsEx(c,[1,2]);
@@ -3419,14 +3020,6 @@
  gap&gt; SCVertices(c);
  [1, 2, 3, 4, 5, 6, 7, 8]
  gap&gt; span:=SCSpan(c,[1,2,3,4]);
- [SimplicialComplex
-
- Properties known: Dim, Facets, Name, SCVertices.
-
- Name="span([ 1, 2, 3, 4 ]) in Bd(\beta^4)"
- Dim=1
-
- /SimplicialComplex]
  gap&gt; span.Facets;
  [[1, 3], [1, 4], [2, 3], [2, 4]]
  </pre></div>
@@ -3435,14 +3028,6 @@
 <div class="example"><pre>
  gap&gt; c:=SC([[1,2],[1,4,5],[2,3,4]]);;
  gap&gt; span:=SCSpan(c,[2,3,5]);
- [SimplicialComplex
-
- Properties known: Dim, Facets, Name, SCVertices.
-
- Name="span([ 2, 3, 5 ]) in unnamed complex m"
- Dim=1
-
- /SimplicialComplex]
  gap&gt; SCFacets(span);
  [[2, 3], [5]]
  </pre></div>
@@ -3459,41 +3044,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByName("Poincare");
- [ [ 563, "Poincare_sphere" ] ]
  gap&gt; phs:=SCLib.Load(last[1][1]);
- [SimplicialComplex
- 
-  Properties known: AltshulerSteinberg, AutomorphismGroup, 
-                    AutomorphismGroupSize, AutomorphismGroupStructure, 
-                    AutomorphismGroupTransitivity, Boundary, Chi, 
-                    ConnectedComponents, Dim, DualGraph, F, Faces, Facets, G, 
-                    Generators, H, HasBoundary, HasInterior, Homology, 
-                    Interior, IsCentrallySymmetric, IsConnected, 
-                    IsEulerianManifold, IsOrientable, IsPM, IsPure, 
-                    MinimalNonFaces, Name, Neighborliness, Orientation, 
-                    StronglyConnected, SCVertices, Vertices.
- 
-  Name="B4"
-  Dim=3
-  AutomorphismGroupSize=1
-  AutomorphismGroupStructure="1"
-  AutomorphismGroupTransitivity=0
-  Chi=0
-  F=[ 17, 117, 200, 100 ]
-  G=[ 12, 59 ]
-  H=[ 13, 72, 13, 1 ]
-  HasBoundary=false
-  HasInterior=true
-  Homology=[ [ 0, [ ] ], [ 1, [ 4 ] ], [ 0, [ 2 ] ], [ 0, [ ] ] ]
-  IsCentrallySymmetric=false
-  IsConnected=true
-  IsEulerianManifold=true
-  IsOrientable=false
-  IsPM=true
-  IsPure=true
-  Neighborliness=1
- 
- /SimplicialComplex]
  gap&gt; susp:=SCSuspension(phs);;
  gap&gt; edwardsSphere:=SCSuspension(susp);
  </pre></div>
@@ -3510,14 +3061,6 @@
 
 <div class="example"><pre>
  gap&gt; c:=SCUnion(SCBdSimplex(3),SCBdSimplex(3)+3); #a wedge of two 2-spheres
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, SCVertices.
-
-  Name="S^2_4 cup S^2_4"
-  Dim=2
- 
- /SimplicialComplex]
  </pre></div>
 
 <p><a id="X7D5639CB87A0D3F1" name="X7D5639CB87A0D3F1"></a></p>
@@ -3551,14 +3094,6 @@
 
 <div class="example"><pre>
  gap&gt; wedge:=SCWedge(SCBdSimplex(2),SCBdSimplex(2));
- [SimplicialComplex
- 
-  Properties known: Dim, Facets, Name, SCVertices.
- 
-  Name="S^1_3 wedge S^1_3"
-  Dim=1
- 
- /SimplicialComplex]
  gap&gt; wedge.Facets;
  [ [ [ 1, 2 ], [ 1, 3 ] ], [ [ 2, 2 ], [ 2, 3 ] ], [ [ 1, 2 ], "a" ], 
    [ [ 1, 3 ], "a" ], [ [ 2, 2 ], "a" ], [ [ 2, 3 ], "a" ] ]

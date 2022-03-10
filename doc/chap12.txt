@@ -21,33 +21,16 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X gap> SCLib.SearchByName("T^2"){[1..6]}; [128X[104X
-    [4X[28X [ [ 5, "T^2 (VT)" ], [ 7, "T^2 (VT)" ], [ 11, "T^2 (VT)" ], [128X[104X
-    [4X[28X   [ 12, "T^2 (VT)" ], [ 20, "T^2 (VT)" ], [ 22, "(T^2)#2" ], [128X[104X
-    [4X[28X   [ 27, "(T^2)#3" ], [ 41, "T^2 (VT)" ], [ 44, "(T^2)#4" ], ... [128X[104X
+    [4X[28X [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], [128X[104X
+    [4X[28X   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ][128X[104X
     [4X[28X gap> torus:=SCLib.Load(last[1][1]);;[128X[104X
     [4X[28X gap> bdtorus:=SCDifference(torus,SC([torus.Facets[1]]));;[128X[104X
     [4X[28X gap> coll:=SCCollapseGreedy(bdtorus);[128X[104X
-    [4X[28X [SimplicialComplex[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Properties known: Dim, Facets, Name, SCVertices.[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Name="collapsed version of T^2 (VT) \ unnamed complex m"[128X[104X
-    [4X[28X  Dim=1[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> coll.Facets;[128X[104X
     [4X[28X [ [ 3, 6 ], [ 3, 7 ], [ 5, 6 ], [ 5, 7 ], [ 6, 7 ] ][128X[104X
     [4X[28X gap> sphere:=SCBdSimplex(4);;                              [128X[104X
     [4X[28X gap> bdsphere:=SCDifference(sphere,SC([sphere.Facets[1]]));;[128X[104X
     [4X[28X gap> coll:=SCCollapseGreedy(bdsphere);[128X[104X
-    [4X[28X [SimplicialComplex[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Properties known: Dim, Facets, Name, SCVertices.[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Name="collapsed version of S^3_5 \ unnamed complex m"[128X[104X
-    [4X[28X  Dim=0[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> coll.Facets;                     [128X[104X
     [4X[28X [ [ 5 ] ][128X[104X
     [4X[28X [128X[104X
@@ -71,14 +54,6 @@
     [4X[28X gap> sphere:=SCBdSimplex(4);;                              [128X[104X
     [4X[28X gap> ball:=SCDifference(sphere,SC([sphere.Facets[1]]));;[128X[104X
     [4X[28X gap> coll:=SCCollapseLex(ball);[128X[104X
-    [4X[28X [SimplicialComplex[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Properties known: Dim, Facets, Name, SCVertices.[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Name="collapsed version of S^3_5 \ unnamed complex m"[128X[104X
-    [4X[28X  Dim=0[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> coll.Facets;                     [128X[104X
     [4X[28X [ [ 5 ] ][128X[104X
     [4X[28X [128X[104X
@@ -102,14 +77,6 @@
     [4X[28X gap> sphere:=SCBdSimplex(4);;                              [128X[104X
     [4X[28X gap> ball:=SCDifference(sphere,SC([sphere.Facets[1]]));;[128X[104X
     [4X[28X gap> coll:=SCCollapseRevLex(ball);[128X[104X
-    [4X[28X [SimplicialComplex[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Properties known: Dim, Facets, Name, SCVertices.[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X  Name="collapsed version of S^3_5 \ unnamed complex m"[128X[104X
-    [4X[28X  Dim=0[128X[104X
-    [4X[28X [128X[104X
-    [4X[28X /SimplicialComplex][128X[104X
     [4X[28X gap> coll.Facets;                     [128X[104X
     [4X[28X [ [ 5 ] ][128X[104X
     [4X[28X [128X[104X
