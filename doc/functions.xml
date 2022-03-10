@@ -1,7 +1,7 @@
 <Chapter Label="chap:objTypes">
 <Heading>The new GAP object types of <Package>simpcomp</Package></Heading>
 
-	<#Include Label="objecttypes" />
+	<#Include Label="SCObjects" />
 	
 	<P/>
 	<Alt Only="LaTeX"><![CDATA[
