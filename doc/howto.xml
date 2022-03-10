@@ -144,15 +144,8 @@ To test the functionality of <Package>simpcomp</Package> you can run the functio
 
 <Log>
 gap> SCRunTest();
-<<<<<<< HEAD
-+ test simpcomp package, Version 2.1.14
-+ GAP4stones: 69988
-||||||| parent of 16bec237 (makedoc.g: generate doc/scaffold.xml)
-+ test simpcomp package, Version 2.1.13
-+ GAP4stones: 69988
-=======
-msecs: 4257
->>>>>>> 16bec237 (makedoc.g: generate doc/scaffold.xml)
+simpcomp package test               
+msecs: 7810
 true
 gap> 
 </Log>
