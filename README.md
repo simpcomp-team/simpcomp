@@ -97,6 +97,9 @@ see the file COPYING in the `simpcomp` directory or
 
 ## Changes
 
+10/03/2022 - Version 2.1.14: Minor update
+- Fixed manual entries
+
 07/06/2021 - Version 2.1.13: Major update
 - Made default complex representation shorter
 - Introduced "SCDetails" for longer representation pf complexes

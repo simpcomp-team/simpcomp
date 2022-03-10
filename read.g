@@ -14,7 +14,7 @@ BreakOnError:=false,
 MailOnError:=false
 ));
 
-SCIntFunc.Version:="2.1.13";
+SCIntFunc.Version:="2.1.14";
 
 InstallGlobalFunction(SCInfoLevel,
 function(level)
