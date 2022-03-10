@@ -315,8 +315,8 @@ gap> SCLabelMax(c);
 8
 gap> SCLabelMin(c);
 1
-gap> SCLabels(c);
-[ 1, 2, 3, 4, 5, 6, 7, 8 ]
+gap> SCLabels(c) = [ 1 .. 8] ;
+true
 gap> SCLink(c,1);
 <SimplicialComplex: lk([ 1 ]) in Bd(\beta^4) | dim = 2 | n = 6>
 gap> SCLinks(c,0);
@@ -372,7 +372,7 @@ gap> SCName(c);
 "test"
 gap> SCSkel(c,0);
 [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ] ]
-gap> SCSpan(c,[1..4]);
+gap> SCSpan(c,[ 1, 2, 3, 4 ]);
 <SimplicialComplex: span([ 1, 2, 3, 4 ]) in test | dim = 1 | n = 4>
 gap> SCSpanningTree(c);
 <SimplicialComplex: spanning tree of test | dim = 1 | n = 8>
@@ -395,8 +395,8 @@ gap> SCTopologicalType(c);
 "S^3"
 gap> SCVertexIdentification(c,[1],[2]);
 <SimplicialComplex: test vertex identified ([ 1 ]=[ 2 ]) | dim = 3 | n = 7>
-gap> SCVertices(c);
-[ 1, 2, 3, 4, 5, 6, 7, 8 ]
+gap> SCVertices(c) = [ 1 .. 8 ];
+true
 gap> SCVerticesEx(c);
 [ 1 .. 8 ]
 gap> SCIsSimplicialComplex(SCWedge(c,c));
