@@ -4,7 +4,7 @@ fi;
 
 AutoDoc(rec(
     gapdoc := rec(
-        scan_dirs := [Concatenation(GAPInfo.RootPaths[2],"pkg/simpcomp/doc/gapdoc")],
+        scan_dirs := ["./doc/gapdoc"],
         LaTeXOptions := rec(
             Options := "11pt",
             LateExtraPreamble :=
