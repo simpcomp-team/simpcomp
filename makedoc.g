@@ -4,7 +4,7 @@ fi;
 
 AutoDoc(rec(
     gapdoc := rec(
-        scan_dirs := ["doc/gapdoc","lib"],
+        scan_dirs := ["doc/gapdoc"],
         LaTeXOptions := rec(
             Options := "11pt",
             LateExtraPreamble :=

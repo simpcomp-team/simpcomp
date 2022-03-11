@@ -578,6 +578,9 @@ InstallGlobalFunction(SCsFromGroupExt,
             Info(InfoSimpcomp,2,"no.");
             Add(isoSigs,isoSig);
             candidateCount:=candidateCount+1;
+            if outfile <> false then
+              AppendTo(outfile,"Add(c,SCFromGenerators(G,",[repHigh[subset[1]]],"));\n");
+            fi;
           fi;
         else
           if not HasName(G) then
@@ -628,6 +631,9 @@ InstallGlobalFunction(SCsFromGroupExt,
               Info(InfoSimpcomp,2,"no.");
               Add(isoSigs,isoSig);
               candidateCount:=candidateCount+1;
+              if outfile <> false then
+                AppendTo(outfile,"Add(c,SCFromGenerators(G,",[repHigh[subset[1]]],"));\n");
+              fi;
             fi;
           else
             if not HasName(G) then
@@ -851,6 +857,9 @@ InstallGlobalFunction(SCsFromGroupExt,
                   Info(InfoSimpcomp,2,"Found candidate.");
                   Add(isoSigs,isoSig);
                   candidateCount:=candidateCount+1;
+                  if outfile <> false then
+                    AppendTo(outfile,"Add(c,SCFromGenerators(G,",repHigh{curComb},"));\n");
+                  fi;
                 fi;
               else
                 if not HasName(G) then

@@ -143,11 +143,9 @@ As with all software, it is important to test whether <Package>simpcomp</Package
 To test the functionality of <Package>simpcomp</Package> you can run the function <Ref Func="SCRunTest"/> from the &GAP; console:
 
 <Log>
-gap> TestPackage("simpcomp");
+gap> SCRunTest();
 simpcomp package test               
-msecs: 7935
-I  No errors detected while testing package simpcomp version 2.1.14
-I  using the test file `/home/jonathan/bin/gap-4.11.1/pkg/simpcomp/tst/simpcomp.tst'
+msecs: 7810
 true
 gap> 
 </Log>
