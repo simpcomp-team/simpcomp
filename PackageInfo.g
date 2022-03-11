@@ -22,7 +22,7 @@ SourceRepository := rec(
     URL := Concatenation( "https://github.com/simpcomp-team/", ~.PackageName ),
 ),
 IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
-PackageWWWHome  := Concatenation( "https://github.com/simpcomp-team/", ~.PackageName ),
+PackageWWWHome  := Concatenation( "https://simpcomp-team.github.io/", ~.PackageName ),
 README_URL      := Concatenation( ~.PackageWWWHome, "/README.md" ),
 PackageInfoURL  := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
 ArchiveURL      := Concatenation( ~.SourceRepository.URL,
