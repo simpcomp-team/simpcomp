@@ -7,6 +7,6 @@
 
 
 # create doc/gapdoc/ directory
-#cp -r ../../doc/gapdoc/ doc/
+cp -r ../../doc/gapdoc/ doc/
 
 
