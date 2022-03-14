@@ -57,7 +57,7 @@ end;
 ## <Returns>the discrete normal surface passed as argument upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Positively shifts the vertex labels of <Arg>complex</Arg> (provided that all labels satisfy the property <C>IsAdditiveElement</C>) by the amount specified in <Arg>value</Arg>.
-## <Example>
+## <Example><![CDATA[
 ## gap> sl:=SCNSSlicing(SCBdSimplex(4),[[1],[2..5]]);;
 ## gap> sl.Facets;                                    
 ## [ [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ] ], [ [ 1, 2 ], [ 1, 3 ], [ 1, 5 ] ], 
@@ -66,7 +66,7 @@ end;
 ## gap> sl.Facets;  
 ## [ [ [ 3, 4 ], [ 3, 5 ], [ 3, 6 ] ], [ [ 3, 4 ], [ 3, 5 ], [ 3, 7 ] ], 
 ##   [ [ 3, 4 ], [ 3, 6 ], [ 3, 7 ] ], [ [ 3, 5 ], [ 3, 6 ], [ 3, 7 ] ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -85,7 +85,7 @@ end);
 ## <Returns>the discrete normal surface passed as argument upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Negatively shifts the vertex labels of <Arg>complex</Arg> (provided that all labels satisfy the property <C>IsAdditiveElement</C>) by the amount specified in <Arg>value</Arg>.
-## <Example>
+## <Example><![CDATA[
 ## gap> sl:=SCNSSlicing(SCBdSimplex(4),[[1],[2..5]]);;
 ## gap> sl.Facets;                                    
 ## [ [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ] ], [ [ 1, 2 ], [ 1, 3 ], [ 1, 5 ] ], 
@@ -94,7 +94,7 @@ end);
 ## gap> sl.Facets;  
 ## [ [ [ -1, 0 ], [ -1, 1 ], [ -1, 2 ] ], [ [ -1, 0 ], [ -1, 1 ], [ -1, 3 ] ], 
 ##   [ [ -1, 0 ], [ -1, 2 ], [ -1, 3 ] ], [ [ -1, 1 ], [ -1, 2 ], [ -1, 3 ] ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -113,7 +113,7 @@ end);
 ## <Returns>the discrete normal surface passed as argument upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Multiplies the vertex labels of <Arg>complex</Arg> (provided that all labels satisfy the property <C>IsAdditiveElement</C>) with the integer specified in <Arg>value</Arg>.
-## <Example>
+## <Example><![CDATA[
 ## gap> sl:=SCNSSlicing(SCBdSimplex(4),[[1],[2..5]]);;
 ## gap> sl.Facets;                                    
 ## [ [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ] ], [ [ 1, 2 ], [ 1, 3 ], [ 1, 5 ] ], 
@@ -122,7 +122,7 @@ end);
 ## gap> sl.Facets;  
 ## [ [ [ 2, 4 ], [ 2, 6 ], [ 2, 8 ] ], [ [ 2, 4 ], [ 2, 6 ], [ 2, 10 ] ], 
 ##   [ [ 2, 4 ], [ 2, 8 ], [ 2, 10 ] ], [ [ 2, 6 ], [ 2, 8 ], [ 2, 10 ] ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -141,7 +141,7 @@ end);
 ## <Returns>the discrete normal surface passed as argument upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Takes all vertex labels of <Arg>complex</Arg> modulo the value specified in <Arg>value</Arg> (provided that all labels satisfy the property <C>IsAdditiveElement</C>). Warning: this might result in different vertices being assigned the same label or even invalid facet lists, so be careful.
-## <Example>
+## <Example><![CDATA[
 ## gap> sl:=SCNSSlicing(SCBdSimplex(4),[[1],[2..5]]);;    
 ## gap> sl.Facets;
 ## [ [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ] ], [ [ 1, 2 ], [ 1, 3 ], [ 1, 5 ] ], 
@@ -150,7 +150,7 @@ end);
 ## gap> sl.Facets;    
 ## [ [ [ 1, 0 ], [ 1, 1 ], [ 1, 0 ] ], [ [ 1, 0 ], [ 1, 1 ], [ 1, 1 ] ], 
 ##   [ [ 1, 0 ], [ 1, 0 ], [ 1, 1 ] ], [ [ 1, 1 ], [ 1, 0 ], [ 1, 1 ] ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -169,7 +169,7 @@ end);
 ## <Returns>discrete normal surface of type <C>SCNormalSurface</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the union of two discrete normal surfaces by calling <Ref Meth="SCUnion"/>.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByAttribute("F = [ 10, 35, 50, 25 ]");
 ## [ [ 19, "S^3 (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
@@ -180,7 +180,7 @@ end);
 ## gap> sl3:=Union(sl1,sl2);;
 ## gap> SCTopologicalType(sl3);
 ## "T^2 U T^2"
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -290,7 +290,7 @@ end;
 ## <Returns>discrete normal surface of type <C>SCNormalSurface</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Constructor for a discrete normal surface from a facet list, see <Ref Meth="SCFromFacets"/> for details.
-## <Example>
+## <Example><![CDATA[
 ## gap> sl:=SCNSFromFacets([[1,2,3],[1,2,4,5],[1,3,4,6],[2,3,5,6],[4,5,6]]);
 ## [NormalSurface
 ## 
@@ -300,7 +300,7 @@ end;
 ##  Dim=2
 ## 
 ## /NormalSurface]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -354,7 +354,7 @@ end);
 ## <Returns>discrete normal surface of type <C>SCNormalSurface</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Internally calls <Ref Meth="SCNSFromFacets"/>.
-## <Example>
+## <Example><![CDATA[
 ## gap> sl:=SCNS([[1,2,3],[1,2,4,5],[1,3,4,6],[2,3,5,6],[4,5,6]]);
 ## [NormalSurface
 ## 
@@ -364,7 +364,7 @@ end);
 ##  Dim=2
 ## 
 ## /NormalSurface]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -400,7 +400,7 @@ end);
 ## <Returns>discrete normal surface of type <C>SCNormalSurface</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Copies a &GAP; object of type <C>SCNormalSurface</C> (cf. <Ref Meth="SCCopy"/>).
-## <Example>
+## <Example><![CDATA[
 ## gap> sl:=SCNSSlicing(SCBdSimplex(4),[[1],[2..5]]);
 ## [NormalSurface
 ## 
@@ -431,7 +431,7 @@ end);
 ## /NormalSurface]
 ## gap> IsIdenticalObj(sl,sl_2);                     
 ## false
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -490,7 +490,7 @@ end);
 ## <Returns>discrete normal surface of type <C>SCNormalSurface</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Generates an empty complex (of dimension <M>-1</M>), i. e. an object of type <C>SCNormalSurface</C> with empty facet list.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCNSEmpty();
 ## [NormalSurface
 ## 
@@ -500,7 +500,7 @@ end);
 ##  Dim=-1
 ## 
 ## /NormalSurface]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -526,14 +526,14 @@ end);
 ## <Returns>an integer upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the dimension of a discrete normal surface (which is always <M>2</M> if the slicing <Arg>sl</Arg> is not empty).
-## <Example>
+## <Example><![CDATA[
 ## gap> sl:=SCNSEmpty();;                                                    
 ## gap> SCDim(sl);                                                         
 ## -1
 ## gap> sl:=SCNSFromFacets([[1,2,3],[1,2,4,5],[1,3,4,6],[2,3,5,6],[4,5,6]]);;
 ## gap> SCDim(sl);                                                         
 ## 2
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -558,13 +558,13 @@ end);
 ## <Returns>a <M>1</M>, <M>3</M> or <M>4</M> tuple of (non-negative) integer values upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the <M>f</M>-vector of a discrete normal surface, i. e. the number of vertices, edges, triangles and quadrilaterals of <Arg>sl</Arg>, cf. <Ref Meth="SCFVector"/>.
-## <Example>
+## <Example><![CDATA[
 ## gap> list:=SCLib.SearchByName("S^2xS^1");;
 ## gap> c:=SCLib.Load(list[1][1]);;             
 ## gap> sl:=SCNSSlicing(c,[[1..5],[6..10]]);;
 ## gap> SCFVector(sl);                 
 ## [ 20, 40, 16, 8 ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -613,13 +613,13 @@ end);
 ## <Returns>an integer upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the Euler characteristic of a discrete normal surface <Arg>sl</Arg>, cf. <Ref Meth="SCEulerCharacteristic"/>.
-## <Example>
+## <Example><![CDATA[
 ## gap> list:=SCLib.SearchByName("S^2xS^1");;  
 ## gap> c:=SCLib.Load(list[1][1]);;             
 ## gap> sl:=SCNSSlicing(c,[[1..5],[6..10]]);;
 ## gap> SCEulerCharacteristic(sl);                 
 ## 4
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -658,7 +658,7 @@ end);
 ## <Returns>a non-negative integer upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the genus of a discrete normal surface <Arg>sl</Arg>.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByName("(S^2xS^1)#20");
 ## [ [ 633, "(S^2xS^1)#20" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;               
@@ -669,7 +669,7 @@ end);
 ## true
 ## gap> SCGenus(sl);                     
 ## 7
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -703,10 +703,10 @@ end);
 ## <Returns><K>true</K> or <K>false</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Checks if a normal surface <Arg>complex</Arg> is the empty complex, i. e. a <C>SCNormalSurface</C> object with empty facet list.
-## <Example>
+## <Example><![CDATA[
 ## gap> sl:=SCNS([]);;
 ## gap> SCIsEmpty(sl);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -738,14 +738,14 @@ end);
 ## <Returns>normal surface of type <C>SCNormalSurface</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Forms the union of two normal surfaces <Arg>complex1</Arg> and <Arg>complex2</Arg> as the normal surface formed by the union of their facet sets. The two arguments are not altered. Note: for the union process the vertex labelings of the complexes are taken into account, see also <Ref Meth="Operation Union (SCNormalSurface, SCNormalSurface)" />. Facets occurring in both arguments are treated as one facet in the new complex.
-## <Example>
+## <Example><![CDATA[
 ## gap> list:=SCLib.SearchByAttribute("Dim=3 and F[1]=10");;
 ## gap> c:=SCLib.Load(list[1][1]);
 ## gap> sl1:=SCNSSlicing(c,[[1..5],[6..10]]);;
 ## gap> sl2:=sl1+10;;
 ## gap> sl3:=SCUnion(sl1,sl2);;
 ## gap> SCTopologicalType(sl3);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -791,12 +791,12 @@ end);
 ## <Returns><K>true</K> or <K>false</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Checks if a normal surface <Arg>complex</Arg> is connected.
-## <Example>
+## <Example><![CDATA[
 ## gap> list:=SCLib.SearchByAttribute("Dim=3 and F[1]=10");;
 ## gap> c:=SCLib.Load(list[1][1]);
 ## gap> sl:=SCNSSlicing(c,[[1..5],[6..10]]);
 ## gap> SCIsConnected(sl);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -848,10 +848,10 @@ end);
 ## <Returns> a list of simplicial complexes of type <C>SCNormalSurface</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes all connected components of an arbitrary normal surface.
-## <Example>
+## <Example><![CDATA[
 ## gap> sl:=SCNSSlicing(SCBdCrossPolytope(4),[[1,2],[3..8]]);
 ## gap> cc:=SCConnectedComponents(sl);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>                                         
@@ -922,13 +922,13 @@ end);
 ## Computes all faces of cardinality <Arg>k+1</Arg> in the standard labeling: <Arg>k</Arg> <M>= 0</M> computes the vertices,  <Arg>k</Arg> <M>= 1</M> computes the edges,  <Arg>k</Arg> <M>= 2</M> computes the triangles,  <Arg>k</Arg> <M>= 3</M> computes the quadrilaterals.<P/>
 ## 
 ## If <Arg>k</Arg> is a list (necessarily a sublist of <C>[ 0,1,2,3 ]</C>) all faces of all cardinalities contained in <Arg>k</Arg> are computed.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(4);;              
 ## gap> sl:=SCNSSlicing(c,[[1],[2..5]]);;
 ## gap> SCSkelEx(sl,1);                            
 ## [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 4 ], [ 3, 4 ] ]
-## </Example>
-## <Example>
+## ]]></Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(4);;              
 ## gap> sl:=SCNSSlicing(c,[[1],[2..5]]);;
 ## gap> SCSkelEx(sl,3);                            
@@ -936,7 +936,7 @@ end);
 ## gap> sl:=SCNSSlicing(c,[[1,2],[3..5]]);;
 ## gap> SCSkelEx(sl,3);                            
 ## [ [ 1, 2, 4, 5 ], [ 1, 3, 4, 6 ], [ 2, 3, 5, 6 ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -994,14 +994,14 @@ end);
 ## Computes all faces of cardinality <Arg>k+1</Arg> in the original labeling: <Arg>k</Arg> <M>= 0</M> computes the vertices,  <Arg>k</Arg> <M>= 1</M> computes the edges,  <Arg>k</Arg> <M>= 2</M> computes the triangles,  <Arg>k</Arg> <M>= 3</M> computes the quadrilaterals.<P/>
 ## 
 ## If <Arg>k</Arg> is a list (necessarily a sublist of <C>[ 0,1,2,3 ]</C>) all faces of all cardinalities contained in <Arg>k</Arg> are computed.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(4);;              
 ## gap> sl:=SCNSSlicing(c,[[1],[2..5]]);;
 ## gap> SCSkel(sl,1);                            
 ## [ [ [ 1, 2 ], [ 1, 3 ] ], [ [ 1, 2 ], [ 1, 4 ] ], [ [ 1, 2 ], [ 1, 5 ] ], 
 ##   [ [ 1, 3 ], [ 1, 4 ] ], [ [ 1, 3 ], [ 1, 5 ] ], [ [ 1, 4 ], [ 1, 5 ] ] ]
-## </Example>
-## <Example>
+## ]]></Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(4);;              
 ## gap> sl:=SCNSSlicing(c,[[1],[2..5]]);;
 ## gap> SCSkel(sl,3);                            
@@ -1011,7 +1011,7 @@ end);
 ## [ [ [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 4 ] ], 
 ##   [ [ 1, 3 ], [ 1, 5 ], [ 2, 3 ], [ 2, 5 ] ], 
 ##   [ [ 1, 4 ], [ 1, 5 ], [ 2, 4 ], [ 2, 5 ] ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -1047,7 +1047,7 @@ end);
 ## <Returns>a list of face lists upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the face lattice of a discrete normal surface <Arg>sl</Arg> in the standard labeling. Triangles and quadrilaterals are stored separately (cf. <Ref Meth="SCSkelEx" />).
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(4);;              
 ## gap> sl:=SCNSSlicing(c,[[1,2],[3..5]]);;
 ## gap> SCFaceLatticeEx(sl);                            
@@ -1058,7 +1058,7 @@ end);
 ##   [ [ 1, 2, 4, 5 ], [ 1, 3, 4, 6 ], [ 2, 3, 5, 6 ] ] ]
 ## gap> sl.F;
 ## [ 6, 9, 2, 3 ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -1096,7 +1096,7 @@ end);
 ## <Returns>a list of facet lists upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the face lattice of a discrete normal surface <Arg>sl</Arg> in the original labeling. Triangles and quadrilaterals are stored separately (cf. <Ref Meth="SCSkel" />).
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(4);;              
 ## gap> sl:=SCNSSlicing(c,[[1,2],[3..5]]);;
 ## gap> SCFaceLattice(sl);                            
@@ -1111,7 +1111,7 @@ end);
 ##     [ [ 1, 4 ], [ 1, 5 ], [ 2, 4 ], [ 2, 5 ] ] ] ]
 ## gap> sl.F;
 ## [ 6, 9, 2, 3 ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -1144,7 +1144,7 @@ end);
 ## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes a simplicial subdivision of a slicing <Arg>sl</Arg> without introducing new vertices. The subdivision is stored as a property of <Arg>sl</Arg> and thus is returned as an immutable object. Note that symmetry may be lost during the computation. 
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByAttribute("F=[ 10, 35, 50, 25 ]");
 ## [ [ 19, "S^3 (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
@@ -1154,7 +1154,7 @@ end);
 ## gap> sc:=SCNSTriangulation(sl);;
 ## gap> sc.F;
 ## [ 9, 27, 18 ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -1198,7 +1198,7 @@ end);
 ## <Returns>a list of homology groups upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the homology of a slicing <Arg>sl</Arg>. Internally, <Arg>sl</Arg> is triangulated (cf. <Ref Meth="SCNSTriangulation"/>) and simplicial homology is computed via <Ref Meth="SCHomology"/> using the triangulation.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByName("(S^2xS^1)#20");       
 ## [ [ 633, "(S^2xS^1)#20" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
@@ -1210,7 +1210,7 @@ end);
 ## gap> sl:=SCNSSlicing(c,[[1..13],[14..27]]);;
 ## gap> sl.Homology;                       
 ## [ [ 1, [  ] ], [ 14, [  ] ], [ 2, [  ] ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -1238,7 +1238,7 @@ end);
 ## <Returns>a list of non-negative integers upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the Betti numbers modulo <Arg>p</Arg> of a slicing <Arg>sl</Arg>. Internally, <Arg>sl</Arg> is triangulated (using <Ref Meth="SCNSTriangulation"/>) and the Betti numbers are computed via <Ref Meth="SCFpBettiNumbers"/> using the triangulation.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByName("(S^2xS^1)#20");       
 ## [ [ 633, "(S^2xS^1)#20" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
@@ -1247,7 +1247,7 @@ end);
 ## gap> sl:=SCNSSlicing(c,[[1..13],[14..27]]);;
 ## gap> SCFpBettiNumbers(sl,2);
 ## [ 2, 14, 2 ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -1299,7 +1299,7 @@ end);
 ## <Returns>a string upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Determines the topological type of <Arg>sl</Arg> via the classification theorem for closed compact surfaces. If <Arg>sl</Arg> is not connected, the topological type of each connected component is computed.<P/>
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByName("(S^2xS^1)#20");      
 ## [ [ 633, "(S^2xS^1)#20" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
@@ -1332,7 +1332,7 @@ end);
 ## T^2
 ## S^2
 ## S^2
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -1446,12 +1446,12 @@ end);
 ## <Returns><K>true</K> or <K>false</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Checks if a discrete normal surface <Arg>sl</Arg> is orientable.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(4);;
 ## gap> sl:=SCNSSlicing(c,[[1,2],[3,4,5]]);
 ## gap> SCIsOrientable(sl);
 ## true
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -1491,7 +1491,7 @@ end);
 ## <Returns>discrete normal surface of type <C>SCNormalSurface</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes a slicing defined by a partition <Arg>slicing</Arg> of the set of vertices of the <M>3</M>-dimensional combinatorial pseudomanifold  <Arg>complex</Arg>. In particular, <Arg>slicing</Arg> has to be a pair of lists of vertex labels and has to contain all vertex labels of <Arg>complex</Arg>.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByAttribute("F=[ 10, 35, 50, 25 ]");
 ## [ [ 19, "S^3 (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;                       
@@ -1543,7 +1543,7 @@ end);
 ##   [ [ 3, 2 ], [ 3, 4 ], [ 5, 2 ], [ 5, 4 ] ], 
 ##   [ [ 3, 2 ], [ 3, 6 ], [ 5, 2 ], [ 5, 6 ] ], 
 ##   [ [ 3, 4 ], [ 3, 6 ], [ 5, 4 ], [ 5, 6 ] ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>

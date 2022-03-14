@@ -18,11 +18,11 @@
 ## Checks if <Arg>object</Arg> is of type <C>SCSimplicialComplex</C>. The 
 ## object type <C>SCSimplicialComplex</C> is derived from the object type 
 ## <C>SCPropertyObject</C>.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCEmpty();;
 ## gap> SCIsSimplicialComplex(c);
 ## true
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -111,13 +111,13 @@ end;
 ## <Description>
 ## The function returns a list of known properties of <Arg>complex</Arg>
 ## an lists some of these properties explicitly.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SC([[1,2,3],[1,2,4],[1,3,4],[2,3,4]]);
 ## gap> Print(SCDetails(c));
 ## gap> c.F;
 ## gap> c.Homology;
 ## gap> Print(SCDetails(c));
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -303,11 +303,11 @@ end;
 ## Positively shifts the vertex labels of <Arg>complex</Arg> (provided that 
 ## all labels satisfy the property <C>IsAdditiveElement</C>) by the amount 
 ## specified in <Arg>value</Arg>.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(3)+10;;
 ## gap> c.Facets;
 ## [[11, 12, 13], [11, 12, 14], [11, 13, 14], [12, 13, 14]]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -328,11 +328,11 @@ end);
 ## Negatively shifts the vertex labels of <Arg>complex</Arg> (provided that 
 ## all labels satisfy the property <C>IsAdditiveElement</C>) by the amount 
 ## specified in <Arg>value</Arg>.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(3)-1;;
 ## gap> c.Facets;
 ## [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -354,11 +354,11 @@ end);
 ## Multiplies the vertex labels of <Arg>complex</Arg> (provided that all 
 ## labels satisfy the property <C>IsAdditiveElement</C>) with the integer 
 ## specified in <Arg>value</Arg>.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(3)*10;;
 ## gap> c.Facets;
 ## [[10, 20, 30], [10, 20, 40], [10, 30, 40], [20, 30, 40]]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -381,11 +381,11 @@ end);
 ## in <Arg>value</Arg> (provided that all labels satisfy the property 
 ## <C>IsAdditiveElement</C>). Warning: this might result in different vertices 
 ## being assigned the same label or even in invalid facet lists, so be careful.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=(SCBdSimplex(3)*10) mod 7;;
 ## gap> c.Facets;
 ## [[3, 6, 2], [3, 6, 5], [3, 2, 5], [6, 2, 5]]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -408,9 +408,9 @@ end);
 ## <Arg>complex</Arg>, i.e. the <Arg>value</Arg>-fold cartesian product of 
 ## copies of <Arg>complex</Arg>. The complex passed as argument is not altered. 
 ## Internally calls <Ref Func="SCCartesianPower"/>.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(2)^2; #a torus
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -434,7 +434,7 @@ end);
 ## Uses the lexicographically first facets of both complexes to do the gluing. 
 ## The complexes passed as arguments are not altered. Internally calls 
 ## <Ref Func="SCConnectedSum"/>.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByName("RP^3");;
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCLib.SearchByName("S^2~S^1"){[1..3]};
@@ -442,7 +442,7 @@ end);
 ##   [ 27, "S^2~S^1 (VT)" ] ]
 ## gap> d:=SCLib.Load(last[1][1]);;
 ## gap> c:=c+d; #form RP^3#(S^2~S^1)
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -484,11 +484,11 @@ end);
 ## <Description>
 ## Forms the simplicial cartesian product of <Arg>complex1</Arg> and 
 ## <Arg>complex2</Arg>. Internally calls <Ref Func="SCCartesianProduct"/>.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByName("RP^2");
 ## [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
 ## gap> c:=SCLib.Load(last[1][1])*SCBdSimplex(3); #form RP^2 x S^2
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -509,13 +509,13 @@ end);
 ## <Description>
 ## Calculates whether two simplicial complexes are isomorphic, i.e. are 
 ## equal up to a relabeling of the vertices.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(3);;
 ## gap> c=c+10;
 ## true
 ## gap> c=SCBdCrossPolytope(4);
 ## false
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -539,9 +539,9 @@ end);
 ## <Description>
 ## Computes the union of two simplicial complexes by calling 
 ## <Ref Func="SCUnion"/>.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=Union(SCBdSimplex(3),SCBdSimplex(3)+3); #a wedge of two 2-spheres
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -565,7 +565,7 @@ end);
 ## <Description>
 ## Computes the ``difference'' of two simplicial complexes by calling 
 ## <Ref Func="SCDifference" />.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(3);;
 ## gap> d:=SC([[1,2,3]]);;
 ## gap> disc:=Difference(c,d);;
@@ -574,7 +574,7 @@ end);
 ## gap> empty:=Difference(d,c);;
 ## gap> empty.Dim;
 ## -1
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -596,14 +596,14 @@ end);
 ## <Description>
 ## Computes the ``intersection'' of two simplicial complexes by calling 
 ## <Ref Func="SCIntersection" />.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(3);;        
 ## gap> d:=SCBdSimplex(3);;        
 ## gap> d:=SCMove(d,[[1,2,3],[]]);;
 ## gap> d:=d+1;;                   
 ## gap> s1.Facets;                 
 ## [ [ 2, 3 ], [ 2, 4 ], [ 3, 4 ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -628,12 +628,12 @@ end);
 ## Makes a copy of <Arg>complex</Arg>. This is actually a ``deep copy'' 
 ## such that all properties of the copy can be altered without changing 
 ## the original complex. Internally calls <Ref Func="SCCopy"/>.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdCrossPolytope(7);;
 ## gap> d:=ShallowCopy(c)+10;;
 ## gap> c.Facets=d.Facets;
 ## false
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -656,18 +656,18 @@ end);
 ## Makes a ``deep copy'' of <Arg>complex</Arg> -- this is a copy such that 
 ## all properties of the copy can be altered without changing the original 
 ## complex.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(4);;
 ## gap> d:=SCCopy(c)-1;;
 ## gap> c.Facets=d.Facets;
 ## false
-## </Example>
-## <Example>
+## ]]></Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(4);;
 ## gap> d:=SCCopy(c);;
 ## gap> IsIdenticalObj(c,d);
 ## false
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -703,7 +703,7 @@ end);
 ## <M>d</M> is the dimension of the complex. <M>d+1</M> is returned instead 
 ## of <M>d</M>, as all lists in &GAP; are indexed beginning with 1 -- thus 
 ## this also holds for all the face lattice related properties of the complex.   
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByAttribute("F=[12,66,108,54]");;
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> for i in [1..Size(c)] do Print(c.F[i],"\n"); od;
@@ -711,7 +711,7 @@ end);
 ## 66
 ## 108
 ## 54
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -739,7 +739,7 @@ end);
 ## <Description>
 ## Returns the ``size'' of a simplicial complex by calling 
 ## <C>Size(</C><Arg>complex</Arg><C>)</C>.   
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByAttribute("F=[12,66,108,54]");;
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> for i in [1..Length(c)] do Print(c.F[i],"\n"); od;
@@ -747,7 +747,7 @@ end);
 ## 66
 ## 108
 ## 54
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -771,7 +771,7 @@ end);
 ## list. If <M>pos \geq d+2</M>, where <M>d</M> is the dimension of 
 ## <Arg>complex</Arg>, the empty set is returned. Note that <Arg>pos</Arg> 
 ## must be <M>\geq 1</M>.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K^2");
 ## [ [ 18, "K^2 (VT)" ], [ 221, "K^2 (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
@@ -785,7 +785,7 @@ end);
 ##   [ 13, 14 ] ]
 ## gap> c[4];
 ## [  ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -838,14 +838,14 @@ end);
 ## success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Provides an iterator object for the face lattice of a simplicial complex.   
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCBdCrossPolytope(4);;
 ## gap> for faces in c do Print(Length(faces),"\n"); od;
 ## 8
 ## 24
 ## 32
 ## 16
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -886,13 +886,13 @@ end);
 ## properties (apart from Facets, Dim and Name) dropped, clearing all 
 ## previously computed properties. See also <Ref Meth="SCPropertyDrop" /> 
 ## and <Ref Meth="SCPropertyTmpDrop" />.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SC(SCFacets(SCBdCyclicPolytope(10,12)));
 ## gap> c.F; time;                                 
 ## gap> c.F; time;                                 
 ## gap> c:=SCPropertiesDropped(c);                 
 ## gap> c.F; time;                                 
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>

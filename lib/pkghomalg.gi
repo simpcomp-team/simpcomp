@@ -65,11 +65,11 @@ end;
 ## a value of <C>1</C> yields <M>\mathbb{Z}</M>-matrices and a value of 
 ## <C>q</C>, q a prime or a prime power, computes the 
 ## <M>\mathbb{F}_q</M>-matrices.<P/>
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByName("CP^2 (VT)");
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomalgBoundaryMatrices(c,0);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -140,11 +140,11 @@ end);
 ## a value of <C>1</C> yields <M>\mathbb{Z}</M>-matrices and a value of 
 ## <C>q</C>, q a prime or a prime power, computes the 
 ## <M>\mathbb{F}_q</M>-matrices.<P/>
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByName("CP^2 (VT)");
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomalgCoboundaryMatrices(c,0);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -215,11 +215,11 @@ end);
 ## Note that if you are interested not only in the ranks of the homology 
 ## groups, but rather their full structure, have a look at the function 
 ## <Ref Meth="SCHomalgHomologyBasis" />.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K3");
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomalgHomology(c,0);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -280,11 +280,11 @@ end);
 ## Note that if you are only interested in the ranks of the homology groups, 
 ## then it is better to use the funtion <Ref Meth="SCHomalgHomology" /> 
 ## which is way faster.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K3");
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomalgHomologyBasis(c,0);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -336,11 +336,11 @@ end);
 ## Note that if you are interested not only in the ranks of the cohomology 
 ## groups, but rather their full structure, have a look at the function 
 ## <Ref Meth="SCHomalgCohomologyBasis" />.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K3");
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomalgCohomology(c,0);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -400,11 +400,11 @@ end);
 ## Note that if you are only interested in the ranks of the cohomology groups, 
 ## then it is better to use the funtion <Ref Meth="SCHomalgCohomology" /> 
 ## which is way faster.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K3");
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomalgCohomologyBasis(c,0);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>

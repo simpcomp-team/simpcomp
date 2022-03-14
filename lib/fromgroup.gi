@@ -40,7 +40,7 @@
 ## by a list of indices of <C>repHigh</C>) which have to be contained in any 
 ## output complex. If <Arg>subset</Arg> is anything else than a subset of 
 ## <C>matrixAllowedRows</C> the argument is ignored.
-## <Example>
+## <Example><![CDATA[
 ## gap> G:=PrimitiveGroup(8,5);
 ## gap> Size(G);
 ## gap> Transitivity(G);
@@ -52,7 +52,7 @@
 ## gap> SCLibDetermineTopologicalType(SCLink(c,1));
 ## gap> # there are no 3-neighborly 3-manifolds with 8 vertices
 ## gap> list:=SCsFromGroupExt(PrimitiveGroup(8,5),8,3,0,0,true,false,0,[]); 
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -953,9 +953,9 @@ end);
 ## <Arg>removeDoubleEntries</Arg> specifies whether the results are checked 
 ## for combinatorial isomorphism, preventing isomorphic entries. Internally 
 ## calls <Ref Func="SCsFromGroupExt" /> for every group.
-## <Example>
+## <Example><![CDATA[
 ## gap> list:=SCsFromGroupByTransitivity(8,3,2,true,true,true);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
