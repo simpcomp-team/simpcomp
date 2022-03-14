@@ -2,6 +2,13 @@
 # This file is executed by the `release` script from
 # https://github.com/gap-system/ReleaseTools
 
-rm -rf internals
+# I have a folder called "internal" which cannot be deleted...
+# rm -rf internals
+
+git add doc/gapdoc/
+
+
+
 
 # TODO: create doc/gapdoc/ directory
+
