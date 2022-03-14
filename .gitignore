@@ -39,3 +39,15 @@
 
 /gh-pages/
 /tmp/
+
+.codecov.yml
+.travis.yml
+doc/_AutoDocMainFile.xml
+doc/_Chunks.xml
+doc/simpcomp.dvi
+github
+github.pub
+github_personal
+github_personal.pub
+lib/test.txt
+
