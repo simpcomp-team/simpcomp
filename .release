@@ -5,10 +5,8 @@
 # I have a folder called "internal" which cannot be deleted...
 # rm -rf internals
 
-git add doc/gapdoc/
 
+# create doc/gapdoc/ directory
+cp -r ../../gap/gapdoc/ doc/
 
-
-
-# TODO: create doc/gapdoc/ directory
 
