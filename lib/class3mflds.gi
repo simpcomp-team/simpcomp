@@ -12,9 +12,9 @@
 ## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification 
 ## of combinatorial 3-manifolds with transitive cyclic symmetry up to 
 ## <M>22</M> vertices.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCNrCyclic3Mflds(22);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -49,9 +49,9 @@ end);
 ## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification 
 ## of combinatorial 3-manifolds with transitive cyclic symmetry up to 
 ## <M>22</M> vertices.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCCyclic3MfldTopTypes(19);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -6681,9 +6681,9 @@ end;
 ## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification 
 ## of combinatorial 3-manifolds with transitive cyclic symmetry up to 
 ## <M>22</M> vertices.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCCyclic3Mfld(15,34);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -6707,9 +6707,9 @@ end);
 ## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification 
 ## of combinatorial 3-manifolds with transitive cyclic symmetry up to 
 ## <M>22</M> vertices.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCCyclic3MfldByType("T^3");
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -6739,9 +6739,9 @@ end);
 ## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the 
 ## classification of combinatorial 3-manifolds with transitive cyclic 
 ## symmetry up to <M>22</M> vertices.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCCyclic3MfldListOfGivenType("Sigma(2,3,7)");
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>

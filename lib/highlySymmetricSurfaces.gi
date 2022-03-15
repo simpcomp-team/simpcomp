@@ -6,10 +6,10 @@
 ## <Description>
 ## Returns the number of simplicial regular maps on the torus with <M>n</M> vertices, 
 ## cf. <Cite Key="Brehm08EquivMapsTorus"/> for details.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCNrRegularTorus(9);
 ## gap> SCNrRegularTorus(10);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -36,10 +36,10 @@ end);
 ## <Description>
 ## Returns the number of simplicial chiral maps on the torus with <M>n</M> vertices, 
 ## cf. <Cite Key="Brehm08EquivMapsTorus"/> for details.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCNrChiralTori(7);
 ## gap> SCNrChiralTori(343);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -116,10 +116,10 @@ end;
 ## Returns the equivarient triangulation of the torus <M>\{ 3,6 \}_{(p,q)}</M> with 
 ## fundamental domain <M>(p,q)</M> on the <M>2</M>-dimensional integer lattice. 
 ## See <Cite Key="Brehm08EquivMapsTorus"/> for details.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCSeriesSymmetricTorus(2,1);
 ## gap> SCFVector(c);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -378,11 +378,11 @@ end);
 ## Returns a list of regular triangulations of the torus with <M>n</M> vertices (the
 ## length of the list will be at most <M>1</M>).
 ## See <Cite Key="Brehm08EquivMapsTorus"/> for details.
-## <Example>
+## <Example><![CDATA[
 ## gap> cc:=SCRegularTorus(9);
 ## gap> g:=SCAutomorphismGroup(cc[1]);
 ## gap> SCNumFaces(cc[1],0)*12 = Size(g);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -419,10 +419,10 @@ end);
 ## <Description>
 ## Returns a list of chiral triangulations of the torus with <M>n</M> vertices.
 ## See <Cite Key="Brehm08EquivMapsTorus"/> for details.
-## <Example>
+## <Example><![CDATA[
 ## gap> cc:=SCChiralTori(91);
 ## gap> SCIsIsomorphic(cc[1],cc[2]);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -482,12 +482,12 @@ end);
 ## Use the <M>3</M>-tuples of the list together with <Ref Func="SCRegularMap"/> 
 ## to get the corresponding triangulations.
 ## <M>g</M>
-## <Example>
+## <Example><![CDATA[
 ## gap> ll:=SCRegularMaps(){[1..10]};
 ## gap> c:=SCRegularMap(ll[5][1],ll[5][2],ll[5][3]);
 ## gap> SCHomology(c);
 ## gap> SCGenerators(c);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -535,12 +535,12 @@ end);
 ## the classification of regular maps by Marston Conder <Cite Key="Conder09RegMapsOfBdChi"/>.
 ##
 ## Use <Ref Func="SCRegularMaps"/> to get a list of all regular maps available.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCRegularMaps(){[1..10]};
 ## gap> c:=SCRegularMap(7,7,true);
 ## gap> g:=SCAutomorphismGroup(c);
 ## gap> Size(g);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -3320,11 +3320,11 @@ end);
 ##
 ## Use the <M>2</M>-tuples of the list together with <Ref Func="SCChiralMap"/> 
 ## to get the corresponding triangulations.
-## <Example>
+## <Example><![CDATA[
 ## gap> ll:=SCChiralMaps();
 ## gap> c:=SCChiralMap(ll[18][1],ll[18][2]);
 ## gap> SCHomology(c);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -3352,11 +3352,11 @@ end);
 ##
 ## Use <Ref Func="SCChiralMaps"/> to get a list of all
 ## chiral maps available.
-## <Example>
+## <Example><![CDATA[
 ## gap> SCChiralMaps();
 ## gap> c:=SCChiralMap(8,10);
 ## gap> c.Homology;
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>

@@ -17,10 +17,10 @@
 ## Computes the isomorphism signature of a closed, strongly connected weak 
 ## pseudomanifold. The isomorphism signature is stored as an attribute of the
 ## complex.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCSeriesBdHandleBody(3,9);;
 ## gap> s:=SCExportIsoSig(c);
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -182,11 +182,11 @@ end);
 ## Computes one string representation of a closed and strongly connected weak 
 ## pseudomanifold. Compare <Ref Func="SCExportIsoSig" />, which returns the
 ## lexicographically minimal string representation.
-## <Example>
+## <Example><![CDATA[
 ## gap> c:=SCSeriesBdHandleBody(3,9);;
 ## gap> s:=SCExportToString(c); time;
 ## gap> s:=SCExportIsoSig(c); time;
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -331,17 +331,17 @@ end);
 ## <Description>
 ## Computes a simplicial complex from its isomorphism signature. If a file with
 ## isomorphism signatures is provided a list of all complexes is returned.
-## <Example>
+## <Example><![CDATA[
 ## gap> s:="deeee";;
 ## gap> c:=SCFromIsoSig(s);;
 ## gap> SCIsIsomorphic(c,SCBdSimplex(4));
-## </Example>
-## <Example>
+## ]]></Example>
+## <Example><![CDATA[
 ## gap> s:="deeee";;
 ## gap> PrintTo("tmp.txt",s,"\n");;
 ## gap> cc:=SCFromIsoSig("tmp.txt");
 ## gap> cc[1].F;
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
