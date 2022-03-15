@@ -7,6 +7,7 @@
 
 
 # create doc/gapdoc/ directory
-cp -r ../../doc/gapdoc/ doc/
+rm -rf doc/gapdoc
+cp -r $SRC_DIR/doc/gapdoc doc/
 
 
