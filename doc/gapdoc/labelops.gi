@@ -15,16 +15,16 @@
 ## <Returns> a string upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Returns the name of a simplicial complex <Arg>complex</Arg>.
-## <Example>
-## gap&gt; c:=SCBdSimplex(5);;
-## gap&gt; SCName(c);
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(5);;
+## gap> SCName(c);
 ## "S^4_6"
-## </Example>
-## <Example>
-## gap&gt; c:=SC([[1,2],[2,3],[3,1]]);;
-## gap&gt; SCName(c);
+## ]]></Example>
+## <Example><![CDATA[
+## gap> c:=SC([[1,2],[2,3],[3,1]]);;
+## gap> SCName(c);
 ## "unnamed complex 2"
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -36,15 +36,15 @@
 ## <Returns> <K>true</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Renames a polyhedral complex. The argument <Arg>name</Arg> has to be given in form of a string.
-## <Example>
-## gap&gt; c:=SCBdSimplex(5);;
-## gap&gt; SCName(c);
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(5);;
+## gap> SCName(c);
 ## "S^4_6"
-## gap&gt; SCRename(c,"mySphere");
+## gap> SCRename(c,"mySphere");
 ## true
-## gap&gt; SCName(c);
+## gap> SCName(c);
 ## "mySphere"
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -56,18 +56,18 @@
 ## <Returns> a string upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Returns a literature reference of a polyhedral complex <Arg>complex</Arg>.
-## <Example>
-## gap&gt; c:=SCLib.Load(253);;
-## gap&gt; SCReference(c);
+## <Example><![CDATA[
+## gap> c:=SCLib.Load(253);;
+## gap> SCReference(c);
 ## "manifold_2_14_4_2 in F.H.Lutz: 'The Manifold Page', http://www.math.tu-berlin\
 ## .de/diskregeom/stellar/,\r\nF.H.Lutz: 'Triangulated manifolds with few vertice\
 ## s and vertex-transitive group actions', Doctoral Thesis TU Berlin 1999, Shaker\
 ## -Verlag, Aachen 1999"
-## gap&gt; c:=SC([[1,2],[2,3],[3,1]]);;
-## gap&gt; SCReference(c);
+## gap> c:=SC([[1,2],[2,3],[3,1]]);;
+## gap> SCReference(c);
 ## #I  SCReference: complex lacks reference.
 ## fail
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -79,16 +79,16 @@
 ## <Returns> <K>true</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Sets the literature reference of a polyhedral complex. The argument <Arg>ref</Arg> has to be given in form of a string.
-## <Example>
-## gap&gt; c:=SCBdSimplex(5);;
-## gap&gt; SCReference(c);
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(5);;
+## gap> SCReference(c);
 ## #I  SCReference: complex lacks reference.
 ## fail
-## gap&gt; SCSetReference(c,"my 5-sphere in my cool paper");
+## gap> SCSetReference(c,"my 5-sphere in my cool paper");
 ## true
-## gap&gt; SCReference(c);
+## gap> SCReference(c);
 ## "my 5-sphere in my cool paper"
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -100,13 +100,13 @@
 ## <Returns> a string upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Returns the date stamp of a simplicial complex <Arg>complex</Arg>.
-## <Example>
-## gap&gt; c:=SC([[1,2],[2,3],[3,1]]);;
-## gap&gt; SCSetDate(c,"2011-11-11");
+## <Example><![CDATA[
+## gap> c:=SC([[1,2],[2,3],[3,1]]);;
+## gap> SCSetDate(c,"2011-11-11");
 ## true
-## gap&gt; SCDate(c);
+## gap> SCDate(c);
 ## "2011-11-11"
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -118,16 +118,16 @@
 ## <Returns> <K>true</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Sets the date stamp of a simplicial complex. The argument <Arg>date</Arg> has to be given in form of a string.
-## <Example>
-## gap&gt; c:=SCBdSimplex(5);;
-## gap&gt; SCDate(c);
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(5);;
+## gap> SCDate(c);
 ## #I  SCDate: complex lacks date.
 ## fail
-## gap&gt; SCSetDate(c,"2011-11-11");
+## gap> SCSetDate(c,"2011-11-11");
 ## true
-## gap&gt; SCDate(c);
+## gap> SCDate(c);
 ## "2011-11-11"
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -139,11 +139,11 @@
 ## <Returns>a list of vertex labels of <Arg>complex</Arg> (a list of integers, short lists, characters, short strings, ...) upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Returns the vertex labels of <Arg>complex</Arg> as a list. This is a synonym of <Ref Meth="SCVertices"/>.
-## <Example>
-## gap&gt; c:=SCFromFacets(Combinations(["a","b","c","d"],3));;
-## gap&gt; SCLabels(c);
+## <Example><![CDATA[
+## gap> c:=SCFromFacets(Combinations(["a","b","c","d"],3));;
+## gap> SCLabels(c);
 ## [ "a", "b", "c", "d" ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -155,18 +155,18 @@
 ## <Returns> <K>true</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Maps vertex labels <M>v_1 , \ldots , v_n</M> of <Arg>complex</Arg> to <M>[1 , \ldots , n]</M>. Internally the property "SCVertices" is replaced by <M>[1 , \ldots , n]</M>.
-## <Example>
-## gap&gt; list:=SCLib.SearchByAttribute("F[1]=12");; 
-## gap&gt; c:=SCLib.Load(list[1][1]);;
-## gap&gt; SCRelabel(c,[4..15]);
+## <Example><![CDATA[
+## gap> list:=SCLib.SearchByAttribute("F[1]=12");; 
+## gap> c:=SCLib.Load(list[1][1]);;
+## gap> SCRelabel(c,[4..15]);
 ## true
-## gap&gt; SCVertices(c);
+## gap> SCVertices(c);
 ## [ 4 .. 15 ]
-## gap&gt; SCRelabelStandard(c);
+## gap> SCRelabelStandard(c);
 ## true
-## gap&gt; SCLabels(c);
+## gap> SCLabels(c);
 ## [ 1 .. 12 ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -180,16 +180,16 @@
 ## <Arg>maptable</Arg> has to be a list of length <M>n</M> where <M>n</M> is the number of vertices of <Arg>complex</Arg>. The function maps the <M>i</M>-th entry of <Arg>maptable</Arg> to the <M>i</M>-th entry of the current vertex labels. If <Arg>complex</Arg> has the standard vertex labeling <M>[1, \ldots , n]</M> the vertex label <M>i</M> is mapped to <Arg>maptable[i]</Arg>.<P/>
 ## Note that the elements of <Arg>maptable</Arg> must admit a total ordering. Hence, following Section 4.11 of the &GAP; manual, they must be members of one of the following families: rationals <C>IsRat</C>, cyclotomics <C>IsCyclotomic</C>, finite field elements <C>IsFFE</C>, permutations <C>IsPerm</C>, booleans <C>IsBool</C>, characters <C>IsChar</C> and lists (strings) <C>IsList</C>.<P/>
 ## Internally the property ``SCVertices'' of <Arg>complex</Arg> is replaced by <Arg>maptable.</Arg><P/>
-## <Example>
-## gap&gt; list:=SCLib.SearchByAttribute("F[1]=12");; 
-## gap&gt; c:=SCLib.Load(list[1][1]);;
-## gap&gt; SCVertices(c);
+## <Example><![CDATA[
+## gap> list:=SCLib.SearchByAttribute("F[1]=12");; 
+## gap> c:=SCLib.Load(list[1][1]);;
+## gap> SCVertices(c);
 ## [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]
-## gap&gt; SCRelabel(c,["a","b","c","d","e","f","g","h","i","j","k","l"]);
+## gap> SCRelabel(c,["a","b","c","d","e","f","g","h","i","j","k","l"]);
 ## true
-## gap&gt; SCLabels(c);
+## gap> SCLabels(c);
 ## [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l" ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -202,14 +202,14 @@
 ## <Description>
 ## Permutes vertex labels of a single pair of vertices. <Arg>pair</Arg> has to be a list of length <M>2</M> and a sublist of the property ``SCVertices''.<P/>
 ## The function is equivalent to <Ref Meth="SCRelabel"/> with <Arg>maptable</Arg> <M>= [ SCVertices[1] , \ldots , SCVertices[j] , \ldots , SCVertices[i] , \dots , SCVertices[n]]</M> if <Arg>pair</Arg> <M>= [ SCVertices[j] , SCVertices[i]]</M>, <M>j \leq i</M>, <M>j \neq i</M>.<P/>
-## <Example>
-## gap&gt; c:=SCBdSimplex(3);;
-## gap&gt; SCVertices(c);
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(3);;
+## gap> SCVertices(c);
 ## [ 1 .. 4 ]
-## gap&gt; SCRelabelTransposition(c,[1,2]);;
-## gap&gt; SCLabels(c);
+## gap> SCRelabelTransposition(c,[1,2]);;
+## gap> SCLabels(c);
 ## [ 2, 1, 3, 4 ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -221,18 +221,18 @@
 ## <Returns>vertex label of <Arg>complex</Arg> (an integer, a short list, a character, a short string) upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## The maximum over all vertex labels is determined by the &GAP; function <C>MaximumList</C>.
-## <Example>
-## gap&gt; c:=SCBdSimplex(3);;
-## gap&gt; SCRelabel(c,[10,100,100000,3500]);;
-## gap&gt; SCLabelMax(c);
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(3);;
+## gap> SCRelabel(c,[10,100,100000,3500]);;
+## gap> SCLabelMax(c);
 ## 100000
-## </Example>
-## <Example>
-## gap&gt; c:=SCBdSimplex(3);;
-## gap&gt; SCRelabel(c,["a","bbb",5,[1,1]]);;
-## gap&gt; SCLabelMax(c);
+## ]]></Example>
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(3);;
+## gap> SCRelabel(c,["a","bbb",5,[1,1]]);;
+## gap> SCLabelMax(c);
 ## "bbb"
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -244,18 +244,18 @@
 ## <Returns>vertex label of <Arg>complex</Arg> (an integer, a short list, a character, a short string) upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## The minimum over all vertex labels is determined by the &GAP; function <C>MinimumList</C>.
-## <Example>
-## gap&gt; c:=SCBdSimplex(3);;
-## gap&gt; SCRelabel(c,[10,100,100000,3500]);;
-## gap&gt; SCLabelMin(c);
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(3);;
+## gap> SCRelabel(c,[10,100,100000,3500]);;
+## gap> SCLabelMin(c);
 ## 10
-## </Example>
-## <Example>
-## gap&gt; c:=SCBdSimplex(3);;
-## gap&gt; SCRelabel(c,["a","bbb",5,[1,1]]);;
-## gap&gt; SCLabelMin(c);
+## ]]></Example>
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(3);;
+## gap> SCRelabel(c,["a","bbb",5,[1,1]]);;
+## gap> SCLabelMin(c);
 ## 5
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -267,12 +267,12 @@
 ## <Returns> a list upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the standard labeling of <Arg>face</Arg> in <Arg>complex</Arg>. 
-## <Example>
-## gap&gt; c:=SCBdSimplex(3);;
-## gap&gt; SCRelabel(c,["a","bbb",5,[1,1]]);;
-## gap&gt; SCUnlabelFace(c,["a","bbb",5]);
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(3);;
+## gap> SCRelabel(c,["a","bbb",5,[1,1]]);;
+## gap> SCUnlabelFace(c,["a","bbb",5]);
 ## [ 1, 2, 3 ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>

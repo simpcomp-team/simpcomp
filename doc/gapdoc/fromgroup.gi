@@ -39,29 +39,29 @@
 ## by a list of indices of <C>repHigh</C>) which have to be contained in any 
 ## output complex. If <Arg>subset</Arg> is anything else than a subset of 
 ## <C>matrixAllowedRows</C> the argument is ignored.
-## <Example>
-## gap&gt; G:=PrimitiveGroup(8,5);
+## <Example><![CDATA[
+## gap> G:=PrimitiveGroup(8,5);
 ## PGL(2, 7)
-## gap&gt; Size(G);
+## gap> Size(G);
 ## 336
-## gap&gt; Transitivity(G);
+## gap> Transitivity(G);
 ## 3
-## gap&gt; list:=SCsFromGroupExt(G,8,3,1,0,true,false,0,[]);
+## gap> list:=SCsFromGroupExt(G,8,3,1,0,true,false,0,[]);
 ## [ "defgh.g.h.fah.e.gaf.h.eag.e.faf.a.haa.g.fah.a.gjhzh" ]
-## gap&gt; c:=SCFromIsoSig(list[1]);
-## &lt;SimplicialComplex: unnamed complex 6 | dim = 3 | n = 8&gt;
-## gap&gt; SCNeighborliness(c); 
+## gap> c:=SCFromIsoSig(list[1]);
+## <SimplicialComplex: unnamed complex 6 | dim = 3 | n = 8>
+## gap> SCNeighborliness(c); 
 ## 3
-## gap&gt; c.F;
+## gap> c.F;
 ## [ 8, 28, 56, 28 ]
-## gap&gt; c.IsManifold; 
+## gap> c.IsManifold; 
 ## false
-## gap&gt; SCLibDetermineTopologicalType(SCLink(c,1));
-## &lt;SimplicialComplex: lk([ 1 ]) in unnamed complex 6 | dim = 2 | n = 7&gt;
-## gap&gt; # there are no 3-neighborly 3-manifolds with 8 vertices
+## gap> SCLibDetermineTopologicalType(SCLink(c,1));
+## <SimplicialComplex: lk([ 1 ]) in unnamed complex 6 | dim = 2 | n = 7>
+## gap> # there are no 3-neighborly 3-manifolds with 8 vertices
 ## gap> list:=SCsFromGroupExt(PrimitiveGroup(8,5),8,3,0,0,true,false,0,[]); 
-## gap&gt; [  ]
-## </Example>
+## gap> [  ]
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -94,8 +94,8 @@
 ## <Arg>removeDoubleEntries</Arg> specifies whether the results are checked 
 ## for combinatorial isomorphism, preventing isomorphic entries. Internally 
 ## calls <Ref Func="SCsFromGroupExt" /> for every group.
-## <Example>
-## gap&gt; list:=SCsFromGroupByTransitivity(8,3,2,true,true,true);
+## <Example><![CDATA[
+## gap> list:=SCsFromGroupByTransitivity(8,3,2,true,true,true);
 ## #I  SCsFromGroupByTransitivity: Building list of groups...
 ## #I  SCsFromGroupByTransitivity: ...2 groups found.
 ## #I  degree 8: [ AGL(1, 8), PSL(2, 7) ]
@@ -112,7 +112,7 @@
 ## #I  SCsFromGroupByTransitivity: ...done dim = 3, deg =  8, 0 manifolds, 1 pseudomanifolds, 0 candidates found.
 ## #I  SCsFromGroupByTransitivity: ...done dim = 3.
 ## [ [  ], [  ], [  ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>

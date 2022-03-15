@@ -41,11 +41,11 @@
 ## Thus, the orientation of the blowup has to be checked in order to verify 
 ## which type of blowup was performed. Normally, repeated computation results 
 ## in both versions.
-## <Example>
-## gap&gt; SCLib.SearchByName("Kummer variety");
+## <Example><![CDATA[
+## gap> SCLib.SearchByName("Kummer variety");
 ## [ [ 519, "4-dimensional Kummer variety (VT)" ] ]
-## gap&gt; c:=SCLib.Load(last[1][1]);;                
-## gap&gt; d:= SCBlowup(c,1);
+## gap> c:=SCLib.Load(last[1][1]);;                
+## gap> d:= SCBlowup(c,1);
 ## #I  SCBlowup: checking if singularity is a combinatorial manifold...
 ## #I  SCBlowup: ...true
 ## #I  SCBlowup: checking type of singularity...
@@ -73,10 +73,10 @@
 ## #I  SCBlowup: ...done.
 ## #I  SCBlowup: ...blowup completed.
 ## #I  SCBlowup: You may now want to reduce the complex via 'SCReduceComplex'.
-## &lt;SimplicialComplex: unnamed complex 2735 \ star([ 1 ]) in unnamed complex 2735\
-##  cup unnamed complex 2739 cup unnamed complex 2737 | dim = 4 | n = 39&gt;
-## </Example>
-## <Example> 
+## <SimplicialComplex: unnamed complex 2735 \ star([ 1 ]) in unnamed complex 2735\
+##  cup unnamed complex 2739 cup unnamed complex 2737 | dim = 4 | n = 39>
+## ]]></Example>
+## <Example><![CDATA[ 
 ## gap> # resolving the singularities of a 4 dimensional Kummer variety
 ## gap> SCLib.SearchByName("Kummer variety");
 ## [ [ 519, "4-dimensional Kummer variety (VT)" ] ]
@@ -93,7 +93,7 @@
 ## true
 ## gap> d.Homology;
 ## [ [ 0, [ ] ], [ 0, [ ] ], [ 22, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -109,14 +109,14 @@
 ## cylinder for a simplicial blowup, compare 
 ## <Cite Key="Spreer09CombPorpsOfK3"/>) with boundary 
 ## <M>L(</M><C>k</C><M>,1)</M>.
-## <Example>
-## gap&gt; mapCyl:=SCMappingCylinder(3);;
-## gap&gt; mapCyl.Homology;              
+## <Example><![CDATA[
+## gap> mapCyl:=SCMappingCylinder(3);;
+## gap> mapCyl.Homology;              
 ## [ [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ], [ 0, [  ] ], [ 0, [  ] ] ]
-## gap&gt; l31:=SCBoundary(mapCyl);;
-## gap&gt; l31.Homology;
+## gap> l31:=SCBoundary(mapCyl);;
+## gap> l31.Homology;
 ## [ [ 0, [  ] ], [ 0, [ 3 ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>

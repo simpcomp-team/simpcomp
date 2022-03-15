@@ -16,11 +16,11 @@
 ## Computes the isomorphism signature of a closed, strongly connected weak 
 ## pseudomanifold. The isomorphism signature is stored as an attribute of the
 ## complex.
-## <Example>
-## gap&gt; c:=SCSeriesBdHandleBody(3,9);;
-## gap&gt; s:=SCExportIsoSig(c);
+## <Example><![CDATA[
+## gap> c:=SCSeriesBdHandleBody(3,9);;
+## gap> s:=SCExportIsoSig(c);
 ## "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -34,15 +34,15 @@
 ## Computes one string representation of a closed and strongly connected weak 
 ## pseudomanifold. Compare <Ref Func="SCExportIsoSig" />, which returns the
 ## lexicographically minimal string representation.
-## <Example>
-## gap&gt; c:=SCSeriesBdHandleBody(3,9);;
-## gap&gt; s:=SCExportToString(c); time;
+## <Example><![CDATA[
+## gap> c:=SCSeriesBdHandleBody(3,9);;
+## gap> s:=SCExportToString(c); time;
 ## "deffg.h.f.fahaiciai.i.hai.fbgeiagihbhceceba.g.gag"
-## 5
-## gap&gt; s:=SCExportIsoSig(c); time;
+## 3
+## gap> s:=SCExportIsoSig(c); time;
 ## "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
-## 22
-## </Example>
+## 11
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -55,20 +55,20 @@
 ## <Description>
 ## Computes a simplicial complex from its isomorphism signature. If a file with
 ## isomorphism signatures is provided a list of all complexes is returned.
-## <Example>
-## gap&gt; s:="deeee";;
-## gap&gt; c:=SCFromIsoSig(s);;
-## gap&gt; SCIsIsomorphic(c,SCBdSimplex(4));
+## <Example><![CDATA[
+## gap> s:="deeee";;
+## gap> c:=SCFromIsoSig(s);;
+## gap> SCIsIsomorphic(c,SCBdSimplex(4));
 ## true
-## </Example>
-## <Example>
-## gap&gt; s:="deeee";;
-## gap&gt; PrintTo("tmp.txt",s,"\n");;
-## gap&gt; cc:=SCFromIsoSig("tmp.txt");
-## [ &lt;SimplicialComplex: unnamed complex 9 | dim = 3 | n = 5&gt; ]
-## gap&gt; cc[1].F;
+## ]]></Example>
+## <Example><![CDATA[
+## gap> s:="deeee";;
+## gap> PrintTo("tmp.txt",s,"\n");;
+## gap> cc:=SCFromIsoSig("tmp.txt");
+## [ <SimplicialComplex: unnamed complex 9 | dim = 3 | n = 5> ]
+## gap> cc[1].F;
 ## [ 5, 10, 10, 5 ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>

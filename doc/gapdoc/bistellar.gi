@@ -45,30 +45,30 @@
 ## <Item><C>MaxIntervalRandomize := 50</C>: number of flips performed to create 
 ## a randomized sphere. Default: <M>50</M></Item>
 ## </Enum>
-## <Example>
-## gap&gt; SCBistellarOptions.BaseRelaxation;
+## <Example><![CDATA[
+## gap> SCBistellarOptions.BaseRelaxation;
 ## 3
-## gap&gt; SCBistellarOptions.BaseHeating;
+## gap> SCBistellarOptions.BaseHeating;
 ## 4
-## gap&gt; SCBistellarOptions.Relaxation;
+## gap> SCBistellarOptions.Relaxation;
 ## 0
-## gap&gt; SCBistellarOptions.Heating;
+## gap> SCBistellarOptions.Heating;
 ## 0
-## gap&gt; SCBistellarOptions.MaxRounds;
+## gap> SCBistellarOptions.MaxRounds;
 ## 500000
-## gap&gt; SCBistellarOptions.MaxInterval;
+## gap> SCBistellarOptions.MaxInterval;
 ## 100000
-## gap&gt; SCBistellarOptions.Mode;
+## gap> SCBistellarOptions.Mode;
 ## 0
-## gap&gt; SCBistellarOptions.WriteLevel;
+## gap> SCBistellarOptions.WriteLevel;
 ## 0
-## gap&gt; SCBistellarOptions.MailNotifyInterval;
+## gap> SCBistellarOptions.MailNotifyInterval;
 ## 86400
-## gap&gt; SCBistellarOptions.MaxIntervalIsManifold;
+## gap> SCBistellarOptions.MaxIntervalIsManifold;
 ## 5000
-## gap&gt; SCBistellarOptions.MaxIntervalRandomize;
+## gap> SCBistellarOptions.MaxIntervalRandomize;
 ## 50
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -180,17 +180,17 @@
 ## Checks if a simplicial complex <Arg>complex</Arg> can be modified by 
 ## bistellar moves, i. e. if it is a pure simplicial complex which fulfills 
 ## the weak pseudomanifold property with empty boundary.<P/>
-## <Example>
-## gap&gt; c:=SCBdCrossPolytope(3);;
-## gap&gt; SCIsMovableComplex(c);
+## <Example><![CDATA[
+## gap> c:=SCBdCrossPolytope(3);;
+## gap> SCIsMovableComplex(c);
 ## true
-## </Example>
+## ]]></Example>
 ## Complex with non-empty boundary:
-## <Example>
-## gap&gt; c:=SC([[1,2],[2,3],[3,4],[3,1]]);;
-## gap&gt; SCIsMovableComplex(c);
+## <Example><![CDATA[
+## gap> c:=SC([[1,2],[2,3],[3,4],[3,1]]);;
+## gap> SCIsMovableComplex(c);
 ## false
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -210,14 +210,14 @@
 ## them by the <M>(r+1)</M> faces obtained by uniting <M>m_2</M> with any 
 ## subset of <M>m_1</M> of order <M>r</M>.<P/>
 ## The resulting complex is PL-homeomorphic to <Arg>complex</Arg>. 
-## <Example>
-## gap&gt; c:=SCBdCrossPolytope(3);;
-## gap&gt; moves:=SCRMoves(c,1);
+## <Example><![CDATA[
+## gap> c:=SCBdCrossPolytope(3);;
+## gap> moves:=SCRMoves(c,1);
 ## [ [ [ 1, 3 ], [ 5, 6 ] ], [ [ 1, 4 ], [ 5, 6 ] ], [ [ 1, 5 ], [ 3, 4 ] ], 
 ##   [ [ 1, 6 ], [ 3, 4 ] ], [ [ 2, 3 ], [ 5, 6 ] ], [ [ 2, 4 ], [ 5, 6 ] ], 
 ##   [ [ 2, 5 ], [ 3, 4 ] ], [ [ 2, 6 ], [ 3, 4 ] ], [ [ 3, 5 ], [ 1, 2 ] ], 
 ##   [ [ 3, 6 ], [ 1, 2 ] ], [ [ 4, 5 ], [ 1, 2 ] ], [ [ 4, 6 ], [ 1, 2 ] ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -230,9 +230,9 @@
 ## otherwise.</Returns>
 ## <Description>
 ## See <Ref Meth="SCRMoves"/> for further information.
-## <Example>
-## gap&gt; c:=SCBdCrossPolytope(3);;
-## gap&gt; moves:=SCMoves(c);
+## <Example><![CDATA[
+## gap> c:=SCBdCrossPolytope(3);;
+## gap> moves:=SCMoves(c);
 ## [ [ [ [ 1, 3, 5 ], [  ] ], [ [ 1, 3, 6 ], [  ] ], [ [ 1, 4, 5 ], [  ] ], 
 ##       [ [ 1, 4, 6 ], [  ] ], [ [ 2, 3, 5 ], [  ] ], [ [ 2, 3, 6 ], [  ] ], 
 ##       [ [ 2, 4, 5 ], [  ] ], [ [ 2, 4, 6 ], [  ] ] ], 
@@ -241,7 +241,7 @@
 ##       [ [ 2, 5 ], [ 3, 4 ] ], [ [ 2, 6 ], [ 3, 4 ] ], [ [ 3, 5 ], [ 1, 2 ] ], 
 ##       [ [ 3, 6 ], [ 1, 2 ] ], [ [ 4, 5 ], [ 1, 2 ] ], [ [ 4, 6 ], [ 1, 2 ] ] ]
 ##     , [  ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -260,17 +260,17 @@
 ## detailed information about bistellar <M>r</M>-moves.<P/>
 ## Note: <Arg>move</Arg> and <Arg>c</Arg> should be given in standard 
 ## labeling to ensure a correct result.
-## <Example>
-## gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,1]]);
-## &lt;SimplicialComplex: unnamed complex 5 | dim = 1 | n = 4&gt;
-## gap&gt; moves:=SCMoves(obj);
+## <Example><![CDATA[
+## gap> obj:=SC([[1,2],[2,3],[3,4],[4,1]]);
+## <SimplicialComplex: unnamed complex 5 | dim = 1 | n = 4>
+## gap> moves:=SCMoves(obj);
 ## [ [ [ [ 1, 2 ], [  ] ], [ [ 1, 4 ], [  ] ], [ [ 2, 3 ], [  ] ], 
 ##       [ [ 3, 4 ], [  ] ] ], 
 ##   [ [ [ 1 ], [ 2, 4 ] ], [ [ 2 ], [ 1, 3 ] ], [ [ 3 ], [ 2, 4 ] ], 
 ##       [ [ 4 ], [ 1, 3 ] ] ] ]
-## gap&gt; obj:=SCMove(obj,last[2][1]);
-## &lt;SimplicialComplex: unnamed complex 6 | dim = 1 | n = 3&gt;
-## </Example>
+## gap> obj:=SCMove(obj,last[2][1]);
+## <SimplicialComplex: unnamed complex 6 | dim = 1 | n = 3>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -309,12 +309,12 @@
 ## <Description>
 ## Computes the face lattice, the <M>f</M>-vector, the AS-determinant, the 
 ## dimension and the maximal vertex label of <Arg>complex</Arg>.
-## <Example>
-## gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);
-## &lt;SimplicialComplex: unnamed complex 7 | dim = 1 | n = 6&gt;
-## gap&gt; SCExamineComplexBistellar(obj);
-## &lt;SimplicialComplex: unnamed complex 7 | dim = 1 | n = 6&gt;
-## </Example>
+## <Example><![CDATA[
+## gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);
+## <SimplicialComplex: unnamed complex 7 | dim = 1 | n = 6>
+## gap> SCExamineComplexBistellar(obj);
+## <SimplicialComplex: unnamed complex 7 | dim = 1 | n = 6>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -360,22 +360,22 @@
 ## Please see <Ref Func="SCMailIsPending"/> for further information about the 
 ## email notification system in case <C>SCBistellarOptions.WriteLevel</C> is 
 ## set to <M>2</M>.<P/>
-## <Example>
-## gap&gt; c:=SCBdCrossPolytope(4);;
-## gap&gt; SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
-## gap&gt; SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
-## [ true, &lt;SimplicialComplex: unnamed complex 13 | dim = 3 | n = 5&gt;, 7 ]
-## gap&gt; SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
-## [ true, &lt;SimplicialComplex: unnamed complex 18 | dim = 3 | n = 5&gt;, 9 ]
-## gap&gt; SCMailSetAddress("johndoe@somehost");   
+## <Example><![CDATA[
+## gap> c:=SCBdCrossPolytope(4);;
+## gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
+## gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
+## [ true, <SimplicialComplex: unnamed complex 13 | dim = 3 | n = 5>, 7 ]
+## gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
+## [ true, <SimplicialComplex: unnamed complex 18 | dim = 3 | n = 5>, 9 ]
+## gap> SCMailSetAddress("johndoe@somehost");   
 ## true
-## gap&gt; SCMailIsEnabled();                     
+## gap> SCMailIsEnabled();                     
 ## true
-## gap&gt; SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
-## [ true, &lt;SimplicialComplex: unnamed complex 23 | dim = 3 | n = 5&gt;, 7 ]
-## </Example>
+## gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
+## [ true, <SimplicialComplex: unnamed complex 23 | dim = 3 | n = 5>, 7 ]
+## ]]></Example>
 ## Content of sent mail:
-## <Example> 
+## <Example><![CDATA[ 
 ## Greetings master,
 ## 
 ## this is simpcomp 0.0.0 running on comp01.maths.fancytown.edu
@@ -410,7 +410,7 @@
 ## ##### END MESSAGE #####
 ## 
 ## That's all, I hope this is good news! Have a nice day.
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -437,12 +437,12 @@
 ## pseudomanifold property via bistellar moves. 
 ## Internally calls <Ref Func="SCReduceComplexEx" Style="Text" />
 ## <C>(complex,SCEmpty(),0,SCIntFunc.SCChooseMove);</C>
-## <Example>
-## gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
-## gap&gt; SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
-## gap&gt; tmp := SCReduceComplex(obj);
-## [ true, &lt;SimplicialComplex: unnamed complex 27 | dim = 1 | n = 3&gt;, 3 ]
-## </Example>
+## <Example><![CDATA[
+## gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
+## gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
+## gap> tmp := SCReduceComplex(obj);
+## [ true, <SimplicialComplex: unnamed complex 27 | dim = 1 | n = 3>, 3 ]
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -465,14 +465,14 @@
 ## the check if possible.<P/>
 ## Internally calls <Ref Func="SCReduceComplexEx" Style="Text"/>
 ## <C>(complex1,complex2,1,SCIntFunc.SCChooseMove);</C>
-## <Example>
-## gap&gt; SCBistellarOptions.WriteLevel:=0;; # do not save complexes to disk
-## gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
-## gap&gt; refObj:=SCBdSimplex(2);; # triangle as a (minimal) reference object
-## gap&gt; SCEquivalent(obj,refObj);
+## <Example><![CDATA[
+## gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes to disk
+## gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
+## gap> refObj:=SCBdSimplex(2);; # triangle as a (minimal) reference object
+## gap> SCEquivalent(obj,refObj);
 ## #I  SCReduceComplexEx: complexes are bistellarly equivalent.
 ## true
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -503,12 +503,12 @@
 ## <P/>
 ## Internally calls <Ref Func="SCReduceComplexEx" Style="Text"  />
 ## <C>(complex1,complex2,2,SCIntFunc.SCChooseMove);</C>
-## <Example>
-## gap&gt; c:=SCFromFacets([[1,3],[3,5],[4,5],[4,1]]);;
-## gap&gt; SCBistellarOptions.WriteLevel:=0;; # do not save any complexes                      
-## gap&gt; SCReduceAsSubcomplex(c,SCBdCrossPolytope(3));
-## [ true, &lt;SimplicialComplex: unnamed complex 36 | dim = 1 | n = 3&gt;, 1 ]
-##</Example>
+## <Example><![CDATA[
+## gap> c:=SCFromFacets([[1,3],[3,5],[4,5],[4,1]]);;
+## gap> SCBistellarOptions.WriteLevel:=0;; # do not save any complexes                      
+## gap> SCReduceAsSubcomplex(c,SCBdCrossPolytope(3));
+## [ true, <SimplicialComplex: unnamed complex 36 | dim = 1 | n = 3>, 1 ]
+##]]></Example>
 ##</Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -536,11 +536,11 @@
 ##
 ## See <Ref Func="SCIsManifoldEx" /> and <Ref Func="SCIsManifold" /> for 
 ## alternative methods for manifold verification.
-## <Example>
-## gap&gt; c:=SCBdCrossPolytope(3);;
-## gap&gt; SCBistellarIsManifold(c);
+## <Example><![CDATA[
+## gap> c:=SCBdCrossPolytope(3);;
+## gap> SCBistellarIsManifold(c);
 ## true
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -568,19 +568,19 @@
 ## where <M>S</M> denotes the simplicial complex passed in 
 ## <Arg>complex</Arg>.<P/>   
 ## Internally calls <Ref Func="SCReduceComplexEx" Style="Text" />.
-## <Example>
-## gap&gt; SCLib.SearchByName("S^4~S^1");;
-## gap&gt; c:=SCLib.Load(last[1][1]);;
-## gap&gt; l:=SCLink(c,1);
-## &lt;SimplicialComplex: lk([ 1 ]) in S^4~S^1 (VT) | dim = 4 | n = 12&gt;
-## gap&gt; SCIsKStackedSphere(l,1);
+## <Example><![CDATA[
+## gap> SCLib.SearchByName("S^4~S^1");;
+## gap> c:=SCLib.Load(last[1][1]);;
+## gap> l:=SCLink(c,1);
+## <SimplicialComplex: lk([ 1 ]) in S^4~S^1 (VT) | dim = 4 | n = 12>
+## gap> SCIsKStackedSphere(l,1);
 ## #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
 ## #I  SCIsKStackedSphere: try 1/1
 ## #I  SCIsKStackedSphere: complex is a 1-stacked sphere.
 ## [ true, 
-##   &lt;SimplicialComplex: Filled 1-stacked sphere (lk([ 1 ]) in S^4~S^1 (VT)) | di\
-## m = 5 | n = 12&gt; ]
-## </Example>
+##   <SimplicialComplex: Filled 1-stacked sphere (lk([ 1 ]) in S^4~S^1 (VT)) | di\
+## m = 5 | n = 12> ]
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -605,12 +605,12 @@
 ## <C>SCBistellarOptions.MaxIntervalRandomize</C> (this value is used, if 
 ## <Arg>rounds</Arg> is not specified).       
 ## Internally calls <Ref Func="SCReduceComplexEx" Style="Text" />.
-## <Example>
-## gap&gt; c:=SCRandomize(SCBdSimplex(4));
-## &lt;SimplicialComplex: Randomized S^3_5 | dim = 3 | n = 16&gt;
-## gap&gt; c.F;
+## <Example><![CDATA[
+## gap> c:=SCRandomize(SCBdSimplex(4));
+## <SimplicialComplex: Randomized S^3_5 | dim = 3 | n = 16>
+## gap> c.F;
 ## [ 16, 65, 98, 49 ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>

@@ -518,48 +518,6 @@ function()
 end;
 
 
-#make gapdoc documentation
-SCIntFunc.MakeDoc:=function(arg)
-	
-	local path, ext, f, main, files, b, bookname,basenames, cp;
-	
-	basenames:=["class3mflds", "propobject", "bistellar", "complex", "generate", 
-    "glprops", "io", "labelops", "lib", "operations", "tools", "homology", 
-    "morse", "normalsurface", "prophandler", "fromgroup", "blowups", 
-    "pkghomalg", "highlySymmetricSurfaces", "isosig", "DMT"
-	];
-	
-	cp:="gapdoc/";
-		
-	if Length(arg) = 1 and IsBool(arg[1]) and arg[1]=true then
-		cp:="../lib/";
-	elif Length(arg) >= 1 then
-		basenames:=arg;
-		cp:="gapdoc/";
-	fi;
-	
-	files:=[];
-	path:=DirectoriesPackageLibrary("simpcomp","doc");
-
-	for b in basenames do
-		for ext in [".gd",".gi"] do
-			f:=Concatenation(cp,b,ext);
-			if(Filename(path[1],f)<>fail) then
-				Add(files, f);
-			fi;
-		od;
-	od;
-
-
-	bookname:="<Package>simpcomp</Package>";;
-
-	MakeGAPDocDoc(path[1], "simpcomp", files, bookname);
-
-	return true;
-end;
-
-
-
 #function availability test
 SCIntFunc.CheckExternalProgramsAvailability:=
 function()

@@ -77,12 +77,12 @@ see the file COPYING in the `simpcomp` directory or
         https://github.com/simpcomp-team/simpcomp/
         true
 
-- Run `SCRunTest();` for a quick self test of `simpcomp` that assures the package
+- Run `TestPackage("simpcomp");` for a quick self test of `simpcomp` that assures the package
   works correctly. The output of the test function should look like this (the
   number printed after `GAP4stones` is a performance measure of your system and
   thus may differ from computer to computer):
 
-        gap> SCRunTest();
+        gap> TestPackage("simpcomp");
         simpcomp package test
         msecs: 4277
         true
@@ -95,6 +95,8 @@ see the file COPYING in the `simpcomp` directory or
 
 10/03/2022 - Version 2.1.14: Minor update
 - Fixed manual entries
+- Fixed missing file output in SCsFromGroupExt
+- Removed SCIntFun.MakeDoc(), this is now done by makedoc.g
 
 07/06/2021 - Version 2.1.13: Major update
 - Made default complex representation shorter

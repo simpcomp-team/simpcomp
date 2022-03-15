@@ -7,7 +7,6 @@
 ##  $Id$
 ##
 ################################################################################
-
 ## <#GAPDoc Label="SCObjects">
 ##
 ## In order to meet the particular requirements of piecewise linear geometric 
@@ -82,13 +81,13 @@
 ## be calculated, in some cases followed by further arguments of the 
 ## property handler function. An example would be:
 ##
-##<Example>
+##<Example><![CDATA[
 ## gap> c:=SCBdSimplex(3);; # create a SCSimplicialComplex object
 ## gap> SCFVector(c);
 ## [ 4, 6, 4 ]
 ## gap> SCSkel(c,0);
 ## [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ]
-##</Example>
+##]]></Example>
 ##
 ## Here the functions <C>SCFVector</C> and <C>SCSkel</C> are the property 
 ## handler functions, see Chapter <Ref Chap="chap:prophandler" /> for a 
@@ -101,13 +100,13 @@
 ## oriented method which calls property handlers of a 
 ## <C>SCPolyhedralComplex</C> object indirectly and more conveniently:
 ##
-##<Example>
+##<Example><![CDATA[
 ## gap> c:=SCBdSimplex(3);; # create a SCSimplicialComplex object
 ## gap> c.F;
 ## [ 4, 6, 4 ]
 ## gap> c.Skel(0);
 ## [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ]
-##</Example>
+##]]></Example>
 ##
 ## Note that the code in this example calculates the same properties as in 
 ## the first example above, but the properties of a 
@@ -124,7 +123,6 @@
 ## </Section>
 ##	
 ##<#/GAPDoc>
-
 ## <#GAPDoc Label="polyhedralcomplex">
 ##
 ## In the following all operations for the &GAP; object type 
@@ -198,8 +196,6 @@
 ##
 ## </Section>
 ##<#/GAPDoc>
-
-
 ## <#GAPDoc Label="complex">
 ##
 ## Currently, the &GAP; package <Package>simpcomp</Package> supports data 
@@ -231,7 +227,6 @@
 ## <Package>simpcomp</Package> overloads some standard operations for the 
 ## object type <C>SCSimplicialComplex</C> if this definition is intuitive and 
 ## mathematically sound. See a list of overloaded operators below. 
-#
 ##	
 ## <#Include Label="SCOpPlusSCInt"/>
 ## <#Include Label="SCOpMinusSCInt"/>
@@ -265,4 +260,4 @@
 ## </Section> 
 ##		
 ##<#/GAPDoc>
-
+################################################################################

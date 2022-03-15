@@ -22,14 +22,14 @@
 ## The <M>i</M>-th list of each set of lists represents the incidences between
 ## the <M>(i-1)</M>-faces and the <M>i</M>-faces. The faces are given by their 
 ## indices of the face lattice.
-## <Example>
-## gap&gt; c:=SCBdSimplex(3);;
-## gap&gt; HD:=SCHasseDiagram(c);
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(3);;
+## gap> HD:=SCHasseDiagram(c);
 ## [ [ [ [ 1, 2, 3 ], [ 1, 4, 5 ], [ 2, 4, 6 ], [ 3, 5, 6 ] ], 
 ##       [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ], [ 1, 4 ], [ 2, 4 ], [ 3, 4 ] ] ], 
 ##   [ [ [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 3, 2 ], [ 4, 2 ], [ 4, 3 ] ], 
 ##       [ [ 4, 2, 1 ], [ 5, 3, 1 ], [ 6, 3, 2 ], [ 6, 5, 4 ] ] ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -48,13 +48,13 @@
 ## the input complex to smaller complexes defined by minimal link and deletion 
 ## operations. See <Cite Key="Engstroem09DiscMorseFuncFourierTrans" /> for 
 ## details.
-## <Example>
-## gap&gt; c:=SCBdSimplex(3);;
-## gap&gt; f:=SCMorseEngstroem(c);
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(3);;
+## gap> f:=SCMorseEngstroem(c);
 ## [ [ [ 2 ], [ 2, 3 ], [ 2, 4 ], [ 2 .. 4 ], [  ], [ 3 ], [ 4 ], [ 3, 4 ], 
 ##       [ 1, 3 ], [ 1, 3, 4 ], [ 1 ], [ 1, 4 ], [ 1, 2, 4 ], [ 1, 2 ], 
 ##       [ 1 .. 3 ] ], [ [ 2 ], [ 1 .. 3 ] ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -70,12 +70,12 @@
 ## discrete Morse theory approach: Faces are paired with free co-dimension one 
 ## faces until now free faces remain. Then a critical face is removed at random.
 ## See <Cite Key="Benedetti13RandomDMT" /> for details.
-## <Example>
-## gap&gt; c:=SCBdSimplex(3);;
-## gap&gt; f:=SCMorseRandom(c);;
-## gap&gt; Size(f[2]);
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(3);;
+## gap> f:=SCMorseRandom(c);;
+## gap> Size(f[2]);
 ## 2
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -91,12 +91,12 @@
 ## lexicographic random
 ## discrete Morse theory approach. See <Cite Key="Benedetti13RandomDMT" />, 
 ## <Cite Key="Adiprasito14RDMTII" /> for details.
-## <Example>
-## gap&gt; c := SCSurface(3,true);;
-## gap&gt; f:=SCMorseRandomLex(c);;
-## gap&gt; Size(f[2]);
+## <Example><![CDATA[
+## gap> c := SCSurface(3,true);;
+## gap> f:=SCMorseRandomLex(c);;
+## gap> Size(f[2]);
 ## 8
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -112,12 +112,12 @@
 ## reverse lexicographic random
 ## discrete Morse theory approach. See <Cite Key="Benedetti13RandomDMT" />, 
 ## <Cite Key="Adiprasito14RDMTII" /> for details.
-## <Example>
-## gap&gt; c := SCSurface(5,false);;
-## gap&gt; f:=SCMorseRandomRevLex(c);;
-## gap&gt; Size(f[2]);
+## <Example><![CDATA[
+## gap> c := SCSurface(5,false);;
+## gap> f:=SCMorseRandomRevLex(c);;
+## gap> Size(f[2]);
 ## 7
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -132,25 +132,25 @@
 ## Employs a greedy collapsing algorithm to collapse the simplicial complex 
 ## <Arg>complex</Arg>. 
 ## See also <Ref Meth="SCCollapseLex" /> and <Ref Meth="SCCollapseRevLex" />.
-## <Example>
-## gap&gt; SCLib.SearchByName("T^2"){[1..6]}; 
+## <Example><![CDATA[
+## gap> SCLib.SearchByName("T^2"){[1..6]}; 
 ## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], [ 10, "T^2 (VT)" ],
 ##   [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
-## gap&gt; torus:=SCLib.Load(last[1][1]);;
-## gap&gt; bdtorus:=SCDifference(torus,SC([torus.Facets[1]]));;
-## gap&gt; coll:=SCCollapseGreedy(bdtorus);
-## &lt;SimplicialComplex: collapsed version of T^2 (VT) \ unnamed complex 8 | dim = \
-## 1 | n = 4&gt;
-## gap&gt; coll.Facets;
+## gap> torus:=SCLib.Load(last[1][1]);;
+## gap> bdtorus:=SCDifference(torus,SC([torus.Facets[1]]));;
+## gap> coll:=SCCollapseGreedy(bdtorus);
+## <SimplicialComplex: collapsed version of T^2 (VT) \ unnamed complex 8 | dim = \
+## 1 | n = 4>
+## gap> coll.Facets;
 ## [ [ 2, 5 ], [ 2, 6 ], [ 2, 7 ], [ 5, 6 ], [ 5, 7 ] ]
-## gap&gt; sphere:=SCBdSimplex(4);;                              
-## gap&gt; bdsphere:=SCDifference(sphere,SC([sphere.Facets[1]]));;
-## gap&gt; coll:=SCCollapseGreedy(bdsphere);
-## &lt;SimplicialComplex: collapsed version of S^3_5 \ unnamed complex 12 | dim = 0 \
-## | n = 1&gt;
-## gap&gt; coll.Facets;                     
+## gap> sphere:=SCBdSimplex(4);;                              
+## gap> bdsphere:=SCDifference(sphere,SC([sphere.Facets[1]]));;
+## gap> coll:=SCCollapseGreedy(bdsphere);
+## <SimplicialComplex: collapsed version of S^3_5 \ unnamed complex 12 | dim = 0 \
+## | n = 1>
+## gap> coll.Facets;                     
 ## [ [ 2 ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -165,22 +165,22 @@
 ## Employs a greedy collapsing algorithm in lexicographical order to collapse 
 ## the simplicial complex <Arg>complex</Arg>. See also 
 ## <Ref Meth="SCCollapseGreedy" /> and <Ref Meth="SCCollapseRevLex" />.
-## <Example>
-## gap&gt; s:=SCSurface(1,true);;
-## gap&gt; s:=SCDifference(s,SC([SCFacets(s)[1]]));;
-## gap&gt; coll:=SCCollapseGreedy(s);
-## &lt;SimplicialComplex: collapsed version of T^2 \ unnamed complex 18 | dim = 1 | \
-## n = 5&gt;
-## gap&gt; coll.Facets;
+## <Example><![CDATA[
+## gap> s:=SCSurface(1,true);;
+## gap> s:=SCDifference(s,SC([SCFacets(s)[1]]));;
+## gap> coll:=SCCollapseGreedy(s);
+## <SimplicialComplex: collapsed version of T^2 \ unnamed complex 18 | dim = 1 | \
+## n = 5>
+## gap> coll.Facets;
 ## [ [ 1, 6 ], [ 1, 7 ], [ 2, 5 ], [ 2, 7 ], [ 5, 7 ], [ 6, 7 ] ]
-## gap&gt; sphere:=SCBdSimplex(4);;                              
-## gap&gt; ball:=SCDifference(sphere,SC([sphere.Facets[1]]));;
-## gap&gt; coll:=SCCollapseLex(ball);
-## &lt;SimplicialComplex: collapsed version of S^3_5 \ unnamed complex 22 | dim = 0 \
-## | n = 1&gt;
-## gap&gt; coll.Facets;                     
+## gap> sphere:=SCBdSimplex(4);;                              
+## gap> ball:=SCDifference(sphere,SC([sphere.Facets[1]]));;
+## gap> coll:=SCCollapseLex(ball);
+## <SimplicialComplex: collapsed version of S^3_5 \ unnamed complex 22 | dim = 0 \
+## | n = 1>
+## gap> coll.Facets;                     
 ## [ [ 5 ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -195,22 +195,22 @@
 ## Employs a greedy collapsing algorithm in reverse lexicographical order to 
 ## collapse the simplicial complex <Arg>complex</Arg>. 
 ## See also <Ref Meth="SCCollapseGreedy" /> and <Ref Meth="SCCollapseLex" />.
-## <Example>
-## gap&gt; s:=SCSurface(1,true);;
-## gap&gt; s:=SCDifference(s,SC([SCFacets(s)[1]]));;
-## gap&gt; coll:=SCCollapseGreedy(s);
-## &lt;SimplicialComplex: collapsed version of T^2 \ unnamed complex 28 | dim = 1 | \
-## n = 5&gt;
-## gap&gt; coll.Facets;
+## <Example><![CDATA[
+## gap> s:=SCSurface(1,true);;
+## gap> s:=SCDifference(s,SC([SCFacets(s)[1]]));;
+## gap> coll:=SCCollapseGreedy(s);
+## <SimplicialComplex: collapsed version of T^2 \ unnamed complex 28 | dim = 1 | \
+## n = 5>
+## gap> coll.Facets;
 ## [ [ 1, 3 ], [ 1, 7 ], [ 3, 4 ], [ 3, 5 ], [ 4, 7 ], [ 5, 7 ] ]
-## gap&gt; sphere:=SCBdSimplex(4);;                              
-## gap&gt; ball:=SCDifference(sphere,SC([sphere.Facets[1]]));;
-## gap&gt; coll:=SCCollapseRevLex(ball);
-## &lt;SimplicialComplex: collapsed version of S^3_5 \ unnamed complex 32 | dim = 0 \
-## | n = 1&gt;
-## gap&gt; coll.Facets;                     
+## gap> sphere:=SCBdSimplex(4);;                              
+## gap> ball:=SCDifference(sphere,SC([sphere.Facets[1]]));;
+## gap> coll:=SCCollapseRevLex(ball);
+## <SimplicialComplex: collapsed version of S^3_5 \ unnamed complex 32 | dim = 0 \
+## | n = 1>
+## gap> coll.Facets;                     
 ## [ [ 1 ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -226,12 +226,12 @@
 ## from the dual 1-skeleton followed by a collapsing approach.
 ## <Arg>complex</Arg> needs to be a closed weak pseudomanifold for this to work.
 ## For details of the algorithm, see <Cite Key="Paixao143SphereRec" />.
-## <Example>
-## gap&gt; c:=SCBdSimplex(3);;
-## gap&gt; f:=SCMorseUST(c);;
-## gap&gt; Size(f[2]);
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(3);;
+## gap> f:=SCMorseUST(c);;
+## gap> Size(f[2]);
 ## 2
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -252,24 +252,24 @@
 ## returned in form of a list containing all Morse vectors sorted by number of 
 ## critical points together with the actual vector of critical points and how 
 ## often they ocurred (see <Cite Key="Benedetti13RandomDMT" /> for details).
-## <Example>
-## gap&gt; c:=SCSeriesTorus(2);;
-## gap&gt; f:=SCMorseSpec(c,30);
+## <Example><![CDATA[
+## gap> c:=SCSeriesTorus(2);;
+## gap> f:=SCMorseSpec(c,30);
 ## [ [ 4, [ 1, 2, 1 ], 30 ] ]
-## </Example>
-## <Example>
-## gap&gt; c:=SCSeriesHomologySphere(2,3,5);;
-## gap&gt; f:=SCMorseSpec(c,30,SCMorseRandom);
+## ]]></Example>
+## <Example><![CDATA[
+## gap> c:=SCSeriesHomologySphere(2,3,5);;
+## gap> f:=SCMorseSpec(c,30,SCMorseRandom);
 ## [ [ 6, [ 1, 2, 2, 1 ], 25 ], [ 8, [ 1, 3, 3, 1 ], 5 ] ]
-## gap&gt; f:=SCMorseSpec(c,30,SCMorseRandomLex);
+## gap> f:=SCMorseSpec(c,30,SCMorseRandomLex);
 ## [ [ 6, [ 1, 2, 2, 1 ], 30 ] ]
-## gap&gt; f:=SCMorseSpec(c,30,SCMorseRandomRevLex);
+## gap> f:=SCMorseSpec(c,30,SCMorseRandomRevLex);
 ## [ [ 6, [ 1, 2, 2, 1 ], 7 ], [ 8, [ 1, 3, 3, 1 ], 13 ], 
 ##   [ 10, [ 1, 4, 4, 1 ], 9 ], [ 10, [ 2, 4, 3, 1 ], 1 ] ]
-## gap&gt; f:=SCMorseSpec(c,30,SCMorseUST);
+## gap> f:=SCMorseSpec(c,30,SCMorseUST);
 ## [ [ 6, [ 1, 2, 2, 1 ], 18 ], [ 8, [ 1, 3, 3, 1 ], 8 ], 
 ##   [ 10, [ 1, 4, 4, 1 ], 4 ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -295,33 +295,33 @@
 ## <M>[ f, [t_1,...,t_n] ]</M>, where <M>f</M> is the (integer) 
 ## free part of <M>H_i</M> and <M>t_i</M> denotes the torsion parts of 
 ## <M>H_i</M> ordered in weakly increasing size.<P/>
-## <Example>
-## gap&gt; c:=SCSeriesTorus(2);;
-## gap&gt; f:=SCHomology(c);
+## <Example><![CDATA[
+## gap> c:=SCSeriesTorus(2);;
+## gap> f:=SCHomology(c);
 ## [ [ 0, [  ] ], [ 2, [  ] ], [ 1, [  ] ] ]
-## </Example>
-## <Example>
-## gap&gt; c := SCSeriesHomologySphere(2,3,5);;
-## gap&gt; SCHomologyEx(c,SCMorseRandom,SmithNormalFormIntegerMat); time;
+## ]]></Example>
+## <Example><![CDATA[
+## gap> c := SCSeriesHomologySphere(2,3,5);;
+## gap> SCHomologyEx(c,SCMorseRandom,SmithNormalFormIntegerMat); time;
 ## [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-## 35
-## gap&gt; c := SCSeriesHomologySphere(2,3,5);;
-## gap&gt; SCHomologyEx(c,SCMorseRandomLex,SmithNormalFormIntegerMat); time;
+## 31
+## gap> c := SCSeriesHomologySphere(2,3,5);;
+## gap> SCHomologyEx(c,SCMorseRandomLex,SmithNormalFormIntegerMat); time;
 ## [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-## 32
-## gap&gt; c := SCSeriesHomologySphere(2,3,5);;
-## gap&gt; SCHomologyEx(c,SCMorseRandomRevLex,SmithNormalFormIntegerMat); time;
+## 30
+## gap> c := SCSeriesHomologySphere(2,3,5);;
+## gap> SCHomologyEx(c,SCMorseRandomRevLex,SmithNormalFormIntegerMat); time;
 ## [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-## 32
-## gap&gt; c := SCSeriesHomologySphere(2,3,5);;
-## gap&gt; SCHomologyEx(c,SCMorseEngstroem,SmithNormalFormIntegerMat); time;
+## 33
+## gap> c := SCSeriesHomologySphere(2,3,5);;
+## gap> SCHomologyEx(c,SCMorseEngstroem,SmithNormalFormIntegerMat); time;
 ## [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-## 73
-## gap&gt; c := SCSeriesHomologySphere(2,3,5);;
-## gap&gt; SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;
+## 63
+## gap> c := SCSeriesHomologySphere(2,3,5);;
+## gap> SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;
 ## [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
-## 80
-## </Example>
+## 74
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -349,11 +349,11 @@
 ## is returned in form of a list <M>[ f, [t_1,...,t_n] ]</M>, where <M>f</M> 
 ## is the (integer) free part of <M>H_i</M> and <M>t_i</M> denotes the torsion 
 ## parts of <M>H_i</M> ordered in weakly increasing size.<P/>
-## <Example>
-## gap&gt; c:=SCSeriesTorus(2);;
-## gap&gt; f:=SCHomology(c);
+## <Example><![CDATA[
+## gap> c:=SCSeriesTorus(2);;
+## gap> f:=SCHomology(c);
 ## [ [ 0, [  ] ], [ 2, [  ] ], [ 1, [  ] ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -371,14 +371,14 @@
 ## spanning tree of the dual graph of the underlying complex. If
 ## <Arg>top = false</Arg> the output is a spanning tree of the primal graph 
 ## (i.e., the <M>1</M>-skeleton.
-## <Example>
-## gap&gt; c:=SCSurface(1,false);;
-## gap&gt; HD:=SCHasseDiagram(c);;
-## gap&gt; stTop:=SCSpanningTreeRandom(HD,true);
+## <Example><![CDATA[
+## gap> c:=SCSurface(1,false);;
+## gap> HD:=SCHasseDiagram(c);;
+## gap> stTop:=SCSpanningTreeRandom(HD,true);
 ## [ 15, 2, 6, 12, 7, 8, 1, 3, 11 ]
-## gap&gt; stBot:=SCSpanningTreeRandom(HD,false);
+## gap> stBot:=SCSpanningTreeRandom(HD,false);
 ## [ 9, 5, 3, 6, 11 ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -396,14 +396,14 @@
 ## <Arg>tries</Arg> determines the number of times the algorithm will try to 
 ## find a collapsing sequence. The algorithm is a heuristic method and is 
 ## described in <Cite Key="Paixao143SphereRec" />.
-## <Example>
-## gap&gt; rp2:=SCSurface(1,false);;
-## gap&gt; SCIsSimplyConnectedEx(rp2);
+## <Example><![CDATA[
+## gap> rp2:=SCSurface(1,false);;
+## gap> SCIsSimplyConnectedEx(rp2);
 ## false
-## gap&gt; c:=SCBdCyclicPolytope(8,18);;
-## gap&gt; SCIsSimplyConnectedEx(c);
+## gap> c:=SCBdCyclicPolytope(8,18);;
+## gap> SCIsSimplyConnectedEx(c);
 ## true
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -418,14 +418,14 @@
 ## connected. The algorithm is a heuristic method and is described in 
 ## <Cite Key="Paixao143SphereRec" />. Internally calls 
 ## <Ref Func="SCIsSimplyConnectedEx" />.
-## <Example>
-## gap&gt; rp2:=SCSurface(1,false);;
-## gap&gt; SCIsSimplyConnected(rp2);
+## <Example><![CDATA[
+## gap> rp2:=SCSurface(1,false);;
+## gap> SCIsSimplyConnected(rp2);
 ## false
-## gap&gt; c:=SCBdCyclicPolytope(8,18);;
-## gap&gt; SCIsSimplyConnected(c);
+## gap> c:=SCBdCyclicPolytope(8,18);;
+## gap> SCIsSimplyConnected(c);
 ## true
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -451,11 +451,11 @@
 ##
 ## See <Ref Func="SCBistellarIsManifold" /> for an alternative method for 
 ## manifold verification.
-## <Example>
-## gap&gt; c:=SCBdCyclicPolytope(4,20);;
-## gap&gt; SCIsManifold(c);
+## <Example><![CDATA[
+## gap> c:=SCBdCyclicPolytope(4,20);;
+## gap> SCIsManifold(c);
 ## true
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -469,11 +469,11 @@
 ## The algorithm is a heuristic method and is described in 
 ## <Cite Key="Paixao143SphereRec" /> in more detail.
 ## Internally calls <Ref Func="SCIsManifoldEx" />.
-## <Example>
-## gap&gt; c:=SCBdCyclicPolytope(4,20);;
-## gap&gt; SCIsManifold(c);
+## <Example><![CDATA[
+## gap> c:=SCBdCyclicPolytope(4,20);;
+## gap> SCIsManifold(c);
 ## true
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -495,14 +495,14 @@
 ## is a standard PL sphere. The function calls 
 ## <Ref Meth="SCIsSimplyConnected" /> which uses
 ## a heuristic method described in <Cite Key="Paixao143SphereRec" />.
-## <Example>
-## gap&gt; c:=SCBdCyclicPolytope(4,20);;
-## gap&gt; SCIsSphere(c);
+## <Example><![CDATA[
+## gap> c:=SCBdCyclicPolytope(4,20);;
+## gap> SCIsSphere(c);
 ## true
-## gap&gt; c:=SCSurface(1,true);;
-## gap&gt; SCIsSphere(c);
+## gap> c:=SCSurface(1,true);;
+## gap> SCIsSphere(c);
 ## false
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>

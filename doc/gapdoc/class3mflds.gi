@@ -10,10 +10,10 @@
 ## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification 
 ## of combinatorial 3-manifolds with transitive cyclic symmetry up to 
 ## <M>22</M> vertices.
-## <Example>
-## gap&gt; SCNrCyclic3Mflds(22);
+## <Example><![CDATA[
+## gap> SCNrCyclic3Mflds(22);
 ## 3090
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -31,11 +31,11 @@
 ## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification 
 ## of combinatorial 3-manifolds with transitive cyclic symmetry up to 
 ## <M>22</M> vertices.
-## <Example>
-## gap&gt; SCCyclic3MfldTopTypes(19);
+## <Example><![CDATA[
+## gap> SCCyclic3MfldTopTypes(19);
 ## [ "B2", "RP^2xS^1", "SFS[RP^2:(2,1)(3,1)]", "S^2~S^1", "S^3", "Sigma(2,3,7)", 
 ##   "T^3" ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -54,10 +54,10 @@
 ## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification 
 ## of combinatorial 3-manifolds with transitive cyclic symmetry up to 
 ## <M>22</M> vertices.
-## <Example>
-## gap&gt; SCCyclic3Mfld(15,34);
-## &lt;SimplicialComplex: Cyclic 3-mfld (15,34): T^3 | dim = 3 | n = 15&gt;
-## </Example>
+## <Example><![CDATA[
+## gap> SCCyclic3Mfld(15,34);
+## <SimplicialComplex: Cyclic 3-mfld (15,34): T^3 | dim = 3 | n = 15>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -76,10 +76,10 @@
 ## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the classification 
 ## of combinatorial 3-manifolds with transitive cyclic symmetry up to 
 ## <M>22</M> vertices.
-## <Example>
-## gap&gt; SCCyclic3MfldByType("T^3");
-## &lt;SimplicialComplex: Cyclic 3-mfld (15,34): T^3 | dim = 3 | n = 15&gt;
-## </Example>
+## <Example><![CDATA[
+## gap> SCCyclic3MfldByType("T^3");
+## <SimplicialComplex: Cyclic 3-mfld (15,34): T^3 | dim = 3 | n = 15>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -101,10 +101,10 @@
 ## See <Cite Key="Spreer11CyclicCombMflds"/> for more about the 
 ## classification of combinatorial 3-manifolds with transitive cyclic 
 ## symmetry up to <M>22</M> vertices.
-## <Example>
-## gap&gt; SCCyclic3MfldListOfGivenType("Sigma(2,3,7)");
+## <Example><![CDATA[
+## gap> SCCyclic3MfldListOfGivenType("Sigma(2,3,7)");
 ## [ [ 19, 100 ], [ 19, 118 ], [ 19, 120 ], [ 19, 130 ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>

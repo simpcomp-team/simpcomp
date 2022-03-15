@@ -20,18 +20,18 @@
 ## <M>(v_1 , \ldots v_n)</M> of all vertices  of <C>c</C> where <C>f</C> is 
 ## defined by <C>f</C><M>(v_i) = \frac{i-1}{n-1}</M>. The <M>i</M>-th entry 
 ## of the returned list denotes the multiplicity vector of vertex <M>v_i</M>.
-## <Example>
-## gap&gt; SCLib.SearchByName("K3");      
+## <Example><![CDATA[
+## gap> SCLib.SearchByName("K3");      
 ## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
-## gap&gt; c:=SCLib.Load(last[1][1]);;    
-## gap&gt; f:=SCVertices(c);              
+## gap> c:=SCLib.Load(last[1][1]);;    
+## gap> f:=SCVertices(c);              
 ## [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ]
-## gap&gt; SCMorseMultiplicityVector(c,f);
+## gap> SCMorseMultiplicityVector(c,f);
 ## [ [ 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0 ], 
 ##   [ 0, 0, 2, 0, 0 ], [ 0, 0, 1, 0, 0 ], [ 0, 0, 4, 0, 0 ], [ 0, 0, 3, 0, 0 ], 
 ##   [ 0, 0, 3, 0, 0 ], [ 0, 0, 4, 0, 0 ], [ 0, 0, 1, 0, 0 ], [ 0, 0, 2, 0, 0 ], 
 ##   [ 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1 ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -45,15 +45,15 @@
 ## Computes the number of critical points of each index of a rsl-function 
 ## <C>f</C> on a simplicial complex <C>c</C> as well as the total number of 
 ## critical points.
-## <Example>
-## gap&gt; SCLib.SearchByName("K3");      
+## <Example><![CDATA[
+## gap> SCLib.SearchByName("K3");      
 ## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
-## gap&gt; c:=SCLib.Load(last[1][1]);;    
-## gap&gt; f:=SCVertices(c);              
+## gap> c:=SCLib.Load(last[1][1]);;    
+## gap> f:=SCVertices(c);              
 ## [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ]
-## gap&gt; SCMorseNumberOfCriticalPoints(c,f);
+## gap> SCMorseNumberOfCriticalPoints(c,f);
 ## [ 24, [ 1, 0, 22, 0, 1 ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -69,15 +69,15 @@
 ## complex <C>c</C> or not. A rsl-function is said to be perfect, if it has 
 ## the minimum number of critical points, i. e. if the sum of its critical 
 ## points equals the sum of the Betti numbers of <C>c</C>.
-## <Example>
-## gap&gt; c:=SCBdCyclicPolytope(4,6);;
-## gap&gt; SCMinimalNonFaces(c);
+## <Example><![CDATA[
+## gap> c:=SCBdCyclicPolytope(4,6);;
+## gap> SCMinimalNonFaces(c);
 ## [ [  ], [  ], [ [ 1, 3, 5 ], [ 2, 4, 6 ] ] ]
-## gap&gt; SCMorseIsPerfect(c,[1..6]);
+## gap> SCMorseIsPerfect(c,[1..6]);
 ## true
-## gap&gt; SCMorseIsPerfect(c,[1,3,5,2,4,6]);   
+## gap> SCMorseIsPerfect(c,[1,3,5,2,4,6]);   
 ## false
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -104,27 +104,27 @@
 ## <M>(v_1 , v_2)</M> where <M>v_1 \in V_1</M> and <M>v_2 \in V_2</M>. They 
 ## represent the center points of the edges <M>\rangle v_1 , v_2 \langle </M> 
 ## defined by the intersection of <Arg>slicing</Arg> with <Arg>complex</Arg>.
-## <Example>
-## gap&gt; c:=SCBdCyclicPolytope(4,6);;
-## gap&gt; v:=SCVertices(c);
+## <Example><![CDATA[
+## gap> c:=SCBdCyclicPolytope(4,6);;
+## gap> v:=SCVertices(c);
 ## [ 1 .. 6 ]
-## gap&gt; SCMinimalNonFaces(c);
+## gap> SCMinimalNonFaces(c);
 ## [ [  ], [  ], [ [ 1, 3, 5 ], [ 2, 4, 6 ] ] ]
-## gap&gt; ns:=SCSlicing(c,[v{[1,3,5]},v{[2,4,6]}]);     
-## &lt;NormalSurface: slicing [ [ 1, 3, 5 ], [ 2, 4, 6 ] ] of Bd(C_4(6)) | dim = 2&gt;
-## </Example>
-## <Example>
-## gap&gt; c:=SCBdSimplex(5);;
-## gap&gt; v:=SCVertices(c);
+## gap> ns:=SCSlicing(c,[v{[1,3,5]},v{[2,4,6]}]);     
+## <NormalSurface: slicing [ [ 1, 3, 5 ], [ 2, 4, 6 ] ] of Bd(C_4(6)) | dim = 2>
+## ]]></Example>
+## <Example><![CDATA[
+## gap> c:=SCBdSimplex(5);;
+## gap> v:=SCVertices(c);
 ## [ 1 .. 6 ]
-## gap&gt; slicing:=SCSlicing(c,[v{[1,3,5]},v{[2,4,6]}]);
+## gap> slicing:=SCSlicing(c,[v{[1,3,5]},v{[2,4,6]}]);
 ## [ [ [ 1, 2 ], [ 1, 4 ], [ 3, 2 ], [ 3, 4 ], [ 5, 2 ], [ 5, 4 ] ], 
 ##   [ [ 1, 2 ], [ 1, 4 ], [ 1, 6 ], [ 3, 2 ], [ 3, 4 ], [ 3, 6 ] ], 
 ##   [ [ 1, 2 ], [ 1, 6 ], [ 3, 2 ], [ 3, 6 ], [ 5, 2 ], [ 5, 6 ] ], 
 ##   [ [ 1, 2 ], [ 1, 4 ], [ 1, 6 ], [ 5, 2 ], [ 5, 4 ], [ 5, 6 ] ], 
 ##   [ [ 1, 4 ], [ 1, 6 ], [ 3, 4 ], [ 3, 6 ], [ 5, 4 ], [ 5, 6 ] ], 
 ##   [ [ 3, 2 ], [ 3, 4 ], [ 3, 6 ], [ 5, 2 ], [ 5, 4 ], [ 5, 6 ] ] ]
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
@@ -181,64 +181,64 @@
 ## <Ref Meth="SCAutomorphismGroup" />. In case it is <M>k</M>-transitive, the 
 ## complexity is reduced by the factor of <M>n \cdot (n-1) \cdot \dots \cdot 
 ## (n-k+1)</M>.
-## <Example>
-## gap&gt; list:=SCLib.SearchByName("S^2~S^1 (VT)"){[1..9]};;
-## gap&gt; s2s1:=SCLib.Load(list[1][1]);
-## &lt;SimplicialComplex: S^2~S^1 (VT) | dim = 3 | n = 9&gt;
-## gap&gt; SCInfoLevel(2); # print information while running
+## <Example><![CDATA[
+## gap> list:=SCLib.SearchByName("S^2~S^1 (VT)"){[1..9]};;
+## gap> s2s1:=SCLib.Load(list[1][1]);
+## <SimplicialComplex: S^2~S^1 (VT) | dim = 3 | n = 9>
+## gap> SCInfoLevel(2); # print information while running
 ## true
-## gap&gt; SCIsTight(s2s1); time;
+## gap> SCIsTight(s2s1); time;
 ## #I  SCIsTight: complex is 3-dimensional and tight neighbourly, and thus tight.
 ## true
 ## 2
-## </Example> 
-## <Example>
-## gap&gt; SCLib.SearchByAttribute("F[1] = 120");
+## ]]></Example> 
+## <Example><![CDATA[
+## gap> SCLib.SearchByAttribute("F[1] = 120");
 ## [ [ 648, "Bd(600-cell)" ] ]
-## gap&gt; id:=last[1][1];;
-## gap&gt; c:=SCLib.Load(id);;
-## gap&gt; SCIsTight(c); time;
+## gap> id:=last[1][1];;
+## gap> c:=SCLib.Load(id);;
+## gap> SCIsTight(c); time;
 ## #I  SCIsTight: complex is connected but not 2-neighbourly, and thus not tight.
 ## false
-## 193369
-## </Example>
-## <Example>
-## gap&gt; SCInfoLevel(0);
+## 194392
+## ]]></Example>
+## <Example><![CDATA[
+## gap> SCInfoLevel(0);
 ## true
-## gap&gt; SCLib.SearchByName("K3");  
+## gap> SCLib.SearchByName("K3");  
 ## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
-## gap&gt; c:=SCLib.Load(last[1][1]);;
-## gap&gt; SCIsManifold(c);
+## gap> c:=SCLib.Load(last[1][1]);;
+## gap> SCIsManifold(c);
 ## true
-## gap&gt; SCInfoLevel(1);
+## gap> SCInfoLevel(1);
 ## true
-## gap&gt; c.IsTight;                 
+## gap> c.IsTight;                 
 ## #I  SCIsTight: complex is (k+1)-neighborly 2k-manifold and thus tight.
 ## true
-## </Example>
-## <Example>
-## gap&gt; SCInfoLevel(1);
+## ]]></Example>
+## <Example><![CDATA[
+## gap> SCInfoLevel(1);
 ## true
-## gap&gt; dc:=[ [ 1, 1, 1, 1, 45 ], [ 1, 2, 1, 27, 18 ], [ 1, 27, 9, 9, 3 ], 
+## gap> dc:=[ [ 1, 1, 1, 1, 45 ], [ 1, 2, 1, 27, 18 ], [ 1, 27, 9, 9, 3 ], 
 ## > [ 4, 7, 20, 9, 9 ], [ 9, 9, 11, 9, 11 ], [ 6, 9, 9, 17, 8 ], 
 ## > [ 6, 10, 8, 17, 8 ], [ 8, 8, 8, 8, 17 ], [ 5, 6, 9, 9, 20 ] ];;
-## gap&gt; c:=SCBoundary(SCFromDifferenceCycles(dc));;
-## gap&gt; SCAutomorphismGroup(c);;
-## gap&gt; SCIsTight(c);
+## gap> c:=SCBoundary(SCFromDifferenceCycles(dc));;
+## gap> SCAutomorphismGroup(c);;
+## gap> SCIsTight(c);
 ## #I  SCIsTight: complex is (k+1)-neighborly 2k-manifold and thus tight.
 ## true
-## </Example>
-## <Example>
-## gap&gt; list:=SCLib.SearchByName("S^3xS^1");;
-## gap&gt; c:=SCLib.Load(list[1][1]);           
-## &lt;SimplicialComplex: S^3xS^1 (VT) | dim = 4 | n = 11&gt;
-## gap&gt; SCInfoLevel(0);
+## ]]></Example>
+## <Example><![CDATA[
+## gap> list:=SCLib.SearchByName("S^3xS^1");;
+## gap> c:=SCLib.Load(list[1][1]);           
+## <SimplicialComplex: S^3xS^1 (VT) | dim = 4 | n = 11>
+## gap> SCInfoLevel(0);
 ## true
-## gap&gt; SCIsManifold(c);
+## gap> SCIsManifold(c);
 ## true
-## gap&gt; SCInfoLevel(2); 
+## gap> SCInfoLevel(2); 
 ## true
-## gap&gt; c.IsTight;                
+## gap> c.IsTight;                
 ## #I  SCIsInKd: checking link 1/11
 ## #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
 ## #I  SCIsKStackedSphere: try 1/1
@@ -407,7 +407,7 @@
 ## #I  SCIsInKd: all links are 1-stacked.
 ## #I  SCIsTight: complex is in class K(1) and 2-neighborly, thus tight.
 ## true
-## </Example>
+## ]]></Example>
 ## </Description>
 ## </ManSection>
 ##<#/GAPDoc>
