@@ -15,9 +15,9 @@
   [[20XBD08[120X]   [16XBagchi,   B.   and  Datta,  B.[116X,  [17XLower  bound  theorem  for  normal
   pseudomanifolds[117X, [18XExpo. Math.[118X, [19X26[119X, 4 (2008), 327--351.
   
-  [[20XBD11[120X]  [16XBagchi,  B.  and Datta, B.[116X, [17XOn Walkup's class scr K(d) and a minimal
-  triangulation  of (S3hbox\timeslower 3pthbox--} S1)^#3[117X, [18XDiscrete Math.[118X, [19X311[119X,
-  12 (2011), 989--995.
+  [[20XBD11[120X]  [16XBagchi,  B.  and  Datta,  B.[116X,  [17XOn  Walkup's class mathcal K(d) and a
+  minimal  triangulation  of  (S^3  dtimes  S^1)^#3[117X,  [18XDiscrete  Math.[118X, [19X311[119X, 12
+  (2011), 989--995.
   
   [[20XBDS16[120X]  [16XBagchi, B., Datta, B. and Spreer, J.[116X, [17XA characterization of tightly
   triangulated   3-manifolds[117X   (2016),   ((Preprint,  6  pages,  2  figures)),
@@ -191,7 +191,7 @@
   Mathematik und ihrer Grenzgebiete, Band 69)).
   
   [[20XR\t13[120X]     [16XR\"{o}der,     M.[116X,     [17XGAP     package     polymaking[117X    (2013),
-  {\url{http://www.gap-system.org/Packages/polymaking.html}}.
+  {\url{https://www.gap-system.org/Packages/polymaking.html}}.
   
   [[20XSch94[120X]  [16XSchulz,  C.[116X,  [17XPolyhedral  manifolds  on polytopes[117X, [18XRend. Circ. Mat.
   Palermo (2) Suppl.[118X, 35 (1994), 291--298, ((First International Conference on
@@ -203,7 +203,7 @@
   
   [[20XSoi12[120X]  [16XSoicher,  L.  H.[116X, [17XGRAPE - GRaph Algorithms using PErmutation groups[117X
   (2012),                         (({Version                         4.6.1})),
-  {\url{http://www.gap-system.org/Packages/grape.html}}.
+  {\url{https://www.gap-system.org/Packages/grape.html}}.
   
   [[20XSpa56[120X]  [16XSpanier,  E.  H.[116X,  [17XThe  homology  of Kummer manifolds[117X, [18XProc. AMS[118X, [19X7[119X
   (1956), 155--160.

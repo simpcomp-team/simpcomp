@@ -6,10 +6,10 @@
                      [1XA [5XGAP[105X toolbox for simplicial complexes[101X
   
   
-                                 Version 2.1.13
+                                 Version 2.1.14
   
   
-                                   07/06/2021
+                                   15/03/2022
   
   
                                Felix Effenberger
@@ -23,7 +23,7 @@
   Jonathan Spreer
       Email:    [7Xmailto:jonathan.spreer@sydney.edu.au[107X
       Address:  [33X[0;14YSchool of Mathematics and Statistics F07[133X
-                [33X[0;14Y", The University of Sydney[133X
+                [33X[0;14YThe University of Sydney[133X
                 [33X[0;14YNSW 2006 Australia[133X
   
   
@@ -71,7 +71,7 @@
   
   [33X[0;0Y[5Xsimpcomp[105X  is  free  software. The code of [5Xsimpcomp[105X is released under the GPL
   version  2  or  later  (at your preference). For the text of the GPL see the
-  file [10XCOPYING[110X in the [5Xsimpcomp[105X directory or [7Xhttp://www.gnu.org/licenses/[107X.[133X
+  file [10XCOPYING[110X in the [5Xsimpcomp[105X directory or [7Xhttps://www.gnu.org/licenses/[107X.[133X
   
   
   -------------------------------------------------------
@@ -440,7 +440,7 @@
       13.2-7 SCImportPolymake
       13.2-8 SCExportLatexTable
       13.2-9 SCExportJavaView
-      13.2-10 SCExportPolymake
+      13.2-10 SCExportRecognizer
       13.2-11 SCExportSnapPy
   14 [33X[0;0YInterfaces to other software packages[133X
     14.1 [33X[0;0YInterface to the [5XGAP[105X-package [5Xhomalg[105X[133X

@@ -1,7 +1,7 @@
 name: simpcomp
-version: "2.1.13"
+version: "2.1.14"
 license: "GPL-2.0-or-later"
-date: 2021-06-07
+date: 2022-03-15
 description: |
     A GAP toolbox for simplicial complexes
 
@@ -47,13 +47,13 @@ suggested-pkgs:
       version: ">=2011.10.05"
       url: "https://homalg-project.github.io/homalg_project/Modules"
 
-www: https://github.com/simpcomp-team/simpcomp
+www: https://simpcomp-team.github.io/simpcomp
 readme: README.md
-packageinfo: https://github.com/simpcomp-team/simpcomp/PackageInfo.g
+packageinfo: https://simpcomp-team.github.io/simpcomp/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/simpcomp-team/simpcomp/releases/download/v2.1.13/simpcomp-2.1.13.tar.gz
+      url: https://github.com/simpcomp-team/simpcomp/releases/download/v2.1.14/simpcomp-2.1.14.tar.gz
 
 abstract: |
     <span class="pkgname">simpcomp</span> is a <span class="pkgname">GAP</span> package for working with simplicial complexes. It allows the computation of many properties of simplicial complexes (such as the f-, g- and h-vectors, the face lattice, the automorphism group, (co-)homology with explicit basis computation, intersection form, etc.) and provides the user with functions to compute new complexes from old (simplex links and stars, connected sums, cartesian products, handle additions, bistellar flips, etc.). Furthermore, it comes with an extensive library of known triangulations of manifolds and provides the user with the possibility to create own complex libraries.<br /> <span class="pkgname">simpcomp</span> caches computed properties of a simplicial complex, thus avoiding unnecessary computations, internally handles the vertex labeling of the complexes and insures the consistency of a simplicial complex throughout all operations.<br /> <span class="pkgname">simpcomp</span> relies on the <span class="pkgname">GAP</span> package <span class="pkgname">homology</span> for its homology computation, but also provides the user with an own (co-)homology algorithm in case the packacke <span class="pkgname">homology</span> is not available. For automorphism group computation the <span class="pkgname">GAP</span> package <span class="pkgname">GRAPE</span> is used, which in turn uses the program <tt>nauty</tt> by Brendan McKay. An internal automorphism group calculation algorithm in used as fallback if the <span class="pkgname">GRAPE</span> package is not available.
@@ -65,30 +65,29 @@ keywords: |
     simplicial complexes, combinatorial topology, combinatorial manifolds, PL equivalence, triangulating manifolds.
 citeas: |
     <p class='BibEntry'>
-    [<span class='BibKey'>ES21</span>]   <b class='BibAuthor'>Effenberger, F. and Spreer, J.</b>,
+    [<span class='BibKey'>ES22</span>]   <b class='BibAuthor'>Effenberger, F. and Spreer, J.</b>,
      <i class='BibTitle'>simpcomp, A GAP toolbox for simplicial complexes,
-             Version 2.1.13</i>
-     (<span class='BibYear'>2021</span>)<br />
+             Version 2.1.14</i>
+     (<span class='BibYear'>2022</span>)<br />
     (<span class='BibNote'>Refereed GAP package</span>),
-    <span class='BibHowpublished'><a href="https://github.com/simpcomp-team/simpcomp">https://github.com/simpcomp-team/simpcomp</a></span>.
+    <span class='BibHowpublished'><a href="https://simpcomp-team.github.io/simpcomp">https://simpcomp-team.github.io/simpcomp</a></span>.
     </p>
     
 
 bibtex: |
-    @misc{ simpcomp2.1.13,
+    @misc{ simpcomp2.1.14,
       author =           {Effenberger, F. and Spreer, J.},
       title =            {{simpcomp},  A  GAP  toolbox for simplicial complexes,
-                          {V}ersion 2.1.13},
-      month =            {Jun},
-      year =             {2021},
+                          {V}ersion 2.1.14},
+      month =            {Mar},
+      year =             {2022},
       note =             {Refereed GAP package},
-      howpublished =     {\href      {https://github.com/simpcomp-team/simpcomp}
-                          {\texttt{https://github.com/}\discretionary
-                          {}{}{}\texttt{simpcomp-team/}\discretionary
+      howpublished =     {\href       {https://simpcomp-team.github.io/simpcomp}
+                          {\texttt{https://simpcomp-team.github.io/}\discretionary
                           {}{}{}\texttt{simpcomp}}},
       keywords =         {simplicial    complexes;    combinatorial    topology;
                           combinatorial manifolds; PL equivalence; triangulating
                           manifolds},
-      printedkey =       {ES21}
+      printedkey =       {ES22}
     }
 

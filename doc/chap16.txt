@@ -90,7 +90,7 @@
         EulerCharacteristic             [2XSCEulerCharacteristic[102X ([14X7.3-3[114X)             
         ExportJavaView                  [2XSCExportJavaView[102X ([14X13.2-9[114X)                 
         ExportLatexTable                [2XSCExportLatexTable[102X ([14X13.2-8[114X)               
-        ExportPolymake                  [2XSCExportPolymake[102X ([14X13.2-10[114X)                
+        ExportPolymake                  [2XSCExportPolymake[102X ([14X13.2-6[114X)                 
   
         F                                [2XSCFVector[102X ([14X7.3-4[114X)                          
         FaceLattice                      [2XSCFaceLattice[102X ([14X7.3-5[114X)                      

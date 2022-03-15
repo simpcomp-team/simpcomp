@@ -13,8 +13,8 @@ SetPackageInfo( rec(
 
 PackageName := "simpcomp",
 Subtitle := "A GAP toolbox for simplicial complexes",
-Version := "2.1.13",
-Date := "07/06/2021",
+Version := "2.1.14",
+Date := "15/03/2022",
 License := "GPL-2.0-or-later",
 
 SourceRepository := rec(
@@ -22,7 +22,7 @@ SourceRepository := rec(
     URL := Concatenation( "https://github.com/simpcomp-team/", ~.PackageName ),
 ),
 IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
-PackageWWWHome  := Concatenation( "https://github.com/simpcomp-team/", ~.PackageName ),
+PackageWWWHome  := Concatenation( "https://simpcomp-team.github.io/", ~.PackageName ),
 README_URL      := Concatenation( ~.PackageWWWHome, "/README.md" ),
 PackageInfoURL  := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
 ArchiveURL      := Concatenation( ~.SourceRepository.URL,
@@ -134,7 +134,17 @@ end,
 
 ##  *Optional*, but recommended: path relative to package root to a file which
 ##  contains as many tests of the package functionality as sensible.
-TestFile := "tst/simpcomp.tst"
+TestFile := "tst/simpcomp.tst",
+
+AutoDoc := rec(
+    # provide some entities to be used on the title page
+    entities := rec(
+        VERSION := ~.Version,
+        DATE := ~.Date,
+        YEAR := SplitString(~.Date,"/")[3],
+        ),
+    TitlePage := rec( ), # Empty TitlePage here is a workaround for an AutoDoc bug
+),
 
 ));
 

@@ -123,7 +123,7 @@
  gap&gt; SCBistellarOptions.Mode;
  0
  gap&gt; SCBistellarOptions.WriteLevel;
- 1
+ 0
  gap&gt; SCBistellarOptions.MailNotifyInterval;
  86400
  gap&gt; SCBistellarOptions.MaxIntervalIsManifold;
@@ -151,9 +151,6 @@
  gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
  gap&gt; refObj:=SCBdSimplex(2);; # triangle as a (minimal) reference object
  gap&gt; SCEquivalent(obj,refObj);
- #I  round 0: [ 5, 5 ]
- #I  round 1: [ 4, 4 ]
- #I  round 2: [ 3, 3 ]
  #I  SCReduceComplexEx: complexes are bistellarly equivalent.
  true
  </pre></div>
@@ -170,7 +167,9 @@
 
 <div class="example"><pre>
  gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);
+ &lt;SimplicialComplex: unnamed complex 7 | dim = 1 | n = 6&gt;
  gap&gt; SCExamineComplexBistellar(obj);
+ &lt;SimplicialComplex: unnamed complex 7 | dim = 1 | n = 6&gt;
  </pre></div>
 
 <p><a id="X7AEB9242837CCE5D" name="X7AEB9242837CCE5D"></a></p>
@@ -204,16 +203,14 @@
  gap&gt; SCLib.SearchByName("S^4~S^1");;
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; l:=SCLink(c,1);
+ &lt;SimplicialComplex: lk([ 1 ]) in S^4~S^1 (VT) | dim = 4 | n = 12&gt;
  gap&gt; SCIsKStackedSphere(l,1);
- #I  SCIsKStackedSphere: try 1/50
- #I  round 0: [ 11, 40, 70, 65, 26 ]
- #I  round 1: [ 10, 35, 60, 55, 22 ]
- #I  round 2: [ 9, 30, 50, 45, 18 ]
- #I  round 3: [ 8, 25, 40, 35, 14 ]
- #I  round 4: [ 7, 20, 30, 25, 10 ]
- #I  round 5: [ 6, 15, 20, 15, 6 ]
- #I  SCReduceComplexEx: computed locally minimal complex after 6 rounds.
- 1
+ #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
+ #I  SCIsKStackedSphere: try 1/1
+ #I  SCIsKStackedSphere: complex is a 1-stacked sphere.
+ [ true, 
+   &lt;SimplicialComplex: Filled 1-stacked sphere (lk([ 1 ]) in S^4~S^1 (VT)) | di\
+ m = 5 | n = 12&gt; ]
  </pre></div>
 
 <p><a id="X7E81340E8469C8EB" name="X7E81340E8469C8EB"></a></p>
@@ -235,15 +232,6 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdCrossPolytope(3);;
  gap&gt; SCBistellarIsManifold(c);
- #I  SCBistellarIsManifold: processing vertex link 1/6
- #I  round 0: [ 3, 3 ]
- #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
- #I  SCBistellarIsManifold: link is sphere.
- ...
- #I  SCBistellarIsManifold: processing vertex link 6/6
- #I  round 0: [ 3, 3 ]
- #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
- #I  SCBistellarIsManifold: link is sphere.
  true
  </pre></div>
 
@@ -286,12 +274,14 @@
 
 <div class="example"><pre>
  gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,1]]);
+ &lt;SimplicialComplex: unnamed complex 5 | dim = 1 | n = 4&gt;
  gap&gt; moves:=SCMoves(obj);
- [[[[1, 2], []], [[1, 4], []], 
-     [[2, 3], []], [[3, 4], []]], 
-   [[[1], [2, 4]], [[2], [1, 3]], 
-     [[3], [2, 4]], [[4], [1, 3]]]]
+ [ [ [ [ 1, 2 ], [  ] ], [ [ 1, 4 ], [  ] ], [ [ 2, 3 ], [  ] ], 
+       [ [ 3, 4 ], [  ] ] ], 
+   [ [ [ 1 ], [ 2, 4 ] ], [ [ 2 ], [ 1, 3 ] ], [ [ 3 ], [ 2, 4 ] ], 
+       [ [ 4 ], [ 1, 3 ] ] ] ]
  gap&gt; obj:=SCMove(obj,last[2][1]);
+ &lt;SimplicialComplex: unnamed complex 6 | dim = 1 | n = 3&gt;
  </pre></div>
 
 <p><a id="X87B1CBC97FC5C120" name="X87B1CBC97FC5C120"></a></p>
@@ -307,19 +297,14 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdCrossPolytope(3);;
  gap&gt; moves:=SCMoves(c);
- [
- # 0-moves
-   [[[1, 3, 5], []], [[1, 3, 6], []], [[1, 4, 5], []], 
-     [[1, 4, 6], []], [[2, 3, 5], []], [[2, 3, 6], []],
-     [[2, 4, 5], []], [[2, 4, 6], []]], 
- # 1-moves
-   [[[1, 3], [5, 6]], [[1, 4], [5, 6]], [[1, 5], [3, 4]], 
-     [[1, 6], [3, 4]], [[2, 3], [5, 6]], [[2, 4], [5, 6]], 
-     [[2, 5], [3, 4]], [[2, 6], [3, 4]], [[3, 5], [1, 2]], 
-     [[3, 6], [1, 2]], [[4, 5], [1, 2]], [[4, 6], [1, 2]]],
- # 2-moves
-   [] 
-]
+ [ [ [ [ 1, 3, 5 ], [  ] ], [ [ 1, 3, 6 ], [  ] ], [ [ 1, 4, 5 ], [  ] ], 
+       [ [ 1, 4, 6 ], [  ] ], [ [ 2, 3, 5 ], [  ] ], [ [ 2, 3, 6 ], [  ] ], 
+       [ [ 2, 4, 5 ], [  ] ], [ [ 2, 4, 6 ], [  ] ] ], 
+   [ [ [ 1, 3 ], [ 5, 6 ] ], [ [ 1, 4 ], [ 5, 6 ] ], [ [ 1, 5 ], [ 3, 4 ] ], 
+       [ [ 1, 6 ], [ 3, 4 ] ], [ [ 2, 3 ], [ 5, 6 ] ], [ [ 2, 4 ], [ 5, 6 ] ], 
+       [ [ 2, 5 ], [ 3, 4 ] ], [ [ 2, 6 ], [ 3, 4 ] ], [ [ 3, 5 ], [ 1, 2 ] ], 
+       [ [ 3, 6 ], [ 1, 2 ] ], [ [ 4, 5 ], [ 1, 2 ] ], [ [ 4, 6 ], [ 1, 2 ] ] ]
+     , [  ] ]
  </pre></div>
 
 <p><a id="X7E70D44179ED6A78" name="X7E70D44179ED6A78"></a></p>
@@ -359,8 +344,9 @@
 
 <div class="example"><pre>
  gap&gt; c:=SCRandomize(SCBdSimplex(4));
+ &lt;SimplicialComplex: Randomized S^3_5 | dim = 3 | n = 16&gt;
  gap&gt; c.F;
- [ 20, 85, 130, 65 ]
+ [ 16, 65, 98, 49 ]
  </pre></div>
 
 <p><a id="X85D69E4F84E8E7D9" name="X85D69E4F84E8E7D9"></a></p>
@@ -387,9 +373,7 @@
  gap&gt; c:=SCFromFacets([[1,3],[3,5],[4,5],[4,1]]);;
  gap&gt; SCBistellarOptions.WriteLevel:=0;; # do not save any complexes                      
  gap&gt; SCReduceAsSubcomplex(c,SCBdCrossPolytope(3));
- #I  round 0, move: [ [ 2 ], [ 1, 4 ] ]
- [ 3, 3 ]
- #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
+ [ true, &lt;SimplicialComplex: unnamed complex 36 | dim = 1 | n = 3&gt;, 1 ]
 </pre></div>
 
 <p><a id="X7FF4BBEC8574C58F" name="X7FF4BBEC8574C58F"></a></p>
@@ -412,13 +396,7 @@
  gap&gt; obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
  gap&gt; SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
  gap&gt; tmp := SCReduceComplex(obj);
- #I  round 0, move: [ [ 6 ], [ 1, 5 ] ]
- [ 5, 5 ]
- #I  round 1, move: [ [ 4 ], [ 3, 5 ] ]
- [ 4, 4 ]
- #I  round 2, move: [ [ 3 ], [ 2, 5 ] ]
- [ 3, 3 ]
- #I  SCReduceComplexEx: computed locally minimal complex after 3 rounds.
+ [ true, &lt;SimplicialComplex: unnamed complex 27 | dim = 1 | n = 3&gt;, 3 ]
  </pre></div>
 
 <p><a id="X814D9AE287F64F74" name="X814D9AE287F64F74"></a></p>
@@ -466,18 +444,21 @@
  gap&gt; c:=SCBdCrossPolytope(4);;
  gap&gt; SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
  gap&gt; SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
+ [ true, &lt;SimplicialComplex: unnamed complex 13 | dim = 3 | n = 5&gt;, 7 ]
  gap&gt; SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
+ [ true, &lt;SimplicialComplex: unnamed complex 18 | dim = 3 | n = 5&gt;, 9 ]
  gap&gt; SCMailSetAddress("johndoe@somehost");   
  true
  gap&gt; SCMailIsEnabled();                     
  true
  gap&gt; SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
+ [ true, &lt;SimplicialComplex: unnamed complex 23 | dim = 3 | n = 5&gt;, 7 ]
  </pre></div>
 
 <p>Content of sent mail:</p>
 
 
-<div class="example"><pre> NOEXECUTE
+<div class="example"><pre> 
  Greetings master,
  
  this is simpcomp 0.0.0 running on comp01.maths.fancytown.edu

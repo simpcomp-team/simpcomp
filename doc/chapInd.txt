@@ -79,7 +79,8 @@
   [2XSCExportJavaView[102X 13.2-9 
   [2XSCExportLatexTable[102X 13.2-8 
   [2XSCExportMacaulay2[102X 13.2-5 
-  [2XSCExportPolymake[102X 13.2-6  13.2-10 
+  [2XSCExportPolymake[102X 13.2-6 
+  [2XSCExportRecognizer[102X 13.2-10 
   [2XSCExportSnapPy[102X 13.2-11 
   [2XSCExportToString[102X 6.2-1 
   [2XSCFaceLattice[102X 6.9-15  7.3-5 

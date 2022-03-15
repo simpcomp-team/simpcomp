@@ -52,7 +52,7 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap13.html#X871C94B978881445">13.2-7 SCImportPolymake</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap13.html#X790C0AD9807A5D82">13.2-8 SCExportLatexTable</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap13.html#X859BCB9986B55E14">13.2-9 SCExportJavaView</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap13.html#X7F214CF77E65C1A9">13.2-10 SCExportPolymake</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap13.html#X87B05F177D4C2F27">13.2-10 SCExportRecognizer</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap13.html#X7B933EA27E8E79C8">13.2-11 SCExportSnapPy</a></span>
 </div></div>
 </div>
@@ -97,23 +97,22 @@
 <div class="example"><pre>
  gap&gt; SCLib;
  [Simplicial complex library. Properties:
-  CalculateIndexAttributes=true
-  Number of complexes in library=689
-  IndexAttributes=["Name", "Date", "Dim", "F", "G", "H", "Chi", "Homology"]
-  Loaded=true
-  Path="GAPROOT/pkg/simpcomp/complexes/"
+ CalculateIndexAttributes=true
+ Number of complexes in library=648
+ IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
+   "IsManifold" ]
+ Loaded=true
+ Path="/home/jonathan/bin/gap-4.11.1/pkg/simpcomp/complexes/"
  ]
  gap&gt; SCLib.Size;
- 689
+ 648
  gap&gt; SCLib.SearchByName("S^4~");
- [ [ 203, "S^4~S^1 (VT)" ], [ 330, "S^4~S^1 (VT)" ], 
-   [ 332, "S^4~S^1 (VT)" ], [ 395, "S^4~S^1 (VT)" ], 
-   [ 451, "S^4~S^1 (VT)" ], [ 452, "S^4~S^1 (VT)" ], 
-   [ 453, "S^4~S^1 (VT)" ], [ 454, "S^4~S^1 (VT)" ], 
-   [ 455, "S^4~S^1 (VT)" ], [ 458, "S^4~S^1 (VT)" ], 
-   [ 459, "S^4~S^1 (VT)" ], [ 460, "S^4~S^1 (VT)" ] ]
+ [ [ 203, "S^4~S^1 (VT)" ], [ 330, "S^4~S^1 (VT)" ], [ 332, "S^4~S^1 (VT)" ], 
+   [ 395, "S^4~S^1 (VT)" ], [ 451, "S^4~S^1 (VT)" ], [ 452, "S^4~S^1 (VT)" ], 
+   [ 453, "S^4~S^1 (VT)" ], [ 454, "S^4~S^1 (VT)" ], [ 455, "S^4~S^1 (VT)" ], 
+   [ 458, "S^4~S^1 (VT)" ], [ 459, "S^4~S^1 (VT)" ], [ 460, "S^4~S^1 (VT)" ] ]
  gap&gt; SCLib.Load(last[1][1]);          
- 
+ &lt;SimplicialComplex: S^4~S^1 (VT) | dim = 5 | n = 13&gt;
  </pre></div>
 
 <p><a id="X85A9A589831467BB" name="X85A9A589831467BB"></a></p>
@@ -130,14 +129,16 @@
  gap&gt; info:=InfoLevel(InfoSimpcomp);;
  gap&gt; SCInfoLevel(0);;
  gap&gt; myRepository:=SCLibInit("/tmp/repository");
- #I  SCLibInit: made directory "/tmp/repository/" for user library.
- #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
- #I  SCLibUpdate: rebuilding index for /tmp/repository/.
- #I  SCLibUpdate: rebuilding index done.
+ [Simplicial complex library. Properties:
+ CalculateIndexAttributes=true
+ Number of complexes in library=0
+ IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
+   "IsManifold" ]
+ Loaded=true
+ Path="/tmp/repository/"
+ ]
  gap&gt; complex1:=SCBdCrossPolytope(4);;
  gap&gt; SCLibAdd(myRepository,complex1);
- #I  SCLibAdd: saving complex to file "complex_Bd(beta4)_2009-10-29_17-12-36.sc\
- ".
  true
  gap&gt; complex2:=SCBdCrossPolytope(4);;
  gap&gt; myRepository.Add(complex2);; # alternative syntax
@@ -159,7 +160,7 @@
  gap&gt; all[1];
  [ 1, "Moebius Strip" ]
  gap&gt; Length(all);
- 7648
+ 648
  </pre></div>
 
 <p><a id="X802B22077DB1F14B" name="X802B22077DB1F14B"></a></p>
@@ -174,10 +175,14 @@
 
 <div class="example"><pre>
  gap&gt; myRepository:=SCLibInit("/tmp/repository");
- #I  SCLibInit: made directory "/tmp/repository/" for user library.
- #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
- #I  SCLibUpdate: rebuilding index for /tmp/repository/.
- #I  SCLibUpdate: rebuilding index done.
+ [Simplicial complex library. Properties:
+ CalculateIndexAttributes=true
+ Number of complexes in library=2
+ IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
+   "IsManifold" ]
+ Loaded=true
+ Path="/tmp/repository/"
+ ]
  gap&gt; SCLibAdd(myRepository,SCSimplex(2));;
  gap&gt; SCLibDelete(myRepository,1);
  true
@@ -203,6 +208,7 @@
  gap&gt; c:=SCFromFacets([[1,2,3],[1,2,6],[1,3,5],[1,4,5],[1,4,6],
                        [2,3,4],[2,4,5],[2,5,6],[3,4,6],[3,5,6]]);;
  gap&gt; SCLibDetermineTopologicalType(c);
+ &lt;SimplicialComplex: unnamed complex 250 | dim = 2 | n = 6&gt;
  </pre></div>
 
 <p><a id="X7C3151F280BC8754" name="X7C3151F280BC8754"></a></p>
@@ -217,13 +223,8 @@
 
 <div class="example"><pre>
  gap&gt; myRepository:=SCLibInit("/tmp/repository");;
- #I  SCLibInit: made directory "/tmp/repository/" for user library.
- #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
- #I  SCLibUpdate: rebuilding index for /tmp/repository/.
- #I  SCLibUpdate: rebuilding index done.
  gap&gt; SCLibFlush(myRepository,"yes");
- #I  SCLibUpdate: rebuilding index for /home/effenbfx/testrepo/.
- #I  SCLibUpdate: rebuilding index done.
+ #I  SCLibInit: invalid parameters.
  true
  </pre></div>
 
@@ -250,10 +251,11 @@
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
  Number of complexes in library=0
- IndexAttributes=["Name", "Date", "Dim", "F", "G", "H", "Chi", "Homology"]
+ IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
+   "IsManifold" ]
  Loaded=true
  Path="/tmp/repository/"
-]
+ ]
  </pre></div>
 
 <p><a id="X83D638237BDE2C1C" name="X83D638237BDE2C1C"></a></p>
@@ -284,12 +286,10 @@
 
 
 <div class="example"><pre>
- #search for all 3-neighborly complexes of dimension 4 in the global library
  gap&gt; SCLibSearchByAttribute(SCLib,"Dim=4 and F[3]=Binomial(F[1],3)");
- [ [ 17, "CP^2 (VT)" ], [ 584, "K3 surface" ] ]
- # alternative syntax
+ [ [ 16, "CP^2 (VT)" ], [ 520, "K3_16" ] ]
  gap&gt; SCLib.SearchByAttribute("Dim=4 and F[3]=Binomial(F[1],3)");
- [ [ 17, "CP^2 (VT)" ], [ 584, "K3 surface" ] ]
+ [ [ 16, "CP^2 (VT)" ], [ 520, "K3_16" ] ]
  </pre></div>
 
 <p><a id="X80EA086A80F86814" name="X80EA086A80F86814"></a></p>
@@ -304,12 +304,11 @@
 
 <div class="example"><pre>
  gap&gt; SCLibSearchByName(SCLib,"K3");
- [ [ 584, "K3 surface" ] ]
+ [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
  gap&gt; SCLib.SearchByName("K3"); #alternative syntax
- [ [ 584, "K3 surface" ] ]
+ [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
  gap&gt; SCLib.SearchByName("S^4x"); #search for products with S^4
- [ [ 291, "S^4xS^1 (VT)" ], [ 340, "S^4xS^1 (VT)" ], [ 342, "S^4xS^1 (VT)" ], 
-   [ 571, "S^4xS^2" ], [ 627, "S^4xS^3" ], [ 655, "S^4xS^4" ] ]
+ [ [ 282, "S^4xS^1 (VT)" ], [ 329, "S^4xS^1 (VT)" ], [ 331, "S^4xS^1 (VT)" ] ]
  </pre></div>
 
 <p><a id="X80BD14648113130B" name="X80BD14648113130B"></a></p>
@@ -324,7 +323,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLibSize(SCLib); #SCLib is the repository of the global library
- 7648
+ 648
  </pre></div>
 
 <p><a id="X7A0856987A87A3C5" name="X7A0856987A87A3C5"></a></p>
@@ -339,20 +338,17 @@
 
 <div class="example"><pre>
  gap&gt; myRepository:=SCLibInit("/tmp/repository");;
- #I  SCLibInit: made directory "/tmp/repository/" for user library.
- #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
- #I  SCLibUpdate: rebuilding index for /tmp/repository/.
- #I  SCLibUpdate: rebuilding index done.
  gap&gt; SCLibUpdate(myRepository);
  #I  SCLibUpdate: rebuilding index for /tmp/repository/.
  #I  SCLibUpdate: rebuilding index done.
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
  Number of complexes in library=0
- IndexAttributes=["Name", "Date", "Dim", "F", "G", "H", "Chi", "Homology"]
+ IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
+   "IsManifold" ]
  Loaded=true
  Path="/tmp/repository/"
-]
+ ]
  </pre></div>
 
 <p><a id="X843A039E78D5A97B" name="X843A039E78D5A97B"></a></p>
@@ -369,11 +365,12 @@
  gap&gt; SCLibStatus(SCLib);
  [Simplicial complex library. Properties:
  CalculateIndexAttributes=true
- Number of complexes in library=N
- IndexAttributes=["Name", "Date", "Dim", "F", "G", "H", "Chi", "Homology"]
+ Number of complexes in library=648
+ IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
+   "IsManifold" ]
  Loaded=true
- Path="GAPROOT/pkg/simpcomp/complexes/"
-]
+ Path="/home/jonathan/bin/gap-4.11.1/pkg/simpcomp/complexes/"
+ ]
  </pre></div>
 
 <p><a id="X8599D6D37F402950" name="X8599D6D37F402950"></a></p>
@@ -397,7 +394,9 @@
  gap&gt; SCSave(c,"/tmp/bddelta3");
  true
  gap&gt; d:=SCLoad("/tmp/bddelta3");
+ &lt;SimplicialComplex: S^2_4 | dim = 2 | n = 4&gt;
  gap&gt; c=d;
+ true
  </pre></div>
 
 <p><a id="X8365D45D8765D3E8" name="X8365D45D8765D3E8"></a></p>
@@ -415,7 +414,9 @@
  gap&gt; SCSaveXML(c,"/tmp/bddelta3");
  true
  gap&gt; d:=SCLoadXML("/tmp/bddelta3");
+ &lt;SimplicialComplex: S^2_4 | dim = 2 | n = 4&gt;
  gap&gt; c=d;
+ true
  </pre></div>
 
 <p><a id="X817CF3A184C93782" name="X817CF3A184C93782"></a></p>
@@ -495,8 +496,11 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdCrossPolytope(4);;
  gap&gt; SCExportPolymake(c,"/tmp/bdbeta4.poly");
+ true
  gap&gt; d:=SCImportPolymake("/tmp/bdbeta4.poly");
+ &lt;SimplicialComplex: polymake import '/tmp/bdbeta4.poly' | dim = 3 | n = 8&gt;
  gap&gt; c=d;
+ true
  </pre></div>
 
 <p><a id="X790C0AD9807A5D82" name="X790C0AD9807A5D82"></a></p>
@@ -512,6 +516,7 @@
 <div class="example"><pre>
  gap&gt; c:=SCBdSimplex(5);;
  gap&gt; SCExportLatexTable(c,"/tmp/bd5simplex.tex",5);
+ true
  </pre></div>
 
 <p><a id="X859BCB9986B55E14" name="X859BCB9986B55E14"></a></p>
@@ -530,11 +535,11 @@
  true
  </pre></div>
 
-<p><a id="X7F214CF77E65C1A9" name="X7F214CF77E65C1A9"></a></p>
+<p><a id="X87B05F177D4C2F27" name="X87B05F177D4C2F27"></a></p>
 
-<h5>13.2-10 SCExportPolymake</h5>
+<h5>13.2-10 SCExportRecognizer</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportPolymake</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SCExportRecognizer</code>( <var class="Arg">complex</var>, <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> upon success, <code class="keyw">fail</code> otherwise.</p>
 
 <p>Exports the gluings of the tetrahedra of a given combinatorial <span class="SimpleMath">3</span>-manifold <var class="Arg">complex</var> in a format compatible with Matveev's <span class="SimpleMath">3</span>-manifold software <code class="code">Recognizer</code>.</p>
@@ -558,6 +563,7 @@
 
 <div class="example"><pre>
  gap&gt; SCLib.SearchByAttribute("Dim=3 and F=[8,28,56,28]");
+ [ [ 8, "PM^3 - TransitiveGroup(8,43), No. 1" ] ]
  gap&gt; c:=SCLib.Load(last[1][1]);;
  gap&gt; SCExportSnapPy(c,"/tmp/M38.tri");
  true
