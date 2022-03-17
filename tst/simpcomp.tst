@@ -164,10 +164,10 @@ gap> SCAltshulerSteinberg(c);
 0
 gap> SCAntiStar(c,1);
 <SimplicialComplex: ast([ 1 ]) in Bd(\beta^4) | dim = 3 | n = 7>
-gap> SCAutomorphismGroup(c);
-Group([ (7,8), (5,7)(6,8), (3,5)(4,6), (1,3)(2,4) ])
-gap> SCAutomorphismGroupInternal(c);
-Group([ (7,8), (5,7)(6,8), (3,5)(4,6), (1,3)(2,4) ])
+gap> SCAutomorphismGroup(c) = Group([ (7,8), (5,7)(6,8), (3,5)(4,6), (1,3)(2,4) ]);
+true
+gap> SCAutomorphismGroupInternal(c) = Group([ (7,8), (5,7)(6,8), (3,5)(4,6), (1,3)(2,4) ]);
+true
 gap> SCAutomorphismGroupSize(c);
 384
 gap> SCAutomorphismGroupStructure(c);
@@ -501,8 +501,8 @@ gap> c.HasBoundary;
 false
 gap> c.Orientation;
 [  ]
-gap> c.AutomorphismGroup;
-Group([ (1,2,3,4,5,6,7,8,9), (1,3)(4,9)(5,8)(6,7) ])
+gap> c.AutomorphismGroup = Group([ (1,2,3,4,5,6,7,8,9), (1,3)(4,9)(5,8)(6,7) ]);
+true
 gap> c.GeneratorsEx;
 [ [ [ 1, 2, 3, 5 ], 18 ], [ [ 1, 2, 4, 5 ], 9 ] ]
 gap> Size(c.ConnectedComponents);
@@ -620,9 +620,9 @@ gap> c.Orientation;
   -1, -1, 1, -1, 1, 1, -1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, 
   1, -1, 1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 
   -1, -1, 1, 1, -1, 1, 1, -1, 1, -1 ]
-gap> c.AutomorphismGroup;
-Group([ (1,2)(3,4)(5,6)(7,8)(9,10)(11,12)(13,14)(15,16), (1,2,8,14,5)
-(3,11,9,4,13)(6,7,12,15,10), (1,3,2)(5,11,14)(6,9,15)(7,10,13)(8,12,16) ])
+gap> c.AutomorphismGroup = Group([ (1,2)(3,4)(5,6)(7,8)(9,10)(11,12)(13,14)(15,16),
+> (1,2,8,14,5)(3,11,9,4,13)(6,7,12,15,10), (1,3,2)(5,11,14)(6,9,15)(7,10,13)(8,12,16) ]);
+true
 gap> c.GeneratorsEx;
 [ [ [ 1, 2, 3, 8, 12 ], 240 ], [ [ 1, 2, 5, 8, 14 ], 48 ] ]
 gap> Size(c.ConnectedComponents);
