@@ -128,17 +128,6 @@ function()
 	fi;
 end;
 
-SCIntFunc.GetSystemType:=
-function()
-	local systype;
-	systype:=Chomp(SCIntFunc.GetProgramOutput("uname",["-a"]));
-	if systype = fail then
-		return "unknown";
-	else
-		return systype;
-	fi;
-end;
-
 SCIntFunc.GetCurrentTimeInt:=
 function()
 	local out;
@@ -350,7 +339,7 @@ function(arg)
 		Info(InfoSimpcomp,1,"SCMail: getting hostname failed.");
 		return fail;
 	fi;
-	fullinfo:=SCIntFunc.GetSystemType();
+	fullinfo:=GAPInfo.Architecture;
 	if fullinfo = fail then
 		Info(InfoSimpcomp,1,"SCMail: getting system type failed.");
 		return fail;
@@ -364,7 +353,7 @@ function(arg)
 
 
 	outstream:=OutputTextNone();
-	instream:=InputTextString(Concatenation(["\nGreetings master,\n\nthis is simpcomp ",SCIntFunc.Version," running on ",host," (",fullinfo,"), GAP ",GAPInfo.Version,".\n\nI have been working hard",runtime," and have a message for you, see below.\n\n#### START MESSAGE ####\n\n",message,"##### END MESSAGE #####\n\nThat's all, I hope this is good news! Have a nice day.\n",String(CHAR_INT(4))]));;
+	instream:=InputTextString(Concatenation(["\nGreetings,\n\nthis is simpcomp ",SCIntFunc.Version," running on ",host," (",fullinfo,"), GAP ",GAPInfo.Version,".\n\nI have been working hard",runtime," and have a message for you, see below.\n\n#### START MESSAGE ####\n\n",message,"##### END MESSAGE #####\n\nThat's all, I hope this is good news! Have a nice day.\n",String(CHAR_INT(4))]));;
 
 	ret:=Process(path[1],mail,instream,outstream,["-s",Concatenation(["Message from simpcomp ",SCIntFunc.Version," running on ",host]),recipient]);
 
