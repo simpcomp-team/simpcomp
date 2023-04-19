@@ -96,7 +96,7 @@ see the file COPYING in the `simpcomp` directory or
 10/03/2022 - Version 2.1.14: Minor update
 - Fixed manual entries
 - Fixed missing file output in SCsFromGroupExt
-- Removed SCIntFun.MakeDoc(), this is now done by makedoc.g
+- Removed SCIntFunc.MakeDoc(), this is now done by makedoc.g
 
 07/06/2021 - Version 2.1.13: Major update
 - Made default complex representation shorter

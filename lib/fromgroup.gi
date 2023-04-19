@@ -12,7 +12,7 @@
 ##<#GAPDoc Label="SCsFromGroupExt">
 ## <ManSection>
 ## <Func Name="SCsFromGroupExt" Arg="G,n,d,objectType,cache,removeDoubleEntries,
-## outfile,maxLinkSize,subset"/>
+## outfile,maxLinkSize,subset,single"/>
 ## <Returns>a list of simplicial complexes of type <C>SCSimplicialComplex</C> 
 ## upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
@@ -39,7 +39,8 @@
 ## is ignored. The argument <Arg>subset</Arg> specifies a set of orbits (given 
 ## by a list of indices of <C>repHigh</C>) which have to be contained in any 
 ## output complex. If <Arg>subset</Arg> is anything else than a subset of 
-## <C>matrixAllowedRows</C> the argument is ignored.
+## <C>matrixAllowedRows</C> the argument is ignored. If <Arg>single</Arg> is 
+## set to <C>true</C>, only single orbit solutions are returned.
 ## <Example><![CDATA[
 ## gap> G:=PrimitiveGroup(8,5);
 ## gap> Size(G);
@@ -59,7 +60,7 @@
 ################################################################################
 InstallGlobalFunction(SCsFromGroupExt,
   function(G,n,d,objectType,cache,removeDoubleEntries,outfile,maxLinkSize,
-    subset)
+    subset,single)
   local
   forbiddenHigh,forbiddenLow,stab,repHighForbidden,repHigh,repHighTmp,repLow,
   repHighOrbitLen,repHighOrbitLenTmp,repOrbitLen,matrix,matrixRows,matrixCols,
@@ -565,7 +566,8 @@ InstallGlobalFunction(SCsFromGroupExt,
       tmp:=[[repHigh[subset[1]],Size(complex)]];
       if(examineComplex(complex,complex_collection,objectType,t)) then
         complex:=SCFromFacets(complex);
-        if removeDoubleEntries and d>2 then
+        if removeDoubleEntries and not (d=2 and objectType=1) then
+          Print("test");
           Info(InfoSimpcomp,2,"Testing if complex is equivalent ",
              "to previous one...");
           isoSig:=SCExportIsoSig(complex);
@@ -618,7 +620,7 @@ InstallGlobalFunction(SCsFromGroupExt,
         tmp:=[[repHigh[singleResults[i]],Size(complex)]];
         if(examineComplex(complex,complex_collection,objectType,1)) then
           complex:=SCFromFacets(complex);
-          if removeDoubleEntries and d>2 then
+          if removeDoubleEntries and not (d=2 and objectType=1) then
             Info(InfoSimpcomp,2,"Testing if complex is equivalent ",
               "to previous one...");
             isoSig:=SCExportIsoSig(complex);
@@ -654,9 +656,12 @@ InstallGlobalFunction(SCsFromGroupExt,
     od;
   fi;
     
+  # note to self: here we could stop and just return single results  
+    
   SubtractSet(matrixAllowedRows,singleResults);
   matrixRows:=Length(matrixAllowedRows);
-  if(matrixRows<1) then
+  if(matrixRows<1) or single = true then
+  #if(matrixRows<1) then
     Info(InfoSimpcomp,2,"No more computations needed (no more rows).");
     if removeDoubleEntries then
       return isoSigs;
