@@ -821,7 +821,7 @@ gap> G:=Group((1,2)(3,4)(5,6)(7,8)(9,10)(11,12)(13,14)(15,16),
 > (2,13,15,11,14,3,5,8,16,7,4,9,10,6,12));;
 gap> K3:=SCFromGenerators(G,[[2,3,4,5,9],[2,5,7,10,11]]);
 <SimplicialComplex: complex from generators under unknown group | dim = 4 | n = 16>
-gap> ll:=SCsFromGroupExt(G,16,4,0,0,false,false,0,[]);;
+gap> ll:=SCsFromGroupExt(G,16,4,0,0,false,false,0,[],false);;
 gap> Size(ll);
 4
 gap> SCIsIsomorphic(ll[1],K3);

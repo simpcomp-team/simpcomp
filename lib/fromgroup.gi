@@ -25,7 +25,9 @@
 ## size of each vertex link for combinatorial manifolds are sorted out 
 ## (<C>objectType = 0</C>) or not (<C>objectType = 1</C>, in this case some 
 ## combinatorial pseudomanifolds won't be found, but no combinatorial manifold 
-## will be sorted out). The integer argument <Arg>cache</Arg> specifies if the 
+## will be excluded). A value of <C>objectType = 2</C> behaves like
+## <C>objectType = 0</C> but without bistallar flips checking vertex links.
+## The integer argument <Arg>cache</Arg> specifies if the 
 ## orbits are held in memory during the computation, a value of <C>0</C> means 
 ## that the orbits are discarded, trading speed for memory, any other value 
 ## means that they are kept, trading memory for speed. The boolean argument 
@@ -93,7 +95,7 @@ InstallGlobalFunction(SCsFromGroupExt,
   if IsInt(maxLinkSize) and maxLinkSize > 0 then
   max:=maxLinkSize;
   else 
-    if objectType=0 then #manifolds
+    if objectType in [0,2] then #manifolds
       if IsInt((d-1)/2) = true then
         max:=Binomial((n-1)-Int(d/2)-1,Int(d/2))+
           Binomial((n-1)-1-(d-1)/2,(d-1)/2);
@@ -188,12 +190,12 @@ InstallGlobalFunction(SCsFromGroupExt,
 
     Info(InfoSimpcomp,2,"Testing connectedness of link(s)...");
     isconn:= List(lk,x->SCIsConnected(x)) ;
-    if (objectType=0 and false in isconn) or (objectType=1 and false in isconn 
+    if (objectType in [0,2] and false in isconn) or (objectType=1 and false in isconn 
         and d > 2) then
       Info(InfoSimpcomp,2,"link not connected.");
       return false;
     fi;
-    if (objectType = 1 and IsInt(d/2)) or objectType = 0 then
+    if (objectType = 1 and IsInt(d/2)) or objectType in [0,2] then
       Info(InfoSimpcomp,2,"Testing vertex link...");
       if Set(List(lk,x->SCEulerCharacteristic(x))) <> [1 + (-1)^(d-1)] then
         Info(InfoSimpcomp,2,"link not valid.");
@@ -202,7 +204,7 @@ InstallGlobalFunction(SCsFromGroupExt,
     fi;
     Info(InfoSimpcomp,2,"ok.");
 
-    # test lower links
+    # test lower links only if objectType = 0 is set
     if objectType = 0 then
       return SCIsManifold(c);
     else
@@ -219,7 +221,7 @@ InstallGlobalFunction(SCsFromGroupExt,
   fi;
 
   # check group size
-  if Size(G) > Factorial(d+1)*max and objectType = 0 then
+  if Size(G) > Factorial(d+1)*max and objectType in [0,2] then
     Info(InfoSimpcomp,2,"Group too large for combinatorial manifolds.");
     return [];
   fi;
@@ -248,7 +250,7 @@ InstallGlobalFunction(SCsFromGroupExt,
   t:=Transitivity(G);
   if t < 1 then
     Info(InfoSimpcomp,1,"Automorphism is not transitive.");
-    return fail;
+    #return fail;
   fi;
   
   #complex
@@ -566,8 +568,8 @@ InstallGlobalFunction(SCsFromGroupExt,
       tmp:=[[repHigh[subset[1]],Size(complex)]];
       if(examineComplex(complex,complex_collection,objectType,t)) then
         complex:=SCFromFacets(complex);
+        # we cannot perform iso sig computations for 2-pseudomanifolds
         if removeDoubleEntries and not (d=2 and objectType=1) then
-          Print("test");
           Info(InfoSimpcomp,2,"Testing if complex is equivalent ",
              "to previous one...");
           isoSig:=SCExportIsoSig(complex);
@@ -620,6 +622,7 @@ InstallGlobalFunction(SCsFromGroupExt,
         tmp:=[[repHigh[singleResults[i]],Size(complex)]];
         if(examineComplex(complex,complex_collection,objectType,1)) then
           complex:=SCFromFacets(complex);
+          # we cannot perform iso sig computations for 2-pseudomanifolds
           if removeDoubleEntries and not (d=2 and objectType=1) then
             Info(InfoSimpcomp,2,"Testing if complex is equivalent ",
               "to previous one...");
@@ -848,7 +851,8 @@ InstallGlobalFunction(SCsFromGroupExt,
             if (Union(complex) = [1..n] and 
               examineComplex(complex,complex_collection,objectType,1)) then
               complex:=SCFromFacets(complex);
-              if removeDoubleEntries and d>2 then
+              # we cannot perform iso sig computations for 2-pseudomanifolds
+              if removeDoubleEntries and not (d=2 and objectType=1) then
                 Info(InfoSimpcomp,2,"Testing if complex is equivalent ",
                   "to previous one...");
                 isoSig:=SCExportIsoSig(complex);
@@ -1074,7 +1078,7 @@ InstallGlobalFunction(SCsFromGroupByTransitivity,
         retListTmp[3]:=[];
       fi;
       for G in Gcollection[verts] do
-        tmp:=SCsFromGroupExt(G,verts,dim,1,0,removeDoubleEntries,false,0,[]);
+        tmp:=SCsFromGroupExt(G,verts,dim,1,0,removeDoubleEntries,false,0,[],false);
         if removeDoubleEntries then
           for i in [1..Size(tmp)] do
             if tmp[i] in isoSigs then
