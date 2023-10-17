@@ -72,4 +72,5 @@ SCIntFunc.CheckExternalProgramsAvailability();
 ReadPackage("simpcomp", "lib/prophandler.gd");
 
 #load global library
-InstallValue(SCLib,SCIntFunc.SCLibGlobalInit());
+Unbind(SCLib); # remove dummy value from lib.gd
+BindGlobal("SCLib",SCIntFunc.SCLibGlobalInit());

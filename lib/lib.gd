@@ -44,7 +44,7 @@
 
 DeclareCategory("SCIsLibRepository",SCIsPropertyObject);
 
-DeclareGlobalVariable("SCLib");
+SCLib := fail; # dummy value, will be redefined later
 
 DeclareGlobalFunction("SCLibAdd");
 DeclareGlobalFunction("SCLibAllComplexes");
