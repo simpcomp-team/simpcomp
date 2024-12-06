@@ -4,8 +4,6 @@
 ##
 ##  Normal surfaces
 ##
-##  $Id$
-##
 ################################################################################
 
 SCNormalSurfaceFamily:=NewFamily("SCNormalSurfaceFamily",SCIsNormalSurface and IsMutable and IsCopyable);

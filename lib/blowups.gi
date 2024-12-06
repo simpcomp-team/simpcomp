@@ -4,8 +4,6 @@
 ##
 ##  Functions for bistellar moves  
 ##
-##  $Id: bistellar.gi 68 2010-04-23 14:08:15Z jonathan $
-##
 ################################################################################
 
 SCIntFunc.MapBoundaries:=function(lk,bd,pseudomanifold,singularity)

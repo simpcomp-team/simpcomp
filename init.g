@@ -4,8 +4,6 @@
 ##
 ##  init.g for package simpcomp
 ##
-##  $Id$
-##
 ################################################################################
 
 DeclareInfoClass("InfoSimpcomp");

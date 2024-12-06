@@ -4,8 +4,6 @@
 ##
 ##  simpcomp IO functions 
 ##
-##  $Id$
-##
 ################################################################################
 
 #make list to dense string (not containing any spaces

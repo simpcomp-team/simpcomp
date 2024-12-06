@@ -4,8 +4,6 @@
 ##
 ##  simplicial complexes library
 ##
-##  $Id$
-##
 ################################################################################
 ## <#GAPDoc Label="lib">
 ## <Section Label="sec:lib">

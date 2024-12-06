@@ -5,8 +5,6 @@
 ##  Generate simplicial complexes or construct them using existing
 ##  complexes.
 ##
-##  $Id$
-##
 ################################################################################
 
 #checks if labels of a facet list are valid 

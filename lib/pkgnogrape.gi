@@ -4,8 +4,6 @@
 ##
 ##  Loaded when `GRAPE' package is not available
 ##
-##  $Id$
-##
 ################################################################################
 InstallMethod(SCAutomorphismGroup,
 "for SCSimplicialComplex",
