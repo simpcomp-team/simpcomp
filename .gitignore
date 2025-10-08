@@ -5,6 +5,7 @@
 /doc/*.blg
 /doc/*.brf
 /doc/*.css
+/doc/*.dvi
 /doc/*.html
 /doc/*.idx
 /doc/*.ilg
@@ -21,6 +22,7 @@
 /doc/*.txt
 
 /doc/simpcomp.xml
+/doc/_*.xml
 
 /aclocal.m4
 /autom4te.cache/
@@ -43,9 +45,6 @@
 
 .codecov.yml
 .travis.yml
-doc/_AutoDocMainFile.xml
-doc/_Chunks.xml
-doc/simpcomp.dvi
 github
 github.pub
 github_personal
