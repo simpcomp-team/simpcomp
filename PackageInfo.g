@@ -93,8 +93,14 @@ PackageDoc := rec(
 ##  Are there restrictions on the operating system for this package? Or does
 ##  the package need other packages to be available?
 Dependencies := rec(
-  GAP := ">=4.5",
-  NeededOtherPackages := [[ "io", ">=3.0" ]],
+  GAP := ">=4.8",
+  NeededOtherPackages := [
+        [ "GAPDoc", ">=0.9999" ],
+        [ "io", ">=3.0" ],
+        [ "primgrp", ">=1.0"] ,
+        [ "smallgrp", ">=1.0" ],
+        [ "transgrp", ">=1.0" ],
+    ],
   SuggestedOtherPackages := [[ "Homology", ">=1.4.4" ],[ "GRAPE", ">=4.4" ],["Gauss", ">=2011.08.22"],["MatricesForHomalg", ">=2011.10.08"],["homalg", ">=2011.10.05"],["GaussForHomalg", ">=2011.08.10"],["Modules", ">=2011.10.05"]],
 	ExternalConditions := []
 ),
