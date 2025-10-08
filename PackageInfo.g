@@ -79,8 +79,6 @@ Keywords := ["simplicial complexes","combinatorial topology", "combinatorial man
 PackageDoc := rec(
   # use same as in GAP
   BookName  := "simpcomp",
-  # format/extension can be one of .zoo, .tar.gz, .tar.bz2, -win.zip
-  #Archive := Concatenation("simpcomp-doc-",String(~.Version),".tar.gz"),
   ArchiveURLSubset := ["doc"],
   HTMLStart := "doc/chap0.html",
   PDFFile   := "doc/manual.pdf",
@@ -89,9 +87,6 @@ PackageDoc := rec(
   # a longer title of the book, this together with the book name should
   # fit on a single text line (appears with the '?books' command in GAP)
   LongTitle := "A GAP toolbox for simplicial complexes",
-  # Should this help book be autoloaded when GAP starts up? This should
-  # usually be 'true', otherwise say 'false'.
-  Autoload  := true
 ),
 
 
@@ -99,17 +94,15 @@ PackageDoc := rec(
 ##  the package need other packages to be available?
 Dependencies := rec(
   GAP := ">=4.5",
-  NeededOtherPackages := [[ "GAPDoc", ">=0.9999" ],[ "io", ">=3.0" ]],
+  NeededOtherPackages := [[ "io", ">=3.0" ]],
   SuggestedOtherPackages := [[ "Homology", ">=1.4.4" ],[ "GRAPE", ">=4.4" ],["Gauss", ">=2011.08.22"],["MatricesForHomalg", ">=2011.10.08"],["homalg", ">=2011.10.05"],["GaussForHomalg", ">=2011.08.10"],["Modules", ">=2011.10.05"]],
 	ExternalConditions := []
 ),
 
-Autoload := false,
-
 ##  If the default banner does not suffice then provide a string that is
 ##  printed when the package is loaded (not when it is autoloaded or if
 ##  command line options `-b' or `-q' are given).
-BannerString :=Concatenation("Loading simpcomp ",String(~.Version),"\nby F. Effenberger and J. Spreer\nhttps://github.com/simpcomp-team/simpcomp\n"),
+BannerString :=Concatenation("Loading simpcomp ",~.Version,"\nby F. Effenberger and J. Spreer\nhttps://github.com/simpcomp-team/simpcomp\n"),
 
 AvailabilityTest := 
 function()
