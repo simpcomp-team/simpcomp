@@ -1803,7 +1803,7 @@ SCIntFunc.GapGroupIndex:=function(g)
 	# t > 0
 	if not IsPrimitive(g) then
 		if TransitiveGroupsAvailable(deg) then
-			i:=TransitiveIdentification(g)
+			i:=TransitiveIdentification(g);
 			return ["TransitiveGroup",deg,i];
 		fi;
 	else
