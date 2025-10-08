@@ -13,8 +13,6 @@
 
 *~ export-ignore
 .* export-ignore
-doc/gapdoc/**/* export-ignore
-doc/gapdoc export-ignore
 doc/simpcomp.aux export-ignore
 doc/simpcomp.bbl export-ignore
 doc/simpcomp.blg export-ignore
