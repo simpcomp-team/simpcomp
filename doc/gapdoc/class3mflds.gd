@@ -5,8 +5,6 @@
 ##  Classification of combinatorial 3-manifolds with transitive cyclic symmetry
 ##  and up to 22 vertices.
 ##
-##  $Id$
-##
 ################################################################################
 ## GAPDoc include
 ## <#GAPDoc Label="class3mflds">

@@ -4,8 +4,6 @@
 ##
 ##  Functions for bistellar moves  
 ##
-##  $Id$
-##
 ################################################################################
 ## <#GAPDoc Label="bistellar">
 ## <Section Label="sec:bftheory"> <Heading>Theory</Heading>

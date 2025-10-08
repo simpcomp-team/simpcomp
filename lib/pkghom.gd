@@ -4,8 +4,6 @@
 ##
 ##  Overlay some functions of package `homology' 
 ##
-##  $Id$
-##
 ################################################################################
 
 if(not IsBoundGlobal("SCIntFuncHomologyOverlay")) then

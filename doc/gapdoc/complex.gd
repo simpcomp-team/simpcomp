@@ -4,8 +4,6 @@
 ##
 ##  &GAP; object type for simplicial complex   
 ##
-##  $Id$
-##
 ################################################################################
 ## <#GAPDoc Label="SCObjects">
 ##

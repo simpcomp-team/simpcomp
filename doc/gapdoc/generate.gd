@@ -5,8 +5,6 @@
 ##  Generate simplicial complexes or construct them using existing
 ##  complexes.
 ##
-##  $Id$
-##
 ################################################################################
 ## GAPDoc include
 ## <#GAPDoc Label="generate">

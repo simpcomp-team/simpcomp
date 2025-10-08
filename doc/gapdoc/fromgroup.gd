@@ -4,8 +4,6 @@
 ##
 ##  Compute Simplicial Complexes from given Permutation Groups.
 ##
-##  $Id$
-##
 ################################################################################
 ## <#GAPDoc Label="fromgroup">
 ## 

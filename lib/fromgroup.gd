@@ -4,8 +4,6 @@
 ##
 ##  Compute Simplicial Complexes from given Permutation Groups.
 ##
-##  $Id$
-##
 ################################################################################
 
 # NOTE: the label "fromgroup" is included in the file generate.gd 

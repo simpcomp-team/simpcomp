@@ -4,8 +4,6 @@
 ##
 ##  provides object type SCPropertyObject
 ##
-##  $Id$
-##
 ################################################################################
 ## GAPDoc include
 ## <#GAPDoc Label="propobject">
