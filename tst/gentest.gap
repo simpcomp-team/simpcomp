@@ -4,8 +4,6 @@
 ##
 ##  Generate simpcomp.tst file by calling: $ gap < gentest.gap 
 ##
-##  $Id$
-##
 ################################################################################
 
 LoadPackage("simpcomp");

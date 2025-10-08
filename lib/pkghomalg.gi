@@ -4,8 +4,6 @@
 ##
 ##  Loaded when package `homalg' is available
 ##
-##  $Id$
-##
 ################################################################################
 
 # helper function that converts an integer modulus to an homalg ring according

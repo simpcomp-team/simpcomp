@@ -4,8 +4,6 @@
 ##
 ##  Functions for bistellar moves  
 ##
-##  $Id: bistellar.gd 41 2010-04-07 16:32:50Z jonathan $
-##
 ################################################################################
 
 ## <#GAPDoc Label="blowups">

@@ -4,8 +4,6 @@
 ##
 ##  init.g for package simpcomp
 ##
-##  $Id$
-##
 ################################################################################
 
 DeclareInfoClass("InfoSimpcomp");
@@ -52,7 +50,7 @@ end;
 SCIntFunc.SetupGrape:=function()
 	local success;
 	success:=IsPackageMarkedForLoading("grape", ">=4.2");
-	if success=true and IsBoundGlobal("AutGroupGraph") and IsBoundGlobal("EdgeOrbitsGraph") and Filename(DirectoriesPackagePrograms("grape"),"dreadnautB")<>fail then
+	if success=true and IsBoundGlobal("AutGroupGraph") and IsBoundGlobal("EdgeOrbitsGraph") and Filename(DirectoriesPackagePrograms("grape"),"dreadnaut")<>fail then
 		return true;
 	else
 		return false;

@@ -4,8 +4,6 @@
 ##
 ##  Compute Global Properties of Simplicial Complexes.  
 ##
-##  $Id$
-##
 ################################################################################
 
 ################################################################################
@@ -1795,49 +1793,23 @@ SCIntFunc.GapGroupIndex:=function(g)
 	
 	# t = 0
 	if t = 0 then
-		if NrSmallGroups(order) = fail then
-			return false;
+		if IdGroupsAvailable(order) then
+			i:=IdGroup(g)[2];
+			return ["SmallGroup",order,i];
 		fi;
-		for i in [1..NrSmallGroups(order)] do
-			G:=SmallGroup(order,i);
-			if IsomorphismGroups(G,g) <> fail then
-				return ["SmallGroup",order,i];
-			fi;
-		od;
 		return false;
 	fi;
 	
 	# t > 0
 	if not IsPrimitive(g) then
-		if NrTransitiveGroups(deg) <> fail then
-			for i in [1..NrTransitiveGroups(deg)] do
-				G:=TransitiveGroup(deg,i);
-				if Size(G) > order then
-					break;
-				elif Size(G) < order then
-					continue;
-				fi;
-				if IsomorphismGroups(G,g) <> fail then
-					return ["TransitiveGroup",deg,i];
-				fi;
-			od;
+		if TransitiveGroupsAvailable(deg) then
+			i:=TransitiveIdentification(g)
+			return ["TransitiveGroup",deg,i];
 		fi;
 	else
-		if NrPrimitiveGroups(deg) <> fail then
-			for i in [1..NrPrimitiveGroups(deg)] do
-				G:=PrimitiveGroup(deg,i);
-				if Size(G) > order then
-					break;
-				elif Size(G) < order then
-					continue;
-				fi;
-				if Transitivity(G) <> t then
-					continue;
-				fi;
-				if IsomorphismGroups(G,g) <> fail then
-					return ["PrimitiveGroup",deg,i];
-				fi;
-			od;
+		if PrimitiveGroupsAvailable(deg) then
+			i:=PrimitiveIdentification(g);
+			return ["PrimitiveGroup",deg,i];
 		fi;
 	fi;
 	Info(InfoSimpcomp,1,"group not listed");

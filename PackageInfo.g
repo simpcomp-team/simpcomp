@@ -4,8 +4,6 @@
 ##
 ##  PackageInfo.g for package simpcomp
 ##
-##  $Id$
-##
 ################################################################################
 
 
@@ -81,8 +79,6 @@ Keywords := ["simplicial complexes","combinatorial topology", "combinatorial man
 PackageDoc := rec(
   # use same as in GAP
   BookName  := "simpcomp",
-  # format/extension can be one of .zoo, .tar.gz, .tar.bz2, -win.zip
-  #Archive := Concatenation("simpcomp-doc-",String(~.Version),".tar.gz"),
   ArchiveURLSubset := ["doc"],
   HTMLStart := "doc/chap0.html",
   PDFFile   := "doc/manual.pdf",
@@ -91,9 +87,6 @@ PackageDoc := rec(
   # a longer title of the book, this together with the book name should
   # fit on a single text line (appears with the '?books' command in GAP)
   LongTitle := "A GAP toolbox for simplicial complexes",
-  # Should this help book be autoloaded when GAP starts up? This should
-  # usually be 'true', otherwise say 'false'.
-  Autoload  := true
 ),
 
 
@@ -112,12 +105,10 @@ Dependencies := rec(
 	ExternalConditions := []
 ),
 
-Autoload := false,
-
 ##  If the default banner does not suffice then provide a string that is
 ##  printed when the package is loaded (not when it is autoloaded or if
 ##  command line options `-b' or `-q' are given).
-BannerString :=Concatenation("Loading simpcomp ",String(~.Version),"\nby F. Effenberger and J. Spreer\nhttps://github.com/simpcomp-team/simpcomp\n"),
+BannerString :=Concatenation("Loading simpcomp ",~.Version,"\nby F. Effenberger and J. Spreer\nhttps://github.com/simpcomp-team/simpcomp\n"),
 
 AvailabilityTest := 
 function()

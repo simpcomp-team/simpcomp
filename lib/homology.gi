@@ -4,8 +4,6 @@
 ##
 ##  Homology related functions
 ##
-##  $Id$
-##
 ################################################################################
 
 SCIntFunc.HomTransposeSparseMat:=function(A)

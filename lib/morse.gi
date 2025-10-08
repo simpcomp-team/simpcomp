@@ -4,8 +4,6 @@
 ##
 ##  Polyhedral Morse functions 
 ##
-##  $Id$
-##
 ################################################################################
 
 SCIntFunc.MorseLevel:=function(c,lower,upper)

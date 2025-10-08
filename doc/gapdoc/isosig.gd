@@ -4,8 +4,6 @@
 ##
 ##  Functions to compute the isomorphism signature of a complex
 ##
-##  $Id$
-##
 ################################################################################
 ## <#GAPDoc Label="isosig">
 ##

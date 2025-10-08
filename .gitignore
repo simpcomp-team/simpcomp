@@ -36,6 +36,7 @@
 /missing
 /src/.deps/
 /src/*.o
+/src/.dirstamp
 
 /gh-pages/
 /tmp/
