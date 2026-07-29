@@ -6,11 +6,6 @@
 # rm -rf internals
 
 
-# create doc/gapdoc/ directory
-rm -rf doc/gapdoc
-cp -r $SRC_DIR/doc/gapdoc doc/
-
-
 # HACK HACK HACK workaround weird issue with autogen.sh
 cp $SRC_DIR/install-sh $SRC_DIR/missing .
 
