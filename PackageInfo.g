@@ -93,7 +93,7 @@ PackageDoc := rec(
 ##  Are there restrictions on the operating system for this package? Or does
 ##  the package need other packages to be available?
 Dependencies := rec(
-  GAP := ">=4.8",
+  GAP := ">=4.10",
   NeededOtherPackages := [
         [ "GAPDoc", ">=0.9999" ],
         [ "io", ">=3.0" ],
@@ -144,6 +144,3 @@ AutoDoc := rec(
 ),
 
 ));
-
-
-

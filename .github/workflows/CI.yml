@@ -30,7 +30,6 @@ jobs:
           - stable-4.12
           - stable-4.11
           - stable-4.10
-          - stable-4.9
 
     steps:
       - uses: actions/checkout@v5
@@ -63,6 +62,7 @@ jobs:
       - uses: gap-actions/build-pkg-docs@v1
         with:
           use-latex: 'true'
+          warnings-as-errors: 'false'  # ignore "multiply defined" label warnings
       - name: 'Upload documentation'
         uses: actions/upload-artifact@v4
         with:
