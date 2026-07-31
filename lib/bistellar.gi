@@ -1548,7 +1548,7 @@ end);
 ## Reduces a pure simplicial complex <Arg>complex</Arg> satisfying the weak 
 ## pseudomanifold property via bistellar moves. 
 ## Internally calls <Ref Func="SCReduceComplexEx" Style="Text" />
-## <C>(complex,SCEmpty(),0,SCIntFunc.SCChooseMove);</C>
+## <C>(complex, SCEmpty(), 0, SCIntFunc.SCChooseMove);</C>
 ## <Example><![CDATA[
 ## gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
 ## gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
@@ -1590,7 +1590,7 @@ end);
 ## It is recommended to use a minimal triangulation <Arg>complex2</Arg> for 
 ## the check if possible.<P/>
 ## Internally calls <Ref Func="SCReduceComplexEx" Style="Text"/>
-## <C>(complex1,complex2,1,SCIntFunc.SCChooseMove);</C>
+## <C>(complex1, complex2, 1, SCIntFunc.SCChooseMove);</C>
 ## <Example><![CDATA[
 ## gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes to disk
 ## gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
@@ -1687,7 +1687,7 @@ end);
 ## introducing diagonals.
 ## <P/>
 ## Internally calls <Ref Func="SCReduceComplexEx" Style="Text"  />
-## <C>(complex1,complex2,2,SCIntFunc.SCChooseMove);</C>
+## <C>(complex1, complex2, 2, SCIntFunc.SCChooseMove);</C>
 ## <Example><![CDATA[
 ## gap> c:=SCFromFacets([[1,3],[3,5],[4,5],[4,1]]);;
 ## gap> SCBistellarOptions.WriteLevel:=0;; # do not save any complexes                      
@@ -1726,7 +1726,7 @@ end);
 ## after the number of rounds indicated by 
 ## <C>SCBistellarOptions.MaxIntervallIsManifold</C>.<P/>
 ## Internally calls <Ref Func="SCReduceComplexEx" Style="Text"/>
-## <C>(link,SCEmpty(),0,SCIntFunc.SCChooseMove);</C> for every link of 
+## <C>(link, SCEmpty(), 0, SCIntFunc.SCChooseMove);</C> for every link of 
 ## <Arg>complex</Arg>. Note that <K>false</K> is returned in case of a bounded 
 ## manifold.<P/>
 ##
