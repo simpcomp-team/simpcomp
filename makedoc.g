@@ -24,6 +24,39 @@ GAPDoc2HTMLProcs.Head1MathJax := ReplacedString(
 </script>
 """);
 
+# GAPDoc renders <Table> as a `tabular` inside a `center` environment, which
+# LaTeX cannot break across pages. Render it as a `longtable` instead, which
+# splits automatically; this way long tables need not be split by hand, which
+# would look bad in the HTML and text versions of the manual.
+GAPDoc2LaTeXProcs.Table := function(r, str)
+  local cap, rows, pos;
+  if (IsBound(r.attributes.Only) and r.attributes.Only <> "LaTeX") or
+     (IsBound(r.attributes.Not) and r.attributes.Not = "LaTeX") then
+    return;
+  fi;
+  if IsBound(r.attributes.Label) then
+    Append(str, Concatenation("\\mbox{}\\label{", r.attributes.Label, "}"));
+  fi;
+  Append(str, Concatenation("\n\n\\begin{longtable}{", r.attributes.Align, "}\n"));
+  # everything up to the first horizontal line, if any, becomes the table
+  # header, which longtable then repeats on every page the table spans
+  rows := "";
+  GAPDoc2LaTeXContent(r, rows);
+  pos := PositionSublist(rows, "\\hline\n");
+  if pos <> fail then
+    rows := Concatenation(rows{[1 .. pos + 6]}, "\\endhead\n",
+                          rows{[pos + 7 .. Length(rows)]});
+  fi;
+  Append(str, rows);
+  Append(str, "\\end{longtable}\n\n");
+  cap := Filtered(r.content, a -> a.name = "Caption");
+  if Length(cap) > 0 then
+    Append(str, "\\begin{center}\n");
+    GAPDoc2LaTeXProcs.Caption1(cap[1], str);
+    Append(str, "\\end{center}\n\n");
+  fi;
+end;
+
 AutoDoc(rec(
     gapdoc := rec(
         LaTeXOptions := rec(
