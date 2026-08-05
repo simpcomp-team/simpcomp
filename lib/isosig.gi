@@ -18,6 +18,7 @@
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesBdHandleBody(3,9);;
 ## gap> s:=SCExportIsoSig(c);
+## "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -183,7 +184,11 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesBdHandleBody(3,9);;
 ## gap> s:=SCExportToString(c); time;
+## "deffg.h.f.fahaiciai.i.hai.fbgeiagihbhceceba.g.gag"
+## 3
 ## gap> s:=SCExportIsoSig(c); time;
+## "deefgaf.hbi.gbh.eaiaeaicg.g.ibf.heg.iff.hggcfffgg"
+## 11
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -333,12 +338,15 @@ end);
 ## gap> s:="deeee";;
 ## gap> c:=SCFromIsoSig(s);;
 ## gap> SCIsIsomorphic(c,SCBdSimplex(4));
+## true
 ## ]]></Example>
 ## <Example><![CDATA[
 ## gap> s:="deeee";;
 ## gap> PrintTo("tmp.txt",s,"\n");;
 ## gap> cc:=SCFromIsoSig("tmp.txt");
+## [ <SimplicialComplex: unnamed complex 9 | dim = 3 | n = 5> ]
 ## gap> cc[1].F;
+## [ 5, 10, 10, 5 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -477,4 +485,3 @@ function(str)
 
 	return c;
 end);
-

@@ -115,8 +115,11 @@ end;
 ## gap> #group: AGL(1,7) of order 42
 ## gap> G:=Group([(2,6,5,7,3,4),(1,3,5,7,2,4,6)]);;
 ## gap> c:=SCFromGenerators(G,[[ 1, 2, 4 ]]);
+## <SimplicialComplex: complex from generators under unknown group | dim = 2 | n \
+## = 7>
 ## gap> SCLib.DetermineTopologicalType(c);
-## [ [ true, 5 ] ] # the 7-vertex torus
+## <SimplicialComplex: complex from generators under unknown group | dim = 2 | n \
+## = 7>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -191,7 +194,9 @@ end);
 ## Internally the vertices are mapped to the standard labeling <M>1..n</M>, where <M>n</M> is the number of vertices of the complex and the vertex labels of the original complex are stored in the property ''VertexLabels'', see <Ref Func="SCLabels" /> and the <C>SCRelabel..</C> functions like <Ref Func="SCRelabel" /> or <Ref Func="SCRelabelStandard" />. 
 ## <Example><![CDATA[
 ## gap> c:=SCFromFacets([[1,2,5], [1,4,5], [1,4,6], [2,3,5], [3,4,6], [3,5,6]]);
+## <SimplicialComplex: unnamed complex 12 | dim = 2 | n = 6>
 ## gap> c:=SCFromFacets([["a","b","c"], ["a","b",1], ["a","c",1], ["b","c",1]]);
+## <SimplicialComplex: unnamed complex 13 | dim = 2 | n = 4>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -252,6 +257,7 @@ end);
 ## A shorter function to create a simplicial complex from a facet list, just calls <Ref Func="SCFromFacets" Style="Text"/>(<Arg>facets</Arg>).
 ## <Example><![CDATA[
 ## gap> c:=SC(Combinations([1..6],5));
+## <SimplicialComplex: unnamed complex 14 | dim = 4 | n = 6>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -274,6 +280,7 @@ end);
 ## Generates an empty complex (of dimension <M>-1</M>), i. e. a <C>SCSimplicialComplex</C> object with empty facet list.
 ## <Example><![CDATA[
 ## gap> SCEmpty();
+## <SimplicialComplex: empty complex | dim = -1 | n = 0>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -303,21 +310,21 @@ end);
 ## Computes the <M>f</M>-vector of the <M>d</M>-dimensional cross polytope without generating the underlying complex.  
 ## <Example><![CDATA[
 ## gap> SCFVectorBdCrossPolytope(50);
-## [100, 4900, 156800, 3684800, 67800320, 1017004800, 12785203200,
-##   137440934400, 1282782054400, 10518812846080, 76500457062400,
-##   497252970905600, 2907017368371200, 15365663232819200, 73755183517532160,
-##   322678927889203200, 1290715711556812800, 4732624275708313600,
-##   15941471244491161600, 49418560857922600960, 141195888165493145600,
-##   372243705163572838400, 906332499528699084800, 2039248123939572940800,
-##   4241636097794311716864, 8156992495758291763200, 14501319992459185356800,
-##   23823597130468661657600, 36146147370366245273600, 50604606318512743383040,
-##   65296266217435797913600, 77539316133205010022400, 84588344872587283660800,
-##   84588344872587283660800, 77337915312079802204160, 64448262760066501836800,
-##   48771658304915190579200, 33370081998099867238400, 20535435075753764454400,
-##   11294489291664570449920, 5509506971543692902400, 2361217273518725529600,
-##   878592473867432755200, 279552150776001331200, 74547240206933688320,
-##   16205921784116019200, 2758454771764428800, 344806846470553600,
-##   28147497671065600, 1125899906842624]
+## [ 100, 4900, 156800, 3684800, 67800320, 1017004800, 12785203200, 
+##   137440934400, 1282782054400, 10518812846080, 76500457062400, 
+##   497252970905600, 2907017368371200, 15365663232819200, 73755183517532160, 
+##   322678927889203200, 1290715711556812800, 4732624275708313600, 
+##   15941471244491161600, 49418560857922600960, 141195888165493145600, 
+##   372243705163572838400, 906332499528699084800, 2039248123939572940800, 
+##   4241636097794311716864, 8156992495758291763200, 14501319992459185356800, 
+##   23823597130468661657600, 36146147370366245273600, 50604606318512743383040, 
+##   65296266217435797913600, 77539316133205010022400, 84588344872587283660800, 
+##   84588344872587283660800, 77337915312079802204160, 64448262760066501836800, 
+##   48771658304915190579200, 33370081998099867238400, 20535435075753764454400, 
+##   11294489291664570449920, 5509506971543692902400, 2361217273518725529600, 
+##   878592473867432755200, 279552150776001331200, 74547240206933688320, 
+##   16205921784116019200, 2758454771764428800, 344806846470553600, 
+##   28147497671065600, 1125899906842624 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -404,44 +411,44 @@ end);
 ## Computes the <M>f</M>-vector of the <M>d</M>-simplex without generating the underlying complex.  
 ## <Example><![CDATA[
 ## gap> SCFVectorBdSimplex(100);
-## [101, 5050, 166650, 4082925, 79208745, 1267339920, 17199613200,
-##   202095455100, 2088319702700, 19212541264840, 158940114100040,
-##   1192050855750300, 8160963550905900, 51297485177122800, 297525414027312240,
-##   1599199100396803290, 7995995501984016450, 37314645675925410100,
-##   163006083742200475700, 668324943343021950370, 2577824781465941808570,
-##   9373908296239788394800, 32197337191432316660400, 104641345872155029146300,
-##   322295345286237489770604, 942094086221309585483304,
-##   2616928017281415515231400, 6916166902815169575968700,
-##   17409661513983013070541900, 41783187633559231369300560,
-##   95696978128474368620010960, 209337139656037681356273975,
-##   437704928371715151926754675, 875409856743430303853509350,
-##   1675784582908852295948146470, 3072271735332895875904935195,
-##   5397234129638871133346507775, 9090078534128625066688855200,
-##   14683973016669317415420458400, 22760158175837441993901710520,
-##   33862674359172779551902544920, 48375249084532542217003635600,
-##   66375341767149302111702662800, 87494768693060443692698964600,
-##   110826707011209895344085355160, 134919469404951176940625649760,
-##   157884485473879036845412994400, 177620046158113916451089618700,
-##   192119641762857909630770403900, 199804427433372226016001220056,
-##   199804427433372226016001220056, 192119641762857909630770403900,
-##   177620046158113916451089618700, 157884485473879036845412994400,
-##   134919469404951176940625649760, 110826707011209895344085355160,
-##   87494768693060443692698964600, 66375341767149302111702662800,
-##   48375249084532542217003635600, 33862674359172779551902544920,
-##   22760158175837441993901710520, 14683973016669317415420458400,
-##   9090078534128625066688855200, 5397234129638871133346507775,
-##   3072271735332895875904935195, 1675784582908852295948146470,
-##   875409856743430303853509350, 437704928371715151926754675,
-##   209337139656037681356273975, 95696978128474368620010960,
-##   41783187633559231369300560, 17409661513983013070541900,
-##   6916166902815169575968700, 2616928017281415515231400,
-##   942094086221309585483304, 322295345286237489770604,
-##   104641345872155029146300, 32197337191432316660400, 9373908296239788394800,
-##   2577824781465941808570, 668324943343021950370, 163006083742200475700,
-##   37314645675925410100, 7995995501984016450, 1599199100396803290,
-##   297525414027312240, 51297485177122800, 8160963550905900, 1192050855750300,
-##   158940114100040, 19212541264840, 2088319702700, 202095455100, 17199613200,
-##   1267339920, 79208745, 4082925, 166650, 5050, 101]
+## [ 101, 5050, 166650, 4082925, 79208745, 1267339920, 17199613200, 
+##   202095455100, 2088319702700, 19212541264840, 158940114100040, 
+##   1192050855750300, 8160963550905900, 51297485177122800, 297525414027312240, 
+##   1599199100396803290, 7995995501984016450, 37314645675925410100, 
+##   163006083742200475700, 668324943343021950370, 2577824781465941808570, 
+##   9373908296239788394800, 32197337191432316660400, 104641345872155029146300, 
+##   322295345286237489770604, 942094086221309585483304, 
+##   2616928017281415515231400, 6916166902815169575968700, 
+##   17409661513983013070541900, 41783187633559231369300560, 
+##   95696978128474368620010960, 209337139656037681356273975, 
+##   437704928371715151926754675, 875409856743430303853509350, 
+##   1675784582908852295948146470, 3072271735332895875904935195, 
+##   5397234129638871133346507775, 9090078534128625066688855200, 
+##   14683973016669317415420458400, 22760158175837441993901710520, 
+##   33862674359172779551902544920, 48375249084532542217003635600, 
+##   66375341767149302111702662800, 87494768693060443692698964600, 
+##   110826707011209895344085355160, 134919469404951176940625649760, 
+##   157884485473879036845412994400, 177620046158113916451089618700, 
+##   192119641762857909630770403900, 199804427433372226016001220056, 
+##   199804427433372226016001220056, 192119641762857909630770403900, 
+##   177620046158113916451089618700, 157884485473879036845412994400, 
+##   134919469404951176940625649760, 110826707011209895344085355160, 
+##   87494768693060443692698964600, 66375341767149302111702662800, 
+##   48375249084532542217003635600, 33862674359172779551902544920, 
+##   22760158175837441993901710520, 14683973016669317415420458400, 
+##   9090078534128625066688855200, 5397234129638871133346507775, 
+##   3072271735332895875904935195, 1675784582908852295948146470, 
+##   875409856743430303853509350, 437704928371715151926754675, 
+##   209337139656037681356273975, 95696978128474368620010960, 
+##   41783187633559231369300560, 17409661513983013070541900, 
+##   6916166902815169575968700, 2616928017281415515231400, 
+##   942094086221309585483304, 322295345286237489770604, 
+##   104641345872155029146300, 32197337191432316660400, 9373908296239788394800, 
+##   2577824781465941808570, 668324943343021950370, 163006083742200475700, 
+##   37314645675925410100, 7995995501984016450, 1599199100396803290, 
+##   297525414027312240, 51297485177122800, 8160963550905900, 1192050855750300, 
+##   158940114100040, 19212541264840, 2088319702700, 202095455100, 17199613200, 
+##   1267339920, 79208745, 4082925, 166650, 5050, 101 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -478,6 +485,7 @@ end);
 ## Generates the boundary of the <M>d</M>-dimensional cross polytope <M>\beta^{d}</M>, a centrally symmetric combinatorial <M>d-1</M>-sphere.
 ## <Example><![CDATA[
 ## gap> SCBdCrossPolytope(3); # the octahedron
+## <SimplicialComplex: Bd(\beta^3) | dim = 2 | n = 6>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -534,6 +542,7 @@ end);
 ## Generates the boundary complex of the <Arg>d</Arg>-dimensional cyclic polytope (a combinatorial <M>d-1</M>-sphere) on <Arg>n</Arg> vertices, where <M>n\geq d+2</M>.
 ## <Example><![CDATA[
 ## gap> SCBdCyclicPolytope(3,8); 
+## <SimplicialComplex: Bd(C_3(8)) | dim = 2 | n = 8>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -619,6 +628,7 @@ end);
 ## Generates the boundary of the <M>d</M>-simplex <M>\Delta^d</M>, a combinatorial <M>d-1</M>-sphere.
 ## <Example><![CDATA[
 ## gap> SCBdSimplex(5);
+## <SimplicialComplex: S^4_6 | dim = 4 | n = 6>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -677,6 +687,7 @@ end);
 ## Generates the <Arg>d</Arg>-simplex.
 ## <Example><![CDATA[
 ## gap> SCSimplex(3);
+## <SimplicialComplex: B^3_4 | dim = 3 | n = 4>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -720,6 +731,7 @@ end);
 ## gap> c1:=SCBdSimplex(2);;
 ## gap> c2:=SCBdSimplex(3);;
 ## gap> c3:=SCCartesianProduct(c1,c2);
+## <SimplicialComplex: S^1_3xS^2_4 | dim = 3 | n = 12>
 ## gap> c3.Homology;
 ## [ [ 0, [  ] ], [ 1, [  ] ], [ 1, [  ] ], [ 1, [  ] ] ]
 ## gap> c3.F;
@@ -840,6 +852,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(2);;
 ## gap> 4torus:=SCCartesianPower(c,4);
+## <SimplicialComplex: (S^1_3)^4 | dim = 4 | n = 81>
 ## gap> 4torus.Homology;
 ## [ [ 0, [  ] ], [ 4, [  ] ], [ 6, [  ] ], [ 4, [  ] ], [ 1, [  ] ] ]
 ## gap> 4torus.Chi;
@@ -961,10 +974,11 @@ end);
 ## In a lexicographic ordering the smallest facet of both <Arg>complex1</Arg> and  <Arg>complex2</Arg> is removed and the complexes are glued together along the resulting boundaries. The bijection used to identify the vertices of the boundaries differs from the one chosen in <Ref Func="SCConnectedSum"/> by a transposition. Thus, the topological type of <C>SCConnectedSumMinus</C> is different from the one of <Ref Func="SCConnectedSum"/> whenever <Arg>complex1</Arg> and <Arg>complex2</Arg> do not allow an orientation reversing homeomorphism. 
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("T^2"){[1..6]};
-## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], 
-##   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
+## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], [ 10, "T^2 (VT)" ],
+##   [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
 ## gap> torus:=SCLib.Load(last[1][1]);;
 ## gap> genus2:=SCConnectedSumMinus(torus,torus);
+## <SimplicialComplex: T^2 (VT)#+-T^2 (VT) | dim = 2 | n = 11>
 ## gap> genus2.Homology;
 ## [ [ 0, [  ] ], [ 4, [  ] ], [ 1, [  ] ] ]
 ## gap> genus2.Chi;
@@ -972,14 +986,11 @@ end);
 ## ]]></Example>
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("CP^2");
-## [ [ 16, "CP^2 (VT)" ], [ 96, "CP^2#-CP^2" ], 
-##   [ 97, "CP^2#CP^2" ], [ 185, "CP^2#(S^2xS^2)" ], 
-##   [ 397, "Gaifullin CP^2" ], 
+## [ [ 16, "CP^2 (VT)" ], [ 96, "CP^2#-CP^2" ], [ 97, "CP^2#CP^2" ], 
+##   [ 185, "CP^2#(S^2xS^2)" ], [ 397, "Gaifullin CP^2" ], 
 ##   [ 457, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
 ## gap> cp2:=SCLib.Load(last[1][1]);;
-## # CP^2 # CP^2 (signature of intersection form is 2)  
 ## gap> c1:=SCConnectedSum(cp2,cp2);;
-## # CP^2 # - CP^2 (signature of intersection form is 0)
 ## gap> c2:=SCConnectedSumMinus(cp2,cp2);;
 ## gap> c1.F=c2.F;
 ## true
@@ -1129,10 +1140,11 @@ end;
 ## In a lexicographic ordering the smallest facet of both <Arg>complex1</Arg> and <Arg>complex2</Arg> is removed and the complexes are glued together along the resulting boundaries. The bijection used to identify the vertices of the boundaries differs from the one chosen in <Ref Func="SCConnectedSumMinus"/> by a transposition. Thus, the topological type of <C>SCConnectedSum</C> is different from the one of <Ref Func="SCConnectedSumMinus"/> whenever <Arg>complex1</Arg> and <Arg>complex2</Arg> do not allow an orientation reversing homeomorphism. 
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("T^2"){[1..6]};
-## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], 
-##   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
+## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], [ 10, "T^2 (VT)" ],
+##   [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
 ## gap> torus:=SCLib.Load(last[1][1]);;
 ## gap> genus2:=SCConnectedSum(torus,torus);
+## <SimplicialComplex: T^2 (VT)#+-T^2 (VT) | dim = 2 | n = 11>
 ## gap> genus2.Homology;
 ## [ [ 0, [  ] ], [ 4, [  ] ], [ 1, [  ] ] ]
 ## gap> genus2.Chi;
@@ -1140,14 +1152,11 @@ end;
 ## ]]></Example>
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("CP^2");
-## [ [ 16, "CP^2 (VT)" ], [ 96, "CP^2#-CP^2" ], 
-##   [ 97, "CP^2#CP^2" ], [ 185, "CP^2#(S^2xS^2)" ], 
-##   [ 397, "Gaifullin CP^2" ], 
+## [ [ 16, "CP^2 (VT)" ], [ 96, "CP^2#-CP^2" ], [ 97, "CP^2#CP^2" ], 
+##   [ 185, "CP^2#(S^2xS^2)" ], [ 397, "Gaifullin CP^2" ], 
 ##   [ 457, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
 ## gap> cp2:=SCLib.Load(last[1][1]);;
-## # CP^2 # CP^2 (signature of intersection form is 2)  
 ## gap> c1:=SCConnectedSum(cp2,cp2);;
-## # CP^2 # - CP^2 (signature of intersection form is 0)
 ## gap> c2:=SCConnectedSumMinus(cp2,cp2);;
 ## gap> c1.F=c2.F;
 ## true
@@ -1260,10 +1269,12 @@ end);
 ## If <M>n \geq 2</M>, the function internally calls <M>1 \times</M> <Ref Func="SCConnectedSum"/> and <M>(n-2) \times</M> <Ref Func="SCConnectedSumMinus"/>.
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("T^2"){[1..6]};
-## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], 
-##   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
+## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], [ 10, "T^2 (VT)" ],
+##   [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
 ## gap> torus:=SCLib.Load(last[1][1]);;
 ## gap> genus10:=SCConnectedProduct(torus,10);
+## <SimplicialComplex: T^2 (VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2\
+##  (VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2 (VT)#+-T^2 (VT) | dim = 2 | n = 43>
 ## gap> genus10.Chi;
 ## -18
 ## gap> genus10.F;
@@ -1411,8 +1422,6 @@ end);
 ## gap> SCIsPseudoManifold(c);
 ## true
 ## gap> SCIsManifold(c);
-## #I  SCIsManifold: link is sphere.
-## #I  SCIsManifold: transitive automorphism group, checking only one link.
 ## true
 ## ]]></Example>
 ## </Description>
@@ -1461,12 +1470,12 @@ end);
 ## <Example><![CDATA[
 ## gap> sphere:=SCBdSimplex(4);;
 ## gap> gens:=SCGenerators(sphere);
-## [ [ [ 1, 2, 3, 4 ], [ [ 5 ] ] ] ]
+## [ [ [ 1, 2, 3, 4 ], [ 5 ] ] ]
 ## gap> diffcycle:=SCDifferenceCycleCompress(gens[1][1],5);
 ## [ 1, 1, 1, 2 ]
 ## gap> c:=SCDifferenceCycleExpand([1,1,1,2]);;
 ## gap> c.Facets;
-## [ [ 1, 2, 3, 4 ], [ 1, 2, 3, 5 ], [ 1, 2, 4, 5 ], [ 1, 3, 4, 5 ],
+## [ [ 1, 2, 3, 4 ], [ 1, 2, 3, 5 ], [ 1, 2, 4, 5 ], [ 1, 3, 4, 5 ], 
 ##   [ 2, 3, 4, 5 ] ]
 ## ]]></Example>
 ## </Description>
@@ -1503,6 +1512,10 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SC([[1,2,3],[2,3,4],[4,5,6],[5,6,7]]);;
 ## gap> comps:=SCStronglyConnectedComponents(c);
+## [ <SimplicialComplex: Strongly connected component #1 of unnamed complex 85 | \
+## dim = 2 | n = 4>, 
+##   <SimplicialComplex: Strongly connected component #2 of unnamed complex 85 | \
+## dim = 2 | n = 4> ]
 ## gap> comps[1].Facets;
 ## [ [ 1, 2, 3 ], [ 2, 3, 4 ] ]
 ## gap> comps[2].Facets;
@@ -1618,9 +1631,17 @@ end);
 ## gap> c:=SC([[1,2,3],[3,4,5],[4,5,6,7,8]]);;
 ## gap> SCRename(c,"connected complex");;
 ## gap> SCConnectedComponents(c);
+## [ <SimplicialComplex: Connected component #1 of connected complex | dim = 4 | \
+## n = 8> ]
 ## gap> c:=SC([[1,2,3],[4,5],[6,7,8]]);;
 ## gap> SCRename(c,"non-connected complex");;
 ## gap> SCConnectedComponents(c);
+## [ <SimplicialComplex: Connected component #1 of non-connected complex | dim = \
+## 2 | n = 3>, 
+##   <SimplicialComplex: Connected component #2 of non-connected complex | dim = \
+## 1 | n = 2>, 
+##   <SimplicialComplex: Connected component #3 of non-connected complex | dim = \
+## 2 | n = 3> ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1765,13 +1786,13 @@ end;
 ## 80071
 ## 80077
 ## gap> SCSeriesAGL(80021);                                                 
-## [ AGL(1,80021), [  ] ]
+## AGL(1,80021)
 ## gap> SCSeriesAGL(80039);                                                 
 ## [ AGL(1,80039), [ [ 1, 2, 6496, 73546, 78018 ] ] ]
 ## gap> SCSeriesAGL(80051);                                                 
 ## [ AGL(1,80051), [ [ 1, 2, 31498, 37522, 48556 ] ] ]
 ## gap> SCSeriesAGL(80071);                                                 
-## [ AGL(1,80071), [  ] ]
+## AGL(1,80071)
 ## gap> SCSeriesAGL(80077);                                                 
 ## [ AGL(1,80077), [ [ 1, 2, 4126, 39302, 40778 ] ] ]
 ## ]]></Example>
@@ -1853,11 +1874,18 @@ end);
 ## Constructs the complex <M>B(i,d)</M> as described in <Cite Key="Klee11CentSymmMnfFewVert" />, cf. <Cite Key="Effenberger10Diss" />, <Cite Key="Sparla99LBTComb2kMnf" />. The complex <M>B(i,d)</M> is a <M>i</M>-Hamiltonian subcomplex of the <M>d</M>-cross polytope and its boundary topologically is a sphere product <M>S^i\times S^{d-i-2}</M> with vertex transitive automorphism group.   
 ## <Example><![CDATA[
 ## gap> b26:=SCSeriesBid(2,6);
+## <SimplicialComplex: B(2,6) | dim = 5 | n = 12>
 ## gap> s2s2:=SCBoundary(b26);
+## <SimplicialComplex: Bd(B(2,6)) | dim = 4 | n = 12>
 ## gap> SCFVector(s2s2);
+## [ 12, 60, 160, 180, 72 ]
 ## gap> SCAutomorphismGroup(s2s2); 
+## Group([ (1,3)(4,6)(7,9)(10,12), (1,5)(2,10)(4,8)(6,12)(7,11), (1,10,7,4)
+##   (2,3,8,9)(5,12,11,6) ])
 ## gap> SCIsManifold(s2s2); 
+## true
 ## gap> SCHomology(s2s2);
+## [ [ 0, [  ] ], [ 0, [  ] ], [ 2, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1922,6 +1950,8 @@ end);
 ## Generates the combinatorial <M>3</M>-manifold <M>C_{2n}</M>, <M>n \geq 8</M>, with <M>2n</M> vertices from <Cite Key="Spreer10Diss"/>, Section 4.5.3 and Section 5.2. The complex is homeomorphic to <M>S^2 \times S^1</M> for <M>n</M> odd and homeomorphic to <M>S^2 \dtimes S^1</M> in case <M>n</M> is an even number. In the latter case <M>C_{2n}</M> is isomorphic to <M>D_{2n}</M> from <Ref Func="SCSeriesD2n"/>. The complexes are believed to appear as the vertex links of some of the members of the series of <M>2</M>-transitive <M>4</M>-pseudomanifolds from <Ref Func="SCSeriesAGL"/>. Internally calls <Ref Func="SCFromDifferenceCycles"/>.
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesC2n(8);
+## <SimplicialComplex: C_16 = { (1:1:3:11),(1:1:11:3),(1:3:1:11),(2:3:2:9),(2:5:2\
+## :7) } | dim = 3 | n = 16>
 ## gap> SCGenerators(c);  
 ## [ [ [ 1, 2, 3, 6 ], 32 ], [ [ 1, 2, 5, 6 ], 16 ], [ [ 1, 3, 6, 8 ], 16 ], 
 ##   [ [ 1, 3, 8, 10 ], 16 ] ]
@@ -1929,6 +1959,8 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesC2n(8);;
 ## gap> d:=SCSeriesD2n(8); 
+## <SimplicialComplex: D_16 = { (1:1:1:13),(1:2:11:2),(3:4:5:4),(2:3:4:7),(2:7:4:\
+## 3) } | dim = 3 | n = 16>
 ## gap> SCIsIsomorphic(c,d);
 ## true
 ## gap> c:=SCSeriesC2n(11);;
@@ -1973,14 +2005,20 @@ end);
 ## Generates the combinatorial <M>3</M>-manifold <M>D_{2n}</M>, <M>n \geq 8</M>, <M>n \neq 9</M>, with <M>2n</M> vertices from <Cite Key="Spreer10Diss"/>, Section 4.5.3 and Section 5.2. The complex is homeomorphic to <M>S^2 \dtimes S^1</M>. In the case that <M>n</M> is even <M>D_{2n}</M> is isomorphic to <M>C_{2n}</M> from <Ref Func="SCSeriesC2n"/>. The complexes are believed to appear as the vertex links of some of the members of the series of <M>2</M>-transitive <M>4</M>-pseudomanifolds from <Ref Func="SCSeriesAGL"/>. Internally calls <Ref Func="SCFromDifferenceCycles"/>.
 ## <Example><![CDATA[
 ## gap> d:=SCSeriesD2n(15);
+## <SimplicialComplex: D_30 = { (1:1:1:27),(1:2:25:2),(3:11:5:11),(2:3:11:14),(2:\
+## 14:11:3) } | dim = 3 | n = 30>
 ## gap> SCAutomorphismGroup(d);  
-## TransitiveGroup(30,14) = t30n14
+## Group([ (1,3)(4,30)(5,29)(6,28)(7,27)(8,26)(9,25)(10,24)(11,23)(12,22)(13,21)
+##   (14,20)(15,19)(16,18), (1,4)(2,3)(5,30)(6,29)(7,28)(8,27)(9,26)(10,25)
+##   (11,24)(12,23)(13,22)(14,21)(15,20)(16,19)(17,18) ])
 ## gap> StructureDescription(last);
 ## "D60"
 ## ]]></Example>
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesC2n(8);;
 ## gap> d:=SCSeriesD2n(8); 
+## <SimplicialComplex: D_16 = { (1:1:1:13),(1:2:11:2),(3:4:5:4),(2:3:4:7),(2:7:4:\
+## 3) } | dim = 3 | n = 16>
 ## gap> SCIsIsomorphic(c,d);
 ## true
 ## gap> c:=SCSeriesC2n(11);;
@@ -2021,11 +2059,17 @@ end);
 ## Computes the symmetric orientable sphere bundle Ku<M>(n)</M> with <M>4n</M> vertices from <Cite Key="Spreer10Diss"/>, Section 4.5.2. The series is defined as a generalization of the slicings from <Cite Key="Spreer10Diss"/>, Section 3.3.
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesKu(4);                                    
+## <SimplicialComplex: Sl_16 = G{ [1,2,5,9],[1,2,9,10],[1,5,9,16] } | dim = 3 | n\
+##  = 16>
 ## gap> SCSlicing(c,[[1,2,3,4,9,10,11,12],[5,6,7,8,13,14,15,16]]);
+## <NormalSurface: slicing [ [ 1, 2, 3, 4, 9, 10, 11, 12 ], [ 5, 6, 7, 8, 13, 14,\
+##  15, 16 ] ] of Sl_16 = G{ [1,2,5,9],[1,2,9,10],[1,5,9,16] } | dim = 2>
 ## gap> Mminus:=SCSpan(c,[1,2,3,4,9,10,11,12]);;                  
 ## gap> Mplus:=SCSpan(c,[5,6,7,8,13,14,15,16]);;                  
 ## gap> SCCollapseGreedy(Mminus).Facets;
+## [ [ 3, 4 ], [ 3, 10 ], [ 4, 12 ], [ 9, 10 ], [ 9, 12 ] ]
 ## gap> SCCollapseGreedy(Mplus).Facets; 
+## [ [ 5, 6 ], [ 5, 8 ], [ 6, 14 ], [ 7, 8 ], [ 7, 15 ], [ 14, 15 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2093,9 +2137,13 @@ end);
 ## <C>SCSeriesCSTSurface(l,j,2k)</C> generates the centrally symmetric transitive (cst) surface <M>S_{(l,j,2k)}</M>, <C>SCSeriesCSTSurface(l,2k)</C> generates the cst surface <M>S_{(l,2k)}</M> from <Cite Key="Spreer10PartBetaK"/>, Section 4.4.
 ## <Example><![CDATA[
 ## gap> SCSeriesCSTSurface(2,4,14);
+## <SimplicialComplex: cst surface S_{(2,4,14)} = { (2:4:8),(2:8:4) } | dim = 2 |\
+##  n = 14>
 ## gap> last.Homology;
 ## [ [ 1, [  ] ], [ 4, [  ] ], [ 2, [  ] ] ]
 ## gap> SCSeriesCSTSurface(2,10);  
+## <SimplicialComplex: cst surface S_{(2,10)} = { (2:2:6),(3:3:4) } | dim = 2 | n\
+##  = 10>
 ## gap> last.Homology;                    
 ## [ [ 0, [  ] ], [ 1, [ 2 ] ], [ 0, [  ] ] ]
 ## ]]></Example>
@@ -2147,11 +2195,12 @@ end);
 ## <C>SCSeriesHandleBody(d,n)</C> generates a transitive <M>d</M>-dimensional handle body (<M>d \geq 3</M>) with <M>n</M> vertices (<M>n \geq 2d + 1</M>). The handle body is orientable if <M>d</M> is odd or if <M>d</M> and <M>n</M> are even, otherwise it is not orientable. The complex equals the difference cycle <M>(1 : \ldots : 1 : n-d)</M> To obtain the boundary complexes of <C>SCSeriesHandleBody(d,n)</C> use the function <Ref Func="SCSeriesBdHandleBody"/>. Internally calls <Ref Func="SCFromDifferenceCycles"/>.
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesHandleBody(3,7);
+## <SimplicialComplex: Handle body B^2 x S^1 | dim = 3 | n = 7>
 ## gap> SCAutomorphismGroup(c);    
-## PrimitiveGroup(7,2) = D(2*7)
+## Group([ (1,3)(4,7)(5,6), (1,4)(2,3)(5,7) ])
 ## gap> bd:=SCBoundary(c);;
 ## gap> SCAutomorphismGroup(bd);
-## PrimitiveGroup(7,4) = AGL(1, 7)
+## Group([ (1,2)(3,7)(4,6), (1,4,2)(3,5,6) ])
 ## gap> SCIsIsomorphic(bd,SCSeriesBdHandleBody(2,7));
 ## true
 ## ]]></Example>
@@ -2192,7 +2241,9 @@ end);
 ## <C>SCSeriesBdHandleBody(d,n)</C> generates a transitive <M>d</M>-dimensional sphere bundle (<M>d \geq 2</M>) with <M>n</M> vertices (<M>n \geq 2d + 3</M>) which coincides with the boundary of <Ref Func="SCSeriesHandleBody"/><C>(d,n)</C>. The sphere bundle is orientable if <M>d</M> is even or if <M>d</M> is odd and <M>n</M> is even, otherwise it is not orientable. Internally calls <Ref Func="SCFromDifferenceCycles"/>.
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesBdHandleBody(2,7);
+## <SimplicialComplex: Sphere bundle S^1 x S^1 | dim = 2 | n = 7>
 ## gap> SCLib.DetermineTopologicalType(c);
+## <SimplicialComplex: Sphere bundle S^1 x S^1 | dim = 2 | n = 7>
 ## gap> SCIsIsomorphic(c,SCSeriesHandleBody(3,7).Boundary);
 ## true
 ## ]]></Example>
@@ -2234,13 +2285,14 @@ end);
 ## Generates the <Arg>k</Arg>-th member (<M>k \geq 7</M>) of the series <C>Le</C> from <Cite Key="Spreer10Diss"/>, Section 4.5.1. The series can be constructed as the generalization of the boundary of a genus <M>1</M> handlebody decomposition of the manifold <C>manifold_3_14_1_5</C> from the classification in <Cite Key="Lutz03TrigMnfFewVertVertTrans"/>.
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesLe(7);                     
+## <SimplicialComplex: Le_14 = { (1:1:1:11),(1:2:4:7),(1:4:2:7),(2:1:4:7),(2:5:2:\
+## 5),(2:4:2:6) } | dim = 3 | n = 14>
 ## gap> d:=SCLib.DetermineTopologicalType(c);;
 ## gap> SCReference(d);
 ## "manifold_3_14_1_5 in F.H.Lutz: 'The Manifold Page', http://www.math.tu-berlin\
-## .de/diskregeom/stellar/,\nF.H.Lutz: 'Triangulated manifolds with few vertices \
-## and vertex-transitive group actions', Doctoral Thesis TU Berlin 1999, Shaker-V\
-## erlag, Aachen 1999"
-## gap>  
+## .de/diskregeom/stellar/,\r\nF.H.Lutz: 'Triangulated manifolds with few vertice\
+## s and vertex-transitive group actions', Doctoral Thesis TU Berlin 1999, Shaker\
+## -Verlag, Aachen 1999"
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2280,7 +2332,6 @@ end);
 ## gap> cc:=List([1..18],x->SCSeriesL(x,10));; 
 ## gap> Set(List(cc,x->x.IsManifold));
 ## [ true ]
-## gap>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2338,10 +2389,14 @@ end);
 ## <Example><![CDATA[
 ## gap> cc:=List([1..10],x->SCSeriesK(x,0));;                                                                                                                                                                                                  
 ## gap> Set(List(cc,x->x.F));                                                                                                                                                                                                                        
+## [ [ 9, 36, 54, 27 ], [ 11, 55, 88, 44 ], [ 13, 65, 104, 52 ], 
+##   [ 13, 78, 130, 65 ], [ 15, 90, 150, 75 ], [ 15, 105, 180, 90 ] ]
 ## gap> cc:=List([1..10],x->SCSeriesK(x,10));;
 ## gap> gap> cc:=List([1..10],x->SCSeriesK(x,10));;
 ## gap> Set(List(cc,x->x.Homology));
+## [ [ [ 0, [  ] ], [ 1, [  ] ], [ 0, [ 2 ] ], [ 0, [  ] ] ] ]
 ## gap> Set(List(cc,x->x.IsManifold));
+## [ true ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2780,7 +2835,7 @@ end);
 ## <Example><![CDATA[
 ## gap> l:=List([2..19],x->SCSeriesPrimeTorus(1,x,41));; 
 ## gap> Set(List(l,x->SCHomology(x)));
-## gap> 
+## [ [ [ 0, [  ] ], [ 2, [  ] ], [ 1, [  ] ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2821,7 +2876,6 @@ end);
 ## [ [ 9, 36, 54, 27 ], [ 11, 55, 88, 44 ], [ 13, 78, 130, 65 ], 
 ##   [ 15, 105, 180, 90 ], [ 17, 136, 238, 119 ], [ 19, 171, 304, 152 ], 
 ##   [ 21, 210, 378, 189 ] ]
-## gap>  
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2861,7 +2915,6 @@ end);
 ## gap> List([5..10],x->SCFVector(SCSeriesNSB2(x)));       
 ## [ [ 10, 45, 70, 35 ], [ 12, 66, 108, 54 ], [ 14, 91, 154, 77 ], 
 ##   [ 16, 120, 208, 104 ], [ 18, 153, 270, 135 ], [ 20, 190, 340, 170 ] ]
-## gap> 
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2901,7 +2954,6 @@ end);
 ## gap> List([11..15],x->SCFVector(SCSeriesNSB3(x)));       
 ## [ [ 11, 55, 88, 44 ], [ 12, 66, 108, 54 ], [ 13, 78, 130, 65 ], 
 ##   [ 14, 91, 154, 77 ], [ 15, 105, 180, 90 ] ]
-## gap> 
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2938,7 +2990,9 @@ end);
 ## Generates the <M>d</M>-torus described in <Cite Key="Kuehnel86HigherDimCsaszar"/>.
 ## <Example><![CDATA[
 ## gap> t4:=SCSeriesTorus(4);
+## <SimplicialComplex: 4-torus T^4 | dim = 4 | n = 31>
 ## gap> t4.Homology;
+## [ [ 0, [  ] ], [ 4, [  ] ], [ 6, [  ] ], [ 4, [  ] ], [ 1, [  ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2984,15 +3038,23 @@ end);
 ## for a <M>k \geq 0</M> and <K>fail</K> otherwise. All complexes have a transitive cyclic automorphism group.
 ## <Example><![CDATA[
 ## gap> l154:=SCSeriesLensSpace(15,4);
+## <SimplicialComplex: Lens space L(15,4) | dim = 3 | n = 22>
 ## gap> l154.Homology;
+## [ [ 0, [  ] ], [ 0, [ 15 ] ], [ 0, [  ] ], [ 1, [  ] ] ]
 ## gap> g:=SimplifiedFpGroup(SCFundamentalGroup(l154));
+## <fp group on the generators [ [2,5] ]>
 ## gap> StructureDescription(g);
+## "C15"
 ## ]]></Example>
 ## <Example><![CDATA[
 ## gap> l151:=SCSeriesLensSpace(15,1);
+## <SimplicialComplex: Lens space L(15,1) | dim = 3 | n = 62>
 ## gap> l151.Homology;
+## [ [ 0, [  ] ], [ 0, [ 15 ] ], [ 0, [  ] ], [ 1, [  ] ] ]
 ## gap> g:=SimplifiedFpGroup(SCFundamentalGroup(l151));
+## <fp group on the generators [ [2,3] ]>
 ## gap> StructureDescription(g);
+## "C15"
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3042,11 +3104,17 @@ end);
 ## Generates a neighborly 3-torus with <Arg>n</Arg> vertices if <Arg>n</Arg> is odd and a centrally symmetric 3-torus if <Arg>n</Arg> is even (<Arg>n</Arg><M>\geq 15</M> . The triangulations are taken from <Cite Key="Brehm09LatticeTrigE33Torus"/>
 ## <Example><![CDATA[
 ## gap> T3:=SCSeriesBrehmKuehnelTorus(15);
+## <SimplicialComplex: Neighborly 3-Torus NT3(15) | dim = 3 | n = 15>
 ## gap> T3.Homology;
+## [ [ 0, [  ] ], [ 3, [  ] ], [ 3, [  ] ], [ 1, [  ] ] ]
 ## gap> T3.Neighborliness;
+## 2
 ## gap> T3:=SCSeriesBrehmKuehnelTorus(16);
+## <SimplicialComplex: Centrally symmetric 3-Torus SCT3(16) | dim = 3 | n = 16>
 ## gap> T3.Homology;
+## [ [ 0, [  ] ], [ 3, [  ] ], [ 3, [  ] ], [ 1, [  ] ] ]
 ## gap> T3.IsCentrallySymmetric;
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3180,9 +3248,13 @@ end;
 ## as described in <Cite Key="Spreer12VarCyclPolytope"/>.
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesHomologySphere(2,3,5);
+## <SimplicialComplex: Homology sphere Sigma(2,3,5) | dim = 3 | n = 17>
 ## gap> c.Homology;
+## [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
 ## gap> c:=SCSeriesHomologySphere(3,4,13);
+## <SimplicialComplex: Homology sphere Sigma(3,4,13) | dim = 3 | n = 37>
 ## gap> c.Homology;
+## [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3220,9 +3292,15 @@ end);
 ## as described in <Cite Key="Spreer12VarCyclPolytope"/>.
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesConnectedSum(12);
+## <SimplicialComplex: (S^2xS^1)^#12) | dim = 3 | n = 52>
 ## gap> c.Homology;
+## [ [ 0, [  ] ], [ 12, [  ] ], [ 12, [  ] ], [ 1, [  ] ] ]
 ## gap> g:=SimplifiedFpGroup(SCFundamentalGroup(c));
+## <fp group of size infinity on the generators 
+## [ [2,3], [2,14], [3,4], [6,7], [9,10], [10,11], [11,12], [12,13], [26,32], 
+##   [26,34], [29,31], [33,35] ]>
 ## gap> RelatorsOfFpGroup(g);
+## [  ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3267,7 +3345,9 @@ end);
 ## as described in <Cite Key="Spreer12VarCyclPolytope"/>.
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesSeifertFibredSpace(2,3,15);
+## <SimplicialComplex: SFS [ S^2 : (2,b1)^3, (5,b3) ] | dim = 3 | n = 27>
 ## gap> c.Homology;
+## [ [ 0, [  ] ], [ 0, [ 2, 2 ] ], [ 0, [  ] ], [ 1, [  ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3342,17 +3422,30 @@ end);
 ## surface are returned
 ## <Example><![CDATA[
 ## gap> c:=SCSurface(23,true); 
+## <SimplicialComplex: S_23^or | dim = 2 | n = 88>
 ## gap> c.Homology;
+## [ [ 0, [  ] ], [ 46, [  ] ], [ 1, [  ] ] ]
 ## gap> c.TopologicalType;
+## "(T^2)^#23"
 ## gap> c:=SCSurface(23,false); 
+## <SimplicialComplex: S_23^non | dim = 2 | n = 21>
 ## gap> c.Homology;
+## [ [ 0, [  ] ], [ 22, [ 2 ] ], [ 0, [  ] ] ]
 ## gap> c.TopologicalType;
+## "(RP^2)^#23"
 ## ]]></Example>
 ## <Example><![CDATA[
 ## gap> dc:=SCSurface(345,true);
+## [ [ 1, 1, 1374 ], [ 2, 343, 1031 ], [ 343, 345, 688 ] ]
 ## gap> c:=SCFromDifferenceCycles(dc);
+## <SimplicialComplex: complex from diffcycles [ [ 1, 1, 1374 ], [ 2, 343, 1031 ]\
+## , [ 343, 345, 688 ] ] | dim = 2 | n = 1376>
 ## gap> c.Chi;
+## -688
 ## gap> dc:=SCSurface(12345678910,true); time;
+## [ [ 1, 1, 24691357816 ], [ 2, 4, 24691357812 ], [ 3, 3, 24691357812 ], 
+##   [ 4, 12345678907, 12345678907 ] ]
+## 0
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3509,7 +3602,9 @@ end);
 ## Generates a combinatorial version of <M>(S^2 \times S^2)^{\# k}</M>.
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesS2xS2(3);
+## <SimplicialComplex: (S^2 x S^2)^(# 3) | dim = 4 | n = 24>
 ## gap> c.Homology;
+## [ [ 0, [  ] ], [ 0, [  ] ], [ 6, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>

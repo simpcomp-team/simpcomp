@@ -146,8 +146,8 @@ end);
 ##   [ [ 1, 2 ], [ 1, 4 ], [ 1, 5 ] ], [ [ 1, 3 ], [ 1, 4 ], [ 1, 5 ] ] ]
 ## gap> sl:=sl mod 2;;
 ## gap> sl.Facets;    
-## [ [ [ 1, 0 ], [ 1, 1 ], [ 1, 0 ] ], [ [ 1, 0 ], [ 1, 1 ], [ 1, 1 ] ], 
-##   [ [ 1, 0 ], [ 1, 0 ], [ 1, 1 ] ], [ [ 1, 1 ], [ 1, 0 ], [ 1, 1 ] ] ]
+## [ [ [ 1, 0 ], [ 1, 0 ], [ 1, 1 ] ], [ [ 1, 0 ], [ 1, 0 ], [ 1, 1 ] ], 
+##   [ [ 1, 0 ], [ 1, 1 ], [ 1, 1 ] ], [ [ 1, 0 ], [ 1, 1 ], [ 1, 1 ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -290,14 +290,7 @@ end;
 ## Constructor for a discrete normal surface from a facet list, see <Ref Meth="SCFromFacets"/> for details.
 ## <Example><![CDATA[
 ## gap> sl:=SCNSFromFacets([[1,2,3],[1,2,4,5],[1,3,4,6],[2,3,5,6],[4,5,6]]);
-## [NormalSurface
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="unnamed discrete normal surface m"
-##  Dim=2
-## 
-## /NormalSurface]
+## <NormalSurface: unnamed complex 114 | dim = 2>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -354,14 +347,7 @@ end);
 ## Internally calls <Ref Meth="SCNSFromFacets"/>.
 ## <Example><![CDATA[
 ## gap> sl:=SCNS([[1,2,3],[1,2,4,5],[1,3,4,6],[2,3,5,6],[4,5,6]]);
-## [NormalSurface
-## 
-##  Properties known: Dim, Facets, Name, SCVertices.
-## 
-##  Name="unnamed discrete normal surface n"
-##  Dim=2
-## 
-## /NormalSurface]
+## <NormalSurface: unnamed complex 115 | dim = 2>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -400,33 +386,9 @@ end);
 ## Copies a &GAP; object of type <C>SCNormalSurface</C> (cf. <Ref Meth="SCCopy"/>).
 ## <Example><![CDATA[
 ## gap> sl:=SCNSSlicing(SCBdSimplex(4),[[1],[2..5]]);
-## [NormalSurface
-## 
-##  Properties known: Chi, ConnectedComponents, Dim, F, Facets, Genus, IsConnect\
-## ed, Name, Oriented, Subdivision, TopologicalType, SCVertices, Vertices.
-## 
-##  Name="slicing [ [ 1 ], [ 2, 3, 4, 5 ] ] of S^3_5"
-##  Dim=2
-##  Chi=2
-##  F=[ 4, 6, 4 ]
-##  IsConnected=true
-##  TopologicalType="S^2"
-## 
-## /NormalSurface]
+## <NormalSurface: slicing [ [ 1 ], [ 2, 3, 4, 5 ] ] of S^3_5 | dim = 2>
 ## gap> sl_2:=SCCopy(sl);                          
-## [NormalSurface
-## 
-##  Properties known: Chi, ConnectedComponents, Dim, F, Facets, Genus, IsConnect\
-## ed, Name, Oriented, Subdivision, TopologicalType, SCVertices, Vertices.
-## 
-##  Name="slicing [ [ 1 ], [ 2, 3, 4, 5 ] ] of S^3_5"
-##  Dim=2
-##  Chi=2
-##  F=[ 4, 6, 4 ]
-##  IsConnected=true
-##  TopologicalType="S^2"
-## 
-## /NormalSurface]
+## <NormalSurface: slicing [ [ 1 ], [ 2, 3, 4, 5 ] ] of S^3_5 | dim = 2>
 ## gap> IsIdenticalObj(sl,sl_2);                     
 ## false
 ## ]]></Example>
@@ -490,14 +452,7 @@ end);
 ## Generates an empty complex (of dimension <M>-1</M>), i. e. an object of type <C>SCNormalSurface</C> with empty facet list.
 ## <Example><![CDATA[
 ## gap> SCNSEmpty();
-## [NormalSurface
-## 
-##  Properties known: Dim, Faces, Facets, Name, SCVertices.
-## 
-##  Name="empty discrete normal surface"
-##  Dim=-1
-## 
-## /NormalSurface]
+## <NormalSurface: empty normal surface | dim = -1>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -704,6 +659,7 @@ end);
 ## <Example><![CDATA[
 ## gap> sl:=SCNS([]);;
 ## gap> SCIsEmpty(sl);
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -739,10 +695,12 @@ end);
 ## <Example><![CDATA[
 ## gap> list:=SCLib.SearchByAttribute("Dim=3 and F[1]=10");;
 ## gap> c:=SCLib.Load(list[1][1]);
+## <SimplicialComplex: S^3 (VT) | dim = 3 | n = 10>
 ## gap> sl1:=SCNSSlicing(c,[[1..5],[6..10]]);;
 ## gap> sl2:=sl1+10;;
 ## gap> sl3:=SCUnion(sl1,sl2);;
 ## gap> SCTopologicalType(sl3);
+## "S^2 U S^2"
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -792,8 +750,12 @@ end);
 ## <Example><![CDATA[
 ## gap> list:=SCLib.SearchByAttribute("Dim=3 and F[1]=10");;
 ## gap> c:=SCLib.Load(list[1][1]);
+## <SimplicialComplex: S^3 (VT) | dim = 3 | n = 10>
 ## gap> sl:=SCNSSlicing(c,[[1..5],[6..10]]);
+## <NormalSurface: slicing [ [ 1, 2, 3, 4, 5 ], [ 6, 7, 8, 9, 10 ] ] of S^3 (VT) \
+## | dim = 2>
 ## gap> SCIsConnected(sl);
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -848,7 +810,13 @@ end);
 ## Computes all connected components of an arbitrary normal surface.
 ## <Example><![CDATA[
 ## gap> sl:=SCNSSlicing(SCBdCrossPolytope(4),[[1,2],[3..8]]);
+## <NormalSurface: slicing [ [ 1, 2 ], [ 3, 4, 5, 6, 7, 8 ] ] of Bd(\beta^4) | di\
+## m = 2>
 ## gap> cc:=SCConnectedComponents(sl);
+## [ <NormalSurface: Connected component #1 of slicing [ [ 1, 2 ], [ 3, 4, 5, 6, \
+## 7, 8 ] ] of Bd(\beta^4) | dim = 2>, 
+##   <NormalSurface: Connected component #2 of slicing [ [ 1, 2 ], [ 3, 4, 5, 6, \
+## 7, 8 ] ] of Bd(\beta^4) | dim = 2> ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -930,7 +898,7 @@ end);
 ## gap> c:=SCBdSimplex(4);;              
 ## gap> sl:=SCNSSlicing(c,[[1],[2..5]]);;
 ## gap> SCSkelEx(sl,3);                            
-## [ ]
+## [  ]
 ## gap> sl:=SCNSSlicing(c,[[1,2],[3..5]]);;
 ## gap> SCSkelEx(sl,3);                            
 ## [ [ 1, 2, 4, 5 ], [ 1, 3, 4, 6 ], [ 2, 3, 5, 6 ] ]
@@ -1003,12 +971,10 @@ end);
 ## gap> c:=SCBdSimplex(4);;              
 ## gap> sl:=SCNSSlicing(c,[[1],[2..5]]);;
 ## gap> SCSkel(sl,3);                            
-## [ ]
+## [  ]
 ## gap> sl:=SCNSSlicing(c,[[1,2],[3..5]]);;
 ## gap> SCSkelEx(sl,3);                            
-## [ [ [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 4 ] ], 
-##   [ [ 1, 3 ], [ 1, 5 ], [ 2, 3 ], [ 2, 5 ] ], 
-##   [ [ 1, 4 ], [ 1, 5 ], [ 2, 4 ], [ 2, 5 ] ] ]
+## [ [ 1, 2, 4, 5 ], [ 1, 3, 4, 6 ], [ 2, 3, 5, 6 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1050,9 +1016,8 @@ end);
 ## gap> sl:=SCNSSlicing(c,[[1,2],[3..5]]);;
 ## gap> SCFaceLatticeEx(sl);                            
 ## [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
-##   [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 5 ], 
-##     [ 3, 6 ], [ 4, 5 ], [ 4, 6 ], [ 5, 6 ] ], 
-##   [ [ 1, 2, 3 ], [ 4, 5, 6 ] ], 
+##   [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 5 ], [ 3, 6 ], [ 4, 5 ], 
+##       [ 4, 6 ], [ 5, 6 ] ], [ [ 1, 2, 3 ], [ 4, 5, 6 ] ], 
 ##   [ [ 1, 2, 4, 5 ], [ 1, 3, 4, 6 ], [ 2, 3, 5, 6 ] ] ]
 ## gap> sl.F;
 ## [ 6, 9, 2, 3 ]
@@ -1101,12 +1066,12 @@ end);
 ## [ [ [ [ 1, 3 ] ], [ [ 1, 4 ] ], [ [ 1, 5 ] ], [ [ 2, 3 ] ], [ [ 2, 4 ] ], 
 ##       [ [ 2, 5 ] ] ], 
 ##   [ [ [ 1, 3 ], [ 1, 4 ] ], [ [ 1, 3 ], [ 1, 5 ] ], [ [ 1, 3 ], [ 2, 3 ] ], 
-##     [ [ 1, 4 ], [ 1, 5 ] ], [ [ 1, 4 ], [ 2, 4 ] ], [ [ 1, 5 ], [ 2, 5 ] ],
-##     [ [ 2, 3 ], [ 2, 4 ] ], [ [ 2, 3 ], [ 2, 5 ] ], [ [ 2, 4 ], [ 2, 5 ] ] ], 
-##   [ [ [ 1, 3 ], [ 1, 4 ], [ 1, 5 ] ], [ [ 2, 3 ], [ 2, 4 ], [ 2, 5 ] ] ], 
+##       [ [ 1, 4 ], [ 1, 5 ] ], [ [ 1, 4 ], [ 2, 4 ] ], [ [ 1, 5 ], [ 2, 5 ] ], 
+##       [ [ 2, 3 ], [ 2, 4 ] ], [ [ 2, 3 ], [ 2, 5 ] ], [ [ 2, 4 ], [ 2, 5 ] ] ]
+##     , [ [ [ 1, 3 ], [ 1, 4 ], [ 1, 5 ] ], [ [ 2, 3 ], [ 2, 4 ], [ 2, 5 ] ] ], 
 ##   [ [ [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 4 ] ], 
-##     [ [ 1, 3 ], [ 1, 5 ], [ 2, 3 ], [ 2, 5 ] ], 
-##     [ [ 1, 4 ], [ 1, 5 ], [ 2, 4 ], [ 2, 5 ] ] ] ]
+##       [ [ 1, 3 ], [ 1, 5 ], [ 2, 3 ], [ 2, 5 ] ], 
+##       [ [ 1, 4 ], [ 1, 5 ], [ 2, 4 ], [ 2, 5 ] ] ] ]
 ## gap> sl.F;
 ## [ 6, 9, 2, 3 ]
 ## ]]></Example>
@@ -1148,10 +1113,10 @@ end);
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> sl:=SCNSSlicing(c,[[1,3,5,7,9],[2,4,6,8,10]]);;
 ## gap> sl.F; 
-## [ 9, 18, 0, 9 ]
+## [ 25, 50, 0, 25 ]
 ## gap> sc:=SCNSTriangulation(sl);;
 ## gap> sc.F;
-## [ 9, 27, 18 ]
+## [ 25, 75, 50 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1447,6 +1412,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(4);;
 ## gap> sl:=SCNSSlicing(c,[[1,2],[3,4,5]]);
+## <NormalSurface: slicing [ [ 1, 2 ], [ 3, 4, 5 ] ] of S^3_5 | dim = 2>
 ## gap> SCIsOrientable(sl);
 ## true
 ## ]]></Example>
@@ -1494,53 +1460,52 @@ end);
 ## [ [ 19, "S^3 (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;                       
 ## gap> sl:=SCNSSlicing(c,[[1..5],[6..10]]);    
-## [NormalSurface
-## 
-##  Properties known: Chi, ConnectedComponents, Dim, F, Facets, Genus, IsConnect\
-## ed, Name, Oriented, Subdivision, TopologicalType, SCVertices, Vertices.
-## 
-##  Name="slicing [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] of S^3 (VT)"
-##  Dim=2
-##  Chi=2
-##  F=[ 9, 16, 4, 5 ]
-##  IsConnected=true
-##  TopologicalType="S^2"
-## 
-## /NormalSurface]
+## <NormalSurface: slicing [ [ 1, 2, 3, 4, 5 ], [ 6, 7, 8, 9, 10 ] ] of S^3 (VT) \
+## | dim = 2>
 ## gap> sl.Facets;
-## [ [ [ 1, 4 ], [ 2, 4 ], [ 3, 4 ] ], 
-##   [ [ 1, 6 ], [ 2, 6 ], [ 3, 6 ] ], 
-##   [ [ 1, 4 ], [ 1, 5 ], [ 2, 4 ], [ 2, 5 ] ], 
-##   [ [ 1, 5 ], [ 1, 6 ], [ 2, 5 ], [ 2, 6 ] ], 
-##   [ [ 1, 4 ], [ 1, 6 ], [ 3, 4 ], [ 3, 6 ] ], 
-##   [ [ 1, 4 ], [ 1, 5 ], [ 1, 6 ] ], 
-##   [ [ 2, 4 ], [ 2, 5 ], [ 3, 4 ], [ 3, 5 ] ], 
-##   [ [ 2, 5 ], [ 2, 6 ], [ 3, 5 ], [ 3, 6 ] ], 
-##   [ [ 3, 4 ], [ 3, 5 ], [ 3, 6 ] ] ]
+## [ [ [ 1, 6 ], [ 1, 8 ], [ 1, 9 ] ], [ [ 1, 6 ], [ 1, 8 ], [ 3, 6 ], [ 3, 8 ] ]
+##     , [ [ 1, 6 ], [ 1, 9 ], [ 4, 6 ], [ 4, 9 ] ], 
+##   [ [ 1, 6 ], [ 3, 6 ], [ 4, 6 ] ], [ [ 1, 8 ], [ 1, 9 ], [ 1, 10 ] ], 
+##   [ [ 1, 8 ], [ 1, 10 ], [ 3, 8 ], [ 3, 10 ] ], 
+##   [ [ 1, 9 ], [ 1, 10 ], [ 2, 9 ], [ 2, 10 ] ], 
+##   [ [ 1, 9 ], [ 2, 9 ], [ 4, 9 ] ], [ [ 1, 10 ], [ 2, 10 ], [ 3, 10 ] ], 
+##   [ [ 2, 7 ], [ 2, 9 ], [ 2, 10 ] ], 
+##   [ [ 2, 7 ], [ 2, 9 ], [ 4, 7 ], [ 4, 9 ] ], 
+##   [ [ 2, 7 ], [ 2, 10 ], [ 5, 7 ], [ 5, 10 ] ], 
+##   [ [ 2, 7 ], [ 4, 7 ], [ 5, 7 ] ], [ [ 2, 10 ], [ 3, 10 ], [ 5, 10 ] ], 
+##   [ [ 3, 6 ], [ 3, 8 ], [ 5, 6 ], [ 5, 8 ] ], [ [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]
+##     , [ [ 3, 8 ], [ 3, 10 ], [ 5, 8 ], [ 5, 10 ] ], 
+##   [ [ 4, 6 ], [ 4, 7 ], [ 4, 9 ] ], [ [ 4, 6 ], [ 4, 7 ], [ 5, 6 ], [ 5, 7 ] ]
+##     , [ [ 5, 6 ], [ 5, 7 ], [ 5, 8 ] ], [ [ 5, 7 ], [ 5, 8 ], [ 5, 10 ] ] ]
 ## gap> sl:=SCNSSlicing(c,[[1,3,5,7,9],[2,4,6,8,10]]);    
-## [NormalSurface
-## 
-##  Properties known: Chi, ConnectedComponents, Dim, F, Facets, Genus, IsConnect\
-## ed, Name, Oriented, Subdivision, TopologicalType, SCVertices, Vertices.
-## 
-##  Name="slicing [ [ 1, 3, 5 ], [ 2, 4, 6 ] ] of S^3 (VT)"
-##  Dim=2
-##  Chi=0
-##  F=[ 9, 18, 0, 9 ]
-##  IsConnected=true
-##  TopologicalType="T^2"
-## 
-## /NormalSurface]
+## <NormalSurface: slicing [ [ 1, 3, 5, 7, 9 ], [ 2, 4, 6, 8, 10 ] ] of S^3 (VT) \
+## | dim = 2>
 ## gap> sl.Facets;                           
 ## [ [ [ 1, 2 ], [ 1, 4 ], [ 3, 2 ], [ 3, 4 ] ], 
-##   [ [ 1, 2 ], [ 1, 6 ], [ 3, 2 ], [ 3, 6 ] ], 
-##   [ [ 1, 2 ], [ 1, 4 ], [ 5, 2 ], [ 5, 4 ] ], 
-##   [ [ 1, 2 ], [ 1, 6 ], [ 5, 2 ], [ 5, 6 ] ], 
+##   [ [ 1, 2 ], [ 1, 4 ], [ 9, 2 ], [ 9, 4 ] ], 
+##   [ [ 1, 2 ], [ 1, 10 ], [ 3, 2 ], [ 3, 10 ] ], 
+##   [ [ 1, 2 ], [ 1, 10 ], [ 9, 2 ], [ 9, 10 ] ], 
 ##   [ [ 1, 4 ], [ 1, 6 ], [ 3, 4 ], [ 3, 6 ] ], 
-##   [ [ 1, 4 ], [ 1, 6 ], [ 5, 4 ], [ 5, 6 ] ], 
+##   [ [ 1, 4 ], [ 1, 6 ], [ 9, 4 ], [ 9, 6 ] ], 
+##   [ [ 1, 6 ], [ 1, 8 ], [ 3, 6 ], [ 3, 8 ] ], 
+##   [ [ 1, 6 ], [ 1, 8 ], [ 9, 6 ], [ 9, 8 ] ], 
+##   [ [ 1, 8 ], [ 1, 10 ], [ 3, 8 ], [ 3, 10 ] ], 
+##   [ [ 1, 8 ], [ 1, 10 ], [ 9, 8 ], [ 9, 10 ] ], 
 ##   [ [ 3, 2 ], [ 3, 4 ], [ 5, 2 ], [ 5, 4 ] ], 
-##   [ [ 3, 2 ], [ 3, 6 ], [ 5, 2 ], [ 5, 6 ] ], 
-##   [ [ 3, 4 ], [ 3, 6 ], [ 5, 4 ], [ 5, 6 ] ] ]
+##   [ [ 3, 2 ], [ 3, 10 ], [ 5, 2 ], [ 5, 10 ] ], 
+##   [ [ 3, 4 ], [ 3, 6 ], [ 5, 4 ], [ 5, 6 ] ], 
+##   [ [ 3, 6 ], [ 3, 8 ], [ 5, 6 ], [ 5, 8 ] ], 
+##   [ [ 3, 8 ], [ 3, 10 ], [ 5, 8 ], [ 5, 10 ] ], 
+##   [ [ 5, 2 ], [ 5, 4 ], [ 7, 2 ], [ 7, 4 ] ], 
+##   [ [ 5, 2 ], [ 5, 10 ], [ 7, 2 ], [ 7, 10 ] ], 
+##   [ [ 5, 4 ], [ 5, 6 ], [ 7, 4 ], [ 7, 6 ] ], 
+##   [ [ 5, 6 ], [ 5, 8 ], [ 7, 6 ], [ 7, 8 ] ], 
+##   [ [ 5, 8 ], [ 5, 10 ], [ 7, 8 ], [ 7, 10 ] ], 
+##   [ [ 7, 2 ], [ 7, 4 ], [ 9, 2 ], [ 9, 4 ] ], 
+##   [ [ 7, 2 ], [ 7, 10 ], [ 9, 2 ], [ 9, 10 ] ], 
+##   [ [ 7, 4 ], [ 7, 6 ], [ 9, 4 ], [ 9, 6 ] ], 
+##   [ [ 7, 6 ], [ 7, 8 ], [ 9, 6 ], [ 9, 8 ] ], 
+##   [ [ 7, 8 ], [ 7, 10 ], [ 9, 8 ], [ 9, 10 ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1600,4 +1565,3 @@ InstallGlobalFunction(SCNSSlicing,
  	return sl;
 	
 end);
-

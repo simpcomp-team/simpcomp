@@ -450,6 +450,7 @@ end);
 ## Clears a pending mail message.
 ## <Example><![CDATA[
 ## gap> SCMailClearPending();
+## 
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -542,8 +543,8 @@ end;
 ## Test whether the package <Package>simpcomp</Package> is functional by calling <C>Test("GAPROOT/pkg/simpcomp/tst/simpcomp.tst",rec(compareFunction := "uptowhitespace"));</C>. The returned value of GAP4stones is a measure of your system performance and differs from system to system.
 ## <Example><![CDATA[
 ## gap> SCRunTest();
-## + test simpcomp package, version 0.0.0
-## + GAP4stones: 69988
+## simpcomp package test
+## msecs: 8850
 ## true
 ## ]]></Example>
 ## </Description>
@@ -556,4 +557,3 @@ function()
   path:=DirectoriesPackageLibrary("simpcomp", "tst");
   return Test(Filename(path,"simpcomp.tst"), rec( compareFunction := "uptowhitespace" ));
 end);
-

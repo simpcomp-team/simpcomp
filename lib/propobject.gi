@@ -137,7 +137,7 @@ end);
 ##<#GAPDoc Label="SCPropertyDrop">
 ## <ManSection>
 ## <Meth Name="SCPropertyDrop" Arg="po, name"/>
-## <Returns><K>true</K> upopn success, <K>fail</K> otherwise</Returns>
+## <Returns><K>true</K> upon success, <K>fail</K> otherwise</Returns>
 ## <Description>
 ## Drops the property with name <Arg>name</Arg> of the <C>SCPropertyObject</C> <Arg>po</Arg>. Returns <K>true</K> if the property is successfully dropped and <K>fail</K> if a property with that name did not exist.
 ## </Description>

@@ -11,7 +11,7 @@
 ##<#GAPDoc Label="SCHasseDiagram">
 ## <ManSection>
 ## <Func Name="SCHasseDiagram" Arg="c"/>
-## <Returns>two lists of lists upon success, <C>fail</C> otherweise.</Returns>
+## <Returns>two lists of lists upon success, <C>fail</C> otherwise.</Returns>
 ## <Description>
 ## Computes the Hasse diagram of <C>SCSimplicialComplex</C> object 
 ## <Arg>c</Arg>. The Hasse diagram is returned as two sets of lists. The first
@@ -24,6 +24,10 @@
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(3);;
 ## gap> HD:=SCHasseDiagram(c);
+## [ [ [ [ 1, 2, 3 ], [ 1, 4, 5 ], [ 2, 4, 6 ], [ 3, 5, 6 ] ], 
+##       [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ], [ 1, 4 ], [ 2, 4 ], [ 3, 4 ] ] ], 
+##   [ [ [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 3, 2 ], [ 4, 2 ], [ 4, 3 ] ], 
+##       [ [ 4, 2, 1 ], [ 5, 3, 1 ], [ 6, 3, 2 ], [ 6, 5, 4 ] ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -219,7 +223,7 @@ end;
 ## <ManSection>
 ## <Func Name="SCMorseEngstroem" Arg="complex"/>
 ## <Returns>two lists of small integer lists upon success, <C>fail</C> 
-## otherweise.</Returns>
+## otherwise.</Returns>
 ## <Description>
 ## Builds a discrete Morse function following the Engstroem method by reducing 
 ## the input complex to smaller complexes defined by minimal link and deletion 
@@ -228,6 +232,9 @@ end;
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(3);;
 ## gap> f:=SCMorseEngstroem(c);
+## [ [ [ 2 ], [ 2, 3 ], [ 2, 4 ], [ 2 .. 4 ], [  ], [ 3 ], [ 4 ], [ 3, 4 ], 
+##       [ 1, 3 ], [ 1, 3, 4 ], [ 1 ], [ 1, 4 ], [ 1, 2, 4 ], [ 1, 2 ], 
+##       [ 1 .. 3 ] ], [ [ 2 ], [ 1 .. 3 ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -358,7 +365,7 @@ end;
 ## <ManSection>
 ## <Func Name="SCMorseRandom" Arg="complex"/>
 ## <Returns>two lists of small integer lists upon success, <C>fail</C> 
-## otherweise.</Returns>
+## otherwise.</Returns>
 ## <Description>
 ## Builds a discrete Morse function following Lutz and Benedetti's random
 ## discrete Morse theory approach: Faces are paired with free co-dimension one 
@@ -368,6 +375,7 @@ end;
 ## gap> c:=SCBdSimplex(3);;
 ## gap> f:=SCMorseRandom(c);;
 ## gap> Size(f[2]);
+## 2
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -384,7 +392,7 @@ end);
 ## <ManSection>
 ## <Func Name="SCMorseRandomLex" Arg="complex"/>
 ## <Returns>two lists of small integer lists upon success, <C>fail</C> 
-## otherweise.</Returns>
+## otherwise.</Returns>
 ## <Description>
 ## Builds a discrete Morse function following Adiprasito, Benedetti and Lutz' 
 ## lexicographic random
@@ -394,6 +402,7 @@ end);
 ## gap> c := SCSurface(3,true);;
 ## gap> f:=SCMorseRandomLex(c);;
 ## gap> Size(f[2]);
+## 8
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -420,7 +429,7 @@ end);
 ## <ManSection>
 ## <Func Name="SCMorseRandomRevLex" Arg="complex"/>
 ## <Returns>two lists of small integer lists upon success, <C>fail</C> 
-## otherweise.</Returns>
+## otherwise.</Returns>
 ## <Description>
 ## Builds a discrete Morse function following Adiprasito, Benedetti and Lutz' 
 ## reverse lexicographic random
@@ -430,6 +439,7 @@ end);
 ## gap> c := SCSurface(5,false);;
 ## gap> f:=SCMorseRandomRevLex(c);;
 ## gap> Size(f[2]);
+## 7
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -477,18 +487,22 @@ end;
 ## See also <Ref Meth="SCCollapseLex" /> and <Ref Meth="SCCollapseRevLex" />.
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("T^2"){[1..6]}; 
-## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], 
-##   [ 10, "T^2 (VT)" ], [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
+## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], [ 10, "T^2 (VT)" ],
+##   [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ] ]
 ## gap> torus:=SCLib.Load(last[1][1]);;
 ## gap> bdtorus:=SCDifference(torus,SC([torus.Facets[1]]));;
 ## gap> coll:=SCCollapseGreedy(bdtorus);
+## <SimplicialComplex: collapsed version of T^2 (VT) \ unnamed complex 8 | dim = \
+## 1 | n = 4>
 ## gap> coll.Facets;
-## [ [ 3, 6 ], [ 3, 7 ], [ 5, 6 ], [ 5, 7 ], [ 6, 7 ] ]
+## [ [ 2, 5 ], [ 2, 6 ], [ 2, 7 ], [ 5, 6 ], [ 5, 7 ] ]
 ## gap> sphere:=SCBdSimplex(4);;                              
 ## gap> bdsphere:=SCDifference(sphere,SC([sphere.Facets[1]]));;
 ## gap> coll:=SCCollapseGreedy(bdsphere);
+## <SimplicialComplex: collapsed version of S^3_5 \ unnamed complex 12 | dim = 0 \
+## | n = 1>
 ## gap> coll.Facets;                     
-## [ [ 5 ] ]
+## [ [ 2 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -524,10 +538,15 @@ end);
 ## gap> s:=SCSurface(1,true);;
 ## gap> s:=SCDifference(s,SC([SCFacets(s)[1]]));;
 ## gap> coll:=SCCollapseGreedy(s);
+## <SimplicialComplex: collapsed version of T^2 \ unnamed complex 18 | dim = 1 | \
+## n = 5>
 ## gap> coll.Facets;
+## [ [ 1, 6 ], [ 1, 7 ], [ 2, 5 ], [ 2, 7 ], [ 5, 7 ], [ 6, 7 ] ]
 ## gap> sphere:=SCBdSimplex(4);;                              
 ## gap> ball:=SCDifference(sphere,SC([sphere.Facets[1]]));;
 ## gap> coll:=SCCollapseLex(ball);
+## <SimplicialComplex: collapsed version of S^3_5 \ unnamed complex 22 | dim = 0 \
+## | n = 1>
 ## gap> coll.Facets;                     
 ## [ [ 5 ] ]
 ## ]]></Example>
@@ -565,12 +584,17 @@ end);
 ## gap> s:=SCSurface(1,true);;
 ## gap> s:=SCDifference(s,SC([SCFacets(s)[1]]));;
 ## gap> coll:=SCCollapseGreedy(s);
+## <SimplicialComplex: collapsed version of T^2 \ unnamed complex 28 | dim = 1 | \
+## n = 5>
 ## gap> coll.Facets;
+## [ [ 1, 3 ], [ 1, 7 ], [ 3, 4 ], [ 3, 5 ], [ 4, 7 ], [ 5, 7 ] ]
 ## gap> sphere:=SCBdSimplex(4);;                              
 ## gap> ball:=SCDifference(sphere,SC([sphere.Facets[1]]));;
 ## gap> coll:=SCCollapseRevLex(ball);
+## <SimplicialComplex: collapsed version of S^3_5 \ unnamed complex 32 | dim = 0 \
+## | n = 1>
 ## gap> coll.Facets;                     
-## [ [ 5 ] ]
+## [ [ 1 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -608,6 +632,7 @@ end);
 ## gap> c:=SCBdSimplex(3);;
 ## gap> f:=SCMorseUST(c);;
 ## gap> Size(f[2]);
+## 2
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -758,7 +783,7 @@ end);
 ##<#GAPDoc Label="SCMorseSpec">
 ## <ManSection>
 ## <Func Name="SCMorseSpec" Arg="complex, iter [, morsefunc]"/>
-## <Returns>a list upon success, <C>fail</C> otherweise.</Returns>
+## <Returns>a list upon success, <C>fail</C> otherwise.</Returns>
 ## <Description>
 ## Computes <Arg>iter</Arg> versions of a discrete Morse function of 
 ## <Arg>complex</Arg> using a randomised 
@@ -773,13 +798,20 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesTorus(2);;
 ## gap> f:=SCMorseSpec(c,30);
+## [ [ 4, [ 1, 2, 1 ], 30 ] ]
 ## ]]></Example>
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesHomologySphere(2,3,5);;
 ## gap> f:=SCMorseSpec(c,30,SCMorseRandom);
+## [ [ 6, [ 1, 2, 2, 1 ], 25 ], [ 8, [ 1, 3, 3, 1 ], 5 ] ]
 ## gap> f:=SCMorseSpec(c,30,SCMorseRandomLex);
+## [ [ 6, [ 1, 2, 2, 1 ], 30 ] ]
 ## gap> f:=SCMorseSpec(c,30,SCMorseRandomRevLex);
+## [ [ 6, [ 1, 2, 2, 1 ], 7 ], [ 8, [ 1, 3, 3, 1 ], 13 ], 
+##   [ 10, [ 1, 4, 4, 1 ], 9 ], [ 10, [ 2, 4, 3, 1 ], 1 ] ]
 ## gap> f:=SCMorseSpec(c,30,SCMorseUST);
+## [ [ 6, [ 1, 2, 2, 1 ], 18 ], [ 8, [ 1, 3, 3, 1 ], 8 ], 
+##   [ 10, [ 1, 4, 4, 1 ], 4 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1034,18 +1066,29 @@ end;
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesTorus(2);;
 ## gap> f:=SCHomology(c);
+## [ [ 0, [  ] ], [ 2, [  ] ], [ 1, [  ] ] ]
 ## ]]></Example>
 ## <Example><![CDATA[
 ## gap> c := SCSeriesHomologySphere(2,3,5);;
 ## gap> SCHomologyEx(c,SCMorseRandom,SmithNormalFormIntegerMat); time;
+## [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
+## 31
 ## gap> c := SCSeriesHomologySphere(2,3,5);;
 ## gap> SCHomologyEx(c,SCMorseRandomLex,SmithNormalFormIntegerMat); time;
+## [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
+## 30
 ## gap> c := SCSeriesHomologySphere(2,3,5);;
 ## gap> SCHomologyEx(c,SCMorseRandomRevLex,SmithNormalFormIntegerMat); time;
+## [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
+## 33
 ## gap> c := SCSeriesHomologySphere(2,3,5);;
 ## gap> SCHomologyEx(c,SCMorseEngstroem,SmithNormalFormIntegerMat); time;
+## [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
+## 63
 ## gap> c := SCSeriesHomologySphere(2,3,5);;
 ## gap> SCHomologyEx(c,SCMorseUST,SmithNormalFormIntegerMat); time;
+## [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
+## 74
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1176,6 +1219,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesTorus(2);;
 ## gap> f:=SCHomology(c);
+## [ [ 0, [  ] ], [ 2, [  ] ], [ 1, [  ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1200,7 +1244,7 @@ end);
 ##<#GAPDoc Label="SCSpanningTreeRandom">
 ## <ManSection>
 ## <Func Name="SCSpanningTreeRandom" Arg="HD, top"/>
-## <Returns>a list of edges upon success, <C>fail</C> otherweise.</Returns>
+## <Returns>a list of edges upon success, <C>fail</C> otherwise.</Returns>
 ## <Description>
 ## Computes a uniformly sampled spanning tree of the complex belonging
 ## to the Hasse diagram <Arg>HD</Arg> using Wilson's algorithm (see 
@@ -1213,7 +1257,9 @@ end);
 ## gap> c:=SCSurface(1,false);;
 ## gap> HD:=SCHasseDiagram(c);;
 ## gap> stTop:=SCSpanningTreeRandom(HD,true);
+## [ 15, 2, 6, 12, 7, 8, 1, 3, 11 ]
 ## gap> stBot:=SCSpanningTreeRandom(HD,false);
+## [ 9, 5, 3, 6, 11 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1489,7 +1535,7 @@ end;
 ##<#GAPDoc Label="SCIsSimplyConnectedEx">
 ## <ManSection>
 ## <Func Name="SCIsSimplyConnectedEx" Arg="c [, top, tries]"/>
-## <Returns>a boolean value upon success, <C>fail</C> otherweise.</Returns>
+## <Returns>a boolean value upon success, <C>fail</C> otherwise.</Returns>
 ## <Description>
 ## Computes if the <C>SCSimplicialComplex</C> object <Arg>c</Arg> is simply 
 ## connected. The optional boolean argument <Arg>top</Arg> determines whether 
@@ -1501,8 +1547,10 @@ end;
 ## <Example><![CDATA[
 ## gap> rp2:=SCSurface(1,false);;
 ## gap> SCIsSimplyConnectedEx(rp2);
+## false
 ## gap> c:=SCBdCyclicPolytope(8,18);;
 ## gap> SCIsSimplyConnectedEx(c);
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1770,7 +1818,7 @@ end);
 ##<#GAPDoc Label="SCIsSimplyConnected">
 ## <ManSection>
 ## <Func Name="SCIsSimplyConnected" Arg="c"/>
-## <Returns>a boolean value upon success, <C>fail</C> otherweise.</Returns>
+## <Returns>a boolean value upon success, <C>fail</C> otherwise.</Returns>
 ## <Description>
 ## Computes if the <C>SCSimplicialComplex</C> object <Arg>c</Arg> is simply 
 ## connected. The algorithm is a heuristic method and is described in 
@@ -1779,8 +1827,10 @@ end);
 ## <Example><![CDATA[
 ## gap> rp2:=SCSurface(1,false);;
 ## gap> SCIsSimplyConnected(rp2);
+## false
 ## gap> c:=SCBdCyclicPolytope(8,18);;
 ## gap> SCIsSimplyConnected(c);
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1805,7 +1855,7 @@ end);
 ##<#GAPDoc Label="SCIsManifoldEx">
 ## <ManSection>
 ## <Func Name="SCIsManifoldEx" Arg="c [,aut, quasi]"/>
-## <Returns>a boolean value upon success, <C>fail</C> otherweise.</Returns>
+## <Returns>a boolean value upon success, <C>fail</C> otherwise.</Returns>
 ## <Description>
 ## If the boolean argument <Arg>aut</Arg> is <C>true</C> the automorphism group
 ## is computed and only one link per orbit is checked to be a sphere.
@@ -1825,6 +1875,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdCyclicPolytope(4,20);;
 ## gap> SCIsManifold(c);
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2019,7 +2070,7 @@ end);
 ##<#GAPDoc Label="SCIsManifold">
 ## <ManSection>
 ## <Func Name="SCIsManifold" Arg="c"/>
-## <Returns>a boolean value upon success, <C>fail</C> otherweise.</Returns>
+## <Returns>a boolean value upon success, <C>fail</C> otherwise.</Returns>
 ## <Description>
 ## The algorithm is a heuristic method and is described in 
 ## <Cite Key="Paixao143SphereRec" /> in more detail.
@@ -2027,6 +2078,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdCyclicPolytope(4,20);;
 ## gap> SCIsManifold(c);
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2050,7 +2102,7 @@ end);
 ##<#GAPDoc Label="SCIsSphere">
 ## <ManSection>
 ## <Func Name="SCIsSphere" Arg="c"/>
-## <Returns>a boolean value upon success, <C>fail</C> otherweise.</Returns>
+## <Returns>a boolean value upon success, <C>fail</C> otherwise.</Returns>
 ## <Description>
 ## Determines whether the <C>SCSimplicialComplex</C> object <Arg>c</Arg>
 ## is a topological sphere.
@@ -2066,8 +2118,10 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdCyclicPolytope(4,20);;
 ## gap> SCIsSphere(c);
+## true
 ## gap> c:=SCSurface(1,true);;
 ## gap> SCIsSphere(c);
+## false
 ## ]]></Example>
 ## </Description>
 ## </ManSection>

@@ -24,7 +24,7 @@
 ## (<C>objectType = 0</C>) or not (<C>objectType = 1</C>, in this case some 
 ## combinatorial pseudomanifolds won't be found, but no combinatorial manifold 
 ## will be excluded). A value of <C>objectType = 2</C> behaves like
-## <C>objectType = 0</C> but without bistallar flips checking vertex links.
+## <C>objectType = 0</C> but without bistellar flips checking vertex links.
 ## The integer argument <Arg>cache</Arg> specifies if the 
 ## orbits are held in memory during the computation, a value of <C>0</C> means 
 ## that the orbits are discarded, trading speed for memory, any other value 
@@ -43,16 +43,26 @@
 ## set to <C>true</C>, only single orbit solutions are returned.
 ## <Example><![CDATA[
 ## gap> G:=PrimitiveGroup(8,5);
+## PGL(2, 7)
 ## gap> Size(G);
+## 336
 ## gap> Transitivity(G);
+## 3
 ## gap> list:=SCsFromGroupExt(G,8,3,1,0,true,false,0,[]);
+## [ "defgh.g.h.fah.e.gaf.h.eag.e.faf.a.haa.g.fah.a.gjhzh" ]
 ## gap> c:=SCFromIsoSig(list[1]);
+## <SimplicialComplex: unnamed complex 6 | dim = 3 | n = 8>
 ## gap> SCNeighborliness(c); 
+## 3
 ## gap> c.F;
+## [ 8, 28, 56, 28 ]
 ## gap> c.IsManifold; 
+## false
 ## gap> SCLibDetermineTopologicalType(SCLink(c,1));
+## <SimplicialComplex: lk([ 1 ]) in unnamed complex 6 | dim = 2 | n = 7>
 ## gap> # there are no 3-neighborly 3-manifolds with 8 vertices
 ## gap> list:=SCsFromGroupExt(PrimitiveGroup(8,5),8,3,0,0,true,false,0,[]); 
+## gap> [  ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -962,6 +972,22 @@ end);
 ## calls <Ref Func="SCsFromGroupExt" /> for every group.
 ## <Example><![CDATA[
 ## gap> list:=SCsFromGroupByTransitivity(8,3,2,true,true,true);
+## #I  SCsFromGroupByTransitivity: Building list of groups...
+## #I  SCsFromGroupByTransitivity: ...2 groups found.
+## #I  degree 8: [ AGL(1, 8), PSL(2, 7) ]
+## #I  SCsFromGroupByTransitivity: Processing dimension 3.
+## #I  SCsFromGroupByTransitivity: Processing degree 8.
+## #I  SCsFromGroupByTransitivity: 1 / 2 groups calculated, found 0 complexes.
+## #I  SCsFromGroupByTransitivity: Calculating 0 automorphism and homology groups...
+## #I  SCsFromGroupByTransitivity: ...all automorphism groups calculated for group 1 / 2.
+## #I  SCsFromGroupByTransitivity: 2 / 2 groups calculated, found 1 complexes.
+## #I  SCsFromGroupByTransitivity: Calculating 1 automorphism and homology groups...
+## #I  group not listed
+## #I  SCsFromGroupByTransitivity: 1 / 1 automorphism groups calculated.
+## #I  SCsFromGroupByTransitivity: ...all automorphism groups calculated for group 2 / 2.
+## #I  SCsFromGroupByTransitivity: ...done dim = 3, deg =  8, 0 manifolds, 1 pseudomanifolds, 0 candidates found.
+## #I  SCsFromGroupByTransitivity: ...done dim = 3.
+## [ [  ], [  ], [  ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1157,4 +1183,3 @@ InstallGlobalFunction(SCsFromGroupByTransitivity,
   fi;
   return retList;
 end);
-

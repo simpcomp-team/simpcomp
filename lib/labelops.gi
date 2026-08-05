@@ -18,10 +18,12 @@
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(5);;
 ## gap> SCName(c);
+## "S^4_6"
 ## ]]></Example>
 ## <Example><![CDATA[
 ## gap> c:=SC([[1,2],[2,3],[3,1]]);;
 ## gap> SCName(c);
+## "unnamed complex 2"
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -83,8 +85,14 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCLib.Load(253);;
 ## gap> SCReference(c);
+## "manifold_2_14_4_2 in F.H.Lutz: 'The Manifold Page', http://www.math.tu-berlin\
+## .de/diskregeom/stellar/,\r\nF.H.Lutz: 'Triangulated manifolds with few vertice\
+## s and vertex-transitive group actions', Doctoral Thesis TU Berlin 1999, Shaker\
+## -Verlag, Aachen 1999"
 ## gap> c:=SC([[1,2],[2,3],[3,1]]);;
 ## gap> SCReference(c);
+## #I  SCReference: complex lacks reference.
+## fail
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -111,9 +119,12 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(5);;
 ## gap> SCReference(c);
+## #I  SCReference: complex lacks reference.
+## fail
 ## gap> SCSetReference(c,"my 5-sphere in my cool paper");
 ## true
 ## gap> SCReference(c);
+## "my 5-sphere in my cool paper"
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -143,7 +154,9 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SC([[1,2],[2,3],[3,1]]);;
 ## gap> SCSetDate(c,"2011-11-11");
+## true
 ## gap> SCDate(c);
+## "2011-11-11"
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -170,9 +183,12 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(5);;
 ## gap> SCDate(c);
+## #I  SCDate: complex lacks date.
+## fail
 ## gap> SCSetDate(c,"2011-11-11");
 ## true
 ## gap> SCDate(c);
+## "2011-11-11"
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -223,7 +239,7 @@ end);
 ## gap> SCRelabel(c,[4..15]);
 ## true
 ## gap> SCVertices(c);
-## [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ]
+## [ 4 .. 15 ]
 ## gap> SCRelabelStandard(c);
 ## true
 ## gap> SCLabels(c);
@@ -314,7 +330,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(3);;
 ## gap> SCVertices(c);
-## [ 1, 2, 3, 4 ]
+## [ 1 .. 4 ]
 ## gap> SCRelabelTransposition(c,[1,2]);;
 ## gap> SCLabels(c);
 ## [ 2, 1, 3, 4 ]

@@ -134,7 +134,7 @@ end);
 ##<#GAPDoc Label="SCLibIsLoaded">
 ## <ManSection>
 ## <Func Name="SCLibIsLoaded" Arg="repository"/>
-## <Returns><K>true</K> or <K>false</K> upon succes, <K>fail</K> otherwise.</Returns>
+## <Returns><K>true</K> or <K>false</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Returns <K>true</K> when a given library repository <Arg>repository</Arg> is in loaded state. This means that the directory of this repository is accessible and a repository index file for this repository exists in the repositories' path. If this is not the case <K>false</K> is returned.
 ## <Example><![CDATA[
@@ -165,7 +165,7 @@ end);
 ## Returns the number of complexes contained in the given repository <Arg>repository</Arg>. Fails if the library repository was not previously loaded with <C>SCLibInit</C>.
 ## <Example><![CDATA[
 ## gap> SCLibSize(SCLib); #SCLib is the repository of the global library
-## 7648
+## 648
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -200,8 +200,10 @@ end);
 ## Loads a simplicial complex from the given library repository <Arg>repository</Arg> by its id <C>id</C>. The id is repository specific and ranges from 1 to N where N are the number of complexes currently in the repository (this number can be determined by <C>SCLibSize</C>). If the id is not valid (non-positive or bigger than maximal id), an error is signalled. Ids in the global library repository of <Package>simpcomp</Package>, <C>SCLib</C>, are sorted by in ascending order by the f-vector of the complexes. 
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("S^2~S^1"){[1..3]};
+## [ [ 12, "S^2~S^1 (VT)" ], [ 26, "S^2~S^1 (VT)" ], [ 27, "S^2~S^1 (VT)" ] ]
 ## gap> id:=last[1][1];;
 ## gap> SCLibLoad(SCLib,id);
+## <SimplicialComplex: S^2~S^1 (VT) | dim = 3 | n = 9>
 ## gap> SCLib.Load(id);; #the same operation in alternative syntax
 ## ]]></Example>
 ## </Description>
@@ -438,20 +440,17 @@ end;
 ## Recreates the index of a given repository (either via a repository object or a base path of a repository <Arg>repository</Arg>) by scanning the base path for all <C>.sc</C> files containing simplicial complexes of the repository. Returns a repository object with the newly created index on success or <K>fail</K> in case of an error. The optional boolean argument <Arg>recalc</Arg> forces <Package>simpcomp</Package> to recompute all the indexed properties (such as f-vector, homology, etc.) of the simplicial complexes in the repository if set to <K>true</K>. 
 ## <Example><![CDATA[
 ## gap> myRepository:=SCLibInit("/tmp/repository");;
-## #I  SCLibInit: made directory "/tmp/repository/" for user library.
-## #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
-## #I  SCLibUpdate: rebuilding index for /tmp/repository/.
-## #I  SCLibUpdate: rebuilding index done.
 ## gap> SCLibUpdate(myRepository);
 ## #I  SCLibUpdate: rebuilding index for /tmp/repository/.
 ## #I  SCLibUpdate: rebuilding index done.
 ## [Simplicial complex library. Properties:
 ## CalculateIndexAttributes=true
 ## Number of complexes in library=0
-## IndexAttributes=["Name", "Date", "Dim", "F", "G", "H", "Chi", "Homology"]
+## IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
+##   "IsManifold" ]
 ## Loaded=true
 ## Path="/tmp/repository/"
-##]
+## ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -587,7 +586,7 @@ end);
 ## gap> all[1];
 ## [ 1, "Moebius Strip" ]
 ## gap> Length(all);
-## 7648
+## 648
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -622,14 +621,16 @@ end);
 ## gap> info:=InfoLevel(InfoSimpcomp);;
 ## gap> SCInfoLevel(0);;
 ## gap> myRepository:=SCLibInit("/tmp/repository");
-## #I  SCLibInit: made directory "/tmp/repository/" for user library.
-## #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
-## #I  SCLibUpdate: rebuilding index for /tmp/repository/.
-## #I  SCLibUpdate: rebuilding index done.
+## [Simplicial complex library. Properties:
+## CalculateIndexAttributes=true
+## Number of complexes in library=0
+## IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
+##   "IsManifold" ]
+## Loaded=true
+## Path="/tmp/repository/"
+## ]
 ## gap> complex1:=SCBdCrossPolytope(4);;
 ## gap> SCLibAdd(myRepository,complex1);
-## #I  SCLibAdd: saving complex to file "complex_Bd(beta4)_2009-10-29_17-12-36.sc\
-## ".
 ## true
 ## gap> complex2:=SCBdCrossPolytope(4);;
 ## gap> myRepository.Add(complex2);; # alternative syntax
@@ -733,10 +734,14 @@ end);
 ## Deletes the simplicial complex with the given id <Arg>id</Arg> from the given repository <Arg>repository</Arg>. Apart from deleting the complexes' index entry, the associated <C>.sc</C> file is also deleted.
 ## <Example><![CDATA[
 ## gap> myRepository:=SCLibInit("/tmp/repository");
-## #I  SCLibInit: made directory "/tmp/repository/" for user library.
-## #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
-## #I  SCLibUpdate: rebuilding index for /tmp/repository/.
-## #I  SCLibUpdate: rebuilding index done.
+## [Simplicial complex library. Properties:
+## CalculateIndexAttributes=true
+## Number of complexes in library=2
+## IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
+##   "IsManifold" ]
+## Loaded=true
+## Path="/tmp/repository/"
+## ]
 ## gap> SCLibAdd(myRepository,SCSimplex(2));;
 ## gap> SCLibDelete(myRepository,1);
 ## true
@@ -788,13 +793,8 @@ end);
 ## <Arg>confirm</Arg>, must be the string <C>"yes"</C> in order to confirm the deletion. 
 ## <Example><![CDATA[
 ## gap> myRepository:=SCLibInit("/tmp/repository");;
-## #I  SCLibInit: made directory "/tmp/repository/" for user library.
-## #I  SCIntFunc.SCLibInit: index not found -- trying to reconstruct it.
-## #I  SCLibUpdate: rebuilding index for /tmp/repository/.
-## #I  SCLibUpdate: rebuilding index done.
 ## gap> SCLibFlush(myRepository,"yes");
-## #I  SCLibUpdate: rebuilding index for /home/effenbfx/testrepo/.
-## #I  SCLibUpdate: rebuilding index done.
+## #I  SCLibInit: invalid parameters.
 ## true
 ## ]]></Example>
 ## </Description>
@@ -861,12 +861,11 @@ end;
 ## Searches a given repository <Arg>repository</Arg> for complexes that contain the string <Arg>name</Arg> as a substring of their name attribute and returns a list of the complexes found with entries of the form <C>[ID, NAME]</C>. See <Ref Var="SCLib"/> for a naming convention used for the global library of <Package>simpcomp</Package>.
 ## <Example><![CDATA[
 ## gap> SCLibSearchByName(SCLib,"K3");
-## [ [ 584, "K3 surface" ] ]
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> SCLib.SearchByName("K3"); #alternative syntax
-## [ [ 584, "K3 surface" ] ]
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> SCLib.SearchByName("S^4x"); #search for products with S^4
-## [ [ 291, "S^4xS^1 (VT)" ], [ 340, "S^4xS^1 (VT)" ], [ 342, "S^4xS^1 (VT)" ], 
-##   [ 571, "S^4xS^2" ], [ 627, "S^4xS^3" ], [ 655, "S^4xS^4" ] ]
+## [ [ 282, "S^4xS^1 (VT)" ], [ 329, "S^4xS^1 (VT)" ], [ 331, "S^4xS^1 (VT)" ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -892,12 +891,10 @@ end);
 ## <Description>
 ## Searches a given repository <Arg>repository</Arg> for complexes for which the boolean expression <Arg>expr</Arg>, passed as string, evaluates to <K>true</K> and returns a list of complexes with entries of the form <C>[ID, NAME]</C> or <K>fail</K> upon error. The expression may use all &GAP; functions and can access all the indexed attributes of the complexes in the given repository for the query. The standard attributes are: Dim (Dimension), F (f-vector), G (g-vector), H (h-vector), Chi (Euler characteristic), Homology, Name, IsPM, IsManifold. See <C>SCLib</C> for the set of indexed attributes of the global library of <Package>simpcomp</Package>. 
 ## <Example><![CDATA[
-## #search for all 3-neighborly complexes of dimension 4 in the global library
 ## gap> SCLibSearchByAttribute(SCLib,"Dim=4 and F[3]=Binomial(F[1],3)");
-## [ [ 17, "CP^2 (VT)" ], [ 584, "K3 surface" ] ]
-## # alternative syntax
+## [ [ 16, "CP^2 (VT)" ], [ 520, "K3_16" ] ]
 ## gap> SCLib.SearchByAttribute("Dim=4 and F[3]=Binomial(F[1],3)");
-## [ [ 17, "CP^2 (VT)" ], [ 584, "K3 surface" ] ]
+## [ [ 16, "CP^2 (VT)" ], [ 520, "K3_16" ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1018,11 +1015,12 @@ end);
 ## gap> SCLibStatus(SCLib);
 ## [Simplicial complex library. Properties:
 ## CalculateIndexAttributes=true
-## Number of complexes in library=N
-## IndexAttributes=["Name", "Date", "Dim", "F", "G", "H", "Chi", "Homology"]
+## Number of complexes in library=648
+## IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
+##   "IsManifold" ]
 ## Loaded=true
-## Path="GAPROOT/pkg/simpcomp/complexes/"
-##]
+## Path="/home/jonathan/bin/gap-4.11.1/pkg/simpcomp/complexes/"
+## ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1055,6 +1053,7 @@ end);
 ## gap> c:=SCFromFacets([[1,2,3],[1,2,6],[1,3,5],[1,4,5],[1,4,6],
 ##                       [2,3,4],[2,4,5],[2,5,6],[3,4,6],[3,5,6]]);;
 ## gap> SCLibDetermineTopologicalType(c);
+## <SimplicialComplex: unnamed complex 250 | dim = 2 | n = 6>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1205,10 +1204,11 @@ end);
 ## [Simplicial complex library. Properties:
 ## CalculateIndexAttributes=true
 ## Number of complexes in library=0
-## IndexAttributes=["Name", "Date", "Dim", "F", "G", "H", "Chi", "Homology"]
+## IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
+##   "IsManifold" ]
 ## Loaded=true
 ## Path="/tmp/repository/"
-##]
+## ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1285,23 +1285,22 @@ end;
 ## <Example><![CDATA[
 ## gap> SCLib;
 ## [Simplicial complex library. Properties:
-##  CalculateIndexAttributes=true
-##  Number of complexes in library=689
-##  IndexAttributes=["Name", "Date", "Dim", "F", "G", "H", "Chi", "Homology"]
-##  Loaded=true
-##  Path="GAPROOT/pkg/simpcomp/complexes/"
+## CalculateIndexAttributes=true
+## Number of complexes in library=648
+## IndexAttributes=[ "Name", "Dim", "F", "G", "H", "Chi", "Homology", "IsPM", 
+##   "IsManifold" ]
+## Loaded=true
+## Path="/home/jonathan/bin/gap-4.11.1/pkg/simpcomp/complexes/"
 ## ]
 ## gap> SCLib.Size;
-## 689
+## 648
 ## gap> SCLib.SearchByName("S^4~");
-## [ [ 203, "S^4~S^1 (VT)" ], [ 330, "S^4~S^1 (VT)" ], 
-##   [ 332, "S^4~S^1 (VT)" ], [ 395, "S^4~S^1 (VT)" ], 
-##   [ 451, "S^4~S^1 (VT)" ], [ 452, "S^4~S^1 (VT)" ], 
-##   [ 453, "S^4~S^1 (VT)" ], [ 454, "S^4~S^1 (VT)" ], 
-##   [ 455, "S^4~S^1 (VT)" ], [ 458, "S^4~S^1 (VT)" ], 
-##   [ 459, "S^4~S^1 (VT)" ], [ 460, "S^4~S^1 (VT)" ] ]
+## [ [ 203, "S^4~S^1 (VT)" ], [ 330, "S^4~S^1 (VT)" ], [ 332, "S^4~S^1 (VT)" ], 
+##   [ 395, "S^4~S^1 (VT)" ], [ 451, "S^4~S^1 (VT)" ], [ 452, "S^4~S^1 (VT)" ], 
+##   [ 453, "S^4~S^1 (VT)" ], [ 454, "S^4~S^1 (VT)" ], [ 455, "S^4~S^1 (VT)" ], 
+##   [ 458, "S^4~S^1 (VT)" ], [ 459, "S^4~S^1 (VT)" ], [ 460, "S^4~S^1 (VT)" ] ]
 ## gap> SCLib.Load(last[1][1]);          
-## 
+## <SimplicialComplex: S^4~S^1 (VT) | dim = 5 | n = 13>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>

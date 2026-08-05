@@ -16,7 +16,9 @@
 ## <Example><![CDATA[
 ## gap> c:=SC([["a","b","c"],["a","b","d"], ["a","c","d"], ["b","c","d"]]);;
 ## gap> s:=SCSpanningTree(c);
+## <SimplicialComplex: spanning tree of unnamed complex 1 | dim = 1 | n = 4>
 ## gap> s.Facets;
+## [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -92,11 +94,13 @@ end);
 ## <Description>
 ## Computes the first fundamental group of <Arg>complex</Arg>, which must be a connected simplicial complex, and returns it in form of a finitely presented group. The generators of the group are given as 2-tuples that correspond to the edges of <Arg>complex</Arg> in standard labeling. You can use GAP's <C>SimplifiedFpGroup</C> to simplify the group presenation.
 ## <Example><![CDATA[
-## # an RP^2
 ## gap> list:=SCLib.SearchByName("RP^2");
+## [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
 ## gap> c:=SCLib.Load(list[1][1]);
+## <SimplicialComplex: RP^2 (VT) | dim = 2 | n = 6>
 ## gap> g:=SCFundamentalGroup(c);;
 ## gap> StructureDescription(g);
+## "C2"
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -292,6 +296,7 @@ end;
 ## <Example><![CDATA[
 ## gap> c:=SCFromFacets(["abc","abd"]);;
 ## gap> SCMinimalNonFaces(c);           
+## [ [  ], [ "cd" ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -341,10 +346,16 @@ end);
 ## Computes all missing proper faces of a simplicial complex <Arg>complex</Arg>, i.e. the missing <M>(i+1)</M>-tuples in the <M>i</M>-dimensional skeleton of a <Arg>complex</Arg>. A missing <M>i+1</M>-tuple is not listed if it only consists of missing <M>i</M>-tuples. Note that whenever <Arg>complex</Arg> is <M>k</M>-neighborly the first <M>k+1</M> entries are empty. The simplices are returned in the standard labeling <M>1,\dots,n</M>, where <M>n</M> is the number of vertices of <Arg>complex</Arg>. 
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("T^2"){[1..10]}; 
+## [ [ 4, "T^2 (VT)" ], [ 5, "T^2 (VT)" ], [ 9, "T^2 (VT)" ], [ 10, "T^2 (VT)" ],
+##   [ 17, "T^2 (VT)" ], [ 20, "(T^2)#2" ], [ 24, "(T^2)#3" ], 
+##   [ 41, "T^2 (VT)" ], [ 44, "(T^2)#4" ], [ 65, "T^2 (VT)" ] ]
 ## gap> torus:=SCLib.Load(last[1][1]);;
 ## gap> SCFVector(torus);
+## [ 7, 21, 14 ]
 ## gap> SCMinimalNonFacesEx(torus);
+## [ [  ], [  ] ]
 ## gap> SCMinimalNonFacesEx(SCBdCrossPolytope(4));
+## [ [  ], [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ] ], [  ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -366,10 +377,13 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SC([[1]]);;
 ## gap> SCIsEmpty(c);
+## false
 ## gap> c:=SC([]);;
 ## gap> SCIsEmpty(c);
+## true
 ## gap> c:=SC([[]]);;
 ## gap> SCIsEmpty(c);
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -405,6 +419,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SC([[2,3],[3,4],[4,2]]);;
 ## gap> SCFacetsEx(c);
+## [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -432,6 +447,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SC([[2,3],[3,4],[4,2]]);;
 ## gap> SCFacets(c);
+## [ [ 2, 3 ], [ 2, 4 ], [ 3, 4 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -499,8 +515,10 @@ end);
 ## <Example><![CDATA[
 ## gap> complex:=SC([[1,2,3], [1,2,4], [1,3,4], [2,3,4]]);;
 ## gap> SCDim(complex);                                    
+## 2
 ## gap> c:=SC([[1], [2,4], [3,4], [5,6,7,8]]);;
 ## gap> SCDim(c);
+## 3
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -544,6 +562,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdCrossPolytope(4);;
 ## gap> SCOrientation(c);
+## [ 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -696,8 +715,10 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SC([[1,2], [1,4], [2,4], [2,3,4]]);;
 ## gap> SCIsPure(c);
+## false
 ## gap> c:=SC([[1,2], [1,4], [2,4]]);;
 ## gap> SCIsPure(c);
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -745,10 +766,14 @@ end);
 ## <Description>
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("RP^2");   
+## [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
 ## gap> rp2_6:=SCLib.Load(last[1][1]);;
 ## gap> SCFVector(rp2_6);
+## [ 6, 15, 10 ]
 ## gap> SCIsKNeighborly(rp2_6,2);
+## true
 ## gap> SCIsKNeighborly(rp2_6,3);
+## false
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -786,8 +811,10 @@ end);
 ## Checks if <Arg>complex</Arg> is flag. A connected simplicial complex of dimension at least one is a flag complex if all cliques in its 1-skeleton span a face of the complex (cf. <Cite Key="Frohmader08FaceVecFlagCompl" />). 
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("RP^2");   
+## [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
 ## gap> rp2_6:=SCLib.Load(last[1][1]);;
 ## gap> SCIsFlag(rp2_6);
+## false
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -851,6 +878,7 @@ end);
 ## <Example><![CDATA[
 ## gap> complex:=SC([[1,2,3], [1,2,4], [1,3,4], [2,3,4]]);;
 ## gap> SCFVector(complex);
+## [ 4, 6, 4 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -896,7 +924,7 @@ end);
 ## <Example><![CDATA[
 ## gap> complex:=SC([[1,2,3], [1,2,4], [1,3,4], [2,3,4]]);;
 ## gap> SCNumFaces(complex,1);
-## 4
+## 6
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1003,9 +1031,12 @@ end);
 ##
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("RP^2");
+## [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
 ## gap> rp2_6:=SCLib.Load(last[1][1]);;
 ## gap> SCFVector(rp2_6);
+## [ 6, 15, 10 ]
 ## gap> SCHVector(rp2_6);
+## [ 3, 6, 0 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1052,10 +1083,14 @@ end);
 ## \geq i \geq 0 </Math> is called the <M>g</M>-vector of <M>C</M>. For the definition of the <M>h</M>-vector see <Ref Meth="SCHVector" />. The information contained in <M>g</M> suffices to determine the <M>f</M>-vector of <M>C</M>.
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("RP^2");
+## [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
 ## gap> rp2_6:=SCLib.Load(last[1][1]);;
 ## gap> SCFVector(rp2_6);
+## [ 6, 15, 10 ]
 ## gap> SCHVector(rp2_6);
+## [ 3, 6, 0 ]
 ## gap> SCGVector(rp2_6);
+## [ 2, 3 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1102,8 +1137,10 @@ end);
 ## <Example><![CDATA[
 ## gap> complex:=SCFromFacets([[1,2,3], [1,2,4], [1,3,4], [2,3,4]]);;
 ## gap> SCEulerCharacteristic(complex);
+## 2
 ## gap> s2:=SCBdSimplex(3);;
 ## gap> s2.EulerCharacteristic;
+## 2
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1139,12 +1176,12 @@ end);
 ## <Description>
 ## Checks if a simplicial complex <Arg>complex</Arg> fulfills the weak pseudomanifold property, i. e. if every <M>d-1</M>-face of <Arg>complex</Arg> is contained in at most <M>2</M> facets.
 ## <Example><![CDATA[
-## # Two 2-spheres glued together at [1]
 ## gap> c:=SC([[1,2,3],[1,2,4],[1,3,4],[2,3,4],[1,5,6],[1,5,7],[1,6,7],[5,6,7]]);;
 ## gap> SCIsPseudoManifold(c);
-## # Two circles glued together a 1
+## true
 ## gap> c:=SC([[1,2],[2,3],[3,1],[1,4],[4,5],[5,1]]);;
 ## gap> SCIsPseudoManifold(c);
+## false
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1246,8 +1283,10 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(1);;
 ## gap> SCIsConnected(c);
+## false
 ## gap> c:=SCBdSimplex(2);;
 ## gap> SCIsConnected(c);
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1301,10 +1340,12 @@ end);
 ## <Description>
 ## Checks if a simplicial complex <Arg>complex</Arg> is strongly connected, i. e. if for any pair of facets <M>(\hat{\Delta},\tilde{\Delta})</M> there exists a sequence of facets <M>( \Delta_1 , \ldots , \Delta_k )</M> with <M>\Delta_1 = \hat{\Delta}</M> and <M>\Delta_k = \tilde{\Delta}</M> and dim<M>(\Delta_i , \Delta_{i+1} ) = d - 1</M> for all <M>1 \leq i \leq k - 1</M>.  
 ## <Example><![CDATA[
-## # Two 2-spheres, glued along [1]
 ## gap> c:=SC([[1,2,3],[1,2,4],[1,3,4],[2,3,4], [1,5,6],[1,5,7],[1,6,7],[5,6,7]]);
+## <SimplicialComplex: unnamed complex 27 | dim = 2 | n = 7>
 ## gap> SCIsConnected(c);        
+## true
 ## gap> SCIsStronglyConnected(c);                                                
+## false
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1418,12 +1459,16 @@ end);
 ## gap> list:=SCLib.SearchByName("T^2");; 
 ## gap> torus:=SCLib.Load(last[1][1]);;
 ## gap> SCAltshulerSteinberg(torus);
+## 73728
 ## gap> c:=SCBdSimplex(3);;
 ## gap> SCAltshulerSteinberg(c);
+## 9
 ## gap> c:=SCBdSimplex(4);;
 ## gap> SCAltshulerSteinberg(c);
+## 16
 ## gap> c:=SCBdSimplex(5);;
 ## gap> SCAltshulerSteinberg(c);
+## 25
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1489,14 +1534,24 @@ end);
 ## weakly increasing size.<P/>
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K^2");
+## [ [ 18, "K^2 (VT)" ], [ 221, "K^2 (VT)" ] ]
 ## gap> kleinBottle:=SCLib.Load(last[1][1]);;
 ## gap> kleinBottle.Homology;          
+## [ [ 0, [  ] ], [ 1, [ 2 ] ], [ 0, [  ] ] ]
 ## gap> SCLib.SearchByName("L_"){[1..10]};
+## [ [ 123, "L_3_1" ], [ 265, "L_4_1" ], [ 289, "L_5_2" ], 
+##   [ 368, "(S^2~S^1)#L_3_1" ], [ 369, "(S^2xS^1)#L_3_1" ], [ 400, "L_5_1" ], 
+##   [ 403, "(S^2~S^1)#2#L_3_1" ], [ 406, "(S^2xS^1)#2#L_3_1" ], 
+##   [ 496, "L_7_2" ], [ 498, "L_8_3" ] ]
 ## gap> c:=SCConnectedSum(SCLib.Load(last[9][1]),
 ##                        SCConnectedProduct(SCLib.Load(last[10][1]),2));
+## > <SimplicialComplex: L_7_2#+-L_8_3#+-L_8_3 | dim = 3 | n = 40>
 ## gap> SCHomology(c);
+## [ [ 0, [  ] ], [ 0, [ 8, 56 ] ], [ 0, [  ] ], [ 1, [  ] ] ]
 ## gap> SCFpBettiNumbers(c,2);
+## [ 1, 2, 2, 1 ]
 ## gap> SCFpBettiNumbers(c,3);
+## [ 1, 0, 0, 1 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1514,10 +1569,14 @@ end);
 ## Computes the Betti numbers of a simplicial complex with respect to the field <M>\mathbb{F}_p</M> for any prime number <C>p</C>.
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K^2");    
+## [ [ 18, "K^2 (VT)" ], [ 221, "K^2 (VT)" ] ]
 ## gap> kleinBottle:=SCLib.Load(last[1][1]);; 
 ## gap> SCHomology(kleinBottle);      
+## [ [ 0, [  ] ], [ 1, [ 2 ] ], [ 0, [  ] ] ]
 ## gap> SCFpBettiNumbers(kleinBottle,2);
+## [ 1, 2, 1 ]
 ## gap> SCFpBettiNumbers(kleinBottle,3);
+## [ 1, 1, 0 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1588,6 +1647,7 @@ end);
 ##   [ 5, 6 ] ]
 ## gap> graph:=SC(graph);;              
 ## gap> dualGraph:=SCDualGraph(sphere); 
+## <SimplicialComplex: dual graph of S^4_6 | dim = 1 | n = 6>
 ## gap> graph.Facets = dualGraph.Facets;
 ## true
 ## ]]></Example>
@@ -1677,8 +1737,11 @@ end);
 ## The position of the group in the &GAP; libraries of small groups, transitive groups or primitive groups is given. If the group is not listed, its structure description, provided by the &GAP; function <C>StructureDescription()</C>, is returned as the name of the group. Note that the latter form is not always unique, since every non trivial semi-direct product is denoted by ''<C>:</C>''.
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K3");            
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> k3surf:=SCLib.Load(last[1][1]);; 
 ## gap> SCAutomorphismGroup(k3surf);               
+## Group([ (1,2)(3,4)(5,6)(7,8)(9,10)(11,12)(13,14)(15,16), (1,2,8,14,5)
+##   (3,11,9,4,13)(6,7,12,15,10), (1,3,2)(5,11,14)(6,9,15)(7,10,13)(8,12,16) ])
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1699,8 +1762,10 @@ end);
 ## Computes the size of the automorphism group of a strongly connected pseudomanifold <Arg>complex</Arg>, see <Ref Meth="SCAutomorphismGroup"/>.
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K3");            
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> k3surf:=SCLib.Load(last[1][1]);;           
 ## gap> SCAutomorphismGroupSize(k3surf);               
+## 240
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1728,8 +1793,10 @@ end);
 ## Computes the &GAP; structure description of the automorphism group of a strongly connected pseudomanifold <Arg>complex</Arg>, see <Ref Meth="SCAutomorphismGroup"/>.
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K3");     
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> k3surf:=SCLib.Load(last[1][1]);;      
 ## gap> SCAutomorphismGroupStructure(k3surf);
+## "(C2 x C2 x C2 x C2) : C15"
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1757,8 +1824,10 @@ end);
 ## Computes the transitivity of the automorphism group of a strongly connected pseudomanifold <Arg>complex</Arg>, i. e. the maximal integer <M>t</M> such that for any two ordered <M>t</M>-tuples <M>T_1</M> and <M>T_2</M> of vertices of <Arg>complex</Arg>, there exists an element <M>g</M> in the automorphism group of <Arg>complex</Arg> for which <M>gT_1=T_2</M>, see <Cite Key="Huppert67EndlGruppen" />. 
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K3");            
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> k3surf:=SCLib.Load(last[1][1]);;           
 ## gap> SCAutomorphismGroupTransitivity(k3surf);               
+## 2
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2041,12 +2110,12 @@ end;
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(5);;
 ## gap> SCAutomorphismGroupInternal(c);
-## S6
+## Sym( [ 1 .. 6 ] )
 ## ]]></Example>
 ## <Example><![CDATA[
 ## gap> c:=SC([[1,2],[2,3],[1,3]]);;
 ## gap> g:=SCAutomorphismGroupInternal(c);
-## PrimitiveGroup(3,2) = S(3)
+## Group([ (2,3), (1,2,3) ])
 ## gap> List(g);
 ## [ (), (1,2,3), (1,3,2), (2,3), (1,2), (1,3) ]
 ## gap> StructureDescription(g);
@@ -2180,6 +2249,7 @@ end);
 ## gap> SCLib.SearchByName("K3");
 ## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> SCLib.Load(last[1][1]);
+## <SimplicialComplex: K3_16 | dim = 4 | n = 16>
 ## gap> SCGeneratorsEx(last);
 ## [ [ [ 1, 2, 3, 8, 12 ], 240 ], [ [ 1, 2, 5, 8, 14 ], 48 ] ]
 ## ]]></Example>
@@ -2232,6 +2302,7 @@ end);
 ## gap> SCLib.SearchByName("K3");
 ## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> SCLib.Load(last[1][1]);
+## <SimplicialComplex: K3_16 | dim = 4 | n = 16>
 ## gap> SCGenerators(last);
 ## [ [ [ 1, 2, 3, 8, 12 ], 240 ], [ [ 1, 2, 5, 8, 14 ], 48 ] ]
 ## ]]></Example>
@@ -2275,8 +2346,12 @@ end);
 ## equals the number of vertices <M>n</M> of <Arg>complex</Arg>.
 ## <Example><![CDATA[
 ## gap> torus:=SCFromDifferenceCycles([[1,2,4],[1,4,2]]);
+## <SimplicialComplex: complex from diffcycles [ [ 1, 2, 4 ], [ 1, 4, 2 ] ] | dim\
+##  = 2 | n = 7>
 ## gap> torus.Homology;
+## [ [ 0, [  ] ], [ 2, [  ] ], [ 1, [  ] ] ]
 ## gap> torus.DifferenceCycles;
+## [ [ 1, 2, 4 ], [ 1, 4, 2 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2394,6 +2469,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdCrossPolytope(4);;
 ## gap> SCCentrallySymmetricElement(c);
+## (1,2)(3,4)(5,6)(7,8)
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2598,8 +2674,11 @@ end);
 ## If <Arg>complex</Arg> does not fulfill the weak pseudomanifold property (i. e. if the valence of any <M>d-1</M>-face exceeds <M>2</M>) the function returns <K>fail</K>.
 ## <Example><![CDATA[
 ## gap> c:=SC([[1,2,3,4],[1,2,3,5],[1,2,4,5],[1,3,4,5]]);
+## <SimplicialComplex: unnamed complex 63 | dim = 3 | n = 5>
 ## gap> SCBoundary(c);
+## <SimplicialComplex: Bd(unnamed complex 63) | dim = 2 | n = 4>
 ## gap> c;  
+## <SimplicialComplex: unnamed complex 63 | dim = 3 | n = 5>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2728,11 +2807,11 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SC([[1,2,3,4],[1,2,3,5],[1,2,4,5],[1,3,4,5]]);;
 ## gap> SCInterior(c).Facets;
-## [[1, 2, 3], [1, 2, 4], [1, 2, 5], [1, 3, 4], [1, 3, 5],
-##   [1, 4, 5]]
+## [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 2, 5 ], [ 1, 3, 4 ], [ 1, 3, 5 ], 
+##   [ 1, 4, 5 ] ]
 ## gap> c:=SC([[1,2,3,4]]);;
 ## gap> SCInterior(c).Facets;
-## []
+## [  ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2870,7 +2949,9 @@ end);
 ## gap> SCIsEulerianManifold(c);
 ## true
 ## gap> SCLib.SearchByName("Moebius");
+## [ [ 1, "Moebius Strip" ] ]
 ## gap> moebius:=SCLib.Load(last[1][1]); # a moebius strip
+## <SimplicialComplex: Moebius Strip | dim = 2 | n = 5>
 ## gap> SCIsEulerianManifold(moebius);
 ## false
 ## ]]></Example>
@@ -3075,9 +3156,9 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SC([["a","b","c"],["a","b","d"], ["a","c","d"], ["b","c","d"]]);;
 ## gap> SCFaceLatticeEx(c);
-## [ [ [1], [2], [3], [4] ],
-##   [ [1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4] ],
-##   [ [1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 3, 4] ] ]
+## [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ], 
+##   [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 4 ], [ 3, 4 ] ], 
+##   [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 3, 4 ], [ 2, 3, 4 ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3116,11 +3197,11 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SC([["a","b","c"],["a","b","d"], ["a","c","d"], ["b","c","d"]]);;
 ## gap> SCFaceLattice(c);
-## [ [ ["a"], ["b"], ["c"], ["d"] ],
-##   [ ["a", "b"], ["a", "c"], ["a", "d"], 
-## 	   ["b", "c"], ["b", "d"], ["c", "d"] ],
-##   [ ["a", "b", "c"], ["a", "b", "d"], 
-##     ["a", "c", "d"], ["b", "c", "d"] ] ]
+## [ [ [ "a" ], [ "b" ], [ "c" ], [ "d" ] ], 
+##   [ [ "a", "b" ], [ "a", "c" ], [ "a", "d" ], [ "b", "c" ], [ "b", "d" ], 
+##       [ "c", "d" ] ], 
+##   [ [ "a", "b", "c" ], [ "a", "b", "d" ], [ "a", "c", "d" ], 
+##       [ "b", "c", "d" ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3154,10 +3235,9 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SC([[1,2,3],[2,3,4],[3,4,5],[4,5,6],[1,5,6],[1,4,6],[2,3,6]]);;
 ## gap> SCIncidences(c,1);
-## [ [ [1, 2], [1, 3], [1, 4], [1, 5], 
-##     [2, 4], [2, 6], [3, 5], [3, 6] ], 
-##   [ [1, 6], [3, 4], [4, 5], [4, 6], [5, 6] ],
-##   [ [2, 3] ] ]
+## [ [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 1, 5 ], [ 2, 4 ], [ 2, 6 ], [ 3, 5 ], 
+##       [ 3, 6 ] ], [ [ 1, 6 ], [ 3, 4 ], [ 4, 5 ], [ 4, 6 ], [ 5, 6 ] ], 
+##   [ [ 2, 3 ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3244,10 +3324,9 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SC([[1,2,3],[2,3,4],[3,4,5],[4,5,6],[1,5,6],[1,4,6],[2,3,6]]);;
 ## gap> SCIncidences(c,1);
-## [ [ [1, 2], [1, 3], [1, 4], [1, 5], 
-##     [2, 4], [2, 6], [3, 5], [3, 6] ], 
-##   [ [1, 6], [3, 4], [4, 5], [4, 6], [5, 6] ],
-##   [ [2, 3] ] ]
+## [ [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 1, 5 ], [ 2, 4 ], [ 2, 6 ], [ 3, 5 ], 
+##       [ 3, 6 ] ], [ [ 1, 6 ], [ 3, 4 ], [ 4, 5 ], [ 4, 6 ], [ 5, 6 ] ], 
+##   [ [ 2, 3 ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3289,7 +3368,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SC([[1,4,5],[4,9,8],[12,13,14,15,16,17]]);;
 ## gap> SCVerticesEx(c);
-## [1 .. 11]
+## [ 1 .. 11 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3317,7 +3396,7 @@ end);
 ## gap> sphere:=SC([["x",45,[1,1]],["x",45,["b",3]],["x",[1,1],
 ##   ["b",3]],[45,[1,1],["b",3]]]);;
 ## gap> SCVerticesEx(sphere);
-## [1, 2, 3, 4]
+## [ 1 .. 4 ]
 ## gap> SCVertices(sphere);
 ## [ 45, [ 1, 1 ], "x", [ "b", 3 ] ]
 ## ]]></Example>
@@ -3393,24 +3472,18 @@ end);
 ## <Returns> <K>true</K> / <K>false</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Checks whether the simplicial complex <Arg>complex</Arg> that must be a combinatorial <M>d</M>-manifold is in the class <M>\mathcal{K}^k(d)</M>, <M>1\leq k\leq \lfloor\frac{d+1}{2}\rfloor</M>, of simplicial complexes that only have <M>k</M>-stacked spheres as vertex links, see <Cite Key="Effenberger09StackPolyTightTrigMnf" />. Note that it is not checked whether <Arg>complex</Arg> is a combinatorial manifold -- if not, the algorithm will not succeed.
-## Returns <K>true</K> / <K>false</K> upon success. If <K>true</K> is returned this means that <Arg>complex</Arg> is at least <Arg>k</Arg>-stacked and thus that the complex is in the class <M>\mathcal{K}^k(d)</M>, i.e. all vertex links are <C>i</C>-stacked spheres. If <K>false</K> is returnd the complex cannot be <Arg>k</Arg>-stacked. In some cases the question can not be decided. In this case <K>fail</K> is returned.<P/>
+## Returns <K>true</K> / <K>false</K> upon success. If <K>true</K> is returned this means that <Arg>complex</Arg> is at least <Arg>k</Arg>-stacked and thus that the complex is in the class <M>\mathcal{K}^k(d)</M>, i.e. all vertex links are <C>i</C>-stacked spheres. If <K>false</K> is returned the complex cannot be <Arg>k</Arg>-stacked. In some cases the question can not be decided. In this case <K>fail</K> is returned.<P/>
 ## Internally calls <Ref Meth="SCIsKStackedSphere"/> for all links. Please note that this is a radomized algorithm that may give an indefinite answer to the membership problem.
 ## <Example><![CDATA[
 ## gap> list:=SCLib.SearchByName("S^2~S^1"){[1..3]};;
 ## gap> c:=SCLib.Load(list[1][1]);;
 ## gap> c.AutomorphismGroup;
-## D18
+## Group([ (1,2,3,4,5,6,7,8,9), (1,3)(4,9)(5,8)(6,7) ])
 ## gap> SCIsInKd(c,1);
-## #I  SCIsInKd: checking link 1/9
-## #I  SCIsKStackedSphere: try 1/50
-## round 0: [ 7, 15, 10 ]
-## round 1: [ 6, 12, 8 ]
-## round 2: [ 5, 9, 6 ]
-## round 3: [ 4, 6, 4 ]
-## Computed locally minimal complex after 4 rounds.
-## #I  SCIsInKd: complex has transitive automorphism group, all links are 
-## 1-stacked.
-## 1
+## #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
+## #I  SCIsKStackedSphere: try 1/1
+## #I  SCIsKStackedSphere: complex is a 1-stacked sphere.
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3766,7 +3839,10 @@ end;
 ## <Example><![CDATA[
 ## gap> M:=SCSeriesBdHandleBody(3,12);;
 ## gap> list:=SCHeegaardSplitting(M);
+## [ 1, [ [ 1, 2, 3, 5, 9 ], [ 4, 6, 7, 8, 10, 11, 12 ] ], "arbitrary" ]
 ## gap> sl:=SCSlicing(M,list[2]);
+## <NormalSurface: slicing [ [ 1, 2, 3, 5, 9 ], [ 4, 6, 7, 8, 10, 11, 12 ] ] of S\
+## phere bundle S^2 x S^1 | dim = 2>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3788,11 +3864,13 @@ end);
 ## Computes a Heegaard splitting of the combinatorial <M>3</M>-manifold  <Arg>M</Arg> of small genus. The function returns the genus of the Heegaard splitting, the vertex partition of the Heegaard splitting and information whether the splitting is minimal or just small (i. e. the Heegaard genus could not be determined).
 ## 
 ## See also <Ref Func="SCHeegaardSplitting"/> for a faster computation of a Heegaard splitting of arbitrary genus and <Ref Func="SCIsHeegaardSplitting"/> for a test whether or not a given splitting defines a Heegaard splitting.
-## <Example><![CDATA[ NOEXECUTE
-## gap> c:=SCSeriesBdHandleBody(3,10);;
-## gap> M:=SCConnectedProduct(c,3);;
+## <Example><![CDATA[
+## gap> c:=SCSeriesBdHandleBody(3,10);
+## <SimplicialComplex: Sphere bundle S^2 x S^1 | dim = 3 | n = 10>
+## gap> M:=SCConnectedProduct(c,2);
+## <SimplicialComplex: Sphere bundle S^2 x S^1#+-Sphere bundle S^2 x S^1 | dim = 3 | n = 16>
 ## gap> list:=SCHeegaardSplittingSmallGenus(M);
-## This creates an error
+## [ 2, [ [ 1, 2, 3, 7, 17 ], [ 4, 5, 6, 8, 9, 10, 14, 16, 18, 19, 20 ] ], "minimal" ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3892,9 +3970,13 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesBdHandleBody(3,9);;
 ## gap> list:=[[1..3],[4..9]];
+## [ [ 1 .. 3 ], [ 4 .. 9 ] ]
 ## gap> SCIsHeegaardSplitting(c,list);
+## false
 ## gap> splitting:=SCHeegaardSplitting(c);
+## [ 1, [ [ 1, 2, 3, 6 ], [ 4, 5, 7, 8, 9 ] ], "arbitrary" ]
 ## gap> SCIsHeegaardSplitting(c,splitting[2]);                                         
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>

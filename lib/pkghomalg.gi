@@ -65,8 +65,14 @@ end;
 ## <M>\mathbb{F}_q</M>-matrices.<P/>
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("CP^2 (VT)");
+## [ [ 16, "CP^2 (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomalgBoundaryMatrices(c,0);
+## [ <A 36 x 9 matrix over an internal ring>, 
+##   <A 84 x 36 matrix over an internal ring>, 
+##   <A 90 x 84 matrix over an internal ring>, 
+##   <A 36 x 90 matrix over an internal ring>, 
+##   <An unevaluated 0 x 36 zero matrix over an internal ring> ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -140,8 +146,14 @@ end);
 ## <M>\mathbb{F}_q</M>-matrices.<P/>
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("CP^2 (VT)");
+## [ [ 16, "CP^2 (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomalgCoboundaryMatrices(c,0);
+## [ <A 9 x 36 matrix over an internal ring>, 
+##   <A 36 x 84 matrix over an internal ring>, 
+##   <A 84 x 90 matrix over an internal ring>, 
+##   <A 90 x 36 matrix over an internal ring>, 
+##   <An unevaluated 36 x 0 zero matrix over an internal ring> ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -215,8 +227,11 @@ end);
 ## <Ref Meth="SCHomalgHomologyBasis" />.
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K3");
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomalgHomology(c,0);
+## #I  SCHomalgHomologyOp: Q-homology ranks: [ 1, 0, 22, 0, 1 ]
+## [ 1, 0, 22, 0, 1 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -276,12 +291,16 @@ end);
 ## generators of <C>hk</C> can then be obtained via 
 ## <C>GeneratorsOfModule(hk);</C>.<P/>
 ## Note that if you are only interested in the ranks of the homology groups, 
-## then it is better to use the funtion <Ref Meth="SCHomalgHomology" /> 
+## then it is better to use the function <Ref Meth="SCHomalgHomology" /> 
 ## which is way faster.
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K3");
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomalgHomologyBasis(c,0);
+## #I  SCHomalgHomologyBasisOp: constructed Q-homology groups.
+## <A graded homology object consisting of 5 left vector spaces at degrees 
+## [ 0 .. 4 ]>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -336,8 +355,11 @@ end);
 ## <Ref Meth="SCHomalgCohomologyBasis" />.
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K3");
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomalgCohomology(c,0);
+## #I  SCHomalgCohomologyOp: Q-cohomology ranks: [ 1, 0, 22, 0, 1 ]
+## [ 1, 0, 22, 0, 1 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -396,12 +418,16 @@ end);
 ## generators of <C>ck</C> can then be obtained via 
 ## <C>GeneratorsOfModule(ck);</C>.<P/>
 ## Note that if you are only interested in the ranks of the cohomology groups, 
-## then it is better to use the funtion <Ref Meth="SCHomalgCohomology" /> 
+## then it is better to use the function <Ref Meth="SCHomalgCohomology" /> 
 ## which is way faster.
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K3");
+## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomalgCohomologyBasis(c,0);
+## #I  SCHomalgCohomologyBasisOp: constructed Q-cohomology groups.
+## <A graded cohomology object consisting of 5 left vector spaces at degrees 
+## [ 1 .. 5 ]>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -445,4 +471,3 @@ end);
 #  hk:=CertainObject(h,k);
 #  return GeneratorsOfModule(hk);
 #end;
-

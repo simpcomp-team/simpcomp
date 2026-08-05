@@ -60,7 +60,7 @@
 ## gap> SCBistellarOptions.Mode;
 ## 0
 ## gap> SCBistellarOptions.WriteLevel;
-## 1
+## 0
 ## gap> SCBistellarOptions.MailNotifyInterval;
 ## 86400
 ## gap> SCBistellarOptions.MaxIntervalIsManifold;
@@ -705,19 +705,14 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdCrossPolytope(3);;
 ## gap> moves:=SCMoves(c);
-## [
-## # 0-moves
-##   [[[1, 3, 5], []], [[1, 3, 6], []], [[1, 4, 5], []], 
-##     [[1, 4, 6], []], [[2, 3, 5], []], [[2, 3, 6], []],
-##     [[2, 4, 5], []], [[2, 4, 6], []]], 
-## # 1-moves
-##   [[[1, 3], [5, 6]], [[1, 4], [5, 6]], [[1, 5], [3, 4]], 
-##     [[1, 6], [3, 4]], [[2, 3], [5, 6]], [[2, 4], [5, 6]], 
-##     [[2, 5], [3, 4]], [[2, 6], [3, 4]], [[3, 5], [1, 2]], 
-##     [[3, 6], [1, 2]], [[4, 5], [1, 2]], [[4, 6], [1, 2]]],
-## # 2-moves
-##   [] 
-##]
+## [ [ [ [ 1, 3, 5 ], [  ] ], [ [ 1, 3, 6 ], [  ] ], [ [ 1, 4, 5 ], [  ] ], 
+##       [ [ 1, 4, 6 ], [  ] ], [ [ 2, 3, 5 ], [  ] ], [ [ 2, 3, 6 ], [  ] ], 
+##       [ [ 2, 4, 5 ], [  ] ], [ [ 2, 4, 6 ], [  ] ] ], 
+##   [ [ [ 1, 3 ], [ 5, 6 ] ], [ [ 1, 4 ], [ 5, 6 ] ], [ [ 1, 5 ], [ 3, 4 ] ], 
+##       [ [ 1, 6 ], [ 3, 4 ] ], [ [ 2, 3 ], [ 5, 6 ] ], [ [ 2, 4 ], [ 5, 6 ] ], 
+##       [ [ 2, 5 ], [ 3, 4 ] ], [ [ 2, 6 ], [ 3, 4 ] ], [ [ 3, 5 ], [ 1, 2 ] ], 
+##       [ [ 3, 6 ], [ 1, 2 ] ], [ [ 4, 5 ], [ 1, 2 ] ], [ [ 4, 6 ], [ 1, 2 ] ] ]
+##     , [  ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -772,12 +767,14 @@ end);
 ## labeling to ensure a correct result.
 ## <Example><![CDATA[
 ## gap> obj:=SC([[1,2],[2,3],[3,4],[4,1]]);
+## <SimplicialComplex: unnamed complex 5 | dim = 1 | n = 4>
 ## gap> moves:=SCMoves(obj);
-## [[[[1, 2], []], [[1, 4], []], 
-##     [[2, 3], []], [[3, 4], []]], 
-##   [[[1], [2, 4]], [[2], [1, 3]], 
-##     [[3], [2, 4]], [[4], [1, 3]]]]
+## [ [ [ [ 1, 2 ], [  ] ], [ [ 1, 4 ], [  ] ], [ [ 2, 3 ], [  ] ], 
+##       [ [ 3, 4 ], [  ] ] ], 
+##   [ [ [ 1 ], [ 2, 4 ] ], [ [ 2 ], [ 1, 3 ] ], [ [ 3 ], [ 2, 4 ] ], 
+##       [ [ 4 ], [ 1, 3 ] ] ] ]
 ## gap> obj:=SCMove(obj,last[2][1]);
+## <SimplicialComplex: unnamed complex 6 | dim = 1 | n = 3>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1095,7 +1092,9 @@ end;
 ## dimension and the maximal vertex label of <Arg>complex</Arg>.
 ## <Example><![CDATA[
 ## gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);
+## <SimplicialComplex: unnamed complex 7 | dim = 1 | n = 6>
 ## gap> SCExamineComplexBistellar(obj);
+## <SimplicialComplex: unnamed complex 7 | dim = 1 | n = 6>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1186,12 +1185,15 @@ end);
 ## gap> c:=SCBdCrossPolytope(4);;
 ## gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
 ## gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
+## [ true, <SimplicialComplex: unnamed complex 13 | dim = 3 | n = 5>, 7 ]
 ## gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
+## [ true, <SimplicialComplex: unnamed complex 18 | dim = 3 | n = 5>, 9 ]
 ## gap> SCMailSetAddress("johndoe@somehost");   
 ## true
 ## gap> SCMailIsEnabled();                     
 ## true
 ## gap> SCReduceComplexEx(c,SCEmpty(),0,SCIntFunc.SCChooseMove);
+## [ true, <SimplicialComplex: unnamed complex 23 | dim = 3 | n = 5>, 7 ]
 ## ]]></Example>
 ## Content of sent mail:
 ## <Example><![CDATA[ NOEXECUTE
@@ -1553,13 +1555,7 @@ end);
 ## gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
 ## gap> SCBistellarOptions.WriteLevel:=0;; # do not save complexes                      
 ## gap> tmp := SCReduceComplex(obj);
-## #I  round 0, move: [ [ 6 ], [ 1, 5 ] ]
-## [ 5, 5 ]
-## #I  round 1, move: [ [ 4 ], [ 3, 5 ] ]
-## [ 4, 4 ]
-## #I  round 2, move: [ [ 3 ], [ 2, 5 ] ]
-## [ 3, 3 ]
-## #I  SCReduceComplexEx: computed locally minimal complex after 3 rounds.
+## [ true, <SimplicialComplex: unnamed complex 27 | dim = 1 | n = 3>, 3 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1596,9 +1592,6 @@ end);
 ## gap> obj:=SC([[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]]);; # hexagon
 ## gap> refObj:=SCBdSimplex(2);; # triangle as a (minimal) reference object
 ## gap> SCEquivalent(obj,refObj);
-## #I  round 0: [ 5, 5 ]
-## #I  round 1: [ 4, 4 ]
-## #I  round 2: [ 3, 3 ]
 ## #I  SCReduceComplexEx: complexes are bistellarly equivalent.
 ## true
 ## ]]></Example>
@@ -1692,9 +1685,7 @@ end);
 ## gap> c:=SCFromFacets([[1,3],[3,5],[4,5],[4,1]]);;
 ## gap> SCBistellarOptions.WriteLevel:=0;; # do not save any complexes                      
 ## gap> SCReduceAsSubcomplex(c,SCBdCrossPolytope(3));
-## #I  round 0, move: [ [ 2 ], [ 1, 4 ] ]
-## [ 3, 3 ]
-## #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
+## [ true, <SimplicialComplex: unnamed complex 36 | dim = 1 | n = 3>, 1 ]
 ##]]></Example>
 ##</Description>
 ## </ManSection>
@@ -1735,15 +1726,6 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdCrossPolytope(3);;
 ## gap> SCBistellarIsManifold(c);
-## #I  SCBistellarIsManifold: processing vertex link 1/6
-## #I  round 0: [ 3, 3 ]
-## #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
-## #I  SCBistellarIsManifold: link is sphere.
-## ...
-## #I  SCBistellarIsManifold: processing vertex link 6/6
-## #I  round 0: [ 3, 3 ]
-## #I  SCReduceComplexEx: computed locally minimal complex after 1 rounds.
-## #I  SCBistellarIsManifold: link is sphere.
 ## true
 ## ]]></Example>
 ## </Description>
@@ -1905,16 +1887,14 @@ end);
 ## gap> SCLib.SearchByName("S^4~S^1");;
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> l:=SCLink(c,1);
+## <SimplicialComplex: lk([ 1 ]) in S^4~S^1 (VT) | dim = 4 | n = 12>
 ## gap> SCIsKStackedSphere(l,1);
-## #I  SCIsKStackedSphere: try 1/50
-## #I  round 0: [ 11, 40, 70, 65, 26 ]
-## #I  round 1: [ 10, 35, 60, 55, 22 ]
-## #I  round 2: [ 9, 30, 50, 45, 18 ]
-## #I  round 3: [ 8, 25, 40, 35, 14 ]
-## #I  round 4: [ 7, 20, 30, 25, 10 ]
-## #I  round 5: [ 6, 15, 20, 15, 6 ]
-## #I  SCReduceComplexEx: computed locally minimal complex after 6 rounds.
-## 1
+## #I  SCIsKStackedSphere: checking if complex is a 1-stacked sphere...
+## #I  SCIsKStackedSphere: try 1/1
+## #I  SCIsKStackedSphere: complex is a 1-stacked sphere.
+## [ true, 
+##   <SimplicialComplex: Filled 1-stacked sphere (lk([ 1 ]) in S^4~S^1 (VT)) | di\
+## m = 5 | n = 12> ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2107,8 +2087,9 @@ end);
 ## Internally calls <Ref Func="SCReduceComplexEx" Style="Text" />.
 ## <Example><![CDATA[
 ## gap> c:=SCRandomize(SCBdSimplex(4));
+## <SimplicialComplex: Randomized S^3_5 | dim = 3 | n = 16>
 ## gap> c.F;
-## [ 20, 85, 130, 65 ]
+## [ 16, 65, 98, 49 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -2687,5 +2668,4 @@ InstallGlobalFunction(SCReduceComplexFast,
     return fail;
   fi;
 end);
-
 

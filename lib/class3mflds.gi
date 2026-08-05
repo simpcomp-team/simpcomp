@@ -14,6 +14,7 @@
 ## <M>22</M> vertices.
 ## <Example><![CDATA[
 ## gap> SCNrCyclic3Mflds(22);
+## 3090
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -51,6 +52,8 @@ end);
 ## <M>22</M> vertices.
 ## <Example><![CDATA[
 ## gap> SCCyclic3MfldTopTypes(19);
+## [ "B2", "RP^2xS^1", "SFS[RP^2:(2,1)(3,1)]", "S^2~S^1", "S^3", "Sigma(2,3,7)", 
+##   "T^3" ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -6683,6 +6686,7 @@ end;
 ## <M>22</M> vertices.
 ## <Example><![CDATA[
 ## gap> SCCyclic3Mfld(15,34);
+## <SimplicialComplex: Cyclic 3-mfld (15,34): T^3 | dim = 3 | n = 15>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -6709,6 +6713,7 @@ end);
 ## <M>22</M> vertices.
 ## <Example><![CDATA[
 ## gap> SCCyclic3MfldByType("T^3");
+## <SimplicialComplex: Cyclic 3-mfld (15,34): T^3 | dim = 3 | n = 15>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -6741,6 +6746,7 @@ end);
 ## symmetry up to <M>22</M> vertices.
 ## <Example><![CDATA[
 ## gap> SCCyclic3MfldListOfGivenType("Sigma(2,3,7)");
+## [ [ 19, 100 ], [ 19, 118 ], [ 19, 120 ], [ 19, 130 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -6750,4 +6756,3 @@ InstallGlobalFunction(SCCyclic3MfldListOfGivenType,
 function(type)
 	return SCIntFunc.SCCyclic3MfldEx(type,0,2);
 end);
-

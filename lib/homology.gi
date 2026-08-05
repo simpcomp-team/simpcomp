@@ -698,6 +698,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCFromFacets([[1,2,3],[1,2,6],[1,3,5],[1,4,5],[1,4,6],\
 ##                       [2,3,4],[2,4,5],[2,5,6],[3,4,6],[3,5,6]]);
+## > <SimplicialComplex: unnamed complex 2 | dim = 2 | n = 6>
 ## gap> mat:=SCCoboundaryOperatorMatrix(c,1);
 ## [ [ -1, 1, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
 ##   [ -1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0 ], 
@@ -876,8 +877,9 @@ end;
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCHomologyBasisAsSimplices(c,1);
 ## [ [ 1, [ [ 1, [ 2, 8 ] ], [ -1, [ 1, 8 ] ], [ 1, [ 1, 2 ] ] ] ], 
-##   [ 2, [ [ 1, [ 11, 12 ] ], [ -1, [ 11, 13 ] ], [ -1, [ 12, 13 ] ], 
-##          [ 2, [ 12, 14 ] ], [ -2, [ 13, 14 ] ] ] ] ]
+##   [ 2, 
+##       [ [ 1, [ 11, 12 ] ], [ -1, [ 11, 13 ] ], [ -1, [ 12, 13 ] ], 
+##           [ 2, [ 12, 14 ] ], [ -2, [ 13, 14 ] ] ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -911,7 +913,7 @@ end);
 ##<#GAPDoc Label="SCCohomologyBasisAsSimplices">
 ## <ManSection>
 ## <Meth Name="SCCohomologyBasisAsSimplices" Arg="complex, k"/>
-## <Returns> a list of pars of the form <C>[ integer, linear combination of simplices ]</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns> a list of pairs of the form <C>[ integer, linear combination of simplices ]</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Calculates a set of basis elements for the <Arg>k</Arg>-dimensional cohomology group (with integer coefficients) of a simplicial complex <Arg>complex</Arg>. The entries of the returned list are of the form [ MODULUS, [ BASEELM1, BASEELM2, ...] ], where the value MODULUS is 1 for the basis elements of the free part of the <Arg>k</Arg>-th homology group and <M>q\geq 2</M> for the basis elements of the <M>q</M>-torsion part. In contrast to the function <Ref Meth="SCCohomologyBasis" /> the basis elements are stored as lists of coefficient-simplex pairs referring to the linear forms dual to the simplices in the <M>k</M>-th cochain complex of <Arg>complex</Arg>, i.e. a basis element of the form <M>[ [ \lambda_1, \Delta_i], [\lambda_2, \Delta_j], \dots ] \dots</M> encodes the linear combination of simplices (or their dual linear forms in the corresponding cochain complex) of the form <M>\lambda_1*\Delta_1+\lambda_2*\Delta_2 + \dots</M>.
 ## <Example><![CDATA[
@@ -920,43 +922,57 @@ end);
 ##   [ 484, "SU(3)/SO(3) (VT)" ], [ 486, "SU(3)/SO(3) (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCCohomologyBasisAsSimplices(c,3);
-## [ [ 2, [ [ -9, [ 2, 7, 8, 9 ] ], [ 9, [ 2, 7, 8, 12 ] ], [ 9, [ 2, 7, 8, 13 ] ], 
-##          [ -9, [ 2, 7, 11, 12 ] ], [ 9, [ 2, 7, 11, 13 ] ], [ -9, [ 2, 8, 9, 10 ] ],
-##          [ -9, [ 2, 8, 9, 11 ] ], [ -18, [ 2, 8, 9, 12 ] ], [ -9, [ 2, 8, 9, 13 ] ],
-##          [ 9, [ 2, 8, 10, 12 ] ], [ -9, [ 2, 8, 10, 13 ] ], 
-##          [ -9, [ 2, 8, 11, 12 ] ], [ 3, [ 2, 9, 10, 12 ] ], 
-##          [ -3, [ 2, 9, 11, 12 ] ], [ 3, [ 3, 4, 5, 7 ] ], [ -3, [ 3, 4, 5, 12 ] ], 
-##          [ 3, [ 3, 4, 10, 12 ] ], [ -3, [ 3, 5, 6, 7 ] ], [ 3, [ 3, 5, 6, 11 ] ], 
-##          [ -1, [ 3, 5, 6, 13 ] ], [ -6, [ 3, 5, 7, 8 ] ], [ 3, [ 3, 5, 7, 10 ] ], 
-##          [ -6, [ 3, 5, 7, 11 ] ], [ 6, [ 3, 5, 7, 12 ] ], [ 1, [ 3, 5, 7, 13 ] ], 
-##          [ 3, [ 3, 5, 8, 12 ] ], [ -1, [ 3, 5, 9, 13 ] ], [ 6, [ 3, 5, 10, 12 ] ], 
-##          [ -2, [ 3, 5, 10, 13 ] ], [ 12, [ 3, 5, 11, 12 ] ], 
-##          [ 7, [ 3, 5, 11, 13 ] ], [ -5, [ 3, 5, 12, 13 ] ], [ 1, [ 3, 6, 9, 13 ] ], 
-##          [ 3, [ 3, 7, 10, 12 ] ], [ -9, [ 3, 7, 11, 12 ] ], [ 9, [ 3, 7, 11, 13 ] ],
-##          [ 1, [ 3, 8, 9, 13 ] ], [ 12, [ 3, 8, 10, 12 ] ], [ -9, [ 3, 8, 10, 13 ] ],
-##          [ -3, [ 3, 9, 10, 12 ] ], [ -1, [ 3, 9, 10, 13 ] ], 
-##          [ -3, [ 3, 9, 11, 12 ] ], [ 8, [ 3, 9, 11, 13 ] ], 
-##          [ -1, [ 3, 9, 12, 13 ] ], [ 6, [ 3, 10, 11, 12 ] ], 
-##          [ 9, [ 3, 10, 11, 13 ] ], [ 3, [ 3, 10, 12, 13 ] ], [ 1, [ 4, 5, 6, 8 ] ], 
-##          [ 3, [ 4, 5, 6, 11 ] ], [ -8, [ 4, 5, 6, 13 ] ], [ -9, [ 4, 5, 7, 8 ] ], 
-##          [ -9, [ 4, 5, 7, 11 ] ], [ -18, [ 4, 6, 8, 9 ] ], [ 9, [ 4, 6, 9, 13 ] ], 
-##          [ -9, [ 4, 8, 9, 10 ] ], [ -18, [ 4, 8, 9, 12 ] ], [ -9, [ 4, 8, 9, 13 ] ],
-##          [ 9, [ 4, 8, 10, 12 ] ], [ -9, [ 4, 8, 10, 13 ] ], [ 3, [ 4, 9, 10, 12 ] ],
-##          [ -3, [ 4, 9, 11, 12 ] ], [ -9, [ 4, 9, 12, 13 ] ], [ 10, [ 5, 6, 7, 8 ] ],
-##          [ 12, [ 5, 6, 7, 11 ] ], [ 1, [ 5, 6, 7, 13 ] ], [ -19, [ 5, 6, 8, 9 ] ], 
-##          [ 2, [ 5, 6, 8, 11 ] ], [ -1, [ 5, 6, 8, 12 ] ], [ -9, [ 5, 6, 8, 13 ] ], 
-##          [ 3, [ 5, 6, 9, 11 ] ], [ 1, [ 5, 6, 9, 13 ] ], [ 1, [ 5, 6, 10, 13 ] ], 
-##          [ -11, [ 5, 6, 11, 13 ] ], [ -9, [ 5, 7, 8, 9 ] ], [ 9, [ 5, 7, 8, 12 ] ], 
-##          [ 9, [ 5, 7, 8, 13 ] ], [ -9, [ 5, 7, 11, 12 ] ], [ 9, [ 5, 7, 11, 13 ] ], 
-##          [ -18, [ 5, 8, 9, 12 ] ], [ -9, [ 5, 8, 9, 13 ] ], [ 9, [ 5, 8, 10, 12 ] ],
-##          [ -9, [ 5, 8, 11, 12 ] ], [ 9, [ 6, 7, 8, 13 ] ], [ 9, [ 6, 7, 11, 13 ] ], 
-##          [ -9, [ 6, 8, 10, 13 ] ], [ -3, [ 6, 9, 11, 12 ] ], 
-##          [ 9, [ 6, 9, 11, 13 ] ], [ 9, [ 7, 8, 9, 13 ] ], [ 9, [ 7, 8, 11, 12 ] ], 
-##          [ 6, [ 7, 9, 11, 12 ] ], [ 18, [ 7, 11, 12, 13 ] ], 
-##          [ -15, [ 8, 9, 10, 12 ] ], [ 9, [ 8, 9, 10, 13 ] ], 
-##          [ -3, [ 8, 9, 11, 12 ] ], [ 18, [ 8, 10, 11, 12 ] ], 
-##          [ -18, [ 8, 10, 12, 13 ] ], [ 6, [ 9, 10, 11, 12 ] ], 
-##          [ 6, [ 9, 10, 12, 13 ] ], [ 12, [ 9, 11, 12, 13 ] ] ] ] ]
+## [ [ 2, 
+##       [ [ -9, [ 2, 7, 8, 9 ] ], [ 9, [ 2, 7, 8, 12 ] ], 
+##           [ 9, [ 2, 7, 8, 13 ] ], [ -9, [ 2, 7, 11, 12 ] ], 
+##           [ 9, [ 2, 7, 11, 13 ] ], [ -9, [ 2, 8, 9, 10 ] ], 
+##           [ -9, [ 2, 8, 9, 11 ] ], [ -18, [ 2, 8, 9, 12 ] ], 
+##           [ -9, [ 2, 8, 9, 13 ] ], [ 9, [ 2, 8, 10, 12 ] ], 
+##           [ -9, [ 2, 8, 10, 13 ] ], [ -9, [ 2, 8, 11, 12 ] ], 
+##           [ 3, [ 2, 9, 10, 12 ] ], [ -3, [ 2, 9, 11, 12 ] ], 
+##           [ 3, [ 3, 4, 5, 7 ] ], [ -3, [ 3, 4, 5, 12 ] ], 
+##           [ 3, [ 3, 4, 10, 12 ] ], [ -3, [ 3, 5, 6, 7 ] ], 
+##           [ 3, [ 3, 5, 6, 11 ] ], [ -1, [ 3, 5, 6, 13 ] ], 
+##           [ -6, [ 3, 5, 7, 8 ] ], [ 3, [ 3, 5, 7, 10 ] ], 
+##           [ -6, [ 3, 5, 7, 11 ] ], [ 6, [ 3, 5, 7, 12 ] ], 
+##           [ 1, [ 3, 5, 7, 13 ] ], [ 3, [ 3, 5, 8, 12 ] ], 
+##           [ -1, [ 3, 5, 9, 13 ] ], [ 6, [ 3, 5, 10, 12 ] ], 
+##           [ -2, [ 3, 5, 10, 13 ] ], [ 12, [ 3, 5, 11, 12 ] ], 
+##           [ 7, [ 3, 5, 11, 13 ] ], [ -5, [ 3, 5, 12, 13 ] ], 
+##           [ 1, [ 3, 6, 9, 13 ] ], [ 3, [ 3, 7, 10, 12 ] ], 
+##           [ -9, [ 3, 7, 11, 12 ] ], [ 9, [ 3, 7, 11, 13 ] ], 
+##           [ 1, [ 3, 8, 9, 13 ] ], [ 12, [ 3, 8, 10, 12 ] ], 
+##           [ -9, [ 3, 8, 10, 13 ] ], [ -3, [ 3, 9, 10, 12 ] ], 
+##           [ -1, [ 3, 9, 10, 13 ] ], [ -3, [ 3, 9, 11, 12 ] ], 
+##           [ 8, [ 3, 9, 11, 13 ] ], [ -1, [ 3, 9, 12, 13 ] ], 
+##           [ 6, [ 3, 10, 11, 12 ] ], [ 9, [ 3, 10, 11, 13 ] ], 
+##           [ 3, [ 3, 10, 12, 13 ] ], [ 1, [ 4, 5, 6, 8 ] ], 
+##           [ 3, [ 4, 5, 6, 11 ] ], [ -8, [ 4, 5, 6, 13 ] ], 
+##           [ -9, [ 4, 5, 7, 8 ] ], [ -9, [ 4, 5, 7, 11 ] ], 
+##           [ -18, [ 4, 6, 8, 9 ] ], [ 9, [ 4, 6, 9, 13 ] ], 
+##           [ -9, [ 4, 8, 9, 10 ] ], [ -18, [ 4, 8, 9, 12 ] ], 
+##           [ -9, [ 4, 8, 9, 13 ] ], [ 9, [ 4, 8, 10, 12 ] ], 
+##           [ -9, [ 4, 8, 10, 13 ] ], [ 3, [ 4, 9, 10, 12 ] ], 
+##           [ -3, [ 4, 9, 11, 12 ] ], [ -9, [ 4, 9, 12, 13 ] ], 
+##           [ 10, [ 5, 6, 7, 8 ] ], [ 12, [ 5, 6, 7, 11 ] ], 
+##           [ 1, [ 5, 6, 7, 13 ] ], [ -19, [ 5, 6, 8, 9 ] ], 
+##           [ 2, [ 5, 6, 8, 11 ] ], [ -1, [ 5, 6, 8, 12 ] ], 
+##           [ -9, [ 5, 6, 8, 13 ] ], [ 3, [ 5, 6, 9, 11 ] ], 
+##           [ 1, [ 5, 6, 9, 13 ] ], [ 1, [ 5, 6, 10, 13 ] ], 
+##           [ -11, [ 5, 6, 11, 13 ] ], [ -9, [ 5, 7, 8, 9 ] ], 
+##           [ 9, [ 5, 7, 8, 12 ] ], [ 9, [ 5, 7, 8, 13 ] ], 
+##           [ -9, [ 5, 7, 11, 12 ] ], [ 9, [ 5, 7, 11, 13 ] ], 
+##           [ -18, [ 5, 8, 9, 12 ] ], [ -9, [ 5, 8, 9, 13 ] ], 
+##           [ 9, [ 5, 8, 10, 12 ] ], [ -9, [ 5, 8, 11, 12 ] ], 
+##           [ 9, [ 6, 7, 8, 13 ] ], [ 9, [ 6, 7, 11, 13 ] ], 
+##           [ -9, [ 6, 8, 10, 13 ] ], [ -3, [ 6, 9, 11, 12 ] ], 
+##           [ 9, [ 6, 9, 11, 13 ] ], [ 9, [ 7, 8, 9, 13 ] ], 
+##           [ 9, [ 7, 8, 11, 12 ] ], [ 6, [ 7, 9, 11, 12 ] ], 
+##           [ 18, [ 7, 11, 12, 13 ] ], [ -15, [ 8, 9, 10, 12 ] ], 
+##           [ 9, [ 8, 9, 10, 13 ] ], [ -3, [ 8, 9, 11, 12 ] ], 
+##           [ 18, [ 8, 10, 11, 12 ] ], [ -18, [ 8, 10, 12, 13 ] ], 
+##           [ 6, [ 9, 10, 11, 12 ] ], [ 6, [ 9, 10, 12, 13 ] ], 
+##           [ 12, [ 9, 11, 12, 13 ] ] ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1043,6 +1059,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCFromFacets([[1,2,3],[1,2,6],[1,3,5],[1,4,5],[1,4,6],
 ##                       [2,3,4],[2,4,5],[2,5,6],[3,4,6],[3,5,6]]);
+## > <SimplicialComplex: unnamed complex 4 | dim = 2 | n = 6>
 ## gap> SCCohomology(c);
 ## [ [ 1, [  ] ], [ 0, [  ] ], [ 0, [ 2 ] ] ]
 ## ]]></Example>
@@ -1073,11 +1090,11 @@ end);
 ## <Returns> a list of pairs of the form <C>[ ORIENTATION, SIMPLEX ]</C> upon success, <K>fail</K> otherwise. </Returns>
 ## <Description>
 ## The cup product is a method of adjoining two cocycles of degree <M>p</M> and <M>q</M> to form a composite cocycle of degree <M>p + q</M>. It endows the cohomology groups of a simplicial complex with the structure of a ring. <P/>
-## The construction of the cup product starts with a product of cochains: if <Arg>cocycle1</Arg> is a p-cochain and <Arg>cocylce2</Arg> is a q-cochain of a simplicial complex <Arg>complex</Arg> (given as list of oriented p- (q-)simplices), then<P/>
+## The construction of the cup product starts with a product of cochains: if <Arg>cocycle1</Arg> is a p-cochain and <Arg>cocycle2</Arg> is a q-cochain of a simplicial complex <Arg>complex</Arg> (given as list of oriented p- (q-)simplices), then<P/>
 ## <Arg>cocycle1</Arg> <M>\smile</M> <Arg>cocycle2</Arg><M>(\sigma) = </M><Arg>cocycle1</Arg><M>(\sigma \circ \iota_{0,1, ... p}) \cdot</M> <Arg>cocycle2</Arg><M>(\sigma \circ \iota_{p, p+1 ,..., p + q})</M><P/>
 ## where <M>\sigma</M> is a <M>p + q</M>-simplex and <M>\iota_S</M>, <M>S \subset \{0,1,...,p+q \}</M> is the canonical embedding of the simplex spanned by <M>S</M> into the <M>(p + q)</M>-standard simplex.<P/>
 ## <M>\sigma \circ \iota_{0,1, ..., p}</M> is called the <M>p</M>-th front face and <M>\sigma \circ \iota_{p, p+1, ..., p + q}</M> is the <M>q</M>-th back face of <M>\sigma</M>, respectively.<P/>
-## Note that this function only computes the cup product in the case that <Arg>complex</Arg> is an orientable weak pseudomanifold of dimension <M>2k</M> and <M>p = q = k</M>. Furthermore, <Arg>complex</Arg> must be given in standard labeling, with sorted facet list and <Arg>cocylce1</Arg> and <Arg>cocylce2</Arg> must be given in simplex notation and labeled accordingly. Note that the latter condition is usually fulfilled in case the cocycles were computed using <Ref Meth="SCCohomologyBasisAsSimplices"/>.  
+## Note that this function only computes the cup product in the case that <Arg>complex</Arg> is an orientable weak pseudomanifold of dimension <M>2k</M> and <M>p = q = k</M>. Furthermore, <Arg>complex</Arg> must be given in standard labeling, with sorted facet list and <Arg>cocycle1</Arg> and <Arg>cocycle2</Arg> must be given in simplex notation and labeled accordingly. Note that the latter condition is usually fulfilled in case the cocycles were computed using <Ref Meth="SCCohomologyBasisAsSimplices"/>.  
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("K3");
 ## [ [ 520, "K3_16" ], [ 539, "K3_17" ] ]
@@ -1165,9 +1182,8 @@ end);
 ## called the intersection form of <M>M</M>. This function returns the intersection form of an orientable combinatorial <M>2k</M>-manifold <Arg>complex</Arg> in form of a matrix <C>mat</C> with respect to the basis of  H<M>^k ( </M><Arg>complex</Arg>M<M>)</M> computed by <Ref Meth="SCCohomologyBasisAsSimplices"/>. The matrix entry <C>mat[i][j]</C> equals the intersection number of the <C>i</C>-th base element with the <C>j</C>-th base element of H<M>^k ( </M><Arg>complex</Arg>M<M>)</M>. 
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByName("CP^2");       
-## [ [ 16, "CP^2 (VT)" ], [ 96, "CP^2#-CP^2" ], 
-##   [ 97, "CP^2#CP^2" ], [ 185, "CP^2#(S^2xS^2)" ], 
-##   [ 397, "Gaifullin CP^2" ], 
+## [ [ 16, "CP^2 (VT)" ], [ 96, "CP^2#-CP^2" ], [ 97, "CP^2#CP^2" ], 
+##   [ 185, "CP^2#(S^2xS^2)" ], [ 397, "Gaifullin CP^2" ], 
 ##   [ 457, "(S^3~S^1)#(CP^2)^{#5} (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);; 
 ## gap> c1:=SCConnectedSum(c,c);;
@@ -1365,11 +1381,12 @@ end);
 ## gap> SCIntersectionFormSignature(c);
 ## [ 1, 0, 1 ]
 ## gap> d:=SCConnectedSum(c,c);                           
+## <SimplicialComplex: CP^2 (VT)#+-CP^2 (VT) | dim = 4 | n = 13>
 ## gap> SCIntersectionFormSignature(d);
-## [ 2, 1, 1 ]
+## [ 2, 2, 0 ]
 ## gap> d:=SCConnectedSumMinus(c,c);;
 ## gap> SCIntersectionFormSignature(d);
-## [ 2, 0, 2 ]
+## [ 2, 1, 1 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>

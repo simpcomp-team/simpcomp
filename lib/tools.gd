@@ -9,7 +9,7 @@
 
 ## <#GAPDoc Label="tools">
 ##
-## The behaviour of <Package>simpcomp</Package> can be changed by setting cetain global options. This can be achieved by the functions described in the following.  
+## The behaviour of <Package>simpcomp</Package> can be changed by setting certain global options. This can be achieved by the functions described in the following.  
 ##
 ## <Section>
 ## <Heading><Package>simpcomp</Package> logging</Heading>
@@ -23,8 +23,21 @@
 ## Sets the logging verbosity of <Package>simpcomp</Package>. A level of <M>0</M> suppresses all output, a level of <M>1</M> lets <Package>simpcomp</Package> output normal running information, whereas levels of <M>2</M> and higher display verbose running information. Examples of functions using more verbose logging are bistellar flip-related functions. 
 ## <Example><![CDATA[
 ## gap> SCInfoLevel(3);
+## true
 ## gap> c:=SCBdCrossPolytope(3);;
 ## gap> SCReduceComplex(c); 
+## #I  round 0, move: [ [ 4, 5 ], [ 1, 2 ] ]
+## F: [ 6, 12, 8 ]
+## #I  round 1, move: [ [ 5 ], [ 1, 2, 3 ] ]
+## F: [ 5, 9, 6 ]
+## #I  round 1
+## Reduced complex, F: [ 5, 9, 6 ]
+## #I  round 2, move: [ [ 3 ], [ 1, 2, 6 ] ]
+## F: [ 4, 6, 4 ]
+## #I  round 2
+## Reduced complex, F: [ 4, 6, 4 ]
+## #I  SCReduceComplexEx: computed locally minimal complex after 3 rounds.
+## [ true, <SimplicialComplex: unnamed complex 3 | dim = 2 | n = 4>, 3 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -72,4 +85,3 @@ DeclareGlobalFunction("SCMailSetAddress");
 DeclareGlobalFunction("SCMailSetEnabled");
 DeclareGlobalFunction("SCMailSetMinInterval");
 DeclareGlobalFunction("SCRunTest");
-

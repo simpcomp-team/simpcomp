@@ -8,7 +8,9 @@
 ## cf. <Cite Key="Brehm08EquivMapsTorus"/> for details.
 ## <Example><![CDATA[
 ## gap> SCNrRegularTorus(9);
+## 1
 ## gap> SCNrRegularTorus(10);
+## 0
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -38,7 +40,9 @@ end);
 ## cf. <Cite Key="Brehm08EquivMapsTorus"/> for details.
 ## <Example><![CDATA[
 ## gap> SCNrChiralTori(7);
+## 1
 ## gap> SCNrChiralTori(343);
+## 2
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -118,7 +122,9 @@ end;
 ## See <Cite Key="Brehm08EquivMapsTorus"/> for details.
 ## <Example><![CDATA[
 ## gap> c:=SCSeriesSymmetricTorus(2,1);
+## <SimplicialComplex: {3,6}_(2,1) | dim = 2 | n = 7>
 ## gap> SCFVector(c);
+## [ 7, 21, 14 ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -380,8 +386,11 @@ end);
 ## See <Cite Key="Brehm08EquivMapsTorus"/> for details.
 ## <Example><![CDATA[
 ## gap> cc:=SCRegularTorus(9);
+## [ <SimplicialComplex: {3,6}_(3,0) | dim = 2 | n = 9> ]
 ## gap> g:=SCAutomorphismGroup(cc[1]);
+## Group([ (2,7)(3,4)(5,9), (1,4,2)(3,7,9)(5,8,6), (2,8,7,3,6,4)(5,9) ])
 ## gap> SCNumFaces(cc[1],0)*12 = Size(g);
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -421,7 +430,10 @@ end);
 ## See <Cite Key="Brehm08EquivMapsTorus"/> for details.
 ## <Example><![CDATA[
 ## gap> cc:=SCChiralTori(91);
+## [ <SimplicialComplex: {3,6}_(9,1) | dim = 2 | n = 91>, 
+##   <SimplicialComplex: {3,6}_(6,5) | dim = 2 | n = 91> ]
 ## gap> SCIsIsomorphic(cc[1],cc[2]);
+## false
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -484,9 +496,15 @@ end);
 ## <M>g</M>
 ## <Example><![CDATA[
 ## gap> ll:=SCRegularMaps(){[1..10]};
+## [ [ 7, 3, true ], [ 7, 7, true ], [ 7, 8, false ], [ 7, 14, true ], 
+##   [ 7, 15, false ], [ 7, 147, false ], [ 8, 3, true ], [ 8, 5, true ], 
+##   [ 8, 8, true ], [ 8, 9, false ] ]
 ## gap> c:=SCRegularMap(ll[5][1],ll[5][2],ll[5][3]);
+## <SimplicialComplex: Non-orientable regular map {7,15} | dim = 2 | n = 78>
 ## gap> SCHomology(c);
+## [ [ 0, [  ] ], [ 14, [ 2 ] ], [ 0, [  ] ] ]
 ## gap> SCGenerators(c);
+## [ [ [ 1, 4, 7 ], 182 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -537,9 +555,16 @@ end);
 ## Use <Ref Func="SCRegularMaps"/> to get a list of all regular maps available.
 ## <Example><![CDATA[
 ## gap> SCRegularMaps(){[1..10]};
+## [ [ 7, 3, true ], [ 7, 7, true ], [ 7, 8, false ], [ 7, 14, true ], 
+##   [ 7, 15, false ], [ 7, 147, false ], [ 8, 3, true ], [ 8, 5, true ], 
+##   [ 8, 8, true ], [ 8, 9, false ] ]
 ## gap> c:=SCRegularMap(7,7,true);
+## <SimplicialComplex: Orientable regular map {7,7} | dim = 2 | n = 72>
 ## gap> g:=SCAutomorphismGroup(c);
+## #I  group not listed
+## C2 x PSL(2,8)
 ## gap> Size(g);
+## 1008
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3322,8 +3347,13 @@ end);
 ## to get the corresponding triangulations.
 ## <Example><![CDATA[
 ## gap> ll:=SCChiralMaps();
+## [ [ 7, 17 ], [ 8, 10 ], [ 8, 28 ], [ 8, 37 ], [ 8, 46 ], [ 8, 82 ], 
+##   [ 9, 43 ], [ 10, 73 ], [ 12, 22 ], [ 12, 33 ], [ 12, 40 ], [ 12, 51 ], 
+##   [ 12, 58 ], [ 12, 64 ], [ 12, 85 ], [ 12, 94 ], [ 12, 97 ], [ 18, 28 ] ]
 ## gap> c:=SCChiralMap(ll[18][1],ll[18][2]);
+## <SimplicialComplex: Chiral map {18,28} | dim = 2 | n = 27>
 ## gap> SCHomology(c);
+## [ [ 0, [  ] ], [ 56, [  ] ], [ 1, [  ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -3354,8 +3384,13 @@ end);
 ## chiral maps available.
 ## <Example><![CDATA[
 ## gap> SCChiralMaps();
+## [ [ 7, 17 ], [ 8, 10 ], [ 8, 28 ], [ 8, 37 ], [ 8, 46 ], [ 8, 82 ], 
+##   [ 9, 43 ], [ 10, 73 ], [ 12, 22 ], [ 12, 33 ], [ 12, 40 ], [ 12, 51 ], 
+##   [ 12, 58 ], [ 12, 64 ], [ 12, 85 ], [ 12, 94 ], [ 12, 97 ], [ 18, 28 ] ]
 ## gap> c:=SCChiralMap(8,10);
+## <SimplicialComplex: Chiral map {8,10} | dim = 2 | n = 54>
 ## gap> c.Homology;
+## [ [ 0, [  ] ], [ 20, [  ] ], [ 1, [  ] ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>

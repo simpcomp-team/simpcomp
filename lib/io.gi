@@ -723,7 +723,9 @@ end;
 ## gap> SCSave(c,"/tmp/bddelta3");
 ## true
 ## gap> d:=SCLoad("/tmp/bddelta3");
+## <SimplicialComplex: S^2_4 | dim = 2 | n = 4>
 ## gap> c=d;
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -791,7 +793,9 @@ end);
 ## gap> SCSaveXML(c,"/tmp/bddelta3");
 ## true
 ## gap> d:=SCLoadXML("/tmp/bddelta3");
+## <SimplicialComplex: S^2_4 | dim = 2 | n = 4>
 ## gap> c=d;
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1421,6 +1425,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(5);;
 ## gap> SCExportLatexTable(c,"/tmp/bd5simplex.tex",5);
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1503,8 +1508,11 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdCrossPolytope(4);;
 ## gap> SCExportPolymake(c,"/tmp/bdbeta4.poly");
+## true
 ## gap> d:=SCImportPolymake("/tmp/bdbeta4.poly");
+## <SimplicialComplex: polymake import '/tmp/bdbeta4.poly' | dim = 3 | n = 8>
 ## gap> c=d;
+## true
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -1749,6 +1757,7 @@ rec(
 ## file specified by <Arg>filename</Arg>.
 ## <Example><![CDATA[
 ## gap> SCLib.SearchByAttribute("Dim=3 and F=[8,28,56,28]");
+## [ [ 8, "PM^3 - TransitiveGroup(8,43), No. 1" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCExportSnapPy(c,"/tmp/M38.tri");
 ## true

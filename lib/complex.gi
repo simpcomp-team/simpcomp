@@ -111,10 +111,28 @@ end;
 ## an lists some of these properties explicitly.
 ## <Example><![CDATA[
 ## gap> c:=SC([[1,2,3],[1,2,4],[1,3,4],[2,3,4]]);
+## <SimplicialComplex: unnamed complex 1 | dim = 2 | n = 4>
 ## gap> Print(SCDetails(c));
+## [SimplicialComplex
+## 
+##  Properties known: Dim, FacetsEx, Name, Vertices.
+##  Name="unnamed complex 1"
+##  Dim=2
+## 
+## /SimplicialComplex]
 ## gap> c.F;
+## [ 4, 6, 4 ]
 ## gap> c.Homology;
+## [ [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
 ## gap> Print(SCDetails(c));
+## [SimplicialComplex
+## 
+##  Properties known: Dim, FacetsEx, Homology, Name, Vertices.
+##  Name="unnamed complex 1"
+##  Dim=2
+##  Homology=[ [ 0, [ ] ], [ 0, [ ] ], [ 1, [ ] ] ]
+## 
+## /SimplicialComplex]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -304,7 +322,7 @@ end;
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(3)+10;;
 ## gap> c.Facets;
-## [[11, 12, 13], [11, 12, 14], [11, 13, 14], [12, 13, 14]]
+## [ [ 11, 12, 13 ], [ 11, 12, 14 ], [ 11, 13, 14 ], [ 12, 13, 14 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -329,7 +347,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(3)-1;;
 ## gap> c.Facets;
-## [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+## [ [ 0, 1, 2 ], [ 0, 1, 3 ], [ 0, 2, 3 ], [ 1, 2, 3 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -355,7 +373,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(3)*10;;
 ## gap> c.Facets;
-## [[10, 20, 30], [10, 20, 40], [10, 30, 40], [20, 30, 40]]
+## [ [ 10, 20, 30 ], [ 10, 20, 40 ], [ 10, 30, 40 ], [ 20, 30, 40 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -382,7 +400,7 @@ end);
 ## <Example><![CDATA[
 ## gap> c:=(SCBdSimplex(3)*10) mod 7;;
 ## gap> c.Facets;
-## [[3, 6, 2], [3, 6, 5], [3, 2, 5], [6, 2, 5]]
+## [ [ 2, 3, 5 ], [ 2, 3, 6 ], [ 2, 5, 6 ], [ 3, 5, 6 ] ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -408,6 +426,7 @@ end);
 ## Internally calls <Ref Func="SCCartesianPower"/>.
 ## <Example><![CDATA[
 ## gap> c:=SCBdSimplex(2)^2; #a torus
+## <SimplicialComplex: (S^1_3)^2 | dim = 2 | n = 9>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -436,10 +455,10 @@ end);
 ## gap> SCLib.SearchByName("RP^3");;
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> SCLib.SearchByName("S^2~S^1"){[1..3]};
-## [ [ 12, "S^2~S^1 (VT)" ], [ 26, "S^2~S^1 (VT)" ], 
-##   [ 27, "S^2~S^1 (VT)" ] ]
+## [ [ 12, "S^2~S^1 (VT)" ], [ 26, "S^2~S^1 (VT)" ], [ 27, "S^2~S^1 (VT)" ] ]
 ## gap> d:=SCLib.Load(last[1][1]);;
 ## gap> c:=c+d; #form RP^3#(S^2~S^1)
+## <SimplicialComplex: RP^3#+-S^2~S^1 (VT) | dim = 3 | n = 16>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -486,6 +505,7 @@ end);
 ## gap> SCLib.SearchByName("RP^2");
 ## [ [ 3, "RP^2 (VT)" ], [ 262, "RP^2xS^1" ] ]
 ## gap> c:=SCLib.Load(last[1][1])*SCBdSimplex(3); #form RP^2 x S^2
+## <SimplicialComplex: RP^2 (VT)xS^2_4 | dim = 4 | n = 24>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -539,6 +559,7 @@ end);
 ## <Ref Func="SCUnion"/>.
 ## <Example><![CDATA[
 ## gap> c:=Union(SCBdSimplex(3),SCBdSimplex(3)+3); #a wedge of two 2-spheres
+## <SimplicialComplex: S^2_4 cup S^2_4 | dim = 2 | n = 7>
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
@@ -598,7 +619,9 @@ end);
 ## gap> c:=SCBdSimplex(3);;        
 ## gap> d:=SCBdSimplex(3);;        
 ## gap> d:=SCMove(d,[[1,2,3],[]]);;
-## gap> d:=d+1;;                   
+## gap> d:=d+1;;
+## s1 := SCIntersection(c,d);
+## <SimplicialComplex: S^2_4 cap unnamed complex 10240 | dim = 1 | n = 3>              
 ## gap> s1.Facets;                 
 ## [ [ 2, 3 ], [ 2, 4 ], [ 3, 4 ] ]
 ## ]]></Example>
@@ -774,13 +797,11 @@ end);
 ## [ [ 18, "K^2 (VT)" ], [ 221, "K^2 (VT)" ] ]
 ## gap> c:=SCLib.Load(last[1][1]);;
 ## gap> c[2];
-## [ [ 1, 2 ], [ 1, 3 ], [ 1, 7 ], [ 1, 9 ], [ 1, 13 ], [ 1, 14 ], [ 2, 3 ], 
-##   [ 2, 4 ], [ 2, 8 ], [ 2, 10 ], [ 2, 14 ], [ 3, 4 ], [ 3, 5 ], [ 3, 9 ], 
-##   [ 3, 11 ], [ 4, 5 ], [ 4, 6 ], [ 4, 10 ], [ 4, 12 ], [ 5, 6 ], [ 5, 7 ], 
-##   [ 5, 11 ], [ 5, 13 ], [ 6, 7 ], [ 6, 8 ], [ 6, 12 ], [ 6, 14 ], [ 7, 8 ], 
-##   [ 7, 9 ], [ 7, 13 ], [ 8, 9 ], [ 8, 10 ], [ 8, 14 ], [ 9, 10 ], [ 9, 11 ], 
-##   [ 10, 11 ], [ 10, 12 ], [ 11, 12 ], [ 11, 13 ], [ 12, 13 ], [ 12, 14 ], 
-##   [ 13, 14 ] ]
+## [ [ 1, 2 ], [ 1, 3 ], [ 1, 5 ], [ 1, 7 ], [ 1, 9 ], [ 1, 10 ], [ 2, 3 ], 
+##   [ 2, 4 ], [ 2, 6 ], [ 2, 8 ], [ 2, 10 ], [ 3, 4 ], [ 3, 5 ], [ 3, 7 ], 
+##   [ 3, 9 ], [ 4, 5 ], [ 4, 6 ], [ 4, 8 ], [ 4, 10 ], [ 5, 6 ], [ 5, 7 ], 
+##   [ 5, 9 ], [ 6, 7 ], [ 6, 8 ], [ 6, 10 ], [ 7, 8 ], [ 7, 9 ], [ 8, 9 ], 
+##   [ 8, 10 ], [ 9, 10 ] ]
 ## gap> c[4];
 ## [  ]
 ## ]]></Example>
@@ -886,10 +907,18 @@ end);
 ## and <Ref Meth="SCPropertyTmpDrop" />.
 ## <Example><![CDATA[
 ## gap> c:=SC(SCFacets(SCBdCyclicPolytope(10,12)));
+## <SimplicialComplex: unnamed complex 27 | dim = 9 | n = 12>
 ## gap> c.F; time;                                 
+## [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
+## 39
 ## gap> c.F; time;                                 
+## [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
+## 71
 ## gap> c:=SCPropertiesDropped(c);                 
+## <SimplicialComplex: unnamed complex 27 | dim = 9 | n = 12>
 ## gap> c.F; time;                                 
+## [ 12, 66, 220, 495, 792, 922, 780, 465, 180, 36 ]
+## 54
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
