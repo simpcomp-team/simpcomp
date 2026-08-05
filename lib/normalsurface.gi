@@ -394,7 +394,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSCopy">
 ## <ManSection>
-## <Meth Name="SCCopy" Arg="complex"/>
+## <Meth Name="SCCopy" Arg="complex" Label="for normal surfaces"/>
 ## <Returns>discrete normal surface of type <C>SCNormalSurface</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Copies a &GAP; object of type <C>SCNormalSurface</C> (cf. <Ref Meth="SCCopy"/>).
@@ -520,7 +520,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSDim">
 ## <ManSection>
-## <Meth Name="SCDim" Arg="sl"/>
+## <Meth Name="SCDim" Arg="sl" Label="for normal surfaces"/>
 ## <Returns>an integer upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the dimension of a discrete normal surface (which is always <M>2</M> if the slicing <Arg>sl</Arg> is not empty).
@@ -552,7 +552,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSFVector">
 ## <ManSection>
-## <Meth Name="SCFVector" Arg="sl"/>
+## <Meth Name="SCFVector" Arg="sl" Label="for normal surfaces"/>
 ## <Returns>a <M>1</M>, <M>3</M> or <M>4</M> tuple of (non-negative) integer values upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the <M>f</M>-vector of a discrete normal surface, i. e. the number of vertices, edges, triangles and quadrilaterals of <Arg>sl</Arg>, cf. <Ref Meth="SCFVector"/>.
@@ -607,7 +607,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSEulerCharacteristic">
 ## <ManSection>
-## <Meth Name="SCEulerCharacteristic" Arg="sl"/>
+## <Meth Name="SCEulerCharacteristic" Arg="sl" Label="for normal surfaces"/>
 ## <Returns>an integer upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the Euler characteristic of a discrete normal surface <Arg>sl</Arg>, cf. <Ref Meth="SCEulerCharacteristic"/>.
@@ -697,7 +697,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSIsEmpty">
 ## <ManSection>
-## <Meth Name="SCIsEmpty" Arg="complex"/>
+## <Meth Name="SCIsEmpty" Arg="complex" Label="for normal surfaces"/>
 ## <Returns><K>true</K> or <K>false</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Checks if a normal surface <Arg>complex</Arg> is the empty complex, i. e. a <C>SCNormalSurface</C> object with empty facet list.
@@ -732,7 +732,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSUnion">
 ## <ManSection>
-## <Meth Name="SCUnion" Arg="complex1, complex2"/>
+## <Meth Name="SCUnion" Arg="complex1, complex2" Label="for normal surfaces"/>
 ## <Returns>normal surface of type <C>SCNormalSurface</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Forms the union of two normal surfaces <Arg>complex1</Arg> and <Arg>complex2</Arg> as the normal surface formed by the union of their facet sets. The two arguments are not altered. Note: for the union process the vertex labelings of the complexes are taken into account, see also <Ref Meth="Operation Union (SCNormalSurface, SCNormalSurface)" />. Facets occurring in both arguments are treated as one facet in the new complex.
@@ -785,7 +785,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSIsConnected">
 ## <ManSection>
-## <Meth Name="SCIsConnected" Arg="complex"/>
+## <Meth Name="SCIsConnected" Arg="complex" Label="for normal surfaces"/>
 ## <Returns><K>true</K> or <K>false</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Checks if a normal surface <Arg>complex</Arg> is connected.
@@ -842,7 +842,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSConnectedComponents">
 ## <ManSection>
-## <Meth Name="SCConnectedComponents" Arg="complex"/>
+## <Meth Name="SCConnectedComponents" Arg="complex" Label="for normal surfaces"/>
 ## <Returns> a list of simplicial complexes of type <C>SCNormalSurface</C> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes all connected components of an arbitrary normal surface.
@@ -914,7 +914,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSSkelEx">
 ## <ManSection>
-## <Meth Name="SCSkelEx" Arg="sl,k"/>
+## <Meth Name="SCSkelEx" Arg="sl,k" Label="for normal surfaces"/>
 ## <Returns>a face list (of <Arg>k+1</Arg>tuples) or a list of face lists upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes all faces of cardinality <Arg>k+1</Arg> in the standard labeling: <Arg>k</Arg> <M>= 0</M> computes the vertices,  <Arg>k</Arg> <M>= 1</M> computes the edges,  <Arg>k</Arg> <M>= 2</M> computes the triangles,  <Arg>k</Arg> <M>= 3</M> computes the quadrilaterals.<P/>
@@ -986,7 +986,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSSkel">
 ## <ManSection>
-## <Meth Name="SCSkel" Arg="sl,k"/>
+## <Meth Name="SCSkel" Arg="sl,k" Label="for normal surfaces"/>
 ## <Returns>a face list (of <Arg>k+1</Arg>tuples) or a list of face lists upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes all faces of cardinality <Arg>k+1</Arg> in the original labeling: <Arg>k</Arg> <M>= 0</M> computes the vertices,  <Arg>k</Arg> <M>= 1</M> computes the edges,  <Arg>k</Arg> <M>= 2</M> computes the triangles,  <Arg>k</Arg> <M>= 3</M> computes the quadrilaterals.<P/>
@@ -1041,7 +1041,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSFaceLatticeEx">
 ## <ManSection>
-## <Meth Name="SCFaceLatticeEx" Arg="complex"/>
+## <Meth Name="SCFaceLatticeEx" Arg="complex" Label="for normal surfaces"/>
 ## <Returns>a list of face lists upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the face lattice of a discrete normal surface <Arg>sl</Arg> in the standard labeling. Triangles and quadrilaterals are stored separately (cf. <Ref Meth="SCSkelEx" />).
@@ -1090,7 +1090,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSFaceLattice">
 ## <ManSection>
-## <Meth Name="SCFaceLattice" Arg="complex"/>
+## <Meth Name="SCFaceLattice" Arg="complex" Label="for normal surfaces"/>
 ## <Returns>a list of facet lists upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the face lattice of a discrete normal surface <Arg>sl</Arg> in the original labeling. Triangles and quadrilaterals are stored separately (cf. <Ref Meth="SCSkel" />).
@@ -1192,7 +1192,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSHomology">
 ## <ManSection>
-## <Meth Name="SCHomology" Arg="sl"/>
+## <Meth Name="SCHomology" Arg="sl" Label="for normal surfaces"/>
 ## <Returns>a list of homology groups upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the homology of a slicing <Arg>sl</Arg>. Internally, <Arg>sl</Arg> is triangulated (cf. <Ref Meth="SCNSTriangulation"/>) and simplicial homology is computed via <Ref Meth="SCHomology"/> using the triangulation.
@@ -1232,7 +1232,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSFpBettiNumbers">
 ## <ManSection>
-## <Meth Name="SCFpBettiNumbers" Arg="sl,p"/>
+## <Meth Name="SCFpBettiNumbers" Arg="sl,p" Label="for normal surfaces"/>
 ## <Returns>a list of non-negative integers upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Computes the Betti numbers modulo <Arg>p</Arg> of a slicing <Arg>sl</Arg>. Internally, <Arg>sl</Arg> is triangulated (using <Ref Meth="SCNSTriangulation"/>) and the Betti numbers are computed via <Ref Meth="SCFpBettiNumbers"/> using the triangulation.
@@ -1440,7 +1440,7 @@ end);
 ################################################################################
 ##<#GAPDoc Label="SCNSIsOrientable">
 ## <ManSection>
-## <Meth Name="SCIsOrientable" Arg="sl"/>
+## <Meth Name="SCIsOrientable" Arg="sl" Label="for normal surfaces"/>
 ## <Returns><K>true</K> or <K>false</K> upon success, <K>fail</K> otherwise.</Returns>
 ## <Description>
 ## Checks if a discrete normal surface <Arg>sl</Arg> is orientable.

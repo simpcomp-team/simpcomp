@@ -32,8 +32,6 @@
 ## <#Include Label="SCFaceLatticeEx"/>
 ## <#Include Label="SCFaces"/>
 ## <#Include Label="SCFacesEx"/>
-## <#Include Label="SCFacets"/>
-## <#Include Label="SCFacetsEx"/>
 ## <#Include Label="SCFpBettiNumbers"/>
 ## <#Include Label="SCFundamentalGroup"/>
 ## <#Include Label="SCGVector"/>

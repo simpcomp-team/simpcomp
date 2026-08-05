@@ -33,9 +33,6 @@
 ## <Row><Item>RelabelTransposition</Item><Item><Ref Meth="SCRelabelTransposition"/></Item></Row>
 ## <Row><Item>Rename</Item><Item><Ref Meth="SCRename"/></Item></Row>
 ## <Row><Item>SetReference</Item><Item><Ref Meth="SCSetReference"/></Item></Row>
-## </Table>
-
-## <Table Align="ll">
 ## <Row><Item>Star</Item><Item><Ref Meth="SCStar"/></Item></Row>
 ## <Row><Item>Str</Item><Item><Ref Meth="SCStar"/></Item></Row>
 ## <Row><Item>Stars</Item><Item><Ref Meth="SCStars"/></Item></Row>
@@ -89,9 +86,6 @@
 ## <Row><Item>ExportJavaView</Item><Item><Ref Meth="SCExportJavaView"/></Item></Row>
 ## <Row><Item>ExportLatexTable</Item><Item><Ref Meth="SCExportLatexTable"/></Item></Row>
 ## <Row><Item>ExportPolymake</Item><Item><Ref Meth="SCExportPolymake"/></Item></Row>
-## </Table>
-
-## <Table Align="ll">
 ## <Row><Item>F</Item><Item><Ref Meth="SCFVector"/></Item></Row>
 ## <Row><Item>FaceLattice</Item><Item><Ref Meth="SCFaceLattice"/></Item></Row>
 ## <Row><Item>FaceLatticeEx</Item><Item><Ref Meth="SCFaceLatticeEx"/></Item></Row>
@@ -132,9 +126,6 @@
 ## <Row><Item>IsIsomorphic</Item><Item><Ref Meth="SCIsIsomorphic"/></Item></Row>
 ## <Row><Item>IsKNeighborly</Item><Item><Ref Meth="SCIsKNeighborly"/></Item></Row>
 ## <Row><Item>IsKStackedSphere</Item><Item><Ref Meth="SCIsKStackedSphere"/></Item></Row>
-## </Table>
-
-## <Table Align="ll">
 ## <Row><Item>IsManifold</Item><Item><Ref Meth="SCIsManifold"/></Item></Row>
 ## <Row><Item>IsMovable</Item><Item><Ref Meth="SCIsMovableComplex"/></Item></Row>
 ## <Row><Item>Isomorphism</Item><Item><Ref Meth="SCIsomorphism"/></Item></Row>
