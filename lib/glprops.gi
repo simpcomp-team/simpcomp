@@ -10,9 +10,11 @@
 ##<#GAPDoc Label="SCSpanningTree">
 ## <ManSection>
 ## <Meth Name="SCSpanningTree" Arg="complex"/>
-## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, <K>fail</K> otherwise.</Returns>
+## <Returns>simplicial complex of type <C>SCSimplicialComplex</C> upon success, 
+## <K>fail</K> otherwise.</Returns>
 ## <Description>
-## Computes a spanning tree of a connected simplicial complex <Arg>complex</Arg> using a greedy algorithm.
+## Computes a spanning tree of a connected simplicial complex <Arg>complex</Arg> 
+## using a greedy algorithm.
 ## <Example><![CDATA[
 ## gap> c:=SC([["a","b","c"],["a","b","d"], ["a","c","d"], ["b","c","d"]]);;
 ## gap> s:=SCSpanningTree(c);
@@ -3868,9 +3870,11 @@ end);
 ## gap> c:=SCSeriesBdHandleBody(3,10);
 ## <SimplicialComplex: Sphere bundle S^2 x S^1 | dim = 3 | n = 10>
 ## gap> M:=SCConnectedProduct(c,2);
-## <SimplicialComplex: Sphere bundle S^2 x S^1#+-Sphere bundle S^2 x S^1 | dim = 3 | n = 16>
+## <SimplicialComplex: Sphere bundle S^2 x S^1#+-Sphere bundle S^2 x S^1 | \
+## dim = 3 | n = 16>
 ## gap> list:=SCHeegaardSplittingSmallGenus(M);
-## [ 2, [ [ 1, 2, 3, 7, 17 ], [ 4, 5, 6, 8, 9, 10, 14, 16, 18, 19, 20 ] ], "minimal" ]
+## [ 2, [ [ 1, 2, 3, 7, 17 ], [ 4, 5, 6, 8, 9, 10, 14, 16, 18, 19, 20 ] ], \
+## "minimal" ]
 ## ]]></Example>
 ## </Description>
 ## </ManSection>
