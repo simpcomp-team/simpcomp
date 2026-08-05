@@ -93,6 +93,9 @@ see the file COPYING in the `simpcomp` directory or
 
 ## Changes
 
+05/08/2026 - Version 2.1.15: Minor update
+- Several improvements and fixes (non-mathematical)
+
 10/03/2022 - Version 2.1.14: Minor update
 - Fixed manual entries
 - Fixed missing file output in SCsFromGroupExt

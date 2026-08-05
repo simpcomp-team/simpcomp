@@ -13,7 +13,7 @@ MailOnError:=false
 ));
 
 #SCIntFunc.Version:=GAPInfo.PackageCurrent.Version;
-SCIntFunc.Version:="2.1.14";
+SCIntFunc.Version:="2.1.15";
 
 InstallGlobalFunction(SCInfoLevel,
 function(level)
