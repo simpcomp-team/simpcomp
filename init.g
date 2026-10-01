@@ -46,39 +46,8 @@ SCIntFunc.SetupHomology:=function()
 	fi;
 end;
 
-# checks if package 'GRAPE' is present and working
-SCIntFunc.SetupGrape:=function()
-	local success;
-	success:=IsPackageMarkedForLoading("grape", ">=4.2");
-	if success=true and IsBoundGlobal("AutGroupGraph") and IsBoundGlobal("EdgeOrbitsGraph") and Filename(DirectoriesPackagePrograms("grape"),"dreadnaut")<>fail then
-		return true;
-	else
-		return false;
-	fi;
-end;
-
-SCIntFunc.SetupHomalg:=function()
-    local success;
-    success:=[IsPackageMarkedForLoading("Gauss", ">=2011.08.22"),IsPackageMarkedForLoading("MatricesForHomalg", ">=2011.10.08"),IsPackageMarkedForLoading("homalg", ">=2011.10.05"), IsPackageMarkedForLoading("GaussForHomalg", ">=2011.08.10"), IsPackageMarkedForLoading("Modules", ">=2011.10.05")];
-    if ForAll(success,x->x=true) then
-        return true;
-    else
-        return false;
-    fi;
-end; 
-
 
 if(SCIntFunc.SetupHomology()=false) then
 	LogPackageLoadingMessage(PACKAGE_ERROR,"package `homology' not installed or its binaries are not available, falling back to (slower) internal homology algorithms.","simpcomp");
 fi;
 
-
-if(SCIntFunc.SetupGrape()=false) then
-	LogPackageLoadingMessage(PACKAGE_ERROR,"package `GRAPE' not installed or its binaries are not available, falling back to (slower) internal algorithms for automorphism group computation.","simpcomp");
-fi;
-
-if(SCIntFunc.SetupHomalg()=false) then
-	LogPackageLoadingMessage(PACKAGE_ERROR,"package `homalg' not installed, homalg-related functions will not be available. Needed packages are: homalg, GaussForHomalg and dependencies.","simpcomp");
-else
-	ReadPackage("simpcomp","lib/pkghomalg.gd");
-fi;

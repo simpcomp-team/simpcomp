@@ -93,7 +93,7 @@ PackageDoc := rec(
 ##  Are there restrictions on the operating system for this package? Or does
 ##  the package need other packages to be available?
 Dependencies := rec(
-  GAP := ">=4.11",
+  GAP := ">=4.13",
   NeededOtherPackages := [
         [ "GAPDoc", ">=0.9999" ],
         [ "io", ">=3.0" ],
@@ -112,6 +112,17 @@ Dependencies := rec(
     ],
   ExternalConditions := [],
 ),
+
+Extensions := [
+  rec(needed := [ [ "GRAPE", ">=4.4" ] ],
+      filename := "lib/pkggrape.g"),
+  rec(needed := [ ["Gauss", ">=2011.08.22"],
+                  ["MatricesForHomalg", ">=2011.10.08"],
+                  ["homalg", ">=2011.10.05"],
+                  ["GaussForHomalg", ">=2011.08.10"],
+                  ["Modules", ">=2011.10.05"] ],
+      filename := "lib/pkghomalg.g"),
+],
 
 ##  If the default banner does not suffice then provide a string that is
 ##  printed when the package is loaded (not when it is autoloaded or if
