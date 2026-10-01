@@ -53,17 +53,9 @@ else
 	ReadPackage("simpcomp", "lib/pkghom.gi");
 fi;
 
-#load `GRAPE' package specific functions if available
-if(SCIntFunc.SetupGrape()=false) then
-	ReadPackage("simpcomp", "lib/pkgnogrape.gi");
-else
-	ReadPackage("simpcomp", "lib/pkggrape.gi");
-fi;
-
-#load `homalg' package specific functions if available
-if(SCIntFunc.SetupHomalg()=true) then
-	ReadPackage("simpcomp", "lib/pkghomalg.gi");
-fi;
+#`GRAPE' and `homalg' package specific functions are package extensions,
+#see PackageInfo.g
+ReadPackage("simpcomp", "lib/pkgnogrape.gi");
 
 SCSettings.ComplexCounter:=1;
 SCIntFunc.CheckExternalProgramsAvailability();
